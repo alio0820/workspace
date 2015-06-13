@@ -1,0 +1,2615 @@
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+</head>
+<body style="border-style: dotted; border-width: 0">
+　<table align=center border="0" width="998" cellspacing="0" cellpadding="0"><tr><td>
+	<img border="0" src="../image/logo.jpg" width="998" height="115"></td></tr></table>
+    <table align=center border="0" width="998" cellspacing="0" cellpadding="0">
+		<a href="../index.htm"><img border="0" src="../image/home.jpg" width="71" height="25"></a><a href="../kwjs/index.htm"><img border="0" src="../image/intro.jpg" width="87" height="25"></a><a href="../new/index.htm"><img border="0" src="../image/new.jpg" width="87" height="25"></a><a href="../bwh/index.htm"><img border="0" src="../image/board.jpg" width="74" height="25"></a><a href="../bjb/index.htm"><img border="0" src="../image/dep.jpg" width="74" height="25"></a><a href="../gjcx/index.asp"><img border="0" src="../image/query.jpg" width="87" height="25"></a><a href="../qwjs/index.htm"><img border="0" src="../image/search.jpg" width="87" height="25"></a><a href="../wltg/index.asp"><img border="0" src="../image/contri.jpg" width="87" height="25"></a><a href="../wlsg/index.asp"><img border="0" src="../image/review.jpg" width="87" height="25"></a><a href="../dy/index.htm"><img border="0" src="../image/bespeak.jpg" width="87" height="25"></a><a href="../fwjs/index.htm"><img border="0" src="../image/service.jpg" width="86" height="25"></a><a href="../eng/index.htm"><img border="0" src="../image/eng.jpg" width="84" height="25"></a></table>
+	<table align=center border="1" width="998" cellspacing="0" cellpadding="0" bordercolor="#987369">
+	
+		<tr>
+		 <td style="FONT-SIZE: 10pt" align="center">										
+				
+				<div align="center">
+				<p>　</p>
+                  <table align=center width="95%" border="0" cellspacing="0" cellpadding="0" align="center" height="500" id="table21">     
+                    <tr valign="bottom">      
+                      <td style="FONT-SIZE: 9pt" height="15"><font color="#ff6600">&nbsp;&nbsp;&nbsp;&nbsp; 
+						【1997年总目录】</font></td>     
+                    </tr>     
+                    <tr bgcolor="#eeefFF" valign="bottom">     
+                      <td height="10" bgcolor="#FFFFFF"></td>     
+                    </tr>     
+                    <tr bgcolor="#eeefFF" valign="bottom">     
+                      <td height="40" bgcolor="#FFFFFF" valign="top">     
+   
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=144" target=_blank><font color="#006699">一种资源共享系统的模型和近似性能分析</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">林 闯</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：865—-871)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=145" target=_blank><font color="#006699">DPVM: 支持任务迁移和排队的PVM </font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">鞠九滨 魏晓辉 徐高潮 尹 玉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：872—-877)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=146" target=_blank><font color="#006699">Tuili-II里的属性谓词及其实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">高全泉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：878—-883)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=147" target=_blank><font color="#006699">一种通用神经计算并行模型NCPM</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">戴 葵 胡守仁</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：884—-888)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=148" target=_blank><font color="#006699">实现异构多机系统任务分布的最小适应算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">许曰滨</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：889—-893)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=149" target=_blank><font color="#006699">概率逻辑推理的弱相关分解方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">张晨东 陈火旺 王兵山   *徐 光</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：894—-898)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=150" target=_blank><font color="#006699">一种机群网络文件系统的合作高速缓存技术</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">何 军 田范江 王鼎兴</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：899—-907)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=151" target=_blank><font color="#006699">带时间参数布尔函数的符号表示及其在计算电路时间延迟中的应用</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">赵宇虹 李忠诚 闵应骅</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：908—-917)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=152" target=_blank><font color="#006699">FFT网络的有效并发错误检测、定位和纠错</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">马建峰  *王新梅</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：918—-924)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=153" target=_blank><font color="#006699">图纸图像上线条的交互拾取</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王德英 李新友 唐泽圣 黄汉文</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：925—-932)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=154" target=_blank><font color="#006699">二维准分形形状的定性表示和建模</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">廖士中   *石纯一</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：933—-937)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=155" target=_blank><font color="#006699">移动计算机网络协议结构</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">沈庆国  *程时昕</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：938—-942)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=156" target=_blank><font color="#006699">图像重建的自适应随机元胞自动机算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">于志伟 陶 波</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：943—-948)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=157" target=_blank><font color="#006699">模糊规则的谐调度与矛盾规则的排除方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">梁 怡  *张文修</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖10期　（页码：949—-952)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=164" target=_blank><font color="#006699">关于非线性有限自动机的弱可逆性</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王 浩</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：1003—-1008)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=165" target=_blank><font color="#006699">一个基于分枝搜索的函数全局优化方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">柳常青 张 钹</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：1009—-1017)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=166" target=_blank><font color="#006699">简化的Wigner分布及其在笔迹鉴别中的应用</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘成林 戴汝为 刘迎建</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：1018—-1023)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=167" target=_blank><font color="#006699">一种分布式数据库查询优化算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">钟 武 胡守仁</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：1024—-1033)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=168" target=_blank><font color="#006699">一个完整的无干扰模型</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">马建平 余祥宣 洪 帆 张江陵</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：1034—-1037)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=169" target=_blank><font color="#006699">加权T-图的保性变换</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">许安国 吴哲辉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：1038—-1043)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=170" target=_blank><font color="#006699">MPI的多维数组传递协议</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">李 东 胡铭曾</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：1044—-1047)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=158" target=_blank><font color="#006699">Agent协作求解中形成联盟的行为策略</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">罗 翊 石纯一</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：961—-965)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=159" target=_blank><font color="#006699">改进的算术编码</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">薛晓辉 高 文</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：966—-973)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=160" target=_blank><font color="#006699">小字母表的高性能算术编码</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">薛晓辉 高 文</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：974—-981)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=161" target=_blank><font color="#006699">基于有向超图的参数化表示模型及其实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">孟祥旭 汪嘉业 刘慎权</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：982—-988)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=162" target=_blank><font color="#006699">多尺度形态滤波器的单调特性</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">吴永东 马颂德</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：989—-995)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=163" target=_blank><font color="#006699">适应调试功能的VHDL模型及模拟算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">边计年 卢 峰 郭 芳</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖11期　（页码：996—-1002)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=171" target=_blank><font color="#006699">三维实体的四面体有限元网格自动生成</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">杜群贵</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1057—-1062)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=172" target=_blank><font color="#006699">医学图像的快速最优化边缘检测</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王 合 庄天戈 蒋大宗  *Liu W.Y. Magnin I.E. Gimenez G. </font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1063—-1068)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=173" target=_blank><font color="#006699">基于网格特征跟踪的小波图像压缩方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">向阳朝 戴汝为</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1069—-1073)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=174" target=_blank><font color="#006699">平面向量场与曲率分析在曲面求交中的应用</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">宁 涛 马德昌 王亚平 唐荣锡</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1074—-1080)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=175" target=_blank><font color="#006699">基于邻近译码图像的运动估计算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">薛向阳 吴立德</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1081—-1087)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=176" target=_blank><font color="#006699">基于继承的子类型机制 </font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王志坚 朱跃龙 胡吉明</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1088—-1094)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=177" target=_blank><font color="#006699">基于整数规划的几何因果定性推理建模和求解</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">葛建新  *杨 莉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1095—-1104)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=178" target=_blank><font color="#006699">基于微机的三维真实感浓淡绘制方法研究</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">郭钧锋</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1105—-1111)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=179" target=_blank><font color="#006699">一种用于MPEG的IDCT算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">周 汀 闵 昊 章倩苓</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1112——1118)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=180" target=_blank><font color="#006699">论两条直线段的求交</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘 强 陈玉健 孙家广</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1119—-1123)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=181" target=_blank><font color="#006699">基于团块的特征提取</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">史 册 徐胜荣 荆仁杰 姚庆栋</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1124—-1128)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=182" target=_blank><font color="#006699">一个适合于特征计算的多边形逼近算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">吴中海   *张行功 叶澄清 潘云鹤</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1129—-1132)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=183" target=_blank><font color="#006699">三维重建的统一方法--模拟退火法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">陈凌钧 金建荣 汪国昭</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1133—-1136)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=184" target=_blank><font color="#006699">线框设计中轮廓线的自动生成</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">谭孟恩 葛建新 董金祥 何志均</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖12期　（页码：1137—-1141)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=24" target=_blank><font color="#006699">基于机群系统的C++语言并行化实现 </font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">温冬婵 王鼎兴</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期  （页码：9—17）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=23" target=_blank><font color="#006699">一种新的Cache优化方法——部分Cache局部性方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">李 明 唐志敏</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：1—8)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=1155" target=_blank><font color="#006699">求解SAT问题的局部搜索算法及其平均时间复杂性分析</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘 涛 李国杰</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：18---26)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=1156" target=_blank><font color="#006699">Cache对加速比的影响</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">薛一波 韩承德</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　(页码：27---36)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=27" target=_blank><font color="#006699">C++函数重载机制及其实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">张志海 张素琴 蒋维杜</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：37—41）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=28" target=_blank><font color="#006699">分组交换的RFT互连网络的性能分析</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">邓亚平</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：42—49）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=29" target=_blank><font color="#006699">基于类型理论的面向对象程序设计 </font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">全炳哲 金淳兆 李文辉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：50—57）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=30" target=_blank><font color="#006699">面向对象数据库中基于有向图的联系代数</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">吴胜利 王能斌</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：58—67）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=31" target=_blank><font color="#006699">面向对象数据库的形式化模型</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">陈 睿</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：68—76）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=32" target=_blank><font color="#006699">关联优化存储下Hopfield网络的临界存储</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">郭东辉 陈振湘 刘瑞堂 吴伯僖  *郑利龙</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：77—81）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=33" target=_blank><font color="#006699">容错数字信号处理系统的设计方法及实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">马建峰 赵晓盈 *王新梅</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：82—86）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=34" target=_blank><font color="#006699">CIMS信息集成平台中的数据模型</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王国仁 于 戈 张 斌 单吉第 郑怀远</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：87—92）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=35" target=_blank><font color="#006699">N事务封锁策略:安全性的检测及BOLP策略</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">谭 力 楼荣生 徐公权 周天爵</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖1期　（页码：93—96）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=39" target=_blank><font color="#006699">一个基于范例推理的专家系统ICMIX</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王铭阳 孙优贤  *何钦铭   *王申康
+</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：105—-110)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=40" target=_blank><font color="#006699">合一和回溯智能加速部件的设计与实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">吴中海 叶澄清 潘云鹤</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：111—-117）〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=41" target=_blank><font color="#006699">满足全局Delaunay特性的带特征约束的散乱数据最优三角剖分</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">卢朝阳 吴成柯 周幸妮</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：118—-124)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=42" target=_blank><font color="#006699">一种解释学习系统的模型EBL/GA</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王 彤 石纯一</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：125—-132)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=43" target=_blank><font color="#006699">最优特征子集选择问题</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">陈 彬 洪家荣 王亚东</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：133—-138)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=44" target=_blank><font color="#006699">示例学习的最大复合问题及算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">陈 彬 洪家荣</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：139—-144)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=45" target=_blank><font color="#006699">一种快速放射CT重建算法的研究</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">汪元美 于志伟 陶 波</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：145—-150)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=46" target=_blank><font color="#006699">区间结构的组合与析取映射</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">李岳峰 刘大有</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：151—-158)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=47" target=_blank><font color="#006699">广义证据理论的解释</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘大有 李岳峰</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：159—-164)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=48" target=_blank><font color="#006699">一种精确的光照模型</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘晓英 罗炳海 冯 勤 王行仁</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：165—-173)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=49" target=_blank><font color="#006699">余式方法中的线性策略以及语义策略和锁策略</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">吴尽昭  刘卓军*</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：174—-178)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=50" target=_blank><font color="#006699">一种由未定标图象估计三维射影不变量的新算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">熊 艳 彭嘉雄 丁明跃 </font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：179—-184)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=51" target=_blank><font color="#006699">布尔算子Fuzzy逻辑中归结的广义完备性</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">邓安生 刘叙华</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：185—-189)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=38" target=_blank><font color="#006699">自动程序设计——模拟进化的途径</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">吴少岩 陈火旺</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖2期　（页码：97—-104)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=52" target=_blank><font color="#006699">一种新的操作调度算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">袁小龙 沈绪榜</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：193—-197)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=53" target=_blank><font color="#006699">VHDL语言高级综合子集的确立及其实现方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">张东晓 刘明业</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：198—-205)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=54" target=_blank><font color="#006699">Petri网协议分析器</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">罗军舟 顾冠群 谢俊清</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：206—-212)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=55" target=_blank><font color="#006699">基于归结反演的Petri网推理新方法
+</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">周 奕   *吴时霖
+</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：213—-222)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=56" target=_blank><font color="#006699">多计算机互连网通信中关于死锁问题的一种理论</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">江 松 郑世荣</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：223—-229)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=57" target=_blank><font color="#006699">"SEQ OF PAR"结构化并行程序设计</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">袁 伟 孙永强</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：230—-237)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=58" target=_blank><font color="#006699">约束逻辑程序部分演绎过程的研究</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">陶 意 刘椿年</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：238—-244)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=59" target=_blank><font color="#006699">一个并行Prolog系统中的处理机分配算法及实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699"></font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：245—-250)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=60" target=_blank><font color="#006699">一类赋权诱导问题的多项式时间算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">(山东大学计算机科学系 济南 250100)
+*(中国科学院计算技术研究所CAD开放实验室 北京 100080)
+*(山东大学计算机科学系 济南 250100) 
+吴  晔   *马绍汉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：251—-258)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=61" target=_blank><font color="#006699">曙光1000大规模并行计算机系统软件的设计</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">孙凝晖 刘 宏 刘文卓 王川宝 陆雪琳 赵维斌</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：259—-268)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=62" target=_blank><font color="#006699">实时系统资源分配的动态规划算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">(西安电子科技大学计算机科学系 西安 710071)</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：269—-274)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=63" target=_blank><font color="#006699">并行文件系统中Disk Cache一致性协议的性能测试与评价</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">武北虹</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：275—-279)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=64" target=_blank><font color="#006699">基于系统仿真的软件需求工程方法及其支持环境</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">曾广周 孙伯起</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：280—-283)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=65" target=_blank><font color="#006699">非确定Monad</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">袁华强 肖 倩   *孙永强</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖3期　（页码：284—-288)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=66" target=_blank><font color="#006699">双析取逻辑程序设计基础(I)</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王克文</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：289—-297)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=67" target=_blank><font color="#006699">双析取逻辑程序设计基础(II)</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王克文</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：298—-304)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=68" target=_blank><font color="#006699">参数化设计中的动态约束迭代及静态因果分析技术</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">葛建新  *杨 莉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：305—-314)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=69" target=_blank><font color="#006699">三维曲面的几何展开</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">席 平</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：315—-322)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=70" target=_blank><font color="#006699">求NURBS自由曲面的等值线——一种基于极值点的追踪方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">都志辉 许卓群 余华山 赵奂辉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：323—-329)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=71" target=_blank><font color="#006699">确定平面点集凸包的一类最优算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">崔国华 洪 帆 余祥宣</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：330—-334)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=72" target=_blank><font color="#006699">一种用于VLSI的统一通孔最少化和线长最小化层分配算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">洪先龙 潘 立 王尔乾</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：335—-341)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=73" target=_blank><font color="#006699">一个系统级故障诊断算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">杨晓帆 陈廷槐 蔡 兵</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：342—-349)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=74" target=_blank><font color="#006699">一种形式化的协议互操作性测试方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">郝瑞兵 吴建平</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：350—-359)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=75" target=_blank><font color="#006699">基于BP网络的线性电路故障诊断</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">尉乃红 杨士元 童诗白</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：360—-366)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=76" target=_blank><font color="#006699">转移具有确定性时延的随机Petri网近似算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">李忠勇 李人厚</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：367—-375)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=77" target=_blank><font color="#006699">精确计算n维Mesh网络和n维Torus网络的平均最短路径长度</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">董迎飞 王鼎兴 郑纬民</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖4期　（页码：376—-380)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=78" target=_blank><font color="#006699">LS MPP的模型选择 </font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">沈绪榜 曹喜信</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：385—-390)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=79" target=_blank><font color="#006699">一种实时多处理机系统网络设计</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">张 亮 胡 波 何松华 庄钊文 郭桂蓉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：391—-395)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=80" target=_blank><font color="#006699">基于微核心的安全文件系统服务器的设计和实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">(中国科学院软件研究所 北京 100080)</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：396—-403)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=81" target=_blank><font color="#006699">蛀洞路由机制及其芯片设计</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">曾 嵘 董向军 祝明发</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：404—-411)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=82" target=_blank><font color="#006699">对Pertel关于可适应寻径的批评的讨论</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">(清华大学计算机科学与技术系 北京100084)</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：412—-420)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=83" target=_blank><font color="#006699">基于DCT子空间失真测度的快速矢量编码算法 </font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">周 汀 章倩苓 闵 昊 陈旭昀</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：421—-426)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=84" target=_blank><font color="#006699">超级流水S进制PRNS数母全加器</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">祝 明 王玉祥  *Evstigneyev V.G.</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：427—-432)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=85" target=_blank><font color="#006699">多输入变量组合险象精确定位</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">童永承</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：433—-440)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=86" target=_blank><font color="#006699"></font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">黄日日 杨芙清</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：441—-450)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=87" target=_blank><font color="#006699">一个基于面向对象模型的并行翻译器</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">肖 侬 卢宇彤 胡守仁 高洪奎</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：451—-458)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=88" target=_blank><font color="#006699">多值模代数中RM展开式算子解</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">诸 静</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：459—-464)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=89" target=_blank><font color="#006699">楔平面磁头浮动姿态的快速估算公式</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">华 伟 谭炳麟 李建华 王成焘 何友声</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：465—-469)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=90" target=_blank><font color="#006699">调度PVM任务</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">鞠九滨 王 勇</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖5期　（页码：470—-474)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=91" target=_blank><font color="#006699">顺序一致共享存储系统中的乱序执行技术——基本理论</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">胡伟武 夏培肃</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：481—-490)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=92" target=_blank><font color="#006699">顺序一致共享存储系统中的乱序执行技术——模拟实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">胡伟武 夏培肃</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：491—-500)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=93" target=_blank><font color="#006699">VHDL高级综合系统设计中某些关键问题的技术决策</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘明业 张东晓 许庆平</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：501—-509)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=94" target=_blank><font color="#006699">工作站网络环境下的并行计算</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">莫则尧 李晓梅</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：510—-517)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=95" target=_blank><font color="#006699">通用可伸缩并行神经计算机系统NeuroC的设计和实现 </font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">张春元 胡守仁 代 葵 张晨曦</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：518—-524)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=96" target=_blank><font color="#006699">基于虚存映射的对象存储系统的设计与实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">陶 伟 麦中凡</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：525—-532)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=97" target=_blank><font color="#006699">新的数字多签名体制</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">纪家慧 赵仁杰</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：533—-538)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=98" target=_blank><font color="#006699">一种快速的浓淡算法及其实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘晓英 冯 勤 罗炳海 王行仁</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：539—-545)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=99" target=_blank><font color="#006699">密码攻击ALT+算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">覃中平   *张焕国</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：546—-550)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=100" target=_blank><font color="#006699">基于PVM的分布计算的研究</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">周笑波 汲 化 谢 立</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：551—-555)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=101" target=_blank><font color="#006699">B样条曲线的节点插入问题及两个新算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">秦开怀   *关右江</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：556—-561)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=102" target=_blank><font color="#006699">调度问题的压缩Petri网(RePN)模型研究</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">(清华大学计算机科学与技术系 北京 100084)</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：562—-566)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=103" target=_blank><font color="#006699">平面内多边形沿曲线定姿态刚体移动时的碰撞判定算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">覃中平   *张焕国</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖6期　（页码：567—-572)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=104" target=_blank><font color="#006699">多准则优化图象重建方法的奇异值分解研究</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">戴伟辉 吕维雪   *段云所 *杨芙清</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：577—-583)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=105" target=_blank><font color="#006699">一种三维规则数据场的特征可视化方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">李 斌 梁训东 刘慎权</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：584—-591)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=106" target=_blank><font color="#006699">用于体绘制的可变模板法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王文成 吴恩华</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：592—-599)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=107" target=_blank><font color="#006699">一种应用参数曲面的动态自由变形方法 </font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">冯结青 马利庄 彭群生</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：600—-607)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=108" target=_blank><font color="#006699">立体视觉的微分几何约束与特征匹配</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">周凌翔 顾伟康</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：608—-615)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=109" target=_blank><font color="#006699">基于分形的流场采样方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">陈 莉 彭群生</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：616—-622)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=110" target=_blank><font color="#006699">工程图标注字符的提取与识别</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">高静波 唐 龙 刘文印 唐泽圣</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：623—-629)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=111" target=_blank><font color="#006699">TMLNNs:三值/多值逻辑神经元网络</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王国胤   *施鸿宝</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：630—-639)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=112" target=_blank><font color="#006699">一种基于多值逻辑的开放式逻辑软件设计方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">韩江洪 陆 阳 张维勇 蒋建国</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：640—-647)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=113" target=_blank><font color="#006699">一类递推方程的一个新的优化向量并行算法.</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">胡王月 高庆狮  *刘志勇</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：648—-653)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=114" target=_blank><font color="#006699">用于室内环境建模的基于形状一致性的立体视觉匹配算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">林学yin 朱志刚 邓文</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：654—-660)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=115" target=_blank><font color="#006699">景物运动模拟的轴变形方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">童若锋   *汪国昭</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：661—-666)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=116" target=_blank><font color="#006699">基于IIR指数平滑滤波与非线性Laplacian算子的边缘检测方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">游素亚 柳 健 徐光佑</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖7期　（页码：667—-672)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=117" target=_blank><font color="#006699">统计启发式搜索算法在函数优化中的应用</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">张 铃   *张 钹</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：673—-680)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=118" target=_blank><font color="#006699">一个有效的重复快照算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">贺乐天 孙永强</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：681—-685)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=119" target=_blank><font color="#006699">基于扩展串的等价遗传算法的收敛性</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">梁艳春  *周春光  **王在申</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：686—-694)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=120" target=_blank><font color="#006699">LogP模型上一类蝶式计算的通信策略</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">陈国良 许锦波</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：695—-701)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=121" target=_blank><font color="#006699">基于重量分析的OBDD变量排序算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">龙望宁 杨士元 闵应骅 童诗白</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：702—-710)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=122" target=_blank><font color="#006699">一种新的模态归结</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">潘维民   *陈图云</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：711—-717)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=123" target=_blank><font color="#006699">CSCW支撑平台的结构模型</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王国意 徐光佑</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：718—-724)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=124" target=_blank><font color="#006699">基于语义贴近度的模糊数据依赖</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘惟一</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：725—-730)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=125" target=_blank><font color="#006699">过程式语言到函数式语言的抽象方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">金成植 刘 磊</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：731—-736)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=126" target=_blank><font color="#006699">基于微内核的文件服务器的多线程并行化设计</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">张 斌 孙玉方</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：737—-743)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=127" target=_blank><font color="#006699">Hough变换的新定义</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">胡占义 杨长江 马颂德</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：744—-752)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=128" target=_blank><font color="#006699">为测试系统诊断构造基于知识(规则)的诊断系统</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">徐嵩杰 郭茜楠 郭志先</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：753—-758)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=129" target=_blank><font color="#006699">一种低成本的测试码自动产生算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">石 茵 魏道政</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖8期　（页码：759—-768)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=130" target=_blank><font color="#006699">DT模型基图像编码方法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">卢朝阳 周幸妮</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：769—-774)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=131" target=_blank><font color="#006699">一个面向对象系统的三维可视范型及实现</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">华庆一</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：775—-781)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=132" target=_blank><font color="#006699">面部表情图像的分析与识别</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">高 文 金 辉</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：782—-789)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=133" target=_blank><font color="#006699">负载平衡静态分析方法及其在网络路由分配中的应用</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘 岩 韩承德</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：790—-798)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=134" target=_blank><font color="#006699">基于形心同心圆结构的自由手写体数字神经网络分类器</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">刘志敏 施鹏飞</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：799—-805)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=135" target=_blank><font color="#006699">人工神经网络的并行分布处理</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">王意洁 王勇军 李晓梅 胡守仁</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：806—-811)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=136" target=_blank><font color="#006699">容错型令牌总线局域网建模及性能指标评估</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">李忠勇 李人厚</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：812—-819)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=137" target=_blank><font color="#006699">双总线结构工业控制计算机网性能指标评估</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">李忠勇 李人厚</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：820—-827)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=138" target=_blank><font color="#006699">平面点集的O(logN)步凸壳算法.</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">文尚猛 王 峰 李晓梅 周兴铭 </font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：828—-831)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=139" target=_blank><font color="#006699">基于能量密度的小波神经网络</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">丁宇新 沈雪勤</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：832—-838)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=140" target=_blank><font color="#006699">神经元网络与自动布图</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">周之英 滑 蔚 卢海鹏 汪 昕</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：839—-844)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=141" target=_blank><font color="#006699">立足于实际的数字系统级诊断</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">杨志娟 梁业伟</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：845—-848)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=142" target=_blank><font color="#006699">采用空间分割技术的八叉树干涉检验算法</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">吴明华 余勇翔 周 济</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：849—-854)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+     
+                         <table align=center width="88%" border="0" cellspacing="0" cellpadding="0" align="center">     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="58%"><a href="view.asp?id=143" target=_blank><font color="#006699">基于非线性Kalman滤波器的长序列图像运动估计</font></a></td>     
+                            <td align="right" style="FONT-SIZE: 9pt" bgcolor="#fffeee" height=15 width="40%"><font color="#006699">黄 浴 徐光佑  *袁保宗</font></td>     
+                          </tr>     
+                          <tr>      
+                            <td style="FONT-SIZE: 9pt" colspan="2">〖9期　（页码：855—-859)〗</td>     
+                          </tr>     
+                          <tr>      
+                            <td bgcolor="#FFFFFF" height="4" colspan="2"></td>     
+                          </tr>     
+                          
+     
+                        </table>                            
+     
+                       
+                             
+                      </td>     
+                    </tr>     
+                  </table>     
+       
+				<p>　</p>
+				<table align=center border="0" cellpadding="0" cellspacing="0" width="100%" height="46" id="table20" background="../image/conn.jpg">
+					<tr>
+						<td align=center style="FONT-SIZE: 8.8pt">
+						<font color=550000>通信地址： 北京2704信箱《计算机学报》编辑部&nbsp;&nbsp; 邮政编码：100080<br>
+						
+						联系电话： （010）62620695&nbsp;&nbsp; E-mail： <a href="mailto:cjc@ict.ac.cn">cjc@ict.ac.cn</a></font></td>
+					</tr>
+				</table>
+		
+    		</div>
+		 </td>
+		 </tr>
+	</table>
+	
+		

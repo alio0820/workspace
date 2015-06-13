@@ -1,0 +1,48 @@
+/*!
+ * SlideMe v1.0.0 Stylesheet
+ * Docs & License: Matteo Martinelli
+ * (c) 2013 Matteo Martinelli
+ */
+
+
+/* Elements HTML */
+* {cursor:default;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+body{margin:0;font-family:'Segoe UI','MS Serif', 'New York', serif;}
+p, div, ul, li{margin:0; padding:0;}
+
+/* Container */
+.wrapper-slider{z-index:9999999;position:fixed;font-family:"Segoe UI",Arial;}
+.wrapper-slider .label{box-shadow: -1px -3px 7px #202020;z-index:2;position:absolute;bottom:0;height:20px;width:100%;background:url("liner.png");}
+.wrapper-slider .label.mousedown{box-shadow: -1px -3px 10px #202020;cursor:s-resize;}
+.wrapper-slider .label .one {cursor:s-resize;background-color: #4a4f50; height: 5px; margin: 7px auto 0; width: 99%;border-radius:20px;}
+.wrapper-slider .label.mousedown .one {background-color: #3E4A50;}
+.wrapper-slider .container{overflow:auto;color:#FFF;position:absolute;top:0;height:780px;width:100%;background:url("liner.png");}
+.wrapper-slider .container .content{padding:10px 0;}
+
+/* Time */
+.wrapper-slider .container .content .time{text-shadow: 1px 1px 3px #FFFFFF;margin:0 auto;width:430px; height:125px;background:url("retro.png")}
+.wrapper-slider .container .content .time .hour{line-height:100%; font-size:90px;float:left;margin-left:10px;margin-top: 16px;}
+.wrapper-slider .container .content .time .day{float:left; margin-left: 20px; margin-top: 29px;}
+
+/* Notifications */
+.wrapper-slider .container .content .notifications{margin-top:40px;}
+.wrapper-slider .container .content .notifications ul{text-shadow: 2px 1px 2px #000000;margin:10px 0 0 0; padding:0;list-style-type:none;font-size: 14px;}
+.wrapper-slider .container .content .notifications ul span.nonotice{display:block;text-align:center;}
+.wrapper-slider .container .content .notifications ul li{padding:0;}
+
+.wrapper-slider .container .content .notifications ul li.first{border-top:1px solid #202020;}
+.wrapper-slider .container .content .notifications ul li.first div.head{border-top: 1px solid rgb(77, 77, 77);}
+
+.wrapper-slider .container .content .notifications ul li div.head{background:url("head.png") repeat-x; display:block;width:100%;height:40px;}
+.wrapper-slider .container .content .notifications ul li div.head .icon{float:left;padding:7px 0 0 7px;}
+.wrapper-slider .container .content .notifications ul li div.head .delete{background:url("delete.png") 0 0 no-repeat;float:right;margin:11px 9px 0 0;cursor:pointer;height:20px;width:20px;}
+.wrapper-slider .container .content .notifications ul li div.head .delete:hover{background-position:0 -20px;}
+.wrapper-slider .container .content .notifications ul li div.head span{float:left; padding-left:10px;padding-top:13px;display:block;font-weight:bold;}
+
+/* SubNotifications */
+.wrapper-slider .container .content .notifications ul li ul{border:none;list-style-type:none;margin:0;}
+.wrapper-slider .container .content .notifications ul li ul li{border-bottom: 1px solid rgb(77, 77, 77);position:relative;}
+.wrapper-slider .container .content .notifications ul li ul li div{border-bottom:1px solid #202020;padding: 10px 0 10px 45px;}
+.wrapper-slider .container .content .notifications ul li ul li .subtitle{display:block;font-weight:bold;}
+.wrapper-slider .container .content .notifications ul li ul li .description{display:block;}
+.wrapper-slider .container .content .notifications ul li ul li .ago{position:absolute;right:10px;top:5px;font-weight:bold;}

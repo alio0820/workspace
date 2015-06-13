@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>飘动的气球</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+    	var posX=0;
+    	var posY=50;
+    	var flagX=1;
+    	var flagY=1;
+  		function init(){
+  			document.getElementById('pic').style.left=posX;
+  			if(posX<600 && flagX==1){posX=posX+2;flagX=1;}
+  			if(posX==600){posX=posX-2;flagX=-1;}
+  			if(flagX==-1){posX=posX-2;flagX=-1;}
+  			if(posX==0) flagX=1;
+  			pic.style.top=posY;
+  			if(posY<90 && flagY==1){posY=posY+1;flagY=1;}
+  			if(posY==90){posY=posY-1;flagY=-1;}
+  			if(flagY==-1){posY=posY-1;flagY=-1;}
+  			if(posY==10) flagY=1;
+  			setTimeout("init()",30);
+  		}
+    </script>
+  </head>  
+  <body onload="init()">
+    	<div style="position:static;text-indent:2em">
+    		当使用“absolute”定位元素时，该元素就被看作一个矩形的覆盖物来格式化。这个矩形的覆盖物会凌驾于
+    		其他任何文档原始布局之外放置。绝对定位的元素是独立的，它既与上级元素无关，也与子元素无关。同时，
+    		它的准度和位置都不被加以考虑。因此，一个绝对定位的元素都是完全独立于其他内容的。如果在一个定位
+    		元素中放置了一些文字，而在另外一个定位元素中放置了一张图片，那么就无法使文字环绕在图片的周围，
+    		因为它们之间是相互独立的。
+    	</div>
+    	<div id="pic" style="position:absolute">
+    		<img width="50" height="50" src="../images/balloon.jpg">
+    	</div>
+  </body>
+</html>

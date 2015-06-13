@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="struts2" namespace="/" extends="struts-default">
+		<action name="insert" class="com.hp.login.login.web.action.LoginAction" method="insertUser">
+			<result name="suce">/login/loginSuce.jsp</result>
+		</action>		
+		<action name="login" class="com.hp.login.login.web.action.LoginAction" method="login">
+			<result name="suce">/login/loginSuce.jsp</result>
+			<result name="input">/login/login.jsp</result>
+		</action>
+		<action name="Register" class="com.hp.login.login.web.action.RegisterAction" method="register">
+			<result name="suce">/login.jsp</result>
+			<result name="input">/login/register.jsp</result>
+		</action>
+		<action name="*">
+		   <result>/login/{1}.jsp</result>
+		</action>
+	</package>
+	
+	<package name="query" namespace="/query" extends="struts-default">
+		<action name="queryUser" class="com.hp.login.login.web.action.QueryAction" method="queryUserList">
+			<result>/query/table.jsp</result>
+		</action>		
+		<action name="login" class="com.hp.login.login.web.action.LoginAction" method="login">
+			<result name="suce">/login/loginSuce.jsp</result>
+			<result name="input">/login/login.jsp</result>
+		</action>		
+	</package>
+	
+	<package name="aa" namespace="/login" extends="struts-default"><!-- 为什么注册的命名空间变成了 /login-->
+	     <action name="register" class="com.hp.login.login.web.action.RegisterAction" method="register">
+			<result name="suce">/login/login.jsp</result>
+			<result name="input">/login/register.jsp</result>
+		</action>
+		<action name="login" class="com.hp.login.login.web.action.LoginAction" method="login">
+			<result name="suce">/login/loginSuce.jsp</result>
+			<result name="input">/login/login.jsp</result>
+		</action>
+	</package>
+
+</struts>

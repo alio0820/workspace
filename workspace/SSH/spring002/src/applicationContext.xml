@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	
+	<bean id="dao" class="com.chinasofti.dao.impl.UserDaoImpl"/>
+	<bean id="dao1" class="com.chinasofti.dao.impl.UserDaoImpl1"/>
+	
+	<bean id="service" class="com.chinasofti.service.impl.UserServiceImpl">
+		<property name="userDao">
+			<ref bean="dao1"/>
+		</property>	
+	</bean>
+	
+	<bean id="ui" class="com.chinasofti.ui.UserUI" >
+		<property name="userService">
+			<ref bean="service"/>		
+		</property>
+	
+	</bean>
+</beans>

@@ -1,0 +1,22 @@
+#
+#Fri Aug 05 11:18:22 CST 2011
+genBasicCompId=true
+sessionFactoryName=com.chinasofti.util.HibernateSessionFactory
+profile=
+daoSFId=
+version=3.2
+jndiPath=
+detectM2M=false
+reStrategyClass=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+libInstallFolder=lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=
+configFile=/hibernate/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true

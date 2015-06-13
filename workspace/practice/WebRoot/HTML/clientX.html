@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" " http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+	<head>
+		<!-- saved from url=(0013)about:internet -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<script type="text/javascript">
+		var preevt="";
+		window.onresize=function(){
+			document.getElementById("Cx").value=Number(document.getElementById("Sx").value)+document.getElementById("div").offsetLeft*1;
+			document.getElementById("Cy").value=document.getElementById("Sy").value+document.getElementById("div").offsetTop;
+		};
+		function findIt(evt){
+			preevt=evt;
+			document.getElementById("Cx").value=evt.clientX;    //相对窗口的横坐标	
+			document.getElementById("Cy").value=evt.clientY;	//相对窗口的纵坐标
+			document.getElementById("Sx").value=evt.clientX-document.getElementById("div").offsetLeft;//相对div的横坐标
+			document.getElementById("Sy").value=evt.clientY-document.getElementById("div").offsetTop;//相对div的纵坐标
+		}
+	</script>
+</head>
+<body style="margin:0">
+	<div id="div"style="width:200px;height:200px;background:rgb(0,0,0);margin:0 auto;" onclick="findIt(event)"></div>
+    <input type="text" id ="Cx"/>
+    <input type="text" id ="Cy"/>
+    <input type="text" id ="Sx"/>
+    <input type="text" id ="Sy"/>
+</body>
+</html>

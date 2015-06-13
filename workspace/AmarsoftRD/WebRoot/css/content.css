@@ -1,0 +1,144 @@
+.regime ul{
+	margin:10px;
+	padding:0px;
+}
+.regime li{
+	list-style:none;
+	line-height:25px;
+	padding-left:10px;
+}
+.regime a{
+    text-decoration: none;
+    transition: all 0.5s linear 0s;
+    cursor:pointer;
+}
+.regime li:hover{
+	background:none repeat scroll 0 0 #FAF4FF;
+}
+.notice .contentpart{
+	border-radius:3px;
+	margin-top:10px;
+	border: 1px solid #E0E0E3;
+	box-shadow: 0 1px 1px #DDDDDD;
+	background:#FFFFFF;
+	position:relative;
+	color:#666666;
+}
+.notice .contentpart:hover{
+	border:1px solid #C6C6C6;
+}
+.notice .contentpart .header{
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	padding-right:15px;
+	cursor:pointer;
+	-moz-user-select:none;
+}
+.contentpart .content{
+	border-top:1px solid #E4E4E4;
+	padding:10px;
+	display:none;
+	margin-left:3px;
+	margin-right:3px;
+}
+.notice .contentpart li:hover{
+	background:none repeat scroll 0 0 #FAF4FF;
+}
+.content .content_title{
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.content .content_salutation{
+	text-align:left;
+<!--	text-indent:2em;-->
+	font-size:14px;
+}
+.content .content_info{
+	/*font-size:14px;*/
+}
+.content .content_foot{
+	text-align:right;
+	font-size:14px;
+	margin-top:5px;
+}
+.notice li{
+	list-style:none;
+	line-height:25px;
+}
+.contentpart .content .mitxt{
+	width:250px;
+}
+.contentpart .content label{
+	width:50px;
+	display:inline-block;
+}
+.dropbox{
+	min-width:300px;
+	min-height:300px;
+	border:3px dashed silver;
+	margin-top:10px;
+}
+.close {
+    background: url("../images/pic/close.png") no-repeat scroll 0 0;
+    border-radius: 100%;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    display:none;
+    z-index:90;
+}
+.close:hover{
+	box-shadow:0 0 5px rgba(0,0,0,0.4);
+}
+.header .close{
+	right:30px;
+	top:6px;
+}
+.header:hover .close{
+	display:block;
+}
+.header{
+	position:relative;
+}
+.mini-div:hover .close{
+	display:block;
+}
+.tip {
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFFF;
+	background-clip: padding-box;
+    border: 1px solid #D3D3D3;
+    color: #333333;
+    display: none;
+    height: 20px;
+    line-height:20px;
+    opacity: 0.9;
+    padding: 3px 5px;
+    position: fixed;
+    text-align: center;
+    width: 70px;
+    z-index:10000;
+    top:50%;
+    left:50%;
+    margin-top:-10px;
+    margin-left:-35px;
+}
+.specialTip{
+	padding:0;
+	width:20px;
+	border-radius:100%;
+	color:#666666;
+	background:#FFE08E;
+	border:1px solid #FFE08E;
+	opacity: 0;
+}
+input.error {
+    border: 1px dotted #FF0000;
+}

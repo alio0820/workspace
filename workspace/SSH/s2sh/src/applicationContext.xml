@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+	
+	<!-- 事务管理器 想象成advice 或者advisor	-->
+	<bean id="myTxManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+    	<property name="sessionFactory" ref="sessionFactory"/>
+ 	</bean>
+	
+	<aop:config>
+	    <aop:pointcut id="productServiceMethods" expression="execution(* com.chinasoft.service.impl..*.* (..))"/>
+	    <aop:advisor advice-ref="txAdvice" pointcut-ref="productServiceMethods"/>
+  	</aop:config>
+
+  <tx:advice id="txAdvice" transaction-manager="myTxManager">
+    <tx:attributes>
+	      <tx:method name="add*" propagation="REQUIRED" />
+	      <tx:method name="update*" propagation="REQUIRED" />
+	      <tx:method name="remove*" propagation="REQUIRED" no-rollback-for="java.lang.NullPointerException"/>
+	      <tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+    </tx:attributes>
+  </tx:advice>
+	
+	<bean id="bookDao" class="com.chinasoft.dao.impl.BookDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="bookService" class="com.chinasoft.service.impl.BookServiceImpl">
+		<property name="bookDao">
+			<ref bean="bookDao"/>		
+		</property>
+	</bean>	
+
+	<bean id="bookAction" class="com.chinasoft.web.action.BookAction">
+		<property name="bookService">
+			<ref bean="bookService"/>
+		</property>	
+	</bean>
+</beans>
+	
+	

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>jQuery ios下拉通知 - 站长图库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<link href="css/slideme.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-2.0.2.min.js"></script>
+<script src="js/slideme.min.js"></script>
+<script>
+    	var now = new Date ();
+		var d = now.getDate();
+		var m = now.getMonth();
+		var y = now.getFullYear();
+		var h = now.getHours();
+		var mi = now.getMinutes();
+		var s = now.getSeconds();
+				
+		$(document).ready(function() {
+			$(".wrapper-slider").SlideMe({
+				refreshAgo: true,
+				ondelete: function(ids) {
+					//Do anything
+					console.log("Done. You have delete the elements with id: " + JSON.stringify(ids));
+				},
+				categories:[
+					{
+						//id: 0 --> auto_increment
+						title:'我们的UI分析报告',
+						icon: 'images/message.png'
+					},
+					{
+						//id: 1 --> auto_increment
+						title:'我们可改进的地方',
+						icon: 'images/update.png'
+					},
+					
+				],
+				notifications: [ //Ordina in base all'h le categorie, e le news dentro ogni categoria 
+					{
+						id:0,
+						category: 0,
+						title: '首页做不好',
+						text: '&nbsp;&nbsp;信息不够丰富：信息太少，没有想要的信息，用户不喜欢<br>'+
+						'&nbsp;&nbsp;UI不友好：操作复杂，多次点击才能找到目标，用户查看信息时间成本太高<br/>'+
+						'&nbsp;&nbsp;UI不美观：用户使用时很痛苦',
+						ago: new Date(y, m, d, h, mi-4, s)
+						
+					},
+					{
+						id:1,
+						category: 0,
+						title: 'list展示页面都长一个样',
+						text: '&nbsp;&nbsp;形式固定：都是左树图+右表格<br>'+
+						'&nbsp;&nbsp;UI不友好：每次打开都是重载页面，搜索框内原输入字符找不到，翻页过后进入详情页面，返回后直接跑到第一页，不能直接找到刚才点击记录...<br>'+
+						'&nbsp;&nbsp;UI不美观：使用框架页后，经常出现多重滚动条，甚至页面显示不全，底部看不到，特别是，框架页的数量也有限制',
+						ago: new Date(y, m, d, h, mi-5, s)
+					},
+					{
+						id:2,
+						category: 0,
+						title: 'info展示页面填写信息痛苦',
+						text: '&nbsp;&nbsp;形式混乱：内容多时，寻找输入项很耗费时间，内容少时，挤成一块<br>'+
+						'&nbsp;&nbsp;UI不友好：输入信息时，有时很多信息在其他页面，需要反复切换，考验的通常是体力和耐力...<br>'+
+						'&nbsp;&nbsp;UI不美观：几乎所有的信息展示项都是输入框，那些不能更改的信息，可以不以输入框形式显示...',
+						ago: new Date(y, m, d, h, mi-5, s)
+					},
+					{
+						id:3,
+						category: 0,
+						title: '除了list和info页面没有其他的页面了',
+						text: '&nbsp;&nbsp;用户操作模式：登录进入过后+打开list页面+点击表格某一项+进入info页面，填写表格，保存返回，重复以上动作直到永远...<br>'+
+						'&nbsp;&nbsp;根本不知道弹出框会从哪里弹出：有的是左上角，很小；有的是中间，超出页面；有的内容很多，却不全屏...<br>'+
+						'&nbsp;&nbsp;鼠标没有跟踪提示：鼠标移到哪儿，想看个tip，对不起，没有...',
+						ago: new Date(y, m, d, h, mi-5, s)
+					},
+					{
+						id:4,
+						category: 1,
+						title: '首先面临的是项目组开发难度问题',
+						text: '&nbsp;&nbsp;如果项目组开发不出来，用户，最终用户都看不到效果<br>'+
+						'&nbsp;&nbsp;这些东西Datawindow和Objectwindow都做不来：不要指望它们，得想另外的方法',
+						ago: new Date(y, m, d, h, mi-5, s)
+					},
+					{
+						id:5,
+						category: 1,
+						title: '其实，理论上我们可以做',
+						text: '&nbsp;&nbsp;界面和数据分离，不要java代码跑完，界面就出来了，应该是java代码跑完，拿到数据，界面封装才开始<br>'+
+						'&nbsp;&nbsp;Datawindow和Objectwindow可以用来做绑定：它们还是有用的，document元素以组件的形式存在组件库，调用组件ID绑定到模板',
+						ago: new Date(y, m, d, h, mi-5, s)
+					}
+					
+				]
+			});
+			
+			$("body").css({overflow:"auto"});
+
+        });
+		
+	</script>
+</head>
+
+<body>
+
+<div class="wrapper-slider">
+</div>
+<div class="wrapper-container">
+	<div class="container">
+		<img src="images/home2.png" /> </div>
+</div>
+</body>
+</html>

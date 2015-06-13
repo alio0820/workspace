@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../images/fruit.ico">
+		<title>在Canvas中播放视频</title>
+		<style>
+			body{
+				background:#dddddd;
+			}
+			#canvas{
+				background:#ffffff;
+				border:thin solid darkgray;
+				-webkit-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-moz-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+			}
+			#video{
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<video id='video' poster>
+			<source src ='../images/2.MP4'/>
+		</video>
+		<canvas id='canvas' width='640' height='360'>
+			Canvas not supported
+		</canvas>
+		<script>
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d'),
+				video = document.getElementById('video');
+			
+			function animate(){
+				if(!video.ended){
+					context.drawImage(video,0,0,canvas.width,canvas.height);
+					window.requestAnimationFrame(animate);
+				}
+			}
+			
+//			video.onload = function(e){
+				video.play();
+				window.requestAnimationFrame(animate);
+//			};
+		</script>
+	</body>
+</html>

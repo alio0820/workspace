@@ -1,0 +1,68 @@
+        <center>
+        共<s:property value="intRowCount"/>记录&nbsp;&nbsp;
+        第<s:property value="pageNow"/>/<s:property value="intPageCount"/>页&nbsp;&nbsp;
+         <s:url id="url_pre" value="fileSort.action">   
+         <s:param name="pageNow" value="pageNow-1"></s:param>
+         <s:param name="str" value="2"></s:param>   
+     </s:url>   
+  
+     <s:url id="url_next" value="fileSort.action">   
+         <s:param name="pageNow" value="pageNow+1"></s:param>
+         <s:param name="str" value="2"></s:param>   
+     </s:url>   
+     <s:iterator value="Newss" status="status">   
+        <s:url id="url" value="fileSort.action">   
+            <s:param name="pageNow" value="pageNow"/>   
+        </s:url>   
+     </s:iterator>    
+     <s:if test="pageNow==1">
+    <s:a href="%{url_pre}">首页</s:a>
+     </s:if>
+     <s:else>
+     <s:a href="%{url_pre}">上一页</s:a>
+     </s:else>
+     <s:if test="pageNow==k">
+     <s:a href="%{url_next}">末页</s:a>
+       </s:if>
+       <s:else>
+       <s:a href="%{url_next}">下一页</s:a>
+       </s:else>
+       </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ageNow"/>/<s:property value="intPageCount"/>页&nbsp;&nbsp;
+         <s:url id="url_pre" value="fileSort.action">   
+         <s:param name="pageNow" value="pageNow-1"></s:param>
+         <s:param name="str" value="2"></s:param>   
+     </s:url>   
+  
+     <s:url id="url_next" value="fileSort.action">   
+         <s:param name="pageNow" value="pageNow+1"></s:param>
+         <s:param name="str" value="2"></s:param>   
+     </s:url>   
+     <s:iterator value="Newss" status="status">   
+        <s:url id="url" value="fileSort.action">   
+            <s:param name="pageNow" value="pageNow"/>   
+        </s:url>   
+     </s:iterator>    
+     <s:if test="pageNow==1">
+    <s:a href="%{url_pre}">首页</s:a>
+     </s:if>
+     <s:else>
+     <s:a href="%{url_pre}">上一页</s:a>
+     </s:else>
+     <s:if test="pageNow==k">
+     <s:a href="%{url_next}">末页</s:a>
+       </s:if>
+       <s:else>

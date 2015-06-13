@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../images/fruit.ico">
+		<title>背景的移动</title>
+		<script src ='../js/requestNextAnimationFrame.js'></script>
+		<style>
+			body{
+				background:#dddddd;
+			}
+			#canvas{
+				position:absolute;
+				top:30px;
+				left:10px;
+				background:#ffffff;
+				cursor:crosshair;
+				margin:10px 0px 0px 10px;
+				-webkit-box-shadow:3px 3px 6px rgba(0,0,0,0.5);
+				-moz-box-shadow:3px 3px 6px rgba(0,0,0,0.5);
+				-box-shadow:3px 3px 6px rgba(0,0,0,0.5);
+			}
+			input{
+				margin-left:15px;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='canvas' width='750' height='500'>
+			Canvas not supported
+		</canvas>
+		<input id='animateButton' type='button' value='Animate'/>
+		<script>
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d'),
+				controls = document.getElementById('controls'),
+				animateButton = document.getElementById('animateButton'),
+				sky = new Image(),
+				paused = true,
+				lastTime =0,
+				fps = 0,
+				skyOffset =0,
+				SKY_VELOCITY =30;//pixels/second
+			
+			//functions...........
+			function erase(){
+				context.clearRect(0,0,canvas.width,canvas.height);
+			}
+			
+			function draw(){
+				context.save();
+				skyOffset = skyOffset < canvas.width ? skyOffset + SKY_VELOCITY/fps :0;
+				context.save();
+				context.translate(-skyOffset,0);
+				context.drawImage(sky,0,0);
+				context.drawImage(sky,sky.width -2,0);
+				context.restore();
+			}
+			
+			function calculateFps(now){
+				var fps = 1000 / (now - lastTime);
+				lastTime = now;
+				return fps;
+			}
+			
+			function animate(now){
+				if(now == undefined){
+					now = +new Date();
+				}
+				fps = calculateFps(now);
+				
+				if(!paused){
+					erase();
+					draw();
+				}
+				requestNextAnimationFrame(animate);
+			}
+			
+			animateButton.onclick = function(e){
+				paused = paused ? false :true;
+				if(paused){
+					animateButton.value = 'Animate';
+				}
+				else{
+					animateButton.value = 'Pause';
+				}
+			};
+			
+			canvas.width = canvas.width;
+			canvas.height = canvas.height;
+			sky.src = '../images/rabbit.jpg';
+			sky.onload = function(e){
+				draw();
+			};
+			requestNextAnimationFrame(animate);
+		</script>
+	</body>
+</html>

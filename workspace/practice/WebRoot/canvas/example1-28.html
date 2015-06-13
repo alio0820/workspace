@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../images/fruit.ico">
+		<title>文本编辑控件</title>
+		<style>
+			body{
+				background:#eeeeee;
+			}
+			#canvas{
+				background:#ffffff;
+				margin-left:10px;
+				maring-top:10px;
+				-webkit-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-moz-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='canvas' width='650' height='500'>
+			Canvas not supported
+		</canvas>
+		<script>
+			TextCursor = function(width,fillStyle){
+				this.fillStyle = fillStyle || 'rgba(0,0,0,0.5)';
+				this.width = width || 2;
+				this.left = 0 ;
+				this.top = 0 ;
+			};
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d'),
+				cursor = new TextCursor();
+			
+			
+			TextCursor.prototype = {
+				getHeight : function(context){
+					var h = context.measureText('W').width;
+					return h + h/6;
+				},
+				createPath : function(context){
+					context.beginPath();
+					context.rect(this.left,this.top,this.width,this.getHeight(context));
+				},
+				draw : function(context,left,bottom){
+					context.save();
+					this.left = left;
+					this.top = bottom - this.getHeight(context);
+					this.createPath(context);
+					context.fillStyle = this.fillStyle;
+					context.fill();
+					context.restore();
+				},
+				erase : function(context){
+					context.putImageData(imageData,0,0,this.left,this.top,this.width,this.getHeight(context));
+				}
+			};
+			function moveCursor(loc){
+				cursor.draw(context,loc.x,loc.y);
+			}
+			canvas.onmousedown = function(e){
+				var loc = windowToCanvas(e);
+				moveCursor(loc);
+			};
+		</script>
+	</body>
+</html>

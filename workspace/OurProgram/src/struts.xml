@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+		<constant name="struts.i18n.encoding" value="utf-8"/>
+	
+	<package name="struts2" namespace="/" extends="struts-default">
+		
+		<action name="login" class="com.etc.OurProgram.web.action.LoginAction" method="login">
+			<result name="suceAdmin">/index.jsp</result>
+			<result name="suceCommon">/index.jsp</result>
+			<result name="input">/login/login.jsp</result>
+		</action>
+			
+		<action name="queryUser" class="com.etc.OurProgram.web.action.QueryAction" method="queryUserList">
+			<result name="success">/login/users_control.jsp</result>
+		</action>
+		
+		<action name="addUser" class="com.etc.OurProgram.web.action.AddAction" method="add">
+			<result name="success">/login/users_control.jsp</result>
+			<result name="false">/login/addWrong.jsp</result>
+		</action>
+		
+	   <action name="modifyUser" class="com.etc.OurProgram.web.action.ModifyAction" method="modify">
+			<result name="success">/login/users_control.jsp</result>
+			<result name="false">/login/modifyWrong.jsp</result>
+		</action> 
+		
+		<action name="deleteUser" class="com.etc.OurProgram.web.action.DeleteAction" method="delete">
+			<result name="success">/login/users_control.jsp</result>
+			<result name="false">/login/sonD.jsp</result>
+		</action> 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<action name="filequeryUser" class="com.etc.OurProgram.web.action.fileQueryAction" method="filequeryUserList">
+			<result>/file/WaitExamine.jsp</result>
+		</action>
+		<action name="queryUserDetail" class="com.etc.OurProgram.web.action.QueryActionDetail" method="queryUserList">
+	    	<result>/file/WaitDetail.jsp</result>
+		</action>
+		<action name="queryUserDetailTwo" class="com.etc.OurProgram.web.action.QueryActionDetailTwo" method="queryUserList">
+	    	<result>/file/SubmintDocu.jsp</result>
+		</action>
+		<action name="haveUser" class="com.etc.OurProgram.web.action.HaveAction" method="queryUserList">
+		     <result>/file/HaveExamined.jsp</result>
+		</action>
+		<action name="haveUserDetail" class="com.etc.OurProgram.web.action.HaveActionDetail" method="queryUserList">
+		     <result>/file/HaveDetail.jsp</result>
+		</action>
+		
+		
+		<!-- 会计科目 -->
+	    <action name="accountingSubject" class="com.etc.OurProgram.web.action.AccountingAction" method="accounting">
+			<result>/basedata/accountingSubject/accountingPreserve.jsp</result>
+		</action>		
+	    <!-- 资产类型 -->
+		<action name="property" class="com.etc.OurProgram.web.action.PropertyAction" method="property">
+            <result>/basedata/property/propertySortPreserve.jsp</result>
+            <result name="next">/basedata/property/propertySort.jsp</result>
+		</action>		
+		<!-- 归档类别 -->		
+	    <action name="fileSort" class="com.etc.OurProgram.web.action.FileSortAction" method="property">
+            <result>/basedata/fileSort/fileSort.jsp</result>
+            <result name="next">/basedata/fileSort/fileSortNext.jsp</result>
+		</action>
+		<!-- 资料属性 -->
+		<action name="dataAttribute" class="com.etc.OurProgram.web.action.DataAttributeAction" method="accounting">
+            <result>/basedata/dataAttribute/dataAttribute.jsp</result>
+		</action>
+		
+		
+		<!-- financemanage -->
+		<action name="financeinsert" class="com.etc.OurProgram.web.action.financeInsertAction" method="insert">
+          <result name="success" type="chain">financeSuccessShow</result>
+          <result name="false">/financemanage/finance_maintain.jsp</result>
+        </action>
+        
+        <action name="financeSuccessShow" class="com.etc.OurProgram.web.action.financeSuccessShowAction" method="successShow">
+          	<result name="success">/financemanage/nosubmit_form.jsp</result>
+        </action>
+        
+        <action name="financeSuccessShowTwo" class="com.etc.OurProgram.web.action.financeSuccessShowAction" method="successShowTwo">
+            <result name="success">/financemanage/financequery.jsp</result>
+        </action>
+        
+        <action name="financedelete" class="com.etc.OurProgram.web.action.financeDeleteAction" method="delete">
+            <result name="success" type="chain">financeSuccessShow</result> 
+            <result name="false">/financemanage/ProjectManegement.jsp</result>
+        </action>
+        
+        <action name="financecreateform" class="com.etc.OurProgram.web.action.financeCreateFormAction" method="createForm">
+           <result name="success" type="chain">financeSuccessShow</result>
+           <result name="false">/financemanage/error.jsp</result>
+        </action>
+        
+        <action name="financeupdate" class="com.etc.OurProgram.web.action.financeUpdateAction" method="update">
+          <result name="success">/financemanage/finance_maintian_update.jsp</result>
+          
+        </action>
+        
+        <action name="financeupdatesuccess" class="com.etc.OurProgram.web.action.financeUpdateSuccessAction" method="updatesuccess">
+         <result name="success" type="chain">financeSuccessShow</result> 
+         <result name="false">/financemanage/error.jsp</result>
+        </action>
+		
+		<action name="financequery" class="com.etc.OurProgram.web.action.financeQueryAction" method="query">
+		<result name="success">/financemanage/financequery.jsp</result>
+		<result name="false">/financemanage/financequery.jsp</result>
+		</action>
+		
+		
+		<!-- project -->
+		<action name="*PrjManage" class="com.etc.OurProgram.web.action.ProjectManegementAction" method="{1}">
+			<result name="suce">/ProjectManegement/ProjectManegement.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="*Prjdatum" class="com.etc.OurProgram.web.action.ProjectDatumAction" method="{1}">
+			<result name="suce">/ProjectManegement/ProjectInformationVindicate.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+	
+	
+		
+		
+		
+		
+		
+		<action name="showUnitLiulan" class="com.etc.OurProgram.web.action.UnitAction" method="showUnit">
+			<result name="suce">/ProjectManegement/unit.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="showTeammatesLiulan" class="com.etc.OurProgram.web.action.TeammatesAction" method="showTeammates">
+			<result name="suce">/ProjectManegement/Teammates.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="showProjectIDLiulan" class="com.etc.OurProgram.web.action.ProjectIDAction" method="showProjectID">
+			<result name="suce">/ProjectManegement/ProjectID.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="showPigeonholeLeaderLiulan" class="com.etc.OurProgram.web.action.PigeonholeLeaderAction" method="showPigeonholeLeader">
+			<result name="suce">/ProjectManegement/PigeonholeLeader.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="showDatumAttributeLiulan" class="com.etc.OurProgram.web.action.DatumAttributeAction" method="showDatumAttribute">
+			<result name="suce">/ProjectManegement/DatumAttribute.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		
+		
+		<action name="fileDownLoad" class="com.etc.OurProgram.web.action.FileUpLoadAction" method="fileDownLoad">
+			<result name="success" type="stream">
+			
+					<param name="inputName">fis</param>
+					    <!-- 使用经过转码的文件名作为下载文件名，downloadFileName属性对应action类中的方法 getDownloadFileName() -->
+					<param name="contentDisposition">
+						attachment;filename="${fisFileName}"
+					</param>
+					<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		
+		
+		
+		<action name="*projectList" class="com.etc.OurProgram.web.action.ProjectListAction" method="{1}">
+		     <result name="succ">/ProjectManegement/MyRes.jsp</result>
+		     <result name="record">/ProjectManegement/SubmitRecord.jsp</result>
+		</action>
+		<action name="showList" class="com.etc.OurProgram.web.action.ProjectDatumAction" method="showList">
+			<result name="suce">/ProjectManegement/QueryDatum.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		
+	</package>
+	
+</struts>

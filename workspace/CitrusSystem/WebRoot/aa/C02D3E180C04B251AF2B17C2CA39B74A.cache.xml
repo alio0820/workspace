@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cache-entry>
+	<generated-type-hash class="chenmin.ui.ajax.client.Service_Proxy" hash="0475F973063B51D2444D562C8DDA740A"/>
+	<generated-type-hash class="org.gwtwidgets.client.ui.pagination.Results_FieldSerializer" hash="8A1E2C8A6EBBE98D2579CB446D338768"/>
+	<generated-type-hash class="com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException_FieldSerializer" hash="FF198044879E67E1ACF2E0C29CC58CB5"/>
+	<generated-type-hash class="com.google.gwt.user.client.ui.MultiWordSuggestOracle_MultiWordSuggestion_FieldSerializer" hash="75C0F836EEC27563E2E64D8A898E2E07"/>
+	<generated-type-hash class="chenmin.ui.ajax.client.Service_TypeSerializer" hash="41E486AD9A4C7C541C832A8C72746B42"/>
+	<generated-type-hash class="chenmin.ui.system.client.ServerStatusData_FieldSerializer" hash="8EF8E128E9F647002F6C8B3C98156D0E"/>
+	<generated-type-hash class="com.google.gwt.user.client.rpc.SerializableException_FieldSerializer" hash="1CB9B63ABEC9BE7E663F6C56AA395208"/>
+	<generated-type-hash class="org.gwtwidgets.client.ui.pagination.PaginationParameters_FieldSerializer" hash="82D2729C97A78EB52C0954A8F89442AD"/>
+	<generated-type-hash class="com.google.gwt.user.client.ui.SuggestOracle_Response_FieldSerializer" hash="1C6D42E0AC1FE9CDD63B791E11BD9615"/>
+	<generated-type-hash class="com.google.gwt.user.client.ui.SuggestOracle_Request_FieldSerializer" hash="93219A0D78603408F1E24CE444809ADE"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.TextBoxImpl" out="com.google.gwt.user.client.ui.impl.TextBoxImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.FocusImpl" out="com.google.gwt.user.client.ui.impl.FocusImplSafari"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.ClippedImageImpl" out="com.google.gwt.user.client.ui.impl.ClippedImageImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.FormPanelImpl" out="com.google.gwt.user.client.ui.impl.FormPanelImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.HistoryImpl" out="com.google.gwt.user.client.impl.HistoryImplSafari"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.HTTPRequestImpl" out="com.google.gwt.user.client.impl.HTTPRequestImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.DOMImpl" out="com.google.gwt.user.client.impl.DOMImplSafari"/>
+	<rebind-decision in="chenmin.ui.system.client.System" out="chenmin.ui.system.client.System"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.PopupImpl" out="com.google.gwt.user.client.ui.impl.PopupImpl"/>
+	<rebind-decision in="chenmin.ui.ajax.client.Service" out="chenmin.ui.ajax.client.Service_Proxy"/>
+</cache-entry>

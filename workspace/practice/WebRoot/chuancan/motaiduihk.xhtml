@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2002/REC-xhtml1-20020801/DTD/xhtml1-transitional.dtd">
+
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+<head>
+<meta http-equiv='Content-Type' content='application/xhtml+xml;charset=UTF-8'/>
+<title>ModelDialog仅在窗口范围拖拽的模态对话框</title>
+<script type="text/javascript" src="motaiduihk.js"></script>
+<link rel="stylesheet" type="text/css" href="motaiduihk.css"/>
+
+<script type='text/javascript'>
+function test(){
+var str = "<div><textarea name='lingdao_ps'></textarea><br/><input type='button' onclick='aa(lingdao_ps.value)' value='按钮'/></div>";
+var dialog = new ModelDialog({
+template : str,
+//shadowOpy : 0.1,
+//dragable : false
+dragInWin : false
+//area : [0,500,0,500]
+});
+	dialog['onbi'] = function(){
+		;
+	};
+}
+function aa(value){
+   alert('你点击了按钮');
+   div_text.innerHTML=value;
+}
+</script>
+</head>
+<body>
+<button onclick="test();">点我测试（1007）</button><br/>
+<div id='div_text'>123456</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Filter_Light.html</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  
+  <body> 
+    	<div style="width:200px;height:200;background:#666">
+    		<img id="lightsy" style="filter:light(enabled=1)" src="../images/tt.jpg">
+    	</div>
+    	<script type="text/javascript">
+    	// 调用设置光源函数
+		document.body.onload=setlights1;
+		// 获得鼠标句柄
+		document.getElementById('lightsy').onmousemove=mousehandler;
+		// 调用Light滤镜方法
+		function setlights1(){
+			lightsy.filters[0].addcone(380,-20,5,100,100,255,255,0,40,25); 
+			lightsy.filters[0].addcone(100,-20,5,100,100,255,255,0,40,25);
+			/*第一个参数：光源的X坐标；第二个参数：光源的Y坐标；第三个参数：光源离开页面的高度；
+			第四至第六个参数：光源的颜色；第七个参数：光源光的色相；第八个参数：光源的形状；
+			第九个参数：光源的光的强度 ；第十个参数：光源光散开的范围。
+			*/
+			/*你可以增加任意个光源。方法也很简单，就是在“setlights1 "函数中再增加几句
+			lightsy.filters[0].addcone(380,-20,5,100,100,255,255,0,40,25)代码 ，
+			不要忘记把参数改动一下，不然的话，光源都有在同一个位置可就看不出效果了。
+		　　上面只是用Javascript调用了Light滤镜的“addcone"（加入锥形光源）和“movelight"（移动光源）方法。
+			Light滤镜还有一些方法，介绍如下：
+			addambient ： 加入包围的光源；
+			addpoint ： 加入点光源；
+			changcolor ：改变光的颜色；
+			changestrength：改变光源的强度；
+			clear ： 清除所有光源。
+			*/
+		}
+		// 捕捉鼠标的位置来移动光线焦点
+		function mousehandler()
+		{
+			x=(window.event.x-40);
+			y=(window.event.y-40);
+			lightsy.filters[0].movelight(1,x,y,5,1);//第一个参数表示第几束光
+		}
+    </script>
+  </body>
+</html>

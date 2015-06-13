@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="struts2" namespace="/" extends="struts-default">
+		<action name="citrusInfo" class="com.citrus.info.action.treeInfoAction" method="info"></action>
+		<action name="jvm" class="com.citrus.info.action.jvmAction" method="jvmInfo"></action>
+		<action name="servlet" class="com.citrus.JavaVM.Jvm" method="dopost"></action>
+		<action name="*">
+		     <result>/jsp/{1}.jsp</result>
+		</action>
+	</package>
+	<package name="dd" namespace="/jsp" extends="struts-default">
+		<action name="citrusInfo" class="com.citrus.info.action.treeInfoAction" method="info"></action>
+		<action name="jvm" class="com.citrus.info.action.jvmAction" method="jvmInfo"></action>
+	</package>
+</struts>

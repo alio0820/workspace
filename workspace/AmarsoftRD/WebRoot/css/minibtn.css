@@ -1,0 +1,84 @@
+.nui-miniBtn {
+    border-radius: 100% !important;
+    color: #555555;
+    font-size: 12px;
+    outline: 0 none;
+    position: absolute;
+    visibility:hidden;
+    float:right;
+    top:10px;
+    right:150px;
+}
+.nui-miniBtn:hover{
+	box-shadow:0 1px 3px rgba(0,0,0,0.2);
+}
+.nui-miniBtn .nui-btn-text {
+	background: url(../images/pic/btn-background.png) repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 100% !important;
+    border: 1px solid #999999;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    width: 17px;
+    padding:0;
+    cursor: pointer;
+    display:inline-block;
+}
+.nui-miniBtn:active .nui-btn-text{
+	background:url(../images/pic/btn-background-active.png);
+}
+.nui-miniBtn:focus .nui-btn-text{
+	border: 1px solid #3366CC;
+}
+.nui-miniBtn .nui-btn-icon {
+    font-size: 12px;
+    height: 17px;
+    left: 0;
+    top: 0;
+    width: 17px;
+    cursor:pointer;
+}
+.nui-miniBtn .nui-btn-icon .nui-ico-dArr {
+    left: 6px;
+    top: 8px;
+    position: absolute;
+    background:url(../images/pic/arrows-down.png);
+    height: 4px;
+    width: 7px;
+}
+.mini-div:hover .nui-miniBtn{
+	visibility:visible;
+}
+.nui-menu {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    line-height: 25px;
+    outline: 0 none;
+    padding: 7px 0;
+    position: absolute !important;
+    text-align: left;
+    top: 0;
+    white-space: nowrap;
+    z-index: 99;
+    display:none;
+}
+li .btn-focus{
+	display:block;
+}
+.nui-menu-item{
+    color: #555555;
+}
+.nui-menu-item:hover{
+	background-color:#3366CC;
+	color:#FFFFFF !important;
+}
+.nui-menu-item-link {
+	cursor: pointer;
+    display: block;
+    padding: 0 52px 0 32px;
+    position: relative;
+    text-decoration: none;
+}

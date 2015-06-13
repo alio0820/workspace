@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+<html>
+   <head>
+    <script type="text/javascript" src="dhtmlHistory.js">
+    </script>
+   </head>
+   <body>     
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+
+		window.onload = initialize;
+		var tt;
+
+	function initialize() {
+	   var i ;
+	   dhtmlHistory.initialize();  
+	   dhtmlHistory.addListener(handleHistoryChange);
+	   dhtmlHistory.add('1p','data1');
+	   dhtmlHistory.add('2p','data2');
+	   dhtmlHistory.add('3p','data3');
+	   dhtmlHistory.add('4p','data4');
+	   historyStorage.put('1','data1');
+	   historyStorage.put('2','data2');
+	   historyStorage.put('3','data3');
+	   historyStorage.put('4','data4');
+	   tt = document.getElementById('content');
+	   tt.innerHTML = historyStorage.get('4');
+	}
+
+	function handleHistoryChange(newLocation,historyData){
+		tt.innerHTML = historyStorage.get(newLocation.replace('p',''));
+	}
+	//-->
+	</SCRIPT>
+	<div id = 'content'></div>
+   </body>
+</html>

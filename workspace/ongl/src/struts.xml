@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?><!-- GBK指的是繁体中文 -->
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+	<package name="struts2" namespace="/" extends="struts-default"><!--name可以随便取-->
+		<!-- namespace="/"必须写上，否则会报找不到result的错误，另外，extends="struts-default" 这个也要写，可能会报找不到struts.xml的错 -->
+		<action name="login" class="org.crazyit.app.action.LoginAction"
+			method="login">
+			<result name="success">/success.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="user" class="org.crazyit.app.action.UserAction"
+			method="execute">
+			<result name="success">/success.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="welcome">
+			<result>/welcome.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+	</package>
+
+</struts>    

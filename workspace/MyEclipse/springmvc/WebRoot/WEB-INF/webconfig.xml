@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>	
+	<!--Definition of View Resolver -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>
+				org.springframework.web.servlet.view.JstlView
+			</value>
+		</property>
+		<property name="prefix">
+			<value>/view/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	
+	<!--Request Mapping -->
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="urlMap">
+			<props>
+				<prop key="/login.do">loginAction</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!---Action Definition-->
+	<bean id="loginAction" class="com.controller.LoginController" >
+		<property name="validator">
+			<ref bean="loginValidator"/>
+		</property>
+		<property name="commandClass">
+			<value>com.model.LoginInfo</value>
+		</property>
+		<property name="commandName">
+			<value>command</value>
+		</property>
+		<property name="formView">
+            <value>form</value>
+		</property>
+		<property name="fail_view">
+			<value>/loginfail</value>
+		</property>
+		<property name="success_view">
+			<value>/main</value>
+		</property>
+	</bean>
+	
+	<bean id="loginValidator" class="com.validator.LoginValidator"></bean>
+	
+	
+<!--	<bean id="paramMultiController"-->
+<!--      class="org.springframework.web.servlet.mvc.multiaction.MultiActionController">-->
+<!--	    <property name="methodNameResolver">-->
+<!--	        <ref bean="methodNameResolver"/>-->
+<!--	    </property>-->
+<!--	    <property name="delegate">-->
+<!--	        <bean class="com.controller.SampleDelegate"/>-->
+<!--	    </property>-->
+<!---->
+<!--	</bean>-->
+<!---->
+<!---->
+<!--	-->
+<!--	<bean id="registerAction" class="com.controller.RegisterController" >-->
+<!--		<property name="methodNameResolver">-->
+<!--			<ref bean="methodNameResolver"/>-->
+<!--		</property>	-->
+<!--		<property name="fail_view">-->
+<!--			<value>/loginfail</value>-->
+<!--		</property>-->
+<!--		<property name="success_view">-->
+<!--			<value>/main</value>-->
+<!--		</property>-->
+<!--	</bean>-->
+	
+</beans>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>login.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript">
+		function sub(){
+			var name =  document.getElementById("userName").value;
+			var pwd =  document.getElementById("pwd").value;
+			var ckeck1 =  document.getElementById("ckeck1");
+			var ckeck2 =  document.getElementById("ckeck2");
+			
+			var str = "../zhouqi/login?userName="+name+"&pwd="+pwd;
+			if(ckeck1.checked){
+				str += "&ckeck=1";
+			}
+			if(ckeck2.checked){
+				str += "&ckeck=2";
+			}
+			
+			window.location.href = str; 
+		}
+	
+	
+	</script>
+
+
+  </head>
+  
+  <body>  
+    	<form action="/Servlet001/zhouqi/login" method="post">
+    		<input type="hidden" name="id"/>
+    		<input type="text" name="userName" id="userName"/>
+    		<input type="password" name="pwd" id="pwd"/>
+    		
+    		男<input type="checkbox" name="ckeck" value="1" id="ckeck1"> 
+    		女<input type="checkbox" name="ckeck" value="2" id="ckeck2"> 
+    		
+    		
+    		<input type="button" value="登录" onclick="sub();"/> 
+    	</form>
+
+   
+  </body>
+</html>

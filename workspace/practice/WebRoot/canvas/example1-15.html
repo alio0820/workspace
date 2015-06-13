@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../images/fruit.ico">
+		<title>二次方贝塞尔曲线绘制复选框</title>
+		<style>
+			body{
+				background:#eeeeee;
+			}
+			#canvas{
+				background:#ffffff;
+				cursor:pointer;
+				margin-left:10px;
+				maring-top:10px;
+				-webkit-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-moz-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='canvas' width='400' height='300'>
+			Canvas not supported
+		</canvas>
+		<script>
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d');
+				
+			context.fillStyle = 'cornflowerblue';
+			context.strokeStyle = 'yellow';
+			
+			context.shadowColor = 'rgba(50,50,50,1.0)';
+			context.shadowOffsetX = 2;
+			context.shadowOffsetY = 2;
+			context.shadowBlur = 4;
+			
+			context.lineWidth =20;
+			context.lineCap ='round';
+			
+			context.beginPath();
+			context.moveTo(120.5,130);
+			context.quadraticCurveTo(150.8,130,160.6,150.5);
+			context.quadraticCurveTo(190,250.0,210.5,160.5);
+			context.quadraticCurveTo(240,100.5,290,70.5);
+			
+			context.stroke();
+		</script>
+	</body>
+</html>

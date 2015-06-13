@@ -1,0 +1,80 @@
+#loginbox{
+	background-color: #FFFFFF;
+	background-clip: padding-box;
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    border:1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    height: 130px;
+    width: 300px;
+    left:50%;
+    top:50%;
+    margin-left:-150px;
+    margin-top:-65px;
+   /* opacity: 0.9;*/
+    position: fixed;
+    z-index: 9999;
+}
+#loginbox .box-header {
+    -moz-user-select: none;
+    border-bottom: 1px solid #E5E5E5;
+    cursor: move;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin:0 2px;
+}
+#loginbox .box-header label {
+    color: #333333;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#loginbox .box-header span {
+    color: #AAAAAA;
+    cursor: pointer;
+    float: right;
+    padding-right: 5px;
+}
+#loginbox .box-header span:hover {
+    color: #333333;
+}
+#loginbox .box-content {
+    text-align: center;
+}
+#loginbox .box-content .unit_box{
+	margin:5px 10px 10px;
+}
+.box-content .unit_box label{
+	width:50px;
+	text-align:right;
+	display:inline-block;
+}
+.box-content .unit_box input{
+	padding:2px;
+	outline: 0 none;
+}
+.box-content .unit_box input:focus {
+  /*  background: none repeat scroll 0 0 #F4FAFF;
+    border-color: #9DD4FD;*/
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+}
+#loginbox .box-content input.boxbtn {
+    background: none repeat scroll 0 0 #0088CC;
+    border: medium none;
+    border-radius: 3px;
+    color: #333333;
+    cursor: pointer;
+    font-size: 12px;
+    height: 22px;
+    margin-right: 10px;
+    outline: 0 none;
+    padding: 3px;
+    text-align: center;
+    width: 36px;
+}
+#loginbox .box-content input.boxbtn:hover,#loginbox .box-content input.boxbtn:active {
+    background: none repeat scroll 0 0 #3399FF;
+    box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+    outline: 0 none;
+}

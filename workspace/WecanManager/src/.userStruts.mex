@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="struts2" location="50,50" size="170,155">
+    <action name="user_*" location="10,20" size="150,125">
+      <result name="login">
+        <resourceEdge source="login" routing="0" target="index.jsp" />
+      </result>
+      <result name="suce">
+        <resourceEdge source="suce" routing="0" target="index.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="login.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="login.jsp" />
+      </result>
+      <result name="addManager">
+        <resourceEdge source="addManager" routing="0" target="addManager.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="index.jsp" path="index.jsp" location="350,50" size="150,55" />
+  <webResource name="login.jsp" path="login.jsp" location="500,50" size="150,55" />
+  <webResource name="userinfo.jsp" path="/userinfo.jsp" location="50,200" size="150,55" />
+  <webResource name="error.jsp" path="/error.jsp" location="200,200" size="150,55" />
+  <webResource name="adminIndex.jsp" path="/adminIndex.jsp" location="350,200" size="150,55" />
+  <webResource name="adminLogin.jsp" path="/adminLogin.jsp" location="500,200" size="150,55" />
+  <webResource name="index.jsp" path="/admin/index.jsp" location="50,350" size="150,55" />
+  <webResource name="login.jsp" path="/admin/login.jsp" location="200,350" size="150,55" />
+  <webResource name="addManager.jsp" path="/admin/addManager.jsp" location="350,350" size="150,55" />
+</Struts2Diagram>
+

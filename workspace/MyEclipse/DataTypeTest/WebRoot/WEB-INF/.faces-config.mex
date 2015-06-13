@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JSFFlowViewLayout version="1.0">
+  <Drawing gridVisible="true" snapOn="true" />
+  <JSFFlowResource path="&lt;default&gt;" location="20,200" dimension="98,36" />
+  <JSFFlowResource path="/editDataType.faces" location="180,30" dimension="158,36" />
+  <JSFFlowResource path="/addDataType.faces" location="480,30" dimension="152,36" />
+  <JSFFlowResource path="/dataTypeList.faces" location="180,130" dimension="158,36" />
+  <JSFFlowNavigationCase id="&lt;default&gt;,/editDataType.faces,editDataType,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="69,200" />
+      <AbsolutePoint location="69,48" />
+      <AbsolutePoint location="180,48" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="&lt;default&gt;,/addDataType.faces,addDataType,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="118,233" />
+      <AbsolutePoint location="556,233" />
+      <AbsolutePoint location="556,66" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="&lt;default&gt;,/dataTypeList.faces,backList,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="118,218" />
+      <AbsolutePoint location="259,218" />
+      <AbsolutePoint location="259,166" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+</JSFFlowViewLayout>
+

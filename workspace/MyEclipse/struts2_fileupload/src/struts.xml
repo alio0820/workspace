@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.custom.i18n.resources" value="message"></constant>
+	<constant name="struts.multipart.maxSize" value="999999999999"></constant>
+	<package name="struts2" extends="struts-default">		
+		<action name="fileUpLoad" class="com.test.action.FileUpLoadAction">
+			
+			<result name="success">/success.jsp</result>	
+			<result name="input">/input.jsp</result>	
+			<interceptor-ref name="fileUpload">				
+				<param name="maximumSize">5000</param>
+				<param name="allowedTypes">text/plain</param>						
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack">				
+			</interceptor-ref>			
+		</action>
+		
+		<action name="fileDownLoad" class="com.test.action.FileUpLoadAction" method="fileDownLoad">
+			<result name="success" type="stream">
+				<param name="contentType">text/plain</param>
+					<param name="inputName">fis</param>
+					<!-- 使用经过转码的文件名作为下载文件名，downloadFileName属性
+						对应action类中的方法 getDownloadFileName() -->
+					<param name="contentDisposition">
+						attachment;filename="${fisFileName}"
+					</param>
+					<param name="bufferSize">4096</param>
+			</result>
+		</action>
+	</package>
+
+</struts>

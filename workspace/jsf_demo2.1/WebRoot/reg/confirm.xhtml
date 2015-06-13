@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<head>
+		<title>confirm.xhtml</title>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description" content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		
+		<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+	</head>
+<h:body>
+		<h:form>
+			<h2>
+				JSF Registration App--confirm page
+			</h2>
+			<table>
+				<tr>
+					<td>
+						Name:
+					</td>
+					<td>
+						#{user.name}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Sex:
+					</td>
+					<td>
+						#{user.sex}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Date of Birth:
+					</td>
+					<td>
+						<h:outputText value="#{user.birth}">
+							<f:convertDateTime pattern="yyyy-MM-dd"/>
+						</h:outputText>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Email Address:
+					</td>
+					<td>#{user.email}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<h:commandButton value="Edit" action="register" /> 
+					<h:commandButton value="Confirm" action="#{user.addConfirmedUser}" />
+					</td>
+				</tr>
+			</table>
+		</h:form>
+	</h:body>
+</html>
+

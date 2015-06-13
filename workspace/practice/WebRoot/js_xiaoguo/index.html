@@ -1,0 +1,192 @@
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中国南方电网-输电线路综合监测平台--运维科技</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/sort.js"></script>
+<script type="text/javascript" src="js/upwindow.js" ></script>
+</head>
+
+<body onLoad="iniApp()">
+
+<!--弹出窗口-->
+<div id="uw" style="position: absolute; top: 0px; background-color: #777; display: none;"></div>
+<div id="uw_h" align="left" style="position: absolute; left: expression((document.body.offsetWidth-540)/2); top: expression((document.body.offsetHeight-170)/10);background-image: url(images/up_window_head_bg.jpg);background-repeat: repeat-x;height: 40px;width: 353px; border-right-style: solid;border-bottom-style: solid;border-top-style: solid;border-left-style: solid;border-right-width: 1px;border-bottom-width: 1px;border-top-width: 1px;border-left-width: 1px;border-right-color: #b9ddff;border-bottom-color: #b9ddff;border-left-color: #b9ddff;border-top-color: #b9ddff;display: none; margin-left:40%;*margin-left:5%;margin-right:60%; margin-top:15%" >
+<div align="left"><a class="up_w_n" >弹出窗口</a></div>
+<div align="right"><a href=JavaScript:; class="up_w_b" onClick="Lock_CheckForm(this);"></a></div>
+<div class="up_window_text">
+<div class="m-t">
+上午好，admin！</br>
+欢迎使用输电线路综合监测平台！
+</div>
+</div>
+</div>
+
+<!--Top-->
+<div id="top">
+<div class="logo"><img src="images/logo.png"></div>
+</div>
+
+<!--Menu-->
+<div  id="Menu">
+<div class="sort_head"></div>
+<div class="imcm imde">
+<ul id="imenus0">
+<li class="imatm">
+<a himg="images/Menu_xtpz_hover.jpg" style="background-image:url(images/Menu_xtpz.jpg);background-repeat:no-repeat;background-position:center center;"></a>
+<div class="imsc">
+<div class="imsubc">
+<ul>
+<li><a href="second.html">用户管理</a></li>
+<li><a href="#">权限管理</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="imatm">
+<a himg="images/Menu_yjpz_hover.jpg" style="background-image:url(images/Menu_yjpz.jpg);background-repeat:no-repeat;background-position:center center;"></a>
+<div class="imsc">
+<div class="imsubc">
+<ul>
+<li><a href="#">环流预警配置</a></li>
+<li><a href="#">绝缘子预警配置</a></li>
+<li><a href="#">光纤测温配置</a></li>
+<li><a href="#">行波测距配置</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="imatm">
+<a himg="images/Menu_xtcx_hover.jpg" style="background-image:url(images/Menu_xtcx.jpg);background-repeat:no-repeat;background-position:center center;"></a>
+<div class="imsc">
+<div class="imsubc">
+<ul>
+<li><a href="#">环流数据统计</a></li>
+<li><a href="#">绝缘子数据统计</a></li>
+<li><a href="#">光纤测温数据统计</a></li>
+<li><a href="#">行波测距数据统计</a></li>
+<li><a href="#">告警查询</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="imatm">
+<a himg="images/Menu_bbgl_hover.jpg" style="background-image:url(images/Menu_bbgl.jpg);background-repeat:no-repeat;background-position:center center;"></a>
+<div class="imsc">
+<div class="imsubc">
+<ul>
+<li><a href="#">环流数据报表</a></li>
+<li><a href="#">绝缘子数据报表</a></li>
+<li><a href="#">光纤测温数据报表</a></li>
+<li><a href="#">行波测距数据报表</a></li>
+<li><a href="#">告警数据报表</a></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<div class="exit_button"><a href="#"><img src="images/exit_button.jpg" border="0" /></a></div>
+<div class="exit"><img src="images/menu_ioc.gif" width="16" height="19" align="bottom" /> 上午好，admin，欢迎访问！</div>
+</div>
+</div>
+<script type="text/javascript" src="js/Menu.js"></script>
+
+</div>
+
+
+<!--Sort-->
+<div id="main">
+<div>
+<div id="Sort">
+<ul>
+<div class="Sort_bg_dxdl"><span>地下电缆</span></div>
+<li class="Sort_bg_hover" onMouseMove="fod(this,'Sort_map')"><a>环流监测</a></li>
+<li class="Sort_bg" onMouseDown="loadMap('电缆可视化')" onMouseMove="fod(this,'Sort_map')"><a>电缆可视化</a></li>
+
+<li class="Sort_bg" onMouseMove="fod(this,'Sort_map')" style="height:86px;"><a>光纤测温</a>
+<div class="Sort_bg_jkxl"><span>架空线路</span></div></li>
+
+<li class="Sort_bg" onMouseMove="fod(this,'Sort_map')"><a>视频监测</a></li>
+<li class="Sort_bg" onMouseMove="fod(this,'Sort_map')"><a>绝缘子电流泄漏</a></li>
+<li class="Sort_bg" onMouseMove="fod(this,'Sort_map')"><a>行波测距</a></li>
+</ul>
+</div>
+
+<div id="Sort_map">
+<div class="dis" name="f">
+测试页1
+</div>
+<div class="undis" name="f">
+<iframe id="checkballIFrame" width=100% height=100% frameborder=0 scrolling=auto></iframe>
+</div>
+<div class="undis" name="f">
+测试页3
+</div>
+<div class="undis" name="f">
+<iframe id="cameraIFrame" width=420 height=330 frameborder=0 scrolling=auto></iframe>
+</div>
+<div class="undis" name="f">
+测试页5
+</div>
+<div class="undis" name="f">
+测试页6
+</div>
+</div>
+</div>
+<div id="pointDiv"style="height:10px;width:70%;display:block;float:left">
+<div style="width:99px;height:10px;margin:0 auto;overflow:hide">
+	<img src="images/pointhide.png" style="width:99px;height:12px;cursor:pointer;" onclick="hideOrShowButtom(this)"/>
+</div>
+</div>
+<!-- <div id="bottom_hide" style="float:left;height:3px;width:100%;">
+	<img src="images/logo_bg.jpg" style="height:3px;width:100%;float:left;cursor:pointer" onmouseover="show()"onmouseout="setTimeout('hide()',3000)"/>
+</div>
+ -->
+</div>
+<!--Alert-->
+<div id="alert">
+<div class="alert_head">
+<ul>
+<li><img src="images/alert_xh.jpg" /></li>
+<li style="width:160px"><img src="images/alert_gjlx.jpg" /></li>
+<li style="width:160px"><img src="images/alert_xbsb.jpg" /></li>
+<li style="width:170px"><img src="images/alert_fssj.jpg" /></li>
+<li style="width:160px"><img src="images/alert_gjnr.jpg" /></li>
+<li style="width:160px; float:right;"><img src="images/alert_bz.jpg" /></li>
+</ul>
+</div>
+<div class="alert_txet">
+<ul class="table_bg">
+<li><input name="" type="checkbox" value="" />
+01</li>
+<li style="width:149px; ">告警类型告警类型告警类型告警类型告警类型告警类型</li>
+<li style="width:152px">#42ffffffffffffffffffffffffffffffffffffffffffffffffffffff</li>
+<li style="width:162px">2012-11-14 13:40:13</li>
+<li style="width:247px"><a onClick="locking()">绝缘子电流泄漏 绝缘子电流泄漏绝缘子电流泄漏绝缘子电流泄漏绝缘子电流缘子电流泄漏绝缘子电流缘子电流泄漏绝缘子电流</a></li>
+<li style="width:151px;float:right;">备注</li>
+</ul>
+<ul class="table_bg">
+<li><input name="" type="checkbox" value="" />
+02</li>
+<li style="width:149px">告警类型</li>
+<li style="width:152px">#42</li>
+<li style="width:162px">2012-11-14 13:40:13</li>
+<li style="width:247px">绝缘子电流泄漏 绝缘子电流泄漏绝缘子电流泄漏绝缘子电流泄漏绝缘子电流 </li>
+<li style="width:151px;float:right;">备注</li>
+</ul>
+<ul class="table_bg">
+<li><input name="" type="checkbox" value="" />
+03</li>
+<li style="width:149px">告警类型</li>
+<li style="width:152px">#42</li>
+<li style="width:162px">2012-11-14 13:40:13</li>
+<li style="width:247px">绝缘子电流泄漏 绝缘子电流泄漏绝缘子电流泄漏绝缘子电流泄漏绝缘子电流 </li>
+<li style="width:151px;float:right;">备注</li>
+</ul>
+</div>
+</div>
+
+
+</body>
+</html>

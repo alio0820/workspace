@@ -1,0 +1,166 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.hedgerwow.com/BLOG/owc/table1.htm -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2900.2963" name=GENERATOR></HEAD>
+<BODY>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD colspan="2"><b><font size="4">标题1</font></b></TD>
+    <TD><a href="http://www.baidu.com">baidu</a></TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xxxxx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>yyyy</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>zzzz</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>bbbb</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>aaaaa</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR>
+  <TR>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD>
+    <TD>xcxcxcx</TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Blur滤镜-图片模糊效果</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+    	function init(){
+    		flash.flashTimer = setInterval("flash.filters.blur.strength = (flash.filters.blur.strength+5)%30",200);
+    	}
+    	function restartFlash(){
+    		clearInterval(flash.flashTimer);
+    		init();
+    	}
+    	function stopFlash(){
+    		clearInterval(flash.flashTimer);
+    	}
+    </script>
+    <style type="text/css">
+    	.div1{
+    		width:500;
+    		}
+    	.div2{
+    		width:500;
+    		filter:blur(add=true,direcation = 135,strength =10);
+    		}
+    	.p1{
+    		font-size:36px;
+    		font-style:bold;
+    		color:blue;
+    		}
+    </style>
+  </head> 
+  <body>
+    	<center>
+    	<img src="../images/div_scrollStyle.jpg"/><br/>
+    	<img src="../images/div_scrollStyle.jpg" style="filter:blur(strength =15)"/><br/>
+    	<img src="../images/div_scrollStyle.jpg" style="filter:blur(strength =30)"/><br/>
+ 		<!-- direcation模糊的角度，strength模糊的像素
+ 			 元素和嵌入对象中如果包含有<Java>、<APPLET>、<IFRAME>、<SELET>、<OPTION>、<P>、<H1>至<H6>
+ 			 <EM>、<STRONG>元素，则滤镜属性无效
+ 			 当将Blur应用于body元素上时，整个页面的内容，不论是标题还是段落或图片等，都会产生模糊效果
+ 	    -->
+ 	    <div class="div1"><p class="p1">这一行不使用Blur滤镜</p></div>
+ 	    <div class="div2"><p class="p1">这一行使用Blur滤镜</p></div>
+ 	    <div id="flash" style="width:100%;height:280;filter:blur(direcation:135,strength =10);">
+ 	    	<img src="../images/div_scrollStyle.jpg"/>
+ 	    </div>
+ 	    <input type="button" value="开始渐变效果" onclick="restartFlash()"/>
+ 	    <input type="button" value="停止渐变效果" onclick="stopFlash()"/> 	    
+ 	    </center>
+  </body>
+</html>

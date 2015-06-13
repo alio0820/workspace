@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../images/fruit.ico">
+		<title>视频处理</title>
+		<style>
+			body{
+				background:#dddddd;
+			}
+			.floatingControls{
+				position:absolute;
+				left:175px;
+				top:300px;
+			}
+			#canvas{
+				background:#ffffff;
+				border:thin solid #aaaaaa;
+				-webkit-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-moz-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+			}
+			#video{
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<video id='video' poster>
+			<source src ='../images/2.MP4'/>
+		</video>
+		<canvas id='canvas' width='640' height='360'>
+			Canvas not supported
+		</canvas>
+		<div id='controls' class='floatingControls'>
+			<input id='controlButton' type = 'button' value='Play'/>
+			<input id='colorCheckbox' type='checkbox' checked> Color
+			<input id='flipCheckbox' type='checkbox'> Flip
+		</div>
+		<script>
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d'),
+				offscreenCanvas = document.createElement('canvas'),
+				offscreenContext = offscreenCanvas.getContext('2d'),
+				video = document.getElementById('video'),
+				
+				controlButton = document.getElementById('controlButton'),
+				flipCheckbox = document.getElementById('flipCheckbox'),
+				colorCheckbox = document.getElementById('colorCheckbox'),
+				imageData,
+				poster = new Image();
+			
+			function removeColor(){
+				var data,
+					width,
+					average;
+				imageData = offscreenContext.getImageData(0,0,offscreenCanvas.width,offscreenCanvas.height);
+				data = imageData.data;
+				width = data.width;
+				
+				for(i=0;i<data.length-4;i+=4){
+					average = (data[i] + data[i+1] +data[i+2])/3;
+					data[i] = average;
+					data[i+1] = average;
+					data[i+2] = average;
+				}
+				offscreenContext.putImageData(imageData,0,0);
+			}
+			
+			function drawFlipped(){
+				context.save();
+				context.translate(canvas.width/2,canvas.height/2);
+				context.rotate(Math.PI);
+				context.translate(-canvas.width/2,-canvas.height/2);
+				context.drawImage(offscreenCanvas,0,0);
+				context.restore();
+			}
+			
+			function nextVideoFrame(){
+				if(video.ended){
+					controlButton.value = 'Play';
+				}
+				else{
+					offscreenContext.drawImage(video,0,0);
+					
+					if(!colorCheckbox.checked)
+						removeColor();
+					if(flipCheckbox.checked)
+						drawFlipped();
+					else
+						context.drawImage(offscreenCanvas,0,0);
+					requestAnimationFrame(nextVideoFrame);
+				}
+			}
+			
+			function startPlaying(){
+				requestAnimationFrame(nextVideoFrame);
+				video.play();
+			}
+			
+			function stopPlaying(){
+				video.pause();
+			}
+			
+			controlButton.onclick = function(e){
+				if(controlButton.value == 'Play'){
+					startPlaying();
+					controlButton.value = 'Pause';
+				}
+				else{
+					stopPlaying();
+					controlButton.value = 'Play';
+				}
+			};
+			
+			poster.onload = function(){
+				context.drawImage(poster,0,0);
+			}
+			
+			poster.src = '../images/rabbit.jpg';
+			offscreenCanvas.width = canvas.width;
+			offscreenCanvas.height = canvas.height;
+		</script>
+	</body>
+</html>

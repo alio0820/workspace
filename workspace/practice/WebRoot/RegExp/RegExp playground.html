@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class=" -moz-" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+<title>正则验证器-阿狸改造</title>
+<style data-href="css/global.css" media="">
+* {
+	margin: 0;
+	color: inherit;
+	font: inherit;
+	text-shadow: inherit;
+}
+
+body {
+	background: hsl(30,20%,30%) url("img/noise.png");
+	color: white;
+	-webkit-font-smoothing: antialiased; /* fix for WebKit inconsistency */
+}
+
+code, pre {
+	font-family: Consolas, Monaco, monospace;
+}
+
+button,
+.button {
+	padding: .2em .5em;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: .3em;
+	background: hsl(75, 70%, 60%);
+	background-image: url("noise.png"),
+			linear-gradient(hsla(75, 70%, 60%, 0), hsl(75, 70%, 35%));
+	background-origin: border-box;
+	box-shadow: 0 1px white inset, 0 .2em .25em -.1em black;
+	transition-property: box-shadow, background, border-width;
+	transition-duration: .3s;
+}
+
+button:active,
+.button:active {
+	border: 0;
+	background-color: hsl(75, 70%, 40%);
+	box-shadow: 0 1px hsla(0,0%,100%,.3), 0 1px .3em .05em black inset;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}</style>
+<style data-href="css/standalone.css" media="">body {
+	min-width: 820px;
+	min-height: 580px;
+	padding: .8em;
+	-moz-box-sizing: border-box;
+	font: 220% Futura, sans-serif;
+	text-shadow: 0 -.05em .1em black;
+}
+
+.regex-test h1 {
+	text-align: center;
+}
+
+kbd {
+	position: relative;
+	display: inline-block;
+	min-width: 1em;
+	padding: .2em;
+	border: 1px solid rgba(0,0,0,.2);
+	margin: 0 .1em;
+	background: hsl(30,20%,25%) url("img/noise.png");
+	line-height: 1;
+	border-radius: .2em;
+	box-shadow: 0 1px hsla(0,0%,100%,.15) inset,
+	            1px 1px hsl(30,20%,20%), 2px 2px hsl(30,20%,18%), 3px 3px hsl(30,20%,16%),
+	            3px 3px 10px rgba(0,0,0,.5);
+	text-align: center;
+	transition-duration: .3s;
+	transition-property: box-shadow, transform;
+}
+
+kbd + kbd {
+	z-index: 1;
+}
+
+dfn:hover kbd,
+dfn:focus kbd {
+	transform: translate(-1px, -1px);
+	box-shadow: 0 1px hsla(0,0%,100%,.2) inset,
+	            1px 1px hsl(30,20%,20%), 2px 2px hsl(30,20%,18%), 3px 3px hsl(30,20%,16%), 4px 4px hsl(30,20%,15%),
+	            4px 4px 10px rgba(0,0,0,.5);
+}
+
+dfn:active kbd {
+	transform: translate(3px, 3px);
+	box-shadow: 1px 1px hsl(30,20%,14%) inset, 2px 2px hsl(30,20%,16%) inset, 3px 3px hsl(30,20%,18%) inset,
+	            4px 4px 10px rgba(0,0,0,.5) inset;
+}
+
+aside {
+	position: absolute;
+	right: 1em;
+	white-space: nowrap;
+}
+
+section.help {
+	display: inline-block;
+	max-width: 12.5em;
+	padding: .3em;
+	text-align: left;
+	font-size: 90%;
+	line-height: 2;
+	border: 1px solid hsl(30,20%,25%);
+	border-radius: .5em;
+	box-shadow: 1px 1px 1px hsla(0,0%,100%,.15), 1px 1px 1px hsla(0,0%,100%,.15) inset;
+	white-space: normal;
+	vertical-align: bottom;
+}
+
+#cheatsheet {
+	line-height: 1.1;
+}
+
+	section.help h1 {
+		position: absolute;
+		top: -1.1em;
+		font-size: 120%;
+		line-height: 1;
+		text-align: center;
+	}
+		
+	dfn {
+		display: inline-block;
+		cursor: help;
+		margin: 0 .1em;
+		outline: none;
+		white-space: nowrap;
+	}
+	
+	#cheatsheet dfn {
+		min-width: 2em;
+		margin: 0;
+		border-radius: .25em;
+		background: rgba(0,0,0,.2);
+		text-align: center;
+		font: 55%/2 Consolas, Monaco, monospace;
+		box-shadow: 0 1px 2px rgba(0,0,0,.3) inset;
+	}
+	
+	#cheatsheet dfn.long {
+		min-width: 4.5em;
+	}
+
+.tweet.button {
+	position: absolute;
+	left: 1em;
+	bottom: 1em;
+	z-index: 1;
+}</style>
+<style data-href="css/regex-test.css" media="">.regex-test {
+	text-align: center;
+}
+
+	.regex-test > .pattern,
+	.regex-test > .tester {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 30px;
+		color: hsl(75, 70%, 60%);
+		font: 160%/1 Consolas, Monaco, monospace;
+		white-space: nowrap;
+		overflow: auto;
+		transition-property: color;
+		transition-duration: .3s;
+	}
+	
+	.regex-test > div.invalid {
+		color: #fbb;
+	}
+	
+	.regex-test > div.invalid:before {
+		content: '✖';
+		position: absolute;
+		left: .2em;
+		top: .1em;
+		z-index: -1;
+		width: 1em;
+		padding: .1em;
+		border: .2em solid;
+		border-radius: 50%;
+		box-shadow: 0 -.02em .03em black, 0 -.02em .03em black inset;
+		text-align: center;
+		color: hsl(30,20%,19%);
+		font: 60%/1 sans-serif;
+	}
+	
+		.regex-test > div > div {
+			display: inline-block;
+			position: relative;
+		}
+
+		.regex-test input {
+			position: relative;
+			z-index: 1;
+			min-width: .1em;
+			padding: 0;
+			margin: 0 auto;
+			border: 0;
+			outline: none;
+			background: transparent;
+		}
+		
+		.regex-test input:hover {
+			outline: 1px dashed hsla(0,0%,100%,.3);
+			outline-offset: -1px;
+		}
+		
+		.match.indicator {
+			min-width: 10px;
+			background: rgba(0,0,0,.3);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			border-radius: .1em;
+			transition-duration: .2s;
+			transition-property: left, width;
+		}
+		
+		.sub.match.indicator {
+			background: rgba(0,0,0,.2);
+		}
+		
+		.regex-test h1,
+		.regex-test ul {
+			text-align: left;
+		}
+		
+		.regex-test h1 {
+			color: hsl(30,20%,19%);
+			font: italic 180% Baskerville, serif;
+			text-shadow: 0 .1rem hsla(0,0%,100%,.3);
+		}
+		
+		.regex-test ul {
+			font-size: 90%;
+		}</style>
+
+<script src="js/prefixfree.js"></script>
+</head>
+<body class="regex-test" data-pattern="a(b)" data-test="aabb">
+<a href="javascript:void(0)" class="tweet button">Tweet!</a>
+
+<aside>
+	<section class="help" id="cheatsheet">
+		<h1>Cheat sheet</h1>
+		<dfn title="Dot: Matches everything, except line breaks">.</dfn>
+		<dfn title="n times">{n}</dfn>
+		<dfn title="At least n times" class="long">{n,}</dfn>
+		<dfn title="At least m times but no more than n times" class="long">{m,n}</dfn>
+		<dfn title="Same as {0,1}">?</dfn>
+		<dfn title="Same as {0,}">*</dfn>
+		<dfn title="Same as {1,}">+</dfn>
+		<dfn title="Character class">[…]</dfn>
+		<dfn title="Same as [a-zA-Z0-9_]">\w</dfn>
+		<dfn title="Same as [0-9]">\d</dfn>
+		<dfn title="About the same as [\t\r\n ]">\s</dfn>
+		<dfn title="Negated character class" class="long">[^…]</dfn>
+		<dfn title="Grouping and capturing">(…)</dfn>
+		<dfn title="Non-capturing group" class="long">(?:…)</dfn>
+		<dfn title="Beginning of string">^</dfn>
+		<dfn title="End of string">$</dfn>
+		<dfn title="Word boundary">\b</dfn>
+		<dfn title="Non-word boundary">\B</dfn>
+		<dfn title="Positive lookahead" class="long">(?=…)</dfn>
+		<dfn title="Negative lookahead" class="long">(?!…)</dfn>
+		<dfn title="Nth backreference">\N</dfn>
+	</section>
+	
+	<section class="help" id="keyboard-shortcuts">
+		<h1>Keyboard shortcuts</h1>
+		
+		<dfn tabindex="0" title="Next match"><kbd data-keycode="40">↓</kbd></dfn>	
+		
+		<dfn tabindex="0" title="Next subpattern"><kbd data-ctrlkey="">⌃</kbd><kbd data-keycode="40">↓</kbd></dfn>
+		<dfn tabindex="0" title="Previous subpattern"><kbd data-ctrlkey="">⌃</kbd><kbd data-keycode="38">↑</kbd></dfn>
+		<!--<dfn title="Global flag"><kbd>⌃</kbd><kbd>G</kbd></dfn>-->
+		<br>
+		<dfn tabindex="0" title="Previous match"><kbd data-keycode="38">↑</kbd></dfn>
+		<dfn tabindex="0" title="Case insensitive flag"><kbd data-ctrlkey="">⌃</kbd><kbd data-keycode="73">I</kbd></dfn>
+		<dfn tabindex="0" title="Multiline flag"><kbd data-ctrlkey="">⌃</kbd><kbd data-keycode="77">M</kbd></dfn>
+	</section>
+</aside>
+
+<footer></footer>
+
+<script src="js/utopia.js"></script>
+<script src="js/regex-test.js"></script>
+<script>
+window.regexptester = new RegExpTester(document.body);
+
+var tweetButton = $('.tweet.button');
+tweetButton.onclick = tweetButton.onmouseover = function() {
+	this.href = '#?hashtags=regexplained&text=%40regexplained%20' +
+		encodeURIComponent('/' + regexptester.input.value + '/' + regexptester.flags);
+}
+
+$$('#keyboard-shortcuts > dfn').forEach(function(dfn) {
+	var keys = $$('kbd[data-keycode], kbd[data-ctrlkey]', dfn);
+	
+	dfn.setAttribute('tabindex', '0');
+	
+	dfn.onclick = function() {
+		var e = {};
+		
+		keys.forEach(function(kbd) {
+			if (kbd.hasAttribute('data-keycode')) {
+				e.keyCode = +kbd.getAttribute('data-keycode');
+			}
+			else if (kbd.hasAttribute('data-ctrlkey')) {
+				e.ctrlKey = true;
+			}
+		});
+
+		$u.event.fire(document.body, 'keydown', e);
+	};
+});
+</script>
+
+
+</body></html>

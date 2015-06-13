@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web演示器-louis作品</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<script type="text/javascript" src="../jquery-1.7.1.js"></script>
+		<style type="text/css">
+			body{
+				margin:0;
+				background:url("../images/noise.png") repeat scroll 0 0 #5B4C3D;
+			}
+			div#wrapper {
+				margin: 0 auto;
+				text-align: left;
+			}
+			body#editor {
+				text-align: left;
+				font: 12px Verdana, Arial, Helvetica, sans-serif;
+			}
+			div#header {
+				height: 80px;
+				text-align:center;
+			}
+			#header h1 {
+				margin: 20px 0 0 20px;
+				font-size: 30px;
+				float: left;
+				color: #a5a5a5;/*#6893C2;*/
+			}
+			#header #ad {
+				float: left;
+				margin: 0 0 0 10px;
+				/*width: 728px;*/
+				height: 90px;
+			}
+			div#butt {
+				height: 50px;
+				background: #fff;
+			}
+			div#butt input {
+				margin: 10px 0 0 10px;
+				background: red;
+				color: #fff;
+				width: 150px;
+				height: 30px;
+				font: 14px Verdana, Arial, Helvetica, sans-serif;
+			}
+			div#CodeArea {
+				float: left;
+				height: 350px;
+				width: 50%;
+				margin-left: 5px;
+			}
+			div#CodeArea2 {
+				float: left;
+				height: 180px;
+				width: 99%;
+				margin-left: 5px;
+				padding-bottom:8px;
+			}
+			#CodeArea h2 {
+				color: #A5A5A5;
+				font-size: 14px;
+			}
+			#CodeArea textarea {
+				width: 100%;
+				height: 298px;
+				overflow: auto;
+				font: 14px "Courier New", Courier, monospace;
+				border:none;
+				border-radius:1px;
+			}
+			#CodeArea2 textarea {
+				width: 100%;
+				height: 180px;
+				overflow: auto;
+				border: 1px solid #c5c5c5;
+				font: 14px "Courier New", Courier, monospace;
+				border-radius:3px;
+			}
+			div#result {
+				float: left;
+				height: 350px;
+				width: 49%;
+				padding-bottom:10px;
+				margin-left:2px;
+			}
+			#result h2 {
+				color: #A5A5A5;
+				font-size: 14px;
+				margin-bottom:10px;
+			}
+			#result iframe {
+				width: 100%;
+				height: 300px;
+			}
+			#footer {
+				text-align: left;
+			}
+			#footer p {
+				margin:0;
+				padding:8px;
+				color: #666;
+			}
+			input.run{
+				/*border:1px solid lightgray;*//*给button设置border后button按下动作消失*/
+				padding:3px;
+				border-radius:3px;
+				font-size:12px;
+				font-weight:bold;
+				margin-left:5px;
+				width:50px;
+				cursor:pointer;
+			}
+			#tool{
+				margin-left:320px;
+				height:100%;
+				text-align:left;
+			}
+			#tool input.txt{
+				background-color: #626262;
+				border:1px solid #5E4F40;
+				margin:1px 1px 1px 5px;
+				border-radius:3px;
+				max-width:75px;
+				padding:2px 3px;
+				color:#333;
+			}
+			#tool input.txt:focus{
+				box-shadow:0 0 3px rgba(0, 0, 0, 0.15);
+				border:none;
+				background: white;
+				padding:3px 4px;
+			}
+			input#exchange{
+				border-radius:3px;
+				cursor:pointer;
+				padding:3px;
+				width:50px;
+			}
+			#tool input{
+				--background:#FFFFFF;
+			}
+			a:link,a:visited {
+				text-decoration: underline;
+				color: #666;
+				background: transparent;
+			}
+			a:hover {
+				text-decoration: underline;
+				color: #666;
+				background: transparent;
+			}
+			a:active {
+				text-decoration: underline;
+				color: #666;
+				background: transparent;
+			}
+			#result_iframe{
+				 background:#FFFFFF;
+			}
+			#jinzhi{
+				padding:5px 0px;
+				color:#a5a5a5;
+			}
+		</style>
+		<script type="text/javascript">		
+			function read(file) {
+				if (typeof window.ActiveXObject != 'undefined') {
+					var content = "";
+					try {
+						var fso = new ActiveXObject("Scripting.FileSystemObject");
+						var reader = fso.openTextFile(file, 1);
+						while (!reader.AtEndofStream) {
+							content += reader.readline();
+							content += "\n";
+						}
+						// close the reader  
+						reader.close();
+					}
+					catch (e) {
+						alert("Internet Explore read local file error: \n" + e);
+					}
+					return content;
+				}
+				else if (document.implementation&& document.implementation.createDocument) {
+					var content = "";
+					try {
+						netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+						var lf = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+						lf.initWithPath(file);
+						if (lf.exists() == false) {
+							alert("File does not exist");
+						}
+						var fis = Components.classes["@mozilla.org/network/file-input-stream;1"].createInstance(Components.interfaces.nsIFileInputStream);
+						fis.init(lf, 0x01, 00004, null);
+						var sis = Components.classes["@mozilla.org/scriptableinputstream;1"].createInstance(Components.interfaces.nsIScriptableInputStream);
+						sis.init(fis);
+						var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+						converter.charset = "UTF-8";
+						content = converter.ConvertToUnicode(sis.read(sis.available()));
+					}
+					catch (e) {
+						alert("Mozilla Firefox read local file error: \n" + e);
+					}
+					return content;
+				}
+			}
+		
+			var validationjs = {
+				ready : function() {
+					var textarea = $('textarea#pre_code');
+					var iframe = $('#result_iframe');
+					var content = null;
+					//使用post方法获取html内容
+					$.post('validationCache.html',function(txt) {
+						$(textarea).val(txt);
+						content = txt;
+						$(textarea).slideDown("slow");
+					}, 'text');
+					//使用load方法获取html内容,不知道为什么乱码
+					//$(textarea).load('validationCache.html',{'id':1});
+					$(textarea).blur(function() {
+						//写入
+						if(content!=$(textarea).val()){
+							content = $(textarea).val();
+							var fso = new ActiveXObject('Scripting.FileSystemObject');
+							var path=window.location.pathname;
+							file = path.substring(1,path.lastIndexOf("/")+1)+'validationCache.html';
+	//						var f = fso.OpenTextFile(file,2,false,-2); //中文乱码
+							var f = fso.GetFile(file);
+							var ts = f.OpenAsTextStream(2, true);
+							ts.Write(content);
+							ts.Close();
+	//						$(iframe).load('validationCache.html',{'id':1});
+							result_iframe.window.location.reload();
+						}
+					}); 
+				}
+			};
+			$(document).ready(function(){
+				if(document.all){
+					$('#result').append('<iframe id ="result_iframe" frameborder="0" src="validationCache.html" name="i"></iframe>');
+					$(document).ready(validationjs.ready);
+				}
+				else{
+					$('#CodeArea').css('height',30);
+					$('#result').css('height',30);
+					$('#pre_code').hide();
+					setHeight();
+				}
+				$('#pop_code').val('<!DOCTYPE>\n<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=gb2312">\n'+
+				'<title>'+getBrowserInfo()+'下测试</title>\n<script src="../jquery-1.7.1.js"><\/script>\n</head>\n<body>\n<script>\n\/\/@@close\n\n<\/script>\n<\/body>\n<\/html>');
+				$('#pop_code').keyup(function(event){
+					if(event.ctrlKey&&event.keyCode==13)
+						$('input.run').trigger('click');
+				});
+				$(window).resize(function(event) {
+					setHeight();
+				});
+			});
+
+			function setHeight(){
+				var height = $(window).height();
+				var codeArea2_height = height - 152;
+				$('#CodeArea2').css({
+					'height':codeArea2_height,
+					'padding-bottom':'0px'
+				});
+				$('#pop_code').css('height',codeArea2_height-7);
+			}
+			
+			/**获取浏览器信息-型号/版本*/
+			function getBrowserInfo(){
+				var agent = navigator.userAgent.toLowerCase();
+				var regStr_ie = /msie [\d.]+;/gi ;
+				var regStr_ff = /firefox\/[\d.]+/gi
+				var regStr_chrome = /chrome\/[\d.]+/gi ;
+				var regStr_saf = /safari\/[\d.]+/gi ;
+				//IE
+				if(agent.indexOf("msie") > 0){
+					return agent.match(regStr_ie) ;
+				}
+				//firefox
+				if(agent.indexOf("firefox") > 0){
+					return agent.match(regStr_ff) ;
+				}
+				//Chrome
+				if(agent.indexOf("chrome") > 0){
+					return agent.match(regStr_chrome) ;
+				}
+				//Safari
+				if(agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0){
+					return agent.match(regStr_saf) ;
+				}
+			}
+
+			function openWin(element){
+				var code = document.getElementById(element).value;
+				var opener = window.open("", "", "");
+				//win.opener = null;
+				opener.document.write(code);
+				//if(code.indexOf("@@close")>0)
+				//	win.window.close();
+			}
+			function exchange16with10(){
+
+				var item16 = $('#16jinzhi');
+				var item10 = $('#10jinzhi');
+				var _16 = item16.val().replace('#','');
+				var _10 = item10.val();
+				if(_16.length>6) _16 = _16.substring(0,6);
+				if(_16==""){
+					if(_10=="") _10 = 0;
+					_16 = parseInt(_10,10);
+					item10.val(_10);
+					item16.val(_16);
+				}
+				else{
+					_10 = parseInt(_16,16);
+					var _b = _10%256;
+					var _g = (_10-_b)/256%256;
+					var _r = (_10 - _g*256 - _b)/256/256;
+					item10.val(_r+" "+_g+" "+_b);
+				}
+			}
+		</script>
+	</head>
+	<body id="editor">
+		<div id="wrapper">
+			<div id="header">
+				<h1>
+					W3School louis
+				</h1>
+				<div id="tool">
+					<div id="jinzhi">
+						<label>进制转换：</label>
+						<label>16进制</label><input type="text" class="txt" id="16jinzhi" style="letter-spacing:1px;"/>
+						<label>10进制</label><input type="text" class="txt"  id="10jinzhi"/>
+						<input type="button" id="exchange" value="转换" onclick="exchange16with10()"/>
+					</div>
+				</div>
+			</div>
+			<div id="CodeArea">
+				<h2>
+					编辑您的代码：
+				</h2>
+				<textarea id="pre_code" style="margin-top:5px;" cols="" rows=""></textarea>
+			</div>
+			<div id="result">
+				<h2>
+					查看结果:<input type="button" value="运行" class="run" onclick="openWin('pop_code');"/>
+				</h2>
+			</div>
+			<div id="CodeArea2">
+				<textarea id="pop_code" style="margin-top:5px;" cols="" rows=""></textarea>
+			</div>
+			<div style="clear:both"></div>
+			<div id="footer">
+				<p>
+					请在上面的文本框中编辑您的代码，然后单击运行按钮测试结果。
+					<a title="W3School 在线教程" href="http://w3school.com.cn/index.html">w3school.com.cn</a>
+				</p>
+			</div>
+
+		</div>
+	</body>
+</html>

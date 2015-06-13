@@ -1,0 +1,95 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><title>JQuery滚动条美化插件</title>
+    </head>
+    <body>
+    <p>
+    	<textarea style="width: 355px; height: 90px; font-size: 12px; overflow: auto;" id="txt1" cols="11">
+    		内容增多或减少滚动条自动调整，可输入文字进行测试。
+    	</textarea> 
+    </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <div id="Div5" style="height: 150px; width: 300px; border: 1px solid red; padding: 10px; overflow: auto; ">
+            这是一个固定尺寸的DIV。
+    <br/><img src="../images/div_scrollStyle.jpg"/>
+    <img src="../images/div_scrollStyle.jpg"/>
+    </div>
+    <p> </p>
+    <p> </p>
+    <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../js/my_jquery_extend_1.0.0.js"></script>
+    <script type="text/javascript">
+    $(function(){
+         var yImgUrl="../images/scroll_y.gif",xImgUrl="../images/scroll_x.gif",jImgUrl="../images/scroll_j.gif";
+                $("#txt1,#Div1,#Div5").ScrollBar({
+                    y: {
+                        BG: "#EDF4FF",
+                        topBtn: {
+                            BG: "#9CBCDD url("+yImgUrl+") no-repeat",
+                            overBG: "#9CBCDD url("+yImgUrl+") -16px 0px no-repeat",
+                            downBG: "#9CBCDD url("+yImgUrl+") -32px 0px no-repeat"
+                        },
+                        drag: {
+                            BG: "#9CBCDD url("+yImgUrl+") -48px 0px",
+                            topBG: "url("+yImgUrl+") -144px top no-repeat",
+                            cenBG: "url("+yImgUrl+") -96px center no-repeat",
+                            btmBG: "url("+yImgUrl+") -192px bottom no-repeat",
+                            overBG: "#9CBCDD url("+yImgUrl+") -64px center", /*鼠标浮上时的背景*/
+                            overTopBG: "url("+yImgUrl+") -160px top no-repeat",
+                            overBtmBG: "url("+yImgUrl+") -208px bottom no-repeat",
+                            overCenBG: "url("+yImgUrl+") -112px center no-repeat",
+                            downBG: "#9CBCDD url("+yImgUrl+") -80px 0px", /*鼠标按下时的背景*/
+                            downTopBG: "url("+yImgUrl+") -176px top no-repeat",
+                            downBtmBG: "url("+yImgUrl+") -224px bottom no-repeat",
+                            downCenBG: "url("+yImgUrl+") -128px center no-repeat"
+                        },
+                        btmBtn: {
+                            BG: "#9CBCDD url("+yImgUrl+") 0px -16px no-repeat",
+                            overBG: "url("+yImgUrl+") -16px -16px no-repeat",
+                            downBG: "url("+yImgUrl+") -32px -16px no-repeat"
+                        }
+                    },
+                    x: {
+                        BG: "#EDF4FF",
+                        leftBtn: {
+                            BG: "#9CBCDD url("+xImgUrl+") no-repeat",
+                            overBG: "#9CBCDD url("+xImgUrl+") 0px -16px no-repeat",
+                            downBG: "#9CBCDD url("+xImgUrl+") 0px -32px no-repeat"
+                        },
+                        drag: {
+                            BG: "#9CBCDD url("+xImgUrl+") 0px -48px",
+                            leftBG: "url("+xImgUrl+") right -144px no-repeat",
+                            cenBG: "url("+xImgUrl+") center -96px no-repeat",
+                            rightBG: "url("+xImgUrl+") left -192px no-repeat",
+                            overBG: "#9CBCDD url("+xImgUrl+") 0px -64px", /*鼠标浮上时的背景*/
+                            overLeftBG: "url("+xImgUrl+") right -160px no-repeat",
+                            overRightBG: "url("+xImgUrl+") left -208px no-repeat",
+                            overCenBG: "url("+xImgUrl+") center -112px no-repeat",
+                            downBG: "#9CBCDD url("+xImgUrl+") 0px -80px", /*鼠标按下时的背景*/
+                            downLeftBG: "url("+xImgUrl+") right -176px no-repeat",
+                            downRightBG: "url("+xImgUrl+") left -224px no-repeat",
+                            downCenBG: "url("+xImgUrl+") center -128px no-repeat"
+                        },
+                        rightBtn: {
+                            BG: "#9CBCDD url("+xImgUrl+") -16px 0px no-repeat",
+                            overBG: "url("+xImgUrl+") -16px -16px no-repeat",
+                            downBG: "url("+xImgUrl+") -16px -32px no-repeat"
+                        }
+                    },
+                    j: {    //右下脚两滚动条交叉空白处
+                        duration: 800, BG: "#9CBCDD url("+jImgUrl+") no-repeat",
+                        overUBG: "url("+jImgUrl+") 0px -16px no-repeat", /*触摸后若为左上滚动则显示该背景*/
+                        overDBG: "url("+jImgUrl+") -16px -16px no-repeat",  /*触摸后若为右下滚动则显示该背景*/
+                        downUBG: "url("+jImgUrl+") 0px -32px no-repeat", /*按下后若为左上滚动则显示该背景*/
+                        downDBG: "url("+jImgUrl+") -16px -32px no-repeat" /*按下后若为右下滚动则显示该背景*/
+                    }
+                });
+    });
+    </script>
+    <div id="Div1" style="height: 150px; width: 90%; border: 1px solid red; padding: 10px; overflow: auto; left: 0px; top: 500px;background: none repeat scroll 0% 0% rgb(248, 236, 240);">
+            这是一个自动按百分比显示的DIV，变换窗体大小滚动条自行适应。
+    <br/><img src="../images/div_scrollStyle.jpg" width="1500" height="1"/>
+    <img src="../images/div_scrollStyle.jpg"/>
+    </div></body></html>

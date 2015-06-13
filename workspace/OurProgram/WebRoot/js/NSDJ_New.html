@@ -1,0 +1,48 @@
+
+<SCRIPT LANGUAGE="JavaScript" src="calendar.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="jcommon.js"></SCRIPT>
+<SCRIPT language=JavaScript>
+writeDIV();
+</SCRIPT>
+
+
+
+
+			 <form name="frmNS" action="/Servlet/SSS/SSYW/NSDJ/NSDJ_Insert_Servlet" method="post">
+			  <table align=center border=1 cellpadding=3 cellspacing=3 height=60 width=666>
+				<tr bgcolor=#000080 height="10%">
+				  <td bgcolor="#FFFFFF" valign="top" height="1" width="758">
+					<table width="718" border="2" cellspacing="1" cellpadding="0" bordercolor="#CCCCCC">
+					  <tr>
+						<td height="19" bgcolor="#EEEEEE" width="120">·船主：</td>
+						<td height="19" width="375" bgcolor="#EEEEEE">
+							<input type="text" name="CZ" class="inputforline" size=30 maxlength=15>
+						</td>
+						<td height="19" bgcolor="#EEEEEE" width="93">·船类：</td>
+						<td height="24" width="119" bgcolor="#EEEEEE">
+                            <select name=CL class="inputforline" Style="width:80pt">
+                              <option selected value="0">非机动</option>
+                              <option value="1">机动</option>
+                             </select>
+						</td>
+					  </tr>
+					  <tr>
+						<td height="19" bgcolor="#EEEEEE" width="120">·船户簿牌：
+						  </td>
+						<td height="19" width="375"  bgcolor="#EEEEEE">
+							<input type="text" name="CBHP" class="inputforline" size=50 maxlength=50>
+						</td>
+						<td height="19" bgcolor="#EEEEEE" width="93">·年审时间：
+						  </td>
+						<td height="24" width="119" bgcolor="#EEEEEE">
+							<input type="text" name="NSSJ" class="inputforline" size=12 readonly >&nbsp;<img src="cal.gif" align="top" border="0" onclick="showhidecalendar('show','NSSJ','frmNS')" style="cursor:hand">
+						</td>
+					  </tr>
+					</table>
+				  </td>
+				</tr>
+			   </table>
+			   </form>
+		
+
+

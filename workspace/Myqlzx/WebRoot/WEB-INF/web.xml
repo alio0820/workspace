@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+<filter>
+	<filter-name>EncodingCharacterFilter</filter-name>
+	<filter-class>cn.edu.util.EncodingCharacterFilter</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>EncodingCharacterFilter</filter-name>
+	<url-pattern>/admin/*</url-pattern>
+</filter-mapping>
+<filter-mapping>
+	<filter-name>EncodingCharacterFilter</filter-name>
+	<url-pattern>/web/*</url-pattern>
+</filter-mapping>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BulletinServlet</servlet-name>
+    <servlet-class>cn.edu.control.BulletinServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>updateBulletinServlet</servlet-name>
+    <servlet-class>cn.edu.control.updateBulletinServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GoodsInfoServlet</servlet-name>
+    <servlet-class>cn.edu.control.GoodsInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GoodsTypeServlet</servlet-name>
+    <servlet-class>cn.edu.control.GoodsTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CartServlet</servlet-name>
+    <servlet-class>cn.edu.control.CartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>cn.edu.control.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckEmailServlet</servlet-name>
+    <servlet-class>cn.edu.control.CheckEmailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OrderInfoServlet</servlet-name>
+    <servlet-class>cn.edu.control.OrderInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>cn.edu.control.OrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CustomerManageServlet</servlet-name>
+    <servlet-class>cn.edu.control.CustomerManageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>cn.edu.control.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ReNameServlet</servlet-name>
+    <servlet-class>cn.edu.control.ReNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ReSetPwdServlet</servlet-name>
+    <servlet-class>cn.edu.control.ReSetPwdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OutServlet</servlet-name>
+    <servlet-class>cn.edu.control.OutServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>BulletinServlet</servlet-name>
+    <url-pattern>/admin/BulletinServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>updateBulletinServlet</servlet-name>
+    <url-pattern>/admin/updateBulletinServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoodsInfoServlet</servlet-name>
+    <url-pattern>/admin/GoodsInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoodsTypeServlet</servlet-name>
+    <url-pattern>/admin/GoodsTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CartServlet</servlet-name>
+    <url-pattern>/web/CartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/web/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckEmailServlet</servlet-name>
+    <url-pattern>/web/CheckEmailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderInfoServlet</servlet-name>
+    <url-pattern>/web/OrderInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/admin/OrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CustomerManageServlet</servlet-name>
+    <url-pattern>/admin/CustomerManageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/admin/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReNameServlet</servlet-name>
+    <url-pattern>/admin/ReNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReSetPwdServlet</servlet-name>
+    <url-pattern>/admin/ReSetPwdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OutServlet</servlet-name>
+    <url-pattern>/admin/OutServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

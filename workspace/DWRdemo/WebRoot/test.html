@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>DWR测试</TITLE>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<script src="dwr/engine.js"></script>
+<script src="dwr/util.js"></script>
+<script src="dwr/interface/DWRUserAccess.js"></script>
+<script language="javascript">
+<!--
+function saveFun(data) {
+if (data) {
+  alert("注册成功！");
+} else {
+  alert("登陆ID已经存在！");
+}
+}
+
+function OnSave() {
+var userMap = {};
+userMap.id = regForm.id.value;
+userMap.password = regForm.password.value;
+userMap.name = regForm.name.value;
+userMap.email = regForm.email.value;
+//dwr.engine.setAsync(false);  //false为同步，true（默认）为异步
+DWRUserAccess.save(userMap, saveFun);
+}
+
+function findFun(data) {
+if (data == null) {
+  alert("无法找到用户："+queryForm.id.value);
+  return;
+}
+
+alert("找到用户，id："+data.id+"，password："+data.password+"，name："+data.name+"，email："+data.email);
+
+}
+
+function OnFind() {
+DWRUserAccess.find(queryForm.id.value, findFun);
+}
+</script>
+</HEAD>
+<BODY>
+<B>用户注册</B><br>
+------------------------------------------------
+<Br>
+<form name="regForm">
+登陆ID：<input type="text" name="id"><br>
+口  令：<input type="password" name="password"><br>
+姓  名：<input type="text" name="name"><br>
+电子邮件：<input type="text" name="email"><br>
+<input type="button" name="submitBtn" value="提交" onclick="OnSave()"><br>
+    </form>
+
+<br>
+<br><B>用户查询</B><br>
+------------------------------------------------
+<Br>
+<form name="queryForm">
+登陆ID：<input type="text" name="id"><br>
+<input type="button" name="submitBtn" value="提交" onclick="OnFind()"><br>
+</form>
+<br>
+</BODY>
+</HTML>
+
+

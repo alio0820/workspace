@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node.html</title>
+  </head>
+  
+  <body>
+    <input type="button" id="button" onclick="addButton()" value="创建一个按钮"/>
+    <input type='button' id='d' onclick='deleteButton()' value='删除一个按钮'/>
+    <script>
+    	function addButton()
+    	{
+    		//创建一个Element节点
+    		var buttonNode= document.createElement("button");
+    		var bodyNode= document.body;
+    		//在<body>节点插入一个新节点
+    		bodyNode.appendChild(buttonNode);
+    	}
+    	function deleteButton()
+    	{
+    		var node = document.getElementById("button");
+    		node.parentNode.remove(node.parentNode.lastChild);
+    	}
+    </script>
+  </body>
+</html>

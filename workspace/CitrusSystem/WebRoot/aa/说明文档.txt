@@ -1,0 +1,15 @@
+这是一个检测JSP服务器内存的Ajax程序
+可以动态显示服务器上的数据
+并且一图像的方式直观显示数据
+
+
+程序在<div id="serverStatus"></div> 显示服务器上的数据
+在<div style="position:relative;width:350px;height:300px;" id="Graphics"></div>显示  统计图
+
+联系方式:
+QQ:281284015
+我的博客www.chenmin.org chenmin.u1u5.com
+在线演示http://www.chenmin.org/System.html
+
+广告一下 需要JSP空间的可以和我联系1MB 1元
+JSP探针：http://www.chenmin.org/jsp.jsp

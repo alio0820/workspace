@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../images/fruit.ico">
+		<title>多边形的绘制</title>
+		<style>
+			body{
+				background:#eeeeee;
+			}
+			#canvas{
+				background:#ffffff;
+				margin-left:10px;
+				maring-top:10px;
+				-webkit-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-moz-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='canvas' width='600' height='400'>
+			Canvas not supported
+		</canvas>
+		<script>
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d'),
+				sidesSelect = document.getElementById('sidesSelect'),
+				startAngleSelect = document.getElementById('startAngleSelect'),
+			
+				fillCheckbox = document.getElementById('fillCheckbox'),
+			
+				mousedown = {},
+				rubberbandRect = {},
+				
+				Point = function(x,y){
+					this.x = x;
+					this.y = y;
+				};
+			function getPolygonPoints(centerX,centerY,radius,sides,startAngle){
+				var points = [],
+					angle = startAngle || 0;
+				for(var i=0;i<sides;++i){
+					points.push(new Point(centerX + radius*Math.sin(angle),centerY - radius*Math.cos(angle)));
+					angle +=2*Math.PI/sides;
+				}
+				return points;
+			}
+			function createPolygonPath(centerX,centerY,radius,sides,startAngle){
+				var points = getPolygonPoints(centerX,centerY,radius,sides,startAngle);
+				context.beginPath();
+				context.moveTo(points[0].x,points[0].y);
+				for(var i=1;i<sides;++i){
+					context.lineTo(points[i].x,points[i].y);
+				}
+				context.closePath();
+			}
+			function drawRubberbandShape(loc,sides,startAngle){ 
+				createPolygonPath(mousedown.x,mousedown.y,rubberbandRect.width,parseInt(sideSelect.value),
+						(Math.PI/180)*parseInt(startAngleSelect.value));
+				context.stroke();
+				if(fillCheckbox.checked){
+					context.fill();
+				}
+			}
+		</script>
+	</body>
+</html>

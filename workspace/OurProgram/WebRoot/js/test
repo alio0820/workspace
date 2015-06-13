@@ -1,0 +1,4 @@
+/*JavaScript source file, sq */
+function test {
+    alert('test');
+}

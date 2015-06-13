@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<package name="excelOutPut" extends="struts-default">
+	   <action name="userInfo" class="com.boxun.action.UserAction">
+	    	<result>/InputExcel.jsp</result>
+	   	</action>
+	   <action name="outPut" class="com.boxun.action.OutAction">
+	    	<result>/excel/InputExcel.jsp</result>
+	   </action>
+  </package>
+</struts>    

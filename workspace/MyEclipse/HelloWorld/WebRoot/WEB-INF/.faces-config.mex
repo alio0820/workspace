@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JSFFlowViewLayout version="1.0">
+  <Drawing gridVisible="true" snapOn="true" />
+  <JSFFlowResource path="/index.jsp" location="30,30" dimension="104,36" />
+  <JSFFlowResource path="/page/welcome.jsp" location="330,30" dimension="146,36" />
+  <JSFFlowResource path="/page/queryuser.jsp" location="180,130" dimension="158,36" />
+  <JSFFlowResource path="" location="30,130" dimension="36,36" />
+  <JSFFlowNavigationCase id="/index.jsp,/page/welcome.jsp,success,&lt;empty&gt;" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="134,48" />
+      <AbsolutePoint location="330,48" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/index.jsp,/index.jsp,failure,&lt;empty&gt;" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="82,66" />
+      <AbsolutePoint location="82,103" />
+      <AbsolutePoint location="231,103" />
+      <AbsolutePoint location="231,63" />
+      <AbsolutePoint location="134,63" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id=",/page/queryuser.jsp,queryuser,&lt;empty&gt;" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="48,166" />
+      <AbsolutePoint location="48,203" />
+      <AbsolutePoint location="274,203" />
+      <AbsolutePoint location="274,166" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id=",/page/queryuser.jsp,backList,&lt;empty&gt;" routingType="1">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="63,166" />
+      <AbsolutePoint location="63,173" />
+      <AbsolutePoint location="259,173" />
+      <AbsolutePoint location="259,166" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+</JSFFlowViewLayout>
+

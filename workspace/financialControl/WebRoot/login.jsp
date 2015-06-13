@@ -1,0 +1,83 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>亿凡财务管理软件</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<LINK href="css/public.css" type=text/css rel=stylesheet>
+<LINK href="css/login.css" type=text/css rel=stylesheet>
+<script type='text/javascript'>
+	function check(){
+		var user = document.form1.user.value;
+		var password = document.form1.password.value;
+		var radio = document.form1.radio;//form1(name) 既可以获取id 又可以获取name，还可以获取name的数组
+		if(user==''||password==''||!(radio[0].checked||radio[1].checked||radio[2].checked)){
+			alert('您的用户名或密码为空');
+			return false;
+			}
+	}
+</script>
+</HEAD>
+<BODY>
+<form name='form1' method='post' action ='servlet'>
+<DIV id=div1>
+  <TABLE id=login height="100%" cellSpacing=0 cellPadding=0 width=800 
+align=center>
+    <TBODY>
+      <TR id=main>
+        <TD><table height="100%" cellspacing=0 cellpadding=0 width="100%">
+          <tbody>
+            <tr>
+              <td colspan=4 style="font-size:45px;text-align:center"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;亿凡财务管理软件</b></td>
+            </tr>
+            <tr height=30>
+              <td width=380>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr height=40>
+              <td rowspan=4>&nbsp;</td>
+              <td>用户名：</td>
+              <td><input class=textbox id=txtUserName name=user></td>
+              <td width=120>&nbsp;</td>
+            </tr>
+            <tr height=40>
+              <td>密　码：</td>
+              <td><input class=textbox id=txtUserPassword type=password 
+            name=password></td>
+              <td width=120>&nbsp;</td>
+            </tr>
+            <tr height=40>
+              <td>验证码：</td>
+              <td colspan=2><input id=txtSN size=4 name=txtSN/>
+                &nbsp; <img src="images/default.gif" border=0/> <a id=LinkButton1 href="#">不清楚，再来一张</a>
+              </td>
+            </tr>
+            <tr height=40>
+              <td colspan=2>
+              		<span style="float:left;color:white">
+              		员工<input type="radio" name="radio" value="yg" checked/>
+              		财务部门<input type="radio" name="radio" value="cwbm"/>
+              		管理员<input type="radio" name="radio" value="admin"/>
+              		<a href='register_user.jsp'>注册</a></span>
+              		<span style="float:right"><input id=btnLogin type=submit value=" 登 录 " onclick='return check()'></span>
+              </td>
+              <td width=120>&nbsp;</td>
+            </tr>
+            <tr height=110>
+              <td colspan=4>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table></TD>
+      </TR>
+      <TR id=root height=104>
+        <TD>&nbsp;</TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+</DIV>
+<DIV id=div2 style="DISPLAY: none"></DIV>
+</form>
+</BODY>
+</HTML>

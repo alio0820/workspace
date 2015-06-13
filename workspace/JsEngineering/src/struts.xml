@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+		<!-- <constant name="struts.i18n.encoding" value="utf-8"/> -->
+	<package name="struts2" namespace="/" extends="struts-default">
+	    <!-- 会计科目 -->
+	    <action name="accountingSubject" class="com.zr.js.js.web.action.AccountingAction" method="accounting">
+			<result>/accountingSubject/accountingPreserve.jsp</result>
+		</action>		
+	    <!-- 资产类型 -->
+		<action name="property" class="com.zr.js.js.web.action.PropertyAction" method="property">
+            <result>/property/propertySortPreserve.jsp</result>
+            <result name="next">/property/propertySort.jsp</result>
+		</action>		
+		<!-- 归档类别 -->		
+	    <action name="fileSort" class="com.zr.js.js.web.action.FileSortAction" method="property">
+            <result>/fileSort/fileSort.jsp</result>
+            <result name="next">/fileSort/fileSortNext.jsp</result>
+		</action>
+		<!-- 资料属性 -->
+		<action name="dataAttribute" class="com.zr.js.js.web.action.DataAttributeAction" method="accounting">
+            <result>/dataAttribute/dataAttribute.jsp</result>
+		</action>
+		
+    </package>
+</struts>

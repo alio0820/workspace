@@ -1,0 +1,6 @@
+2013-12-08 19:28:26
+	Project start
+2013-12-13 19:00:00
+	header color渐变效果设计
+2013-12-14 15:36:05
+	header navigator footer 设计完成

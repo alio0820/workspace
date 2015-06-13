@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+<!--<constant name="struts.custom.i18n.resources" value="message"></constant>-->
+<!--	-->
+<!--	<constant name="struts.i18n.encoding" value="GBK"></constant>-->
+
+	<package name="struts2" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="MyInterceptor" class="com.chinasoft.web.intercept.LoginIntercept"></interceptor>
+			<interceptor-stack name="a">
+				<interceptor-ref name="MyInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>				
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="a"/>
+
+		<action name="login_*" class="com.chinasoft.web.action.LoginAction" method="{1}">
+			<result name="input">/{1}login.jsp</result>
+			<result name="success">/{1}result.jsp</result>
+			<result name="failer">/{1}login2.jsp</result>
+			<interceptor-ref name="MyInterceptor"></interceptor-ref>
+		</action>
+		
+	   
+
+		
+	</package>
+</struts>

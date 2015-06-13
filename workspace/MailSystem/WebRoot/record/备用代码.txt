@@ -1,0 +1,121 @@
+附件获取及加载
+<%
+	if (!attachment.equals("")) {
+		String[] attachments = attachment.split("#@#");
+%>
+<li class="fS dD" id="1366107610255_liAttach">
+	<div class="fT">
+		附&nbsp;&nbsp;&nbsp;件：
+	</div>
+	<div class="fU">
+		<span class="nui-txt-normal" id="1366107610255_spHeadAttachLen"><%=attachments.length%>个</span><span
+			class="txt-info" id="1366107610255_spHeadAttachName">(<span><b
+				class="js-component-icon nui-ico nui-ico-file  nui-ico-file-22  "
+				id="_mail_icon_50_289"></b><%=attachments[0]%></span><%=attachments.length > 1 ? "等..." : ""%>)</span><span
+			id="1366107610255_spHeadAttachFlash"> <a
+			hidefocus="hidefocus" class="js-component-link nui-txt-link"
+			href="javascript:void(0)" id="_mail_link_31_290">查看附件</a>
+		</span>
+	</div>
+</li>
+<%
+	}
+%>
+<%
+	if (!attachment.equals("")) {
+			String[] attachments = attachment.split("#@#");
+			String link = content.substring(0,content_i);
+%>
+<div style="" class="pN" id="dvAttachBody">
+	<div class="oR" id="dvAttachHead">
+		<div class="ll" id="dvAttachHeadBanner">
+			<b class="nui-ico nui-ico-att"></b><strong class="hq">附件</strong><span
+				class="nui-txt-tips">(<%=attachments.length%>)</span><a hidefocus="hidefocus"
+				target="ifrDownUrl" class="js-component-link nui-txt-link hr"
+				href="http://twebmail.mail.163.com/js5/read/readpack.jsp?sid=ECQnVkEQVJCmWwDHdfQQRkZTRUvoBpEw&amp;mid=195:1tbiwxMAABVSqLwdOC+0c9&amp;part=3&amp;part=4"
+				id="_mail_link_66_495">打包下载</a>
+		</div>
+		<div class="nui-split nui-split-cDark pl"></div>
+	</div>
+	<div style="margin-bottom: 15px;" class="oS"
+		id="dvCommonAttach">
+		<ul id="ulCommonAttachItem" class="np nui-fClear">
+		<%
+			for(int i=0;i<attachments.length;i++){
+				String attachment_name = attachments[i];								
+				int download,preview,link_1;
+				boolean flag = true;
+				String download_url="",preview_url="";
+				System.out.println(link.substring(0,12));
+				if(flag&&link.substring(0,12).equals("[attachment]")){		//小附件
+					link_1= link.indexOf(attachment_name);
+					link = link.substring(link_1+attachment_name.length()+1);
+					download = link.indexOf("download: ");
+					preview = link.indexOf("preview: ");
+					download_url = link.substring(download+10,preview-2);
+					preview_url = link.substring(preview+9,link.substring(preview).indexOf('\n')+preview);			
+				}
+				else{														//超大附件
+					flag = false;
+					link_1= link.indexOf(attachment_name);
+					link = link.substring(link_1+attachment_name.length()+1);
+					download = link.indexOf("下载: ");
+					preview = link.indexOf("预览: ");
+					download_url = link.substring(download+4,preview-2);
+					preview_url = link.substring(preview+4,link.substring(preview).indexOf('\n')+preview);									
+				}
+		%>
+			<li class="js-component-readattachitem jG <%if(i==0)out.println("attach-li-first"); %>"
+				id="_mail_readattachitem_0_485">
+				<table>
+					<tbody>
+						<tr>
+							<td class="dz">
+								<div class="bJ">
+									<b
+										class="js-component-icon nui-ico nui-ico-file75  nui-ico-file75-6  "
+										id="_mail_icon_92_487"></b>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="fd">
+								<strong class="cx"><%=attachment_name%></strong><span
+									class="nui-txt-tips cy">3.45K</span>
+								<div class="dA">
+									<div class="cz"></div>
+									<div class="cB nui-fClear">
+										<div class="bK">
+											<%=attachment_name%>
+										</div>
+										<a hidefocus="hidefocus" target="ifrDownUrl"
+											class="js-component-link bZ"
+											href="<%=download_url%>"
+											id="_mail_link_61_488"><img class="nui-ico bs M"
+												src="http://mimg.127.net/p/t.gif">
+											<br>下载</a><a hidefocus="hidefocus"
+											class="js-component-link bZ bt" href="javascript:void(0)"><img
+												class="nui-ico bs N" src="http://mimg.127.net/p/t.gif">
+											<br>打开</a><a hidefocus="hidefocus" target="_blank"
+											class="js-component-link bZ"
+											href="<%=preview_url%>"
+											id="_mail_link_62_489"><img class="nui-ico bs O"
+												src="http://mimg.127.net/p/t.gif">
+											<br>预览</a><a hidefocus="hidefocus"
+											class="js-component-link bZ bt" href="javascript:void(0)"><img
+												class="nui-ico bs P" src="http://mimg.127.net/p/t.gif">
+											<br>存网盘</a>
+									</div>
+									<div class="cA"></div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+		<%}%>
+		</ul>
+	</div>
+	<div class="nui-split nui-split-cDark"></div>
+</div>
+<%}%>

@@ -1,0 +1,539 @@
+.nui-mainBtn {
+    color: #FFFFFF;
+}
+.nui-mainBtn .nui-btn-text {
+    background: url(../images/btnbg.png) repeat-x scroll 0 0 transparent;
+    border-color: #459830;
+}
+.nui-mainBtn:hover .nui-btn-text, .nui-mainBtn-hover .nui-btn-text {
+    background: url(../images/btnbg-hover.png) repeat-x scroll 0 0 transparent;
+    border-color: #146700;
+}
+.nui-mainBtn:active .nui-btn-text, .nui-mainBtn-active .nui-btn-text {
+    background: url(../images/btnbg-active.png) repeat-x scroll 0 0 transparent;
+    border-color: #146700;
+}
+.nui-toolbar-item .nui-roundBtn:only-child {
+    margin-left: 0;
+}
+.nui-roundBtn .nui-ico-newWin {
+    margin: -2px 0 0 -1px;
+}
+.qt {
+    min-width: 508px;
+    padding-left: 10px;
+    position: relative;
+}
+.oZ {
+    margin-right: 220px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+}
+.fn-transition, .s, .ek, .fA, .J, .gm, .oZ {
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+.fC {
+    color: #CECECE;
+    display: block;
+    height: 75px;
+    overflow: hidden;
+    position: absolute;
+    right: -19px;
+    text-decoration: none;
+    top: 208px;
+    width: 11px;
+}
+.dr {
+    background-color: #F6F6F6;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 67px;
+    margin-top: 3px;
+    overflow: hidden;
+    position: relative;
+    width: 7px;
+}
+.dr {
+    background: -moz-linear-gradient(left center , #FEFEFE, #F6F6F6) repeat scroll 0 0 transparent;
+}
+.dr .nui-ico {
+    left: 1px;
+    opacity: 0.5;
+    position: absolute;
+    top: 30px;
+}
+.fn-transition, .s, .ek, .fA, .J, .gm, .oZ {
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+.fA {
+    clear: both;
+    height: auto;
+    margin-left: -10px;
+    overflow: hidden;
+    padding-left: 50px;
+    position: relative;
+}
+.ck {
+    height: 27px;
+    line-height: 15px;
+    overflow: visible;
+    padding-left: 60px;
+}
+.ck {
+    z-index: 10;
+}
+.fA {
+    padding-left: 62px;
+}
+.cj {
+    z-index: 9;
+}
+.cH {
+    color: #999999;
+    display: block;
+    left: 0;
+    line-height: 30px;
+    position: absolute;
+    top: 3px;
+}
+.cH {
+    left: 10px;
+}
+.ck .cH {
+    line-height: 15px;
+    top: 8px;
+}
+.bV {
+    left: 7px;
+    position: absolute;
+    top: 8px;
+}
+.bM {
+    overflow: hidden;
+    padding: 5px 0;
+    width: 100%;
+}
+.R {
+    padding-right: 10px;
+}
+.nui-fGetout {
+    left: -10000px;
+    position: absolute;
+    top: 0;
+}
+.cj .nui-ipt {
+    padding: 1px 4px 2px;
+}
+.bM .nui-ipt {
+    cursor: text;
+    overflow: hidden;
+    width: 100%;
+}
+.nui-ipt .nui-editableAddr, .nui-fNoBr {
+    white-space: nowrap;
+}
+.nui-ipt .nui-editableAddr {
+    float: left;
+    margin: 3px 5px 2px 0;
+}
+.ua-firefox .nui-addr {
+    padding-bottom: 3px;
+    padding-top: 1px;
+}
+.cj .nui-addr-add, .cj .nui-editableAddr {
+    padding-bottom: 1px;
+    padding-top: 0;
+}
+.cI .nui-ipt {
+    padding: 4px 2px 2px 6px;
+}
+.cI .nui-ipt-input {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -3px;
+    width: 100%;
+}
+.cl {
+    color: #999999;
+    height: 22px;
+    line-height: 15px;
+    margin-bottom: 2px;
+    margin-top: -2px;
+    overflow: visible;
+    padding-top: 1px;
+}
+.cl {
+    z-index: 6;
+}
+.cl .nui-txt-link {
+    padding-top: 3px;
+}
+.cl .nui-txt-link, .qx, .cl .nui-txt-tips, .qy {
+    float: left;
+}
+.rW {
+    background: url(../images/update_3g.gif) no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 18px;
+    margin: 2px;
+    overflow: hidden;
+    text-indent: 3000px;
+    white-space: nowrap;
+    width: 62px;
+}
+.qx {
+    line-height: 20px;
+    margin: 0 5px;
+}
+.cl .nui-txt-link, .qx, .cl .nui-txt-tips, .qy {
+    float: left;
+}
+.W {
+    height: 21px;
+    margin-left: -4px;
+    padding: 0 !important;
+    position: relative;
+    width: 21px;
+}
+.W .nui-ico-dArr {
+    display: block;
+    left: 7px;
+    overflow: hidden;
+    position: absolute;
+    top: 9px;
+}
+.L {
+    cursor: pointer;
+    height: 24px;
+    left: 60px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+    width: 65px;
+}
+.t {
+    cursor: pointer;
+    font-size: 30px;
+    opacity: 0;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+}
+.dd {
+    position: relative;
+    z-index: 2;
+}
+.dd .APP-editor {
+    border-radius: 3px 3px 3px 3px;
+}
+.APP-editor-basic {
+    padding-top: 30px;
+}
+.APP-editor {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BBBBBB;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.APP-editor-tbar, .APP-editor-btn-selected, .APP-editor-btn-selected .APP-editor-btn-rc, .APP-editor-btn-on, .APP-editor-btn-on .APP-editor-btn-rc, .APP-editor-tbar-basic .APP-editor-btn:hover, .APP-editor-tbar-basic .APP-editor-btn:hover .APP-editor-btn-rc, .APP-editor-tbar-full .APP-editor-btn:hover, .APP-editor-tbar-full .APP-editor-btn:hover .APP-editor-btn-rc, .APP-editor-btn-spln, .APP-editor-btn-select, .APP-editor-btn-select .APP-editor-btn-rc, .ico-editor {
+    background-image: url(../images/editor_v1.png);
+    background-repeat: no-repeat;
+    color: #7D7D7D;
+}
+.dd .APP-editor-tbar {
+    border-radius: 3px 3px 0 0;
+}
+.APP-editor-basic .APP-editor-tbar {
+    height: 29px;
+}
+.APP-editor-tbar {
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #C9C9C9;
+    box-shadow: 0 1px 3px #DDDDDD;
+    left: 0;
+    line-height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.dd .APP-editor-edtr, .dd .APP-editor-iframe {
+    border-radius: 0 0 3px 3px;
+}
+.APP-editor-edtr {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.APP-editor-basic .APP-editor-tbar-basic {
+    padding-right: 23px;
+}
+.APP-editor-btn {
+    background-position: 100% -86px;
+    color: #000000;
+    display: inline-block;
+    float: left;
+    height: 21px;
+    margin: 2px 4px 0 0;
+    outline: 0 none;
+    padding-right: 3px;
+    text-decoration: none;
+}
+.APP-editor-btn-rc {
+    background-position: -421px -64px;
+    cursor: pointer;
+    display: inline-block;
+    height: 21px;
+    margin-bottom: 0;
+    padding-left: 4px;
+}
+.APP-editor-btn .ico-editor {
+    margin-top: 3px;
+}
+.ico-editor {
+    display: inline-block;
+    font-weight: normal;
+    height: 16px;
+    line-height: 80px;
+    overflow: hidden;
+    vertical-align: top;
+    width: 16px;
+}
+.ico-editor-bold {
+    background-position: -128px -64px;
+}
+.kb {
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 192px;
+    z-index: 1;
+}
+.ek {
+    left: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.ek .nui-tabs-item {
+    border-radius: 3px 3px 0 0;
+    line-height: 26px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 94px;
+}
+.ek .nui-tabs-item-selected, .ek .nui-tabs {
+    border-color: #C0C0C0;
+}
+.fB {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    border-color: #C0C0C0;
+    border-image: none;
+    border-right: 1px solid #C0C0C0;
+    border-style: solid;
+    border-width: 0 1px 1px;
+}
+.dM {
+    height: 55px;
+    position: relative;
+    width: 100%;
+}
+.dM .nui-ipt {
+    left: 12px;
+    position: absolute;
+    top: 16px;
+}
+.dM .nui-ipt-input {
+    width: 108px;
+}
+.dM .nui-ipt-iconBtn {
+    color: #999999;
+    right: 4px;
+    top: 7px;
+}
+.nui-ipt-hasIconBtn {
+    padding-right: 28px;
+}
+.dc {
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+.nui-ico-search {
+    background: url(../images/Search2.png) repeat scroll 0 0 transparent;
+    height: 13px;
+    width: 13px;
+}
+.cg {
+    color: #999999;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    position: absolute;
+    right: 9px;
+    text-decoration: none;
+    top: 19px;
+    width: 16px;
+}
+.nui-ico-add2 {
+    background: url(../images/add.png) no-repeat scroll 0 0 transparent;
+    height: 12px;
+    width: 12px;
+}
+.nui-ico-add2:hover{
+    background: url(../images/add2.png) no-repeat scroll 0 0 transparent;
+}
+.nui-tree .nui-tree {
+    margin-left: 12px;
+    overflow: visible;
+}
+.nui-simpleTree .nui-tree {
+    margin-left: 0;
+}
+.ch {
+    color: #555555;
+    display: block;
+    overflow: hidden;
+    padding: 3px 4px 3px 32px;
+    position: relative;
+    width: 1000px;
+}
+.nui-tree-item-icon {
+    display: inline;
+    float: left;
+    height: 16px;
+    margin: 2px 8px 0 0;
+    position: relative;
+    width: 16px;
+}
+.nui-simpleTree .nui-tree-item-icon {
+    float: left;
+}
+.nui-simpleTree .nui-tree-item-spec .nui-tree-item-icon {
+    left: 12px;
+    position: absolute;
+    top: 3px;
+}
+.nui-ico-user-other {
+    background: url(../images/media.png) no-repeat scroll 0 0 transparent;
+    height: 11px;
+    width: 11px;
+}
+.nui-tree-item-icon .nui-ico {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.nui-simpleTree .nui-tree-item-icon .nui-ico {
+    display: inline;
+    float: left;
+    margin-right: 3px;
+    position: static;
+    vertical-align: baseline;
+}
+.nui-simpleTree .nui-tree-item-icon .nui-ico-user-other {
+    margin-top: 3px;
+}
+.nui-ico-user-me {
+    background: url(../images/163-2.png) no-repeat scroll 0 0 transparent;
+    height: 14px;
+    width: 12px;
+}
+.nui-simpleTree .nui-tree-item-symbol {
+    left: 16px;
+    top: 12px;
+}
+.bm {
+    color: #999999;
+    left: 62px;
+    position: absolute;
+    top: 6px;
+}
+.bn {
+    color: #222222;
+}
+.bh {
+    float: right;
+    height: 20px;
+    padding-top: 5px;
+    position: absolute;
+    right: -5px;
+    top: 3px;
+    white-space: nowrap;
+}
+.bW {
+    margin-left: 2px;
+}
+.nui-tree-item-noChild .nui-tree-item-symbol, .nui-tree-item-isUnfold .nui-tree-item-symbol-fold, .nui-tree-item-isFold .nui-tree-item-symbol-unfold, .nui-tree-item-isFold .nui-tree {
+    --display: none;
+}
+.nui-tree-item-isFold .nui-tree-item-isUnfold .nui-tree-item-symbol-unfold, .nui-tree-item-isUnfold .nui-tree-item-isFold .nui-tree-item-symbol-fold, .nui-tree-item-isFold .nui-tree-item-symbol-fold, .nui-tree-item-isUnfold .nui-tree-item-symbol-unfold, .nui-tree-item-isUnfold .nui-tree {
+    display: block;
+}
+.nui-split-dotted, .nui-split-tDotted {
+    border-style: dotted;
+}
+.nui-tree .nui-split {
+    margin: 4px 0;
+}
+.dc .nui-split {
+    margin-left: 11px;
+    margin-right: 11px;
+}
+.nui-tree-item-symbol-fold {
+    margin-top: -2px;
+}
+.fB .nui-ipt-iconBtn .nui-ico {
+    left: 0;
+    top: 0;
+}
+.ek .nui-tabs-item {
+    border-color: #DDDDDD;
+}
+.ek .nui-tabs-item {
+    background: -moz-linear-gradient(center top , #FFFFFF, #F5F5F5) repeat scroll 0 0 transparent;
+}
+.ek .nui-tabs-item-selected {
+    background: -moz-linear-gradient(center top , #FFFFFF, #FFFFFF) repeat scroll 0 0 transparent;
+}
+.cJ {
+    height: 2px;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+}
+.cJ .nui-txt-link {
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+.cJ .nui-ico {
+    margin-top: -6px;
+}
+.lN {
+    height: 38px;
+    padding-top: 10px;
+    position: relative;
+}
+.nui-txt-imptLink, .nui-txt-impt {
+    color: #CC0000 !important;
+}
+.cl .nui-txt-link .nui-txt-impt {
+    cursor: pointer;
+}

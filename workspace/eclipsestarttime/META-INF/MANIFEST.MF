@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Eclipsestarttime
+Bundle-SymbolicName: eclipsestarttime; singleton:=true
+Bundle-Version: 1.0.0.201202011652
+Bundle-Activator: eclipsestarttime.Activator
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: eclipsestarttime.actions;uses:="org.eclipse.ui"

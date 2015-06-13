@@ -1,0 +1,727 @@
+.nui-btn-icon .nui-chk {
+    left: 1px;
+    position: absolute;
+    top: 1px;
+}
+.nui-chk {
+    cursor: default;
+    font-size: 12px;
+    height: 14px;
+    line-height: 14px;
+    outline: 0 none;
+    position: relative;
+    width: 14px;
+}
+.nui-chk-symbol {
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 14px;
+}
+.nui-chk-symbol .nui-ico {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.nui-ico-checkbox {
+    background: url(../images/checkbox.png) no-repeat scroll 0 0 transparent;
+    height: 14px;
+    width: 14px;
+}
+.nui-ico-checkbox-checked {
+    background: url(../images/checkbox-checked.png) no-repeat scroll 0 0 transparent;
+}
+.nui-dropdownBtn-hasOnlyIcon .nui-btn-text {
+    padding-right: 32px;
+}
+.nui-calendar-hover, .nui-calendar:hover, .nui-calendar-active, .nui-calendar:active {
+    border: 1px solid #989898;
+    border-radius: 3px 3px 3px 3px;
+    height: 22px;
+    width: 22px;
+}
+.nui-calendar {
+    cursor: pointer;
+    height: 24px;
+    line-height: normal;
+    position: relative;
+    width: 24px;
+}
+.nui-calendar .nui-ico {
+    float: left;
+    margin-left: 6px;
+    margin-top: 6px;
+}
+.nui-ico-calendar {
+    background: url(../images/calendar.png) repeat scroll 0 0 transparent;
+    height: 11px;
+    width: 11px;
+}
+.nui-toolbar .nui-select {
+    margin-top: 4px;
+}
+.nui-toolbar-item .nui-calendar, .nui-toolbar-item .nui-ipt, .nui-toolbar-item .nui-select {
+    float: left;
+}
+.nui-toolbar-item .nui-calendar {
+    margin-top: 5px;
+}
+.nui-simpleSelect-hover, .nui-simpleSelect-active, .nui-simpleSelect:focus, .nui-simpleSelect:hover, .nui-simpleSelect-focus {
+    border: 1px solid #989898;
+    padding: 0 23px 0 9px;
+}
+.nui-select {
+    border: 1px solid #BBBBBB;
+    border-radius: 3px 3px 3px 3px;
+    color: #555555;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 26px;
+    outline: 0 none;
+    padding: 0 24px 0 10px;
+    position: relative;
+}
+.nui-simpleSelect {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #777777;
+    line-height: 22px;
+    padding: 1px 24px 1px 10px;
+}
+.nui-select-text {
+    text-align: left;
+}
+.nui-simpleSelect .nui-select-arr {
+    right: 10px;
+}
+.nui-select-arr {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+.nui-toolbar-item .nui-btn, .nui-toolbar-item .nui-btn-text, .nui-toolbar-item .nui-splitBtn-text, .nui-toolbar-item .nui-splitBtn-arr {
+    border-radius: 0 0 0 0;
+}
+.nui-toolbar-item .nui-btn:first-child, .nui-toolbar-item .nui-btn:first-child .nui-btn-text, .nui-toolbar-item .nui-btn:first-child .nui-splitBtn-text {
+    border-radius: 3px 0 0 3px;
+}
+.nui-splitBtn-text:focus, .nui-splitBtn-arr:focus, .nui-splitBtn-text-focus, .nui-splitBtn-arr-focus, .nui-btn:focus .nui-btn-text, .nui-btn-focus .nui-btn-text {
+    border-color: #3366CC;
+}
+.nui-toolbar-item .nui-btn:last-child, .nui-toolbar-item .nui-btn:last-child .nui-btn-text, .nui-toolbar-item .nui-btn:last-child .nui-splitBtn-arr {
+    border-radius: 0 3px 3px 0;
+}
+.nui-toolbar-item .nui-btn:only-child, .nui-toolbar-item .nui-btn:only-child .nui-btn-text {
+    border-radius: 3px 3px 3px 3px;
+}
+.qi {
+    background-color: #F7F7F7;
+    border: 1px solid #F1F1F1;
+    color: #999999;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    overflow-y: hidden;
+    padding: 0 56px 0 12px;
+    position: relative;
+}
+.qd .nui-tabs-item-close:focus, .qd .nui-tabs-item-close:hover, .qd .nui-tabs-item-close:active {
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    outline: 0 none;
+    padding: 2px;
+}
+.qd .nui-tabs-item-close:focus .nui-ico, .qd .nui-tabs-item-close:hover .nui-ico, .qd .nui-tabs-item-close:active .nui-ico {
+    left: 2px;
+    top: -5px;
+}
+.ua-osx .qd .nui-tabs-item-close:focus .nui-ico, .ua-osx .qd .nui-tabs-item-close:hover .nui-ico, .ua-osx .qd .nui-tabs-item-close:active .nui-ico {
+    top: -4px;
+}
+.qd .nui-tabs-item-selected .nui-tabs-item-close:focus, .qd .nui-tabs-item-selected .nui-tabs-item-close:hover, .qd .nui-tabs-item-selected .nui-tabs-item-close:active {
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    outline: 0 none;
+    padding: 3px;
+}
+.qd .nui-tabs-item-selected .nui-tabs-item-close:focus .nui-ico, .qd .nui-tabs-item-selected .nui-tabs-item-close:hover .nui-ico, .qd .nui-tabs-item-selected .nui-tabs-item-close:active .nui-ico {
+    left: 3px;
+    top: -4px;
+}
+.ua-osx .qd .nui-tabs-item-selected .nui-tabs-item-close:focus .nui-ico, .ua-osx .qd .nui-tabs-item-selected .nui-tabs-item-close:hover .nui-ico, .ua-osx .qd .nui-tabs-item-selected .nui-tabs-item-close:active .nui-ico {
+    top: -3px;
+}
+.qd .nui-tabs-item-close:hover, .qd .nui-tabs-item-close:focus {
+    background: -moz-linear-gradient(center top , #FCFDFE, #CBDEF2) repeat scroll 0 0 transparent;
+    border-color: #A1ACB8;
+    color: #5E6164;
+}
+.qd .nui-tabs-item-selected .nui-tabs-item-close:hover, .qd .nui-tabs-item-selected .nui-tabs-item-close:focus {
+    background: -moz-linear-gradient(center top , #AAC7E6, #77A7D9) repeat scroll 0 0 transparent;
+    color: #064483;
+}
+.nui-tabs-item-hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.nui-moduleTabs .nui-tabs-item:focus, .nui-moduleTabs .nui-tabs-item-focus, .nui-moduleTabs .nui-tabs-item-selected, .nui-moduleTabs .nui-tabs-item-hover {
+    margin: 12px -1px -1px;
+}
+.qd .nui-tabs-item-hover, .qd .nui-tabs-item-active, .qd .nui-tabs-item-focus {
+    z-index: 4;
+}
+.ua-ie9 .qd .nui-tabs-item-hover, .ua-ie8 .qd .nui-tabs-item-hover, .ua-ie7 .qd .nui-tabs-item-hover, .ua-ie6 .qd .nui-tabs-item-hover {
+    background-position: 0 -160px;
+}
+.oI {
+    height: 22px;
+    overflow: hidden;
+    padding-top: 9px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+}
+.oi {
+    float: right;
+    margin-right: 10px;
+}
+.kL {
+    color: #BFBFBF;
+    float: left;
+    height: 16px;
+    margin-left: 1px;
+    overflow: hidden;
+    width: 16px;
+}
+.oI .nui-ico {
+    height: 7px;
+    margin-left: 5px;
+    margin-top: 4px;
+    vertical-align: top;
+    width: 4px;
+}
+.nui-ico-lArr {
+    background: url(../images/arr-bg-left.png) no-repeat scroll 0 0 transparent;
+    height: 7px;
+    width: 4px;
+}
+
+.nui-ico-drag2 {
+    background: url(../images/focus.png) no-repeat scroll 0 0 transparent;
+    height: 15px;
+    width: 7px;
+}
+.gt .cP {
+    visibility: visible;
+}
+.oI .nui-ico-close {
+    height: auto;
+    margin-top: -3px;
+    width: 14px;
+}
+.nui-msgbox-close .nui-ico-close:hover, .nui-layer-close .nui-ico-close:hover {
+	background-image: url(../images/close.png);
+}
+.nui-fIBlock .nui-ico-close:hover {
+    color:#555555;
+}
+.mK {
+    text-decoration: none;
+}
+.lS {
+    color: #1F8919;
+}
+.nui-txt-tips {
+    color: #999999 !important;
+}
+.qu .nui-assistBlock {
+    margin-bottom: 10px;
+}
+.nui-tipsBlock {
+    color: #555555;
+    padding: 6px 12px;
+    text-align: center;
+}
+.nui-assistBlock {
+    border-color: #E7E7CD;
+    color: #666666;
+    padding: 12px;
+}
+.nui-block {
+    border: 1px solid #BDBDBD;
+    font-size: 12px;
+    line-height: 1.666;
+    padding: 0 4px;
+    position: relative;
+}
+.nui-assistBlock, .nui-bg-tips {
+    background-color: #FFFFE1;
+}
+.pL {
+    border-bottom: 1px solid #D5D6D7;
+}
+.pL .nui-title {
+    padding-right: 60px;
+}
+.nui-title {
+    line-height: 28px;
+    position: relative;
+}
+.sv {
+    
+}
+.pX {
+    border-top: 0 none;
+    position: relative;
+    z-index: 1;
+}
+.kg {
+    border-color: #A3BDD0;
+}
+.kg {
+    border-bottom: 1px solid #A3BDD0;
+    display: block;
+    font-size: 0;
+    overflow: hidden;
+    padding-bottom: 1px;
+    padding-top: 8px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.hc {
+    font-size: 12px;
+    font-weight: 700;
+}
+.pL .nui-txt-link, .pL .nui-title-tips {
+    font-size: 12px;
+    margin-left: 0;
+}
+.nui-title-tips {
+    margin-left: 10px;
+}
+.oe {
+    position: relative;
+}
+.qu {
+    font-size: 14px;
+}
+.qu {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0 10px;
+    padding-bottom: 52px;
+}
+.kd {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D5D6D7;
+    clear: both;
+    cursor: pointer;
+    line-height: 1.1em;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+}
+.eT, .gq, .gp, .cM, .gr, .cP, .dx {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.eT {
+    background-color: #FFFFFF;
+    height: 1.1em;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 264px;
+    z-index: 1;
+}
+.cP {
+    cursor: move;
+    height: 1.1em;
+    left: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 5px;
+}
+.cP .nui-ico-drag, .cr, .dx .nui-ico-reciveImpt, .eT .nui-ico-mail, .eT .nui-ico-draft {
+    margin-top: 4px;
+}
+.cQ .nui-ico, .cP .nui-ico, .cr, .dx .nui-ico {
+    vertical-align: top;
+}
+.nui-ico-drag {
+    background: url(../images/drag.png) no-repeat scroll 0 0 transparent;
+    height: 8px;
+    width: 5px;
+}
+.cs {
+    top: 0;
+}
+.cs {
+    display: block;
+    height: 100%;
+    left: 8px;
+    position: absolute;
+    top: 0;
+    width: 25px;
+}
+.eT .cs .nui-chk-symbol {
+    left: 5px;
+    top: 12px;
+}
+.eT .cs .nui-chk-symbol {
+    top: 11px;
+}
+.cs .nui-chk-symbol {
+    margin-top: 0;
+}
+.nui-ico-ntes {
+    height: 16px;
+    width: 16px;
+}
+.nui-ico-ntes, .nui-ico-folder-ntes {
+    background: url(../images/163.png) no-repeat scroll 0 0 transparent;
+}
+.cQ {
+    background-repeat: no-repeat;
+    left: 37px;
+    position: absolute;
+    top: 0;
+}
+.cM {
+    left: 72px;
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    top: 0;
+    white-space: nowrap;
+    width: 134px;
+}
+.bE {
+    height: 1.1em;
+    margin-right: 4px;
+    white-space: nowrap;
+}
+
+.nui-ico-flag, .nui-ico-flag-1 {
+    background: url(../images/flag-1.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-flag-0 {
+    background: url(../images/flag-0.png) no-repeat scroll 0 0 transparent;
+}
+.cR {
+    height: 1.1em;
+    left: 234px;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+.cR, .cr, .cQ {
+    top: 9px;
+}
+.kd .nui-ico-unread, .kd .nui-ico-re, .kd .nui-ico-fw {
+    margin-top: 3px;
+}
+.kd .nui-ico-unreadThread, .kd .nui-ico-unreadPop, .cR {
+    margin-top: 2px;
+}
+.gp {
+    height: 1.1em;
+    margin-left: 264px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 3000px;
+}
+.gs, .cq {
+    float: left;
+    margin-right: 4px;
+    white-space: nowrap;
+}
+.gq {
+    background-color: #FFFFFF;
+    height: 1.1em;
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 124px;
+}
+.dw {
+    color: #BBBBBB;
+    float: right;
+    font-size: 12px;
+    padding-right: 2px;
+    text-align: right;
+    width: 80px;
+}
+.cN {
+    top: 2px;
+}
+.cN {
+    float: right;
+    height: 14px;
+    margin-left: 8px;
+    overflow: hidden;
+    position: relative;
+    width: 8px;
+}
+.nui-ico-att {
+    background: url(../images/pin.png) no-repeat scroll 0 0 transparent;
+    height: 12px;
+    width: 9px;
+}
+.cO {
+    top: -1px;
+}
+.cO {
+    float: right;
+    position: relative;
+    visibility: hidden;
+}
+.nui-miniBtn, .nui-miniBtn .nui-btn-text {
+    border-radius: 100% 100% 100% 100% !important;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    width: 17px;
+}
+.nui-miniBtn .nui-btn-text {
+    font-size: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.nui-miniBtn .nui-btn-icon {
+    font-size: 12px;
+    height: 17px;
+    left: 0;
+    top: 0;
+    width: 17px;
+}
+.nui-miniBtn .nui-btn-icon .nui-ico {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.nui-miniBtn .nui-btn-icon .nui-ico-dArr {
+    left: 6px;
+    top: 8px;
+}
+.gr {
+    background-color: #FFFFFF;
+    height: 1.1em;
+    padding-left: 4px;
+    position: absolute;
+    right: 122px;
+    top: 0;
+    z-index: 0;
+}
+.pb {
+    line-height: 1;
+    overflow: hidden;
+    padding: 52px 0;
+    text-align: center;
+}
+.nui-infoBlock {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 2px solid #E9E9E9;
+    color: #999999;
+    padding: 15px;
+}
+.kK {
+    color: #555555;
+    font-size: 14px;
+    font-weight: 700;
+}
+.nui-btn-disabled {
+    box-shadow: none !important;
+}
+
+.lR {
+    right: 0;
+}
+.lQ, .lR {
+    position: absolute;
+    top: 16px;
+}
+.lQ {
+    left: 0;
+}
+
+.nui-btn-disabled .nui-btn-icon {
+    color: #CCCCCC !important;
+    cursor: default;
+}
+.nui-btn-disabled .nui-ico-prev {
+    background-image: url(../images/nui-bg1.png);
+}
+.nui-btn-disabled .nui-ico-next {
+    background-image: url(../images/nui-bg2.png);
+}
+.pY {
+    height: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 68px;
+}
+.nui-splitBtn-text:hover, .nui-splitBtn-arr:hover, .nui-splitBtn-text-hover, .nui-splitBtn-arr-hover, .nui-btn:hover .nui-btn-text, .nui-btn-hover .nui-btn-text {
+    background: url(../images/btnbg3.png) repeat-x scroll 0 0 transparent;
+    border-color: #787878;
+}
+.nui-splitBtn-text:focus, .nui-splitBtn-arr:focus, .nui-splitBtn-text-focus, .nui-splitBtn-arr-focus, .nui-btn:focus .nui-btn-text, .nui-btn-focus .nui-btn-text {
+    border-color: #3366CC;
+}
+.nui-splitBtn-text:active, .nui-splitBtn-arr:active, .nui-btn:active .nui-btn-text, .nui-splitBtn-text-active, .nui-splitBtn-arr-active, .nui-btn-active .nui-btn-text {
+    background: url(../images/btnbg2-active.png) repeat-x scroll 0 0 transparent;
+    border-color: #787878;
+}
+/** 多选框选中时行颜色改变*/
+.qu .gu:hover .kd, .qu .gu .kd, .qu .gu .kd .gq, .qu .gu .kd .gr, .qu .gu .kd .gp, .qu .gu .kd .eT {
+    background-color: #FFFFD5;
+}
+.ju, .oe:hover, .ju .kd, .oe:hover .kd, .ju .gq, .oe:hover .gq, .ju .gr, .oe:hover .gr, .ju .eT, .oe:hover .eT {
+    background-color: #F5F5F5;
+}
+.oe:hover .cO, .ju .cP, .oe:hover .cP {
+    visibility: visible;
+}
+/** 当滚动条不是出于初始位置时自动出现*/
+.frame-main-cont-head-shadow {
+    box-shadow: 1px 2px 6px #E6E5E5;
+}
+.frame-main-cont-head-shadow {
+    position: relative;
+    z-index: 2;
+}
+.nui-menu {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    left: 0;
+    line-height: 25px;
+    outline: 0 none;
+    padding: 7px 0;
+    position: absolute !important;
+    text-align: left;
+    top: 0;
+    white-space: nowrap;
+    z-index: 1000;
+}
+.nui-menu-item-icon {
+    left: 8px;
+    position: absolute;
+    top: 5px;
+}
+.nui-menu-item-icon .nui-ico-unread {
+    top: 3px;
+}
+.nui-menu-item-icon .nui-ico {
+    position: absolute;
+}
+.nui-ico-unread {
+    background: url(../images/mail.png) no-repeat scroll 0 0 transparent;
+    height: 11px;
+    width: 15px;
+}
+.nui-menu-item-close, .nui-menu-item-arr {
+    line-height: normal;
+    position: absolute;
+    right: 12px;
+    top: 4px;
+}
+.nui-menu .nui-menu {
+    left: 100%;
+}
+.nui-menu-item {
+    cursor: pointer;
+    outline: 0 none;
+    position: relative;
+}
+.nui-ico-re {
+    background: url(../images/Replied.png) no-repeat scroll 0 0 transparent;
+    height: 11px;
+    width: 13px;
+}
+.nui-ico-fw {
+    background: url(../images/Forwarded.png) no-repeat scroll 0 0 transparent;
+    height: 11px;
+    width: 13px;
+}
+.nui-menu-item-icon .nui-ico-att {
+    left: 5px;
+    top: 3px;
+}
+.nui-ico-att {
+    background: url(../images/pin.png) no-repeat scroll 0 0 transparent;
+    height: 12px;
+    width: 9px;
+}
+.nui-menu-item-icon .nui-ico-bigAtt {
+    left: 5px;
+    top: 2px;
+}
+.nui-ico-bigAtt {
+    background: url(../images/pin2.png) no-repeat scroll 0 0 transparent;
+    height: 14px;
+    width: 9px;
+}
+.nui-menu .nui-ico-radio, .nui-ico-menuRadio {
+    background: none repeat scroll 0 center transparent;
+}
+.nui-menu .nui-ico-radio-checked, .nui-ico-menuRadio-checked {
+    background: url(../images/point.png) no-repeat scroll 0 0 transparent;
+    height: 14px;
+    width: 14px;
+}
+.nui-menu-item-icon .nui-ico-radio, .nui-menu-item-icon .nui-ico-checkbox {
+    left: 1px;
+    top: 1px;
+}
+.nui-menu-split {
+    border-color: #E9E9E9;
+    margin: 4px 0;
+}
+.nui-ico-flag-2 {
+    background: url(../images/flag-green.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-flag-3 {
+    background: url(../images/flag-orange.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-flag-4 {
+    background: url(../images/flag-blue.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-flag-5 {
+    background: url(../images/flag-pink.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-flag-6 {
+    background: url(../images/flag-cyan.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-flag-7 {
+    background: url(../images/flag-yellow.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-flag-8 {
+    background: url(../images/flag-purple.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-flag-15 {
+    background: url(../images/flag-gray.png) no-repeat scroll 0 0 transparent;
+}
+.nui-menu-item-link {
+    cursor: pointer;
+}
+.nui-menu-item-link {
+    display: block;
+    padding: 0 52px 0 32px;
+    position: relative;
+    text-decoration: none;
+}
+.nui-menu-item, .nui-menu-item-link {
+    color: #555555;
+}
+.ib .cq, .ib .bE {
+    font-weight: 700;
+}

@@ -1,0 +1,35 @@
+2.var xmlHttp ;   
+3.function createXDOM() {   
+4.       
+5.    if(window.XMLHttpRequest) {   
+6.           
+7.        xmlHttp = new XMLHttpRequest;      
+8.           
+9.    } else if (window.ActiveXObject) {   
+10.           
+11.        xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");   
+12.    } else {   
+13.           
+14.        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");   
+15.    }       
+16.}   
+17.  
+18.function getInfoByName() {   
+19.    createXDOM();   
+       
+21.    var name = document.getElementsByName("name")[0].value;   
+22.       
+23.    var url = "query.do";   
+24.    var param = "name="+name;   
+25.    xmlHttp.open("post",url,true);   
+26.    xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");   
+27.    xmlHttp.onreadyStatechange=function(){   
+28.        if(xmlHttp.readyState==4) {   
+29.            //alert(xmlHttp.responseText);   
+30.            result.innerHTML=xmlHttp.responseText;   
+31.        } else {   
+32.            result.innerHTML="«Î…‘µ»...";   
+33.        }   
+34.    }   
+35.    xmlHttp.send(param);   
+36.}  

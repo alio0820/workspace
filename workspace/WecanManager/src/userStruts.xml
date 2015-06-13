@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<constant name="struts.objectFactory" value="spring" />
+
+	<package name="struts2" namespace="" extends="struts-default">
+		<action name="user_*" class="UserBean" method="{1}">
+
+			<result name="login">/admin/index.jsp</result>
+			<result name="suce">/admin/index.jsp</result>
+			<result name="error">/admin/login.jsp</result>
+			<result name="input">/admin/login.jsp</result>
+
+			<result name="addManager">/admin/addManager.jsp</result>
+			<result name="addManagerSucc">/admin/mainpage.jsp</result>
+
+			<result name="delManager">/admin/delManager.jsp</result>
+			<result name="delManagerSucc">/admin/mainpage.jsp</result>
+			
+			<result name="updateManager">/admin/updManager.jsp</result>
+			<result name="updateManagerSucc">/admin/mainpage.jsp</result>
+
+			<result name="delUser">/admin/delUser.jsp</result>
+			<result name="delUserSucc">/admin/mainpage.jsp</result>
+			
+			<result name="updateUser">/admin/updUser.jsp</result>
+			<result name="updateUserSucc">/admin/mainpage.jsp</result>
+
+			<result name="showManager">/admin/showManager.jsp</result>
+			<result name="showUser">/admin/showUser.jsp</result>
+			<result name="addUserSucc" type= "chain">user_showUserNameForUpdate</result>
+		</action>
+		
+	</package>
+</struts>    

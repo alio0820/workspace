@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- taeget-->
+	<bean class="com.chinasoft.service.impl.LoginServiceImpl" id="loginService"></bean>
+	<bean class="com.chinasoft.service.impl.LoginServiceImpl1" id="loginService1"></bean>
+
+	<!-- 通知	-->
+	<bean id="afterAdvice" class="com.chinasoft.advice.AfterAdvice"></bean>
+	<bean id="aroundAdvice" class="com.chinasoft.advice.AroundAdvice"></bean>
+	<bean id="beforeAdvice" class="com.chinasoft.advice.BeforeAdvice"></bean>
+	<bean id="exceptionAdvice" class="com.chinasoft.advice.ExceptionAdvice"></bean>
+
+	<!-- 拦截器	-->
+	<bean id="advisor"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="patterns">
+			<list>
+				<value>.*doLogin.*</value>
+			</list>
+		</property>
+		<property name="advice">
+			<ref bean="beforeAdvice"/>
+		</property>
+	</bean>
+	
+	<bean id="advisor1"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="patterns">
+			<list>
+				<value>.*doLogin.*</value>
+				<value>.*doLogout.*</value>
+			</list>
+		</property>
+		<property name="advice">
+			<ref bean="aroundAdvice"/>
+		</property>
+	</bean>
+	
+	<bean id="advisor2"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="patterns">
+			<list>
+				<value>.*doLogin.*</value>
+			</list>
+		</property>
+		<property name="advice">
+			<ref bean="afterAdvice"/>
+		</property>
+	</bean>
+	
+<!--	<bean id="advisor3"-->
+<!--		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">-->
+<!--		<property name="patterns">-->
+<!--			<list>-->
+<!--				<value>.*doLogin.*</value>-->
+<!--			</list>-->
+<!--		</property>-->
+<!--		<property name="advice">-->
+<!--			<ref bean="exceptionAdvice"/>-->
+<!--		</property>-->
+<!--	</bean>-->
+	
+	<!-- 工厂	-->
+<!--	<bean class="org.springframework.aop.framework.ProxyFactoryBean" id="base">-->
+<!--			定义使用哪些拦截器	-->
+<!--		<property name="interceptorNames">-->
+<!--			<list>-->
+<!--				<value>advisor2</value>-->
+<!--				<value>advisor</value>-->
+<!--				<value>advisor1</value>				-->
+<!--			</list>-->
+<!--		</property>-->
+<!--	</bean>-->
+	
+<!--	<bean  id="loginService" parent="base">-->
+<!--	目标对象	-->
+<!--		<property name="target">-->
+<!--			<bean class="com.chinasoft.service.impl.LoginServiceImpl"></bean>-->
+<!--		</property>		-->
+<!--	</bean>-->
+	
+<!--	<bean id="loginService1" parent="base">-->
+<!--		<property name="target">-->
+<!--			<bean class="com.chinasoft.service.impl.LoginServiceImpl1"></bean>-->
+<!--		</property>	-->
+<!--	</bean>-->
+
+<bean	class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"></bean>
+	
+
+	<!-- 
+		Spring提供的BeanNameAutoProxyCreator类允许我们通过Bean的name属性来指定代理的Bean。
+		它暴露了java.lang.String[]类型的beanNames和 interceptorNames属性。
+		beanNames可以指定被代理的Bean名字列表，支持“*”通配符，例如“*DAO”表示所有名字以“DAO”结尾的Bean。
+		interceptorNames指定通知（Advice）列表，或者通知者（Advisor）列表。
+	-->	
+<!--		<bean	class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">-->
+<!--			<property name="beanNames">-->
+<!--				<list>-->
+<!--					<value>login*</value>-->
+<!--				</list>-->
+<!--			</property>-->
+<!--			<property name="interceptorNames">-->
+<!--				<list>-->
+<!--					<value>advisor</value>-->
+<!--					<value>advisor1</value>-->
+<!--				</list>-->
+<!--			</property>-->
+<!--		</bean>  -->
+<!--	-->
+
+</beans>

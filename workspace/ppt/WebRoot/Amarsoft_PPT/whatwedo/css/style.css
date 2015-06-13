@@ -1,0 +1,9 @@
+/*!
+ * YourWebsite v1.0.0 Stylesheet
+ * Docs & License: Matteo Martinelli
+ * (c) 2013 Matteo Martinelli
+ */
+
+
+.wrapper-container{margin-top:20px;}	/* Not delete */
+.wrapper-container .container{width:100%;text-align:center;}

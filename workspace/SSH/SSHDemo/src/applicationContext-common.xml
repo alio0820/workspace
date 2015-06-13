@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+			
+			
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url" value="jdbc:oracle:thin:@172.18.2.74:1521:orcl"></property>
+		<property name="username" value="sunshangshan"></property>
+		<property name="password" value="123456"></property>
+		<property name="maxActive" value="100"></property>
+		
+		<!-- 连接池的最大的活动连接数 -->
+		<property name="maxIdle" value="30"></property>
+		<!-- 连接池的最大的可空闲的连接数 -->
+		<property name="maxWait" value="500"></property>
+		<!-- 连接池的最大的可以等待的连接数 -->
+		<property name="defaultAutoCommit" value="false"></property>
+		<!-- 跟数据库连接的事务有关，每执行一次数据库操作，会自动提交，本次实例的操作是原子性的，实际项目中一般是false -->
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle9iDialect</prop>
+				<prop key="hibernate.show_sql">true</prop><!--
+				<prop key="hibernate.connection.isolation">4</prop>
+				--><prop key="hibernate.hbm2ddl.auto">create</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/chinasoft/dto/User.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- 配置事务的传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="*" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+<!--	 那些类的哪些方法参与事务 -->
+	<aop:config>
+		<aop:pointcut id="allManagerMethod"
+			expression="execution(* com.icss.oa.service.*.*(..))" />
+		<aop:advisor pointcut-ref="allManagerMethod" advice-ref="txAdvice" />
+	</aop:config>
+
+</beans>

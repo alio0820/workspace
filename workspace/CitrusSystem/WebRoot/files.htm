@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>监控特设介绍 - 网站监控 - 群英</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="robots" content="all">
+<meta name="author" content="author string">
+<link href="files_files/main.css" rel="stylesheet" type="text/css">
+<link href="files_files/font.css" rel="stylesheet" type="text/css">
+<link href="files_files/layout.css" rel="stylesheet" type="text/css">
+<link href="files_files/jkstyle.css" rel="stylesheet" type="text/css">
+<script src="files_files/jquery-1.js" language="javascript" type="text/javascript"></script>
+<script src="files_files/js.js" language="javascript" type="text/javascript"></script>
+<script src="files_files/checkjs.js" language="javascript" type="text/javascript"></script>
+<style type="text/css">
+a#bu_service,a#bu_meeting1,a#bu_meeting2 { float:right; width:141px; height:25px; margin:3px 8px 0 0;  background:url(/templates/images/bu_service.gif) no-repeat left top;}
+a#bu_service:hover { }
+.tbox148 { width:160px; height:24px; line-height:24px; border:1px solid #ccc; color:#da070d; background:url(/templates/jk/images/wms_dztime.gif) no-repeat left center; padding-left:8px; }
+</style>
+</head>
+<body>
+	<div id="doc">
+
+	<div id="head">
+	<div id="top">
+		<div id="top_other">
+			
+			<script src="files_files/iframe_login.php" type="text/javascript" charset="utf-8"></script><a href="http://www.qycn.com/user.php?action=login">登录</a> | <a href="http://www.qycn.com/user.php?action=register">注册</a> | <a href="http://www.qycn.com/cc_download.php">CC下载</a> | <a href="http://www.qycn.com/help/">帮助</a>
+			<br>
+
+			<form action="/help/search.php" method="get" id="top_search" onsubmit="if(!$.trim($('#keyword').val())){$('#keyword').val('');return false}">
+				<input name="keyword" id="keyword" class="key_text" type="text">
+				<input src="files_files/ico_1.gif" type="image">
+			</form>
+			
+		</div>
+		
+		<div id="top_logo"><a href="http://www.qycn.com/" title="群英网络公司"><img alt="群英网络公司" src="files_files/logo.jpg" complete="complete"></a></div>
+		</div>
+		<div id="nav_w">
+		<ul class="nav"><li><a href="http://www.qycn.com/" class="t_1"><span>首页</span></a></li> <li><a class="t_1" href="http://www.qycn.com/cc/"><span>群英CC</span><table><tbody><tr><td><ul><li><a href="http://www.qycn.com/cc/">企业即时通讯</a></li><li><a href="http://www.qycn.com/cc/index_1_4.html">企业短信平台</a></li><li class="bottom"></li></ul></td></tr></tbody></table></a></li><li><a class="t_1" href="http://www.qycn.com/saas/"><span>企业应用</span><table><tbody><tr><td><ul><li><a href="http://www.qycn.com/work/">CC协同</a></li><li><a href="http://www.qycn.com/netmeeting/">CC会议</a></li><li><a href="http://www.qycn.com/kf/">在线客服系统</a></li><li><a href="http://www.qycn.com/mail/">CC邮箱</a></li><li><a href="http://www.qycn.com/account/">现金日记账</a></li><li class="bottom"></li></ul></td></tr></tbody></table></a></li><li class="index"><a class="t_1" href="http://www.qycn.com/baseserver/"><span>个人应用</span><table><tbody><tr><td><ul><li><a href="http://www.qycn.com/domain/">域名注册</a></li><li><a href="http://www.qycn.com/qydns/">智能DNS</a></li><li><a href="http://www.qycn.com/beiansys/">备案系统</a></li><li><a href="http://www.qycn.com/sms/">短信群发</a></li><li><a href="http://www.qycn.com/jk/">网站监控系统</a></li><li><a href="http://www.qycn.com/speedtest/">网速测试</a></li><li class="bottom"></li></ul></td></tr></tbody></table></a></li><li><a class="t_1" href="#"><span>数据中心</span><table><tbody><tr><td><ul><li><a target="_blank" href="http://www.qy.com.cn/serverzy/">服务器租用</a></li><li><a target="_blank" href="http://www.qy.com.cn/servertg/">服务器托管</a></li><li><a target="_blank" href="http://www.qy.com.cn/idc/">IDC机房</a></li><li><a href="http://www.qycn.com/qycloud/">云计算平台</a></li><li class="bottom"></li></ul></td></tr></tbody></table></a></li><li><a class="t_1" href="#"><span>网络安全</span><table><tbody><tr><td><ul><li><a href="http://www.qycn.com/ddos/">DDOS防御</a></li><li class="bottom"></li></ul></td></tr></tbody></table></a></li><li><a class="t_1" href="http://www.qycn.com/about/"><span>关于我们</span></a></li></ul>
+        <a id="bu_service" href="tencent://message/?uin=800047218&amp;site=www.qycn.com&amp;menu=yes&amp;crm=1"></a>
+	</div>
+</div>
+
+<div id="location" class="cls">当前位置：<a href="http://www.qycn.com/">群英首页</a> &gt; <a href="http://www.qycn.com/baseserver/">企业基础服务</a> &gt; 网站监控系统 </div>
+
+<div class="jk_box">
+<div class="jk_top">
+<div class="jk_check fl">
+<div class="fl">
+	<input name="checkdomain" id="chkdomainindex" class="jk_ch_inp_off" value="请输入您要检测的网页http://www." type="text">
+</div>
+<div class="fr" style="margin:8px 8px 0 0;  _margin:8px 4px 0 0;">
+	<img style="cursor: pointer;" onclick="javascript:location.href='/jk/jk_check.php?domain='+$('#chkdomainindex').val();" src="files_files/jk_checkbtn.jpg">
+</div>
+
+</div>
+<div class="jk_flask fr">
+<embed src="files_files/top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" height="200" width="484">
+</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#chkdomainindex").focus(function(){
+			$domain_var = $.trim($("#chkdomainindex").val());
+			if($domain_var=="请输入您要检测的网页http://www."){
+				$("#chkdomainindex").val("");
+			}
+			$("#chkdomainindex").attr("class", "jk_ch_inp_on");
+		}).blur(function(){
+			$domain_var = $.trim($("#chkdomainindex").val());
+			if($domain_var==""){
+				$("#chkdomainindex").val("请输入您要检测的网页http://www.");
+			}
+			$("#chkdomainindex").attr("class", "jk_ch_inp_off");
+		})
+		$("#chkdomainindex").keypress(function(event){
+			if(event.keyCode == 13){
+				location.href = "/jk/jk_check.php?domain="+$("#chkdomainindex").val();
+			}
+		})
+	})
+</script><div class="jk_main">
+
+<div class="jk_fuc fl">
+<div class="fuc_top"></div>
+<div class="fuc_m">
+
+<dl>
+<dt><a href="http://www.qycn.com/jk/jk_view.php?vid=1"><img src="files_files/ico_0.gif" border="0"></a></dt>
+<dd><h3><a href="http://www.qycn.com/jk/jk_view.php">系统概述</a></h3>
+<p><a href="http://www.qycn.com/jk/jk_view.php">每天24小时对网站和服务器性能进行全方位的智能监控</a></p>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a href="http://www.qycn.com/jk/jk_view.php?vid=1"><img src="files_files/ico_6.gif" border="0"></a></dt>
+<dd>
+<h3><a href="http://www.qycn.com/jk/jk_view.php?vid=1">监控频率快至10秒</a></h3>
+<p><a href="http://www.qycn.com/jk/jk_view.php?vid=1">独家首创监控频率快至10秒！由10秒到60分钟，分设不同的站点监控频率供您选择</a></p>
+</dd>
+</dl>
+
+
+
+<dl>
+<dt><a href="http://www.qycn.com/jk/jk_view.php?vid=2"><img src="files_files/ico_1.jpg" border="0"></a></dt>
+<dd>
+<h3><a href="http://www.qycn.com/jk/jk_view.php?vid=2">多点网站监控</a></h3>
+<p><a href="http://www.qycn.com/jk/jk_view.php?vid=2">助您轻松了解网站运转详情、来自不同地域的请求响应时间</a></p>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a href="http://www.qycn.com/jk/jk_view.php?vid=3"><img src="files_files/ico_2.jpg" border="0"></a></dt>
+<dd>
+<h3><a href="http://www.qycn.com/jk/jk_view.php?vid=3">全方位服务器监控</a></h3>
+<p><a href="http://www.qycn.com/jk/jk_view.php?vid=3">全方位监控服务器CPU使用率、CPU负载、内存使用率等性能数据</a></p>
+</dd>
+</dl>
+
+<dl>
+<dt><a href="http://www.qycn.com/jk/jk_view.php?vid=4"><img src="files_files/ico_3.jpg" border="0"></a></dt>
+<dd>
+<h3><a href="http://www.qycn.com/jk/jk_view.php?vid=4">多手段及时告警</a></h3>
+<p><a href="http://www.qycn.com/jk/jk_view.php?vid=4">免费提供多种告警通知方式，自定义告警参数，一切随心所欲</a></p>
+</dd>
+</dl>
+
+<dl>
+<dt><a href="http://www.qycn.com/jk/jk_view.php?vid=5"><img src="files_files/ico_4.jpg" border="0"></a></dt>
+<dd>
+<h3><a href="http://www.qycn.com/jk/jk_view.php?vid=5">定期邮件报告</a></h3>
+<p><a href="http://www.qycn.com/jk/jk_view.php?vid=5">对监控数据进行定期分析并发送报告邮件，让一切变化尽在掌控中</a></p>
+</dd>
+</dl>
+
+</div>
+<div class="fuc_btm"></div>
+</div>
+
+
+
+
+
+<div class="textbox fr">
+<div class="textbox_top"></div>
+<div class="textbox_m" style="min-height:710px; _height:710px;">
+
+<blockquote>
+<h3>系统概述</h3>
+
+<table border="0" cellpadding="2" cellspacing="2" width="100%">
+  <tbody><tr>
+    <td width="51%"><p><strong>非接触站点监控，操作快捷方便</strong></p>
+      <p>开通简单<strong><br>
+      </strong>不需任何专业知识，您不需要掌握任何的专业知识，鼠标轻松一点搞定 </p>
+      <p>多点监控<strong><br>
+      </strong>我们在不同的地区为你设置了多个的监控点，通过这些监控点可以为你带来多个区域的网站监控情况，让你足不出户可知“天下事” </p>      </td>
+    <td valign="top" width="49%"><img src="files_files/jqxt_d3_00.gif" border="0"><br><img src="files_files/jqxt_ft_03.gif" border="0" width="360"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><p><strong>多类型监控</strong></p>
+      <p>支持多种站点监控类型，它们对应着不同的网络访问传输协议，您可以利用它们来快速创建监控项目，从而监控您的站点。目前支持的站点监控类型包括：</p>
+      <p>A. HTTP(s) </p>
+      <p>B. PING</p>
+      <p>C. FTP </p>
+      <p>D. DNS </p>
+      <p>E. TCP </p>
+      <p>F. UDP </p>
+      <p>G. SMTP </p></td>
+    <td><img src="files_files/ts_060302.gif" border="0" width="360"> </td>
+
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><p><strong>多手段及时告警</strong></p>
+      <p>群英监控提供灵活的通知规则。</p>
+      <p>(一) 通过通知策略管理，可添加、删除、修改通知规则；</p>
+      <p>(二) 根据需要通知策略可绑定一个或多个任务； </p>
+      <p>(三) 通知方式丰富多样，支持Email通知、短信通知等多种通知方式。</p>
+      <p>(四) 可设置规则敏感度，以防出现误报。</p>
+      <p>(五) 随心所欲定制你能够接受的通知方式 </p></td>
+    <td><img src="files_files/ts_060303.gif" border="0" width="360"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><strong>设置你的站点的监控频率</strong></p>
+      <p>我们提供不同的站点监控频率供您选择，从10秒到60分钟。显然，更短的监控频率可以获得更加准确的站点可用率统计和平均响应时间统计，以及更加及时的告警通知。</p>
+      <p>当然，合适的监控频率才是你所需要，同时你并不需要担心过高的监控频率会导致你的站点负载，因为即便是1分钟的频率，监控请求导致您的站点资源消耗也是微不足道的。 </p>      <img src="files_files/ts_060388.gif" align="right"></td>
+    </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><p><strong>了解站点的可用率</strong></p>
+      <p>您可以轻松的了解站点的历史可用率，它们会以每日甚至每小时的详细程度展示在曲线图上。我们都希望任何时段它们总是100%可用，但是故障总是无处不在的，即使出现故障你也可以最快的时间获得第一手的信息。 </p>
+      <p>&nbsp; &nbsp; </p></td>
+    <td><img src="files_files/ts_060305.gif" border="0" width="360"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><p><strong>了解HTTP响应时间详细分析</strong></p>
+      <p>对于每次HTTP监控，群英监控系统都会将HTTP响应各部分详细时间记录下来，您可以在历史快照中查看这些数据，并分析你的网站可能出现的性能瓶颈，对于你的网站我们总是细心呵护。 </p>
+      <p>&nbsp; </p></td>
+    <td><img src="files_files/ts_060306.gif" border="0" width="360"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><p><strong>故障报告</strong></p>
+      <p>故障总是不受欢迎的，但是就像人一样总是会生病，站点的故障也是无法避免，但是我们可以为像医院一样为你的站点提供病历报告，故障报告可以充分做到这一点。 </p>
+      <p>&nbsp;</p></td>
+    <td><img src="files_files/ts_060307.gif" border="0" width="360"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><p><strong>失败原因分析</strong></p>
+      <p>对失败原因进行分类归纳帮助您更加针对性的分析导致这些失败的深层原因，从而进行项目优化。</p></td>
+    <td><img src="files_files/ts_060309.jpg" style="border: 1px solid rgb(204, 204, 204);" width="360"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</tbody></table>
+
+
+
+
+</blockquote>
+
+
+</div>
+<div class="textbox_btm"></div>
+</div>
+
+
+
+
+<div class="cl"></div>
+</div>
+
+
+
+<div class="jkfoot">
+<div class="fl"><img src="files_files/jishu.jpg"></div>
+
+<div class="jk_held fl">
+<dl>
+<dt><a href="http://www.qycn.com/jk/jk_help.php" target="_blank">技术解释</a></dt>
+<dd><a href="http://www.qycn.com/jk/jk_help.php?hid=1&amp;htype=help" target="_blank">什么是站点监控？</a></dd>
+<dd><a href="http://www.qycn.com/jk/jk_help.php?hid=2&amp;htype=help" target="_blank">什么是HTTP监控？</a></dd>
+<dd><a href="http://www.qycn.com/jk/jk_help.php?hid=8&amp;htype=help" target="_blank">平均响应时间是如何计算的？</a></dd>
+<dd><a href="http://www.qycn.com/jk/jk_help.php?hid=9&amp;htype=help" target="_blank">什么是服务器性能监控？</a></dd>
+</dl>
+</div>
+
+
+
+<div class="jk_held fl">
+<dl>
+<dt><a href="http://www.qycn.com/jk/jk_help.php?hid=201&amp;htype=faq" target="_blank">疑问解答</a></dt>
+<dd><a href="http://www.qycn.com/jk/jk_help.php?hid=201&amp;htype=faq" target="_blank"> 群英监控系统是否要收费？</a></dd>
+<dd><a href="http://www.qycn.com/jk/jk_help.php?hid=203&amp;htype=faq" target="_blank">短信报警免费使用吗?</a></dd>
+<dd><a href="http://www.qycn.com/jk/jk_help.php?hid=204&amp;htype=faq" target="_blank">监控频率越快越好吗？</a></dd>
+<dd><a href="http://www.qycn.com/jk/jk_help.php?hid=209&amp;htype=faq" target="_blank">不需要添加代码就可以监控？</a></dd>
+</dl>
+
+
+<div class="jk_held fl">
+<dl>
+<dt><a href="http://www.qycn.com/news/" target="_blank">最新资讯</a></dt>
+<dd><a href="http://www.qycn.com/news/6918.html" title="各种宽带接入技术分析" target="_blank">各种宽带接入技术分析</a></dd>
+<dd><a href="http://www.qycn.com/news/6917.html" title="宽带光纤接入网的发展与技术选择" target="_blank">宽带光纤接入网的发展与技术选</a></dd>
+<dd><a href="http://www.qycn.com/news/6826.html" title="谈光纤到户技术所面临的考验" target="_blank">谈光纤到户技术所面临的考验</a></dd>
+<dd><a href="http://www.qycn.com/news/6825.html" title="光纤技术发展的特点" target="_blank">光纤技术发展的特点</a></dd>
+</dl>
+</div>
+
+</div>
+</div>
+<div class="cl"></div>
+</div><div id="foot">
+			<a href="http://www.qycn.com/" class="fc_6">群英网络</a> | 
+            <a href="http://www.qycn.com/cc_download.php" class="fc_6">CC下载</a> | 
+			<a href="http://www.qycn.com/about/index_10.html" class="fc_6">联系我们</a> | 
+			<a href="http://www.qycn.com/about/" class="fc_6">关于我们</a> | 
+			<a href="http://www.qycn.com/about/index_11.html" class="fc_6">支付方式</a> | 
+			<a href="http://www.qycn.com/about/index_9.html" class="fc_6">人才招聘</a> | 
+            <a href="http://www.qycn.com/help/" class="fc_6">帮助中心</a> | 
+			<a href="http://www.qycn.com/news/" class="fc_6" target="_blank">资讯中心</a> | 
+            <a href="http://www.qycn.com/wsxf/" class="fc_6">信访系统</a>
+			&nbsp;&nbsp;2012 群英网络有限公司 版权所有<br>
+			增值电信业务经营许可证粤:<a href="http://www.qycn.com/about/index_5.html">B2-20030314 粤ICP备09054660号-2 文网文[2009]248号 ISO9001国际标准质量体系认证 国家三级信息安会服务认证</a>  
+
+
+			<div id="foot_imgs">
+				<a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1752087209" target="_blank" rel="nofollow"><img src="files_files/xin30x30.gif" alt="群英企业信用评级证书" border="0" height="25" width="25"></a>
+				<a href="http://210.76.65.188/webrecord/innernet/Welcome.jsp?bano=4409013013077" target="_blank" rel="nofollow">
+				<img alt="安网地址" src="files_files/waicon.gif" border="0" height="25" width="22">
+				</a>
+				<a href="http://210.76.65.188/newwebsite/main.jsp?id=4408" target="_blank" rel="nofollow">
+				<img alt="网警地址" src="files_files/wangjing.gif" border="0" height="25" width="22">
+				</a>
+				<a href="http://www.qycn.com/about/index_5.html">
+					<img src="files_files/img7.gif" alt="群英资质证书">
+				</a>
+			</div>
+		</div>
+<script language="javascript" type="text/javascript">
+	var qykf_userinfo_url = 'http://www.qycn.com/kf_json.php';
+	if(document.location.href.indexOf('project_reg.php')==-1 && document.location.href.indexOf('speedtest')==-1){
+		if(document.location.href.indexOf('/ddos/')!=-1){
+			document.write("<script src=\"http:\/\/3215.kf.qycn.com\/vclient\/state.php?webid=3215\" language=\"javascript\" type=\"text\/javascript\"><\/script>");
+		}else if(document.location.href.indexOf('/qydns/')!=-1){
+			document.write("<script src=\"http:\/\/8159.kf.qycn.com\/vclient\/state.php?webid=8159\" language=\"javascript\" type=\"text\/javascript\"><\/script>");
+		}else if(document.location.href.indexOf('/beiansys/')!=-1 || document.location.href.indexOf('/jk/')!=-1){
+			document.write("<script src=\"http:\/\/1994.kf.qycn.com\/vclient\/state.php?webid=1994\" language=\"javascript\" type=\"text\/javascript\"><\/script>");
+		}else if(document.location.href.indexOf('/mail/')!=-1){
+			document.write("<script src=\"http:\/\/16707.kf.qycn.com\/vclient\/state.php?webid=16707\" language=\"javascript\" type=\"text\/javascript\"><\/script>");
+		}else if(document.location.href.indexOf('/sms/')!=-1){
+			document.write("<script src=\"http:\/\/7989.kf.qycn.com\/vclient\/state.php?webid=7989\" language=\"javascript\" type=\"text\/javascript\"><\/script>");
+		}else{
+			document.write("<script src=\"http:\/\/2.kf.qycn.com\/vclient\/state.php?webid=2\" language=\"javascript\" type=\"text\/javascript\"><\/script>");
+		}
+	}
+</script><script src="files_files/state.htm" language="javascript" type="text/javascript"></script><script src="files_files/QYTool_min.js" language="javascript" type="text/javascript"></script>
+
+
+<div style="display:none;"><script language="javascript" src="files_files/click.htm" charset="gb2312"></script><a href="http://countt.51yes.com/index.aspx?id=251511922" target="_blank"><img src="files_files/count1.gif" alt="51YES网站统计系统" border="0" height="20" hspace="0" vspace="0" width="20"></a><iframe marginwidth="0" marginheight="0" hspace="0" vspace="0" src="files_files/sa.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+</div>
+</div>
+
+<div style="position: absolute; right: 5px; top: 296px; z-index: 1000000; width: 141px; height: 86px;" id="QYKFSWF"><object style="position: fixed; top: 80px; z-index: 1000000;" type="application/x-shockwave-flash" data="files_files/clientlist.swf" id="QYKFSWFo" height="90px" width="145px"><param name="movie" value="http://1994.kf.qycn.com/vclient/clientlist.swf?v1.0.1.1648"><param name="allowscriptaccess" value="always"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="scale" value="noscale"><param name="wmode" value="transparent"><param name="FlashVars" value="1&amp;Version=v1.0.1.1648&amp;SKIN=default&amp;ListSkin=default&amp;IPAddress=222.178.202.34&amp;KFURL=http://1994.kf.qycn.com/vclient/&amp;ShowOtherIM=1&amp;qyWebSiteClerkServerURL=http://kfrpc2.qycn.com/cgi-bin/qywebsiteclerkserver&amp;qyOnlineClerkCGI=http://kfrpc2.qycn.com/cgi-bin/qyonlineclerkcgi&amp;ChatURL=http://1994.kf.qycn.com/vclient/chat/&amp;ImageURL=http://1994.kf.qycn.com/vclient/themes&amp;YQKWaitTime=1&amp;YQKManualLimitTimes=10&amp;YQKAutoLimitTimes=1&amp;YQKManual=1&amp;YQKAuto=1&amp;YQKAutoInvite=0&amp;YQKInterval=0&amp;YQKNoClerkShow=1&amp;Title=监控特设介绍 - 网站监控 - 群英&amp;Location=http://www.qycn.com/jk/jk_view.php&amp;Referrer=http%3A//www.qycn.com/jk/jk_check.php&amp;OffsetX=0&amp;OffsetY=0&amp;PageWidth=0&amp;ThemeType=2&amp;ThemeURL=http://1994.kf.qycn.com/&amp;SWFType=2&amp;IconType=1&amp;SWFTitle=CC在线客服&amp;SWFFile=clientlist.swf&amp;WebId=1994&amp;SWFPOS=rt&amp;AREA1=重庆市&amp;AREA2=重庆&amp;ClientUrl=http://jk.qycn.com"></object></div><div style="position: absolute; visibility: hidden; left: 518px; z-index: 1000001; top: 329.5px; cursor: move;" id="QYKFYQK"><div style="-moz-user-select: none; height: 137px; width: 378px; background: url(&quot;http://1994.kf.qycn.com/vclient/themes/default/bg.gif&quot;) no-repeat scroll 0% 0% transparent; margin: 0pt; padding: 0pt; position: fixed; z-index: 1000001;" onselectstart="javascript:return false;" id="QYKFYQKC">
+    <h3 id="QYKFYQKT" style="display:block; height:30px; padding:0 ;padding-left:10px;margin:0; line-height:31px; overflow:hidden; text-align:left; font-weight:bold; color:#FFF; font-size:12px;background:none;"></h3> 
+    <p style="display:block; height:50px;padding:0; margin:13px 30px 5px 30px; color:#fff; line-height:20px; text-align:left; font-size:13px;background:none">您好！欢迎您访问广东群英网络有限公司，请问有什么可以帮到您吗？</p> 
+    <div style="margin:0;padding:0;text-align:center; margin-right:15px;background:none">
+        <span onmousedown="javascript:_QYTool.client.refuse();return false;" style="display:inline-block; width:65px; height:27px; margin:0;padding:0;margin-left:15px; background:url(http://1994.kf.qycn.com/vclient/themes/default/bg.gif) no-repeat left -150px; cursor:pointer;"></span>
+        <span onclick="javascript:_QYTool.client.agree();return false;" style="display:inline-block; width:65px; height:27px; margin:0;padding:0;margin-left:15px; background:url(http://1994.kf.qycn.com/vclient/themes/default/bg.gif) no-repeat -72px -150px; cursor:pointer;"></span>
+    </div>
+</div></div></body></html>

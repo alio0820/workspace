@@ -1,0 +1,116 @@
+ 刘英杰老师：
+
+8110611249
+ 
+
+
+
+
+
+string s="";//路径
+File file=new File(s)
+if(file.exits())
+boolean b=file.delete();
+
+
+
+
+
+	HttpServletRequest request=(HttpServletRequest)ActionContext.getContext().get(org.apache.struts2.StrutsStatics.HTTP_REQUEST);
+    	         request.getSession().setAttribute("intRowCount", 123);
+    	         ProjectDatumService npage=new ProjectDatumServiceImpl();
+    	         ProjectDatum pd=new ProjectDatum();
+    	         pd.setId(id);
+    	        intRowCount = npage.count(pd);
+    	        k=(intRowCount + pageSize - 1) / pageSize;
+    	        intPageCount = (intRowCount + pageSize - 1) / pageSize;
+    	        if(pageNow<1){
+    	            pageNow=1;
+    	        }
+    	        
+    	        if(pageNow > intPageCount)
+    	             pageNow=intPageCount;
+    	             i = (pageNow -1)*pageSize;
+    	        ProjectManeServce nlist=new ProjectManeServceImpl();
+    	    	System.out.println("----:"+i);
+    	        if(null!=nlist.query(i,pageSize)){
+    	        
+    	        	list = nlist.query(i,pageSize);
+    	            return "suce";
+    	        }else{
+    	            return  INPUT;
+    	        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <center>
+        共<s:property value="intRowCount"/>记录&nbsp;&nbsp;
+        第<s:property value="pageNow"/>/<s:property value="intPageCount"/>页&nbsp;&nbsp;
+         <s:url id="url_pre" value="fileSort.action">   
+         <s:param name="pageNow" value="pageNow-1"></s:param>
+         <s:param name="str" value="2"></s:param>   
+     </s:url>   
+  
+     <s:url id="url_next" value="fileSort.action">   
+         <s:param name="pageNow" value="pageNow+1"></s:param>
+         <s:param name="str" value="2"></s:param>   
+     </s:url>   
+     <s:iterator value="Newss" status="status">   
+        <s:url id="url" value="fileSort.action">   
+            <s:param name="pageNow" value="pageNow"/>   
+        </s:url>   
+     </s:iterator>    
+     <s:if test="pageNow==1">
+    <s:a href="%{url_pre}">首页</s:a>
+     </s:if>
+     <s:else>
+     <s:a href="%{url_pre}">上一页</s:a>
+     </s:else>
+     <s:if test="pageNow==k">
+     <s:a href="%{url_next}">末页</s:a>
+       </s:if>
+       <s:else>
+       <s:a href="%{url_next}">下一页</s:a>
+       </s:else>
+       </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ageNow"/>/<s:property value="intPageCount"/>页&nbsp;&nbsp;
+         <s:url id="url_pre" value="fileSort.action">   
+         <s:param name="pageNow" value="pageNow-1"></s:param>
+         <s:param name="str" value="2"></s:param>   
+     </s:url>   
+  
+     <s:url id="url_next" value="fileSort.action">   
+         <s:param name="pageNow" value="pageNow+1"></s:param>
+         <s:param name="str" value="2"></s:param>   
+     </s:url>   
+     <s:iterator value="Newss" status="status">   
+        <s:url id="url" value="fileSort.action">   
+            <s:param name="pageNow" value="pageNow"/>   
+        </s:url>   
+     </s:iterator>    
+     <s:if test="pageNow==1">
+    <s:a href="%{url_pre}"

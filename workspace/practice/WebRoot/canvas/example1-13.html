@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../images/fruit.ico">
+		<title>圆角矩形绘制</title>
+		<style>
+			body{
+				background:#eeeeee;
+			}
+			#canvas{
+				background:#ffffff;
+				margin-left:10px;
+				maring-top:10px;
+				-webkit-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-moz-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+				-box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='canvas' width='600' height='300'>
+			Canvas not supported
+		</canvas>
+		<script>
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d');
+			function roundedRect(cornerX,cornerY,width,height,cornerRadius){
+				if(width > 0)
+					context.moveTo(cornerX + cornerRadius,cornerY);
+				else
+					context.moveTo(cornerX - cornerRadius,cornerY);
+				context.arcTo(cornerX + width,cornerY,cornerX + width,cornerY + height,cornerRadius);
+				context.arcTo(cornerX + width,cornerY + height,cornerX,cornerY + height,cornerRadius);
+				context.arcTo(cornerX,cornerY + height,cornerX,cornerY,cornerRadius);
+				if(width>0){
+					context.arcTo(cornerX,cornerY,cornerX + cornerRadius,cornerY,cornerRadius);
+				}
+				else{
+					context.arcTo(cornerX,cornerY,cornerX - cornerRadius,cornerY,cornerRadius);
+				}
+			}
+			function drawRoundedRect(strokeStyle,fillStyle,cornerX,cornerY,width,height,cornerRadius){
+				context.beginPath();
+				roundedRect(cornerX,cornerY,width,height,cornerRadius);
+				context.strokeStyle = strokeStyle;
+				context.fillStyle = fillStyle;
+				context.stroke();
+				context.fill();
+			}
+			drawRoundedRect('blue','yellow',50,40,100,100,10);
+			drawRoundedRect('purple','green',275,40,-100,100,20);
+			drawRoundedRect('red','white',300,140,100,-100,30);
+			drawRoundedRect('white','gray',525,140,-100,-100,40);
+		</script>
+	</body>
+</html>

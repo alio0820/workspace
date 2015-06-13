@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="struts2" namespace="/" extends="struts-default">
+		<action name="appForm_*" class="DM.AppFormDM" method="{1}">
+			<result name="success">/applyForProjectFund.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>		
+		<action name="renderAccount_*" class="DM.RenderAccountDM" method="{1}">
+			<result name="success">/renderAccount.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action> 	
+		<action name="proIncome_*" class="DM.ProjectIncomeDM" method="{1}">
+			<result name="success">/projectFinish.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="finApp_*" class="PD.FinancialApproval" method="{1}">
+			<result name="success">/auditStaffInfo.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="manApp_*" class="PD.ManagementApproval" method="{1}">
+			<result name="success">/auditStaffInfo2.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="finCheck_*" class="PD.FinanicalCheck" method="{1}">
+			<result name="success">/auditStaffbz.jsp</result>
+			<result name="project">/auditStaffProject.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="manCheck_*" class="PD.ManagementCheck" method="{1}">
+			<result name="success">/auditStaffbz2.jsp</result>
+			<result name="project">/auditStaffProject2.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+	</package>
+</struts>

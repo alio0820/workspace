@@ -1,0 +1,14 @@
+1.欢迎页面:accountingSubject/accountingPreserve.jsp
+在此页面下，添加、修改、删除 按钮 都调转的是同一页面，即：com.zr.js.js.web.action;
+
+2.在此页面，分为两个表单，form1和form2，form1用于提交请求，form2用于显示；
+
+3.点击radio按钮，自动将id加载到form1中的隐藏文本域（name=id），用于修改的时候提交，form1下还有一个隐藏文本域
+（name=qq），用于向后台传参，表示当前按下的是哪个按钮；
+
+4.首先accountingPreserve.jsp---->AccountingAction.java----->AccountingServiceImpl(主要功能在这实现，然后
+返回到AccountingAction.java下继续执行)----->QueryAction.java(这里主要用于返回数据库表的值，两个action的跳转
+用到了struts.xml的文件)------>UserServiceImpl.java(这里使用user类加载了表中的每一行，并上载到list数组中)---
+-->accountingPreserve.jsp（此时返回到主页面显示查询结果，通过迭代，将list数组中的值依次显示在每一行；）
+
+5.System.out这种输出可以不看；其他的文件暂时没用到；跳转在struts.xml中的文件只有两段；

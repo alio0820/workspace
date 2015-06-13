@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="struts20" namespace="/" extends="struts-default">
+			<action name="departIC_*" class="swu.edu.cn.Action.departICAction" method="{1}">
+				<result name="1">/departIndicatorClassify.jsp</result>
+				<result name="2">/departIndicatorClassify2.jsp</result>
+			</action>
+			<action name="IC_*" class="swu.edu.cn.Action.ICAction" method="{1}">
+				<result name="1">/indicatorClassify.jsp</result>
+				<result name="2">/indicatorClassify2.jsp</result>				
+			</action>
+	</package>
+	<package name="struts2" namespace="/index" extends="struts-default">
+			<action name='departM_*'  method="{1}">
+				<result name="success">/DepartmentsManage.jsp</result>
+				<result name="input">/index.htm</result>
+				<result name="shenbao">/progressReport.jsp</result>
+			</action>
+			<action name='query_*'  method="{1}">
+				<result name="success">/projectInquires.jsp</result>
+				<result name="input">/index.htm</result>
+			</action>
+			
+			<action name="register"  method="register">
+				<result name="success">/login.htm</result>
+				<result name="input">/error.jsp</result>
+			</action>
+			<action name="departIC_*" class="swu.edu.cn.Action.departICAction" method="{1}">
+				<result name="1">/index/departIndicatorClassify.jsp</result>
+				<result name="2">/index/departIndicatorClassify2.jsp</result>				
+			</action>
+			<action name="IC_*" class="swu.edu.cn.Action.ICAction" method="{1}">
+				<result name="1">/index/indicatorClassify.jsp</result>
+				<result name="2">/index/indicatorClassify2.jsp</result>				
+			</action>
+	</package>	
+	<package  name= "struts21" namespace="/index_duty" extends="struts-default">
+		<action name="projectR_*"  class="swu.edu.cn.Action.projectRecordManagementAction" method="{1}">
+				<result name="shenbao">/index_duty/dutyProgressReport.jsp</result>			
+				<result name="input">/error.jsp</result>
+				<result name="shenheQiantou">/index_duty/dutyProjectReview.jsp</result>		
+		</action>
+		<action name="departIC_*" class="swu.edu.cn.Action.departICAction" method="{1}">
+				<result name="1">/index_duty/dutyIndicatorC.jsp</result>
+				<result name="2">/index_duty/dutyIndicatorC2.jsp</result>
+		</action>
+	</package>
+	<package  name= "struts22" namespace="/index_qfg" extends="struts-default">
+		<action name="projectR_*"  class="swu.edu.cn.Action.projectRecordManagementAction" method="{1}">
+				<result name="input">/error.jsp</result>
+				<result name="qufenguan">/index_qfg/qfgProjectReview.jsp</result>
+		</action>
+	</package>
+	<package  name= "struts23" namespace="/index_dcs" extends="struts-default">
+		<action name="projectR_*"  class="swu.edu.cn.Action.projectRecordManagementAction" method="{1}">
+				<result name="input">/error.jsp</result>
+				<result name="duchashenhe">/index_dcs/dcsProjectReview.jsp</result>
+		</action>
+	</package>
+</struts>    

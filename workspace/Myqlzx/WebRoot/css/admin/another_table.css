@@ -1,0 +1,20 @@
+.body_table
+{
+	width:100%;
+}
+.search{text-align:right;}
+
+#middiv{height:25px;}
+
+input,textarea {
+	border: 1px solid #ADAEB0;
+}
+.chk{border-style:none;}
+td,th{border:1px solid #AACDED;padding:3px;}
+td{font-size:12px;}
+th{background-color:#EBF4FB;font-size:13px;color:#444;font-weight:normal;}
+#search
+{
+	background:url(../../image/admin/search_ico.gif) no-repeat;
+	padding:1px 1px 1px 19px;
+}

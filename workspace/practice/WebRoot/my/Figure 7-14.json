@@ -1,0 +1,12 @@
+{
+	"ISO2":"CA",
+	"ISO3":"CAN",
+	"label":"Province",
+	"states":[
+		"0: ",
+		"66:Alberta",
+		"67:British Columbia",
+		"68:Manitoba",
+		"69:Newfoundland"
+	]
+}

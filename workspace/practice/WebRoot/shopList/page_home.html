@@ -1,0 +1,97 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>世界上最简单的购物清单应用</title>
+<style>
+	.shopping_coment{
+		position:absolute;
+		left:50%;
+		top:50%;
+		margin-left:-191px;
+		margin-top:-283px;
+		width:382;
+		height:566px;
+	}
+	.shopping_home{
+		background:url(images/page_home.gif);
+	}
+	.shopping_index{
+		background:url(images/page_index.gif);
+		display:none;
+	}
+	.shopping_1{
+		background:url(images/page_1.gif);
+		display:none;
+	}
+	.shopping_home .info{
+		margin-top:422px;
+		padding-right:1px;
+	}
+	.shopping_index .info{
+		margin-top:423px;
+		padding-right:1px;
+	}
+	.shopping_home .pwd{
+		background:#BEE691;
+		border:none;
+		height:50px;
+		width:324px;
+		margin-top:1px;
+		font-size:28px;
+		font-weight:bold;
+		color:white;
+		padding:0 10px;
+		border-radius:2px;
+		float:right;
+	}
+	.shopping_index .pwd{
+		background:#BEE691;
+		border:none;
+		height:63px;
+		width:323px;
+		margin-top:1px;
+		font-size:30px;
+		font-weight:bold;
+		color:white;
+		padding:0 15px;
+		border-radius:2px;
+		float:right;
+	}
+	.shopping_1 ul{
+		list-style:none;
+		color:white;
+		font-size:30px;
+		font-weight:bold;
+		padding-left:20px;
+	}
+	.shopping_1 .radio{
+		display:inline-block;
+		height:15px;
+		width:15px;
+	}
+</style>
+</head>
+<body>
+<div class="shopping_coment shopping_home">
+<div class="info">
+	<input type="pwd" class="pwd" name="pwd" placeholder="只需输入四个字符"/>
+	<input type="pwd" class="pwd" name="pwd2" placeholder="请再次输入"/>
+</div>
+</div>
+
+<div class="shopping_coment shopping_index">
+<div class="info">
+	<input type="pwd" class="pwd" name="pwd" placeholder="请输入四位密码"/>
+</div>
+</div>
+
+<div class="shopping_coment shopping_1">
+<div class="info">
+	<ul>
+		<li><input type="radio" class="radio"/><span>周一中午和下午的菜</span></li>
+	</ul>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+1、建一个webproject
+2、加入struts、spring、hibernate的jar
+3、配置web.xml
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		加载位置是src下面或者WEB-INF下面 只要是以applicationContext- 开头的xml文件都会被加载
+		<param-value>classpath*:applicationContext-*.xml,/WEB-INF/applicationContext-*.xml
+		</param-value>
+	</context-param>
+	<listener>
+		其作用是当web容器启动的时候能够加载spring的配置文件
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+
+	其作用是告诉web容器，页面上所有的请求都是通过FilterDispatcher来进行转发
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.FilterDispatcher
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	
+	<!-- 防止懒加载异常，lazy只有在session打开的情况下才是有效的。
+	 -->	 
+	<filter>
+		<filter-name>hibernateFilter</filter-name>
+		<filter-class>
+			org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+4、配置 struts.xml
+	其作用是让原本由struts创建action，现在又srping来统一创建，因为我们需要spring来给我们注入service对象
+	<constant name="struts.objectFactory" value="spring" />
+	<action name="user" class="userAction"> 中的class 属性就不是定义成类的全路径了
+	他应该和spring配置文件中的 bean 标签的 name属性对应
+	一定要增加scope="prototype"属性，因为struts2的action是非线程安全的（拥有成员变量）
+
+------------------------------------------------------------------------------------------------------------
+5、在spring中配置DataSource
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url" value="jdbc:oracle:thin:@172.18.23.26:1521:SSH"></property>
+		<property name="username" value="mali"></property>
+		<property name="password" value="123456"></property>
+		<property name="maxActive" value="100"></property>
+		<!-- 连接池的最大的活动连接数 -->
+		<property name="maxIdle" value="30"></property>
+		<!-- 连接池的最大的可空闲的连接数 -->
+		<property name="maxWait" value="500"></property>
+		<!-- 连接池的最大的可以等待的连接数 -->
+		<property name="defaultAutoCommit" value="false"></property>
+		<!-- 跟数据库连接的事务有关，每执行一次数据库操作，会自动提交，本次实例的操作是原子性的，实际项目中一般是false -->
+	</bean>
+
+6、创建sessionFactory
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle9iDialect</prop>
+				<prop key="hibernate.show_sql">true</prop><!--
+				<prop key="hibernate.connection.isolation">4</prop>
+				--><prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/chinasoft/dto/User.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+-------------------------------------或者----------------------------------
+步骤5,6 改为
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+------------------------------------------------------------------------------
+
+7、配置声明式事务（所有的事务处理commit rollback 都是通过配置完成，如果程序不出异常则commit，否则rollback）
+	
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+8、<!-- 配置事务的传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="*" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!--那些类的哪些方法参与事务 -->
+	<aop:config>
+		<aop:pointcut id="allManagerMethod"
+			expression="execution(* com.icss.oa.service.*.*(..))" />
+
+		<aop:advisor pointcut-ref="allManagerMethod" advice-ref="txAdvice" />
+	</aop:config>
+
+9、在dao中注入sessionFactory
+-----------------------------------------------------------------------------------------------------------------
