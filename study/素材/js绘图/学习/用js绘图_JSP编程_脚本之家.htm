@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0036)http://www.jb51.net/article/2582.htm -->
+<HTML xml:lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>用js绘图_JSP编程_脚本之家</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META content=zh-CN http-equiv=Content-Language>
+<META content=IE=EmulateIE7 http-equiv=X-UA-Compatible>
+<META name=keywords content=|用j|js|s绘|绘图|图|>
+<META name=description content=用js绘图>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/content.js"></SCRIPT>
+<LINK rel=stylesheet type=text/css href="用js绘图_JSP编程_脚本之家_files/main.css" 
+media=all><LINK rel=stylesheet type=text/css 
+href="用js绘图_JSP编程_脚本之家_files/content.css" media=all><LINK rel=icon 
+type=image/x-icon href="http://www.jb51.net/favicon.ico"><LINK 
+rel="shortcut icon" type=image/x-icon href="http://www.jb51.net/favicon.ico">
+<META name=GENERATOR content="MSHTML 9.00.8112.16440"></HEAD>
+<BODY>
+<DIV id=topnav>
+<DIV id=toptext>脚 本 之 家 www.jb51.net</DIV>
+<UL id=topnavlist>
+  <SCRIPT type=text/javascript charset=gb2312 
+  src="用js绘图_JSP编程_脚本之家_files/top.js"></SCRIPT>
+</UL></DIV>
+<DIV id=dxy_logo>
+<DIV id=logo_l><A title=脚本之家 href="http://www.jb51.net/" target=_blank><IMG 
+alt=脚本之家 src="用js绘图_JSP编程_脚本之家_files/logo.gif"></A></DIV>
+<DIV id=logo_m></DIV>
+<DIV id=logo_r></DIV></DIV><!--导航开始-->
+<DIV id=nav_top>
+<UL>
+  <LI><A href="http://www.jb51.net/"><SPAN>首页</SPAN></A> 
+  <LI><A title=网页制作 href="http://www.jb51.net/web/"><SPAN>网页制作</SPAN></A> 
+  <LI><A title=脚本专栏 
+  href="http://www.jb51.net/list/index_96.htm"><SPAN>脚本专栏</SPAN></A> 
+  <LI><A title=网络编程 
+  href="http://www.jb51.net/list/index_1.htm"><SPAN>网络编程</SPAN></A> 
+  <LI><A title=数据库 
+  href="http://www.jb51.net/list/index_104.htm"><SPAN>数据库</SPAN></A> 
+  <LI><A title=脚本下载 href="http://www.jb51.net/jiaoben/"><SPAN>脚本下载</SPAN></A> 
+  <LI><A title=cms使用教程 href="http://www.jb51.net/cms/"><SPAN>程序教学</SPAN></A> 
+  <LI><A title=电子书籍 href="http://www.jb51.net/books/"><SPAN>电子书籍</SPAN></A> 
+  <LI><A title=平面设计 href="http://www.jb51.net/pingmian/"><SPAN>平面设计</SPAN></A> 
+  <LI><A title=媒体动画 href="http://www.jb51.net/media/"><SPAN>媒体动画</SPAN></A> 
+  <LI><A title=模板下载 href="http://www.jb51.net/moban/"><SPAN>模板下载</SPAN></A> 
+  <LI><A title=操作系统 href="http://www.jb51.net/os/"><SPAN>操作系统</SPAN></A> 
+  <LI><A title=网站运营 href="http://www.jb51.net/yunying/"><SPAN>网站运营</SPAN></A> 
+  </LI></UL></DIV><!--导航结束-->
+<DIV class=blank3></DIV>
+<DIV class=subnav>
+<UL>
+  <LI><A title=JavaScript 
+  href="http://www.jb51.net/list/list_3_1.htm">JavaScript</A> </LI>
+  <LI><A title=ASP编程 href="http://www.jb51.net/list/list_2_1.htm">ASP编程</A> 
+</LI>
+  <LI><A title=PHP编程 href="http://www.jb51.net/list/list_15_1.htm">PHP编程</A> 
+  </LI>
+  <LI><A title=正则表达式 href="http://www.jb51.net/list/list_6_1.htm">正则表达式</A> 
+</LI>
+  <LI><A title=AJAX相关 href="http://www.jb51.net/list/list_5_1.htm">AJAX相关</A> 
+  </LI>
+  <LI><A title=ASP.NET href="http://www.jb51.net/list/list_21_1.htm">ASP.NET</A> 
+  </LI>
+  <LI><A title=JSP编程 href="http://www.jb51.net/list/list_83_1.htm">JSP编程</A> 
+  </LI>
+  <LI><A title=编程10000问 
+  href="http://www.jb51.net/list/list_123_1.htm">编程10000问</A> </LI>
+  <LI><A title=CSS/HTML 
+  href="http://www.jb51.net/list/list_4_1.htm">CSS/HTML</A> </LI>
+  <LI><A title=脚本加解密 href="http://www.jb51.net/list/list_60_1.htm">脚本加解密</A> 
+  </LI>
+  <LI><A title=web2.0 href="http://www.jb51.net/list/list_62_1.htm">web2.0</A> 
+  </LI>
+  <LI><A title=XML/RSS href="http://www.jb51.net/list/list_64_1.htm">XML/RSS</A> 
+  </LI>
+  <LI><A title=网页编辑器 href="http://www.jb51.net/list/list_176_1.htm">网页编辑器</A> 
+  </LI>
+  <LI><A title=相关技巧 href="http://www.jb51.net/list/list_177_1.htm">相关技巧</A> 
+</LI>
+  <LI><A title=黑客相关 href="http://www.jb51.net/list/list_72_1.htm">黑客相关</A> </LI>
+  <LI><A title=网页播放器 href="http://www.jb51.net/list/list_19_1.htm">网页播放器</A> 
+  </LI>
+  <LI><A title=其它综合 href="http://www.jb51.net/list/list_185_1.htm">其它综合</A> 
+</LI></UL></DIV>
+<DIV class=blank20></DIV>
+<DIV class=dxy_main>
+<SCRIPT type=text/javascript>/*首屏960*60通栏 主站*/ var cpro_id = 'u336546';</SCRIPT>
+
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/c.js"></SCRIPT>
+</DIV>
+<DIV class=blank3></DIV>
+<DIV id=tonglan1></DIV>
+<DIV class=blank3></DIV>
+<DIV class=dxy_main>
+<DIV class=dxy_main_l>
+<DIV id=art_con>
+<DIV id=daohang>页面导航： <A href="http://www.jb51.net/index.htm">首页</A> → <A 
+title=网络编程 href="http://www.jb51.net/list/index_1.htm">网络编程</A> → <A title=JSP编程 
+href="http://www.jb51.net/list/list_83_1.htm">JSP编程</A> → 正文内容 
+<DIV class=blank3></DIV></DIV>
+<DIV class=blank3></DIV>
+<H1>用js绘图</H1>
+<DIV id=title_ad1></DIV>
+<DIV id=art_info>发布：dxy 字体：[<A href="javascript:turnbig()">增加</A> <A 
+href="javascript:turnsmall()">减小</A>] 类型：转载 </DIV><!--end art_info-->
+<DIV class=blank3></DIV>
+<DIV class=blank3></DIV>
+<DIV id=con_all>
+<DIV id=con_da1>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/bc_l.js"></SCRIPT>
+</DIV>
+<DIV id=con_da8>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/bc_r.js"></SCRIPT>
+</DIV></DIV>
+<DIV id=art_content><!--NEWSZW_HZH_BEGIN-->&lt;object id=DirectDraw 
+<BR>classid="CLSID:369303C2-D7AC-11D0-89D5-00A0C90833E6" 
+<BR>style="positiion:absolute;top:0;left:0;width:320;height:200" <BR>&gt; 
+<BR>&lt;param name="line0001" value="绘图指令1"&gt; <BR>&lt;param name="line0002" 
+value="绘图指令2"&gt; <BR>... <BR>&lt;/object&gt; <BR>绘图指令分类： <BR>(一)常见形状 <BR>1.矩形类 
+//rotation是以度为单位的旋转角度 <BR>Rect(x ,y, width, height, rotation) //矩形 <BR>Oval(x 
+,y, width, height, rotation) //椭圆 <BR>RoundRect(x ,y, width, height, arcWidth, 
+arcHeight, rotation) <BR>2.弧形类 <BR>Arc(x ,y, width, height, startAngle, 
+arcAngle, rotation) //弧形 <BR>Pie(x ,y, width, height, startAngle, arcAngle, 
+rotation) //饼图 <BR>3.多边形类 <BR>Polygon(nPoints, x1, y1, x2, y2, [x3, y3, ....], 
+rotation) //闭合 <BR>Polyline(nPoints, x1, y1, x2, y2, [xn, yn, ....], rotation) 
+//不闭合 <BR>(二)效果函数 <BR>1.线条效果 <BR>SetLineColor(r, g, b) //设置画线颜色 
+<BR>SetLineStyle(style) //style=(1:实线;2:虚线;0:隐藏) <BR>2.填充效果 <BR>SetFillColor(r, 
+g, b, backr, backg, backb) <BR>SetFillStyle(style) 
+//style=(1:实心;2:透明;3:-;4:|;5:\;6:/;7:+;8:x) <BR>(三)文字输出函数 
+<BR>SetFont('字体',width,height,r,g,b) //设置字体 <BR>Text('要输出的文字内容', x,y,z) //输出文字 
+<BR><BR><BR>控制函数 //定义&lt;object&gt;后在&lt;script&gt;&lt;/script&gt;里使用。 
+<BR>引用格式：DirectDraw.FunctionName() <BR>rotate(x-rotation, y-rotation, 
+z-rotation) //旋转 <BR>scale(x-scale,y-scale,z-scale) //缩放 
+<BR>translate(x-coordinate,y-coordinate,z-coordinate) //平移 <BR>setIdentity() 
+//复原 <BR>clear() //清除,清除后无法恢复！ <BR><BR><!--NEWSZW_HZH_END-->
+<DIV id=art_xg>
+<DIV id=con_da2>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/baidu580.js"></SCRIPT>
+</DIV></DIV>
+<DIV id=numstyle></DIV>
+<DIV id=con_bo></DIV></DIV>
+<DIV class=blank3></DIV>
+<DIV class=tags><STRONG>Tags：</STRONG><A title=搜索关于的文章 
+href="http://img.jb51.net/tag//1.htm" target=_blank></A> <A title=搜索关于用j的文章 
+href="http://img.jb51.net/tag/%D3%C3j/1.htm" target=_blank>用j</A> <A 
+title=搜索关于js的文章 href="http://img.jb51.net/tag/js/1.htm" target=_blank>js</A> <A 
+title=搜索关于s绘的文章 href="http://img.jb51.net/tag/s%BB%E6/1.htm" 
+target=_blank>s绘</A> <A title=搜索关于绘图的文章 
+href="http://img.jb51.net/tag/%BB%E6%CD%BC/1.htm" target=_blank>绘图</A> <A 
+title=搜索关于图的文章 href="http://img.jb51.net/tag/%CD%BC/1.htm" target=_blank>图</A> 
+<A title=搜索关于的文章 href="http://img.jb51.net/tag//1.htm" target=_blank></A></DIV>
+<DIV class=blank3></DIV>
+<DIV id=shoucang><!-- Baidu Button BEGIN -->
+<DIV id=bdshare class="bdshare_t bds_tools get-codes-bdshare"><SPAN 
+class=bds_more>分享到：</SPAN> <A class=bds_qzone></A><A class=bds_tsina></A><A 
+class=bds_tqq></A><A class=bds_renren></A><A class=bds_kaixin001></A><A 
+class=bds_douban></A><A class=bds_qq></A><A class=bds_tsohu></A><A 
+class=bds_baidu></A><A class=bds_t163></A></DIV>
+<SCRIPT id=bdshare_js type=text/javascript 
+data="type=tools&amp;uid=50347"></SCRIPT>
+
+<SCRIPT id=bdshell_js type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>
+	document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+</SCRIPT>
+<!-- Baidu Button END --></DIV>
+<DIV class=con_ff><A class=button_link title=复制本文链接发给你QQ/MSN上的好友 
+href="javascript: copyUserHomeToClipBoard()" rel=nofollow>复制链接</A><A 
+class=button_link 
+href="javascript:addBookmark(document.title,document.location.href)">收藏本文</A><A 
+class=button_link href="javascript:doPrint();">打印本文</A><A class=button_link 
+href="javascript:closeWindow()">关闭本文</A><A class=button_link 
+href="http://www.jb51.net/index.htm">返回首页</A> </DIV>
+<DIV id=prenext>
+<DIV id=prv>上一篇：<A title=如何使用JSP连接DB2数据库 
+href="http://www.jb51.net/article/2581.htm">如何使用JSP连接DB2数据库</A></DIV>
+<DIV id=next>下一篇：<A href="http://www.jb51.net/article/27084.htm">java+sql2005 
+随机抽取试题的代码</A></DIV></DIV>
+<DIV class=bc_bot_ad>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/bc_bot_ad.js"></SCRIPT>
+</DIV>
+<DIV class=blank3></DIV>
+<DIV id=relatedarticle>
+<H2>相关文章</H2>
+<UL>
+  <LI><A title=在jsp中发送email href="http://www.jb51.net/article/2587.htm" 
+  target=_blank>在jsp中发送email</A></LI>
+  <LI><A title="JBuilderX+SQL Server开发hibernate" 
+  href="http://www.jb51.net/article/2772.htm" target=_blank>JBuilderX+SQL 
+  Server开发hibernate</A></LI>
+  <LI><A title="JDBCTM 指南:入门6-PreparedStatement" 
+  href="http://www.jb51.net/article/2565.htm" target=_blank>JDBCTM 
+  指南:入门6-PreparedStatement</A></LI>
+  <LI><A title="jsp 获取客户端的浏览器和操作系统信息" 
+  href="http://www.jb51.net/article/18349.htm" target=_blank>jsp 
+  获取客户端的浏览器和操作系统信息</A></LI>
+  <LI><A title=JSP迅速入门 href="http://www.jb51.net/article/2634.htm" 
+  target=_blank>JSP迅速入门</A></LI>
+  <LI><A title=JSP开发入门(三)--JSP与JavaBean 
+  href="http://www.jb51.net/article/2557.htm" 
+  target=_blank>JSP开发入门(三)--JSP与JavaBean</A></LI>
+  <LI><A title=jsp基础速成精华讲解 href="http://www.jb51.net/article/17071.htm" 
+  target=_blank>jsp基础速成精华讲解</A></LI>
+  <LI><A title=利用Java实现zip压缩/解压缩 href="http://www.jb51.net/article/2541.htm" 
+  target=_blank>利用Java实现zip压缩/解压缩</A></LI></UL>
+<DIV class=clear></DIV></DIV>
+<DIV class=sm>
+<SCRIPT type=text/javascript charset=gb2312 
+src="用js绘图_JSP编程_脚本之家_files/sm.js"></SCRIPT>
+</DIV>
+<DIV id=comments>
+<H2>文章评论</H2>
+<P><SPAN>共有 <STRONG id=thecount></STRONG>位脚本之家网友发表了评论</SPAN><A 
+href="http://img.jb51.net/comment.asp?id=2582" target=_blank>我来说两句</A></P>
+<DIV id=commentList></DIV></DIV>
+<DIV class=blank3></DIV></DIV></DIV><!--end dxy_mainl-->
+<DIV class=dxy_main_r>
+<DIV class=rbg>
+<SCRIPT src="用js绘图_JSP编程_脚本之家_files/r_1.js"></SCRIPT>
+</DIV>
+<DIV class=blank3></DIV>
+<SCRIPT src="用js绘图_JSP编程_脚本之家_files/r_2.js"></SCRIPT>
+
+<DIV class=blank3></DIV>
+<DIV class=r_title>
+<H6>最 近 更 新</H6></DIV>
+<DIV class=rightContent>
+<UL>
+  <LI><A title=一个可以防止刷新的JSP计数器 href="http://www.jb51.net/article/2470.htm" 
+  target=_blank>一个可以防止刷新的JSP计数器</A></LI>
+  <LI><A title="JSP/Servlet 中的汉字编码问题" 
+  href="http://www.jb51.net/article/2688.htm" target=_blank>JSP/Servlet 
+  中的汉字编码问题</A></LI>
+  <LI><A title=Java布局管理器使用方法 href="http://www.jb51.net/article/2781.htm" 
+  target=_blank>Java布局管理器使用方法</A></LI>
+  <LI><A title="JSP连接MySql/MS SQL Server/Oracle数据库连接方法[整理]" 
+  href="http://www.jb51.net/article/16167.htm" target=_blank>JSP连接MySql/MS SQL 
+  Server/Oracle数据库</A></LI>
+  <LI><A title=初探Java类加载机制 href="http://www.jb51.net/article/2739.htm" 
+  target=_blank>初探Java类加载机制</A></LI>
+  <LI><A title="jsp 自定义标签实例" href="http://www.jb51.net/article/20118.htm" 
+  target=_blank>jsp 自定义标签实例</A></LI>
+  <LI><A title="struts2 session 解读" href="http://www.jb51.net/article/18410.htm" 
+  target=_blank>struts2 session 解读</A></LI>
+  <LI><A title="JSP application（return String）用法详例" 
+  href="http://www.jb51.net/article/20255.htm" target=_blank>JSP 
+  application（return String）用法详</A></LI>
+  <LI><A title="jsp 页面上图片分行输出小技巧" href="http://www.jb51.net/article/17863.htm" 
+  target=_blank>jsp 页面上图片分行输出小技巧</A></LI>
+  <LI><A title="jsp 获取客户端的浏览器和操作系统信息" 
+  href="http://www.jb51.net/article/18349.htm" target=_blank>jsp 
+  获取客户端的浏览器和操作系统信息</A></LI></UL></DIV>
+<DIV class=blank3></DIV>
+<DIV class=r_title>
+<H6>热 点 排 行</H6></DIV>
+<DIV class=hotContent>
+<UL class=topnum>
+  <LI class=top1><A title=struts2+spring+hibernate分页代码[比较多] 
+  href="http://www.jb51.net/article/15976.htm" 
+  target=_blank>struts2+spring+hibernate分页代</A></LI>
+  <LI class=top2><A title=FCKeditor使用方法(FCKeditor_2.6.3)详细使用说明 
+  href="http://www.jb51.net/article/15792.htm" 
+  target=_blank>FCKeditor使用方法(FCKeditor_2.</A></LI>
+  <LI class=top3><A title=搭建EXTJS和STRUTS2框架(ext和struts2简单实例) 
+  href="http://www.jb51.net/article/21204.htm" 
+  target=_blank>搭建EXTJS和STRUTS2框架(ext和st</A></LI>
+  <LI class=top4><A title="jsp JFreeChart使用心得与例子" 
+  href="http://www.jb51.net/article/16653.htm" target=_blank>jsp 
+  JFreeChart使用心得与例子</A></LI>
+  <LI class=top5><A title=jsp生成静态页面的方法 
+  href="http://www.jb51.net/article/6740.htm" 
+target=_blank>jsp生成静态页面的方法</A></LI>
+  <LI class=top6><A title=Jsp页面实现文件上传下载类代码 
+  href="http://www.jb51.net/article/13388.htm" 
+  target=_blank>Jsp页面实现文件上传下载类代码</A></LI>
+  <LI class=top7><A title=response.setHeader参数、用法的介绍 
+  href="http://www.jb51.net/article/16437.htm" 
+  target=_blank>response.setHeader参数、用法的</A></LI>
+  <LI class=top8><A title="jsp web.xml文件的作用及基本配置" 
+  href="http://www.jb51.net/article/19141.htm" target=_blank>jsp 
+  web.xml文件的作用及基本配置</A></LI>
+  <LI class=top9><A title=Jsp生成页面验证码的方法[附代码] 
+  href="http://www.jb51.net/article/16168.htm" 
+  target=_blank>Jsp生成页面验证码的方法[附代码</A></LI>
+  <LI class=top10><A title=XStream使用方法总结附实例代码 
+  href="http://www.jb51.net/article/14542.htm" 
+  target=_blank>XStream使用方法总结附实例代码</A></LI></UL></DIV>
+<DIV class=blank3></DIV>
+<DIV>
+<SCRIPT src="用js绘图_JSP编程_脚本之家_files/r_3.js"></SCRIPT>
+</DIV>
+<DIV class=blank3></DIV>
+<DIV id=baidu300></DIV></DIV><!--end mainr-->
+<DIV class=clear></DIV></DIV><!--end main2-->
+<DIV class=blank3></DIV>
+<DIV id=footer>
+<DIV id=footerinfo>
+<DIV id=footercontent><A href="http://www.jb51.net/about.htm" 
+target=_blank>关于本站</A> - <A href="http://www.jb51.net/support.htm" 
+target=_blank>广告合作</A> - <A href="http://www.jb51.net/linkus.htm" 
+target=_blank>联系我们</A> - <A href="http://www.jb51.net/sm.htm" 
+target=_blank>免责声明</A> - <A href="http://www.jb51.net/sitemap.htm" 
+target=_blank>网站地图</A> - <A 
+href="http://www.jb51.net/do/plus/guestbook/index.php" target=_blank>意见反馈</A> - 
+<A href="http://www.jb51.net/article/2582.htm#top">返回顶部</A></DIV>
+<DIV id=footercopyrights>严禁网站镜像，转载请注明出处。<A 
+href="http://www.miibeian.gov.cn/">苏ICP备06043639号</A><BR><SPAN>Copyright &copy; 
+2006-2010 www.jb51.net online services. All rights reserved. . 
+</SPAN><BR>QQ群1:14624678 QQ群2:36345889或业务QQ:461478385 <BR>
+<SCRIPT language=javascript src="用js绘图_JSP编程_脚本之家_files/zanzhu.js"></SCRIPT>
+</DIV></DIV></DIV>
+<SCRIPT type=text/javascript>
+document.body.oncopy = function () { 
+	setTimeout( function () { 
+		var text = getClipboard();
+		if (text) { 
+			text = text + "\r\n详细出处参考："+document.location.href; 
+copy2Clipboard(text);
+
+		} 
+				}, 100 ) 
+}
+</SCRIPT>
+
+<DIV id=logo_m_tp>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/logo_m.js"></SCRIPT>
+</DIV>
+<DIV id=logo_r_tp>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/logo_r.js"></SCRIPT>
+</DIV>
+<DIV id=title_ad1_tp>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/bc_txt_1.js"></SCRIPT>
+</DIV><SPAN id=baidu300_tp>
+<SCRIPT type=text/javascript 
+src="用js绘图_JSP编程_脚本之家_files/baidu300_2.js"></SCRIPT>
+</SPAN>
+<DIV id=tonglan1_tp>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/tonglan1.js"></SCRIPT>
+</DIV>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/con_ad.js"></SCRIPT>
+
+<DIV class=tongji>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/tongji.js"></SCRIPT>
+</DIV>
+<SCRIPT type=text/javascript src="用js绘图_JSP编程_脚本之家_files/big5style.js"></SCRIPT>
+
+<SCRIPT src="用js绘图_JSP编程_脚本之家_files/pl_counts.htm"></SCRIPT>
+<!-- published at 2011-12-17 4:29:50By dxycms qq:461478385  --></BODY></HTML>

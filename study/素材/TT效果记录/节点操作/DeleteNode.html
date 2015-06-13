@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>DeleteNode.html</title>
+  </head>  
+  <body>
+    <table border="1">
+    	<tbody id="myTable">
+    		<tr>
+    			<td>请选择文件：</td>
+    			<td><input type="file"></td>
+    		</tr>
+    	</tbody>
+    </table><br>
+    <input type="button" onclick="addRow()" value="添加一行"/>
+    <input type="button" onclick="killRow()" value="删除最后一行"/>
+    <script>
+    	function addRow()
+    	{
+    		//获取<tbody>节点
+    		var tbodyNode = document.getElementById("myTable");
+    		//获取所有<tr>节点
+    		var trNodes = tbodyNode.getElementsByTagName("tr");
+    		//复制第一个<tr>节点
+    		var cloneTrNode= trNodes[0].cloneNode(true);
+    		//将复制的<tr>节点插入到表格中
+    		tbodyNode.appendChild(cloneTrNode);
+    	}
+    	function killRow()
+    	{
+    		//获取<tbody>节点
+    		var tbodyNode= document.getElementById("myTable");
+    		//获取所有<tr>节点
+    		var trNodes = tbodyNode.getElementsByTagName("tr");
+    		//获取<tr>节点个数
+    		var trNodesCount = trNodes.length;
+    		if(trNodesCount>1)
+    		{
+    			//删除最后一个子节点
+    			tbodyNode.removeChild(tbodyNode.lastChild);
+    		}
+    		else
+    			alert("只剩下最后一行了，不能再删除了");
+    	}
+    </script>
+  </body>
+</html>

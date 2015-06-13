@@ -1,0 +1,11 @@
+body{
+	font:16px sans-serif;
+}
+div{
+	width:200px;
+	height:200px;
+	padding:10px;
+	border:1px solid rgb(200,200,200);
+	background:lightblue;
+	margin:10px;
+}

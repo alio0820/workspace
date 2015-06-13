@@ -1,0 +1,19 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>满屏显示网页</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+<script type="text/javascript" language="javascript" >
+    //将浏览器窗口移动到屏幕的左上角
+    window.moveTo(0,0);
+    //调整浏览器窗口的大小
+    //window.resizeTo(screen.availWidth,screen.availHeight)
+    //最大化浏览器窗口
+    window.resizeTo(screen.width,screen.height);
+    document.write("显示器的分辨率为：",screen.width,"X",screen.height,"<br>");
+    document.write("显示器的有效分辨率为：",screen.availWidth,"X",screen.availHeight,"<br>");
+</script>
+</head>
+<body onload="showText()">
+</body>
+</html>

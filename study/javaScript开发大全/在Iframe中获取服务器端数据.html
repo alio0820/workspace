@@ -1,0 +1,24 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+	<head>
+		<title>在Iframe中获取服务器端数据</title>
+		<script>
+           function settown()
+           {
+               var town =myForm.province.value;
+	       alert(town);
+               window.frames[0].location.href= "sample03.asp?townName="+town;
+           }        
+       </script>
+	</head>
+	<body>
+	     <form name="myForm">
+	         <select name = "province" onchange="settown()">
+	             <option value= "hunan">湖南省</option>
+	             <option value= "guangdong">广东省</option>
+	             <option value= "hebei">河北省</option>
+	         </select>
+	         <iframe src="sample03.asp?townName=hunan" scrolling="no" frameborder="0" height="18" width="100"></iframe>
+	 </form>
+	</body>
+</html>

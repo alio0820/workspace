@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>jQuery ios下拉通知 - 站长图库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<link href="css/slideme.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-2.0.2.min.js"></script>
+<script src="js/slideme.min.js"></script>
+<script>
+    	var now = new Date ();
+		var d = now.getDate();
+		var m = now.getMonth();
+		var y = now.getFullYear();
+		var h = now.getHours();
+		var mi = now.getMinutes();
+		var s = now.getSeconds();
+				
+		$(document).ready(function() {
+			$(".wrapper-slider").SlideMe({
+				refreshAgo: true,
+				ondelete: function(ids) {
+					//Do anything
+					console.log("Done. You have delete the elements with id: " + JSON.stringify(ids));
+				},
+				categories:[
+					{
+						//id: 0 --> auto_increment
+						title:'Private message',
+						icon: 'images/message.png'
+					},
+					{
+						//id: 1 --> auto_increment
+						title:'Website update',
+						icon: 'images/update.png'
+					},
+					
+				],
+				notifications: [ //Ordina in base all'h le categorie, e le news dentro ogni categoria 
+					{
+						id:0,
+						category: 0,
+						title: 'Matteo Martinelli',
+						text: 'Hi guy, this is the first notification.<br>You can also write an <u><span style="font-size:20px;">HTML code</span></u>',
+						ago: new Date(y, m, d, h, mi-5, s)
+						
+					},
+					{
+						id:1,
+						category: 0,
+						title: 'Short BIO',
+						text: 'I\'m 26 years old developer. i hope you appreciate it',
+						ago: new Date(y, m, d, h-2, mi, s)
+					},
+					{
+						id:2,
+						category: 1,
+						title: 'First release',
+						text: 'Ver. 1.0 released<br>Purchase it.',
+						ago: new Date(y, m, d-6, h, mi-10, s)
+					},
+					{
+						id:3,
+						category: 0,
+						title: 'Bug notice',
+						text: 'Try me! I\'ve not a bug!',
+						ago: new Date(y, m-3, d, h, mi, s-10)
+					}
+					
+				]
+			});
+			
+			$("body").css({overflow:"auto"});
+
+        });
+		
+	</script>
+</head>
+
+<body>
+
+<div class="wrapper-slider">
+</div>
+<div class="wrapper-container">
+	<div class="container">
+		<img src="images/home.png" /> </div>
+</div>
+<div style="text-align:center;clear:both">
+	<p>适用浏览器：FireFox、Chrome、Safari、Opera、傲游、搜狗. 不支持IE8、360、世界之窗。</p>
+	<p>代码整理：<a href="http://www.zztuku.com" target="_blank">站长图库</a></p>
+<script src='http://www.zztuku.com/plus/ad_js.php?aid=58' language='javascript'></script>
+
+</div>
+
+</body>
+
+</html>

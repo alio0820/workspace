@@ -1,0 +1,107 @@
+1.$包含了jQuery的所有功能
+
+2.onload事件要比jQuery的ready事件慢得多，因为在执行onload事件之前，要等到所有的内容和图片都加载完毕，而jQuery的ready事件在内容加载完毕就会触发，而无需等待图片的加载。
+
+3.应该努力避免输入性的错误
+
+4.W3C的标记验证服务位于网站http://validator.w3.org
+
+5.CSS的标记验证服务位于网站http://jigsaw.w3.org/css-validator/
+
+6.为样式表中类型选择器的ID和类名添加前缀也是非常有用的，如 div#thisID,span.someClass,div.someClass
+
+7.ID名称有可能在URL中被作为一个HTML的锚点，如www.example.com/index.html#left
+  SEO 搜索引擎优化  search engine optimization
+
+8. 强制浏览器更新文档，
+   <script src='/script/my.js?lastModified=12/16/07' type='text/javascript'></script>
+
+9.遗憾的是，要想取消单击超链接的默认行为，需要根据浏览器的不同采用不同的方法。IE浏览器具有自己的方法，而其他浏览器则采用标准的方法，为了满足上述两种需求，使用了下面这行JavaScript代码：
+	$e? $e.preventDefault():(window.event.returnValue = false);
+
+10. 使用了$符号，一定要导入jQuery.js
+    使用了<script>标签后记得加上</script>
+    实在找不到错误，把html改为xhtml
+    空格可以应用于文件名
+
+11.   由于在CSS中，ID总是比类名具有更高的优先权，因此要使表示对话框的<div>元素变为可见，就必须在CSS中引用ID来定义样式规则。
+
+12.siblings（）方法查找元素的兄弟节点，
+    @1 所有兄弟节点
+   $('ul#tmpPlaces li.tmpExampleCity').siblings().addClass('tmpSiblings');
+    @2 具有tmpRealmOfMen类名的兄弟节点
+   $('ul#tmpPlaces li.tmpExampleCity').siblings('.tmpRealmOfMen').addClass('tmpSiblings');
+
+13.选择特定的兄弟节点
+   next()、prev()、nextAll()、prevAll()方法基于兄弟节点的出现位置，即当前元素之前之后来选取这种选择。
+   $('ul#tmpYellow').next().addClass('tmpSiblings');.......
+
+14. 使用parents()方法和parent()方法选取祖先元素
+    parents()选取一个元素的所有祖先元素，parent()选取当前元素的祖先元素
+    children()选取一个元素的子元素
+    not()反选所需的其他元素
+    slice(0,4)选取结果集中片段子集，slice(5)选取从第五个（不包括5）开始的所有子集
+    使用add()方法向选择集中添加元素 p59
+    结果集中选择特定的元素，.eq(3).addClass('');    第四个元素
+
+15.当试图以window.onload=function()的方式将另外一个事件挂钩到window.onload事件时，后面挂钩的这个事件将会覆盖掉之前挂钩的事件，即在传统事件模型中，只有最后挂钩的那一个事件有效。
+
+16.两种事件挂钩方法，默认的为window.onload=function() 只能挂钩一个事件；另一个为W3C事件模型挂钩事件 object.addEventListtener(event,function,useCapture) 理论上可以挂钩多个事件；
+
+17.头文件dtd错误会导致弹窗‘向程序发送命令时出现问题’？？？应该是firefox配置问题
+
+18.IE浏览器不支持W3C的事件模型，很多时候js调用不正确都是由于js编写错误造成的，唯有一个一个对照改正
+
+19.要阻止默认事件行为，只需调用event对象的preventDefault()方法即可，而IE浏览器则需要设置window.event.returnValue = false。
+
+20.attr('id','tmpExample')函数可以直接为标签添加id属性
+   还有一种方法：
+   $('a').attr({
+	id:'tmpExample',
+	title:'Some Tooltip Text',
+	href:'http://www.example.com'
+     });
+要移除属性，只需调用removeAttr()方法即可。
+
+21.html()方法和text()方法即可以用来取值，又可以用来设置值
+   $('p').html("这就是一个设置值的例子")
+
+22.before()和after()方法可以将新内容插入到当前元素之前和之后。
+   $('p').before("你好")，在p之前插入“你好”
+   insertBefore()和insertAfter()则刚好相反，它们接受的参数为选择器，而不是一个字符串参数
+   $('table#tmp thead').insertBefore('table#tmpAlbums tbody');指的是将id   为tmp的table的thead属性插入到id为tmpAlbums的tbody属性之前，即前者插入   到后者之前
+
+23.元素包装
+   $('p').wrap('<div></div>');将每一个p标签包装到每一个div标签之中
+   $('p').wrapAll('<div></div>');将多个p标签包装到同一个div标签之中
+   $('p').wrapAll(document.createElement('div'));效果同上---使用对象来包装元素
+   $('p').wrapInner('<i></i>');对p标签的内容进行包装，i标签在p标签内部
+
+24.替换元素
+   replaceWith()可以替换元素及元素的内容
+   $(this).replaceWith("nihao") 将元素替换为nihao
+   同样replaceAll()方法接受的参数为选择器
+   $('p#tmpText1').replaceAll(this)  元素被tmpText1替换，前者替换后者
+
+25.移除元素
+   $('td').empty();   $('h4,table').remove();分别移除td标签，h4标签和table标签、
+
+26.克隆元素
+   如果想克隆元素的事件处理函数，只需在调用clone()方法时将第一个参数设置为一个布尔值true即可
+   $('tr#tmp').clone(true).removeAttr('id').appendTo('tbody');  克隆tr的所有子元素，还克隆当前元素所包含的任何事件处理函数，removeAttr('id')移除了所有克隆元素的id属性，否则所克隆的<tr>行会自动隐藏，appendTo()方法传入一个选择器tbody，它的作用是使新的<tr>行追加到<tbody>元素中，即在表格中添加一个新的表格行；
+
+27.对选择集和数组进行过滤
+   $('li').filter('.George').addClass('tmpSelected');对拥有类为George的li添加类tmpSelected
+   $('li').filter(function(){return $(this).hasClass('John')}).addClass('tmpSelected');
+
+28. grep()方法 hide()方法
+    数组的map()方法
+    mousedown事件---鼠标按下事件 
+
+29.$.getJSON(
+	'Figure 7-2.json',
+	{hLocationCountryID:this.value},
+	function($xml){
+	});
+
+30.jQuery的val()方法，可以为文本内容赋值

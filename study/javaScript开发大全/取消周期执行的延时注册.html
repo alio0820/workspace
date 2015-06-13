@@ -1,0 +1,41 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>显示时间</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+<script type="text/javascript" language="javascript" >
+var str ="您好！欢迎光临！";
+strleng=0;
+function showText()
+{
+     if(strleng==str.length)
+      strleng=0;
+     strleng++;
+     var statusText=str.substring(0,strleng);
+     window.status=statusText;
+     window.setTimeout("showText()",800);
+}
+var time=10;
+function disableButton()
+{
+     time--;
+     myForm.myButton.value="请阅读("+time+")";
+}
+//每隔一秒调用一次
+var runId = window.setInterval("disableButton()",1000);
+function enableButton()
+{
+     //停止执行
+     window.clearTimeout(runId);
+     myForm.myButton.disabled= false;
+     window.setTimeout("myForm.myButton.value='注册'",1000);
+}
+//10秒之后，停止执行
+window.setTimeout("enableButton()",10000);
+</script>
+</head>
+<body onload="showText()">
+     <form name = "myForm">
+     <input type="button" name = "myButton" value="请阅读(10)" disabled="true" onclick="alert('你点击了我')">
+</body>
+</html>

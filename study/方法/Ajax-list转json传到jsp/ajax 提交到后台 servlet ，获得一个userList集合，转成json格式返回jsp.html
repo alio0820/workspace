@@ -1,0 +1,1409 @@
+<!doctype html>
+<!--STATUS OK-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <title>ajax 提交到后台 servlet ，获得一个userList集合，转成json格式返回jsp，怎样将数据显示到指定的div中_百度知道     </title>
+        <script type="text/javascript">
+            (function(){var t=+new Date(),n="iknowlog_"+t,p='http://nsclick.baidu.com/v.gif?pid=102&url='+encodeURIComponent(location.href)+'type=2014&page=ikqb&iknowstatus=start&t='+t,c=window[n]=new Image();c.onload=c.onerror=function(){window[n]=null};c.src=p;c=null})(); 
+            var PDC={_version:"0.1",_render_start:new Date().getTime(),_analyzer:{loaded:false,url:"http://static.tieba.baidu.com/tb/pms/wpo.pda.js?v=0.1",callbacks:[]},_opt:{is_login:false,sample:0,product_id:0,page_id:0,common_resources:[],special_resources:[]},_timing:{},init:function(a){for(var b in a){this._opt[b]=a[b]}},mark:function(a){this._timing[a]=new Date().getTime()},view_start:function(){this.mark("vt")},tti:function(){this.mark("tti")},page_ready:function(){this.mark("fvt")},metadata:function(){var a=this._opt;var b={env:{user:(a.is_login==true?1:0),product_id:a.product_id,page_id:a.page_id},common_resources:a.common_resources,special_resources:a.special_resources,render_start:this._render_start,timing:this._timing};return b}};(function(){if(document.attachEvent){window.attachEvent("onload",function(){PDC.mark("let");PDC._load_analyzer()})}else{window.addEventListener("load",function(){PDC.mark("lt")},false)}})();</script>
+        <link rel="stylesheet" href="http://iknow.bdimg.com/base/css/iknow_base.css" type="text/css" />
+        <link rel="stylesheet" href="http://iknow.bdimg.com/qb/qb.css" type="text/css" />
+        <script type="text/javascript" src="http://img.baidu.com/js/tangram-1.3.3.js"></script>
+        <script type="text/javascript" src="http://iknow.bdimg.com/base/js/iknow_base.js"></script>
+        <script type="text/javascript">ik.qb=ik.qb||{};ik.qb.data=(function(){var A={};A.user={isLogin:"1",gradeIndex:"3",gradeIndexName:"三",gradeTitle:"侍从",userEncode:"bcfdb9c2b6c0b2bbbfe0c2ef140c",goodRate:"14",iconType:"6",userLevel:"3",userName:"孤独不苦嘛",userNameUrl:"%B9%C2%B6%C0%B2%BB%BF%E0%C2%EF",userScore:"606",userSex:"1",userSubLevel:"2",userUid:"202702268",isOfficalAdmin:"0",isUserAdmin:"0",userType:"1",officalAdminLevel:"0"};A.page={qid:"356573980",cid:"870",query:"",referQuery:"",pt:"",bidSearchQuery:"世界上真的有吃人树吗？"};A.extra={taskid:"",eggType:"0",eggCrypt:"",ti:""};return{get:function(C,B){if(C){if(B&&A[C]){return(A[C][B])?A[C][B]:""}else{return A[C]}}return""},add:function(C,B,D){if(C){if(A[C]){if(baidu.lang.isArray(B)){A[C]=B;return true}if(!A[C][B]){A[C][B]=D;return true}}else{A[C]={};if(baidu.lang.isArray(B)){A[C]=B}else{A[C][B]=D}return true}}return false}}})();</script>
+        <script type="text/javascript">
+            baidu.dom.ready(function(){
+                ik.qb.push.show({
+
+        pushListNum:'8'
+        ,pushOffset:'0'
+        ,userType:'cookie'
+
+        ,moreUrl:'/browse/?lm=17'
+        ,pushQuestion:[
+
+    
+        
+            {
+                answerNum:'0'
+                ,qid:'430094100'
+                ,score:'0'
+                ,questionType:'cookie'
+                ,questionTitle:'和布朗，比亚迪，万科一同获得2010年中国最佳低碳企业还有哪些'
+                ,questionTitFull:'和布朗，比亚迪，万科一同获得2010年中国最佳低碳企业还有哪些'
+                ,cellphone:'0'
+                ,expGroup:'1'
+            },
+        
+            {
+                answerNum:'0'
+                ,qid:'430123518'
+                ,score:'0'
+                ,questionType:'cookie'
+                ,questionTitle:'法国的航空、核电能力、石油加工排名第几?'
+                ,questionTitFull:'法国的航空、核电能力、石油加工排名第几?'
+                ,cellphone:'0'
+                ,expGroup:'1'
+            },
+        
+            {
+                answerNum:'1'
+                ,qid:'429191896'
+                ,score:'0'
+                ,questionType:'cookie'
+                ,questionTitle:'原著里面段正淳最喜欢谁?'
+                ,questionTitFull:'原著里面段正淳最喜欢谁?'
+                ,cellphone:'0'
+                ,expGroup:'1'
+            },
+        
+            {
+                answerNum:'0'
+                ,qid:'430115258'
+                ,score:'5'
+                ,questionType:'cookie'
+                ,questionTitle:'急求高露洁或其它美国跨国公司财务报告，急急！'
+                ,questionTitFull:'急求高露洁或其它美国跨国公司财务报告，急急！'
+                ,cellphone:'0'
+                ,expGroup:'1'
+            },
+        
+            {
+                answerNum:'0'
+                ,qid:'430123904'
+                ,score:'0'
+                ,questionType:'cookie'
+                ,questionTitle:'谁有彩钻等级7的图片给我下'
+                ,questionTitFull:'谁有彩钻等级7的图片给我下'
+                ,cellphone:'0'
+                ,expGroup:'1'
+            },
+        
+            {
+                answerNum:'0'
+                ,qid:'430094150'
+                ,score:'0'
+                ,questionType:'cookie'
+                ,questionTitle:'计量螺旋可以打印么'
+                ,questionTitFull:'计量螺旋可以打印么'
+                ,cellphone:'0'
+                ,expGroup:'1'
+            },
+        
+            {
+                answerNum:'0'
+                ,qid:'430062789'
+                ,score:'0'
+                ,questionType:'cookie'
+                ,questionTitle:'求2009、2010、2011年万科集团的现金流量表、资产负债表和利润表整理好的'
+                ,questionTitFull:'求2009、2010、2011年万科集团的现金流量表、资产负债表和利润表整理好的'
+                ,cellphone:'0'
+                ,expGroup:'1'
+            },
+        
+            {
+                answerNum:'0'
+                ,qid:'430116347'
+                ,score:'5'
+                ,questionType:'cookie'
+                ,questionTitle:'进石油企业面试时有哪些要特别注意的？？？'
+                ,questionTitFull:'进石油企业面试时有哪些要特别注意的？？？'
+                ,cellphone:'0'
+                ,expGroup:'1'
+            },
+        {}
+    
+
+        ]
+});
+            });
+        </script>
+        <script type="text/javascript" src="http://iknow.bdimg.com/qb/qb.js"></script>
+    </head>
+	<script type="text/javascript">PDC.mark("ht");(function(){var a=PDC.ready=function(){var g=false,f=[],c;if(document.addEventListener){c=function(){document.removeEventListener("DOMContentLoaded",c,false);d()}}else{if(document.attachEvent){c=function(){if(document.readyState==="complete"){document.detachEvent("onreadystatechange",c);d()}}}}function d(){if(!d.isReady){d.isReady=true;for(var k=0,h=f.length;k<h;k++){f[k]()}}}function b(){try{document.documentElement.doScroll("left")}catch(h){setTimeout(b,1);return}d()}function e(){if(g){return}g=true;if(document.addEventListener){document.addEventListener("DOMContentLoaded",c,false);window.addEventListener("load",d,false)}else{if(document.attachEvent){document.attachEvent("onreadystatechange",c);window.attachEvent("onload",d);var h=false;try{h=window.frameElement==null}catch(i){}if(document.documentElement.doScroll&&h){b()}}}}e();return function(h){d.isReady?h():f.push(h)}}();a.isReady=false})();PDC.ready(function(){PDC.mark("drt")});PDC.mark("vt");</script>
+    <body>
+		
+        <div id="wrap">
+            <div id="usrbar">
+	<nobr>
+    
+		<span onMouseOver="usrbar.myinfo();">
+			<a href="http://passport.baidu.com/center" target="_blank" id="username" class="g-un ">孤独不苦嘛</a>&nbsp;<img src="http://img.baidu.com/hi/img/mfu/my_ico.gif" align="absmiddle">
+		</span>
+        
+            <a id="user-grade" class="g-gradeholder"><span class="user-grade">三级</span></a>
+            <span id="IMBubble">&nbsp;</span><span class="line">&nbsp;|</span>
+        
+        <span onMouseOver="usrbar.myiknow();">
+            <a id="my-home" href="/q?ct=24&cm=16&tn=ucframework#myiknow" target="_blank">我的知道</a>&nbsp;<img src="http://img.baidu.com/hi/img/mfu/my_ico.gif" align="absmiddle">
+        </span><span class="line">|</span>
+		<span id="mnum"></span><span class="line msg-line">&nbsp;|</span>
+		<a href="http://www.baidu.com/">百度首页</a>
+    
+	</nobr>
+
+
+<div id="nav-user" onmouseover="this.style.display='block'" onMouseOut="this.style.display='none'">
+	<div class="g-body">
+		<a id="usrbar-myinfo" href="http://passport.baidu.com/center" target="_blank">个人资料</a>
+		<a href="http://passport.baidu.com/?logout&amp;aid=7&amp;u=http%3A//zhidao.baidu.com" id="log_out">退出</a>	
+	</div>
+</div>
+
+<div id="nav-extra" onmouseover="this.style.display='block'" onMouseOut="this.style.display='none'">
+	<div class="g-body">
+		<a href="/q?ct=24&cm=16&tn=ucframework#ask" target="_blank" id="status-my-ask">我的提问</a>
+		<a href="/q?ct=24&cm=16&tn=ucframework#answer" target="_blank" id="status-my-answer">我的回答</a>
+		<a href="http://zhidao.baidu.com/q?ct=24&cm=16&tn=ucframework#push" target="_blank" id="status-my-push">为我推荐的提问</a>
+	</div>
+</div>
+
+
+</div>
+<script type="text/javascript">
+function reg_rericd()
+{ 
+	window.open("/html/user_reg.html?oldurl="+window.location.href);
+}
+</script>
+
+            <div id="page" class="container-33">
+                <div id="header">
+                    <div class="top-search-box">
+	<a class="logo" href="/"><img src="http://img.baidu.com/img/logo-zhidao.gif" alt="百度知道" width="137" height="46" /></a>
+    
+	<ul class="channel">
+        <li><a onclick="nslog(this.href, 2012, {sc_pos: 'c_news'});iknow.channelChange(this);" href="http://news.baidu.com/">新闻</a></li>
+        <li><a onclick="nslog(this.href, 2012, {sc_pos: 'c_baidu'});iknow.channelChange(this);" href="http://www.baidu.com/">网页</a></li>
+        <li><a onclick="nslog(this.href, 2012, {sc_pos: 'c_tieba'});iknow.channelChange(this);" href="http://tieba.baidu.com/">贴吧</a></li>
+        <li><strong>知道</strong></li>
+        <li><a onclick="nslog(this.href, 2012, {sc_pos: 'c_mp3'});iknow.channelChange(this);" href="http://mp3.baidu.com/">MP3</a></li>
+        <li><a onclick="nslog(this.href, 2012, {sc_pos: 'c_pic'});iknow.channelChange(this);" href="http://image.baidu.com/">图片</a></li>
+        <li><a onclick="nslog(this.href, 2012, {sc_pos: 'c_video'});iknow.channelChange(this);" href="http://video.baidu.com/">视频</a></li>
+        <li><a onclick="nslog(this.href, 2012, {sc_pos: 'c_map'});iknow.channelChange(this);" href="http://map.baidu.com/">地图</a></li>
+        <li><a onclick="nslog(this.href, 2012, {sc_pos: 'c_baike'});iknow.channelChange(this);" href="http://baike.baidu.com/">百科</a></li>
+        <li><a onclick="nslog(this.href, 2012, {sc_pos: 'c_doc'});iknow.channelChange(this);" href="http://wenku.baidu.com/">文库</a></li>
+	</ul>
+	<form action="/q" name="top-search-form" method="get" id="top-search-form">
+	<div class="box" style="position:relative;width:650px">
+        <span class="top-search-box-bg"></span>
+		<input class="hdi" id="kw" maxlength="256" tabindex="1" size="46" name="word" />
+		<a href="http://www.baidu.com/search/zhidao_help.html" target="_blank">帮助</a>
+        <span class="pipe">|</span>
+		<a href="#" id="sug-set">设置</a>
+	</div>
+	<div class="btns" style="width:650px">
+		<input type="hidden" name="ct" value="17" />
+		<input type="hidden" name="pn" value="0" />
+		<input type="hidden" name="tn" value="ikaslist" />
+		<input type="hidden" name="rn" value="10" />
+		<input type="hidden" name="lm" value="0" autocomplete="off" />
+		<input type="hidden" name="fr" value="search" autocomplete="off" />
+		<span class="btn-wrap"><input type="submit" id="top-search-btn" hidefocus="true" onmouseover="this.className='btn-global btn-hover';" onmouseout="this.className='btn-global';" onmousedown="this.className='btn-global btn-active'" tabindex="2" value="搜索答案" class="btn-global" /></span>
+		<span class="btn-wrap"><input type="button" id="top-ask-btn" hidefocus="true" onmouseover="this.className='btn-global btn-hover';" onmouseout="this.className='btn-global';" onmousedown="this.className='btn-global btn-active'" tabindex="3" value="我要提问" class="btn-global" /></span>
+		<span class="btn-wrap"><input type="button" id="top-answer-btn" hidefocus="true" onmouseover="this.className='btn-global btn-hover';" onmouseout="this.className='btn-global';" onmousedown="this.className='btn-global btn-active'" tabindex="4" value="我要回答" class="btn-global" /></span>
+	</div>
+	</form>
+
+	<form name="top-ask-form" action="/q" method="get" id="top-ask-form">
+		<input type="hidden" name="ct" value="17" />
+		<input type="hidden" name="pn" value="0" />
+		<input type="hidden" name="tn" value="ikask" />
+		<input type="hidden" name="rn" value="10" />
+		<input type="hidden" name="word" value="" />
+		<input type="hidden" name="cm" value="1" />
+		<input type="hidden" name="lm" value="394496" />
+        <input type="hidden" name="cidV" value="870" />
+	</form>
+    <div class="invisible-clear"></div>
+</div>
+                    
+    
+        <div class="top-ad" style="margin-bottom:10px;text-align:left;width:100%;"> <script>if(!g_f_js){var g_f_js=true;document.write('<script src=http://eiv.baidu.com/other/ff.js><\/scr'+'ipt>');}</script>
+
+<script src="http://eiv.baidu.com/mapm2/fhnTag/fhHYTagNew.js"></script><script>if (typeof(cf_h)=="function") {cf_h("http://drmcmm.baidu.com/media/id=PWnzPHbsnHT&gp=402&time=nHn1PWbLnHczn0.swf","760","90","http://www.baidu.com/adrc.php?t=00KZ00000fAR0fT0ACmM07-gHfK3GnP500000000000_0f00jhztIO.THdJmgu91Sa4v0K85y-oUhqL0ZnqPHRvuWKWuARdnhfvnARvm6Kd5HwKPWnYwRnLPWn1fbfdnjb4rj7KwH01nYckPjRswjwa0ADquZCsU77luvkwphI_RyGPU77JiydWXW0kH-wpURdZHhVpN7N4ybwuIdGRyh-2UH7JmNIwrR4Jm1Frp--lHMGMUyPciMupwvkoR7wNUN-RnZ9mXb7VuDTsrRG8NMwfRdGvmvdorR4jyMGbNYGvmvdorRG8fM-9NjKlihdApvn1ihGfNDD-nYf0uHdCIZwsrBtEmvkGmv_8UyNbpy7vQhPEUiqW5Lw4TARqnBubmWdVuywGmgmhTZNB5Hc4g1fknWNxn1DkP16hmLN15HcsnWRLg1DknjmYPNtknjDdPj6Yg1Dsnjckn1m3g1Dsnjckn1m3nj0sFMNzUjdCIZwsrBtEmz49uAd9TLw-TB4WUvY8mv3Emzq9nH01njT_mWcsnj0zrH03PzkWnHnYPikGnakVnH0kQA60mLFW5Hf1njn4","0","ec_hytag");}</script>
+ </div>
+    
+
+                    
+                </div>
+				<script type="text/javascript">if(typeof PDC != 'undefined'){PDC.view_start();}</script>
+                 
+    <script type="text/javascript">
+(function (argument) {
+        if (ik.qb.data) {
+            ik.qb.data.add('page','imgCount','0');
+            ik.qb.data.add('page','hasAspAd','1');
+            ik.qb.data.add('user','uploadImg','1');
+            ik.qb.data.add('user','uploadMap','1');
+            ik.qb.data.add('user','msgNum','0');
+            ik.qb.data.add('user','uploadImgUserLevel','二');
+            ik.qb.data.add('user','isAuthUser','0');
+            ik.qb.data.add('user','authInfo','');
+            var c = [];
+            
+                c.push({
+                        cid : 870,
+                        cname : 'JAVA相关'
+                    });
+            
+                c.push({
+                        cid : 1073,
+                        cname : '程序设计'
+                    });
+            
+                c.push({
+                        cid : 74,
+                        cname : '电脑/网络'
+                    });
+            
+            ik.qb.data.add('page','cidArr',c);
+            ik.qb.data.add('page','isLinger','0');
+            // 开放问题状态实验
+            ik.qb.data.add('page','replyTotal','6');
+            ik.qb.data.add('page','hasRecommend','0');
+            // 聚簇页面实验
+            ik.qb.data.add('page','isGather', '0');
+            // 是否浏览入口
+            ik.qb.data.add('page','isView','1');
+            ik.qb.data.add('page','isAdopted','1');
+            // 是否被回答锁定
+            ik.qb.data.add('page','isQuestionLocked','0');
+            ik.qb.data.add('page','isReplyLocked','0');
+        }
+})();
+</script>
+<div id="body" class="body">
+    <div class="bread">
+        <a href="/">百度知道</a> &gt; <a href="/browse/74?lm=2">电脑/网络</a> &gt; <a href="/browse/1073?lm=2">程序设计</a> &gt; <a href="/browse/870?lm=2">JAVA相关</a>
+    </div>
+    <div class="l-grid-2 mb10">
+        <div class="l-main-col">
+            <div class="l-main-wrap span-23">
+
+<!--qbox start-->
+<div class="box-gr-top mb10 qbox" id="question-box">
+    <div class="header"></div>
+    <div class="body">
+        <div class="title clf">
+            <div class="question">
+                <h1 id="question-title">
+                
+                    
+                    <span class="icon i-being"></span><span class="question-title">ajax 提交到后台 servlet ，获得一个userList集合，转成json格式返回jsp，怎样将数据显示到指定的div中</span>
+                    
+                
+                </h1>
+                <div class="details">
+                    <div class="float-r">
+                        
+                        <span style="visibility:hidden" class="accuse-link"><a href="#" log="panel.accuse.click" onclick="ik.qb.accuse(0,356573980);return false;">检举</a></span>
+                        <span style="visibility:hidden" class="v-split">|</span>
+                        
+                        <span class="gray">2011-12-19 23:43</span>
+                    </div>
+                    <span class="gray">
+
+提问者：
+    
+    <a log="qbox.asker.username" href="http://passport.baidu.com/?business&aid=6&un=%D0%F1%C8%D5%B8%E7#2" target="_blank" uid="51b2d0f1c8d5b8e7b007" uname="旭日哥" class="user-name">旭日哥</a>
+    
+<script type="text/javascript">
+    ik.qb.data.add('user','51b2d0f1c8d5b8e7b007','http://img.baidu.com/img/iknow/avarta/66/r6s1g4.gif');
+</script>
+
+
+
+</span>
+                    
+					
+                </div>
+            </div>
+        </div>
+        
+            <div class="content mt10">
+                <pre id="question-content">alert(xmlHttp.responseText)的数据是 [{"id":1,"name":"刘备","password":"liubei"},{"id":2,"name":"关羽","password":"guanyu"},{"id":3,"name":"张飞","password":"zhangfei"}]
+
+不会用jquery能有其他办法吗？</pre>
+           </div>
+        
+        
+        
+        
+        
+        <div class="box editor">
+            <span class="open-answer-bar">我来帮他解答</span>
+            <div class="clf" id="answer-editor"></div>
+        </div>
+        <script type="text/javascript">
+            // 初始化回答输入框
+            ik.qb.answer.init();
+        </script>
+        
+        
+    </div>
+    <div class="question-data">
+        <input type="hidden" name="askerId" value="129020497" />
+        <input type="hidden" name="askerName" value="旭日哥" />
+        <input type="hidden" name="askerNameEncode" value="%D0%F1%C8%D5%B8%E7" />
+        <input type="hidden" name="qTitle" value="ajax 提交到后台 servlet ，获得一个userList集合，转成json格式返回jsp，怎样将数据显示到指定的div中" />
+        <input type="hidden" name="isAskerLogin" value="0" />
+        <input type="hidden" name="giveScore" value="10" />
+        <input type="hidden" name="pid" value="" />
+    </div>
+</div>
+<script type="text/javascript">
+ik.qb.data.add('page','fromWap','0');
+</script>
+
+<!--qbox end-->
+    
+    <div class="box-pink mb10 best-answer-panel" id="best-answer-panel">
+        <div class="header">
+            <div class="time details float-r" >
+                
+                <span style="visibility:hidden" class="accuse-link"><a href="#" log="panel.accuse.click" onclick="ik.qb.accuse(1,900649515);return false;">检举</a></span>
+                <span style="visibility:hidden" class="v-split">|</span>
+                
+                <span>2011-12-20 08:56</span>
+            </div>
+            
+                
+                <span class="answer-type optimal"></span>
+                
+                <span class="best-answer-title ml10 bold">满意回答</span>
+            
+        </div>
+        <div class="body">
+            
+            <div class="content">
+                <pre id="best-answer-content" class="reply-text mb10">var userlist=eval("("+xmlHttp.responseText+")");
+for (var i=0;i&lt;userlist.length;i++){
+ var user=  userlist[i];
+var str=user.id+"--"+user.name+"--"+user.password;
+ document.getElementById("divid").innerHTML=str;
+}</pre>
+                
+                
+
+
+                
+                
+                
+                <div class="details float-r">
+<div class="value-block  " >
+    <div class="value-block-inner">
+        <div class="value-tip" style="display:none">赞同</div>
+        <div class="value-num value-num-fixed">0</div>
+    </div>
+</div>
+<span class="v-split" style="vertical-align:-1px;*vertical-align:baseline;*line-height:26px">|</span>
+<span class="comment-link" id="comment-link-900649515" style="vertical-align:-1px;*zoom:1;*vertical-align:baseline;*line-height:26px">评论</span>
+                </div>
+                
+				
+                
+             </div>
+            <div class="clear"></div>
+
+
+
+
+
+<div class="best-replyer">
+    <div class="avarta">
+        <div class="img">
+            <a log="bestreplyer.userhead.click" href="http://passport.baidu.com/?business&aid=6&un=wangpossible#2" target="_blank">    <img uid="196e77616e67706f737369626c653f15"  uname="wangpossible" class="user-head-img" src="http://img.baidu.com/img/iknow/avarta/48/r6s1g2.gif" width="48" height="48"/>
+</a><script type="text/javascript">
+    ik.qb.data.add('user','196e77616e67706f737369626c653f15','http://img.baidu.com/img/iknow/avarta/66/r6s1g2.gif');
+</script>
+        </div>
+        <div class="ask-btn align-c">
+            <a log="bestreplyer.icon.askhelp" href="#" onclick="FixedAsk.init('wangpossible');return false" class="button b-askhelp">向TA求助</a>
+        </div>
+    </div>
+    <div class="carefield ml10">
+        <p>
+            
+            <span class="gray">回答者：</span>
+            
+
+   <!--切小流量到公共主页-->
+    
+    <a log="bestreplyer.username.click" href="http://passport.baidu.com/?business&aid=6&un=wangpossible#2" target="_blank" uid="196e77616e67706f737369626c653f15" uname="wangpossible" class="user-name">wangpossible</a>
+    
+
+<script type="text/javascript">
+    ik.qb.data.add('user','196e77616e67706f737369626c653f15','http://img.baidu.com/img/iknow/avarta/66/r6s1g2.gif');
+</script>
+
+            
+            
+            <span class="v-split">|</span>
+            <a log="bestreplyer.icon.grade" target="_blank" href="http://www.baidu.com/search/zhidao_help.html#如何选择头衔">二级</a><span class="ml10 gray">采纳率：66%</span>
+            
+            
+        </p>
+        <p>
+        <span class="gray">擅长领域：</span>
+        
+        
+            
+            <a log="bestreplyer.link.carefield" href="/browse/870" target="_blank">JAVA相关</a>
+            
+        
+        
+        </p>
+        <p>
+        <span class="gray">参加的活动：</span>
+        
+        
+        <span class="gray f12">暂时没有参加的活动</span>
+        </p>
+    </div>
+    <div class="clear"></div>
+</div>
+
+            
+            <div class="thank-info clear">
+                <p class="bold">提问者对回答的评价：</p>
+                <div id="thank-info"><pre>自己解决了，和你的办法一样</pre></div>
+            </div>
+            
+            <div class="reply-data" id="data-900649515">
+    <input type="hidden" name="id" value="900649515" />
+    <input type="hidden" name="userId" value="356478489" />
+    <input type="hidden" name="imUserId" value="196e77616e67706f737369626c653f15" />
+    <input type="hidden" name="userName" value="wangpossible" />
+    <input type="hidden" name="userNameEncode" value="wangpossible" />
+    <input type="hidden" name="isUnloginReply" value="0" />
+    <input type="hidden" name="isAnonymousReply" value="0" />
+    <input type="hidden" name="mapUrl" value="" />
+    <input type="hidden" name="refer" value="" />
+    <input type="hidden" name="pid" value="" />
+    <input type="hidden" name="replyasknum" value="0" />
+    <input type="hidden" name="threadId" value="3602598061" />
+    <input type="hidden" name="isReplyCommented" value="0" />
+    <input type="hidden" name="currentqid" value="356573980" />
+</div>
+        </div>
+    </div>
+    <script>
+        ik.qb.data.add('extra','bestAnswerIsGood','0');
+        ik.qb.data.add('user','isBestAnswerUser','0');
+    </script>
+    
+    
+
+    
+    
+	<!-- relative-panel -->
+
+<div class="box-gray mb10 relative-panel" id="relative-panel">
+	<div class="header">
+        <span class="icon i-relatedanswer"><strong class="relative-panel-title">相关内容</strong></span>
+    </div>
+    <div class="body">
+        <ul class="mb10">
+            
+            <li>
+               <span class="details">2012-3-14</span>
+                
+                <a log="relative.title.click" href="/question/389911491.html" onclick="log.send(this.href,2033,{fr:'qrl',cid:'870',index:1})" target="_blank">怎么将从servlet拿到的list集合用json数据显示到jsp页面！</a>
+                
+                
+                <img src="http://img.baidu.com/img/iknow/ico_img.gif" align="absmiddle" alt="该问题包含图片" title="该问题包含图片">
+                
+                
+            </li>
+            
+            <li>
+               <span class="details">2011-1-5</span>
+                
+                <a log="relative.title.click" href="/question/210795927.html" onclick="log.send(this.href,2033,{fr:'qrl',cid:'870',index:2})" target="_blank">急！！！！！ Ext发送的Ajax在前台怎么接受后台传来的JSON对象（Li...</a>
+                
+                
+                
+                <span class="mid">
+                    <span title="回答获得2个赞同" class="icon i-thanks red">2</span>
+                </span>
+                
+            </li>
+            
+            <li>
+               <span class="details">2011-3-20</span>
+                
+                <a log="relative.title.click" href="/question/239605101.html" onclick="log.send(this.href,2033,{fr:'qrl',cid:'870',index:3})" target="_blank">想把后台aList集合的数据通过ajax的回调函数写到div或者table中 怎...</a>
+                
+                
+                
+            </li>
+            
+            <li>
+               <span class="details">2011-5-19</span>
+                
+                <a log="relative.title.click" href="/question/265152892.html" onclick="log.send(this.href,2033,{fr:'qrl',cid:'870',index:4})" target="_blank">servlet+ajax+jquery+json问题</a>
+                
+                
+                <img src="http://img.baidu.com/img/iknow/ico_img.gif" align="absmiddle" alt="该问题包含图片" title="该问题包含图片">
+                
+                
+            </li>
+            
+            <li>
+               <span class="details">2011-11-28</span>
+                
+                <a log="relative.title.click" href="/question/339674131.html" onclick="log.send(this.href,2033,{fr:'qrl',cid:'870',index:5})" target="_blank">这是JSON格式吗？请问怎么在jsp上显示，用的是AJAX，struts1.3</a>
+                
+                
+                
+                <span class="mid">
+                    <span title="回答获得3个赞同" class="icon i-thanks red">3</span>
+                </span>
+                
+            </li>
+            
+        </ul>
+        
+            
+        
+		
+    </div>
+</div>
+<style type="text/css">
+.i-exp-suc{background:url("http://img.baidu.com/img/iknow/qb/exp_suc.gif") no-repeat scroll 0 0 transparent;display:inline-block;height:14px;line-height:14px;padding-left:20px;vertical-align:middle;}#exp-word{font-size:12px;color:#666;font-family:tahoma;margin-left:5px;}.exp-mid{text-align:left;width:60px;margin-left:16px;font-size:12px;}
+</style>
+<script type="text/javascript">var exp={nslog:function(B,D,A){var C=(new Date()).getTime();var E=["http://nsclick.baidu.com/v.gif?pid=180","url="+encodeURIComponent(B),"type="+D,"t="+C];for(k in A){E.push(k+"="+A[k])}log.imageReq(E.join("&"))},getRelateExp:function(I){var A=G("relative-panel");var E=baidu.dom.query(".body ul",A)[0];if(I.length==0){exp.nslog(location.href,2000,{fr:"ikqb",page:"shownojy"});var D=E.getElementsByTagName("a");baidu.each(D,function(M,L){baidu.on(M,"click",function(O){var N=baidu.url.getQueryValue(this.href,"index");exp.nslog(this.href,2000,{fr:"ikqb",pos:"relative_title_no_exp",si:N})})});return }if(typeof (I[0].eidEnc)=="string"){I=I[0];var J=baidu.dom.children(E);if(J.length==5){baidu.dom.remove(J[4]);J=baidu.dom.children(E)}var F=J[0];var B=baidu.dom.create("li");exp.nslog(location.href,2000,{fr:"ikqb",page:"showjy"});var D=A.getElementsByTagName("a");baidu.each(D,function(M,L){switch(baidu.getAttr(M,"log")){case"relative.title.click":baidu.on(M,"click",function(O){var N=baidu.url.getQueryValue(this.href,"index");exp.nslog(this.href,2000,{fr:"ikqb",pos:"relative_title",si:N})});break;case"relative.more.click":baidu.on(M,"click",function(N){exp.nslog(this.href,2000,{fr:"ikqb",pos:"relative_more"})});break;case"relative.taglist.click":baidu.on(M,"click",function(N){exp.nslog(this.href,2000,{fr:"ikqb",pos:"relative_taglist"})});break}});var C=new Date(I.releaseTime*1000);var K=C.getFullYear()+"-";K+=(C.getMonth()+1)+"-";K+=C.getDate();var H=new Array();H.push('<span class="details">'+K+"</span>");H.push('<a target="_blank" onclick="exp.nslog(this.href, 2000, { fr:\'ikqb\', pos:\'exp_title\' })" href="http://jingyan.baidu.com/article/'+I.eidEnc+'.html">'+I.title+"</a>");H.push('<a target="_blank" onclick="exp.nslog(this.href, 2000, { fr:\'ikqb\', pos:\'exp\' })" href="http://jingyan.baidu.com" id="exp-word">[百度经验]</a>');if(I.succNum>0){H.push('<span class="exp-mid"><span class="red i-exp-suc" title="已成功人数">'+I.succNum+"</span></span>")}B.innerHTML=H.join("");baidu.dom.insertBefore(B,F)}}};function getRelateExp(A){exp.getRelateExp(A)}(function(){var D=baidu.G("question-title").textContent||baidu.G("question-title").innerText||"";var C=baidu.trim(D.replace(new RegExp("\n","g"),"").replace(new RegExp("\t","g"),""));var A=/(怎样|如何|窍门|^怎么样|方法|做法|怎么办)/;var B=String(C).replace(/[^\x00-\xff]/g,"ci").length;if(A.test(C)&&B>=8&&B<=40){baidu.sio.callByServer("http://jingyan.baidu.com/asyncreq?method=getRelateExp&query="+encodeURIComponent(C)+"&utf=1&rn=1&fr=ikqb",{charset:"gb2312"})}})();(function(){var D="3";var E=baidu.g("relative-panel");var C=baidu.dom.query(".body ul li a",E);var B=baidu.dom.query(".relative-more a",E);var A=baidu.dom.query(".relative-tag a",E);baidu.each(C,function(F){baidu.on(F,"click",function(){log.send(location.href,ik.qb.logKey,{area:"related",pos:"relatedlinks",action:"click",test:D})})});baidu.each(B,function(F){baidu.on(F,"click",function(){log.send(location.href,ik.qb.logKey,{area:"related",pos:"relatedmore",action:"click",test:D})})});baidu.each(A,function(F){baidu.on(F,"click",function(){log.send(location.href,ik.qb.logKey,{area:"related",pos:"relatedtag",action:"click",test:D})})})})();</script>
+
+<!-- //relative-panel -->
+	
+    
+    
+    
+    <div class="box-gray mb10 ans-panel" id="reply-panel">
+        <div class="header clf">
+            <span class="icon i-otheranswer ans-panel-title"><strong>其他回答</strong></span>
+            <span class="details">共6条</span>
+        </div>
+        
+<!--entry-->
+<div class="entry clf" id="reply-box-900641713">
+    <div class="entry-bg ">
+    
+    <div class="details clf">
+        <span class="float-r">
+            
+                <span style="visibility:hidden" class="accuse-link"><a href="#" log="panel.accuse.click" onclick="ik.qb.accuse(1,900641713);return false;">检举</a></span>
+                <span style="visibility:hidden" class="v-split">|</span>
+            
+            2011-12-20 08:38
+        </span>
+        
+        
+    
+        
+
+   <!--切小流量到公共主页-->
+    
+    <a log="replyer.username.click" href="http://passport.baidu.com/?business&aid=6&un=jeffsui#2" target="_blank" uid="76c26a6566667375693307" uname="jeffsui" class="user-name">jeffsui</a>
+    
+
+<script type="text/javascript">
+    ik.qb.data.add('user','76c26a6566667375693307','http://img.baidu.com/img/iknow/avarta/66/r6s1g6.gif');
+</script>
+
+        
+    
+    
+
+
+
+
+
+
+
+<span class="v-split">|</span>
+六级
+
+    </div>
+    <div class="content">
+        <pre class="reply-text mb10" id="content-900641713">解析json对象
+var list=eval('(+jsonStr+)');
+然后转成js的对象数组。 </pre>
+        
+        
+
+
+        
+        
+        
+            <div class="details float-r">
+<div class="value-block  " >
+    <div class="value-block-inner">
+        <div class="value-tip" style="display:none">赞同</div>
+        <div class="value-num value-num-fixed">0</div>
+    </div>
+</div>
+<span class="v-split" style="vertical-align:-1px;*vertical-align:baseline;*line-height:26px">|</span>
+<span class="comment-link" id="comment-link-900641713" style="vertical-align:-1px;*zoom:1;*vertical-align:baseline;*line-height:26px">评论</span>
+            </div>
+        
+        
+        
+        
+            
+                
+                
+            
+    </div>
+    <div class="reply-data" id="data-900641713">
+    <input type="hidden" name="id" value="900641713" />
+    <input type="hidden" name="userId" value="120832630" />
+    <input type="hidden" name="imUserId" value="76c26a6566667375693307" />
+    <input type="hidden" name="userName" value="jeffsui" />
+    <input type="hidden" name="userNameEncode" value="jeffsui" />
+    <input type="hidden" name="isUnloginReply" value="0" />
+    <input type="hidden" name="isAnonymousReply" value="0" />
+    <input type="hidden" name="mapUrl" value="" />
+    <input type="hidden" name="refer" value="" />
+    <input type="hidden" name="pid" value="" />
+    <input type="hidden" name="replyasknum" value="0" />
+    <input type="hidden" name="threadId" value="3602566853" />
+    <input type="hidden" name="isReplyCommented" value="0" />
+    <input type="hidden" name="currentqid" value="356573980" />
+</div>
+    </div> <!-- 对应entry-bg -->
+</div>
+<!--entry-->
+
+<!--entry-->
+<div class="entry clf" id="reply-box-900660698">
+    <div class="entry-bg ">
+    
+    <div class="details clf">
+        <span class="float-r">
+            
+                <span style="visibility:hidden" class="accuse-link"><a href="#" log="panel.accuse.click" onclick="ik.qb.accuse(1,900660698);return false;">检举</a></span>
+                <span style="visibility:hidden" class="v-split">|</span>
+            
+            2011-12-20 09:16
+        </span>
+        
+        
+    
+        
+
+   <!--切小流量到公共主页-->
+    
+    <a log="replyer.username.click" href="http://passport.baidu.com/?business&aid=6&un=jyuanqi#2" target="_blank" uid="4ea26a7975616e71691507" uname="jyuanqi" class="user-name">jyuanqi</a>
+    
+
+<script type="text/javascript">
+    ik.qb.data.add('user','4ea26a7975616e71691507','http://img.baidu.com/img/iknow/avarta/66/r6s1g2.gif');
+</script>
+
+        
+    
+    
+
+
+
+
+
+
+
+<span class="v-split">|</span>
+二级
+
+    </div>
+    <div class="content">
+        <pre class="reply-text mb10" id="content-900660698">对返回的json解析，将得到的值用js的innerHTML写入到指定位置；
+demo：
+xmlHttp.get("password").toString()  得到password的值
+document.getElementById('写入层的id').innerHTML='xmlHttp.get("password").toString() '; </pre>
+        
+        
+
+
+        
+        
+        
+            <div class="details float-r">
+<div class="value-block  " >
+    <div class="value-block-inner">
+        <div class="value-tip" style="display:none">赞同</div>
+        <div class="value-num value-num-fixed">0</div>
+    </div>
+</div>
+<span class="v-split" style="vertical-align:-1px;*vertical-align:baseline;*line-height:26px">|</span>
+<span class="comment-link" id="comment-link-900660698" style="vertical-align:-1px;*zoom:1;*vertical-align:baseline;*line-height:26px">评论</span>
+            </div>
+        
+        
+        
+        
+            
+                
+                
+            
+    </div>
+    <div class="reply-data" id="data-900660698">
+    <input type="hidden" name="id" value="900660698" />
+    <input type="hidden" name="userId" value="118858318" />
+    <input type="hidden" name="imUserId" value="4ea26a7975616e71691507" />
+    <input type="hidden" name="userName" value="jyuanqi" />
+    <input type="hidden" name="userNameEncode" value="jyuanqi" />
+    <input type="hidden" name="isUnloginReply" value="0" />
+    <input type="hidden" name="isAnonymousReply" value="0" />
+    <input type="hidden" name="mapUrl" value="" />
+    <input type="hidden" name="refer" value="" />
+    <input type="hidden" name="pid" value="" />
+    <input type="hidden" name="replyasknum" value="0" />
+    <input type="hidden" name="threadId" value="3602642793" />
+    <input type="hidden" name="isReplyCommented" value="0" />
+    <input type="hidden" name="currentqid" value="356573980" />
+</div>
+    </div> <!-- 对应entry-bg -->
+</div>
+<!--entry-->
+
+<!--entry-->
+<div class="entry clf" id="reply-box-900674202">
+    <div class="entry-bg ">
+    
+    <div class="details clf">
+        <span class="float-r">
+            
+                <span style="visibility:hidden" class="accuse-link"><a href="#" log="panel.accuse.click" onclick="ik.qb.accuse(1,900674202);return false;">检举</a></span>
+                <span style="visibility:hidden" class="v-split">|</span>
+            
+            2011-12-20 09:36
+        </span>
+        
+        
+    
+        
+
+   <!--切小流量到公共主页-->
+    
+    <a log="replyer.username.click" href="http://passport.baidu.com/?business&aid=6&un=coolworld2009#2" target="_blank" uid="8307636f6f6c776f726c64323030394308" uname="coolworld2009" class="user-name">coolworld2009</a>
+    
+
+<script type="text/javascript">
+    ik.qb.data.add('user','8307636f6f6c776f726c64323030394308','http://img.baidu.com/img/iknow/avarta/66/r6s1g3.gif');
+</script>
+
+        
+    
+    
+
+
+
+
+
+
+
+<span class="v-split">|</span>
+三级
+
+    </div>
+    <div class="content">
+        <pre class="reply-text mb10" id="content-900674202">在javascript中，带中括号的表示数组，带大括号的表示对象，对象里的属性及其值的表示方法为“属性名”：“属性值”，多属性间用逗号分隔。
+    所以根据上面的分析可以得知，你的xmlHttp.responseText返回的数据是一个对象数组。但它是一个字符串，你需要经过转换把它表示成一个数组。如果不用jquery等第三方框架所提供的转换方法，最常用的就是用javascript的eval方法。具体做法如下：
+    var resultStr = xmlHttp.responseText;
+       var resultData =  eval("("+resultStr+")");
+       这样，resultData变量就是一个对象数组，就可以利用javascript访问数组的方法来访问数组里的数据了。比如。resultData[1].name的值就是“关羽”，注意，数据下标从0开始。 </pre>
+        
+        
+
+
+        
+        
+        
+            <div class="details float-r">
+<div class="value-block  " >
+    <div class="value-block-inner">
+        <div class="value-tip" style="display:none">赞同</div>
+        <div class="value-num value-num-fixed">0</div>
+    </div>
+</div>
+<span class="v-split" style="vertical-align:-1px;*vertical-align:baseline;*line-height:26px">|</span>
+<span class="comment-link" id="comment-link-900674202" style="vertical-align:-1px;*zoom:1;*vertical-align:baseline;*line-height:26px">评论</span>
+            </div>
+        
+        
+        
+        
+            
+                
+                
+            
+    </div>
+    <div class="reply-data" id="data-900674202">
+    <input type="hidden" name="id" value="900674202" />
+    <input type="hidden" name="userId" value="138610563" />
+    <input type="hidden" name="imUserId" value="8307636f6f6c776f726c64323030394308" />
+    <input type="hidden" name="userName" value="coolworld2009" />
+    <input type="hidden" name="userNameEncode" value="coolworld2009" />
+    <input type="hidden" name="isUnloginReply" value="0" />
+    <input type="hidden" name="isAnonymousReply" value="0" />
+    <input type="hidden" name="mapUrl" value="" />
+    <input type="hidden" name="refer" value="" />
+    <input type="hidden" name="pid" value="" />
+    <input type="hidden" name="replyasknum" value="0" />
+    <input type="hidden" name="threadId" value="3602696809" />
+    <input type="hidden" name="isReplyCommented" value="0" />
+    <input type="hidden" name="currentqid" value="356573980" />
+</div>
+    </div> <!-- 对应entry-bg -->
+</div>
+<!--entry-->
+
+<!--entry-->
+<div class="entry clf" id="reply-box-901822939">
+    <div class="entry-bg ">
+    
+    <div class="details clf">
+        <span class="float-r">
+            
+                <span style="visibility:hidden" class="accuse-link"><a href="#" log="panel.accuse.click" onclick="ik.qb.accuse(1,901822939);return false;">检举</a></span>
+                <span style="visibility:hidden" class="v-split">|</span>
+            
+            2011-12-21 17:26
+        </span>
+        
+        
+    
+        
+
+   <!--切小流量到公共主页-->
+    
+    <a log="replyer.username.click" href="http://passport.baidu.com/?business&aid=6&un=zxq778810#2" target="_blank" uid="44877a78713737383831307c0b" uname="zxq778810" class="user-name">zxq778810</a>
+    
+
+<script type="text/javascript">
+    ik.qb.data.add('user','44877a78713737383831307c0b','http://img.baidu.com/img/iknow/avarta/66/r6s1g2.gif');
+</script>
+
+        
+    
+    
+
+
+
+
+
+
+
+<span class="v-split">|</span>
+二级
+
+    </div>
+    <div class="content">
+        <pre class="reply-text mb10" id="content-901822939">json_str.each(function(item, index) {
+		if (item.parentCode == "....") {//parentCode为属性名
+						//doing
+					}
+				}); </pre>
+        
+        
+
+
+        
+        
+        
+            <div class="details float-r">
+<div class="value-block  " >
+    <div class="value-block-inner">
+        <div class="value-tip" style="display:none">赞同</div>
+        <div class="value-num value-num-fixed">0</div>
+    </div>
+</div>
+<span class="v-split" style="vertical-align:-1px;*vertical-align:baseline;*line-height:26px">|</span>
+<span class="comment-link" id="comment-link-901822939" style="vertical-align:-1px;*zoom:1;*vertical-align:baseline;*line-height:26px">评论</span>
+            </div>
+        
+        
+        
+        
+            
+                
+                
+            
+    </div>
+    <div class="reply-data" id="data-901822939">
+    <input type="hidden" name="id" value="901822939" />
+    <input type="hidden" name="userId" value="192710468" />
+    <input type="hidden" name="imUserId" value="44877a78713737383831307c0b" />
+    <input type="hidden" name="userName" value="zxq778810" />
+    <input type="hidden" name="userNameEncode" value="zxq778810" />
+    <input type="hidden" name="isUnloginReply" value="0" />
+    <input type="hidden" name="isAnonymousReply" value="0" />
+    <input type="hidden" name="mapUrl" value="" />
+    <input type="hidden" name="refer" value="" />
+    <input type="hidden" name="pid" value="" />
+    <input type="hidden" name="replyasknum" value="0" />
+    <input type="hidden" name="threadId" value="3607291757" />
+    <input type="hidden" name="isReplyCommented" value="0" />
+    <input type="hidden" name="currentqid" value="356573980" />
+</div>
+    </div> <!-- 对应entry-bg -->
+</div>
+<!--entry-->
+
+<!--entry-->
+<div class="entry clf" id="reply-box-907386267">
+    <div class="entry-bg ">
+    
+    <div class="details clf">
+        <span class="float-r">
+            
+                <span style="visibility:hidden" class="accuse-link"><a href="#" log="panel.accuse.click" onclick="ik.qb.accuse(1,907386267);return false;">检举</a></span>
+                <span style="visibility:hidden" class="v-split">|</span>
+            
+            2011-12-29 16:50
+        </span>
+        
+        
+    
+        
+
+   <!--切小流量到公共主页-->
+    
+    <a log="replyer.username.click" href="http://passport.baidu.com/?business&aid=6&un=%B9%C2%B6%C0%C9%C1%BF%CD#2" target="_blank" uid="b26bb9c2b6c0c9c1bfcd7d00" uname="孤独闪客" class="user-name">孤独闪客</a>
+    
+
+<script type="text/javascript">
+    ik.qb.data.add('user','b26bb9c2b6c0c9c1bfcd7d00','http://img.baidu.com/img/iknow/avarta/66/r6s1g6.gif');
+</script>
+
+        
+    
+    
+
+
+
+
+
+
+
+<span class="v-split">|</span>
+六级
+
+    </div>
+    <div class="content">
+        <pre class="reply-text mb10" id="content-907386267">给div添加一个id属性 如：&lt;div id="ttt"&gt;&lt;/div&gt;
+document.getElementById("ttt").innerHTML= &lt;你获得的数据&gt;; </pre>
+        
+        
+
+
+        
+        
+        
+            <div class="details float-r">
+<div class="value-block  " >
+    <div class="value-block-inner">
+        <div class="value-tip" style="display:none">赞同</div>
+        <div class="value-num value-num-fixed">0</div>
+    </div>
+</div>
+<span class="v-split" style="vertical-align:-1px;*vertical-align:baseline;*line-height:26px">|</span>
+<span class="comment-link" id="comment-link-907386267" style="vertical-align:-1px;*zoom:1;*vertical-align:baseline;*line-height:26px">评论</span>
+            </div>
+        
+        
+        
+        
+            
+                
+                
+            
+    </div>
+    <div class="reply-data" id="data-907386267">
+    <input type="hidden" name="id" value="907386267" />
+    <input type="hidden" name="userId" value="8219570" />
+    <input type="hidden" name="imUserId" value="b26bb9c2b6c0c9c1bfcd7d00" />
+    <input type="hidden" name="userName" value="孤独闪客" />
+    <input type="hidden" name="userNameEncode" value="%B9%C2%B6%C0%C9%C1%BF%CD" />
+    <input type="hidden" name="isUnloginReply" value="0" />
+    <input type="hidden" name="isAnonymousReply" value="0" />
+    <input type="hidden" name="mapUrl" value="" />
+    <input type="hidden" name="refer" value="" />
+    <input type="hidden" name="pid" value="" />
+    <input type="hidden" name="replyasknum" value="0" />
+    <input type="hidden" name="threadId" value="3629545069" />
+    <input type="hidden" name="isReplyCommented" value="0" />
+    <input type="hidden" name="currentqid" value="356573980" />
+</div>
+    </div> <!-- 对应entry-bg -->
+</div>
+<!--entry-->
+
+<!--entry-->
+<div class="entry clf last" id="reply-box-910328621">
+    <div class="entry-bg ">
+    
+    <div class="details clf">
+        <span class="float-r">
+            
+                <span style="visibility:hidden" class="accuse-link"><a href="#" log="panel.accuse.click" onclick="ik.qb.accuse(1,910328621);return false;">检举</a></span>
+                <span style="visibility:hidden" class="v-split">|</span>
+            
+            2012-1-2 19:24
+        </span>
+        
+        
+    
+        
+
+   <!--切小流量到公共主页-->
+    
+    <a log="replyer.username.click" href="http://passport.baidu.com/?business&aid=6&un=%C4%E4%C3%FB%5F%C8%C8%D0%C4%CD%F8%D3%D1#2" target="_blank" uid="832dc4e4c3fb5fc8c8d0c4cdf8d3d1921b" uname="匿名_热心网友" class="user-name">匿名_热心网友</a>
+    
+
+<script type="text/javascript">
+    ik.qb.data.add('user','832dc4e4c3fb5fc8c8d0c4cdf8d3d1921b','http://img.baidu.com/img/iknow/avarta/66/r6s1g14.gif');
+</script>
+
+        
+    
+    
+
+
+
+
+
+
+
+<span class="v-split">|</span>
+十四级
+
+    </div>
+    <div class="content">
+        <pre class="reply-text mb10" id="content-910328621">JSP使用EL表达式即可得到request中的数据。
+如果在servlet中没有出错打印输出的数据都正常。
+JSP中取jMail就直接写 ${ jMail }  就取到了。
+
+但是你少了转发的过程，servlet中处理完后没有把请求传递给JSP页面就直接结束了。
+在处理完成 后面要加上转发或者跳转的语句。
+要传递参数就需要用转发：加上request.getRequestDispatcher("路径").forward(request,response);
+路径位置写要转发到的目标JSP的位置。 </pre>
+        
+        
+
+
+        
+        
+        
+            <div class="details float-r">
+<div class="value-block  " >
+    <div class="value-block-inner">
+        <div class="value-tip" style="display:none">赞同</div>
+        <div class="value-num value-num-fixed">0</div>
+    </div>
+</div>
+<span class="v-split" style="vertical-align:-1px;*vertical-align:baseline;*line-height:26px">|</span>
+<span class="comment-link" id="comment-link-910328621" style="vertical-align:-1px;*zoom:1;*vertical-align:baseline;*line-height:26px">评论</span>
+            </div>
+        
+        
+        
+        
+            
+                
+                
+            
+    </div>
+    <div class="reply-data" id="data-910328621">
+    <input type="hidden" name="id" value="910328621" />
+    <input type="hidden" name="userId" value="462564739" />
+    <input type="hidden" name="imUserId" value="832dc4e4c3fb5fc8c8d0c4cdf8d3d1921b" />
+    <input type="hidden" name="userName" value="匿名_热心网友" />
+    <input type="hidden" name="userNameEncode" value="%C4%E4%C3%FB%5F%C8%C8%D0%C4%CD%F8%D3%D1" />
+    <input type="hidden" name="isUnloginReply" value="0" />
+    <input type="hidden" name="isAnonymousReply" value="0" />
+    <input type="hidden" name="mapUrl" value="" />
+    <input type="hidden" name="refer" value="" />
+    <input type="hidden" name="pid" value="" />
+    <input type="hidden" name="replyasknum" value="0" />
+    <input type="hidden" name="threadId" value="3641314485" />
+    <input type="hidden" name="isReplyCommented" value="0" />
+    <input type="hidden" name="currentqid" value="356573980" />
+</div>
+    </div> <!-- 对应entry-bg -->
+</div>
+<!--entry-->
+
+        
+    </div>
+    
+    
+    
+    
+	<div class="box-gray mb10 push-panel" id="push-panel" style="display:none"></div>
+    
+    <div class="box-gray share-panel mb10" id="share-panel">
+    <div class="details" style="height:25px">
+    
+        <span class="share-to">分享到：</span>
+        <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+            <a class="bds_tieba"></a>
+            <a class="bds_tsina"></a>
+            <a class="bds_tqq"></a>
+            <a class="bds_qzone"></a>
+            <a class="bds_renren"></a>
+            <a class="bds_douban"></a>
+            <a class="bds_msn"></a>
+            <span class="bds_more"></span>
+        </div>
+    </div>
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=281447" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+        var link = "http://" + location.host + location.pathname;
+        var config = {
+            'text':'#你知道么# 刚刚看到一个很有意思的问题：'+ document.title.replace(/_百度知道$/,'') + '（分享自@百度知道）',
+            'url':link,
+            'pic':'http://img.baidu.com/img/logo-zhidao.gif'
+        };
+        baidu.dom.setAttr(baidu.g("bdshare"),"data",baidu.json.stringify(config));
+        var bds_config = {
+            'snsKey':{'tsina':'312479806','tqq':'4889d932e5e04299a774282957f4ff9f'},
+            'bdComment':' ',
+            'bdDes':' '
+        };
+        document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+    </script>
+    <a name="share-anchor" style="float:left;font-size:0;height:0;line-height:0;margin:0;padding:0" id="share-anchor">&nbsp;</a>
+</div>
+    
+
+    
+            </div>
+        </div>
+        <div class="l-aside span-10">
+                <div class="box-rod mb10 round-block-gray login-panel">
+    <div class="rod1"></div><div class="rod2"></div><div class="rod3"></div>
+    <div class="rod">
+<script type="text/javascript">var ikqbisbdtestcase = 0;</script>
+	 
+    <div id="user-kernel" class="user-kernel">
+        <div class="avarta"><a href="#" target="_blank"></a></div>
+        <ul>
+            <li class="user-operation">
+                <strong class="user-name"></strong>
+                <a id="grade-icon" style="margin-left:5px" target="_blank" href="http://www.baidu.com/search/zhidao_help.html#如何选择头衔"></a>
+            </li>
+            <li>
+                <a log="user.ask" href="/q?ct=24&cm=16&tn=ucframework#ask" target="_blank">我的提问</a>
+                <a log="user.answer" class="ml10" href="/q?ct=24&cm=16&tn=ucframework#answer" target="_blank">我的回答</a>
+                <a log="user.shop" class="ml10" href="/shop" target="_blank">积分商城</a>
+            </li>
+            
+			<li class="signInInfor">
+                
+				<a id="signInBtn" class="signInBefore" href="#" data-disabled="false" hidefocus="hidefocus">签到</a>
+				<span id="signInExperience">今天可获得<span>2</span>经验</span>
+                
+			</li>
+            
+        </ul>
+        
+		<div id="signInColumn">
+			<input type="button" id="showCalendar" class="retract" value="" data-status="1" hidefocus="hidefocus" />
+			<div style="clear:both;border-top:1px solid #e3e3e3;line-height:0;font-size:0;"></div>
+			<div id="signInContent" style="display:none;">
+				<div id="prevDiv"><a id="prevBtn" class="prevBtnEnabled" href="#" title="查看上一月" hidefocus="hidefocus"></a></div>
+				<div id="signInCalendar"></div>
+				<div id="nextDiv"><a id="nextBtn" class="nextBtnDisabled" href="#" title="查看下一月" hidefocus="hidefocus"></a></div>
+				<div id="signInfoot">连续签到奖励加倍，中断则从头开始</div>
+			</div>
+			<input type="hidden" id="signInDateArr" value="2012/5|&2012/4|26" />
+		</div>
+        
+        <div class="uc-enter-btn">
+            <a href="#" onclick="log.send(location.href,ik.qb.logKey,log.parse('user.ucenter.btnclick'));window.open('/q?ct=24&cm=16&tn=ucframework#myiknow')" class="operation"><span>进入个人中心</span></a>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+    ik.qb.user.init();
+    var _reglink = baidu.g("ik-reg-goto");
+	if(_reglink)
+	{
+		baidu.event.on(_reglink,"click",function(e){
+			window.open("/html/user_reg.html?qb=1&oldurl="+window.location.href);
+			baidu.event.preventDefault(e);
+		})
+	}
+    </script>
+    </div>
+    <div class="rod3"></div><div class="rod2"></div><div class="rod4"></div>
+</div>
+                
+                
+                <div id="qb-ad-cpro"><!--STATUS OK--><script>if(!g_f_js){var g_f_js=true;document.write('<script src=http://eiv.baidu.com/other/ff.js><\/scr'+'ipt>');}</script><table border=0 cellpadding=0 cellspacing=0><tr><td>
+
+<!-- m-start --><iframe width="270px" height="240px" frameborder="0" src="http://1000day.dumex.com.cn/apply3/public/html/3.html" style="overflow:hidden;" scrolling="no"></iframe><br><br><!-- m-end -->
+
+<!-- m-start --><iframe width="270px" height="240px" frameborder="0" src="http://eiv.baidu.com/mapm2/taibao/270/110725/index.html?par=http://www.baidu.com/adrc.php?t=000k00000fAT06T00JbM0rPgAsK3GnP50000000000abK600jhztIs.THdJmgu91Sa4v0K85yF9pywdpyV8ULIxmLKz0ZnqPHRvuWKWuARdnhfvnARvm6Kd5HwKPWnYwRnLPWn1fbfdnjb4rj7KwH01nYckPjRswjwa0ADquZCsU7DsRykipb-_RyVuU77lyydWXW0kH-wpURdZHhVpN7N4ybwuIdGRyh-2UH7JmNIwrR4JuLI5wD7lHNwMUyPciMupwvkoR7w7XDGVwH-PNW9Lih4iI7KRigI5N7NYHyG7IYdGyW7BNjKVmWP2T7KRRydWnduGmWP2T7KHyMIWUy_4Hg-pp7GcHM-uXWKL0ARqpZwYTjCEQLILIz4Bmy-bIi4WUvY0mLFW5HDsnHT4" style="overflow:hidden;" scrolling="no"></iframe><br><br><!-- m-end -->
+
+<div class="r">
+<div style="background:#EFF2FA;overflow:hidden;padding:0 3px;line-height:27px;height:28px;word-break:normal;">
+<a href="http://e.baidu.com/" target="_blank"><font>来百度推广</font><font color="#c60a00">JAVA相关</font></a>
+</div>
+</div><br></td></tr></table></div>
+                
+                <script type="text/javascript">
+(function(){
+        // 所有广告开关 true:打开，false:关闭
+        var switcher = true;
+        var status = ik.qb.data.get('page','status');
+        var cidArr = ik.qb.data.get('page','cidArr');
+        // 开放问题实验，新增判断，排除实验中的采纳问题
+        var isView = ik.qb.data.get('page','isView');
+
+        if (switcher && isView) {
+        //if (switcher && /closed|finish|overdue/.test(status) && (openExp != '1')) {
+            var data = [
+                {
+                    src : 'http://www.baidu.com/search/zhidao/tuiguang/lianai.jpg',
+                    url : 'http://zhidao.baidu.com/s/zhidaodata1.html?fr=QB',
+                    pos : 'down', // up表示在广告位置上方，down表示下方
+                    category : []
+                },{
+                    src : '',
+                    url : '',
+                    pos : 'down', 
+                    category : []
+                },{
+                    src : 'http://www.baidu.com/search/zhidao/2012english/270X170.jpg',
+                    url : 'http://zhidao.baidu.com/s/2012english.html',
+                    pos : 'down', 
+                    category : [84]
+                },{
+                    src : 'http://www.baidu.com/search/zhidao/2012english/270X170.jpg',
+                    url : 'http://zhidao.baidu.com/s/2012english.html',
+                    pos : 'down',
+                    category : [83]
+                },{
+                    src : 'http://img.baidu.com/img/iknow/qb/zhidao_app.jpg',
+                    url : 'http://zhidao.baidu.com/s/2011wapadv/index.html?fr=banner_one&tab=1',
+                    pos : 'down2', 
+                    category : []
+                },{
+                    src : 'http://jingyan.baidu.com/event/photo/sj270_150.jpg',
+                    url : 'http://jingyan.baidu.com/z/sjzg2012/index.html ',
+                    pos : 'down',
+                    category : [80]
+                },{
+                    src : 'http://jingyan.baidu.com/event/photo/sj270_150.jpg',
+                    url : 'http://jingyan.baidu.com/z/sjzg2012/index.html ',
+                    pos : 'down',
+                    category : [1031]
+                },{
+                    src : '',
+                    url : '',
+                    pos : 'down',
+                    category : []
+                }
+            ];
+
+            function init(d) {
+                for (var i=0; i<d.length; i++) {
+                    if (d[i].src != '') {
+                        if (d[i]['category'].length == 0 || checkCategory(d[i]['category'])) {
+                            build(d[i]);
+                        }
+                    }
+                }
+            }
+
+            // 检查广告需要存在的分类是否满足
+            function checkCategory(category) {
+                var result = false;
+                baidu.each(category, function(item){
+                        baidu.each(cidArr, function(c){
+                                if (item == c['cid']) {
+                                    result = true;
+                                }
+                            });
+                    });
+                return result;
+            }
+
+            // 生成内容部分
+            function build(data) {
+                var html = '<a href="' + data['url'] + '" target="_blank"><img src="' + data['src'] + '" /></a>';
+                if (baidu.g('ad-brand-'+data['pos'])) {
+                    baidu.g('ad-brand-'+data['pos']).innerHTML = html;
+                } else {
+                    var div = baidu.dom.create('div',{id:'ad-brand-'+data['pos'],className:'box-rod mb10 round-block-gray'});
+                    div.innerHTML = html;
+                    var mark = (data['pos'] == 'up')? baidu.dom.query('.l-aside .login-panel')[0] : baidu.g('qb-ad-cpro');
+                    if (data['pos'] == 'down2') {
+                        mark = baidu.g('ad-brand-down') || mark;
+                    }
+                    if(mark){
+                    baidu.dom.insertAfter(div, mark);
+                    }
+                }
+            }
+            
+           init(data);
+        }
+})();
+</script>
+<style type="text/css">
+.ad-fc-down { background: #fff; }
+</style>
+                <div class="box-rod round-block-gray freecode">
+    <div class="rod1"></div><div class="rod2"></div><div class="rod3"></div>
+    <div class="rod">
+<p class="border-bottom">使用<a target="_blank" href="http://im.baidu.com/?fr=iknow">百度Hi</a>可以第一时间收到“提问有新回答”“回答被采纳”“网友求助”的通知。<a target="_blank" href="http://im.baidu.com/promo/message.html?fr=iknow">查看详情</a></p>
+<p class="border-bottom">您想在自己的网站上展示百度“知道”上的问答吗？来<a target="_blank" href="/iknowcode.html">获取免费代码</a>吧！ </p>
+<p>投诉或举报，请到<a target="_blank" href="http://tousu.baidu.com/zhidao">百度知道投诉吧</a>反馈。<br />
+功能意见建议，请到<a target="_blank" href="http://tieba.baidu.com/f?kw=%D6%AA%B5%C0%D2%E2%BC%FB%C9%E7">知道意见社吧</a>反馈。</p>
+    </div>
+    <div class="rod3"></div><div class="rod2"></div><div class="rod4"></div>
+</div>
+        </div>
+    </div>
+</div>
+<img src="http://c.baidu.com/c.gif?t=2&q=ajax%20%CC%E1%BD%BB%B5%BD%BA%F3%CC%A8%20servlet%20%A3%AC%BB%F1%B5%C3%D2%BB%B8%F6userList%BC%AF%BA%CF%A3%AC%D7%AA%B3%C9json%B8%F1%CA%BD%B7%B5%BB%D8jsp%A3%AC%D4%F5%D1%F9%BD%AB%CA%FD%BE%DD%CF%D4%CA%BE%B5%BD%D6%B8%B6%A8%B5%C4div%D6%D0&c=JAVA%CF%E0%B9%D8&p=3&pn=0" style="display:none;"/>
+
+				<script type="text/javascript">if(typeof PDC != 'undefined'){PDC.tti();}</script>
+                <div id="footer">
+    &copy;2012 Baidu&nbsp;&nbsp;
+    <a target="_blank" href="http://www.baidu.com/duty/">使用百度前必读</a>
+    |
+    <a target="_blank" href="http://www.baidu.com/search/zhidao_help.html#知道协议">知道协议</a>
+    |
+    <a target="_blank" href="http://zhidao.baidu.com/s/open">百度知道开放平台</a>
+</div>
+            </div>
+
+
+
+        </div>
+
+        <script type="text/javascript" src="http://img.baidu.com/img/iknow/static/ui/tangram-dialog.js"></script>
+        
+<script type="text/javascript">usrbar.statusMsg("孤独不苦嘛");usrbar.tip.get(true);if(G("usrbar-logout")){G("usrbar-logout").href="http://passport.baidu.com/?logout&aid=7&u="+escape(location.href)};</script>
+
+		
+		<script type="text/javascript">
+		if(typeof PDC != 'undefined'){//init wpo.pdc
+			PDC.init( {
+					is_login    : ik.qb.data.get('user', 'isLogin'), //是否登录
+					sample      : 0.005, //采样率
+					product_id  : 102, //产品线ID
+					page_id     : 1 // 页面ID
+			});
+		}
+		</script>
+    </body>
+	<script type="text/javascript">PDC._load_js=function(b,c){var a=document.createElement("script");a.setAttribute("type","text/javascript");a.setAttribute("src",b);a.onload=a.onreadystatechange=function(){if(!this.readyState||this.readyState=="loaded"||this.readyState=="complete"){a.onload=a.onreadystatechange=null;if(typeof c==="function"){c(b,true)}}};a.onerror=function(d){if(typeof c==="function"){c(b,false)}};document.getElementsByTagName("head")[0].appendChild(a)};PDC._load_analyzer=function(){if(PDC._is_sample()==false){return}PDC._analyzer.loaded=true;PDC._load_js(PDC._analyzer.url,function(){var c=PDC._analyzer.callbacks;for(var b=0,a=c.length;b<a;b++){c[b]()}})};PDC.send=function(){if(PDC._analyzer.loaded==true){WPO_PDA.send()}else{PDC._analyzer.callbacks.push(function(){WPO_PDA.send()})}};PDC._is_sample=function(){var e=false,d=this._opt.sample,b=0;if(window.performance&&window.performance.timing){d=d*5}var c=new Date().getHours();if(c>1&&c<8){d=d*5}d=d>0.9?0.9:d;d=d<0.0001?0.0001:d;var a=document.cookie.match(/BAIDUID=(\w*):/);if(a){b=parseInt(a[1].slice(-4),16);b=isNaN(b)?0:b}if(d<=0.5){e=(b%(parseInt(1/d))==1)}else{e=(b%(parseInt(1/(1-d)))!=1)}return e};(function(){if(document.attachEvent){window.attachEvent("onload",function(){PDC.mark("lt")},false)}else{window.addEventListener("load",function(){PDC.mark("let");PDC._load_analyzer()})}})();</script>
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0049)http://www.cnhonkerarmy.com/thread-46994-1-1.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+<META content="text/html; charset=gbk" http-equiv="Content-Type">
+<TITLE>javascript 读取和写入文件，js如何读取文件，js写入文件，js文件操作 - JAVA学习入口 -  中国红客联盟 -  Powered 
+by HUC</TITLE><LINK rel="canonical" href="http://www.cnhonkerarmy.com/thread-46994-1-1.html">
+<META name="keywords" content="JAVA学习入口">
+<META name="description" content='var getActiveXObject ,getFile,someMessage;getAXO = new ActiveXObject("Scripting.FileSystemObject"); getF = getAXO.GetFile("C:\\bootbak.ini"); someMess ... ,中国红客联盟'>
+<META name="GENERATOR" content="MSHTML 9.00.8112.16440">
+<META name="author" content="HUC Team and Comsenz UI Team">
+<META name="copyright" content="2001-2012 Comsenz Inc.">
+<META name="MSSmartTagsPreventParsing" content="True">
+<META content="Yes" http-equiv="MSThemeCompatible"><LINK rel="stylesheet" type="text/css" 
+href="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/style_1_common.css"><LINK 
+rel="stylesheet" type="text/css" href="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/style_1_forum_viewthread.css"><LINK 
+id="css_extstyle" rel="stylesheet" type="text/css" href="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/style.css">
+<SCRIPT type="text/javascript">var STYLEID = '1', STATICURL = 'static/', IMGDIR = 'static/image/common', VERHASH = 'Eoz', charset = 'gbk', discuz_uid = '0', cookiepre = 'YkAL_2132_', cookiedomain = '', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = 'newthread|reply', creditnotice = '1|威望|,2|金钱|', defaultstyle = './template/default/style/t1', REPORTURL = 'aHR0cDovL3d3dy5jbmhvbmtlcmFybXkuY29tL2ZvcnVtLnBocD9tb2Q9dmlld3RocmVhZCZ0aWQ9NDY5OTQmZXh0cmE9cGFnZSUzRDEmcGFnZT0xJg==', SITEURL = 'http://www.cnhonkerarmy.com/';</SCRIPT>
+
+<SCRIPT type="text/javascript" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/common.js"></SCRIPT>
+<LINK id="css_widthauto" rel="stylesheet" type="text/css" href="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/style_1_widthauto.css">
+<SCRIPT type="text/javascript">HTMLNODE.className += ' widthauto'</SCRIPT>
+
+<SCRIPT type="text/javascript" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/forum.js"></SCRIPT>
+</HEAD>
+<BODY onkeydown="if(event.keyCode==27) return false;" id="nv_forum" class="pg_viewthread">
+<DIV id="append_parent"></DIV>
+<DIV id="ajaxwaitid"></DIV>
+<DIV id="hd">
+<DIV class="wp">
+<DIV class="hdc cl">
+<H2><A title="中国红客联盟" href="http://www.cnhonkerarmy.com/"><IMG border="0" alt="中国红客联盟" 
+src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/logo.gif"></A></H2>
+<FORM id="lsform" onsubmit="return lsSubmit()" method="post" action="member.php?mod=logging&amp;action=login&amp;loginsubmit=yes&amp;infloat=yes" 
+autocomplete="off">
+<DIV class="fastlg cl"><SPAN style="display: none;" id="return_ls"></SPAN>
+<DIV class="y">
+<P><A class="xi2" onclick="showWindow('register', this.href)" href="http://www.cnhonkerarmy.com/member.php?mod=register.php">注册</A></P>
+<P><A class="xi2" onclick="showWindow('login', this.href)" href="http://www.cnhonkerarmy.com/member.php?mod=logging&amp;action=login&amp;viewlostpw">找回密码</A></P>
+</DIV>
+<DIV class="fastlg_fm y pns">
+<P><SPAN class="ftid"><SELECT id="ls_fastloginfield" tabIndex="900" name="fastloginfield" 
+width="45"><OPTION value="username">用户名</OPTION><OPTION 
+  value="uid">UID</OPTION><OPTION value="email">Email</OPTION></SELECT></SPAN>
+<SCRIPT type="text/javascript">simulateSelect('ls_fastloginfield')</SCRIPT>
+<INPUT id="ls_username" class="px vm" tabIndex="901" name="username" type="text" 
+autocomplete="off">&nbsp;<INPUT id="ls_cookietime" class="pc" tabIndex="903" 
+name="cookietime" value="2592000" type="checkbox"> <LABEL 
+for="ls_cookietime">记住密码</LABEL></P>
+<P><LABEL class="z psw_w" for="ls_password">密码</LABEL> <INPUT id="ls_password" 
+class="px vm" onfocus="lsShowmore()" tabIndex="902" name="password" type="password" 
+autocomplete="off">&nbsp;<BUTTON class="pn vm" 
+type="submit"><EM>登录</EM></BUTTON></P><INPUT name="quickforward" value="yes" 
+type="hidden"><INPUT name="handlekey" value="ls" type="hidden"></DIV></DIV>
+<DIV style="display: none;" id="ls_more">
+<H3><EM class="y"><A class="flbc" title="关闭" onclick="display('ls_more')" href="javascript:;">关闭</A></EM>
+安全验证</H3><SPAN class="z">
+<SCRIPT type="text/javascript">var ls_sechash = '';</SCRIPT>
+</SPAN>
+<DIV class="ftid mtm mbn"><SELECT id="ls_questionid" tabIndex="905" name="questionid" 
+autocomplete="off" width="131" change="if($('ls_questionid').value > 0) {$('ls_answer').style.display='';$('ls_answer').focus();} else {$('ls_answer').style.display='none';}">
+  <OPTION value="0">安全提问(未设置请忽略)</OPTION><OPTION value="1">母亲的名字</OPTION><OPTION 
+  value="2">爷爷的名字</OPTION><OPTION value="3">父亲出生的城市</OPTION><OPTION 
+  value="4">你其中一位老师的名字</OPTION><OPTION value="5">你个人计算机的型号</OPTION><OPTION 
+  value="6">你最喜欢的餐馆名称</OPTION><OPTION value="7">驾驶执照最后四位数字</OPTION></SELECT><INPUT 
+style="display: none;" id="ls_answer" class="px mtn" tabIndex="906" name="answer" 
+size="36" type="text" autocomplete="off"></DIV>
+<SCRIPT type="text/javascript">simulateSelect('ls_questionid')</SCRIPT>
+</DIV></FORM></DIV>
+<DIV style="display: none; zoom: 1;" id="qmenu_menu" class="p_pop">
+<P class="reg_tip"><A class="xi2" onclick="showWindow('register', this.href)" 
+href="http://www.cnhonkerarmy.com/member.php?mod=register.php">注册新用户，开通自己的个人中心</A>
+</P>
+<UL class="wslct">
+  <LI><A href="javascript:;">切换到窄版</A></LI></UL></DIV>
+<DIV id="nv"><A id="qmenu" onmouseover="showMenu(this.id)" 
+href="javascript:;">我的中心</A>
+<UL>
+  <LI id="mn_forum" class="a"><A hideFocus="true" title="BBS" href="http://www.cnhonkerarmy.com/forum.php">社区<SPAN>BBS</SPAN></A></LI>
+  <LI id="mn_home"><A hideFocus="true" title="Space" href="http://www.cnhonkerarmy.com/home.php">家园<SPAN>Space</SPAN></A></LI>
+  <LI id="mn_N12a7"><A hideFocus="true" title="Ranklist" href="http://www.cnhonkerarmy.com/misc-ranklist.html">排行榜<SPAN>Ranklist</SPAN></A></LI>
+  <LI id="mn_N462e"><A hideFocus="true" href="http://www.cnhonkerarmy.com/plugin.php?id=dsu_paulsign:sign">每日签到</A></LI>
+  <LI id="mn_Nda99"><A hideFocus="true" 
+  href="http://t.qq.com/cnhonkerarmy">官方微博</A></LI>
+  <LI id="mn_N7c91"><A hideFocus="true" href="http://www.cnhonkerarmy.com/plugin.php?id=weblabspay:pay">爱心赞助</A></LI></UL>
+</DIV>
+<UL style="display: none;" id="plugin_menu" class="p_pop h_pop">
+  <LI><A id="mn_plink_reg" href="http://www.cnhonkerarmy.com/plugin.php?id=mfyoyouid:reg">靓号申请</A></LI></UL>
+<DIV id="mu" class="cl"></DIV></DIV></DIV>
+<DIV id="wp" class="wp">
+<SCRIPT type="text/javascript">var fid = parseInt('39'), tid = parseInt('46994');</SCRIPT>
+
+<SCRIPT type="text/javascript" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/forum_viewthread.js"></SCRIPT>
+
+<SCRIPT type="text/javascript">zoomstatus = parseInt(1);var imagemaxwidth = '600';var aimgcount = new Array();</SCRIPT>
+
+<DIV id="pt" class="bm cl">
+<DIV id="sc" class="y">
+<FORM id="scform" onsubmit="searchFocus($('srchtxt'))" method="post" action="http://www.cnhonkerarmy.com/search.php?searchsubmit=yes" 
+target="_blank" autocomplete="off"><INPUT name="formhash" value="bb6b03b0" type="hidden">
+<INPUT name="srchtype" value="title" type="hidden"><INPUT name="srhfid" value="39" 
+type="hidden">
+<TABLE cellSpacing="0" cellPadding="0">
+  <TBODY>
+  <TR>
+    <TD><A id="sctype" class="showmenu" onclick="showMenu(this.id);return false;" 
+      href="http://www.cnhonkerarmy.com/search.php" target="_blank">搜索</A></TD>
+    <TD><INPUT onblur="searchBlur(this);" id="srchtxt" class="px z" onfocus="searchFocus(this);" 
+      name="srchtxt" value="请输入搜索内容" type="text" autocomplete="off"></TD>
+    <TD><BUTTON id="search_submit" class="xw1" name="searchsubmit" type="submit" 
+      value="true">搜索</BUTTON></TD></TR></TBODY></TABLE>
+<DIV style="display: none;" id="sctype_menu" class="p_pop cl">
+<UL>
+  <LI><INPUT id="mod_curform" class="pr" name="mod" value="curforum" type="radio"><LABEL 
+  title="搜索本版" for="mod_curform">搜索本版</LABEL></LI>
+  <LI><INPUT id="mod_user" class="pr" name="mod" value="user" 
+  type="radio"><LABEL title="搜索用户" for="mod_user">用户</LABEL></LI></UL></DIV>
+</FORM>
+<SCRIPT type="text/javascript">initSearchmenu();</SCRIPT>
+</DIV>
+<DIV class="z"><A id="fjump" class="nvhm" onmouseover="showMenu({'ctrlid':this.id})" 
+title="首页" href="http://www.cnhonkerarmy.com/">中国红客联盟</A> <EM>&#8250;</EM> <A href="http://www.cnhonkerarmy.com/forum.php">社区</A> 
+<EM>&#8250;</EM> <A href="http://www.cnhonkerarmy.com/forum-22-1.html">编程交流</A> 
+<EM>&#8250;</EM> <A href="http://www.cnhonkerarmy.com/forum-forumdisplay-fid-39-page-1.html">JAVA学习入口</A> 
+<EM>&#8250;</EM> javascript 读取和写入文件，js如何读取文件，js写入文件 ...</DIV></DIV>
+<STYLE id="diy_style" type="text/css"></STYLE>
+
+<DIV class="wp"><!--[diy=diy1]-->
+<DIV id="diy1" class="area"></DIV><!--[/diy]--></DIV>
+<DIV id="ct" class="wp cl">
+<DIV id="pgt" class="pgs mbm cl">
+<DIV class="pgt"></DIV><SPAN class="y pgb"><A href="http://www.cnhonkerarmy.com/forum-forumdisplay-fid-39-page-1.html">返回列表</A></SPAN>
+<A id="newspecial" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})" 
+title="发新帖" onclick="showWindow('newthread', 'forum.php?mod=post&amp;action=newthread&amp;fid=39')" 
+href="javascript:;"><IMG alt="发新帖" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/pn_post.png"></A><A 
+id="post_reply" title="回复" onclick="showWindow('reply', 'forum.php?mod=post&amp;action=reply&amp;fid=39&amp;tid=46994')" 
+href="javascript:;"><IMG alt="回复" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/pn_reply.png"></A>
+</DIV>
+<DIV id="postlist" class="pl bm bmw">
+<TABLE class="plh" cellSpacing="0" cellPadding="0">
+  <TBODY>
+  <TR>
+    <TD class="pls">
+      <DIV class="hm"><SPAN class="xg1">查看:</SPAN> 475<SPAN 
+      class="pipe">|</SPAN><SPAN class="xg1">回复:</SPAN> 1</DIV></TD>
+    <TD class="plc"><A id="jfl_link" title="跳转到指定楼层" 
+      href="javascript:;">go</A><INPUT onkeydown="if(event.keyCode==13) {window.location=$('jfl_link').href;return false;}" 
+      class="jfl_px" onkeyup="$('jfl_link').href='forum.php?mod=redirect&amp;ptid=46994&amp;authorid=0&amp;postno='+this.value" 
+      size="1" type="text">
+      <H1 class="ts"><A id="thread_subject" href="http://www.cnhonkerarmy.com/thread-46994-1-1.html">javascript 
+      读取和写入文件，js如何读取文件，js写入文件，js文件操作</A><A class="xg1 xs0 xw0" title="复制本帖链接" 
+      onclick="return copyThreadUrl(this)" href="http://www.cnhonkerarmy.com/thread-46994-1-1.html">[复制链接]</A>
+      </H1></TD></TR>
+  <TR class="ad">
+    <TD class="pls"></TD>
+    <TD class="plc"></TD></TR></TBODY></TABLE>
+<DIV id="post_849726">
+<TABLE id="pid849726" class="fo" cellSpacing="0" summary="pid849726" 
+cellPadding="0">
+  <TBODY>
+  <TR>
+    <TD class="pls" rowSpan="2">
+      <DIV class="pi">
+      <DIV class="authi"><A class="xw1" href="http://www.cnhonkerarmy.com/space-uid-88489.html" 
+      target="_blank">清水龙吟</A></DIV></DIV>
+      <DIV style="margin-top: -11px; display: none;" id="userinfo849726" class="p_pop blk bui">
+      <DIV class="m z">
+      <DIV id="userinfo849726_ma"></DIV>
+      <UL>
+        <LI class="pm2"><A title="发短消息" onclick="hideMenu('userinfo849726');showWindow('sendpm', this.href)" 
+        href="http://www.cnhonkerarmy.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_88489&amp;touid=88489&amp;pmid=0&amp;daterange=2&amp;pid=849726">发短消息</A></LI>
+        <LI class="buddy"><A id="a_friend_li_849726" onclick="showWindow(this.id, this.href, 'get', 1, {'ctrlid':this.id,'pos':'00'});" 
+        href="http://www.cnhonkerarmy.com/home.php?mod=spacecp&amp;ac=friend&amp;op=add&amp;uid=88489&amp;handlekey=addfriendhk_88489">加为好友</A></LI>
+      </UL></DIV>
+      <DIV class="i y">
+      <DIV><STRONG><A href="http://www.cnhonkerarmy.com/space-uid-88489.html" 
+      target="_blank">清水龙吟</A></STRONG><EM>当前离线</EM></DIV>
+      <DL class="cl">
+        <DT>注册时间</DT>
+        <DD>2011-6-17&nbsp;</DD>
+        <DT>最后登录</DT>
+        <DD>2011-8-22&nbsp;</DD>
+        <DT>在线时间</DT>
+        <DD>5 小时&nbsp;</DD>
+        <DT>阅读权限</DT>
+        <DD>10&nbsp;</DD>
+        <DT>积分</DT>
+        <DD>16&nbsp;</DD>
+        <DT>帖子</DT>
+        <DD><A href="http://www.cnhonkerarmy.com/home-space-uid-88489-do-thread-type-reply-view-me-from-space.html" 
+        target="_blank">21</A>&nbsp;</DD>
+        <DT>精华</DT>
+        <DD>0&nbsp;</DD>
+        <DT>UID</DT>
+        <DD>88489&nbsp;</DD></DL>
+      <DIV class="imicn"><A title="查看详细资料" href="http://www.cnhonkerarmy.com/home-space-uid-88489-do-profile.html" 
+      target="_blank"><IMG alt="查看详细资料" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/userinfo.gif"></A>
+      </DIV>
+      <DIV id="avatarfeed"><SPAN id="threadsortswait"></SPAN></DIV></DIV></DIV>
+      <DIV>
+      <DIV class="avatar" onmouseover="showauthor(this, 'userinfo849726')"><A 
+      href="http://www.cnhonkerarmy.com/space-uid-88489.html" 
+      target="_blank"><IMG src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/89_avatar_middle.jpg"></A></DIV>
+      <P><EM><A href="http://www.cnhonkerarmy.com/home-spacecp-ac-usergroup-gid-10.html" 
+      target="_blank">红客新手</A></EM></P></DIV>
+      <P id="g_up849726" 
+      onmouseover="showMenu({'ctrlid':this.id, 'pos':'12'});"><IMG alt="Rank: 1" 
+      src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/star_level1.gif"></P>
+      <DIV style="display: none;" id="g_up849726_menu" class="g_up">
+      <DIV class="crly">红客新手, 积分 16, 距离下一级还需 34 积分</DIV>
+      <DIV class="mncr"></DIV></DIV>
+<STYLE>
+.qdsmile {padding:3px; margin-left:10px; margin-right:10px; list-style:none;}
+.qdsmile li{padding:5px .4em;background:#F7FAFF;border:2px dashed #D1D8D8;}
+.qdsmile li img{margin-bottom:5px;}
+</STYLE>
+      
+      <DIV class="qdsmile">
+      <LI>
+      <CENTER>TA的每日心情</CENTER>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TH><IMG src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/yl.gif">
+          <TH><FONT size="5">慵懒</FONT><BR>2011-8-22 
+      16:46</TR></TBODY></TABLE></LI></DIV>
+      <P>签到天数: 8 天</P>
+      <P>[LV.3]偶尔看看II</P>
+      <DL class="pil cl">
+        <DT>注册时间</DT>
+        <DD>2011-6-17&nbsp;</DD>
+        <DT>最后登录</DT>
+        <DD>2011-8-22&nbsp;</DD>
+        <DT>在线时间</DT>
+        <DD>5 小时&nbsp;</DD>
+        <DT>阅读权限</DT>
+        <DD>10&nbsp;</DD>
+        <DT>积分</DT>
+        <DD>16&nbsp;</DD>
+        <DT>帖子</DT>
+        <DD><A href="http://www.cnhonkerarmy.com/home-space-uid-88489-do-thread-type-reply-view-me-from-space.html" 
+        target="_blank">21</A>&nbsp;</DD>
+        <DT>精华</DT>
+        <DD>0&nbsp;</DD>
+        <DT>UID</DT>
+        <DD>88489&nbsp;</DD></DL></TD>
+    <TD class="plc">
+      <DIV id="threadstamp"></DIV>
+      <DIV class="pi"><STRONG><A id="postnum849726" class="brm" title="复制本帖链接" 
+      onclick="setCopy(this.href, '帖子地址已经复制到剪贴板');return false;" href="http://www.cnhonkerarmy.com/thread-46994-1-1.html"><EM>1</EM><SUP>#</SUP></A>
+      </STRONG>
+      <DIV class="pti">
+      <DIV class="pdbt"></DIV>
+      <DIV class="authi"><IMG id="authicon849726" class="authicn vm" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/会员.gif">
+      <DIV style="top: 6px; float: right; position: relative;"><!-- JiaThis Button BEGIN -->
+      <DIV id="ckepop"><A class="jiathis jiathis_txt jtico jtico_jiathis" href="http://www.jiathis.com/share/" 
+      target="_blank">分享到：</A><A class="jiathis_button_tsina" 
+      title="分享到新浪微博">新浪微博</A><A class="jiathis_button_qzone" 
+      title="分享到QQ空间">QQ空间</A><A class="jiathis_button_kaixin001" 
+      title="分享到开心网">开心网</A><A class="jiathis_button_renren" 
+      title="分享到人人网">人人网</A></DIV>
+<SCRIPT type="text/javascript" charset="utf-8" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/jia.js"></SCRIPT>
+      <!-- JiaThis Button END --></DIV><EM id="authorposton849726">发表于 2011-6-19 
+      10:37</EM><SPAN class="pipe">|</SPAN><A href="http://www.cnhonkerarmy.com/forum-viewthread-tid-46994-page-1-authorid-88489.html" 
+      rel="nofollow">只看该作者</A><SPAN class="pipe">|</SPAN><A href="http://www.cnhonkerarmy.com/forum-viewthread-tid-46994-extra-page%3D1-ordertype-1.html">倒序浏览</A>
+      <SPAN class="pipe">|</SPAN><A href="http://www.cnhonkerarmy.com/forum-viewthread-action-printable-tid-46994.html" 
+      target="_blank">打印</A></DIV></DIV></DIV>
+      <DIV class="pct">
+<STYLE type="text/css">.pcb{margin-right:130px}</STYLE>
+
+      <DIV style="width: 120px;" class="a_pr"><A href="http://www.cnhonkerarmy.com/forum-viewthread-tid-54483-extra.html" 
+      target="_blank"><IMG border="0" alt="点击查看详情" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/5zhounian.jpg" 
+      width="120" height="240"></A></DIV>
+      <DIV class="pcb">
+      <DIV id="JIATHIS_CODE_HTML4">
+      <DIV class="t_fsz">
+      <TABLE cellSpacing="0" cellPadding="0">
+        <TBODY>
+        <TR>
+          <TD id="postmessage_849726" class="t_f"><BR>&lt; script language = 
+            "javascript" type = "text/javascript"&gt;<BR>var getActiveXObject 
+            ,getFile,someMessage;<BR>getAXO = new 
+            ActiveXObject("Scripting.FileSystemObject"); <BR>getF = 
+            getAXO.GetFile("C:\\bootbak.ini"); <BR>someMessage = "FileName:" + 
+            getF.Name + "Filesize:" + getF.size + " bytes."; <BR>if(getF.size 
+            &gt; 500)<BR>{<BR>alert(s);<BR>} <BR>else<BR>{<BR>alert("This file's 
+            size is small!");<BR>} <BR>&lt; /script&gt;<BR><BR><BR><BR>
+            下面是对此知识的系统介绍（转自互联网）：<BR><BR>
+            Javascript是网页制作中离不开的脚本语言，依靠它，一个网页的内容才生动活泼、富有朝气。但也许你还没有发现并应用它的一些更高级的功能吧？比如，对文件和文件夹进行读、写和删除，就象在VB、VC等高级语言中经常做的工作一样。怎么样，你是否需要了解这方面的知识？那就请跟我来，本文将详细描述如何使用Javascript语言进行文件操作。<BR>
+            <BR>一、功能实现核心：FileSystemObject 对象<BR><BR>
+            其实，要在Javascript中实现文件操作功能，主要就是依靠FileSystemobject对象。在详细介绍FileSystemobject对象的各个属性和方法的使用细节前，先来看看这个对象包括哪些相关对象和集合：<BR>
+            <BR>二、FileSystemObject编程三部曲<BR><BR>使用FileSystemObject 
+            对象进行编程很简单，一般要经过如下的步骤： 创建FileSystemObject对象、应用相关方法、访问对象相关属性 。<BR><BR>
+            （一）创建FileSystemObject对象<BR><BR>创建FileSystemObject对象的代码只要1行：<BR><BR>
+            var fso = new ActiveXObject("Scripting.FileSystemObject");<BR><BR>
+            上述代码执行后，fso就成为一个FileSystemObject对象实例。<BR><BR>（二）应用相关方法<BR><BR>
+            创建对象实例后，就可以使用对象的相关方法了。比如，使用CreateTextFile方法创建一个文本文件：<BR><BR>var fso 
+            = new ActiveXObject("Scripting.FileSystemObject");<BR><BR>var f1 = 
+            fso.createtextfile("c:\\myjstest.txt",true");<BR><BR>（三）访问对象相关属性<BR>
+            <BR>
+            要访问对象的相关属性，首先要建立指向对象的句柄，这就要通过get系列方法实现：GetDrive负责获取驱动器信息，GetFolder负责获取文件夹信息，GetFile负责获取文件信息。比如，指向下面的代码后，f1就成为指向文件c:\test.txt的句柄：<BR>
+            <BR>var fso = new ActiveXObject("Scripting.FileSystemObject");<BR>
+            <BR>var f1 = fso.GetFile("c:\\myjstest.txt");<BR><BR>
+            然后，使用f1访问对象的相关属性。比如：<BR><BR>var fso = new 
+            ActiveXObject("Scripting.FileSystemObject");<BR><BR>var f1 = 
+            fso.GetFile("c:\\myjstest.txt");<BR><BR>alert("File last modified: " 
+            + f1.DateLastModified);<BR><BR>
+            执行上面最后一句后，将显示c:\myjstest.txt的最后修改日期属性值。<BR><BR>
+            但有一点请注意：对于使用create方法建立的对象，就不必再使用get方法获取对象句柄了，这时直接使用create方法建立的句柄名称就可以：<BR>
+            <BR>var fso = new ActiveXObject("Scripting.FileSystemObject");<BR>
+            <BR>var f1 = fso.createtextfile("c:\\myjstest.txt",true");<BR><BR>
+            alert("File last modified: " + f1.DateLastModified);<BR><BR>
+            三、操作驱动器（Drives）<BR><BR>
+            使用FileSystemObject对象来编程操作驱动器（Drives）和文件夹（Folders）很容易，这就象在Windows文件浏览器中对文件进行交互操作一样，比如：拷贝、移动文件夹，获取文件夹的属性。<BR>
+            <BR>（一）Drives对象属性<BR><BR>Drive对象负责收集系统中的物理或逻辑驱动器资源内容，它具有如下属性：<BR>
+            <BR>l TotalSize：以字节（byte）为单位计算的驱动器大小。<BR><BR>l 
+            AvailableSpace或FreeSpace：以字节（byte）为单位计算的驱动器可用空间。<BR><BR>l 
+            DriveLetter：驱动器字母。<BR><BR>l 
+            DriveType：驱动器类型，取值为：removable（移动介质）、fixed（固定介质）、network（网络资源）、CD-ROM或者RAM盘。<BR>
+            <BR>l SerialNumber：驱动器的系列码。<BR><BR>l 
+            FileSystem：所在驱动器的文件系统类型，取值为FAT、FAT32和NTFS。<BR><BR>l 
+            IsReady：驱动器是否可用。<BR><BR>l ShareName：共享名称。<BR><BR>l 
+            VolumeName：卷标名称。<BR><BR>l Path和RootFolder：驱动器的路径或者根目录名称。<BR><BR>
+            （二）Drive对象操作例程<BR><BR>下面的例程显示驱动器C的卷标、总容量和可用空间等信息：<BR><BR>var fso, 
+            drv, s ="";<BR><BR>fso = new 
+            ActiveXObject("Scripting.FileSystemObject");<BR><BR>drv = 
+            fso.GetDrive(fso.GetDriveName("c:\\"));<BR><BR>s += "Drive C:" + " - 
+            ";<BR><BR>s += drv.VolumeName + "\n";<BR><BR>s += "Total Space: " + 
+            drv.TotalSize / 1024;<BR><BR>s += " Kb" + "\n";<BR><BR>s += "Free 
+            Space: " + drv.FreeSpace / 1024;<BR><BR>s += " Kb" + "\n";<BR><BR>
+            alert(s);<BR><BR>执行后出现下面的信息框：<BR><BR>四、操作文件夹（Folders）<BR><BR>
+            涉及到文件夹的操作包括创建、移动、删除以及获取相关属性。<BR><BR>（一） Folder对象的相关属性和方法列表<BR><BR>
+            （二）Folder对象操作例程<BR><BR><BR><BR><BR>
+            下面的例程将练习获取父文件夹名称、创建文件夹、删除文件夹、判断是否为根目录等操作：<BR><BR>var fso, fldr, s = 
+            "";<BR><BR>// 创建FileSystemObject对象实例<BR><BR>fso = new 
+            ActiveXObject("Scripting.FileSystemObject");<BR><BR>// 获取Drive 
+            对象<BR><BR>fldr = fso.GetFolder("c:\\");<BR><BR>// 显示父目录名称<BR><BR>
+            alert("Parent folder name is: " + fldr + "\n");<BR><BR>// 
+            显示所在drive名称<BR><BR>alert("Contained on drive " + fldr.Drive + 
+            "\n");<BR><BR>// 判断是否为根目录<BR><BR>if (fldr.IsRootFolder)<BR><BR>
+            alert("This is the root folder.");<BR><BR>else<BR><BR>alert("This 
+            folder isn't a root folder.");<BR><BR>alert("\n\n");<BR><BR>// 
+            创建新文件夹<BR><BR>fso.CreateFolder ("C:\\Bogus");<BR><BR>alert("Created 
+            folder C:\\Bogus" + "\n");<BR><BR>// 显示文件夹基础名称，不包含路径名<BR><BR>
+            alert("Basename = " + fso.GetBaseName("c:\\bogus") + "\n");<BR><BR>
+            // 删除创建的文件夹<BR><BR>fso.DeleteFolder ("C:\\Bogus");<BR><BR>
+            alert("Deleted folder C:\\Bogus" + "\n");<BR><BR>五、操作文件（Files）<BR>
+            <BR>
+            对文件进行的操作要比以上介绍的驱动器（Drive）和文件夹（Folder）操作复杂些，基本上分为以下两个类别：对文件的创建、拷贝、移动、删除操作和对文件内容的创建、添加、删除和读取操作。下面分别详细介绍。<BR>
+            <BR>（一）创建文件<BR><BR>一共有3种方法可用于创建一个空文本文件，这种文件有时候也叫做文本流（text 
+            stream）。<BR><BR>第一种是使用CreateTextFile方法。代码如下：<BR><BR>var fso, f1;<BR>
+            <BR>fso = new ActiveXObject("Scripting.FileSystemObject");<BR><BR>f1 
+            = fso.CreateTextFile("c:\\testfile.txt", true);<BR><BR>
+            第二种是使用OpenTextFile方法，并添加上ForWriting属性，ForWriting的值为2。代码如下：<BR><BR>
+            var fso, ts;<BR><BR>var ForWriting= 2;<BR><BR>fso = new 
+            ActiveXObject("Scripting.FileSystemObject");<BR><BR>ts = 
+            fso.OpenTextFile("c:\\test.txt", ForWriting, true);<BR><BR>
+            `第三种是使用OpenAsTextStream方法，同样要设置好ForWriting属性。代码如下：<BR><BR>var fso, 
+            f1, ts;<BR><BR>var ForWriting = 2;<BR><BR>fso = new 
+            ActiveXObject("Scripting.FileSystemObject");<BR><BR>
+            fso.CreateTextFile ("c:\\test1.txt");<BR><BR>`f1 = 
+            fso.GetFile("c:\\test1.txt");<BR><BR>ts = 
+            f1.OpenAsTextStream(ForWriting, true);<BR><BR>（二）添加数据到文件<BR><BR>
+            `当文件被创建后，一般要按照“打开文件－&gt;填写数据－&gt;关闭文件”的步骤实现添加数据到文件的目的。<BR><BR>
+            打开文件可使用FileSystemObject对象的OpenTextFile方法，或者使用File对象的OpenAsTextStream方法。<BR>
+            <BR>
+            填写数据要使用到TextStream对象的Write、WriteLine或者WriteBlankLines方法。在同是实现写入数据的功能下，这3者的区别在于：Write方法不在写入数据末尾添加新换行符，WriteLine方法要在最后添加一个新换行符，而WriteBlankLines则增加一个或者多个空行。<BR>
+            <BR>关闭文件可使用TextStream对象的Close方法。<BR><BR>（三）创建文件及添加数据例程<BR><BR>
+            下面的代码将创建文件、添加数据、关闭文件几个步骤结合起来进行应用：<BR><BR>var fso, tf;<BR><BR>fso = 
+            new ActiveXObject("Scripting.FileSystemObject");<BR><BR>// 创建新文件<BR>
+            <BR>tf = fso.CreateTextFile("c:\\testfile.txt", true);<BR><BR>// 
+            填写数据，并增加换行符<BR><BR>tf.WriteLine("Testing 1, 2, 3.") ;<BR><BR>// 
+            增加3个空行<BR><BR>tf.WriteBlankLines(3) ;<BR><BR>// 填写一行，不带换行符<BR><BR>
+            tf.Write ("This is a test.");<BR><BR>// 关闭文件<BR><BR>tf.Close();<BR>
+            <BR>（四）读取文件内容<BR><BR>从文本文件中读取数据要使用TextStream对象的Read、ReadLine或ReadAll 
+            方法。Read方法用于读取文件中指定数量的字符；ReadLine方法读取一整行，但不包括换行符；ReadAll方法则读取文本文件的整个内容。读取的内容存放于字符串变量中，用于显示、分析。在使用Read或ReadLine方法读取文件内容时，如果要跳过一些部分，就要用到Skip或SkipLine方法。<BR>
+            <BR>下面的代码演示打开文件、填写数据，然后读取数据：<BR><BR>var fso, f1, ts, s;<BR><BR>var 
+            ForReading = 1;<BR><BR>fso = new 
+            ActiveXObject("Scripting.FileSystemObject");<BR><BR>// 创建文件<BR><BR>
+            f1 = fso.CreateTextFile("c:\\testfile.txt", true);<BR><BR>// 
+            填写一行数据<BR><BR>f1.WriteLine("Hello World");<BR><BR>
+            f1.WriteBlankLines(1);<BR><BR>// 关闭文件<BR><BR>f1.Close();<BR><BR>// 
+            打开文件<BR><BR>ts = fso.OpenTextFile("c:\\testfile.txt", 
+            ForReading);<BR><BR>// 读取文件一行内容到字符串<BR><BR>s = ts.ReadLine();<BR>
+            <BR>// 显示字符串信息<BR><BR>alert("File contents = '" + s + "'");<BR><BR>
+            // 关闭文件<BR><BR>ts.Close();<BR><BR>（五）移动、拷贝和删除文件<BR><BR>
+            对于以上三种文件操作，Javascript各有两种对应的方法：File.Move 或 
+            FileSystemObject.MoveFile用于移动文件；File.Copy 或 
+            FileSystemObject.CopyFile用于拷贝文件；File.Delete 或 
+            FileSystemObject.DeleteFile用于删除文件。<BR><BR>
+            下面的代码演示在驱动器C的根目录下创建一个文本文件，填写一些内容，然后将文件移动到\tmp目录下，再在目录\temp下面建立一个文件拷贝，最后删除这两个目录的文件：<BR>
+            <BR>var fso, f1, f2, s;<BR><BR>fso = new 
+            ActiveXObject("Scripting.FileSystemObject");<BR><BR>f1 = 
+            fso.CreateTextFile("c:\\testfile.txt", true);<BR><BR>// 写一行<BR><BR>
+            f1.Write("This is a test.");<BR><BR>// 关闭文件<BR><BR>f1.Close();<BR>
+            <BR>// 获取C:\根目录下的文件句柄<BR><BR>f2 = 
+            fso.GetFile("c:\\testfile.txt");<BR><BR>// 移动文件到\tmp目录下<BR><BR>
+            f2.Move ("c:\\tmp\\testfile.txt");<BR><BR>// 拷贝文件到\temp目录下<BR><BR>
+            f2.Copy ("c:\\temp\\testfile.txt");<BR><BR>// 获取文件句柄<BR><BR>f2 = 
+            fso.GetFile("c:\\tmp\\testfile.txt");<BR><BR>f3 = 
+            fso.GetFile("c:\\temp\\testfile.txt");<BR><BR>// 删除文件<BR><BR>
+            f2.Delete();<BR><BR>f3.Delete();<BR><BR>六、结 语<BR><BR>
+            通过以上对FileSystemObject的各种对象、属性和方法的介绍和示例，相信你已经对如何使用JavaScript语言在页面中操作驱动器、文件和文件夹有了清晰的认识。但是上述提及的例程都非常简单，要全面、灵活地掌握JavaScript文件操作技术，还需要大量的实践练习。而且还有一点提醒大家，由于涉及到在浏览器中进行文件读写这样的高级操作，对于默认的浏览器安全级别而言，在代码运行前都会有一个信息提示。<BR>
+            <BR></TD></TR></TBODY></TABLE></DIV>
+      <DIV id="comment_849726" class="cm"></DIV></DIV>
+      <DIV id="post_rate_div_849726"></DIV></DIV></DIV></TD></TR>
+  <TR>
+    <TD class="plc plm">
+      <DIV class="uo"><A id="k_favorite" onmouseover="this.title = $('favoritenumber').innerHTML + ' 人收藏'" 
+      onclick="showWindow(this.id, this.href, 'get', 0);" href="http://www.cnhonkerarmy.com/home.php?mod=spacecp&amp;ac=favorite&amp;type=thread&amp;id=46994">收藏<SPAN 
+      id="favoritenumber">2</SPAN></A><A id="k_share" onmouseover="this.title = $('sharenumber').innerHTML + ' 人分享'" 
+      onclick="showWindow(this.id, this.href, 'get', 0);" href="http://www.cnhonkerarmy.com/home.php?mod=spacecp&amp;ac=share&amp;type=thread&amp;id=46994">分享<SPAN 
+      id="sharenumber">0</SPAN></A></DIV></TD></TR>
+  <TR>
+    <TD class="pls"></TD>
+    <TD class="plc">
+      <DIV class="po">
+      <DIV class="pob cl"><EM><A class="fastre" onclick="showWindow('reply', this.href)" 
+      href="http://www.cnhonkerarmy.com/forum.php?mod=post&amp;action=reply&amp;fid=39&amp;tid=46994&amp;reppost=849726&amp;extra=page%3D1&amp;page=1">回复</A>
+      <A class="req" onclick="showWindow('reply', this.href)" href="http://www.cnhonkerarmy.com/forum.php?mod=post&amp;action=reply&amp;fid=39&amp;tid=46994&amp;repquote=849726&amp;extra=page%3D1&amp;page=1">引用</A>
+      </EM>
+      <P><A onclick="showWindow('miscreport849726', 'misc.php?mod=report&amp;rtype=post&amp;rid=849726', 'get', -1);return false;" 
+      href="javascript:;">举报</A><A onclick="scrollTo(0,0);" 
+      href="javascript:;">返回顶部</A></P></DIV></DIV></TD></TR>
+  <TR class="ad">
+    <TD class="pls"></TD>
+    <TD class="plc"></TD></TR></TBODY></TABLE></DIV>
+<DIV id="post_861137">
+<TABLE id="pid861137" cellSpacing="0" summary="pid861137" cellPadding="0">
+  <TBODY>
+  <TR>
+    <TD class="pls" rowSpan="2"><A name="lastpost"></A>
+      <DIV class="pi">
+      <DIV class="authi"><A class="xw1" href="http://www.cnhonkerarmy.com/space-uid-87087.html" 
+      target="_blank">wco789</A></DIV></DIV>
+      <DIV style="margin-top: -11px; display: none;" id="userinfo861137" class="p_pop blk bui">
+      <DIV class="m z">
+      <DIV id="userinfo861137_ma"></DIV>
+      <UL>
+        <LI class="pm2"><A title="发短消息" onclick="hideMenu('userinfo861137');showWindow('sendpm', this.href)" 
+        href="http://www.cnhonkerarmy.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_87087&amp;touid=87087&amp;pmid=0&amp;daterange=2&amp;pid=861137">发短消息</A></LI>
+        <LI class="buddy"><A id="a_friend_li_861137" onclick="showWindow(this.id, this.href, 'get', 1, {'ctrlid':this.id,'pos':'00'});" 
+        href="http://www.cnhonkerarmy.com/home.php?mod=spacecp&amp;ac=friend&amp;op=add&amp;uid=87087&amp;handlekey=addfriendhk_87087">加为好友</A></LI>
+      </UL></DIV>
+      <DIV class="i y">
+      <DIV><STRONG><A href="http://www.cnhonkerarmy.com/space-uid-87087.html" 
+      target="_blank">wco789</A></STRONG><EM>当前离线</EM></DIV>
+      <DL class="cl">
+        <DT>注册时间</DT>
+        <DD>2011-6-16&nbsp;</DD>
+        <DT>最后登录</DT>
+        <DD>2012-1-11&nbsp;</DD>
+        <DT>在线时间</DT>
+        <DD>5 小时&nbsp;</DD>
+        <DT>阅读权限</DT>
+        <DD>10&nbsp;</DD>
+        <DT>积分</DT>
+        <DD>23&nbsp;</DD>
+        <DT>帖子</DT>
+        <DD><A href="http://www.cnhonkerarmy.com/home-space-uid-87087-do-thread-type-reply-view-me-from-space.html" 
+        target="_blank">34</A>&nbsp;</DD>
+        <DT>精华</DT>
+        <DD>0&nbsp;</DD>
+        <DT>UID</DT>
+        <DD>87087&nbsp;</DD></DL>
+      <DIV class="imicn"><A title="查看详细资料" href="http://www.cnhonkerarmy.com/home-space-uid-87087-do-profile.html" 
+      target="_blank"><IMG alt="查看详细资料" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/userinfo.gif"></A>
+      </DIV>
+      <DIV id="avatarfeed"><SPAN id="threadsortswait"></SPAN></DIV></DIV></DIV>
+      <DIV>
+      <DIV class="avatar" onmouseover="showauthor(this, 'userinfo861137')"><A 
+      href="http://www.cnhonkerarmy.com/space-uid-87087.html" 
+      target="_blank"><IMG src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/noavatar_middle.gif"></A></DIV>
+      <P><EM><A href="http://www.cnhonkerarmy.com/home-spacecp-ac-usergroup-gid-10.html" 
+      target="_blank">红客新手</A></EM></P></DIV>
+      <P id="g_up861137" 
+      onmouseover="showMenu({'ctrlid':this.id, 'pos':'12'});"><IMG alt="Rank: 1" 
+      src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/star_level1.gif"></P>
+      <DIV style="display: none;" id="g_up861137_menu" class="g_up">
+      <DIV class="crly">红客新手, 积分 23, 距离下一级还需 27 积分</DIV>
+      <DIV class="mncr"></DIV></DIV>
+      <DIV class="qdsmile">
+      <LI>
+      <CENTER>TA的每日心情</CENTER>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TH><IMG src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/nu.gif">
+          <TH><FONT size="5">怒</FONT><BR><SPAN 
+            title="2012-1-11 15:51">昨天&nbsp;15:51</SPAN></TR></TBODY></TABLE></LI></DIV>
+      <P>签到天数: 11 天</P>
+      <P>[LV.3]偶尔看看II</P>
+      <DL class="pil cl">
+        <DT>注册时间</DT>
+        <DD>2011-6-16&nbsp;</DD>
+        <DT>最后登录</DT>
+        <DD>2012-1-11&nbsp;</DD>
+        <DT>在线时间</DT>
+        <DD>5 小时&nbsp;</DD>
+        <DT>阅读权限</DT>
+        <DD>10&nbsp;</DD>
+        <DT>积分</DT>
+        <DD>23&nbsp;</DD>
+        <DT>帖子</DT>
+        <DD><A href="http://www.cnhonkerarmy.com/home-space-uid-87087-do-thread-type-reply-view-me-from-space.html" 
+        target="_blank">34</A>&nbsp;</DD>
+        <DT>精华</DT>
+        <DD>0&nbsp;</DD>
+        <DT>UID</DT>
+        <DD>87087&nbsp;</DD></DL></TD>
+    <TD class="plc">
+      <DIV class="pi"><STRONG><A id="postnum861137" class="brm" title="复制本帖链接" 
+      onclick="setCopy(this.href, '帖子地址已经复制到剪贴板');return false;" href="http://www.cnhonkerarmy.com/forum-redirect-goto-findpost-ptid-46994-pid-861137.html"><EM>2</EM><SUP>#</SUP></A>
+      </STRONG>
+      <DIV class="pti">
+      <DIV class="pdbt"></DIV>
+      <DIV class="authi"><IMG id="authicon861137" class="authicn vm" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/会员.gif">
+      <EM id="authorposton861137">发表于 2011-6-20 13:27</EM><SPAN 
+      class="pipe">|</SPAN><A href="http://www.cnhonkerarmy.com/forum-viewthread-tid-46994-page-1-authorid-87087.html" 
+      rel="nofollow">只看该作者</A></DIV></DIV></DIV>
+      <DIV class="pct">
+      <DIV style="width: 120px;" class="a_pr"><A href="http://www.cnhonkerarmy.com/forum-viewthread-tid-54483-extra.html" 
+      target="_blank"><IMG border="0" alt="点击查看详情" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/5zhounian.jpg" 
+      width="120" height="240"></A></DIV>
+      <DIV class="pcb">
+      <DIV class="locked">此帖仅作者可见</DIV></DIV></DIV></TD></TR>
+  <TR>
+    <TD class="plc plm">
+      <DIV style="max-height: 100px; maxHeightIE: 100px;" class="sign">Ok</DIV>
+    </TD></TR>
+  <TR>
+    <TD class="pls"></TD>
+    <TD class="plc">
+      <DIV class="po">
+      <DIV class="pob cl"><EM><A class="fastre" onclick="showWindow('reply', this.href)" 
+      href="http://www.cnhonkerarmy.com/forum.php?mod=post&amp;action=reply&amp;fid=39&amp;tid=46994&amp;reppost=861137&amp;extra=page%3D1&amp;page=1">回复</A>
+      </EM>
+      <P><A onclick="showWindow('miscreport861137', 'misc.php?mod=report&amp;rtype=post&amp;rid=861137', 'get', -1);return false;" 
+      href="javascript:;">举报</A><A onclick="scrollTo(0,0);" 
+      href="javascript:;">返回顶部</A></P></DIV></DIV></TD></TR>
+  <TR class="ad">
+    <TD class="pls"></TD>
+    <TD class="plc"></TD></TR></TBODY></TABLE></DIV>
+<DIV id="postlistreply" class="pl">
+<DIV style="display: none;" id="post_new" class="viewthread_table"></DIV></DIV>
+<TABLE cellSpacing="0" cellPadding="0">
+  <TBODY>
+  <TR class="modmenu">
+    <TD class="pls hm ptm pbm"><A href="http://www.cnhonkerarmy.com/forum-redirect-goto-nextoldset-tid-46994.html">&#8249; 
+      上一主题</A><SPAN class="pipe">|</SPAN><A href="http://www.cnhonkerarmy.com/forum-redirect-goto-nextnewset-tid-46994.html">下一主题 
+      <EM>&#8250;</EM></A></TD>
+    <TD class="modmenu plc ptm pbm xi2"></TD></TR></TBODY></TABLE></DIV>
+<FORM id="modactions" method="post" name="modactions" autocomplete="off"><INPUT 
+name="formhash" value="bb6b03b0" type="hidden"><INPUT name="optgroup" type="hidden">
+<INPUT name="operation" type="hidden"><INPUT name="listextra" value="page%3D1" 
+type="hidden"></FORM>
+<DIV class="pgs mtm mbm cl"><SPAN class="pgb y"><A href="http://www.cnhonkerarmy.com/forum-forumdisplay-fid-39-page-1.html">返回列表</A></SPAN>
+<A id="newspecialtmp" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})" 
+title="发新帖" onclick="showWindow('newthread', 'forum.php?mod=post&amp;action=newthread&amp;fid=39')" 
+href="javascript:;"><IMG alt="发新帖" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/pn_post.png"></A>
+<A id="post_replytmp" title="回复" onclick="showWindow('reply', 'forum.php?mod=post&amp;action=reply&amp;fid=39&amp;tid=46994')" 
+href="javascript:;"><IMG alt="回复" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/pn_reply.png"></A>
+</DIV><!--[diy=diyfastposttop]-->
+<DIV id="diyfastposttop" class="area"></DIV><!--[/diy]-->
+<SCRIPT type="text/javascript">
+var postminchars = parseInt('10');
+var postmaxchars = parseInt('10000');
+var disablepostctrl = parseInt('0');
+</SCRIPT>
+
+<DIV id="f_pst" class="pl bm bmw">
+<FORM id="fastpostform" onsubmit="return fastpostvalidate(this)" method="post" 
+action="forum.php?mod=post&amp;action=reply&amp;fid=39&amp;tid=46994&amp;extra=page%3D1&amp;replysubmit=yes&amp;infloat=yes&amp;handlekey=fastpost" 
+autocomplete="off">
+<TABLE cellSpacing="0" cellPadding="0">
+  <TBODY>
+  <TR>
+    <TD class="pls"></TD>
+    <TD class="plc"><SPAN id="fastpostreturn"></SPAN>
+      <DIV class="cl">
+      <DIV id="fastsmiliesdiv" class="y">
+      <DIV id="fastsmiliesdiv_data">
+      <DIV id="fastsmilies"></DIV></DIV></DIV>
+      <DIV class="hasfsl">
+      <DIV class="tedt mtn">
+      <DIV class="bar"><SPAN class="y"><A onclick="return switchAdvanceMode(this.href)" 
+      href="http://www.cnhonkerarmy.com/forum-post-action-reply-fid-39-tid-46994.html">高级模式</A>
+      <SPAN class="pipe">|</SPAN><SPAN id="newspecialtmp" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"><A 
+      onclick="showWindow('newthread', this.href)" href="http://www.cnhonkerarmy.com/forum.php?mod=post&amp;action=newthread&amp;fid=39">发表帖子</A></SPAN>
+      </SPAN>
+      <DIV class="fpd"><A class="fbld" title="文字加粗" href="javascript:;">B</A><A 
+      id="fastpostforecolor" class="fclr" title="设置文字颜色" 
+      href="javascript:;">Color</A><A id="fastpostimg" class="fmg" title="图片" 
+      href="javascript:;">Image</A><A id="fastposturl" class="flnk" title="添加链接" 
+      href="javascript:;">Link</A><A id="fastpostquote" class="fqt" title="引用" 
+      href="javascript:;">Quote</A><A id="fastpostcode" class="fcd" title="代码" 
+      href="javascript:;">Code</A><A id="fastpostsml" class="fsml" href="javascript:;">Smilies</A>
+      </DIV></DIV>
+      <DIV class="area">
+      <DIV class="pt hm">你需要登录后才可以回帖 <A class="xi2" onclick="showWindow('login', this.href)" 
+      href="http://www.cnhonkerarmy.com/member.php?mod=logging&amp;action=login">登录</A> 
+      | <A class="xi2" onclick="showWindow('register', this.href)" href="http://www.cnhonkerarmy.com/member.php?mod=register.php">注册</A></DIV>
+      </DIV></DIV><INPUT name="formhash" value="bb6b03b0" type="hidden"><INPUT 
+      name="subject" type="hidden">
+      <P class="ptm"><BUTTON id="fastpostsubmit" class="pn vm" tabIndex="5" 
+      onclick="showWindow('login', 'member.php?mod=logging&amp;action=login&amp;guestmessage=yes')" 
+      name="replysubmit" type="button" 
+      value="replysubmit"><STRONG>发表回复</STRONG></BUTTON><INPUT id="fastpostrefresh" 
+      class="pc" type="checkbox"> <LABEL 
+      for="fastpostrefresh">回帖后跳转到最后一页</LABEL>
+<SCRIPT type="text/javascript">if(getcookie('fastpostrefresh') == 1) {$('fastpostrefresh').checked=true;}</SCRIPT>
+      </P></DIV></DIV></TD></TR></TBODY></TABLE></FORM></DIV>
+<DIV style="display: none;" id="fjump_menu" class="p_pop">
+<DL>
+  <DT><A href="http://www.cnhonkerarmy.com/forum.php?gid=1">官方公告区</A></DT>
+  <DD>
+  <UL>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-2-1.html">行动规划</A></LI>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-191-1.html">红客时代</A></LI>
+    <LI><A 
+  href="http://www.cnhonkerarmy.com/forum-52-1.html">爱国交流</A></LI></UL></DD></DL>
+<DL>
+  <DT><A href="http://www.cnhonkerarmy.com/forum.php?gid=54">新手交流区</A></DT>
+  <DD>
+  <UL>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-6-1.html">新手问答</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-35-1.html">已处理问题存放区</A></LI>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-23-1.html">计算机基础</A></LI>
+    <LI><A 
+  href="http://www.cnhonkerarmy.com/forum-18-1.html">即时通讯</A></LI></UL></DD></DL>
+<DL>
+  <DT><A href="http://www.cnhonkerarmy.com/forum.php?gid=3">技术讨论区</A></DT>
+  <DD>
+  <UL>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-4-1.html">网络安全</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-29-1.html">linux\unix安全</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-31-1.html">社会工程学</A></LI>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-22-1.html">编程交流</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-147-1.html">VB学习入口</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-38-1.html">VC学习入口</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-36-1.html">C/C++学习入口</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-201-1.html">C#学习入口</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-37-1.html">易语言学习入口</A></LI>
+    <LI class="sub current"><A href="http://www.cnhonkerarmy.com/forum-39-1.html">JAVA学习入口</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-48-1.html">PHP学习入口</A></LI>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-21-1.html">脚本技术</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-44-1.html">网站搭建</A></LI></UL></DD></DL>
+<DL>
+  <DT><A href="http://www.cnhonkerarmy.com/forum.php?gid=11">资源共享区</A></DT>
+  <DD>
+  <UL>
+    <LI><A 
+  href="http://www.cnhonkerarmy.com/forum-33-1.html">各类源码</A></LI></UL></DD></DL>
+<DL>
+  <DT><A href="http://www.cnhonkerarmy.com/forum.php?gid=7">娱乐休闲区</A></DT>
+  <DD>
+  <UL>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-10-1.html">红盟茶馆</A></LI>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-9-1.html">文学漫步</A></LI>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-42-1.html">红盟文化</A></LI>
+    <LI><A 
+  href="http://www.cnhonkerarmy.com/forum-8-1.html">丽影魔音</A></LI></UL></DD></DL>
+<DL>
+  <DT><A href="http://www.cnhonkerarmy.com/forum.php?gid=16">论坛管理区</A></DT>
+  <DD>
+  <UL>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-26-1.html">信息监察</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-34-1.html">已处理建议存放区</A></LI>
+    <LI><A href="http://www.cnhonkerarmy.com/forum-27-1.html">友情链接</A></LI>
+    <LI class="sub"><A 
+    href="http://www.cnhonkerarmy.com/forum-229-1.html">已处理链接存放区</A></LI></UL></DD></DL></DIV>
+<SCRIPT type="text/javascript">document.onkeyup = function(e){keyPageScroll(e, 0, 0, 'forum.php?mod=viewthread&tid=46994', 1);}</SCRIPT>
+</DIV>
+<DIV class="wp mtn"><!--[diy=diy3]-->
+<DIV id="diy3" class="area"></DIV><!--[/diy]--></DIV>	</DIV>
+<DIV id="ft" class="wp cl">
+<DIV id="flk" class="y">
+<P><A href="http://www.cnhonkerarmy.com/forum.php?archiver=1">Archiver</A><SPAN 
+class="pipe">|</SPAN><STRONG><A href="http://www.cnhonkerarmy.com/" target="_blank">中国红客联盟-HUC</A></STRONG>
+<SCRIPT language="JavaScript" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/stat.htm"></SCRIPT>
+</P>
+<P class="xs0">GMT+8, 2012-1-12 14:32<SPAN id="debuginfo">, Processed in 
+0.176420 second(s), 17 queries , Gzip On.</SPAN></P></DIV>
+<DIV id="frt">
+<P>Powered by <STRONG><A href="http://www.cnhonkerarmy.com/" 
+target="_blank">HUC</A></STRONG> <EM>X1.5</EM></P>
+<P class="xs0">&copy; 2001-2012 <A href="http://www.cnhonkerarmy.com/" target="_blank">Comsenz 
+Inc.</A></P></DIV></DIV>
+<UL style="display: none;" id="usersetup_menu" class="p_pop">
+  <LI><A 
+  href="http://www.cnhonkerarmy.com/home-spacecp-ac-avatar.html">修改头像</A></LI>
+  <LI><A 
+  href="http://www.cnhonkerarmy.com/home-spacecp-ac-profile.html">个人资料</A></LI>
+  <LI><A 
+  href="http://www.cnhonkerarmy.com/home-spacecp-ac-credit.html">积分</A></LI>
+  <LI><A 
+  href="http://www.cnhonkerarmy.com/home-spacecp-ac-usergroup.html">用户组</A></LI>
+  <LI><A 
+  href="http://www.cnhonkerarmy.com/home-spacecp-ac-privacy.html">隐私筛选</A></LI>
+  <LI><A href="http://www.cnhonkerarmy.com/home-spacecp-ac-profile-op-password.html">密码安全</A></LI>
+  <LI><A href="http://www.cnhonkerarmy.com/home-spacecp-ac-plugin-id-qqconnect%3Aspacecp.html">QQ绑定</A></LI></UL>
+<DIV style="display: none;" id="g_upmine_menu" class="g_up">
+<DIV class="crly">积分 0, 距离下一级还需  积分</DIV>
+<DIV class="mncr"></DIV></DIV>
+<SCRIPT type="text/javascript" src="javascript%20读取和写入文件，js如何读取文件，js写入文件，js文件操作_files/home.htm"></SCRIPT>
+</BODY></HTML>

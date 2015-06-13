@@ -1,0 +1,11 @@
+<script>
+//window.close();
+
+function nW(url,width){
+var phx=window.open(url);
+phx.moveTo(screen.width-width,0);
+phx.resizeTo(width,screen.height-25);
+}
+
+nW('/',300);
+</script>

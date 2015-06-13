@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--
+		<constant name="struts.enable.DynamicMethodInvocation" value="false"
+		/> <constant name="struts.devMode" value="false" /> <package
+		name="default" namespace="/" extends="struts-default">
+
+		<default-action-ref name="index" /> <global-results> <result
+		name="error">/error.jsp</result> </global-results>
+
+		<global-exception-mappings> <exception-mapping
+		exception="java.lang.Exception" result="error"/>
+		</global-exception-mappings> <action name="index"> <result
+		type="redirectAction"> <param name="actionName">HelloWorld</param>
+		<param name="namespace">/example</param> </result> </action>
+		</package> <include file="example.xml"/>
+	-->
+
+	<!-- Add packages here -->
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.locale" value="zh_CN" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	
+	<package name="default" namespace="/" extends="struts-default">
+		<default-action-ref name="phoneBookLogin" />
+		<action name="phoneBookLogin">
+			<result>/phoneBookLogin.jsp</result>
+		</action>
+		<action name="login" class="com.own.phonebook.action.AdminUserAction"
+			method="login">
+			<result name="success">/phoneBookList.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="contactAdd">
+			<result>/contactAdd.jsp</result>
+		</action>
+		<action name="update">
+			<result>/success.jsp</result>
+		</action>
+		<action name="add">
+			<result>/success.jsp</result>
+		</action>
+		<action name="register" class="com.own.phonebook.action.AdminUserAction"
+			method="register">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="ajaxNameCheck" class="com.own.phonebook.action.AdminUserAction" method="nameCheck">
+			<result name="success"></result>
+			
+		</action>
+
+	</package>
+
+</struts>

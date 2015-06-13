@@ -1,0 +1,48 @@
+Left(musicname, InStrRev(musicname, "\") - 1)
+
+
+1．Debug.Print语句
+    在程序代码中加入Debug.Print语句，可以在屏幕上显示变量当前的值。对于程序的执行情况进行监视。
+    假设程序中有变量x，如果在程序调试过程中需要显示该变量的变化情况，那么就可以在程序代码中适当的位置加上以下语句：
+1.Debug.Print x
+    则在程序调试过程中，x的当前值就可以显示在立即窗口中。在一个程序代码中可以使用多个Debug.Print语句，也可以对同一变量使用多个Debug.Print语句，这是因为Debug.Print语句对程序没有影响，它不会改变所有对象或者变量的值和大小。
+
+
+2.以上是log文件中的一部分，文件内容很多，都是查看数据显示的内容，这一段第一行内容是固定的，然后是一行分隔符号，
+我要获取中间这几行数据，VB能实现读取某一行字符后获取这行字符的第2行往后数据么？，当读取到某行字符后停止获取数据 
+
+
+open "d:\aa.log" for input as #1
+do while not eof(1)
+  line input #1,s
+  i=i+1
+  if i>2 then
+  if s= "SCEIVER HAS NO INTERFERING CELLS" then
+  exit do
+  else
+  t=t+s+vbcrlf
+  end if
+  end if
+loop
+close #1
+text1.text= t
+
+3. vb2008
+比如我有一个TEXT文本框，及一个COMMANDBUTTON，当我点击BUTTON时，程序自动找程序目录下“test.txt”文件里与TEXT1.TEXT文本框内容相同的字符所在的行，把行数提取出来（比如第5行），然后读取此行数后一行（即第6行）的内容，并在以后的第二行（即第7行）写入一段字符或数字。
+
+i=0
+Using sr As StreamReader = New StreamReader("TestFile.txt")
+                Dim line As String
+                ' Read and display the lines from the file until the end 
+                ' of the file is reached.
+                Do
+                    line = sr.ReadLine()
+                    i=i+1
+                    if i=5 then
+                         line='修改第五行   需要使用StreamWriter.WriteLine方法把修改的数据写回去！
+                   endif
+                    Console.WriteLine(Line)
+                    '把line存到变量，最后写回去
+                Loop Until line Is Nothing
+                sr.Close()
+            End Using

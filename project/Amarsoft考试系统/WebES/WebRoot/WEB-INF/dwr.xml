@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dwr>
+  <allow>
+<create creator="new" javascript="TopicDesignAction">
+      <param name="class" value="com.action.TopicDesignAction"/>
+</create>
+<create creator="new" javascript="BusinessPointAction">
+      <param name="class" value="com.action.BusinessPointAction"/>
+</create>
+<create creator="new" javascript="TopicTypeAction">
+      <param name="class" value="com.action.TopicTypeAction"/>
+</create>
+<create creator="new" javascript="TopicBankAction">
+      <param name="class" value="com.action.TopicBankAction"/>
+</create>
+<create creator="new" javascript="PaperAction">
+      <param name="class" value="com.action.PaperAction"/>
+</create>
+<!--<convert converter="bean" match="com.order.bean.OrderInfoBean"/>-->
+  </allow>
+</dwr>

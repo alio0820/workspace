@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>怎么实现单击表格中的一行数据，这条数据高亮显示，而且点击按钮，能将这条数据发送到另外一个页面</title>
+<style type="text/css">
+<!--
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5 arial, 宋体, sans-serif; }
+#page { padding-top:22px; }
+#page, #header, #body, #footer { margin-left:auto; margin-right:auto; }
+.top-search-box .logo { float:left; margin-right:9px; padding-top:3px; }
+.w984 { width:984px; }
+#top-search-form { float:left; }
+element.style { position:relative; width:650px; }
+.top-search-box .hdi { float:left; font-family:Arial; font-size:16px; line-height:19px; padding:3px 1px; width:358px; }
+button, input, select, textarea { font-size:100%; }
+.top-search-box .box a { float:left; line-height:27px; margin-left:6px; }
+a { text-decoration:none; }
+a, a:visited { color:#261CDC; text-decoration:underline; }
+fieldset, img { border:0 none; }
+.top-search-box .pipe { float:left; line-height:27px; margin-left:6px; }
+.clear { clear:both; }
+#phpzy { clear:both; margin:5px 0; }
+element.style { clear:both; }
+.php-phpzy { background:url("/images/phpzhishi.gif") no-repeat scroll 0 -30px transparent; padding-left:4px; }
+.php-phpzy .phper { background:url("/images/phpzhishi.gif") no-repeat scroll right -30px transparent; padding-right:4px; }
+.php-phpzy .phptile { background:url("/images/phpzhishi.gif") repeat-x scroll 0 -65px transparent; height:34px; overflow:hidden; padding-left:17px; }
+ul, ol { list-style:none outside none; }
+.top-search-box .btns { clear:left; padding-top:3px; }
+.btn-global { font-family:Arial; font-size:14px; height:2em; padding-top:2px; width:6em; }
+#top-ask-btn { margin:0 5px !important; }
+.php-phpzy li { background:url("/images/phpzhishi.gif") no-repeat scroll right -100px transparent; float:left; padding:0 10px; text-align:center; width:82px;}
+.php-phpzy li a:link, .php-phpzy li a:visited { color:#FFFFFF; display:block; font-size:14px; font-weight:bold; line-height:36px; text-decoration:none; }
+.php-phpzy li.current a:link, .php-phpzy li.current a:visited { background:url("/images/phpzhishi.gif") no-repeat scroll 0 4px transparent; color:#000; height:34px; overflow:hidden; text-decoration:none;}
+.php-phpzy a { text-decoration:none; }
+.php-phpzy .total a{ color:#FFFDBB; float:right; padding:8px; }
+.phpzy2 {margin-bottom:10px;}
+.phpzy2 .tl {background-position:-4px -53px;float:left;}
+.phpzy2 .tr {background-position:-6px -53px;float:right;}
+.phpzy2 .tl, .phpzy2 .tr, .phpzy2 .bl, .phpzy2 .br {background:url("/images/phpzhishi.gif") no-repeat scroll 0 0transparent;height:2px;overflow:hidden;width:2px;}
+.phpzy2 .phper {border:1px solid #88C369;padding:1px;}
+.phpzy2 .phptile {border:1px solid #E6F4D0;}
+.phpzy2 .daohang {background:none repeat scroll 0 0 #E6F4D0;color:#125908;height:26px;line-height:26px;padding-left:12px;}
+.phpzy3 .daohang h3 {background:url("/images/phpzhishi.gif") no-repeat scroll 0 -136px transparent;padding-left:24px;}
+.phpzy2 .daohang h3 {float:left;font-size:14px;line-height:26px;}
+.phpzy3 .daohang h3 a:link, .phpzy3 .daohang h3 a:visited, .voting-q .daohang h3 a:link, .voting-q .daohang h3 a:visited {color:#125908;float:none;text-decoration:none;}
+.phpzy2 .daohang a.more {float:right;line-height:26px;margin-right:6px;}
+.l-grid-2 a:link, .l-grid-2 a:visited, .l-grid-3 a:link, .l-grid-3 a:visited {color:#133DB6;text-decoration:none;}
+.phpzy3 .bd {padding-bottom:7px;padding-top:7px;}
+.phpzy3 ul {margin-bottom:12px;}
+.phpzy3 li {background:url("/images/phpzhishi.gif") no-repeat scroll -84px -250px transparent;font-size:14px;line-height:27px;margin-left:14px;}
+.phpzy3 .time {color:#666666;float:right;font-size:12px;margin-right:9px;}
+.phpzy3 .title {margin-left:8px;}
+.l-grid-2 a:link, .l-grid-2 a:visited, .l-grid-3 a:link, .l-grid-3 a:visited {color:#133DB6;text-decoration:none;}
+.phpzy3 ul {margin-bottom:12px;}
+#footer, #footer a:link, #footer a:visited {clear:both;color:#7777CC;font:12px/1.5 Arial;margin-top:10px;text-align:center;white-space:nowrap;}
+.top-search-box{height:48px;}
+
+.dede_pages { clear:both; height: 40px; text-align: center; line-height: 15px; font-family: Tahoma, Arial; color:#000; overflow: hidden; }.dede_pages ul { margin: 20px 0 0; display: inline;}.dede_pages a { display: inline-block; padding:3px 8px; border:1px solid #333; }.dede_pages a:hover, .dede_pages li.thisclass a { background:#555; border-color:#000; color:#fff; text-decoration:none; }.dede_pages li { display: inline; margin: 0 3px;}
+.askpg {padding:5px;}
+.askpg em{ border:1px solid #ccc; padding:1px; background:#fff;}
+.askpg em a { padding:0 8px; border:0;}
+.askpg li.hover a,.askpg li.hover a:visited{color:#777;}
+.askpg li.hover a:hover{color:#777;}
+.content {clear:both;display: block;border-top-width: 2px;border-top-style: solid;border-top-color: #006600;}
+.daan {display: block;font-size: 24px;border-bottom-width: 2px;border-bottom-style: solid;border-bottom-color: #006600;clear: both;}
+.qita {display: block;border-top-width: 1px;border-top-style: dashed;border-top-color: #999999;}
+h1{font:14px/1.5 arial, 宋体, sans-serif;}
+#gg{display:block}
+.phpzy_b .phpzy_y {	display: block;	float: left;height: 60px;width: 100px;line-height: 50px;text-align: center;}
+.phpzy_b .phpzy_z {	display: block;	height: 60px;width: 860px;float: left;}
+.phpzy_b {font-size: 14px;display: block;width: 100%;height:60px;background-color: #eff2fa;}
+.phpzy_b .phpzy_z li {line-height: 30px;display: inline;float: left;height: 25px;width: 160px;}
+-->
+</style>
+</head>
+<body> 
+<div id='dh2'></div>
+<div class="w984" id="header">
+<h1>怎么实现单击表格中的一行数据，这条数据高亮显示，而且点击按钮，能将这条数据发送到另外一个页面</h1>
+<script type='text/javascript'>
+var sogou_param = new Array();
+sogou_param["pid"]  = 'phpzycom';
+sogou_param["ct"]  = 'kwd';
+sogou_param["fmt"]  = 'h_kwd';
+sogou_param["dn"]  = '6';
+sogou_param["iw"]   = '800';
+sogou_param["ih"]   = '20';
+sogou_param["fs"] = '14';
+sogou_param["c_bo"] = 'FFFFFF';
+sogou_param["c_bg"] = 'FFFFFF';
+sogou_param["c_fg"] = 'C90000';
+sogou_param["tdw"] = '';
+sogou_param["charset"] = 'gb2312';
+</script>
+<script language='JavaScript' type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/lu.js'></script>
+<div id="gg">
+<div style="float:left">
+
+<script type='text/javascript'>
+var sogou_param = new Array();
+sogou_param["pid"]  = 'phpzycom';
+sogou_param["ct"]  = 'context';
+sogou_param["fmt"]  = 'h_728_90';
+sogou_param["new"]  = '1';
+sogou_param["iw"]  = '336';
+sogou_param["ih"]  = '280';
+sogou_param["c_bg"]  = 'FFFFFF';
+sogou_param["c_bo"]  = 'FFFFFF';
+sogou_param["c_li"]  = '0000FF';
+sogou_param["c_te"]  = '444444';
+sogou_param["thc"]  = '0000ff';
+sogou_param["tdw"]  = '336';
+sogou_param["tml"]  = '46';
+sogou_param["lod"]  = '94';
+sogou_param["rn"]  = '3';
+sogou_param["cn"]  = '1';
+sogou_param["tfs"]  = '14';
+sogou_param["tft"]  = '0';
+sogou_param["tlh"]  = '18';
+sogou_param["dfs"]  = '14';
+sogou_param["dul"]  = '1';
+sogou_param["ufs"]  = '10';
+sogou_param["tpl"]  = '2';
+sogou_param["vl"]  = '1';
+sogou_param["ppc"]  = '0';
+sogou_param["hl"]  = '3';
+sogou_param["ul"]  = '2';
+sogou_param["sv"]  = '0';
+sogou_param["dms"]  = '0';
+sogou_param["dlh"]  = '16';
+sogou_param["dal"]  = '0';
+sogou_param["dmh"]  = '11';
+sogou_param["ucl"]  = '008000';
+sogou_param["c_hl"]  = 'E10900';
+</script>
+<script language='JavaScript' type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/ct.js'></script>
+
+
+
+</div>
+<div style="float:left">　
+			<script type='text/javascript'>
+var sogou_param = new Array();
+sogou_param["pid"]  = 'phpzycom';
+sogou_param["ct"]  = 'context';
+sogou_param["fmt"]  = 'h_728_90';
+sogou_param["new"]  = '1';
+sogou_param["iw"]  = '336';
+sogou_param["ih"]  = '280';
+sogou_param["c_bg"]  = 'FFFFFF';
+sogou_param["c_bo"]  = 'FFFFFF';
+sogou_param["c_li"]  = '0000FF';
+sogou_param["c_te"]  = '444444';
+sogou_param["thc"]  = '0000ff';
+sogou_param["tdw"]  = '336';
+sogou_param["tml"]  = '46';
+sogou_param["lod"]  = '94';
+sogou_param["rn"]  = '3';
+sogou_param["cn"]  = '1';
+sogou_param["tfs"]  = '14';
+sogou_param["tft"]  = '0';
+sogou_param["tlh"]  = '18';
+sogou_param["dfs"]  = '14';
+sogou_param["dul"]  = '1';
+sogou_param["ufs"]  = '10';
+sogou_param["tpl"]  = '2';
+sogou_param["vl"]  = '1';
+sogou_param["ppc"]  = '0';
+sogou_param["hl"]  = '3';
+sogou_param["ul"]  = '2';
+sogou_param["sv"]  = '0';
+sogou_param["dms"]  = '0';
+sogou_param["dlh"]  = '16';
+sogou_param["dal"]  = '0';
+sogou_param["dmh"]  = '11';
+sogou_param["ucl"]  = '008000';
+sogou_param["c_hl"]  = 'E10900';
+</script>
+<script language='JavaScript' type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/ct.js'></script>
+
+
+</div>
+</div>
+<div class="content">
+<p>如何实现单击表格中的一行数据，这条数据高亮显示，并且点击按钮，能将这条数据发送到另一个页面 <br /> 求代码<</p>
+</div>
+
+<div class="daan">
+<script language="JavaScript" type="text/javascript">
+document.writeln("解决方法");
+</script>
+</div>
+<div class="daancontent">
+<p>想要传参到其他页面，就看你用何种方式打开了，可以用window.open <br /> <dl class='code'>HTML code<pre><br><br>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;<br>&lt;HTML&gt;<br> &lt;HEAD&gt;<br> &lt;TITLE&gt; New Document &lt;/TITLE&gt;<br> &lt;META NAME=&quot;Generator&quot; CONTENT=&quot;EditPlus&quot;&gt;<br> &lt;META NAME=&quot;Author&quot; CONTENT=&quot;&quot;&gt;<br> &lt;META NAME=&quot;Keywords&quot; CONTENT=&quot;&quot;&gt;<br> &lt;META NAME=&quot;Description&quot; CONTENT=&quot;&quot;&gt;<br>&lt;style type=&quot;text/css&quot;&gt;<br><br>table{<br> border:1px solid black;<br>}<br><br>td{<br> border:1px solid black;<br> cursor:pointer;<br>}<br><br>&lt;/style&gt;<br> &lt;/HEAD&gt;<br><br><br> &lt;BODY&gt;<br> &lt;TABLE id=&quot;tbl&quot; height=&quot;300&quot; width=&quot;400&quot; &gt;<br> &lt;TR&gt;<br> &lt;TD&gt;1&lt;/TD&gt;<br> &lt;TD&gt;11&lt;/TD&gt;<br> &lt;TD&gt;111&lt;/TD&gt;<br> &lt;TD&gt;1111&lt;/TD&gt;<br> &lt;TD&gt;1111&lt;/TD&gt;<br> &lt;/TR&gt;<br> &lt;TR&gt;<br> &lt;TD&gt;2&lt;/TD&gt;<br> &lt;TD&gt;22&lt;/TD&gt;<br> &lt;TD&gt;222&lt;/TD&gt;<br> &lt;TD&gt;2222&lt;/TD&gt;<br> &lt;TD&gt;2222&lt;/TD&gt;<br> &lt;/TR&gt;<br> &lt;TR&gt;<br> &lt;TD&gt;3&lt;/TD&gt;<br> &lt;TD&gt;33&lt;/TD&gt;<br> &lt;TD&gt;333&lt;/TD&gt;<br> &lt;TD&gt;3333&lt;/TD&gt;<br> &lt;TD&gt;33333&lt;/TD&gt;<br> &lt;/TR&gt;<br> &lt;TR&gt;<br> &lt;TD&gt;4&lt;/TD&gt;<br> &lt;TD&gt;44&lt;/TD&gt;<br> &lt;TD&gt;444&lt;/TD&gt;<br> &lt;TD&gt;4444&lt;/TD&gt;<br> &lt;TD&gt;44444&lt;/TD&gt;<br> &lt;/TR&gt;<br> &lt;/TABLE&gt;<br><br> &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;<br> &lt;!--<br> var trList=document.getElementsByTagName(&quot;TR&quot;);<br> for(var i=0;i&lt;trList.length;i++)<br> {<br> trList[i].onmouseover=function(){<br> this.style.background=&quot;yellow&quot;;<br> };<br><br> trList[i].onmouseout=function(){<br> this.style.background=&quot;white&quot;;<br> };<br><br> trList[i].onclick=function(){<br> this.style.background=&quot;red&quot;;<br> alert(&quot;该行的内容为：&quot;+this.outerHTML);<br> };<br> }<br> //--&gt;<br> &lt;/SCRIPT&gt;<br> &lt;/BODY&gt;<br>&lt;/HTML&gt;<br><br><br></pre></dl><br></p>
+</div>
+<br>
+	<div class="qita">
+		<p>如何实现单击表格中的一行数据，这条数据高亮显示， <br /> ——至此 js 能解决。 <br /> <br /> 并且点击按钮，能将这条数据发送到另一个页面 <br /> ——另一个页面是否需要高亮行的数据作为查询参数？！ <br /> 还是 打开页面后，再读取高亮行数据作为参考值？！<br></p>
+	</div>                   
+	<div class="qita">
+		<p>var tb=document.getElementById(&quot;table1&quot;); <br /> for(var i=0;i &lt;tb.rows.length;i++) <br /> { <br /> &nbsp; tb.rows[i].onclick=function() <br /> { <br /> &nbsp; <br /> } <br /> }<br></p>
+	</div>                   
+	<div class="qita">
+		<p><fieldset><legend>引用 1 楼 yixianggao 的回复:</legend> <br /> 如何实现单击表格中的一行数据，这条数据高亮显示， <br /> ——至此 js 能解决。 <br /> <br /> 并且点击按钮，能将这条数据发送到另一个页面 <br /> ——另一个页面是否需要高亮行的数据作为查询参数？！ <br /> 还是 打开页面后，再读取高亮行数据作为参考值？！ <br /> </fieldset> <br /> <br /> 需要高亮的数据做查询参数，等于是向另外一个页面发生这条数据的一个数据库表主键，然后再另一个页面根据这个主键查询<br></p>
+	</div>                   
+	<div class="qita">
+		<p><fieldset><legend>引用 3 楼 summily 的回复:</legend> <br /> 需要高亮的数据做查询参数，等于是向另外一个页面发生这条数据的一个数据库表主键，然后再另一个页面根据这个主键查询 <br /> </fieldset> <br /> 那就在那个点击的【按钮】上拼接好主键参数，形如 http://server/nextPage.aspx?id=321 <br /> 点击【按钮】后直接跳转此页面！<br></p>
+	</div>                   
+	<div class="qita">
+		<p><fieldset><legend>引用 4 楼 jol_boy 的回复:</legend> <br /> 想要传参到其他页面，就看你用何种方式打开了，可以用window.open <br /> HTML code &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt; &lt;HTML&gt; &lt;HEAD&gt; &lt;TITLE&gt; New Document &lt;/TITLE&gt; &lt;METANAME=&quot;Generator&quot; CONTENT=&quot;EditPlus&quot;&gt; &lt;METANAME=&quot;Author&quot; CONTENT=&quot;&quot;&gt; &lt;METANAME=&quot;Keywords&quot; CONTENT=&quot;&quot;&gt; &lt;METANAME=&quot;Description&quot; CONTENT=&quot;&quot;&gt; &lt;styletype=&quot;text/css&quot;&gt; <br /> <br /> table{ <br /> &nbsp; &nbsp; border:1px solid black;} <br /> <br /> td{ <br /> &nbsp; &nbsp; border:1px solid black; <br /> &nbsp; &nbsp; cursor:pointer;} &lt;/style&gt; &lt;/HEAD&gt; &lt;BODY&gt; &lt;TABLEid=&quot;tbl&quot; height=&quot;300&quot; width=&quot;400&quot;&gt; &lt;TR&gt; &lt;TD&gt;1 &lt;/TD&gt; &lt;TD&gt;11 &lt;/TD&gt; &lt;TD&gt;111 &lt;/TD&gt; &lt;TD&gt;1111 &lt;/TD&gt; &lt;TD&gt;1111 &lt;/TD&gt; &lt;/TR&gt; &lt;TR&gt; &lt;TD&gt;2 &lt;/TD&gt; &lt;TD&gt;22 &lt;/TD&gt; &lt;TD&gt;222 &lt;/TD&gt; &lt;TD&gt;2222 &lt;/TD&gt; &lt;TD&gt;2222 &lt;/TD&gt; &lt;/TR&gt; &lt;TR&gt; &lt;TD&gt;3 &lt;/TD&gt; &lt;TD&gt;33 &lt;/TD&gt; &lt;TD&gt;333 &lt;/TD&gt; &lt;TD&gt;3333 &lt;/TD&gt; &lt;TD&gt;33333 &lt;/TD&gt; &lt;/TR&gt; &lt;TR&gt; &lt;TD&gt;4 &lt;/TD&gt; &lt;TD&gt;44 &lt;/TD&gt; &lt;TD&gt;444 &lt;/TD&gt; &lt;TD&gt;4444 &lt;/TD&gt; &lt;TD&gt;44444 &lt;/TD&gt; &lt;/TR&gt; &lt;/TABLE&gt; &lt;SCRIPTLANGUAGE=&quot;JavaScript&quot;&gt; &lt;!--var trList=document.getElementsByTagName(&quot;TR&quot;);for(var i=0;i &lt;trList.length;i++) <br /> &nbsp; &nbsp; { <br /> &nbsp; &nbsp; &nbsp; &nbsp; trList[i].onmouseover=function(){this.style.background=&quot;yellow&quot;; <br /> &nbsp; &nbsp; &nbsp; &nbsp; }; <br /> <br /> &nbsp; &nbsp; &nbsp; &nbsp; trList[i].onmouseout=function(){this.style.background=&quot;white&quot;; <br /> &nbsp; &nbsp; &nbsp; &nbsp; }; <br /> <br /> &nbsp; &nbsp; &nbsp; &nbsp; trList[i].onclick=function(){this.style.background=&quot;red&quot;; <br /> <br /> &nbsp; &nbsp; &nbsp; &nbsp; }; <br /> &nbsp; &nbsp; }//--&gt; &lt;/SCRIPT&gt; &lt;/BODY&gt; &lt;/HTML&gt; <br /> </fieldset> <br /> <br /> 鼠标单击以后就让那行保持红色，可是&nbsp; trList[i].onmouseover=function(){this.style.background=&quot;yellow&quot;; 移动之后就又变成黄色了 <br /> &nbsp; &nbsp; &nbsp; &nbsp; }; <br /> <br></p>
+	</div>                   
+	<div class="qita">
+		<p>顶 <br /> <br></p>
+	</div>                   
+	<div class="qita">
+		<p><fieldset><legend>引用 2 楼 happy664618843 的回复:</legend> <br /> var tb=document.getElementById(&quot;table1&quot;); <br /> for(var i=0;i &lt;tb.rows.length;i++) <br /> { <br />   tb.rows[i].onclick=function() <br /> { <br />   <br /> } <br /> } <br /> </fieldset> <br /> <br /> 单击松开后 就都变成一个颜色了啊 <br /> &nbsp; &nbsp; trList[i].onclick=function(){ <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.style.background=&quot;yellow&quot;; <br /> &nbsp; &nbsp; &nbsp; &nbsp; };<br></p>
+	</div>                   
+	<div class="qita">
+		<p><dl class='code'>HTML code<pre><br><br>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;<br>&lt;head&gt;<br>&lt;title&gt;&lt;/title&gt;<br> &lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;<br> function View_SelectInfo(id, a) <br> {<br> alert(id);<br> ChangeTrStyle(a);<br> window.open(&quot;a.aspx?id=&quot;+id,&quot;&quot;);//需要发送的页面<br> }<br> function ChangeTrStyle(obj)//改变选中行的样式<br> {<br> var parent = obj.parentNode;<br> for (var i = 0; i &lt; parent.childNodes.length; i++) <br> {<br> parent.childNodes[i].bgColor = &quot;#FFFFFF&quot;;<br> }<br> obj.bgColor = &quot;#99c3e9&quot;;<br> var pre = obj.previousSibling;<br> while (pre != null) <br> {<br> pre.bgColor = &quot;#FFFFFF&quot;;<br> pre = pre.previousSibling;<br> }<br> }<br> &lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br> &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;<br> &lt;div&gt;<br> &lt;table id=&quot;table1&quot; border=&quot;1&quot;&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('1',this)&quot;&gt;&lt;!--第一个参数需要动态绑定，怎么绑定就看你的需求了--&gt;<br> &lt;td&gt;<br> 1&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('&lt;%# Eval(&quot;id&quot;) %&gt;',this)&quot;&gt;<br> &lt;td&gt;<br> 2&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('&lt;%# Eval(&quot;id&quot;) %&gt;',this)&quot;&gt;<br> &lt;td&gt;<br> 3&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('&lt;%# Eval(&quot;id&quot;) %&gt;',this)&quot;&gt;<br> &lt;td&gt;<br> 4&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('&lt;%# Eval(&quot;id&quot;) %&gt;',this)&quot;&gt;<br> &lt;td&gt;<br> 5&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;/table&gt;<br> &lt;/div&gt;<br> &lt;/form&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br><br><br></pre></dl> <br /> 有什么问题QQ联系我吧，454175664<br></p>
+	</div>                   
+	<div class="qita">
+		<p>9楼的错误 不对啊<br></p>
+	</div>                   
+	<div class="qita">
+		<p>我只是给你做了个例子，错误的原因是因为我没有a.aspx这个页面，并且绑定数据 <br /> &lt;tr onclick=&quot;View_SelectInfo(&#39; &lt;%# Eval(&quot;id&quot;) %&gt;&#39;,this)&quot;&gt; <br /> 这个是要你自己根据的自己的需求去写的<br></p>
+	</div>                   
+	<div class="qita">
+		<p>你这个看着太复杂<br></p>
+	</div>                   
+	<div class="qita">
+		<p>要排除错误也很简单的，就在这个页面的同级目录下建个a.aspx的页面，然后再绑定数据这里（ &lt;tr onclick=&quot;View_SelectInfo(&#39; &lt;%# Eval(&quot;id&quot;) %&gt;&#39;,this)&quot;&gt;）如果你暂时不是动态绑定的话你可以先把 <br /> 这个 &lt;%# Eval(&quot;id&quot;) %&gt;改成静态的，在运行这个例子就不会有错了。<br></p>
+	</div>                   
+	<div class="qita">
+		<p><dl class='code'>HTML code<pre><br><br> function ChangeTrStyle(obj)//改变选中行的样式<br> {<br> var parent = obj.parentNode;//获取当前的所有tr对象<br> for (var i = 0; i &lt; parent.childNodes.length; i++) //改变所有tr的背景颜色<br> {<br> parent.childNodes[i].bgColor = &quot;#FFFFFF&quot;;<br> }<br> obj.bgColor = &quot;#99c3e9&quot;;//更改选中行背景颜色<br> }<br><br></pre></dl><br></p>
+	</div>                   
+	<div class="qita">
+		<p><dl class='code'>HTML code<pre><br><br>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;<br>&lt;head&gt;<br>&lt;title&gt;&lt;/title&gt;<br> &lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;<br> function View_SelectInfo(id, a) <br> {<br> alert(id);<br> ChangeTrStyle(a);<br> window.open(&quot;c.html?id=&quot;+id,&quot;&quot;);<br> }<br> function ChangeTrStyle(obj)//改变选中行的样式<br> {<br> var parent = obj.parentNode;//获取所有tr对相集合<br> for (var i = 0; i &lt; parent.childNodes.length; i++) //更改所有tr背景<br> {<br> parent.childNodes[i].bgColor = &quot;#FFFFFF&quot;;<br> }<br> obj.bgColor = &quot;#99c3e9&quot;;//更改选中行背景颜色<br> }<br> &lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br> &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;<br> &lt;div&gt;<br> &lt;table id=&quot;table1&quot; border=&quot;1&quot;&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('1',this)&quot;&gt;&lt;!--第一个参数需要动态绑定，怎么绑定就看你的需求了--&gt;<br> &lt;td&gt;<br> 1&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('2',this)&quot;&gt;<br> &lt;td&gt;<br> 2&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('3',this)&quot;&gt;<br> &lt;td&gt;<br> 3&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('4',this)&quot;&gt;<br> &lt;td&gt;<br> 4&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;tr onclick=&quot;View_SelectInfo('5',this)&quot;&gt;<br> &lt;td&gt;<br> 5&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;/table&gt;<br> &lt;/div&gt;<br> &lt;/form&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br><br><br></pre></dl> <br /> 在该文件同级目录下建个a.aspx页面即可运行<br></p>
+	</div>                   
+  
+<br>
+<script type='text/javascript'>
+var sogou_param = new Array();
+sogou_param["pid"]  = 'phpzycom';
+sogou_param["ct"]  = 'kwd';
+sogou_param["fmt"]  = 'h_kwd';
+sogou_param["dn"]  = '6';
+sogou_param["iw"]   = '800';
+sogou_param["ih"]   = '20';
+sogou_param["fs"] = '14';
+sogou_param["c_bo"] = 'FFFFFF';
+sogou_param["c_bg"] = 'FFFFFF';
+sogou_param["c_fg"] = 'C90000';
+sogou_param["tdw"] = '';
+sogou_param["charset"] = 'gb2312';
+</script>
+<script language='JavaScript' type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/lu.js'></script>
+<br>
+             	<div class="box cos_box about_answerbox mart">
+                	<h2><span class="about_answer"></span><b>我也来回答</b></h2>
+                    <div class="con ask_common">
+				<form method="post" name="answer" action="post.php?action=answer&amp;id=819208">
+							<textarea name="content" cols="50" rows="10"  style="width:95%;" tabindex="4"></textarea>
+						 <br />回答即可得2分，回答被采纳则获得悬赏分以及奖励20分。
+							
+						  <input type="submit"  value="提交回答" class="bnsrh" tabindex="6">
+						  <input type="checkbox" name="anonymous" value="1" style="margin-left:40px;" tabindex="7">
+						  匿名回答 
+				  </form>
+                    </div>
+                    <div class="bot"></div>
+                </div> 
+<br>
+<script type='text/javascript'>
+var sogou_param = new Array();
+sogou_param["pid"]  = 'phpzycom';
+sogou_param["ct"]  = 'kwd';
+sogou_param["fmt"]  = 'h_kwd';
+sogou_param["dn"]  = '6';
+sogou_param["iw"]   = '800';
+sogou_param["ih"]   = '20';
+sogou_param["fs"] = '14';
+sogou_param["c_bo"] = 'FFFFFF';
+sogou_param["c_bg"] = 'FFFFFF';
+sogou_param["c_fg"] = 'C90000';
+sogou_param["tdw"] = '';
+sogou_param["charset"] = 'gb2312';
+</script>
+<script language='JavaScript' type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/lu.js'></script>
+<br>
+<div class="phpzy_b">
+<div class="phpzy_y"><script>document.writeln("推荐查看");</script></div>
+<div id="phpzy_s" class="phpzy_z">
+<ul>
+<li><a href="http://www.phpzy.com/php/s.php?word=%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">单选按钮</a></li>
+<li><a href="http://www.phpzy.com/php/s.php?word=android+%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">android 单选按钮</a></li>
+<li><a href="http://www.phpzy.com/php/s.php?word=html+%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">html 单选按钮</a></li>
+<li><a href="http://www.phpzy.com/php/s.php?word=flex+%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">flex 单选按钮</a></li>
+<li><a href="http://www.phpzy.com/php/s.php?word=asp+%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">asp 单选按钮</a></li>
+<li><a href="http://www.phpzy.com/php/s.php?word=jsp+%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">jsp 单选按钮</a></li>
+<li><a href="http://www.phpzy.com/php/s.php?word=vc+%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">vc 单选按钮</a></li>
+<li><a href="http://www.phpzy.com/php/s.php?word=%E5%88%A4%E6%96%AD%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">判断单选按钮</a></li>
+<li><a href="http://www.phpzy.com/php/s.php?word=js+%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">js 单选按钮</a></li>
+<li><a href="http://www.phpzy.com/php/s.php?word=excel+%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE">excel 单选按钮</a></li>
+</ul>
+</div>
+</div>
+<br>
+ <div id="body">
+  <div class="phpzy2 phpzy3">
+	<b class="tl"></b><b class="tr"></b>
+	<div class="phper">
+		<div class="phptile">
+			<div class="daohang"><h3>怎么实现单击表格中的一行数据，这条数据高亮显示，而且点击按钮，能将这条数据发送到另外一个页面 相关知识库</h3></div>
+			<div class="bd">
+			  <ul>
+						<li><span class="time">08-21</span><span class="title"><a href="http://www.phpzy.com/php/727.html" >大侠们，来看看，点击confirm中的yes按钮后，怎么跳转到另外一个页面，而且传递一个变量</a></span></li><li><span class="time">08-24</span><span class="title"><a href="http://www.phpzy.com/php/16254.html" >两个listbox，点击按钮将左侧选中的插入到右侧，点击另外一个按钮又把右侧的删除，然后点击第三个按钮掏出第二个listbox的值</a></span></li><li><span class="time">02-26</span><span class="title"><a href="http://www.phpzy.com/php/29158.html" >利用VBA实现，excel表中有3列，表头是第一行，怎么将第2、三列的数据保留到以第一行数据定名的txt文件中？</a></span></li><li><span class="time">08-27</span><span class="title"><a href="http://www.phpzy.com/php/58061.html" >就教列位先辈怎么能把mysql表单提交的数据生成一个表格页面主动发送到指定的邮箱？</a></span></li><li><span class="time">02-19</span><span class="title"><a href="http://www.phpzy.com/php/71335.html" >php中点击按钮跳转到另外一个页面的问题</a></span></li><li><span class="time">02-12</span><span class="title"><a href="http://www.phpzy.com/php/84446.html" >怎么用一个按钮将网页重定向到另外一个页面</a></span></li><li><span class="time">10-09</span><span class="title"><a href="http://www.phpzy.com/php/282661.html" >怎么用JAVASCRIPT定位到表格中的某一行(使这行在页面中心),使它高亮显示</a></span></li><li><span class="time">08-10</span><span class="title"><a href="http://www.phpzy.com/php/313477.html" >jquery dataTable 怎么实现单击一个按钮，显示或隐藏表格某一列呢</a></span></li><li><span class="time">08-10</span><span class="title"><a href="http://www.phpzy.com/php/320438.html" >怎么用js实现 ；两个个表格拖拽复制的问题 就是鼠标拖住一个表格的一行到另外一个表格 可以直接实现复制？</a></span></li><li><span class="time">08-06</span><span class="title"><a href="http://www.phpzy.com/php/321392.html" >怎么实现 一个表格中 拖拽的问题 就是鼠标拖住一个表格的一行到另外一个表格 可以直接实现复制？</a></span></li><li><span class="time">07-01</span><span class="title"><a href="http://www.phpzy.com/php/327828.html" >怎么点击一个按钮，让某个表格隐藏，再点击一次，表格又显示出来</a></span></li><li><span class="time">05-22</span><span class="title"><a href="http://www.phpzy.com/php/348892.html" >怎么实现点击一个按钮后将页面中指定的一张图片另存为.</a></span></li><li><span class="time">03-17</span><span class="title"><a href="http://www.phpzy.com/php/745882.html" >ASP页面中，能不能实现不消点击“刷新”按钮，就可以即时更新数据呢？</a></span></li><li><span class="time">05-25</span><span class="title"><a href="http://www.phpzy.com/php/756792.html" >点击一个按钮，触发另外一个按钮的点击事务，请问先辈们这个怎样实现啊？</a></span></li><li><span class="time">09-23</span><span class="title"><a href="http://www.phpzy.com/php/757409.html" >在.net中怎样实现一个当我点击左侧的按钮时，右侧显示响应的页面（不消跳转仍然在本页实现）的一个框架。该怎样弄呢？</a></span></li><li><span class="time">01-23</span><span class="title"><a href="http://www.phpzy.com/php/760956.html" >怎么实现客户端点击按钮后，不跳转到其他页面而向数据库输入数据？</a></span></li><li><span class="time">09-10</span><span class="title"><a href="http://www.phpzy.com/php/809105.html" >如何实现swing中JEditorPane的Css界说 而且 怎么在使超链接的页面在另外一个窗口显示</a></span></li><li><span class="time">12-28</span><span class="title"><a href="http://www.phpzy.com/php/812106.html" >就教：点击页面的一行要高亮显示，不利用JavaScript能做否？</a></span></li><li><span class="time">11-12</span><span class="title"><a href="http://www.phpzy.com/php/819208.html" >怎么实现单击表格中的一行数据，这条数据高亮显示，而且点击按钮，能将这条数据发送到另外一个页面</a></span></li><li><span class="time">04-24</span><span class="title"><a href="http://www.phpzy.com/php/840883.html" >关于点击 “搜刮” 按钮后，怎么能新打开一个页面显示搜刮后果，而不是由当前页跳转到搜刮页面。不消 window.open</a></span></li><li><span class="time">06-09</span><span class="title"><a href="http://www.phpzy.com/php/853453.html" >怎么将读出的数据在JSP页面中一行三列的显示</a></span></li><li><span class="time">10-07</span><span class="title"><a href="http://www.phpzy.com/php/854173.html" >怎么经由过程按钮删除JSP页面表格中与被选中的复选框（checkbox）在统一行的一行数据</a></span></li><li><span class="time">08-10</span><span class="title"><a href="http://www.phpzy.com/php/855562.html" >怎么用jsp实现图片上传功能，而且把图片的地址保留到sql数据库中，在另外一个页面可以显示出此图片</a></span></li><li><span class="time">04-08</span><span class="title"><a href="http://www.phpzy.com/php/856779.html" >在一个jsp文件怎样实现 点击两个按钮进入分歧页面而且还能传递数据。。</a></span></li><li><span class="time">08-29</span><span class="title"><a href="http://www.phpzy.com/php/954354.html" >C# 动态生成的多个label 点击后能跳转到另外一个窗口而且能知道是哪一个label事务</a></span></li><li><span class="time">06-02</span><span class="title"><a href="http://www.phpzy.com/php/955088.html" >C#中怎么经由过程一个窗体中的按钮点击事务打开另外一个窗体而且封闭本身?</a></span></li><li><span class="time">05-13</span><span class="title"><a href="http://www.phpzy.com/php/966650.html" >怎么实际单击asp.net 页面中的一个按钮 打开一个新的毗连并将此页面显示在当前页的iframe中</a></span></li><li><span class="time">11-30</span><span class="title"><a href="http://www.phpzy.com/php/982174.html" >请帮忙！在asp.net中有一个一行三列的表格，表格第1、三列实现数据显示，每列显示5条，中心列空着，是统一张表不反复数据</a></span></li><li><span class="time">02-25</span><span class="title"><a href="http://www.phpzy.com/php/1027635.html" >PowerPoint东西栏按钮插件怎么在点击时取得地点PPT的文件名？按钮点击时怎么向另外一历程发送字符串数据？怎么向每页的备注中写入字符串？</a></span></li><li><span class="time">05-13</span><span class="title"><a href="http://www.phpzy.com/php/1049487.html" >请帮忙：怎么在列表控件一行上点击一下，在另外一个对话框中的编纂控件显示这一行上的文件名</a></span></li>										
+			  </ul>
+			</div>
+        </div>
+	</div>
+	<b class="bl"></b><b class="br"></b>
+  </div>
+ </div> 
+</div>
+
+<div id='dh1'>
+<div class="w984" id="page">
+  <div id="header">
+    <div class="top-search-box"> <a href="http://www.phpzy.com/php/" class="logo"><img width="187" height="46" alt="php知识库" src="/images/askslogo.gif"></a>
+      <form id="top-search-form" method="get" name="top-search-form" action="/php/s.php">
+        <div style="position: relative; width: 650px;" class="box">
+          <input name="word" size="46" tabindex="1" maxlength="256" id="kw" class="hdi" autocomplete="off">
+           &nbsp;<input type="submit" class="btn-global" value="搜索答案" tabindex="2" id="top-search-btn"></div>
+        <div style="width: 650px;" class="btns">
+          <a href="http://www.phpzy.com/php/s.php?word=php%E6%95%99%E7%A8%8B">php教程</a> 　　<a href="http://www.phpzy.com/php/s.php?word=php168">php168</a> 　　<a href="http://www.phpzy.com/php/s.php?word=php100">php100</a> 　　<a href="http://www.phpzy.com/php/s.php?word=phpnow">phpnow</a> 　　<a href="http://www.phpzy.com/php/s.php?word=php%E6%BA%90%E7%A0%81">php源码</a> 　　<a href="http://www.phpzy.com/php/s.php?word=php+mysql">php mysql</a> 　　<a href="http://www.phpzy.com/php/s.php?word=php%E8%A7%86%E9%A2%91">php视频</a> 　<a href="http://www.phpzy.com/php/s.php?word=php%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD">php图片下载</a> 　<a href="http://www.phpzy.com/php/s.php?word=php%E6%AD%A3%E5%88%99">php正则</a>
+        </div>
+      </form>
+      <div class="clear"></div>
+    </div>
+    <div class="phpzy " id="phpzy">
+      <div style="clear: both;" class="php-phpzy">
+        <div class="phper">
+          <div class="phptile">
+          	<span class="total"><a  href="http://www.phpzy.com/">绿色php资源</a></span>
+            <ul>
+
+						<li>
+<a href="http://www.phpzy.com/php/t1_1/" >网站开发</a></li>
+<li><a href="http://www.phpzy.com/php/t2_1/" >数据库开发</a></li><li>
+<a href="http://www.phpzy.com/php/t3_1/" >开发工具</a></li><li>
+<a href="http://www.phpzy.com/php/t4_1/" >Linux/unix</a></li><li>
+<a href="http://www.phpzy.com/php/t5_1/" >.Net技术</a></li><li>
+<a href="http://www.phpzy.com/php/t6_1/" >Java技术</a></li><li>
+<a href="http://www.phpzy.com/php/t7_1/" >开发语言</a></li><li>
+<a href="http://www.phpzy.com/php/t8_1/" >Windows专区</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+ <div id="footer">
+ Copyright &copy; 2009-2012 <a href="http://www.phpzy.com">phpzy</a><a href="http://www.phpzy.com">php资源</a> <a href="http://www.phpzy.com">绿色php资源</a> 版权所有<BR>
+PHPZY Website Powered by DedeCMS For PHPZY
+<br />豫ICP备07013246号
+  </p>
+ 
+ </div>
+<script src="/js/phpzy_zj.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>

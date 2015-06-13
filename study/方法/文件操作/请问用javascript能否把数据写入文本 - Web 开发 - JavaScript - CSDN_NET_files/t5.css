@@ -1,0 +1,576 @@
+body {
+	font: 12px/normal simsun; margin: 0px auto; text-align: center; font-size-adjust: none; font-stretch: normal;
+}
+img {
+	border: 0px currentColor;
+}
+input {
+	font: 12px/normal simsun; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+button {
+	font: 12px/normal simsun; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+textarea {
+	font: 12px/normal simsun; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+select {
+	color: black;
+}
+.clear {
+	clear: both;
+}
+.divclear::after {
+	height: 100%; clear: both; display: block; visibility: hidden; content: ".";
+}
+a {
+	color: rgb(0, 45, 147); text-decoration: none;
+}
+a:hover {
+	color: rgb(187, 0, 0); text-decoration: underline;
+}
+#bbscsdn_wrap {
+	background: rgb(255, 255, 255); margin: 0px auto; width: 960px;
+}
+* html #bbscsdn_wrap {
+	background: rgb(255, 255, 255); margin: 0px auto; width: 963px;
+}
+.tad {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.nav {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.loc {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.fm {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.tit {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.mframe {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.sq {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.comt {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.pub_footer {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.gbtxtad {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.tad ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.nav ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.fm ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.mframe ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.comt ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.mframe2 ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.tad ul {
+	width: 960px; font-size: 1px; float: left;
+}
+.tad ul li.l {
+	float: left;
+}
+.tad ul li.r {
+	float: right;
+}
+.nav {
+	padding: 0px; width: 960px;
+}
+.nav img.logo {
+	margin: 0px 0px 0px 10px; width: 146px; height: 54px;
+}
+.nav .searchpanel {
+	width: 742px; text-align: right; margin-top: 20px; float: right;
+}
+.nav .user {
+	width: 742px; text-align: right; margin-top: 20px; float: right;
+}
+.nav input {
+	vertical-align: middle;
+}
+.nav input[type='text'] {
+	height: 18px;
+}
+.loc {
+	padding: 5px; border: 1px solid rgb(169, 203, 238); width: 948px;
+}
+.loc p {
+	margin: 0px; padding: 0px; line-height: 35px;
+}
+.loc p img {
+	float: right;
+}
+.loc p a {
+	padding: 0px 5px; color: rgb(51, 51, 51);
+}
+.fm {
+	background: rgb(250, 250, 251); padding: 5px; border: 1px solid rgb(169, 203, 238); width: 948px;
+}
+.fm ul.menu {
+	width: 500px; float: left;
+}
+.fm ul.menu li {
+	background: url("http://c.csdn.net/bbs/t/5/i/bbspage_addpic1.gif") repeat-x; margin: 0px 4px 0px 0px; float: left;
+}
+.fm ul.menu table {
+	left: -45px; top: 1px; border-collapse: collapse; position: relative; z-index: 100;
+}
+.fm ul.menu li a {
+	padding: 0px 0px 0px 5px; border: 1px solid rgb(12, 97, 176); width: 80px; height: 22px; text-align: center; color: rgb(51, 51, 51); line-height: 22px; text-decoration: none; display: block;
+}
+.fm ul.menu li :visited {
+	padding: 0px 0px 0px 5px; border: 1px solid rgb(12, 97, 176); width: 80px; height: 22px; text-align: center; color: rgb(51, 51, 51); line-height: 22px; text-decoration: none; display: block;
+}
+html > body .fm ul.menu li a {
+	line-height: 23px;
+}
+.fm ul.menu li :visited {
+	line-height: 23px;
+}
+.fm ul.menu li :hover {
+	background: rgb(229, 236, 243); z-index: 110;
+}
+.fm ul.menu ul {
+	margin: 0px; width: 85px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none; visibility: hidden; position: absolute;
+}
+.fm ul.menu ul li {
+	background: rgb(229, 236, 243); color: rgb(255, 255, 255); border-bottom-color: rgb(189, 217, 232); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.fm ul.menu ul li a {
+	border: 0px currentColor; color: rgb(0, 0, 0);
+}
+.fm ul.menu ul li :visited {
+	border: 0px currentColor; color: rgb(0, 0, 0);
+}
+.fm ul.menu ul li a {
+	color: rgb(0, 0, 0); font-weight: normal;
+}
+.fm ul.menu ul li :hover {
+	background: rgb(229, 236, 243);
+}
+.fm ul.menu li:hover ul {
+	color: rgb(255, 255, 255); visibility: visible;
+}
+.fm ul.menu a:hover ul {
+	color: rgb(255, 255, 255); visibility: visible;
+}
+.fm ul.menu li a.bt1 {
+	background: url("http://c.csdn.net/bbs/t/5/i/bbspage_addpic2.gif") no-repeat 0px -2px;
+}
+.fm ul.menu li a.bt2 {
+	background: url("http://c.csdn.net/bbs/t/5/i/pic_04.gif") no-repeat 3px 4px; color: rgb(187, 0, 0);
+}
+.fm ul.menu li a.bt3 {
+	background: url("http://c.csdn.net/bbs/t/5/i/pic_01.gif") no-repeat 3px 4px;
+}
+.fm ul.menu li a.bt4 {
+	background: url("http://c.csdn.net/bbs/t/5/i/pic_08.gif") no-repeat 3px 3px; color: rgb(187, 0, 0);
+}
+.fm ul.plist {
+	height: 22px; float: right;
+}
+.fm ul.plist li {
+	margin: 0px 3px; float: left;
+}
+.fm ul.plist li a {
+	height: 22px; color: rgb(51, 51, 51); line-height: 22px; float: left; display: block;
+}
+.fm ul.plist li em {
+	font-style: normal;
+}
+.fm ul.plist li em a {
+	padding: 0px 5px; border: 1px solid rgb(30, 125, 213); float: left; display: block;
+}
+.fm ul.plist li em a:hover {
+	background: rgb(191, 218, 242); text-decoration: none;
+}
+.fm ul.plist li em a.on {
+	background: rgb(191, 218, 242);
+}
+.tit {
+	background: url("http://c.csdn.net/bbs/t/5/i/pic_titbg02.gif") repeat-x rgb(52, 126, 161); padding: 3px 5px; border: 1px solid rgb(44, 97, 137); width: 948px;
+}
+.tit h1 {
+	margin: 0px; padding: 3px 0px 0px; color: rgb(255, 255, 255); font-size: 14px;
+}
+.tit h1 em {
+	font: bold 14px/normal simsun; margin: 0px 0px 0px 3px; color: rgb(255, 0, 0); font-size-adjust: none; font-stretch: normal;
+}
+.tit h1 cite {
+	float: right;
+}
+.tit dfn a {
+	background: url("http://c.csdn.net/bbs/t/5/i/bbsbtn_fav.gif") no-repeat; margin: -3px 0px 0px 5px; width: 52px; height: 22px; text-indent: -1000em; font-size: 12px; font-style: normal; float: right; display: block;
+}
+.tit dfn a:visited {
+	background: url("http://c.csdn.net/bbs/t/5/i/bbsbtn_fav.gif") no-repeat; margin: -3px 0px 0px 5px; width: 52px; height: 22px; text-indent: -1000em; font-size: 12px; font-style: normal; float: right; display: block;
+}
+.tit code a {
+	background: url("http://c.csdn.net/bbs/t/5/i/bbsbtn_share.gif") no-repeat; margin: -3px 0px 0px 5px; width: 52px; height: 22px; text-indent: -1000em; font-size: 12px; font-style: normal; float: right; display: block;
+}
+.tit code a:visited {
+	background: url("http://c.csdn.net/bbs/t/5/i/bbsbtn_share.gif") no-repeat; margin: -3px 0px 0px 5px; width: 52px; height: 22px; text-indent: -1000em; font-size: 12px; font-style: normal; float: right; display: block;
+}
+.mframe {
+	margin: 2px 0px; width: 960px; text-align: left; float: left;
+}
+.mframe ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.mframe {
+	border: 1px solid rgb(169, 203, 238);
+}
+.mframe td.lf {
+	background: rgb(246, 249, 254); padding: 20px 10px 13px 15px; width: 162px; vertical-align: top; border-right-color: rgb(169, 203, 238); border-right-width: 1px; border-right-style: solid;
+}
+.mframe td.lf div.df {
+	width: 162px;
+}
+.mframe td.lf ul li {
+	padding: 4px 0px;
+}
+.mframe td.lf ul li.center {
+	text-align: left;
+}
+.mframe td.lf ul li.center img {
+	border: 1px solid rgb(204, 204, 204);
+}
+.mframe td.lf ul li dfn {
+	padding: 2px 0px; text-align: left; font-style: normal; font-weight: bold; display: block;
+}
+.mframe td.lf ul li dfn a {
+	color: rgb(51, 51, 51);
+}
+.mframe td.lf ul li cite {
+	background: url("http://c.csdn.net/bbs/t/5/i/bbspage_addpic4.gif") no-repeat right; margin: 0px 3px 0px 0px; height: 25px; line-height: 25px; font-style: normal; float: left; display: block;
+}
+.mframe td.lf ul li cite a {
+	background: url("http://c.csdn.net/bbs/t/5/i/bbspage_addpic3.gif") no-repeat left; padding: 0px 5px; float: left; display: block;
+}
+.mframe td.lf ul li cite a:hover {
+	text-decoration: none;
+}
+.mframe td.lf ul li em {
+	margin: 23px 0px 0px; font-style: normal; float: left;
+}
+.mframe td.lf ul li em a {
+	color: rgb(0, 0, 0);
+}
+.mframe td.lf ul li div.medalregion {
+	float: left;
+}
+.mframe td.lf ul li div.medalregion div {
+	float: left;
+}
+.mframe td.lf ul li div.medalregion div p.medalnum {
+	font: bold 9px/normal Tahoma, simsun; margin: 2px 0px 0px 19px; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+.mframe td.rw {
+	vertical-align: top;
+}
+.mtxt {
+	margin: 10px 0px; padding: 10px 20px; width: 100%; line-height: 23px; font-size: 14px;
+}
+.mtxt p.unlog {
+	background: url("http://c.csdn.net/bbs/t/5/i/pic_09.gif") no-repeat 10px 20px rgb(239, 239, 239); font: bold 14px/normal simsun; margin: 30px 0px 0px; padding: 30px 10px 30px 50px; border: 1px solid rgb(204, 204, 204); font-size-adjust: none; font-stretch: normal;
+}
+.mtxt p.unlog a {
+	padding: 0px 5px; color: rgb(204, 51, 0);
+}
+.mtxt p.be {
+	background: rgb(239, 239, 239); margin: 10px 0px; padding: 5px 15px; border: 1px solid rgb(204, 204, 204); width: 250px; text-align: left; color: rgb(187, 0, 0); font-size: 12px; white-space: nowrap;
+}
+.msgfont {
+	width: 718px; word-break: break-all; overflow-x: hidden;
+}
+.msgfont span {
+	line-height: 150%;
+}
+.mtxt fieldset {
+	font: 12px/19px simsun; margin: 10px; padding: 10px; border: 1px solid rgb(202, 217, 234); width: 620px; word-break: break-all; overflow-x: hidden; font-size-adjust: none; font-stretch: normal;
+}
+.mtxt fieldset legend {
+	font: bold 12px/normal simsun; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+.fbart {
+	padding: 3px 6px; height: 18px; line-height: 18px; border-bottom-color: rgb(169, 203, 238); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.fbart em {
+	padding: 0px 3px; font-style: normal; font-weight: bold; float: right;
+}
+.fbart dfn {
+	padding: 0px 3px; font-style: normal; float: right;
+}
+.fbart dfn code {
+	color: rgb(204, 51, 0); font-style: normal;
+}
+.mframe td.rb {
+	vertical-align: bottom;
+}
+.fbarb {
+	background: rgb(246, 249, 254); padding: 3px 6px; height: 18px; line-height: 18px; clear: both; border-top-color: rgb(169, 203, 238); border-top-width: 1px; border-top-style: solid;
+}
+.fbarb ul {
+	float: right;
+}
+.fbarb ul li {
+	float: left;
+}
+.fbarb ul li a {
+	padding: 0px 6px; color: rgb(0, 0, 0); text-decoration: none; border-right-color: rgb(102, 102, 102); border-right-width: 1px; border-right-style: solid;
+}
+.fbarb ul li a.nob {
+	border: 0px currentColor;
+}
+.fbarb ul li a.dr {
+	color: rgb(187, 0, 0);
+}
+.fbarb ul li a.gr {
+	color: rgb(0, 45, 147);
+}
+.fbarb div.rt {
+	width: 440px; overflow: hidden; white-space: nowrap;
+}
+.sq {
+	border: 1px solid rgb(169, 203, 238); width: 958px; float: left;
+}
+.sq dl {
+	margin: 0px; padding: 0px; width: 958px; float: left;
+}
+.sq dt {
+	background: rgb(246, 249, 254); margin: 0px 0px 5px; padding: 5px 10px; color: rgb(0, 0, 0); font-size: 14px; font-weight: bold; border-bottom-color: rgb(169, 203, 238); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.sq dd {
+	background: url("http://c.csdn.net/bbs/t/5/i/pic_dot.gif") no-repeat 8px 8px; margin: 1px 2px; padding: 0px 0px 0px 19px; width: 450px; height: 20px; line-height: 20px; overflow: hidden; font-size: 14px; float: left; white-space: nowrap;
+}
+.sq dd a {
+	color: rgb(0, 45, 147); text-decoration: underline;
+}
+.sq dd a:hover {
+	color: rgb(187, 0, 0); text-decoration: underline;
+}
+.comt {
+	padding: 10px 0px 2px 10px; border: 1px solid rgb(169, 203, 238); width: 960px; float: left;
+}
+.c_rc {
+	width: 730px; float: right; display: inline;
+}
+.c_rc h6 {
+	font: 12px/22px simsun; margin: 0px 0px 5px; padding: 0px 5px; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+.c_rc h6 em {
+	margin: 0px 15px 0px 0px; font-style: normal; font-weight: bold;
+}
+.c_rc h6 a {
+	padding: 0px 4px; color: rgb(187, 0, 0); font-weight: bold;
+}
+.c_rc p {
+	background: rgb(246, 246, 246); margin: 3px 0px; padding: 0px 10px; border: 1px solid rgb(235, 235, 235); color: rgb(7, 12, 112); line-height: 23px;
+}
+img.grade {
+	background: url("http://c.csdn.net/bbs/t/5/i/rank.gif") no-repeat;
+}
+img.user1 {
+	width: 11px; height: 9px;
+}
+img.user2 {
+	width: 22px; height: 9px;
+}
+img.user3 {
+	width: 33px; height: 9px;
+}
+img.user4 {
+	width: 44px; height: 9px;
+}
+img.user5 {
+	width: 55px; height: 9px;
+}
+img.star1 {
+	background-position: 0px -12px; width: 10px; height: 9px;
+}
+img.star2 {
+	background-position: 0px -12px; width: 20px; height: 9px;
+}
+img.star3 {
+	background-position: 0px -12px; width: 30px; height: 9px;
+}
+img.star4 {
+	background-position: 0px -12px; width: 40px; height: 9px;
+}
+img.star5 {
+	background-position: 0px -12px; width: 50px; height: 9px;
+}
+img.diam1 {
+	background-position: 0px -24px; width: 16px; height: 13px;
+}
+img.diam2 {
+	background-position: 0px -24px; width: 32px; height: 13px;
+}
+img.diam3 {
+	background-position: 0px -24px; width: 48px; height: 13px;
+}
+img.diam4 {
+	background-position: 0px -24px; width: 64px; height: 13px;
+}
+img.diam5 {
+	background-position: 0px -24px; width: 80px; height: 13px;
+}
+.gbtxtad div.gbl {
+	width: 468px; float: left;
+}
+.gbtxtad div.gbr {
+	width: 468px; float: right;
+}
+.pub_footer {
+	padding: 3px 0px; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; float: left;
+}
+.pub_footer dl {
+	margin: 0px; padding: 5px 0px 0px; text-align: center;
+}
+.pub_footer dd {
+	padding: 0px 0px 5px;
+}
+.pub_footer dd a {
+	padding: 0px 5px;
+}
+.pub_footer dd a {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+.pub_footer dd a:hover {
+	color: rgb(1, 95, 182); text-decoration: underline;
+}
+dl.code {
+	width: 718px; overflow: auto; font-size: 12px;
+}
+dl.code dt {
+	height: 24px; color: rgb(51, 51, 51); line-height: 24px; text-indent: 6px; font-weight: bold; background-color: rgb(245, 245, 245);
+}
+dl.code dd {
+	margin: 0px; border: 1px solid rgb(221, 221, 221);
+}
+.medalregion {
+	font: bold 8px/normal Tahoma,sans-serif; color: white; font-size-adjust: none;
+}
+.moremedal {
+	color: black; line-height: 55px; padding-left: 5px; font-family: simsun; font-size: 12px; font-weight: normal;
+}
+.askfra {
+	background: rgb(170, 203, 238); margin: 0px auto; border: 0px currentColor; width: 960px;
+}
+.askfra a {
+	color: rgb(0, 51, 204);
+}
+.askfra th.atit {
+	background: url("http://c.csdn.net/bbs/t/5/i/pic_23.gif") repeat-x; padding: 7px 56px; border: 1px solid rgb(255, 255, 255); height: 15px; color: rgb(255, 255, 255);
+}
+.askfra td {
+	background: rgb(255, 255, 255); padding: 10px; vertical-align: middle;
+}
+.askfra td.bg {
+	background: rgb(246, 249, 254); width: 15%; text-align: right; font-weight: bold;
+}
+.askfra td.boxtit input {
+	font: 20px/normal simsun; padding: 2px; border: 1px solid rgb(205, 226, 248); font-size-adjust: none; font-stretch: normal;
+}
+.askfra td ul {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+.askfra td em {
+	color: rgb(255, 0, 0); font-style: normal;
+}
+.askfra td input.point {
+	padding: 2px; border: 1px solid rgb(205, 226, 248);
+}
+.askfra td ul.abtn::after {
+	height: 1px; clear: both; display: block; visibility: hidden; content: ".";
+}
+.askfra td ul.abtn li {
+	background: url("http://c.csdn.net/bbs/t/5/i/btn_01.gif") no-repeat; margin: 0px 6px 0px 0px; width: 82px; height: 28px; text-align: center; line-height: 28px; float: left;
+}
+.askfra td ul.abtn li a {
+	color: rgb(0, 0, 0);
+}
+.askfra td ul.abtn li a:hover {
+	text-decoration: none;
+}
+.askfra td ol {
+	background: rgb(247, 247, 247); margin: 10px 0px 0px; padding: 5px 30px; border: 1px solid rgb(185, 185, 185); color: rgb(7, 12, 112); line-height: 150%; clear: both;
+}
+.mtxt td p.login {
+	background: rgb(247, 246, 246); margin: 20px 0px 0px; padding: 20px 0px; border: 1px solid rgb(205, 205, 205); width: 720px; text-align: center; color: rgb(0, 0, 0); font-size: 14px; font-weight: bold; vertical-align: bottom;
+}
+.mtxt td p.login img {
+	vertical-align: middle;
+}
+.mtxt td p.login a {
+	color: rgb(183, 5, 5);
+}
+.mtxt td p.login a:link {
+	color: rgb(183, 5, 5); text-decoration: none;
+}
+.mtxt td p.login a:hover {
+	color: rgb(183, 5, 5); text-decoration: underline;
+}
+.prime {
+	color: red;
+}
+.lock {
+	color: red;
+}
+.chout {
+	overflow: visible; float: left; display: none; position: absolute; max-height: 22px; max-width: 400px;
+}
+.chout div {
+	margin: 0px 2px; padding: 1px 0px; float: left;
+}
+.chout .menu {
+	margin: 0px; padding: 4px 8px; border: 1px solid rgb(189, 217, 232); width: 80px; height: 14px; float: left; background-color: rgb(229, 236, 243);
+}
+.chout .menu a {
+	margin: 0px; padding: 0px 7px; color: black;
+}
+.chout .arrow {
+	color: rgb(255, 185, 67);
+}
+.c_rc ol {
+	background: rgb(246, 246, 246); margin: 10px 0px 0px; padding: 6px 20px; border: 1px solid rgb(235, 235, 235);
+}
+.c_rc ol li {
+	margin: 0px 0px 0px 15px; color: rgb(7, 12, 112); line-height: 23px;
+}
+.c_rc ol li a {
+	text-decoration: underline;
+}
+.c_lc dl li {
+	background: url("http://c.csdn.net/bbs/t/5/i/pic_dot.gif") no-repeat 0px 8px; margin: 0px; padding: 0px 0px 0px 10px; width: 200px; line-height: 21px; overflow: hidden; list-style-type: none; white-space: nowrap;
+}
+ul .honor {
+	display: none;
+}
+.hidden {
+	display: none;
+}

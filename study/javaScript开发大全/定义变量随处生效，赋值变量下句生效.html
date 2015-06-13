@@ -1,0 +1,19 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>定义变量随处生效，赋值变量下句生效</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+<script type="text/javascript" language="javascript" >
+var myCount=1;
+function myFun()
+{
+    document.write(myCount,"<br>");
+    var myCount=100;
+    document.write(myCount,"<br>");
+}
+myFun();
+</script>
+</head>
+<body>
+</body>
+</html>

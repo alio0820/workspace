@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jQuery实现的漂亮的滑动门式二级导航菜单丨芯晴网页特效丨CsrCode.Cn</title>
+<style>
+body {
+ margin-left: 0px;
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+}
+a:link {
+ text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+}
+a:hover {
+ text-decoration: none;
+}
+a:active {
+ text-decoration: none;
+}
+#nav_wrap{margin:20px auto;}
+#nav li{ text-align:center;font-size:12px;}
+
+#nav_wrap { width:960px; overflow:hidden; }
+#nav{ background:url(images/nav_bg.gif) repeat-x; height:39px; position:relative; width:950px; margin:0 auto; }
+#nav .l{ background:url(images/navnbg.gif) no-repeat 0px 0px; height:39px; width:2px; float:left}
+#nav .r{ background:url(images/navnbg.gif) no-repeat -4px 0px; height:39px; width:2px; float:right}
+#nav .bt_qnav { float:right; } 
+#nav .bt_qnav a{ width:31px; height:29px; line-height:39px;display:block;padding:9px 2px 0 0;}
+#nav .c{ float:left;margin:0;padding:0}
+#nav li { float:left; list-style:none; }
+#nav li .v a{ width:83px;height:39px; line-height:33px; display:block; color:#FFF; background:url(images/navnbg.gif) no-repeat -87px 6px; float:left; font-family:"Microsoft Yahei";}
+#nav li .v a:hover,#nav li .v .sele{background:url(images/navnbg.gif) no-repeat 0px -47px; color:#116406; line-height:42px; font-size:14px}
+#nav .kind_menu { height:30px;*height:29px; line-height:30px;vertical-align:middle; position:absolute; top:37px;*top:39px; left:70px; width:880px; text-align:left; display:none; background:url(images/nav_bg1.gif) repeat-x bottom; color:#656565; }
+#nav .kind_menu a {color:#656565; float:left; text-align:center; width:90px; font-family:Arial, Helvetica, sans-serif;}
+#nav .kind_menu a:hover { color:#ff4300; background:url(images/navnbg.gif) no-repeat 1px -91px;*background:url(images/navnbg.gif) no-repeat 1px -93px;}
+#nav .kind_menu span { font-size:10px;  color:#cecece; line-height:30px; *line-height:26px; float:left }
+#tmenu{ background:url(images/nav_bg1.gif) repeat-x bottom; height:28px; border-bottom:1px solid #eee;  }
+</style>
+<SCRIPT src="jquery1.3.2.js" type="text/javascript"></SCRIPT>
+</head>
+<body style="text-align:center">
+
+<DIV id=nav_wrap>
+<DIV id=nav>
+<DIV class=l></DIV>
+<UL class=c>
+  <LI><SPAN class=v><A href="#" target="_blank">首页</A></SPAN> 
+  <DIV class=kind_menu style="LEFT: 20px">欢迎光临 芯晴网页特效丨CsrCode.Cn ! </DIV></LI>
+  <LI><SPAN class=v><A href="http://www.CsrCode.cn/html/txdm/">网页特效①</A></SPAN> 
+  <DIV class=kind_menu style="LEFT: 40px">
+<a href="http://www.CsrCode.cn/html/txdm/cddh/" title="">菜单导航特效</a><SPAN>|</SPAN>
+<a href="http://www.CsrCode.cn/html/txdm/tcys/" title="">图层样式特效</a><SPAN>|</SPAN>
+<a href="http://www.CsrCode.cn/html/txdm/ljwb/" title="">链接文本特效</a><SPAN>|</SPAN>
+<a href="http://www.CsrCode.cn/html/txdm/txtx/" title="">图形图像特效</a><SPAN>|</SPAN>
+<a href="http://www.CsrCode.cn/html/txdm/sbtx/" title="">鼠标特效代码</a><SPAN>|</SPAN>
+<a href="http://www.CsrCode.cn/html/txdm/ymck/" title="">页面窗口特效</a> </DIV></LI>
+  <LI><SPAN class=v><A href="http://www.CsrCode.cn/html/txdm/">网页特效②</A></SPAN> 
+  <DIV class=kind_menu>
+<a href="http://www.CsrCode.cn/html/txdm/wybj/" title="">网页背景特效</a><SPAN>|</SPAN>
+<a href="http://www.CsrCode.cn/html/txdm/rqsj/" title="">日期时间特效</a><SPAN>|</SPAN>
+<a href="http://www.CsrCode.cn/html/txdm/ymss/" title="">页面搜索特效</a><SPAN>|</SPAN>
+<a href="http://www.CsrCode.cn/html/txdm/bgtx/" title="">表格表单特效</a><SPAN>|</SPAN>
+<a href="http://www.CsrCode.cn/html/txdm/qtdm/" title="">其他网页特效</a> </DIV></LI>
+  <LI><SPAN class=v><A href="http://Links.CsrCode.Cn">友情链接</A></SPAN> 
+  <DIV class=kind_menu>
+<a href="http://www.CsrCode.cn/html/txdm/">网页特效</a><SPAN>|</SPAN>
+<a href="http://www.33567.cn/">网址导航</a><SPAN>|</SPAN>
+<a href="http://Download.CsrCode.Cn/">源码下载</a><SPAN>|</SPAN>
+<a href="http://Links.CsrCode.Cn/">链接平台</a><SPAN>|</SPAN>
+<a href="http://Changshi.CsrCode.Cn/">生活常识</a><SPAN>|</SPAN>
+<a href="http://ww.33567.cn/">搜搜问问</a><SPAN>|</SPAN>
+<a href="http://Shop.CsrCode.Cn/">购物导航</a> </DIV></LI>
+  </UL>
+<DIV class=r></DIV>
+</DIV><!--nav-->
+<DIV id=tmenu></DIV>
+</DIV><!--nav_wrap-->
+<SCRIPT src="${pageContext.request.contextPath}/jquery1.3.2.js" type="text/javascript">
+    var site_url = window.location.href.toLowerCase(); 
+	jQuery(document).ready(function($)
+ switch (true) {  
+  default :
+   $jquery1.3.2.js("#nav li").attr("class","");
+   $("#nav li").eq(0).attr("class","nav_lishw");
+   $(".nav_lishw .v a").attr("class","sele");
+   $(".nav_lishw .kind_menu").show();
+ } 
+ $("#nav li").hover(
+  function(){
+   clearTimeout(setTimeout("0")-1);
+   $("#nav .kind_menu").hide(); 
+   $("#nav li .v .sele").attr("class","shutAhover");
+   $(this).attr("id","nav_hover")
+   $("#nav_hover .v a").attr("class","sele");
+   $("#nav_hover .kind_menu").show(); 
+  },
+  function(){
+   
+   if($(this).attr("class") != "nav_lishw"){
+    $("#nav_hover .v .sele").attr("class","");
+    $("#nav_hover .kind_menu").hide(); 
+   }
+   $(this).attr("id","")
+   $("#nav li .v .shutAhover").attr("class","sele");
+   setTimeout(function(){
+    $(".nav_lishw .kind_menu").show();
+    $(".nav_lishw .v a").attr("class","sele");
+   },50); 
+  }
+ );
+ 
+</SCRIPT>
+</body>
+</html>
+如不显示二级菜单效果，请刷新页面。
+<p align="center">本特效由 <a href="http://www.CsrCode.cn" target="_blank">芯晴网页特效</a>丨CsrCode.Cn 收集于互联网，只为兴趣与学习交流，不作商业用途。</p>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>input.html</title>
+    <style>
+    	.i-txt:focus{
+    	background: none repeat scroll 0 0 #F4FAFF;
+    	border-color:#9DD4FD;
+    	box-shadow:0 1px 1px rgba(0,0,0,0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    	outline:0 none;
+    	}
+		.i-txt:active{
+    	background: none repeat scroll 0 0 #F4FAFF;
+    	border-color:#9DD4FD;
+    	box-shadow:0 1px 1px rgba(0,0,0,0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    	outline:0 none;
+    	}
+    	.i-txt{
+    		height:25px;
+    		line-height:25px;
+    	}
+    	input:focus{	
+    		border: 1px dotted black;
+    	}
+    	input.error{
+    		border: 1px dotted red;
+    	}
+    </style>
+  </head>
+  
+  <body>
+    <input type="text" class="i-txt error" title="输入框已高亮"/>
+  </body>
+</html>

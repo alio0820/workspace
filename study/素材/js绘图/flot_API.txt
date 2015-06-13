@@ -1,0 +1,1452 @@
+Flot Reference
+flot参考文档
+--------------
+
+Consider a call to the plot function:
+下面是对绘图函数plot的调用：
+
+   var plot = $.plot(placeholder, data, options)
+
+The placeholder is a jQuery object or DOM element or jQuery expression
+that the plot will be put into. This placeholder needs to have its
+width and height set as explained in the README (go read that now if
+you haven't, it's short). The plot will modify some properties of the
+placeholder so it's recommended you simply pass in a div that you
+don't use for anything else. Make sure you check any fancy styling
+you apply to the div, e.g. background images have been reported to be a
+problem on IE 7.
+
+占位符placeholder是一个jQuery对象或者DOM元素或者jQuery表单式，绘图函数将把图表画在placeholder内。
+这个占位符需要设置高宽(这在README文档里面已经介绍过，如果你还没有阅读过现在就去阅读吧，文档很短)。
+plot函数画图时将修改这个占位符的内容，因此你最好使用一个空的DIV元素作为占位符，另外注意不要给占位符
+设置花哨的样式，比如，在IE7.0下，给占位符设置背景图将会出错。
+
+
+
+The format of the data is documented below, as is the available
+options. The "plot" object returned has some methods you can call.
+These are documented separately below.
+
+函数可以使用的数据格式会在后面说明，plot返回对象有一些方法可供调用，在后面会分开介绍。
+
+Note that in general Flot gives no guarantees if you change any of the
+objects you pass in to the plot function or get out of it since
+they're not necessarily deep-copied.
+
+另外请注意，flot不保证plot函数内的对象被修改或删除后仍然能正常工作(废话)。
+
+Data Format
+数据格式
+-----------
+
+The data is an array of data series:
+flot的数据是一个数列数组(plot函数中的data参数:每条曲线一个data项参数，绘制多条曲线时，是一个数组，每个数组元素是一条曲线的data项参数)：
+
+  [ series1, series2, ... ]
+
+A series can either be raw data or an object with properties. The raw
+data format is an array of points:
+
+数列可以是原始数据，也可以是数据对象，原始数据格式是由一组表示数据点的坐标值的数组构成：
+
+  [ [x1, y1], [x2, y2], ... ]
+
+E.g.
+
+  [ [1, 3], [2, 14.01], [3.5, 3.14] ]
+
+Note that to simplify the internal logic in Flot both the x and y
+values must be numbers (even if specifying time series, see below for
+how to do this). This is a common problem because you might retrieve
+data from the database and serialize them directly to JSON without
+noticing the wrong type. If you're getting mysterious errors, double
+check that you're inputting numbers and not strings.
+
+请注意，flot的纵横坐标值都必须是数字(即使用时间数列也是，后面会介绍到)，
+这是个很常见的错误，因为你很可能从数据库获取数据后没有检查数据类型就直接转化成json对象使用。
+如果你觉得遇到了莫名其妙的错误，请确认一下你输入的是数字而不是字符串。
+
+If a null is specified as a point or if one of the coordinates is null
+or couldn't be converted to a number, the point is ignored when
+drawing. As a special case, a null value for lines is interpreted as a
+line segment end, i.e. the points before and after the null value are
+not connected.
+
+如果坐标为值为空 ,或者其中的一个坐标值为空，或者不是数字，或者说不能转换为数字，那么这个节点将被忽略，
+并且该节点前后的2个节点之间不会使用直线来连接。
+
+Lines and points take two coordinates. For bars, you can specify a
+third coordinate which is the bottom of the bar (defaults to 0).
+
+折线图和散点图每个节点有2个参数，直方图则有3个参数，第三个参数来指定直方图的底部位置(缺省值是0)。
+
+The format of a single series object is as follows:
+
+单个图表对象的数据格式参数如下所示：
+
+  {
+    color: color or number   //颜色
+    data: rawdata  //数据
+    label: string  //曲线名称
+    lines: specific lines options  //折线图坐标参数
+    bars: specific bars options   //直方图坐标参数
+    points: specific points options  //散点图坐标参数
+    xaxis: 1 or 2  //使用哪一条X轴，如果某条数轴没有被任何一条曲线使用，该数轴不会在图表上出现
+    yaxis: 1 or 2  //使用哪一条Y轴
+    clickable: boolean  //允许监听鼠标点击事件
+    hoverable: boolean  //允许监听鼠标悬停事件
+    shadowSize: number //曲线阴影
+  }
+
+You don't have to specify any of them except the data, the rest are
+options that will get default values. Typically you'd only specify
+label and data, like this:
+
+一般情况下你无须设置每一个参数， 你只需要设置其中几个特定的参数即可，其他参数会使用默认值。例如：
+  {
+    label: "y = 3",
+    data: [[0, 3], [10, 3]]
+  }
+
+The label is used for the legend, if you don't specify one, the series
+will not show up in the legend.
+
+label用于指定曲线名称，如果没有设置label的值，图表标题区域不会出现。
+
+If you don't specify color, the series will get a color from the
+auto-generated colors. The color is either a CSS color specification
+(like "rgb(255, 100, 123)") or an integer that specifies which of
+auto-generated colors to select, e.g. 0 will get color no. 0, etc.
+
+如果没有设置曲线颜色，程序会自动采用默认颜色(options项里的colors数列)。颜色值可以是CSS颜色格式(RGB格式、16进制颜色、WEB通用颜色名)，
+还可以是数字编号，数字编号表示颜色数列里面颜色的编号。
+
+The latter is mostly useful if you let the user add and remove series,
+in which case you can hard-code the color index to prevent the colors
+from jumping around between the series.
+
+如果你允许用户重置或删除曲线，后者会比较有用，你可以在代码里面设置曲线使用的默认颜色的序号防止相同颜色在不用曲线间重复出现。
+
+The "xaxis" and "yaxis" options specify which axis to use, specify 2
+to get the secondary axis (x axis at top or y axis to the right).
+E.g., you can use this to make a dual axis plot by specifying
+{ yaxis: 2 } for one data series.
+
+xaxis" 和 "yaxis" 设置曲线使用的数轴(第二条X轴是顶部横轴，第二条Y轴是右边的纵轴)，你可以使用这个属性制作双数轴曲线
+
+"clickable" and "hoverable" can be set to false to disable
+interactivity for specific series if interactivity is turned on in
+the plot, see below.
+
+"clickable" 和 "hoverable"用于关闭该曲线的鼠标点击效果或鼠标悬停效果，具体说明看后面。
+(options中的"clickable" 或 "hoverable"设置为true时可以在某条曲线的data里设置"clickable" 或 "hoverable"为false，但options中设置为false时，不能在这里设置为true)
+
+The rest of the options are all documented below as they are the same
+as the default options passed in via the options parameter in the plot
+commmand. When you specify them for a specific data series, they will
+override the default options for the plot for that data series.
+
+其他参数在后面介绍，他们与plot函数的"options"参数的设置项是一样的，
+如果你为某条曲线在data里面设置了这些参数的值，他们会覆盖掉options的默认值。
+
+Here's a complete example of a simple data specification:
+
+下面是一个简单例子，设置了2条曲线的参数：
+
+  [ { label: "Foo", data: [ [10, 1], [17, -14], [30, 5] ] },
+    { label: "Bar", data: [ [11, 13], [19, 11], [30, -7] ] } ]
+
+
+Plot Options
+plot的options参数
+------------
+
+All options are completely optional. They are documented individually
+below, to change them you just specify them in an object, e.g.
+
+options的所有选项都是可选的，他们都有默认值，后面会逐条对他们进行讲解，如果要修改这些选项的默认值你只需要明确指定他们的值即可，例如：
+
+  var options = {
+    series: {
+      lines: { show: true },
+      points: { show: true }
+    }
+  };
+
+  $.plot(placeholder, data, options);
+
+
+Customizing the legend
+legend：定制曲线图表标题
+======================
+
+  legend: {
+    show: boolean 
+    labelFormatter: null or (fn: string, series object -> string)
+    labelBoxBorderColor: color
+    noColumns: number
+    position: "ne" or "nw" or "se" or "sw"
+    margin: number of pixels or [x margin, y margin]
+    backgroundColor: null or color
+    backgroundOpacity: number between 0 and 1
+    container: null or jQuery object/DOM element/jQuery expression
+  }
+
+
+The legend is generated as a table with the data series labels and
+small label boxes with the color of the series. If you want to format
+the labels in some way, e.g. make them to links, you can pass in a
+function for "labelFormatter". Here's an example that makes them
+clickable:
+
+legend 用于生成图表标题，图表标题以表格的方式显示在曲线图上，内容包括每条曲线的名称及其对应颜色，
+如果你想定制图表标题的格式，比如做成超链接，你可以在"labelFormatter"项使用函数来定制，下面的例子把图表标题做成链接
+
+  labelFormatter: function(label, series) {
+    // series is the series object for the label  //series是名称为label的曲线的数据对象
+    return '<a href="#' + label + '">' + label + '</a>';
+  }
+
+
+"noColumns" is the number of columns to divide the legend table into.
+
+"noColumns" 用于设置legend表格的列数
+
+"position" specifies the overall placement of the legend within the
+plot (top-right, top-left, etc.) and margin the distance to the plot
+edge (this can be either a number or an array of two numbers like [x,
+y]). "backgroundColor" and "backgroundOpacity" specifies the
+background. The default is a partly transparent auto-detected
+background.
+
+position：用于指定legend在曲线图内的位置，"ne"东北角，"se"东南 , "nw"西北 , "sw"西南
+margin： 设置legend与曲线图边框的距离,可以是x y轴偏移量的数值对[x,y]也可以是单个数字，单个数字值表示相对x,y轴的偏移量使用相同的值
+采用哪条X轴和Y轴作为参照物取决于position的值
+backgroundColor： 设置legend的背景颜色
+backgroundOpacity： 设置legend背景的透明度
+
+If you want the legend to appear somewhere else in the DOM, you can
+specify "container" as a jQuery object/expression to put the legend
+table into. The "position" and "margin" etc. options will then be
+ignored. Note that Flot will overwrite the contents of the container.
+
+如果你想把legend放在其他DOM元素内，可以为container设定一个值，
+container的值可以是jQuery对象或表达式，例如：container: $("#showChartLegend")，把标题显示在id为showChartLegend的div或其他容器类标签内，
+container为legend指定容器后，"position" 和 "margin" 等与图表相关的位置属性会被忽略，
+另外请注意，container指定的容器内容会被覆盖掉。
+
+
+
+Customizing the axes
+数轴定制
+====================
+
+  xaxis, yaxis, x2axis, y2axis: {
+    mode: null or "time"  //数轴是否为时间模式
+    min: null or number  //数轴最小值
+    max: null or number  //数轴最大值
+    autoscaleMargin: null or number  //按百分比为数轴延长一小段来缩放曲线以避免曲线最远的数据点出现在图表边框上
+                                     //延长的距离为单位刻度的整数倍，且刚好不小于(max-min)*number，其中min端增加1个刻度单位的长度,当对应数轴的min和max值至少一个为null时才生效
+                                     //其中一个特例是，如果数据点的最小值为0，则min端不增长数轴，数据点会出现的边框上
+                                     //对X轴，该值默认为null，对Y轴，该值默认为0.02
+    
+    labelWidth: null or number
+    labelHeight: null or number
+
+    transform: null or fn: number -> number
+    inverseTransform: null or fn: number -> number
+    
+    ticks: null or number or ticks array or (fn: range -> ticks array)
+    tickSize: number or array
+    minTickSize: number or array
+    tickFormatter: (fn: number, object -> string) or string
+    tickDecimals: null or number
+  }
+
+All axes have the same kind of options. The "mode" option
+determines how the data is interpreted, the default of null means as
+decimal numbers. Use "time" for time series data, see the next section.
+
+所有数轴都有相同的参数设置，mode为null表示数轴十进制，为time设置为时间轴
+
+The options "min"/"max" are the precise minimum/maximum value on the
+scale. If you don't specify either of them, a value will automatically
+be chosen based on the minimum/maximum data values.
+
+"min"/"max" 设置数轴最大值和最小值，如果没有明确指定他们，将自动使用数据中的最小值和最大值
+
+The "autoscaleMargin" is a bit esoteric: it's the fraction of margin
+that the scaling algorithm will add to avoid that the outermost points
+ends up on the grid border. Note that this margin is only applied
+when a min or max value is not explicitly set. If a margin is
+specified, the plot will furthermore extend the axis end-point to the
+nearest whole tick. The default value is "null" for the x axis and
+0.02 for the y axis which seems appropriate for most cases.
+
+"autoscaleMargin"的解释见上文
+
+"labelWidth" and "labelHeight" specifies a fixed size of the tick
+labels in pixels. They're useful in case you need to align several
+plots.
+
+"labelWidth" 和 "labelHeight" 用于设置数轴刻度标签的高宽，这个属性在你需要排列整齐几个图表的时候会派上用场。
+
+
+"transform" and "inverseTransform" are callbacks you can put in to
+change the way the data is drawn. You can design a function to
+compress or expand certain parts of the axis non-linearly, e.g.
+suppress weekends or compress far away points with a logarithm or some
+other means. When Flot draws the plot, each value is first put through
+the transform function. Here's an example, the x axis can be turned
+into a natural logarithm axis with the following code:
+
+"transform" and "inverseTransform" 是回调函数，用于改变数轴上的数据显示方式，
+你可以设计一个函数来非线性地扩展或压缩数轴上的特定数据段
+
+  xaxis: {
+    transform: function (v) { return Math.log(v); },
+    inverseTransform: function (v) { return Math.exp(v); }
+  }
+
+Note that for finding extrema, Flot assumes that the transform
+function does not reorder values (monotonicity is assumed).
+需要注意的是，flot假定transform函数不会修改数据点的排列顺序
+
+
+The inverseTransform is simply the inverse of the transform function
+(so v == inverseTransform(transform(v)) for all relevant v). It is
+required for converting from canvas coordinates to data coordinates,
+e.g. for a mouse interaction where a certain pixel is clicked. If you
+don't use any interactive features of Flot, you may not need it.
+
+inverseTransform 函数是对transform的逆运算，因此有：v == inverseTransform(transform(v)
+当需要把坐标数据转换回数值数据时就会用到这个函数，这常在图表的动态交互时发生，比如鼠标在
+图标上面点击并获取该点数据，但是如果你不做任何动态的交互，你可能不会用到这个函数。
+
+
+
+The rest of the options deal with the ticks.
+其他与刻度的网格线有关的参数。
+
+If you don't specify any ticks, a tick generator algorithm will make
+some for you. The algorithm has two passes. It first estimates how
+many ticks would be reasonable and uses this number to compute a nice
+round tick interval size. Then it generates the ticks.
+
+如果你没有明确地设置刻度间隔，程序会自动设置，设置过程分为2步，
+首先估计数轴刻度间隔所需数目，其次根据这个数目通过四舍五入方法估算合适的步长，最后生成刻度
+
+
+You can specify how many ticks the algorithm aims for by setting
+"ticks" to a number. The algorithm always tries to generate reasonably
+round tick values so even if you ask for three ticks, you might get
+five if that fits better with the rounding. If you don't want any
+ticks at all, set "ticks" to 0 or an empty array.
+
+通过设置"ticks" 的值为数字，你可以设置图表产生刻度间隔的个数，但是程序尽量会设置最合适的刻度
+个数，因此，尽管你设置了3个刻度数，却可能得到5个，如果你不需要自己设置刻度，把"ticks"的值设置为0或一个空数组
+
+Another option is to skip the rounding part and directly set the tick
+interval size with "tickSize". If you set it to 2, you'll get ticks at
+2, 4, 6, etc. Alternatively, you can specify that you just don't want
+ticks at a size less than a specific tick size with "minTickSize".
+Note that for time series, the format is an array like [2, "month"],
+see the next section.
+
+"tickSize"直接跳过估算步骤设置刻度间隔步长，如果你设置该值为2，生成的刻度将会是形如2，4，6
+"minTickSize"可以设置刻度间隔的最小值，
+
+If you want to completely override the tick algorithm, you can specify
+an array for "ticks", either like this:
+
+如果你想完全的自定义刻度，可以设置参数"ticks"的值为一个数组，赋值方法如下例：
+
+  ticks: [0, 1.2, 2.4]
+
+Or like this where the labels are also customized:
+或者像下面的例子，连刻度的标签也自定义：
+
+  ticks: [[0, "zero"], [1.2, "one mark"], [2.4, "two marks"]]
+
+You can mix the two if you like.
+这两种方法可以混合使用
+
+  
+For extra flexibility you can specify a function as the "ticks"
+parameter. The function will be called with an object with the axis
+min and max and should return a ticks array. Here's a simplistic tick
+generator that spits out intervals of pi, suitable for use on the x
+axis for trigonometric functions:
+
+刻度可以用函数来生成，方法是把一个函数赋给"ticks"，该函数应该以一个具有最大刻度值及最小刻度值的数轴对象为参数，
+该函数返回一个刻度数组赋给"ticks"。
+下例是一个简单的刻度生成器，例子以pi值为刻度间隔大小，这对三角函数曲线非常适用。
+
+  function piTickGenerator(axis) {
+    var res = [], i = Math.floor(axis.min / Math.PI);
+    do {
+      var v = i * Math.PI;
+      res.push([v, i + "\u03c0"]);
+      ++i;
+    } while (v < axis.max);
+    
+    return res;
+  }
+
+
+You can control how the ticks look like with "tickDecimals", the
+number of decimals to display (default is auto-detected).
+
+"tickDecimals" 用于设置刻度的小数位数，默认情况下程序会自动判断截取
+
+
+Alternatively, for ultimate control over how ticks look like you can
+provide a function to "tickFormatter". The function is passed two
+parameters, the tick value and an "axis" object with information, and
+should return a string. The default formatter looks like this:
+
+"tickFormatter"可以通过函数来设置刻度显示格式，格式函数有2个参数，刻度值及数轴对象。函数应该返回一个字符串赋给tickFormatter。
+"tickFormatter"格式函数基本格式如下：
+
+  function formatter(val, axis) {
+    return val.toFixed(axis.tickDecimals);
+  }
+
+The axis object has "min" and "max" with the range of the axis,
+"tickDecimals" with the number of decimals to round the value to and
+"tickSize" with the size of the interval between ticks as calculated
+by the automatic axis scaling algorithm (or specified by you). Here's
+an example of a custom formatter:
+
+数轴对象可以获取数轴数据的最大值和最小值，tickDecimals可以获取刻度标签的小数位数，
+tickSize可以获取刻度间隔长度(程序算法自动计算出或自定义)。
+
+
+  function suffixFormatter(val, axis) {
+    if (val > 1000000)
+      return (val / 1000000).toFixed(axis.tickDecimals) + " MB";  // toFixed() 函数，把数值四舍五入为指定小数位数 
+    else if (val > 1000)
+      return (val / 1000).toFixed(axis.tickDecimals) + " kB";
+    else
+      return val.toFixed(axis.tickDecimals) + " B";
+  }
+
+Time series data
+时间数轴
+================
+
+Time series are a bit more difficult than scalar data because
+calendars don't follow a simple base 10 system. For many cases, Flot
+abstracts most of this away, but it can still be a bit difficult to
+get the data into Flot. So we'll first discuss the data format.
+
+时间数轴比标量数轴要难一点，因为时间数轴并不遵循10进制。下面讨论时间数轴的数据格式
+
+The time series support in Flot is based on Javascript timestamps,
+i.e. everywhere a time value is expected or handed over, a Javascript
+timestamp number is used. This is a number, not a Date object. A
+Javascript timestamp is the number of milliseconds since January 1,
+1970 00:00:00 UTC. This is almost the same as Unix timestamps, except it's
+in milliseconds, so remember to multiply by 1000!
+
+flot对时间轴的支持是基于javascript的时间戳的，也就是说每个已经过去的或未来的时间都对应一个时间戳。
+时间戳是一个数字，不是时间对象。
+javascript时间戳精确到毫秒，起始时间从通用协调时间(UTC)的1970年1月1日零时零分零秒开始，这几乎跟unix时间戳一致，不同的是
+javascript时间戳是以毫秒来计算的，因此如果使用unix时间戳的话不要忘记乘以1000.
+
+You can see a timestamp like this
+通过下面的例子可以查看一个时间的时间戳：
+
+  alert((new Date()).getTime())
+
+
+Normally you want the timestamps to be displayed according to a
+certain time zone, usually the time zone in which the data has been
+produced. However, Flot always displays timestamps according to UTC.
+It has to as the only alternative with core Javascript is to interpret
+the timestamps according to the time zone that the visitor is in,
+which means that the ticks will shift unpredictably with the time zone
+and daylight savings of each visitor.
+
+你可能希望时间戳根据某一时区(通常是产生数据的时区)来显示，但是，flot总是根据UTC时区来显示时间戳，
+因此你只能在javascript代码里设置根据用户本地时区来解释时间戳，这意味着UTC时间戳按不同时区转换之后处于不同时区的用户看到的时间将不一样
+
+
+So given that there's no good support for custom time zones in
+Javascript, you'll have to take care of this server-side.
+
+如果客户端的javascript对时区的支持不是很好的话，就要在服务器端小心的处理好数据了
+
+The easiest way to think about it is to pretend that the data
+production time zone is UTC, even if it isn't. So if you have a
+datapoint at 2002-02-20 08:00, you can generate a timestamp for eight
+o'clock UTC even if it really happened eight o'clock UTC+0200.
+
+最简单的方法是，不管数据产生地的时区是哪里，都假定为UTC，也就是说，如果有一个数据点
+在2002-02-20 08:00产生，就算是在UTC+0200 时区8时产生的，你也要按UTC时区8时产生时间戳。
+(做数据文件里保存UTC时间戳，实际在客户端显示时通过程序指定时区--通常是数据产生地所在时区--进行转换)
+
+In PHP you can get an appropriate timestamp with
+'strtotime("2002-02-20 UTC") * 1000', in Python with
+'calendar.timegm(datetime_object.timetuple()) * 1000', in .NET with
+something like:
+
+下面服务器端生成恰当的时间戳方法：
+在PHP程序中  strtotime("2002-02-20 UTC") * 1000
+Python中  calendar.timegm(datetime_object.timetuple()) * 1000
+在 .net中代码如下：
+
+  public static int GetJavascriptTimestamp(System.DateTime input)
+  {
+    System.TimeSpan span = new System.TimeSpan(System.DateTime.Parse("1/1/1970").Ticks);
+    System.DateTime time = input.Subtract(span);
+    return (long)(time.Ticks / 10000);
+  }
+
+
+Javascript also has some support for parsing date strings, so it is
+possible to generate the timestamps manually client-side.
+
+javascript 也有一些对时间字符串进行解析的支持，因此在客户端生成时间戳也是可能的。
+
+If you've already got the real UTC timestamp, it's too late to use the
+pretend trick described above. But you can fix up the timestamps by
+adding the time zone offset, e.g. for UTC+0200 you would add 2 hours
+to the UTC timestamp you got. Then it'll look right on the plot. Most
+programming environments have some means of getting the timezone
+offset for a specific date (note that you need to get the offset for
+each individual timestamp to account for daylight savings).
+
+如果你得到的时间数据已经是数据产生时对应时区的时间戳，使用上面的方法已经来不及了，
+不过你可以通过增加时区偏移的方法修改时间戳。例如，你得到一个UTC+0200时区(比UTC时区快2小时)
+的时间戳，那么你需要在这个时间戳上减去2小时(或者说加上UTC时间对本地区时间的时差-2小时)，这样在图表上看起来时间就正确了，
+很多编程环境都有专门用于计算时差的方法，需要注意的是，你需要为每个时间戳计算时差来解释日光节约时间(欧美在夏天天亮较早的季节使用的一个时间计算法，
+人为地把时间拨快一小时，促使人早起早睡，节约用电)
+
+
+
+Once you've gotten the timestamps into the data and specified "time"
+as the axis mode, Flot will automatically generate relevant ticks and
+format them. As always, you can tweak the ticks via the "ticks" option
+- just remember that the values should be timestamps (numbers), not
+Date objects.
+
+一旦你在数据里面使用时间戳并把数轴设置为时间模式，flot会自动格式化并生成时间数轴刻度。
+你也可以通过"ticks"参数来自定义时间刻度，但是要注意的是，对应的参数值应该是时间戳数字而不是时间对象。
+
+Tick generation and formatting can also be controlled separately
+through the following axis options:
+
+通过设置下面的数轴参数可以个别的控制时间轴刻度生成的格式：
+
+  minTickSize: array 
+  timeformat: null or format string //null 或格式化字符串
+  monthNames: null or array of size 12 of strings //null或一个长度为12的字符串数组
+  twelveHourClock: boolean   //12时模式
+
+Here "timeformat" is a format string to use. You might use it like this:
+
+timeformat的用法如下例：
+
+  xaxis: {
+    mode: "time"
+    timeformat: "%y/%m/%d"
+  }
+  
+This will result in tick labels like "2000/12/24". The following
+specifiers are supported
+
+这个例子产生的时间抽刻度标签形如"2000/12/24" ，下面是flot支持的时间格式化字符串：
+
+  %h: hours
+  %H: hours (left-padded with a zero)
+  %M: minutes (left-padded with a zero)
+  %S: seconds (left-padded with a zero)
+  %d: day of month (1-31)
+  %m: month (1-12)
+  %y: year (four digits)
+  %b: month name (customizable)
+  %p: am/pm, additionally switches %h/%H to 12 hour instead of 24
+  %P: AM/PM (uppercase version of %p)
+
+You can customize the month names with the "monthNames" option. For
+instance, for Danish you might specify:
+
+"monthNames" 参数自定义月份名称的方法如下：
+
+  monthNames: ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+
+If you set "twelveHourClock" to true, the autogenerated timestamps
+will use 12 hour AM/PM timestamps instead of 24 hour.
+  
+"twelveHourClock"设置为true，将使用12时AM/PM 格式的时间戳来替代24时时间戳。
+
+The format string and month names are used by a very simple built-in
+format function that takes a date object, a format string (and
+optionally an array of month names) and returns the formatted string.
+If needed, you can access it as $.plot.formatDate(date, formatstring,
+monthNames) or even replace it with another more advanced function
+from a date library if you're feeling adventurous.
+
+格式化字符串和月份名称经常用在格式化函数中，该函数可能使用时间对象，格式化字符串，月份名称数组作为参数，
+返回格式化了的字符串，如果需要，你可以使用flot提供的方法 $.plot.formatDate(date, formatstring,monthNames)
+也可以自定义函数来替换该方法。
+
+If everything else fails, you can control the formatting by specifying
+a custom tick formatter function as usual. Here's a simple example
+which will format December 24 as 24/12:
+
+如果以上方法格式化不能达到你的要求，你可以定义一个函数来格式化并自定义刻度标签。
+
+  tickFormatter: function (val, axis) {
+    var d = new Date(val);
+    return d.getUTCDate() + "/" + (d.getUTCMonth() + 1);
+  }
+
+
+Note that for the time mode "tickSize" and "minTickSize" are a bit
+special in that they are arrays on the form "[value, unit]" where unit
+is one of "second", "minute", "hour", "day", "month" and "year". So
+you can specify
+
+请注意，时间轴的"tickSize" 和 "minTickSize"是一个数组，数组形如 [数值，单位]，
+单位可以是 "second", "minute", "hour", "day", "month" and "year" ，因此你可以这样设置最小刻度为一个月：
+
+  minTickSize: [1, "month"]
+
+to get a tick interval size of at least 1 month and correspondingly,
+if axis.tickSize is [2, "day"] in the tick formatter, the ticks have
+been produced with two days in-between.
+
+类似地，axis.tickSize设置为[2, "day"]，则时间轴最小刻度为2天。
+
+Customizing the data series
+数据显示定制
+===========================
+
+  series: {
+    lines, points, bars: {
+      show: boolean
+      lineWidth: number
+      fill: boolean or number
+      fillColor: null or color/gradient
+    }
+
+    points: {
+      radius: number
+    }
+
+    bars: {
+      barWidth: number
+      align: "left" or "center"
+      horizontal: boolean
+    }
+
+    lines: {
+      steps: boolean
+    }
+
+    shadowSize: number
+  }
+  
+  colors: [ color1, color2, ... ]
+
+The options inside "series: {}" are copied to each of the series. So
+you can specify that all series should have bars by putting it in the
+global options, or override it for individual series by specifying
+bars in a particular the series object in the array of data.
+
+"series: {}" 内的参数将对每一个数据序列生效，可以用来为图表设置全局参数，
+如果需要为特定数据序列的图表设置不同属性，可以在对应的数据序列对象里面设置相应的参数把全局参数覆盖掉。
+  
+The most important options are "lines", "points" and "bars" that
+specify whether and how lines, points and bars should be shown for
+each data series. In case you don't specify anything at all, Flot will
+default to showing lines (you can turn this off with
+lines: { show: false}). You can specify the various types
+independently of each other, and Flot will happily draw each of them
+in turn (this is probably only useful for lines and points), e.g.
+
+ "lines", "points" 和 "bars"是最重要的参数，这些参数设置每条数据序列的图表的折线图、散点图、直方图是否显示和如何显示。
+如果没有专门设置这三个参数中的任何一个，默认情况下将显示折线图，关闭折线图的方法是lines: { show: false}
+你可以分别设置这三种显示方式，flot会一次把它们全部显示出来(通常情况下折线图和散点图同时显示比较有意义)，如下例：
+
+  var options = {
+    series: {
+      lines: { show: true, fill: true, fillColor: "rgba(255, 255, 255, 0.8)" },
+      points: { show: true, fill: false }
+    }
+  };
+
+"lineWidth" is the thickness of the line or outline in pixels. You can
+set it to 0 to prevent a line or outline from being drawn; this will
+also hide the shadow.
+
+"lineWidth"用于设置折线图线条的粗细或其他图型的边框，你可以把这个值设置成0来关闭折线图的输出
+或关闭其他图形的边框及阴影效果(例如散点图的鼠标点击效果及直方图的边框效果)
+
+"fill" is whether the shape should be filled. For lines, this produces
+area graphs. You can use "fillColor" to specify the color of the fill.
+If "fillColor" evaluates to false (default for everything except
+points which are filled with white), the fill color is auto-set to the
+color of the data series. You can adjust the opacity of the fill by
+setting fill to a number between 0 (fully transparent) and 1 (fully
+opaque).
+
+"fill" 用于设置图表填充的透明度(0-1)，对于折线，填充范围是折线与数轴围成的区域
+"fillColor" 设置填充颜色，如果填null,将使用线条颜色一致的颜色，如果颜色名解析失败将使用默认颜色(折线图直方图黑色，散点图白色)
+
+For bars, fillColor can be a gradient, see the gradient documentation
+below. "barWidth" is the width of the bars in units of the x axis (or
+the y axis if "horizontal" is true), contrary to most other measures
+that are specified in pixels. For instance, for time series the unit
+is milliseconds so 24 * 60 * 60 * 1000 produces bars with the width of
+a day. "align" specifies whether a bar should be left-aligned
+(default) or centered on top of the value it represents. When
+"horizontal" is on, the bars are drawn horizontally, i.e. from the y
+axis instead of the x axis; note that the bar end points are still
+defined in the same way so you'll probably want to swap the
+coordinates if you've been plotting vertical bars first.
+
+直方图的填充颜色可以是渐变的，关于渐变的说明在后面会提及。
+"barWidth" 用于设置直方图的宽度，单位是数轴的单位而非像素。
+例如，时间轴的单位是毫秒，因此，barWidth的值设置为24 * 60 * 60 * 1000 表示直方图的宽度是一天时间的在时间轴上的长度。
+"align" 用于设置数据点对应刻度线与直方图之间的对齐关系，默认情况下，刻度线在直方图的左侧(left,靠近数轴最小值一侧)，
+如果设置为center，刻度线在直方图中间。
+
+For lines, "steps" specifies whether two adjacent data points are
+connected with a straight (possibly diagonal) line or with first a
+horizontal and then a vertical line. Note that this transforms the
+data by adding extra points.
+
+对于折线图，"steps"可以设置是否使用阶梯状折线，设置为true采用阶梯状折线，相邻2个数据点之间先以水平线连接，
+后然用垂直线连接，需要注意的是，这种模式会在同一垂直线上增加数据点来实现。
+
+"shadowSize" is the default size of shadows in pixels. Set it to 0 to
+remove shadows.
+
+"shadowSize" 可以设置曲线阴影大小，设置为0关闭阴影效果。
+
+The "colors" array specifies a default color theme to get colors for
+the data series from. You can specify as many colors as you like, like
+this:
+
+"colors"可以预定义一系列颜色保存在数组里供曲线使用，你可以设置任意多种颜色。
+
+  colors: ["#d18b2c", "#dba255", "#919733"]
+
+If there are more data series than colors, Flot will try to generate
+extra colors by lightening and darkening colors in the theme.
+
+如果曲线的数目比预定义的颜色数目多，程序将尝试通过改变颜色的明暗程度来生成其他颜色赋给曲线。
+
+Customizing the grid
+背景栅格定制
+====================
+
+  grid: {
+    show: boolean
+    aboveData: boolean
+    color: color
+    backgroundColor: color/gradient or null
+    tickColor: color
+    labelMargin: number
+    markings: array of markings or (fn: axes -> array of markings)
+    borderWidth: number
+    borderColor: color or null
+    clickable: boolean
+    hoverable: boolean
+    autoHighlight: boolean
+    mouseActiveRadius: number
+  }
+
+The grid is the thing with the axes and a number of ticks. "color" is
+the color of the grid itself whereas "backgroundColor" specifies the
+background color inside the grid area. The default value of null means
+that the background is transparent. You can also set a gradient, see
+the gradient documentation below.
+
+grid由数轴和刻度线构成的栅格背景，"color"定义的是grid的颜色，包括刻度值标签的颜色。
+但是背景颜色是填充在Grid里面的，因此实际上只影响边框和刻度值标签的颜色。
+背景颜色"backgroundColor"是填充在grid内部的，默认情况下背景是透明的，
+可以为背景设置颜色渐变，具体细节后面会提到。
+
+You can turn off the whole grid including tick labels by setting
+"show" to false. "aboveData" determines whether the grid is drawn on
+above the data or below (below is default).
+
+如果grid的"show"参数设置为false，栅格背景包括数轴及数轴刻度标签将被隐藏，
+"aboveData" 用于设置栅格放置在数据点上面还是下面，默认情况false是放在数据点下面。
+"aboveData"设置为true且设置了背景颜色，曲线将被grid的背景颜色遮盖。
+
+"tickColor" is the color of the ticks and "labelMargin" is the spacing
+between tick labels and the grid. Note that you can style the tick
+labels with CSS, e.g. to change the color. They have class "tickLabel".
+"borderWidth" is the width of the border around the plot. Set it to 0
+to disable the border. You can also set "borderColor" if you want the
+border to have a different color than the grid lines.
+
+"tickColor"   设置刻度线的颜色
+"labelMargin" 设置刻度值标签与网格的距离，
+"borderWidth" 设置边框宽度，设为0则取消边框
+"borderColor" 设置边框颜色，
+"tickLabel"   设置刻度值标签的CSS样式，(未实验，设置方法不明)
+
+"markings" is used to draw simple lines and rectangular areas in the
+background of the plot. You can either specify an array of ranges on
+the form { xaxis: { from, to }, yaxis: { from, to } } (secondary axis
+coordinates with x2axis/y2axis) or with a function that returns such
+an array given the axes for the plot in an object as the first
+parameter.
+
+You can set the color of markings by specifying "color" in the ranges
+object. Here's an example array:
+
+"markings" 用于在背景上绘画出一块矩形，矩形的位置及长宽通过纵横轴的起始终止坐标来确定，
+第一横轴与第一纵轴对应，第二横轴与第二纵轴对应，color参数可以设置画出区块的颜色，
+赋值方式是一个数组，每个数组元素是一个json数据格式，每个数组元素绘制一个区块。可以用函数返回数组来赋值。
+下面是个简单例子：
+
+  markings: [ { xaxis: { from: 0, to: 2 }, yaxis: { from: 10, to: 10 }, color: "#bb0000" }, ... ]
+
+If you leave out one of the values, that value is assumed to go to the
+border of the plot. So for example if you only specify { xaxis: {
+from: 0, to: 2 } } it means an area that extends from the top to the
+bottom of the plot in the x range 0-2.
+
+A line is drawn if from and to are the same, e.g.
+
+  markings: [ { yaxis: { from: 1, to: 1 } }, ... ]
+
+would draw a line parallel to the x axis at y = 1. You can control the
+line width with "lineWidth" in the range object.
+
+
+如果只设置一个数轴的数据范围，则缺省数轴的数据范围默认为[min,max]，
+如果数轴起止值相等，则画出一条线，并且可以使用"lineWidth"设定线段的大小。
+
+An example function might look like this:
+
+  markings: function (axes) {
+    var markings = [];
+    for (var x = Math.floor(axes.xaxis.min); x < axes.xaxis.max; x += 2)
+      markings.push({ xaxis: { from: x, to: x + 1 } });
+    return markings;
+  }
+
+
+If you set "clickable" to true, the plot will listen for click events
+on the plot area and fire a "plotclick" event on the placeholder with
+a position and a nearby data item object as parameters. The coordinates
+are available both in the unit of the axes (not in pixels) and in
+global screen coordinates.
+
+"clickable" 设置为true时，图表将监听鼠标单击事件，单击图表时将触发"plotclick"事件，
+回调函数的参数是鼠标坐标和数据点的坐标值，即以像素为单位的位置坐标及以数轴为单位的数据坐标。
+如果鼠标点击位置没有数据点，则数据点的参数值是null，反之，是一个json对象
+
+Likewise, if you set "hoverable" to true, the plot will listen for
+mouse move events on the plot area and fire a "plothover" event with
+the same parameters as the "plotclick" event. If "autoHighlight" is
+true (the default), nearby data items are highlighted automatically.
+If needed, you can disable highlighting and control it yourself with
+the highlight/unhighlight plot methods described elsewhere.
+
+同样地，"hoverable" 设置为true将监听鼠标移动事件，鼠标移动到某个位置时发生"plothover"事件，
+回调函数的参数与"clickable"一致，
+"autoHighlight"的值为true，则发生"hoverable"事件和"plotclick"事件时，数据点显示高亮效果，
+数据点高亮的发生及消失对应有highlight/unhighlight方法，这在后面会描述。
+
+You can use "plotclick" and "plothover" events like this:
+
+"plotclick" 和 "plothover" 事件用法如下：
+
+    $.plot($("#placeholder"), [ d ], { grid: { clickable: true } });
+
+    $("#placeholder").bind("plotclick", function (event, pos, item) {
+        alert("You clicked at " + pos.x + ", " + pos.y);                  
+        // secondary axis coordinates if present are in pos.x2, pos.y2,         //pos.x pos.y 数轴坐标值，pos.x2, pos.y2 第二对数轴的坐标值
+        // if you need global screen coordinates, they are pos.pageX, pos.pageY //pos.pageX, pos.pageY 屏幕坐标值
+
+        if (item) {    //item !=null ,点击了数据点
+          highlight(item.series, item.datapoint);  // item.datapoint 该数据点的纵横坐标值,是一对以逗号分割的数值 如： 3.5,2.14 表示该点X轴的值为3.5，Y轴的值为2.14
+          alert("You clicked a point!");           //注意，item.datapoint的值不一定与 pos.x pos.y的值相等，因为点击在数据点附近，数据点也激活了
+        }
+    });
+
+The item object in this example is either null or a nearby object on the form:
+
+  item: {   //item参数的属性
+      datapoint: the point, e.g. [0, 2]
+      dataIndex: the index of the point in the data array  //该点数据在对应数列数组里的下标
+      series: the series object //曲线对象
+      seriesIndex: the index of the series  //在多曲线体系中该曲线的下标，即第几条曲线，编号从0开始
+      pageX, pageY: the global screen coordinates of the point  //该点屏幕坐标，单位是像素
+  }
+
+For instance, if you have specified the data like this 
+  下面是一条曲线的定义，
+
+    $.plot($("#placeholder"), [ { label: "Foo", data: [[0, 10], [7, 3]] } ], ...);
+
+and the mouse is near the point (7, 3), "datapoint" is [7, 3],
+"dataIndex" will be 1, "series" is a normalized series object with
+among other things the "Foo" label in series.label and the color in
+series.color, and "seriesIndex" is 0. Note that plugins and options
+that transform the data can shift the indexes from what you specified
+in the original data array.
+
+鼠标的(7,3)坐标附近触发事件时，"datapoint" 的值是[7,3]，
+
+item.datapoint=="7,3"
+item.dataIndex ==1 
+item.seriesIndex == 0  
+item.series 曲线对象， 
+item.series.label =="Foo" 曲线名称
+item.series.color 曲线颜色，rgb格式
+
+
+If you use the above events to update some other information and want
+to clear out that info in case the mouse goes away, you'll probably
+also need to listen to "mouseout" events on the placeholder div.
+
+如果你在以上事件触发时修改数据点的一些值，鼠标移开时想复原这些值，你很可能就需要在占位符上监听鼠标移开事件
+
+"mouseActiveRadius" specifies how far the mouse can be from an item
+and still activate it. If there are two or more points within this
+radius, Flot chooses the closest item. For bars, the top-most bar
+(from the latest specified data series) is chosen.
+
+"mouseActiveRadius" 用来设置可以激活数据点的鼠标与数据点之间的距离，如果在符合距离内有多个数据点，flot会激活最近的数据点
+对于直方图，则激活最迟设置的直方图。
+
+If you want to disable interactivity for a specific data series, you
+can set "hoverable" and "clickable" to false in the options for that
+series, like this { data: [...], label: "Foo", clickable: false }.
+
+在某条曲线数据本身设置"hoverable" 和 "clickable" 为false则该曲线不会触发事件
+但options内设置为false时，不能在某条曲线内通过设置true来开启事件监听功能
+
+Specifying gradients
+定义变化模式
+====================
+
+A gradient is specified like this:
+曲线颜色预定义：
+
+  { colors: [ color1, color2, ... ] }
+
+For instance, you might specify a background on the grid going from
+black to gray like this:
+图表栅格背景颜色渐变：
+
+  grid: {
+    backgroundColor: { colors: ["#000", "#999"] }
+  }
+
+For the series you can specify the gradient as an object that
+specifies the scaling of the brightness and the opacity of the series
+color, e.g.
+
+曲线颜色明暗程度及透明度渐变设置，包括开始状态和结束状态的数据(实验不成功)：
+
+  { colors: [{ opacity: 0.8 }, { brightness: 0.6, opacity: 0.8 } ] }
+
+where the first color simply has its alpha scaled, whereas the second
+is also darkened. For instance, for bars the following makes the bars
+gradually disappear, without outline:
+
+如下例，第一条直方图明度正常，但是后面的逐渐变暗，最后消失：
+
+  bars: {
+      show: true,
+      lineWidth: 0,
+      fill: true,
+      fillColor: { colors: [ { opacity: 0.8 }, { opacity: 0.1 } ] }
+  }
+  
+Flot currently only supports vertical gradients drawn from top to
+bottom because that's what works with IE.
+
+flot目前只支持从图表top到bottom的垂直渐变，因为IE只能这样实现渐变
+
+
+Plot Methods
+方法
+------------
+
+The Plot object returned from the plot function has some methods you
+can call:
+
+plot函数返回的对象有下面一些方法可供调用：
+
+  - highlight(series, datapoint)  //激活数据点 series：曲线编号，datapoint：数据点在曲线数据序列中的编号，编号都是从0开始 例如：highlight(1, 1) 激活第二条曲线的第二个数据点
+                                  //datapoint 也可以是一个数据点的真实数据对象，是一个数组， 例如： highlight(1, [3,6]) 激活第二条曲线上坐标为[3,6]的点
+                                  //如果指定坐标的数据点不在该曲线上，仍然以该曲线的颜色显示要激活的数据点
+
+    Highlight a specific datapoint in the data series. You can either
+    specify the actual objects, e.g. if you got them from a
+    "plotclick" event, or you can specify the indices, e.g.
+    highlight(1, 3) to highlight the fourth point in the second series
+    (remember, zero-based indexing).
+
+  
+  - unhighlight(series, datapoint) or unhighlight() //取消数据点的激活效果,参数与highlight相同
+
+    Remove the highlighting of the point, same parameters as
+    highlight.
+
+    If you call unhighlight with no parameters, e.g. as
+    plot.unhighlight(), all current highlights are removed.  //如果unhighlight()没有设置参数，取消所有数据点的激活状态
+
+
+  - setData(data)
+
+    You can use this to reset the data used. Note that axis scaling,
+    ticks, legend etc. will not be recomputed (use setupGrid() to do
+    that). You'll probably want to call draw() afterwards.
+
+    重新设置曲线数据，参数data是plot(placeholder, data, options)中的data参数，可以不包含options的设置内容。
+    重新设置数据后，如果需要立即改变图表显示，请调用draw()方法来重新绘制图表
+    请注意，setData()方法并不会重新设置数轴的缩放比例、刻度、曲线名称等，如果需要修改这些属性，请使用setupGrid()方法，
+
+    You can use this function to speed up redrawing a small plot if
+    you know that the axes won't change. Put in the new data with
+    setData(newdata), call draw(), and you're good to go. Note that
+    for large datasets, almost all the time is consumed in draw()
+    plotting the data so in this case don't bother.
+
+    如果你预先知道重新设置数据后数轴不需要改变，可以用setData(data)来设置数据然后调用draw()快速重绘曲线
+    如果数据量比较大，draw()方法可能会消耗较长时间，因此可能会有一点延迟，请不必感到疑惑。
+
+    
+  - setupGrid()
+
+    Recalculate and set axis scaling, ticks, legend etc.
+   
+   修改数轴、刻度、曲线名称等，参数是 options 不包括data部分
+
+    Note that because of the drawing model of the canvas, this
+    function will immediately redraw (actually reinsert in the DOM)
+    the labels and the legend, but not the actual tick lines because
+    they're drawn on the canvas. You need to call draw() to get the
+    canvas redrawn.
+    
+    请注意，该方法不会重绘曲线就立即修改刻度标签及曲线名称，因为这些属性是以DOM节点的形式来实现的
+    在canvas标签内实现的属性，比如刻度线，你需要调用draw()方法来重绘在canvas标签内实现的属性。
+    应该注意，如果原来图表上没有的数轴，在setupGrid()设置之后出现该数轴，那么 该数轴会叠在Grid上，
+
+
+  - draw()
+
+    Redraws the plot canvas.  //重绘图表的canvas
+
+  - triggerRedrawOverlay()
+
+    Schedules an update of an overlay canvas used for drawing
+    interactive things like a selection and point highlights. This
+    is mostly useful for writing plugins. The redraw doesn't happen
+    immediately, instead a timer is set to catch multiple successive
+    redraws (e.g. from a mousemove).
+
+    添加一个覆盖在图标上的canvas，这个方法对图表插件的开发非常有用，特别是一些动态的交互性的设置
+    比如弹出一个下拉菜单或增加一个亮点。
+    这个方法不会立即绘制设置的canvas内容，绘制的时机可以通过设置延时或鼠标事件来触发。
+
+  - width()/height()
+
+    Gets the width and height of the plotting area inside the grid.
+    This is smaller than the canvas or placeholder dimensions as some
+    extra space is needed (e.g. for labels).
+
+    获取图表栅格的宽和高，宽高值会比canvas和占位符的尺寸小。
+
+  - offset()
+
+    Returns the offset of the plotting area inside the grid relative
+    to the document, useful for instance for calculating mouse
+    positions (event.pageX/Y minus this offset is the pixel position
+    inside the plot).
+   
+   获取图表的绘制区相对文档的坐标，鼠标事件触发获取的文档坐标减去该坐标将得到当前位置相对于绘图区的位置偏移。
+   offset().left , offset().top 获取左偏移和顶部偏移
+    
+
+  - pointOffset({ x: xpos, y: ypos })
+
+    Returns the calculated offset of the data point at (x, y) in data
+    space within the placeholder div. If you are working with dual axes, you
+    can specify the x and y axis references, e.g. 
+
+   获取某个数据点位置相对于占位符的偏移。注意，不是相对canvas,而是相对于DIV
+   可以为数据点的值注明采用的数轴，默认采用第一坐标系。
+   pointOffset({ x: 3, y: 3.5 }).left  pointOffset({ x: 3, y: 3.5 }).top  分别是数据点(3,3.5)位置相对于容器DIV的偏移
+    
+      o = pointOffset({ x: xpos, y: ypos, xaxis: 2, yaxis: 2 })
+      // o.left and o.top now contains the offset within the div
+  
+
+There are also some members that let you peek inside the internal
+workings of Flot which is useful in some cases. Note that if you change
+something in the objects returned, you're changing the objects used by
+Flot to keep track of its state, so be careful.
+
+  下面是一些获取图表相关属性的方法，
+
+  - getData()
+
+    Returns an array of the data series currently used in normalized
+    form with missing settings filled in according to the global
+    options. So for instance to find out what color Flot has assigned
+    to the data series, you could do this:
+
+    获取plot(placeholder, data, options) 函数的data 和 options 合成的数据，
+    getData() 并非仅仅返回函数的 data 参数，他是一个数组，里面的信息包含了这个曲线的信息，
+    包括options,每一条曲线的每一个参数设置、包括默认设置的值及格式函数
+    注意与setData()的参数区别，oo.setData(data), 则 data!= oo.getData()
+
+      var series = plot.getData();
+      for (var i = 0; i < series.length; ++i)
+        alert(series[i].color);   //逐个弹出曲线的颜色
+
+    A notable other interesting field besides color is datapoints
+    which has a field "points" with the normalized data points in a
+    flat array (the field "pointsize" is the increment in the flat
+    array to get to the next point so for a dataset consisting only of
+    (x,y) pairs it would be 2).
+
+  - getAxes()
+
+    Gets an object with the axes settings as { xaxis, yaxis, x2axis,
+    y2axis }. 
+
+    该方法返回数轴信息的json对象，该对象有四个成员，分别为xaxis, yaxis, x2axis, y2axis 四条数轴
+
+    Various things are stuffed inside an axis object, e.g. you could
+    use getAxes().xaxis.ticks to find out what the ticks are for the
+    xaxis. Two other useful attributes are p2c and c2p, functions for
+    transforming from data point space to the canvas plot space and
+    back. Both returns values that are offset with the plot offset.
+    
+    数轴内部包含了各种信息(具体信息可以把json对象转化成字符串细看，这里不细述，本文后面有将json对象系列化成字符串的方法)
+    例如获取X轴第一个刻度标签： getAxes().xaxis.ticks[0].label
+    【c2p p2c两个函数是用于计算并返回数据点与数轴直接的偏移量(包含曲线偏移量)】 看不太明白，待证实
+
+ 
+  - getPlaceholder()
+
+    Returns placeholder that the plot was put into. This can be useful
+    for plugins for adding DOM elements or firing events.
+    
+    获取图表容器div，返回的是一个json对象
+    getPlaceholder().selector 返回该容器的jQuery选择器，即 '#' + id
+
+  - getCanvas()
+
+    Returns the canvas used for drawing in case you need to hack on it
+    yourself. You'll probably need to get the plot offset too.
+  
+   获取绘制区canvas，返回的是一个json对象
+
+ 
+  - getPlotOffset()
+
+    Gets the offset that the grid has within the canvas as an object
+    with distances from the canvas edges as "left", "right", "top",
+    "bottom". I.e., if you draw a circle on the canvas with the center
+    placed at (left, top), its center will be at the top-most, left
+    corner of the grid.
+
+   获取栅格边缘与canvas边缘之间的距离，有数轴的一边间隔会大一些，因为需要缩小栅格防止数轴叠加在栅格上。
+   该方法返回一个json对象，形如 {left:36,right:6,top:6,bottom:20}
+
+  - getOptions()
+
+    Gets the options for the plot, in a normalized format with default
+    values filled in.
+
+    获取绘制函数的options参数，返回的是一个json对象
+    
+
+Hooks
+事件钩子
+====================================================
+
+In addition to the public methods, the Plot object also has some hooks
+that can be used to modify the plotting process. You can install a
+callback function at various points in the process, the function then
+gets access to the internal data structures in Flot.
+
+除了各种方法，flot还提供一些事件钩子，你可以在图表绘制过程中为事件钩子设置回调函数以
+修改图表绘制过程，这些回调函数具备使用flot内部数据结构的权限。
+
+Here's an overview of the phases Flot goes through: 
+下面是flot绘图的步骤：
+
+  1. Plugin initialization, parsing options  //初始化引入的插件(如果有的话)设置，解析options的参数设置
+  
+  2. Constructing the canvases used for drawing //创建canvas标签
+
+  3. Set data: parsing data specification, calculating colors,    
+     copying raw data points into internal format,
+     normalizing them, finding max/min for axis auto-scaling
+
+        //设置数据：解析数据设定，确定曲线颜色，把原始数据点的数据格式化成曲线所用格式，确定数轴的长度及缩放比例
+
+  4. Grid setup: calculating axis spacing, ticks, inserting tick
+     labels, the legend
+       //栅格设定：计算数轴刻度及刻度标签，设置曲线名称
+
+  5. Draw: drawing the grid, drawing each of the series in turn
+      //画图：画出栅格及曲线
+
+  6. Setting up event handling for interactive features
+     //设置用于交互的监听事件函数
+
+  7. Responding to events, if any
+     //如果存在的话，触发事件
+
+Each hook is simply a function which is put in the appropriate array.
+You can add them through the "hooks" option, and they are also available
+after the plot is constructed as the "hooks" attribute on the returned
+plot object, e.g.
+
+事件钩子是一些函数，这些函数被保存在一个数组里面，你可以通过指定事件钩子数组的下标来添加和调用它们，
+这些事件钩子作为图表"hooks"的属性在图表构造完毕后仍可以调用。
+
+  // define a simple draw hook
+  function hellohook(plot, canvascontext) { alert("hello!"); };
+
+  // pass it in, in an array since we might want to specify several
+  var plot = $.plot(placeholder, data, { hooks: { draw: [hellohook] } });
+
+  // we can now find it again in plot.hooks.draw[0] unless a plugin
+  // has added other hooks
+
+The available hooks are described below. All hook callbacks get the
+plot object as first parameter. You can find some examples of defined
+hooks in the plugins bundled with Flot.
+
+ 事件钩子函数的第一个参数是图表对象
+
+ - processOptions  [phase 1]
+
+   function(plot, options)
+   
+   Called after Flot has parsed and merged options. Useful in the
+   instance where customizations beyond simple merging of default
+   values is needed. A plugin might use it to detect that it has been
+   enabled and then turn on or off other options.
+   
+   processOptions发生在步骤1，图表函数中产地options参数之后开始调用的函数，常用来修改options内的参数值
+ 
+ - processRawData  [phase 3]
+
+   function(plot, series, data, datapoints)
+ 
+   Called before Flot copies and normalizes the raw data for the given
+   series. If the function fills in datapoints.points with normalized
+   points and sets datapoints.pointsize to the size of the points,
+   Flot will skip the copying/normalization step for this series.
+   
+   processRawData发生在步骤3，曲线原始数据实例化之前调用，如果函数中的datapoints不为空，
+   
+
+   
+   In any case, you might be interested in setting datapoints.format,
+   an array of objects for specifying how a point is normalized and
+   how it interferes with axis scaling.
+
+   The default format array for points is something along the lines of:
+
+     [
+       { x: true, number: true, required: true },
+       { y: true, number: true, required: true }
+     ]
+
+   The first object means that for the first coordinate it should be
+   taken into account when scaling the x axis, that it must be a
+   number, and that it is required - so if it is null or cannot be
+   converted to a number, the whole point will be zeroed out with
+   nulls. Beyond these you can also specify "defaultValue", a value to
+   use if the coordinate is null. This is for instance handy for bars
+   where one can omit the third coordinate (the bottom of the bar)
+   which then defaults to 0.
+
+
+ - processDatapoints  [phase 3]
+
+   function(plot, series, datapoints)
+ 
+   Called after normalization of the given series but before finding
+   min/max of the data points. This hook is useful for implementing data
+   transformations. "datapoints" contains the normalized data points in
+   a flat array as datapoints.points with the size of a single point
+   given in datapoints.pointsize. Here's a simple transform that
+   multiplies all y coordinates by 2:
+
+     function multiply(plot, series, datapoints) {
+         var points = datapoints.points, ps = datapoints.pointsize;
+         for (var i = 0; i < points.length; i += ps)
+             points[i + 1] *= 2;
+     }
+
+   Note that you must leave datapoints in a good condition as Flot
+   doesn't check it or do any normalization on it afterwards.
+
+
+ - draw  [phase 5]
+
+   function(plot, canvascontext)
+ 
+   Hook for drawing on the canvas. Called after the grid is drawn
+   (unless it's disabled) and the series have been plotted (in case
+   any points, lines or bars have been turned on). For examples of how
+   to draw things, look at the source code.
+   
+ 
+ - bindEvents  [phase 6]
+
+   function(plot, eventHolder)
+
+   Called after Flot has setup its event handlers. Should set any
+   necessary event handlers on eventHolder, a jQuery object with the
+   canvas, e.g.
+
+     function (plot, eventHolder) {
+         eventHolder.mousedown(function (e) {
+             alert("You pressed the mouse at " + e.pageX + " " + e.pageY);
+         });
+     }
+
+   Interesting events include click, mousemove, mouseup/down. You can
+   use all jQuery events. Usually, the event handlers will update the
+   state by drawing something (add a drawOverlay hook and call
+   triggerRedrawOverlay) or firing an externally visible event for
+   user code. See the crosshair plugin for an example.
+     
+   Currently, eventHolder actually contains both the static canvas
+   used for the plot itself and the overlay canvas used for
+   interactive features because some versions of IE get the stacking
+   order wrong. The hook only gets one event, though (either for the
+   overlay or for the static canvas).
+
+
+ - drawOverlay  [phase 7]
+
+   function (plot, canvascontext)
+
+   The drawOverlay hook is used for interactive things that need a
+   canvas to draw on. The model currently used by Flot works the way
+   that an extra overlay canvas is positioned on top of the static
+   canvas. This overlay is cleared and then completely redrawn
+   whenever something interesting happens. This hook is called when
+   the overlay canvas is to be redrawn.
+
+   "canvascontext" is the 2D context of the overlay canvas. You can
+   use this to draw things. You'll most likely need some of the
+   metrics computed by Flot, e.g. plot.width()/plot.height(). See the
+   crosshair plugin for an example.
+
+
+   
+Plugins
+插件
+-------
+
+Plugins extend the functionality of Flot. To use a plugin, simply
+include its Javascript file after Flot in the HTML page.
+
+If you're worried about download size/latency, you can concatenate all
+the plugins you use, and Flot itself for that matter, into one big file
+(make sure you get the order right), then optionally run it through a
+Javascript minifier such as YUI Compressor.
+
+Here's a brief explanation of how the plugin plumbings work:
+
+Each plugin registers itself in the global array $.plot.plugins. When
+you make a new plot object with $.plot, Flot goes through this array
+calling the "init" function of each plugin and merging default options
+from its "option" attribute. The init function gets a reference to the
+plot object created and uses this to register hooks and add new public
+methods if needed.
+
+See the PLUGINS.txt file for details on how to write a plugin. As the
+above description hints, it's actually pretty easy.
+
+
+//========补充================
+
+关于框选
+数轴开启选择模式后，可绑定选择事件
+ $("#placeholder").bind("plotselected", function (event, ranges){ //doSomething    }) 
+
+其中ranges参数记录了选择曲线的区域，是一个json 对象，内容是各个数轴的选中区域起止点的值，形如：
+
+{
+"xaxis":{"from":2.286764705882353,"to":2.801470588235294},
+"yaxis":{"from":0.6259124644481346,"to":7.250000055689011},
+"y2axis":{"from":0.8345499525975129,"to":9.66666674091868}
+}
+
+ plot.setSelection(ranges,true) 方法，按ranges指定范围设置选中区域，
+                如果没有忽略true参数，曲线不重绘，只把选中区域颜色加深，曲线重绘并不会增加数据点，除非刷新使用的数据项
+
+
+
+
+
+========================把json对象转化成字符串==================================
+<script type="text/javascript">
+
+var JsonStr = function(JsonStrObj){
+    this.objType = (typeof JsonStrObj);
+    this.self = [];
+    (function(s,o){for(var i in o){o.hasOwnProperty(i)&&(s[i]=o[i],s.self[i]=o[i])};})(this,(this.objType=='string')?eval('0,'+JsonStrObj):JsonStrObj);
+}
+JsonStr.prototype = {
+    toString:function(){
+        return this.getString();
+    },
+    valueOf:function(){
+        return this.getString();
+    },
+    getString:function(){
+        var sA = [];
+        (function(o){
+            var oo = null;
+            sA.push('{');
+            for(var i in o){
+                if(o.hasOwnProperty(i) && i!='prototype'){
+                    oo = o[i];
+                    if(oo instanceof Array){
+                        sA.push(i+':[');
+                        for(var b in oo){
+                            if(oo.hasOwnProperty(b) && b!='prototype'){
+                                sA.push(oo[b]+',');
+                                if(typeof oo[b]=='object') arguments.callee(oo[b]);
+                            }
+                        }
+                        sA.push('],');
+                        continue;
+                    }else{
+                        sA.push(i+':'+oo+',');
+                    }
+                    if(typeof oo=='object') arguments.callee(oo);
+                }
+            }
+            sA.push('},');
+        })(this.self);
+        return sA.slice(0).join('').replace(/\[object object\],/ig,'').replace(/,\}/g,'}').replace(/,\]/g,']').slice(0,-1);
+    },
+    push:function(sName,sValue){
+        this.self[sName] = sValue;
+        this[sName] = sValue;
+    }
+}
+
+//用法
+var jsonStr = new JsonStr(JsonObj);  //JsonObj 是一个json对象
+alert(jsonStr);  
+
+</script>

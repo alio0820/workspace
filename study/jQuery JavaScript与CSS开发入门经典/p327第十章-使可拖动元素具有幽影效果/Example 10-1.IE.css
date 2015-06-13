@@ -1,0 +1,8 @@
+div#hFinderFiles{
+	height:expression(document.body.offsetHeight-23);
+	width:expression(document.body.offsetWidth);
+}
+div.hFinderIcon div{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/folder_closed.gif',sizingMethod='crop');
+}

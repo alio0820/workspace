@@ -1,0 +1,1 @@
+document.write('本站部分带宽由<a href="http://www.tuidc.com/" target="_blank">腾佑科技</a>、<a href="http://www.v01.cn/" target="_blank">上海众生</a>、<a href="http://idc567.com/" target="_blank">利晨科技</a>、<a href="http://www.33isp.com" target="_blank">盈汇动力</a>提供 <a href="javascript:noad2010()">关闭广告</a>―<a href="javascript:yesad2010()">恢复广告</a>');

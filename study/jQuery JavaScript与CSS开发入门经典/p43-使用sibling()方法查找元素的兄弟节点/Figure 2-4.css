@@ -1,0 +1,19 @@
+body {
+	font:16px sans-serif;
+}
+h4 {
+	font-size:16px;
+	margin:0 0 5px 0;
+}
+ul#tmpPlaces {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+ul#tmpPlaces li {
+	margin:1px;
+	padding:3px;
+}
+li.tmpSiblings {
+	background:khaki;
+}

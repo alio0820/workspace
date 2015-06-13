@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+		<script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+        <script src="highcharts.js"></script>
+		<script type="text/javascript">
+        $(function () {
+            var chart;
+            $(document).ready(function() {
+                chart = new Highcharts.Chart({
+                    credits:{
+                        enabled:false
+                    },
+                    exporting:{
+                        enabled:false
+                    },
+                    chart: {
+                        renderTo: 'container',
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: '乐天菜谱 2015'
+                    },
+                    tooltip: {
+                	    pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+                    	percentageDecimals: 1,
+                        animation:false,
+                        enabled:false
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                color: '#000000',
+                                connectorColor: '#000000',
+                                formatter: function() {
+                                    return '<b>'+ this.point.name +'</b>';//+ this.percentage +' %';
+                                }
+                            },
+                            events:{
+                                click:function(e){
+                                    // alert(e.point.id);
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Browser share',
+                        data: [
+                            ['Firefox',   10.0],
+                            ['IE',       10.0],
+                            {
+                                name: 'Chrome',
+                                y: 10.0,
+                                sliced: true,
+                                selected: true
+                            },
+                            {name:'Safari',y:10.0,sliced: true,selected: true},
+                            ['Opera',     10.0],
+                            ['a',   10.0],
+                            ['b',    10.0],
+                            ['c',     10.0],
+                            ['d',   10],
+                            ['e',     10]
+                        ],
+                        states: {
+                            hover: {
+                                enabled: false
+                            }
+                        }
+                    }]
+                });
+            });
+            
+        });
+	</script>
+</head>
+<body>
+    <div id="container" style="min-width:800px; height: 800px; margin: 0 auto"></div>
+</body>
+</html>

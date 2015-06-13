@@ -1,0 +1,41 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>函数直接量与对象直接量</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+<script type="text/javascript" language="javascript" >
+
+<!--
+     function myFun()
+     {
+        var selectValue=myForm.mySelect.value;
+        switch(selectValue)
+        {
+           case "语文":
+               alert("你选择的是语文");
+               break;
+           case "数学":
+               alert("你选择的是数学");
+               break;
+           case "英语":
+               alert("你选择的是英语");
+               break;
+           default:
+               alert("您没有选择");
+         }
+       }
+-->
+</script>
+</head>
+<body>
+       <form name="myForm">
+           <select name="mySelect">
+               <option value="">请选择</option>
+               <option value="语文">语文</option>
+               <option value="数学">数学</option>
+               <option value="英语">英语</option>
+           </select>
+           <input type="button" value="确定" onclick="myFun()">
+       </form>
+</body>
+</html>

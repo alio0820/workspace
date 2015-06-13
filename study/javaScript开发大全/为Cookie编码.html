@@ -1,0 +1,30 @@
+﻿<!-- saved from url=(0014)about:internet -->
+<html>
+   <head>
+       <title>为Cookie编码</title>
+       <script>
+       
+       function setCookie()
+       {
+           var userName =escape(myForm.myName.value);
+           var userPassword = escape(myForm.myPassword.value);
+           
+           document.cookie="cookieUserName="+userName;
+           document.cookie="cookieUserPassword="+userPassword;       
+       }
+       function getCookie()
+       {
+           var cookieMessage= unescape(document.cookie);
+           alert(cookieMessage);
+       }
+       </script>
+   </head>
+   <body>
+         <form name="myForm">
+              姓名：<input type="text" name="myName"><br>
+              密码：<input type="password" name="myPassword"><br>
+              <input type="button" value="设置cookie" onclick="setCookie()">
+              <input type="button" value="读取cookie" onclick="getCookie()">
+         </form>
+   </body>
+</html>

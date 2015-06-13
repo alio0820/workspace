@@ -1,0 +1,50 @@
+function check3()
+    {
+       var d=document.getElementById("op");
+       var index=d.selectedIndex;
+       var value=d.options[index].value;
+       var text =d.options[index].text;
+       if(text=="合同价款")
+       {
+           for(var   i=0;i <num[0].length;i++)
+           { 
+               op1.options[i]=new   Option(num[0][i],num[0][i]); 
+           } 
+           
+       }
+       if(text=="项目名称")
+       {
+           for(var   i=0;i <num[1].length;i++)
+           { 
+               op1.options[i]=new   Option(num[1][i],num[1][i]); 
+           } 
+           
+       }
+       if(text=="编号")
+       {
+           for(var   i=0;i <num[2].length;i++)
+           { 
+               op1.options[i]=new   Option(num[2][i],num[2][i]); 
+           } 
+           
+       }
+    }
+
+
+
+
+<select  name="op" id="op" onchange="check3();">
+                    <option selected>项目名称</option>
+                    <option>合同名称</option>
+                    <option>签订日期</option>
+                    <option>编号</option>
+                    <option>合同价款</option>
+                 </select>&nbsp;
+                
+                
+                <select  name="op1" id="op1" onchange="check();">
+                    <option selected>项目名称</option>
+                    <option>dd</option>
+                    <option>cc</option>
+                    <option>bb</option>
+                    <option>aa</option>

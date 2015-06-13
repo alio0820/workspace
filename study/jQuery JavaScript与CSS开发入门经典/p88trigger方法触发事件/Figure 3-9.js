@@ -1,0 +1,18 @@
+$(document).ready(
+		function(){
+			$('input').focus(
+					function(){			
+						alert('focus');			
+						$(this).addClass('tmpFocused');
+					}
+		);
+		$('input').blur(
+				function() {
+					alert('foc');
+					$(this).removeClass('tmpFocused');
+				}
+		);
+		
+		}
+	);
+				

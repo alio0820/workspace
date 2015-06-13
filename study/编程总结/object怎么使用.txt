@@ -1,0 +1,9 @@
+<div id="playerPlaceholder">
+<object id="playerObject" width="100%" height="100%" type="application/x-shockwave-flash" data="http://js.tudouui.com/bin/lingtong/PortalPlayer_16.swf" name="playerObject">
+<param value="true" name="allowfullscreen">
+<param value="always" name="allowscriptaccess">
+<param value="#000000" name="bgcolor">
+<param value="high" name="quality">
+<param value="listType=3&listCode=rPLUN_vz3OY&icode=JbAlJcnKtVo&iid=161532769&lid=0&aid=64151&uid=0&sp=http://i2.tdimg.com/161/532/769/m5.jpg&tvcCode=0003&channel=9&cs=75|78|473&k=»ÃÏë|ÓÑÇé|ÈÈÑª&tict=2&default_skin=0&tudouMini=0&hd=3&ol=0&olw=-1&olh=-1&olr=-1&referrer=http%3A%2F%2Fwww.tudou.com%2Falbumcover%2FrPLUN_vz3OY.html&href=http%3A%2F%2Fwww.tudou.com%2Falbumplay%2FrPLUN_vz3OY%2FJbAlJcnKtVo.html&USER_AGENT=Mozilla/5.0 (Windows NT 6.1; rv:18.0) Gecko/20100101 Firefox/18.0&kw=%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85-%E7%AC%A...yGhoG&yrct=0&frame=0&noCookie=0&yseidtimeout=1359562809248&yseidcount=1&actionID=0&ID=0&adOwnerId=0&adPositionId=0&isNielson=0&isRenhe=0&vurl=&phd=-1&rurlstr=&resourceId=&rinfo=&tpa=&pepper=http://css.tudouui.com/bin/binder/pepper_1.png&panelEnd=http://css.tudouui.com/bin/lingtong/PanelEnd_4.swz&panelRecm=http://css.tudouui.com/bin/lingtong/PanelRecm_4.swz&panelShare=http://css.tudouui.com/bin/lingtong/PanelShare_3.swz&panelCloud=http://css.tudouui.com/bin/lingtong/PanelCloud_0.swz&ymulti=&wtime=0&scale=1" name="flashvars">
+</object>
+</div>

@@ -1,0 +1,4 @@
+这个可以在label控件中实现：
+Private Sub Label1_Click() 
+ShellExecute Me.hwnd, "open","http://dream.lq.googlepages.com", "", "", 5 
+End Sub

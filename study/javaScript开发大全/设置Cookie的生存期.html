@@ -1,0 +1,41 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+   <head>
+       <title>设置Cookie生存期</title>
+       
+   </head>
+   <body>
+         <form name="myForm">
+              姓名：<input type="text" name="myName"><br>
+              密码：<input type="password" name="myPassword"><br>
+              <input type="button" value="设置cookie" onclick="setCookie()">
+              <input type="button" value="读取cookie" onclick="getCookie()">
+         </form>
+       <script>
+       var cookieMessage = document.cookie;
+       if(cookieMessage=="")
+       document.write("Cookie中没有任何信息");
+       else
+       document.write("Cookie中的信息为：<br>",cookieMessage);
+       //设置Cookie
+       function setCookie()
+       {
+           var userName = myForm.myName.value;
+           var userPassword = myForm.myPassword.value;
+           //获取当前日期
+           var expiresDate = new Date();
+           //设置生存期，一天后过期
+           expiresDate.setDate(expiresDate.getDate()+1);
+           //使用了secure，如果不是加密协议则不传输
+           document.cookie="cookieUserName="+userName+";expires="+expiresDate.toGMTString()+";secure";  
+           //没有使用secure，直接传输
+           document.cookie="cookieUserPassword="+userPassword+";expires="+expiresDate.toGMTString();       
+       }
+       function getCookie()
+       {
+           var cookieMessage= document.cookie;
+           alert(cookieMessage);
+       }
+       </script>
+   </body>
+</html>

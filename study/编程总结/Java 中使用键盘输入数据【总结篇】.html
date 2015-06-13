@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title></head>
+
+<body>
+<div>
+  <p align="center"><strong><span lang="EN-US" xml:lang="EN-US">Java</span></strong>中使用键盘输入数据【总结篇】</p>
+  <p>在 <strong><span lang="EN-US" xml:lang="EN-US">Java</span></strong>中不像<span lang="EN-US" xml:lang="EN-US"> C </span>语言那么方便能够直接使用<span lang="EN-US" xml:lang="EN-US"> scanf</span>（）&nbsp;，下面是我积累的一些方法：</p>
+  <p><em>1.控制台输入数据</em></p>
+  <p><strong><span lang="EN-US" xml:lang="EN-US">2.</span></strong><span lang="EN-US" xml:lang="EN-US">1.1 </span>主方法的形式参数 <strong></strong></p>
+  <p><span lang="EN-US" xml:lang="EN-US"> 1.2 </span>利用字节输入流 <strong></strong></p>
+  <p><span lang="EN-US" xml:lang="EN-US">1.3 </span>利用字符输入流 <strong></strong></p>
+  <p><span lang="EN-US" xml:lang="EN-US">1.4 </span>利用文本扫描类</p>
+  <p><strong>3.<em>对话框输入数据</em></strong></p>
+  <p>下面将针对这几种方法分别利用例子进行说明：</p>
+  <p><span lang="EN-US" xml:lang="EN-US">1. </span>控制台输入数据</p>
+  <p><span lang="EN-US" xml:lang="EN-US">1.1 </span>主方法的形式参数</p>
+  <p>在 <strong><span lang="EN-US" xml:lang="EN-US">Java</span></strong>中利用<span lang="EN-US" xml:lang="EN-US"> main(String args[])</span>中的<span lang="EN-US" xml:lang="EN-US">args</span>数组来对参数进行赋值，有下 </p>
+  <p>例： <span lang="EN-US" xml:lang="EN-US">package InputTest; </span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">public class&nbsp;DataKeyboardInput1</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">{</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">/* *</span>主方法的形式参数来输入数据</p>
+  <p><span lang="EN-US" xml:lang="EN-US">&nbsp;*DataKeyboardInput1.java</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">*&nbsp;@param args */</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">public static void main(String[]&nbsp;args)</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">{//TODO Auto-generated method stub</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(args[0]);</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>在&nbsp;命&nbsp;令&nbsp;行&nbsp;下&nbsp;输&nbsp;入<span lang="EN-US" xml:lang="EN-US"> javac DataKeyboardInput1.java</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- </span>》<span lang="EN-US" xml:lang="EN-US"> java DataKeyboardInput1 HelloWorld </span>输出就是<span lang="EN-US" xml:lang="EN-US"> HelloWorld </span>了</p>
+  <p><span lang="EN-US" xml:lang="EN-US">1.2 </span>利用字节输入流</p>
+  <p>字节输入流<span lang="EN-US" xml:lang="EN-US">System.in</span>是类 <span lang="EN-US" xml:lang="EN-US">InputStream</span>的常量对象,调用<span lang="EN-US" xml:lang="EN-US">read()</span>方法可&nbsp;以从键盘接收数据。实现的步骤是：先把数据读入字节数组中，然后利用字节数组定义字符串，最后把字符串转化为需要的数据类型。</p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">package</span></strong><span lang="EN-US" xml:lang="EN-US">first;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">class</span></strong><span lang="EN-US" xml:lang="EN-US"> Test</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><span lang="EN-US" xml:lang="EN-US">/**</span>利用字节输入流来输入数据</p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;*DataKeyboardInput2.java</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;*</span><strong><span lang="EN-US" xml:lang="EN-US">@param</span></strong><span lang="EN-US" xml:lang="EN-US"> args</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;**/</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">static</span></strong><strong><span lang="EN-US" xml:lang="EN-US">void</span></strong><span lang="EN-US" xml:lang="EN-US">main(String[] args){</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">byte</span></strong><span lang="EN-US" xml:lang="EN-US">buf[]=</span><strong><span lang="EN-US" xml:lang="EN-US">new</span></strong><strong><span lang="EN-US" xml:lang="EN-US">byte</span></strong><span lang="EN-US" xml:lang="EN-US">[10];&nbsp;</span><span lang="EN-US" xml:lang="EN-US">//</span>字节数组，输入为<span lang="EN-US" xml:lang="EN-US">10</span>个</p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str;</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">int</span></strong><span lang="EN-US" xml:lang="EN-US"> num = 0;</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">try</span></strong><span lang="EN-US" xml:lang="EN-US">{ </span><span lang="EN-US" xml:lang="EN-US">//</span>把数据读入到字节数组中</p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">in</span></em><span lang="EN-US" xml:lang="EN-US">.read(buf);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" xml:lang="EN-US">//</span>利用字节数组创建字符串</p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str=</span><strong><span lang="EN-US" xml:lang="EN-US">new</span></strong><span lang="EN-US" xml:lang="EN-US"> String(buf);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" xml:lang="EN-US">//</span>把字符串数据转换为整型数据</p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num=Integer.<em>parseInt</em>(str.trim());</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">catch</span></strong><span lang="EN-US" xml:lang="EN-US">(Exception e)</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">out</span></em><span lang="EN-US" xml:lang="EN-US">.print(e);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">out</span></em><span lang="EN-US" xml:lang="EN-US">.println(num);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">&nbsp;}</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">1.3 </span>利用字符输入流&nbsp;字符输入流<span lang="EN-US" xml:lang="EN-US"> BufferedReader </span>是从字符输入流中读取文本，&nbsp;缓冲各个字符，&nbsp;从&nbsp;而提供字符，数组和行的高效读取。常用方法：<span lang="EN-US" xml:lang="EN-US"> read(): </span>读取单个字符；<span lang="EN-US" xml:lang="EN-US">readLine():</span>读取一行字符，即为读取一个字符串。</p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">package</span></strong><span lang="EN-US" xml:lang="EN-US">first;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">import</span></strong><span lang="EN-US" xml:lang="EN-US">java.io.*;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">class</span></strong><span lang="EN-US" xml:lang="EN-US"> Test</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><span lang="EN-US" xml:lang="EN-US">/**</span>利用字符输入流来进行输入处理</p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;* </span><strong><span lang="EN-US" xml:lang="EN-US">@param</span></strong><span lang="EN-US" xml:lang="EN-US"> args</span>></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;*/</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">static</span></strong><strong><span lang="EN-US" xml:lang="EN-US">void</span></strong><span lang="EN-US" xml:lang="EN-US"> main(String[] args)</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">throws</span></strong><span lang="EN-US" xml:lang="EN-US"> IOException</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? BufferedReader&nbsp;br=</span><strong><span lang="EN-US" xml:lang="EN-US">new</span></strong><span lang="EN-US" xml:lang="EN-US"> BufferedReader(</span><strong><span lang="EN-US" xml:lang="EN-US">new</span></strong><span lang="EN-US" xml:lang="EN-US"> InputStreamReader(System.</span><em><span lang="EN-US" xml:lang="EN-US">in</span></em><span lang="EN-US" xml:lang="EN-US">));</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str=</span><span lang="EN-US" xml:lang="EN-US">&quot;&quot;</span><span lang="EN-US" xml:lang="EN-US">;</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">int</span></strong><span lang="EN-US" xml:lang="EN-US"> num = 0;</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">try</span></strong><span lang="EN-US" xml:lang="EN-US"> { str=br.readLine();</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num=Integer.<em>parseInt</em>(str);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">catch</span></strong><span lang="EN-US" xml:lang="EN-US">(IOException e)</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">out</span></em><span lang="EN-US" xml:lang="EN-US">.println(e.toString());</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">out</span></em><span lang="EN-US" xml:lang="EN-US">.println(num);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;}</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">1.4</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">1. </span>利用文本扫描类&nbsp;文本扫描类<span lang="EN-US" xml:lang="EN-US">Scanner</span>是<span lang="EN-US" xml:lang="EN-US">jdk5.0</span>新增加的类，它是一个可以使用正则表达式来&nbsp;解析基本类型和字符串的简单文本扫描器，它使用分隔符模式将其输入分解为标&nbsp;记默认情况下该分隔符模式与空白匹配，然后使用不同的<span lang="EN-US" xml:lang="EN-US">next</span>方法将得到的标&nbsp;记转换为不同类型值。获取基本类型数据的方法是：&nbsp;整型：<span lang="EN-US" xml:lang="EN-US">nextInt()</span>单精度<span lang="EN-US" xml:lang="EN-US">:nextFloat()</span>双精度：<span lang="EN-US" xml:lang="EN-US"> nextDouble() </span>字符串：<span lang="EN-US" xml:lang="EN-US"> next()</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">//</span>修改后可直接输出字符串<strong></strong></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">package</span></strong><span lang="EN-US" xml:lang="EN-US"> first;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">import</span></strong><span lang="EN-US" xml:lang="EN-US"> java.util.Scanner;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">class</span></strong><span lang="EN-US" xml:lang="EN-US"> Test</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><span lang="EN-US" xml:lang="EN-US">/**</span>利用文本扫描类来进行输入处理</p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;* </span><strong><span lang="EN-US" xml:lang="EN-US">@pa ram</span></strong><span lang="EN-US" xml:lang="EN-US"> args</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;*/</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">static</span></strong><strong><span lang="EN-US" xml:lang="EN-US">void</span></strong><span lang="EN-US" xml:lang="EN-US"> main(String[] args)</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;input=</span><strong><span lang="EN-US" xml:lang="EN-US">new</span></strong><span lang="EN-US" xml:lang="EN-US"> Scanner(System.</span><em><span lang="EN-US" xml:lang="EN-US">in</span></em><span lang="EN-US" xml:lang="EN-US">);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">int</span></strong><span lang="EN-US" xml:lang="EN-US"> num=input.nextInt();</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">out</span></em><span lang="EN-US" xml:lang="EN-US">.println(num);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;}</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">2. </span>对话框输入数据&nbsp;使用<span lang="EN-US" xml:lang="EN-US"> JOptionPane </span>创建输入对话框，实现键盘输入<span lang="EN-US" xml:lang="EN-US"> showConfirmDialog(): </span>询问一个确认问题，如<span lang="EN-US" xml:lang="EN-US"> yes/no/cancer showInputDialog(): </span>提示要求某些输入<span lang="EN-US" xml:lang="EN-US"> showMessageDialog(): </span>告知用户某事已经发生&nbsp;其中，输入对话框的常用参数形式有：<span lang="EN-US" xml:lang="EN-US"> showInputDialog(Object message) : message </span>表提示信息<span lang="EN-US" xml:lang="EN-US"> showInputDialog(Object message,Object initialSelectionValue): </span>如果没有&nbsp;输入数据，则默认初始值为<span lang="EN-US" xml:lang="EN-US"> initalSlectionValue </span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">package</span></strong><span lang="EN-US" xml:lang="EN-US"> first;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">import</span></strong><span lang="EN-US" xml:lang="EN-US"> javax.swing.JOptionPane;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">class</span></strong><span lang="EN-US" xml:lang="EN-US">Test</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><span lang="EN-US" xml:lang="EN-US">/**</span>对话框输入数据</p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;* </span><strong><span lang="EN-US" xml:lang="EN-US">@param</span></strong><span lang="EN-US" xml:lang="EN-US"> args</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;*/</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">static</span></strong><strong><span lang="EN-US" xml:lang="EN-US">void</span></strong><span lang="EN-US" xml:lang="EN-US"> main(String[] args)</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str;</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str=JOptionPane.<em>showInputDialog</em>(</span><span lang="EN-US" xml:lang="EN-US">&quot;input data:&quot;</span><span lang="EN-US" xml:lang="EN-US">);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">int</span></strong><span lang="EN-US" xml:lang="EN-US"> num=Integer.<em>parseInt</em>(str);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">out</span></em><span lang="EN-US" xml:lang="EN-US">.println(num);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">}</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">package</span></strong><span lang="EN-US" xml:lang="EN-US"> first;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">import</span></strong><span lang="EN-US" xml:lang="EN-US"> java.io.*;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">class</span></strong><span lang="EN-US" xml:lang="EN-US">Test{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">static</span></strong><strong><span lang="EN-US" xml:lang="EN-US">void</span></strong><span lang="EN-US" xml:lang="EN-US"> main(String args[])</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">throws</span></strong><span lang="EN-US" xml:lang="EN-US"> java.io.IOException {</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BufferedReader in&nbsp;=</span><strong><span lang="EN-US" xml:lang="EN-US">new</span></strong><span lang="EN-US" xml:lang="EN-US"> BufferedReader(</span><strong><span lang="EN-US" xml:lang="EN-US">new</span></strong><span lang="EN-US" xml:lang="EN-US"> InputStreamReader(System.</span><em><span lang="EN-US" xml:lang="EN-US">in</span></em><span lang="EN-US" xml:lang="EN-US">));</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">out</span></em><span lang="EN-US" xml:lang="EN-US">.println(</span><span lang="EN-US" xml:lang="EN-US">&quot;input 3 number&gt;&quot;</span><span lang="EN-US" xml:lang="EN-US">);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String line =&nbsp;in.readLine();</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">int</span></strong><span lang="EN-US" xml:lang="EN-US"> x = Integer.<em>parseInt</em>(line);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line =&nbsp;in.readLine();</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">int</span></strong><span lang="EN-US" xml:lang="EN-US"> y = Integer.<em>parseInt</em>(line);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line =&nbsp;in.readLine();</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">int</span></strong><span lang="EN-US" xml:lang="EN-US"> z = Integer.<em>parseInt</em>(line);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">out</span></em><span lang="EN-US" xml:lang="EN-US">.println(x+y+z);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">}</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">//</span>可直接输出字符串</p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">package</span></strong><span lang="EN-US" xml:lang="EN-US"> first;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">import</span></strong><span lang="EN-US" xml:lang="EN-US"> java.io.BufferedReader;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">import</span></strong><span lang="EN-US" xml:lang="EN-US"> java.io.IOException;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">import</span></strong><span lang="EN-US" xml:lang="EN-US"> java.io.InputStreamReader;</span></p>
+  <p align="left"><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">class</span></strong><span lang="EN-US" xml:lang="EN-US"> Test {</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">public</span></strong><strong><span lang="EN-US" xml:lang="EN-US">static</span></strong><strong><span lang="EN-US" xml:lang="EN-US">void</span></strong><span lang="EN-US" xml:lang="EN-US"> main(String[] args)</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InputStreamReader isr = </span><strong><span lang="EN-US" xml:lang="EN-US">new</span></strong><span lang="EN-US" xml:lang="EN-US"> InputStreamReader(System.</span><em><span lang="EN-US" xml:lang="EN-US">in</span></em><span lang="EN-US" xml:lang="EN-US">);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BufferedReader br = </span><strong><span lang="EN-US" xml:lang="EN-US">new</span></strong><span lang="EN-US" xml:lang="EN-US"> BufferedReader(isr);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s = </span><strong><span lang="EN-US" xml:lang="EN-US">null</span></strong><span lang="EN-US" xml:lang="EN-US">;</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">try</span></strong><span lang="EN-US" xml:lang="EN-US"> {</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s =&nbsp;br.readLine();</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span lang="EN-US" xml:lang="EN-US">catch</span></strong><span lang="EN-US" xml:lang="EN-US">(IOException e)</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.</span><em><span lang="EN-US" xml:lang="EN-US">out</span></em><span lang="EN-US" xml:lang="EN-US">.println(</span><span lang="EN-US" xml:lang="EN-US">&quot;Hello: &quot;</span><span lang="EN-US" xml:lang="EN-US"> + s);</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+  <p align="left"><span lang="EN-US" xml:lang="EN-US">&nbsp;}</span></p>
+</div>
+</body>
+</html>

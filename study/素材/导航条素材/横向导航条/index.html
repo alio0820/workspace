@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<!-- saved from url=(0014)about:internet -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="JS代码,菜单导航,JS广告代码,JS特效代码" /> 
+<meta name="description" content=""/>
+<title>柑橘产业信息化系统</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<body><br /><br />
+<script language="javascript">
+	function qiehuan(num){
+		for(var id = 0;id<=6;id++)
+		{
+			if(id==num)
+			{
+				document.getElementById("qh_con"+id).style.display="block";
+				document.getElementById("mynav"+id).className="nav_on";
+			}
+			else
+			{
+				document.getElementById("qh_con"+id).style.display="none";
+				document.getElementById("mynav"+id).className="";
+			}
+		}
+	}
+</script> 
+<div id=menu_out>
+<div id=menu_in>
+<div id=menu>
+<UL id=nav>
+<LI><A class=nav_on id=mynav0 onmouseover=javascript:qiehuan(0) href="#"><SPAN>首 页</SPAN></A></LI>
+
+<LI class="menu_line"></LI><li><a href="http://www.lanrentuku.com/" onmouseover="javascript:qiehuan(1)" id="mynav1" class="nav_off"><span>品种资源信息化</span></a></li>
+<li class="menu_line"></li><li><a href="#" onmouseover="javascript:qiehuan(2)" id="mynav2" class="nav_off"><span>果园建设辅助设计</span></a></li>
+<li class="menu_line"></li><li><a href="#" onmouseover="javascript:qiehuan(3)" id="mynav3" class="nav_off"><span>柑橘生产过程信息化</span></a></li>
+<li class="menu_line"></li><li><a href="#" onmouseover="javascript:qiehuan(4)" id="mynav4" class="nav_off"><span>鲜果市场</span></a></li>
+<li class="menu_line"></li><li><a href="#" onmouseover="javascript:qiehuan(5)" id="mynav5" class="nav_off"><span>果品加工信息化</span></a></li>
+<li class="menu_line"></li><li><a href="#" onmouseover="javascript:qiehuan(6)" id="mynav6" class="nav_off"><span>其他</span></a></li>
+</UL>
+<div id=menu_con><div id=qh_con0 style="DISPLAY: block"><UL>
+  <LI><span>滚动新闻</span></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>最新柑橘市场导向......</SPAN></A></LI><LI class=menu_line2></LI>
+</UL></div> 
+<div id=qh_con1 style="DISPLAY: none"><UL>
+  <LI><a href="#"><span>育种</span></A></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>种苗</SPAN></A></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>市场预测</SPAN></A></LI>
+</UL></div> 
+<div id=qh_con2 style="DISPLAY: none"><UL>
+  <LI><a href="#"><span>改土设计</span></A></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>道路设计</SPAN></A></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>沟渠设计</SPAN></A></LI>
+  <LI><A href="#"><SPAN>种植设计</SPAN></A></LI>
+</UL></div> 
+<div id=qh_con3 style="DISPLAY: none"><UL>
+  <LI><a href="#"><span>施肥决策支持系统</span></A></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>灌溉决策支持系统</SPAN></A></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>病虫害防治与预警</SPAN></A></LI>
+  <LI><A href="#"><SPAN>劳动力资源信息化</SPAN></A></LI>
+</UL></div> 
+<div id=qh_con4 style="DISPLAY: none"><UL>
+  <LI><a href="#"><span>保鲜技术</span></A></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>物流与市场信息化</SPAN></A></LI><LI class=menu_line2></LI>
+</UL></div>
+<div id=qh_con5 style="DISPLAY: none"><UL>
+  <LI><a href="#"><span>加工生产过程控制</span></A></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>质量控制与安全</SPAN></A></LI><LI class=menu_line2></LI>
+  <LI><A href="#"><SPAN>产品销售参数</SPAN></A></LI>
+</UL></div>
+<div id=qh_con6 style="DISPLAY: none"><UL>
+  <LI><a href="#"><span>..............</span></A></LI><LI class=menu_line2></LI>
+</UL></div>
+</div></div></div></div> 
+
+<br /><br />
+<p align="center">代码整理：<a href="http://www.lanrentuku.com/" target="_blank">懒人图库</a>　 出处：<a href="http://www.websjy.com" target="_blank">设计源</a> </p>
+<p align="center">＊尊重他人劳动成果，转载请自觉注明出处！注：此代码仅供学习交流，请勿用于商业用途。</p>
+<p align="center"></p>
+<div align="center"><p>使用方法：</p>
+<p>修改&nbsp;for(var id = 0;id&lt;=9;id++)数字9，可修改一级导航数量。</p>
+<p>&nbsp;</p></div>
+<p align="center"></p>
+</body>
+</html>

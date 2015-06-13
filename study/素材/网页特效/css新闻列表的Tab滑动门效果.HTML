@@ -1,0 +1,178 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
+<title>css新闻列表的Tab滑动门效果丨芯晴网页特效丨CsrCode.Cn</title>
+<style type="text/css">
+<!--
+*{
+margin:0 auto;
+padding:0;
+}
+body{
+ font:12px "宋体";
+ text-align:center;
+}
+a:link,a:visited{
+ color:#999;
+ text-decoration:none;
+}
+a:hover {
+ color: #666;
+ text-decoration:underline;
+}
+ul{
+ list-style:none;
+}
+li{
+ color:#999;
+ height:22px;
+ line-height:22px;
+ border-bottom:#eee 1px dashed;
+}
+.main{
+ clear:both;
+ padding:8px;
+ text-align:center;
+}
+/*TAB样式开始啰*/
+#tabs1{
+ text-align:left;
+ width:400px;
+ position:relative;
+}
+.menu1box{
+ overflow:hidden;
+ height:26px;
+ width:400px;
+ text-align:left;
+}
+#menu1{
+ position:absolute;
+ top:0;
+ left:0;
+ z-index:1;
+}
+#menu1 li{
+ float:left;
+ display:block;
+ cursor:pointer;
+ width:80px;
+ text-align:center;
+ line-height:24px;
+ height:24px;
+ padding-top:2px;
+ border-bottom: none;
+}
+#menu1 li.hover{
+ background:#FFFFFF url(123/tab1.gif) no-repeat top center;
+ color: #0DA5E6;
+ font-weight:bold;
+}
+.main1box{
+ clear:both;
+ margin-top:-1px;
+ border-top:1px solid #E4E4E4;
+ height:181px;
+ width:400px;
+}
+#main1 ul{
+ display: none;
+ text-align:left;
+}
+#main1 ul.block{
+ display: block;
+}
+-->
+</style>
+<script>
+<!--
+/*更换显示样式*/
+function setTab(m,n){
+var tli=document.getElementById("menu"+m).getElementsByTagName("li");
+var mli=document.getElementById("main"+m).getElementsByTagName("ul");
+for(i=0;i<tli.length;i++){
+   tli[i].className=i==n?"hover":"";
+   mli[i].style.display=i==n?"block":"none";
+}
+}
+//-->
+</script>
+</head>
+<body>
+<br />
+<br />
+<!--第二种形式-->
+<div id="tabs1">
+<div class="menu1box">
+   <ul id="menu1">
+    <li class="hover" onmouseover="setTab(1,0)">网页特效①</li>
+    <li onmouseover="setTab(1,1)">网页特效②</li>
+    <li onmouseover="setTab(1,2)">网页特效③</li>
+   </ul>
+</div>
+<div class="main1box">
+   <div class="main" id="main1">
+    <ul class="block">
+<li>
+<a title="超级漂亮的几款清新、常用的网页CSS布局配色实例" target="_blank" href="http://www.csrcode.cn/html/txdm/tcys/1061.htm">
+超级漂亮的几款清新、常用的网页CSS布局配色实例</a></li>
+<li>
+<a title="CSS制作斜角上有背景图片的Div层" target="_blank" href="http://www.csrcode.cn/html/txdm/tcys/1060.htm">
+CSS制作斜角上有背景图片的Div层</a></li>
+<li>
+<a title="Js实现的层展开、层折叠效果，默认时候层是折叠的" target="_blank" href="http://www.csrcode.cn/html/txdm/tcys/1059.htm">
+Js实现的层展开、层折叠效果，默认时候层是折叠的</a></li>
+<li>
+<a title="DIV始终固定在网页右下角位置的CSS实现方法" target="_blank" href="http://www.csrcode.cn/html/txdm/tcys/1058.htm">
+DIV始终固定在网页右下角位置的CSS实现方法</a></li>
+<li>
+<a title="JavaScript未知高度元素的垂直居中的方法" target="_blank" href="http://www.csrcode.cn/html/txdm/tcys/1057.htm">
+JavaScript未知高度元素的垂直居中的方法</a></li>
+     </ul>
+    <ul>
+<li>
+<a title="DIV始终固定在网页右下角位置的CSS实现方法" target="_blank" href="http://www.csrcode.cn/html/txdm/tcys/1058.htm">
+DIV始终固定在网页右下角位置的CSS实现方法</a></li>
+<li>
+<a title="JavaScript未知高度元素的垂直居中的方法" target="_blank" href="http://www.csrcode.cn/html/txdm/tcys/1057.htm">
+JavaScript未知高度元素的垂直居中的方法</a></li>
+<li>
+<a title="渐变彩色的文字" target="_blank" href="http://www.csrcode.cn/html/txdm/ljwb/1056.htm">
+渐变彩色的文字</a></li>
+<li>
+<a title="指定文字逐条显示" target="_blank" href="http://www.csrcode.cn/html/txdm/ljwb/1055.htm">
+指定文字逐条显示</a></li>
+<li>
+<a title="滚动的标题栏" target="_blank" href="http://www.csrcode.cn/html/txdm/qtdm/1054.htm">
+滚动的标题栏</a></li>
+<li>
+<a title="JS 4屏平滑滚动幻灯片特效" target="_blank" href="http://www.csrcode.cn/html/txdm/txtx/1036.htm">
+JS 4屏平滑滚动幻灯片特效</a></li>
+<li>
+<a title="图片的无缝滚动（纵向、横向）" target="_blank" href="http://www.csrcode.cn/html/txdm/txtx/1035.htm">
+图片的无缝滚动（纵向、横向）</a></li>
+    </ul>
+    <ul>
+<li>
+<a title="JS 4屏平滑滚动幻灯片特效" target="_blank" href="http://www.csrcode.cn/html/txdm/txtx/1036.htm">
+JS 4屏平滑滚动幻灯片特效</a></li>
+<li>
+<a title="图片的无缝滚动（纵向、横向）" target="_blank" href="http://www.csrcode.cn/html/txdm/txtx/1035.htm">
+图片的无缝滚动（纵向、横向）</a></li>
+<li>
+<a title="鼠标触及带边框的菜单" target="_blank" href="http://www.csrcode.cn/html/txdm/cddh/1034.htm">
+鼠标触及带边框的菜单</a></li>
+<li>
+<a title="比较实用的CSS控制链接颜色效果" target="_blank" href="http://www.csrcode.cn/html/txdm/ljwb/1032.htm">
+比较实用的CSS控制链接颜色效果</a></li>
+<li>
+<a title="鼠标接触或者离开图片时，图片大小会相应变化" target="_blank" href="http://www.csrcode.cn/html/txdm/txtx/1031.htm">
+鼠标接触或者离开图片时，图片大小会相应变化</a></li>
+    </ul>
+   </div>
+</div>
+</div>
+</body>
+</html>
+
+<br><br><hr><p align="center"><font color=black>本特效由 <a href="http://www.CsrCode.cn" target="_blank">芯晴网页特效</a>丨CsrCode.Cn 收集于互联网，只为兴趣与学习交流，不作商业用途。</font></p>

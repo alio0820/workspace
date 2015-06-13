@@ -1,0 +1,669 @@
+1.在网页中输出一行文字，使用document的write（）方法；
+如：document.write("");
+2.指定使用的脚本语言的类型，可以两种方法同时使用；
+如：<script type="text/javascript" language="javascript">
+3.将JavaScript代码独立成外部文件，查看源文件是看不到代码，但是引用外部文件时，不能在<script>和</script>中加入其它代码，包括脚本语言；
+4.alert()的作用是弹出一个警告框；
+如：alert("弹出警告框！");
+5.加入defer的作用是先加载再解析；
+如：<script type="text/javascript" language="javascript"  defer>
+alert("弹出警告框！");
+</script>
+加载时将跳过此语句，继续执行HTML文件，待HTML文件加载完成后就解析此语句；
+6.单行注释，//，多行注释，/*  */；
+7.隐藏脚本语言，如果不支持就不显示脚本，支持则执行；
+如；<!-- document.write("");--> 
+8.提示用户不支持脚本语言，如果不支持，<noscript> </noscript>中的语句就执行；
+如：<noscript> 您的浏览器不支持客户端脚本语言，请更换浏览器或开启脚本语言的支持</noscript>
+9.使用JavaScript:语句调用
+10.使用事件调用JavaScript语句的函数和方法时，可以省略JavaScript:语句；
+如：<a href="#" onclick="alert('您好！')">这是一个超链接</a>
+11.JavaScript支持大小写；
+12.undefined与null是两种不同的数据类型，但是如果使用相等运算符（==）作比较时，却会返回true，只有使用等同运算符（===）作比较时，才会返回false；
+13.隐式转换的原则：将数据类型转换成当前环境中所需要使用的数据类型；
+14.显示转换，Number(value) --转换为整数或浮点数，如果不能转换，则返回NaN
+parseInt(value)转换为整数,parseFloat(value)转换为浮点数,只转换第一个无效字符之前的所有字符；
+15.转换为数字型时，空字符串，布尔型，null型，使用Number转换为0，使用parseInt和parseFloat转换为NaN;undefined都转换为NaN;
+16.转换为布尔型时，只要不是空字符串转换为boolean型，都转换为true,空字串转换为BOOLEAN型时，代表false,数字除开0和NaN,转换为boolean型时，代表true;
+17.转换为字符串型时，原来是什么类型，转换过后就代表什么样的字符串；
+JavaScript还有很多种内置的对象，如日期对象，函数对象，这些对象大多使用两个方法转换为字符串；
+如：toString()方法:转换成字符串。
+    toLocaleString():转换为本地类型的字符串。
+18.JavaScript中字符串必须写在一行；单引号中可以包含双引号，双引号中可以包含单引号，但是如果单引号中包含单引号，双引号中包含双引号，就必须要使用转义字符，即\'和\"；
+记住五个常用转义字符：\b退格符，\f换页符，\r回车符，\t水平制表符，\v垂直制表符；
+19.整型直接量，八进制第一个数为0，十六进制第一个数为0x或0X;
+20.定义数组，var myArr=["my String",123,true];
+21.JavaScript中支持为没有定义过的变量赋值，直接为变量赋值的全部是全局变量；
+如：book=100 book为全局变量
+22.在JavaScript中任一位置定义的变量在程序的整个有效范围内有效，而不是从定义变量的那一行开始，但是变量的赋值必须从赋值时开始；切记
+23.嵌套函数父级函数中定义的函数可以在子级中使用，子级中定义的函数不能在父级中使用；函数中的变量不可以在函数外使用，但是语句块中的变量可以在语句块外使用；后者与其他语言有较大不同
+24.Infinity表示无穷大，-Infinity表示无穷小
+25.模运算符可以采用浮点数的操作数，且返回的结果与第一个操作数的结果相同；&和||这两种操作符分别在第一个操作数为false，true时，跳过第二个操作数的判断；特别注意，比较字符串时，是一个一个的比较的，所以"10"比"9"小；等同运算符与不等同运算符不会自动转换类型，只有在类型相同且值相等时，才返回所谓的true和false；
+26.在计算机中存储负数是使用负数的吧补码形式；即：按位取反再加一；
+27.异或运算符只有在两个数都相同时才返回0；左移运算符，左移一位表示原数乘以2；0补足运算符，遇到负数就会产生特别大的数；
+如：document.write(9<<1);结果输出为18；
+    document.write(9>>1);结果输出为4；
+    document.write(-9>>1);结果输出为-5；
+    document.write(-9>>>1);结果输出为2147483643；
+28.detele不能删除→var定义的变量和对象，能删除不是由var定义的变量与对象和未定义的变量与对象；核心对象属性不能删除，核心对象本身可以被删除；   
+29.typeof运算符返回操作符的类型；
+如：typeof(document.alinkColor)返回string
+    typeof(Math.PI)返回number；      
+30.with语句容易产生歧义；有一种等价语句可以代替with语句的作用，且执行效率更高；
+31.label语句不知道怎么用；break和continue语句只能跳转到循环语句前的label语句所指定的位置上；
+32.throw语句只是抛出一个异常，但抛出的异常并没有被处理，只是在浏览器中有所显示，如果要处理异常，都必须使用try...catch语句；
+33.在一个语句块中可以多次使用throw语句抛出不同的异常，但只要抛出一个异常，该语句块中的其他语句就不会执行；从JavaScript1.6开始，可以使用多个catch语句块来处理捕捉到的异常，但是IE浏览器不支持JavaScript1.6版本；
+34.对象中的属性是无序的，如果要遍历对象属性，必须要使用for...in语句；
+如：for (var obj in Monitor)
+{
+document.write(obj,"<br>");
+}
+35.读取一个对象的属性值时，如果该对象没有此属性，则查看该对象的原型对象，但是设置一个对象的属性值时，无论该对象是否拥有该属性，都不会使用到原型对象；
+36.全局对象的内置属性和方法都是不能被遍历的；否则输出为空；
+37.使用new运算符调用Boolean()构造函数所创建的是一个对象。而不使用new运算符直接使用Boolean()构造函数所创建的是一个布尔型的变量；
+38.将布尔对象转换成布尔值时，无论布尔对象所表示的布尔值是什么，一律返回true；
+39.将数字对象转换为字符串：myNumber.toExponential(),使用科学计数法，括号里的数指定小数点后的位数；myNumber.toFixed(3)，使用传统的方法，括号里的数指定小数点后的位数；str.charCodeAt(i),返回字符串的Unicode编码；str.charAt(5),返回字符串的第六个字符；str.substring(2,5)，返回第3个到第5个字符之间的字符串；str.substr(2,3),返回第3个字符开始，长度为3的字符串；
+40.valueOf()返回对象的值，typeof()得到该值的类型，constructor返回对象的类型；
+如：var NumberObj=new Object(123.456)
+    if(NumberObj.constructor==Number)
+   {
+      document.write("NumberObj是一个数字对象<br>");
+   }
+41.对象的eval(String)方法可以执行字符串中的Javascript代码；
+如：var myObj=new Object();
+    var str="1+2";
+    document.write(str,"的结果为:",myObj.eval(str));     IE浏览器不支持
+42.每个函数都定义了一个prototype属性，该属性可以引用原型对象。
+43.判断对象的某个属性是否可以被枚举，object对象的propertyIsEnumerable()
+如：objectName.propertyIsEnumerable(prop),prop为objectName对象的属性；
+44.监视属性值的变化：objectName.watch(prop,handler),如果prop的值发生变化，则执行handler函数；objectName.unwatch(prop)
+45.如果其他对象本身拥有与Object对象相同的属性名或方法名，则会覆盖Object对象的属性与方法，如：Data对象的toString()方法和toLocaleString()方法，就会覆盖Object对象的toString()方法和toLocaleString()方法；
+46.任何一个数组都是一个对象，可以使用Array()构造函数创建数组，也可以使用数组直接量创建数组，甚至可以使用字符串对象的split()方法将一个字符串分割成一个数组。
+47.一个函数也是一个对象，称为函数对象；
+48.使用Function()构造函数定义函数
+如：<script type="text/javascript">
+    var mySum =new Function("x","y","var reSum = x+y;return reSum;");
+    </script>   new可要可不要   可在Javascript1.1以上版本中使用
+49.使用函数直接量定义函数
+如：<script type="text/javascript">
+    var mySum =new Function(x,y){var reSum=x+y;return reSum;};
+    </script>   
+50.递归调用函数，直接return 函数名加括号即可；
+51.当传入的参数多了时，函数直接忽略后边的参数；当传入的参数少了时，对于少传递的参数，会默认参数的初始值为undefined；
+52.当一个函数被引用时，Javascript会自动为该函数创建一个Argument对象，如传入三个函数，则，argument[0],argument[1],argument[2]代表这三个参数；arguments.length可以返回传递给函数的实际参数的个数；当传入的参数不确定时，可以使用arguments.length表示参数；
+53.构造一个函数时，函数中的内容如果有输出就会输出，且在返回值之前输出;
+54.使用callee属性递归调用函数，argument.callee(x,y)代表当前正在运行的函数；
+55.函数对象的length的属性的返回值是函数定义的参数个数，这点与argument.length不同；
+56.某某对象是使用某某构造函数所创建的对象,返回该构造函数的名字
+如：myMonitor.constructor.name() 
+57.函数本身就是一个对象，因此可以为函数添加属性
+如：function myhanshu(x)
+  {
+      myhanshu.counter++;
+      return x*x;
+  }
+58.全局函数
+eval(expr)    执行字符串中的代码
+isFinite(number)     判断一个值是否无穷大
+isNaN(testvalue)     判断一个值是否是数字
+parseInt(str)        将值转换为整数，遇到不能转换的字符就停止,如果第一个就不能转换，则直接返回NaN;parseInt(str,8),将字符串转换为八进制；
+Number(str)          将值转换为数字，遇到不能转换的字符就返回NaN
+parseFloat(str)      将值转换为浮点型
+escape(str)          将字符串转换成ISO字符集中的十六进制编码
+unescape(str)        将ISO字符集的十六进制编码转换为字符串
+encodeURI()函数和decodeURI()主要用于URI（如网址）的编码和解码，用法同上；如果遇到&字符，则需要使用encodeURIComponent()编码，decodeURIComponent()解码
+59.创建数组
+//使用数组对象的构造函数创建数组
+var arr1= new Array();
+//使用数组直接量创建数组
+var arr2=[];
+//在创建的同时为数组赋值
+var arr2 = ["字符",true,1,3];
+//指定数组的长度
+var arr = new Array(3); 数组包含3个元素
+60.字符串对象的split()方法，可以将一个字符串分割成几个子字符串，并且将这些字符串放在一个数组中，并返回该数组
+var oldstr = "十二个月份的英文为：Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec.";
+var strArr = oldstr.split(",");
+var strArr = oldstr.split(",",3);数组的最大长度为3
+61.输出数组中的元素
+var arr = [123,456];
+ document.write("arr数组的元素为："，arr);
+62.数组的长度是动态变化的，可以随时添加或删除数组中的元素；如，为数组赋值arr[6]="I LOVE YOU",则数组长度动态变为7；同时还可以指定数组的length属性值来改变数组的长度；
+63.Javascript不能创建多维数组，但是由于数组的元素值可以为数组，可以这样创建多维数组
+如： var myArr = new Array();
+myArr[0]=[1,2,3];
+64.数组对象的方法
+1）修改数组的方法
+   pop()          删除数组的最后一个元素 myArr.pop()   返回删除的元素
+   push()         在数组的尾部添加元素  myArr.push("true","name") 返回新数组的长度
+   reverse()      颠倒数组中元素的位置  myArr.reverse()  myArr.toString()指的是颠倒次序后的数组
+   shift()        删除数组中的第一个元素myArr.shift()  返回删除的元素  
+   sort(compareFunction)   将数组中的元素排序     myArr.sort(),myArr.toString()为排序后的数组  具体方法见html
+   splice(index ,howMany,[element1][element2][,...,elementN])   （1）在数组中任何位置插入、删除或替换元素，myArr.splice(0,0,"name","apple")第二个参数必须为零，第一个参数为插入的位置，后面的参数为插入的元素；    （2）var delValue = myArr.splice(m,n);删除第m个元素后n个元素，myArr.toString()为删除后的数组，delValue.toString()为删除的元素       （3）var changeValue = myArr.splice(0,1,"good")将一个元素替换为good，myArr.toString()为替换后的数组,changeValue.toString()为被替换的元素；
+   unshift(element1,element2,element3,...,elementN)             在数组的头部添加元素  unshift("false","password")   返回新数组的长度
+2）不修改数组的方法
+   concat(value1,value2,value3,..,valueN)       在数组的尾部添加元素，但该方法不修改原数组，只是返回一个在原数组后添加了元素的新数组var newArr = myArr1.concat(myArr2);
+   join(separator)                              将数组中的元素转换为字符串，并使用分隔符将这些元素连接起来  myArr.join("+");
+   slice(begin[,end])                           获取数组中的一部分，并作为一个新数组返回 myArr.slice(1,3)截取第2个到第3个元素，myArr.slice(1)截取第2个到最后一个，myArr.slice(-4)截取倒数第四个到最后一个，myArr.slice(0,-2)截取第一个到倒数第3个元素
+   toSource()                                   返回数组对象的源代码，可以使用该源代码创建一个新的数组对象。该方法不是所用浏览器都支持
+   toString()                                   将数组转换成一个字符串
+   valueOf()                                    返回数组对象中所存放的原始值
+   indexOf(searchElement[,fromIndex])           返回元素在数组中的第一次出现的位置
+   lastIndexOf(searchElement[,fromIndex])       返回元素在数组中的最后一次出现的位置
+2）遍历数组元素的方法
+   filter(callback[,thisObject])                逐个测试数组中的元素，返回一个新数组，新数组中的元素为原数组中通过测试的元素
+   forEach(callback[,thisObject])               让数组中的每一个元素都调用callback函数
+   every(callback[,thisObject])                 如果数组中的每个元素都符合callback函数中设置的条件，则返回true，否则返回false
+   map(callback[,thisObject])                   将数组中的每一个元素都调用callback函数，并将返回值组成一个数组返回
+   some(callback[,thisObject])                  如果数组中至少有一个元素可以满足callback函数中的条件，则返回true，否则返回false
+   reduce(callback[,initialValue])              将数组中的前两个元素作为参数传递给callback函数，得出值之后，将该值与第3个元素作为参数传递给callback函数，以此类推，直到所有元素使用完毕为止，最后将callback函数的返回值返回
+   reduceRight(callback[,initialValue])         与reduce()方式类似，只有当遍历数组元素时，才从右至左遍历
+
+   callback函数这样写，function callback(arrEle,index,arrName){这里边写代码}   ，这样来调用，如：myArr.every(callback)
+
+65.将数组转换为字符串，一下三种方法结果相同
+   var myArr = [2,true,"Javascript",5,false];
+   document.write(myArr.toString());
+   document,write(myArr);
+   document,write(myArr.valueOf());
+   将数组转换为本地字符串
+   document.write(myArr.toLocaleString());
+   通过使用连接符将数组元素连接成字符串
+   document.write(myArr.join("-"));
+   document.write(myArr.join("+"));
+   document.write(myArr.join(","));
+   输出为2-true-JavaScript-5-false
+         2+true+JavaScript+5+false
+         2,true,JavaScript,5,false         上面3中方法的输出就是这句
+66.从前向后查找元素在数组中的位置
+   myArr.indexOf(9)返回9在数字中第一次出现的位置
+   myArr.indexOf(9,2)从第3个元素开始寻找值为9的的元素，返回第一次出现的位置，没有则返回-1
+   my.Arr.indexOf(9,-2)从倒数第2个元素开始寻找值为9的的元素，返回第一次出现的位置，没有则返回-1
+67.从后向前查找元素在数组中的位置
+   myArr.lastindexOf(9,2)从第3个元素开始寻找值为9的的元素，返回最后一次出现的位置，没有则返回-1
+68.还有一种语言，叫perl什么的，可以去看看！
+69.数组对象只有三个属性，index， input， length，前面两个都用于正则表达式创建的数组
+70.正则表达式，var myArr = str.match(check) myArr返回符合条件的元素；  myArr.input 返回的是原数组，即str字符串；myArr.index返回myArr字符串第一个元素在原数组中的位置；
+71.对象模型
+                                                             |-------Elements
+                                                             |-------Button
+window------|-----document----------|-----anchors            |-------Checkbox
+            |-----frames            |-----forms--------------|-------Fileupload
+            |-----history           |-----Images             |-------Hidden 
+            |-----location          |-----Ilnks              |-------Password
+            |-----navigator         |-----location           |-------Radio
+            |-----screen            |-----applets            |-------Reset
+                                    |-----embeds             |-------Select-------Options
+                                                             |-------Submit
+                                                             |-------Text
+                                                             |-------Textarea
+72.引用对象
+   window.document.forms[0].elements[0].value="张三"; 还可以混合引用，前面的window.document可以不写
+73.src= 图片也拥有onclick事件，onclick=check    可以直接等于需要响应的函数，不加括号；a href= 超链接也可以有onclick事件
+74.超链接不是为了跳转页面，而是执行一个操作，<a href="javascript:alert('你单击了超链接')">超链接</a>
+75.<input type = "text" name= "myName" onblur="checkName(this.value)"  onblur属性说明当文本框失去焦点时，调用checkName()函数；
+76.mousemove的用法，如：文本框的取值为，myForm.screenx.value=event.screenX;  myForm.screenx.value=event.screenX;在图片的src中可以加入mousemove鼠标移动事件
+77.鼠标事件
+   单击 onclick; 双击 ondblclick; 按下 onmousedown; 释放 onmouseup;
+78.键盘事件
+   整个事件 onkeypress; 按下 onkeydown; 释放 onkeyup;
+79.加载和卸载（事件）
+   在HTML4.01中，只规定了body和frameset元素拥有加载和卸载事件，但是大多数浏览器都支持img元素和object元素的加载事件；
+   加载事件是指整个文档从浏览器窗口中加载完毕后所激发的事件，卸载事件是指关闭浏览器窗口或从当前网页跳转到其他网页时所激发的事件；onload   onunload
+80.得到焦点与失去焦点
+   <input name = "myName" type="text" onfocus="clearText()" value="张三">
+81.还可以在form表单中写出onsubmit,onreset的响应事件
+   <form name="myForm" onsubmit="return checkDate()" onreset="return resetForm()" action="submit.htm">
+82.文本框中的事件，使用onselect和onchange方法能够使文本框中的内容不被修改
+83.History对象：该对象是对当前浏览器窗口浏览历史的引用；
+   Location对象：该对象是对当前文档URL的引用；
+   Navigator对象：该对象是对浏览器本身的引用；
+   Screen对象：该对象是对客户端显示器信息的引用；
+84.对话框分警告、确认、提示3种；alert   confirm    prompt    (写函数时，函数名与括号之间不能有空格)
+85.状态栏   window.defaultStatus = "欢迎您"+name;  怎么好像只要页面发生变化，状态栏就消失了；
+86.打开空白窗口 window.open()    代开带文档的窗口   window.open('sample01.html')   此时在新打开的窗口里加载sample01.html文档
+   还可以为打开的窗口命名   window.open('sample02.html','buttonWin') 只要此窗口不关闭，就不会再打开与之同名的窗口；
+87.设置新开窗口的特征
+   新开窗口大小为300X600，并且不显示菜单栏,显示地址栏,用户可以调整浏览器窗口大小,显示滚动条，状态栏，工具栏
+   window.open("sample.html","","width=300,height=600.meunbar=no,location=yes,resizable=yes,scrollbars=yes,status=yes,toolbar=yes");
+   不显示新开窗口的浏览记录
+   window.open('sample01.html',"buttonwin","",true);   此时open()方法中的replace参数设为true
+88.window.close() 方法中 如果关闭的不是由javascript创建的窗口， 此时一般会弹出确认框；
+   window.open()方法返回新开的窗口对象，可以由该对象关闭窗口(切记，不能用窗口名来关闭窗口)
+   如: myWin=window.open("sample12.html","onWin");
+       myWin.close();
+       窗口对象的close属性可以判断窗口是否已经关闭   if(myWin.closed)  alert("窗口已经关闭");
+89.只要获得了窗口对象，就可以操作该窗口中任何数据
+   var myWin=window.open();
+   myWin.document.write("你好！");
+90.为窗口设置焦点     myWin.focus();   此时窗口处于其他窗口的上方
+91.textbox 拥有size属性
+92.移动到相对位置      myWin.moveBy(x,y)     移动到绝对位置       myWin.moveTo(x,y)
+93.调整窗口的大小      调整到相对大小（即，在原来的基础上改变窗口）window.resizeBy(x,y)
+                       调整到绝对大小   window.resizeTo(x,y)
+94.滚动条的位置调整     调整到相对位置   scrollBy(x,y)     调整到绝对位置   scrollTo(x,y)
+95.周期执行代码     
+   如：在状态栏显示时间
+   function showTime()
+   {
+       var now=new Date();
+       window.status="当前时间为 "+now.tolocaleString();
+   }
+    //每隔一秒调用一次showTime()函数
+    window.setInterval("showTime()",1000);
+96.延迟执行代码
+   window.setTimeout("a()",1000);
+   递归也可以达到循环执行的效果
+97.取消周期执行    window.clearTimeout(runId);     runId为周期执行的ID
+98.frameset元素和frame元素配合使用就可以为网页分配不一样的框架
+   <frameset rows="20%,*">
+      //该框架处于最上边
+      <frame src="a.htm" name="top">
+      <frameset cols="30%,*">
+          //该框架位于左边
+          <frame src="b.htm" name="left">
+          //该框架位于左右边
+          <frame src="c.htm" name="right">
+      </frameset>
+   </frameset>
+99.嵌入另一个网页，使用标签iframe
+   <iframe src="a.htm" name="myFrame"></iframe>
+100.window 对象的frames 属性可以返回一个数组，该数组代表浏览器窗口中的所有框架，如果没有包含框架，frame属性将会返回一个长度为0的数组；
+    window.frames.length     可以在框架页中直接输出   window.frames[i].document.write();  还可以通过框架名直接引用框架   window.myFrame.document.write();
+101.js代码可以写在body中，直接顺序执行；
+102.   parsent :该属性代表当前窗口的父级窗口。
+       self    :该属性代表当前窗口，即本身。
+       top     :该属性代表当前窗口的顶层窗口。
+103.父窗口对子窗口的引用   frames[2].frames[0]    window.right.right_tip      window.right.right_bottom
+    子窗口对父窗口的引用   parent.right.right_tip    parent.right.right_bottom
+    对顶级窗口的引用       top.right.right_tip     top.right.right_bottom
+    新开窗口的引用         window.opener.myForm.myText.value="输入文字";    opener代表新开窗口本身
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+第3篇   JavaScript 核心技术
+
+第14章 文档操作
+
+104. anchor对象封装在anchors[]数组中
+     applet对象封装在applet[]数组中
+     embed元素封装在embed[]数组中
+     plugin对象封装在plugin[]数组中
+     form对象封装在forms[]数组中
+     image对象封装在images[]数组中        直接document.image[0]
+     link对象封装在links[]数组中
+
+105.打开文档流
+    document.open();
+    document.write("您好！");
+    关闭文档流
+    document.close();
+    但是一般浏览器会自动打开文档流，实际情况下，一般不应该关闭文档流
+
+106.&lt;代表< ,&gt;代表>  &quot;代表"   文本域中的代码需要注意编写、
+
+107.打开一个HTML文档
+    var myWin = window.open();
+    myWin.document.open("text/html");
+    打开一个Text文档
+    var myWin = window.open();
+    myWin.document.open("text/plain");  如果这样写 myWin.document.open("text/html",replace);此时覆盖当前浏览器的浏览记录，不能通过后退回到输入之前的状态；
+108.超链接的三种状态
+    1）link状态   基本状态（没有访问过的状态）
+    2）vlink状态   访问过的状态
+    3）alink状态   激活的状态（按下鼠标还没有放开）
+    <body link="red" vlink="green" alink="blue">
+109.<body bgcolor="red" text="blue"> 设置网页的背景色为红色，前景色为蓝色；
+110.最后修改时间 document.lastModified    文档的URL   document.URL    设置标题栏   document.title="只是标题栏";
+111.链接到当前文档的URL      document.referrer;   返回HTML文件所在的域   document.domain;
+112.border该属性用于表示图片的边框宽度
+    complete该属性用于表示图片是否加载完毕，属性值为布尔型数组。如果该属性值为true，则代表图片加载完毕；
+    height 设置图片的高度
+    hspace该属性用于表示图片与文字在水平方向的距离
+    lowsrc该属性用于声明替代图片的低质量图片的URL
+    name图片的名称
+    src该属性用于声明图片的URL
+    vspace该属性用于表示图片与文字在垂直方向的距离   
+    width该属性用于表示图片的宽度
+113.mouseover 和mouseout 可以置换图片
+114.Math.random()   产生随机数   在0到1之间  设置图片的置换可以调用图片的onload属性；如onload="changImg()";
+115.提示图片不存在   <img src="a.jpg" onerror="this.src='a.jpg'">
+116.超链接和锚
+    超链接的各部分
+    锚部分：document.links[0].hash
+    域名部分：document.link[0].host
+    主机部分：document.link[0].hostname
+    URL为：document.link[0].href
+    虚拟目录部分为：document.link[0].pathname
+    端口部分为：document.link[0].port
+    协议部分：document.link[0].protocol
+    查询部分：document.link[0].search
+    目标部分：document.link[0].target
+    文字部分:document.link[0].text
+    文字部分（真）document.link[0].innerText
+    超链接名称：document.link[0].name
+
+    frame标签中是没有body的
+117.还可以这样取text中的值    document.forms[0].elements[0].value;
+118.表单默认的传输数据的编码方式为text/plain,而Email传输数据的编码方式为multipart/form-data
+    textarea对象代表多行文本框
+    file 文件选择框
+119.分组元素 <fieldest></fieldest>   分组元素只是起到视觉上的作用
+120  文本框快捷键   accessKey   文本框可输入的最大文字长度    masLength    文本框只读   readOnly=true
+121. 文本框对象的方法
+     blur()                    将焦点从文本框中移开
+     click()                   模拟文本框被鼠标单击
+     focus()                   使文本框得到焦点
+     select()                  选中文本框中的文字
+122.文本框对象的事件
+    blur
+    change
+    click
+    dbclick
+    focus
+    keydown
+    keypress
+    keyup
+    mousedown
+    mousemove
+    mouseover
+    mouseup
+    select                文本框中的文字被选中并失去焦点时激发的事件
+    selectstart           文本框中的文字开始被选中时激发的事件
+
+123.文本框的默认值    myForm.textTitle.defaultValue
+    选中文本框        myForm.textTitle.select()
+    
+124.文本框  按钮  单选框  多选框  都有disabled属性，设置为true时，不能选中它
+    当多选框的选项达到一定的数量，需要限制时，可以编写onclick事件，并且在选多了时，return false；此时，此次操作无效
+
+125.<select name="mySelect" size="4">  size属性的设置使下拉框可以同时显示4个选项
+    <select name="mySelect" size="4"  multiple>  multiple属性的设置使下拉框可以同时选择多个选项
+    defaultSelected   默认情况下 该选项是否处于选中状态
+126.下拉框列表添加选项   myForm.mySelect.options[myForm.mySelect.length]= new Option[text,value];
+     删除下拉框选项      myForm.mySelect.remove(index);
+127.tabIndex 表示按钮  单选框  多选框等等的tab顺序索引
+128.//获得图片地址
+     var imgSrc = myForm.myFile.value;
+    //获得文件的扩展名
+     imgType = imgSrc.split(".");
+    //获得文件的最后一个元素为文件的扩展名
+     imgExc = imgType[imgType.length-1].toLowerCase();
+    //判断文件的类型
+     if(imgExc=="jpg"||imgExc=="png")
+     ........... 
+    
+    由于文件选择框多用于上传文件，因此在<form>标签中必须将enctype属性值设为"mulitipart/form-data",将method属性值设为"post";
+129.删除下拉框的所有选项
+    while(myForm.mySelect.length>0)
+    {
+        myForm.mySelect.remove(0);
+    }
+130.下拉列表的选项排序，在之前的数组排序中有讲
+
+第16章   其他对象操作
+
+131.Screen对象中的常用属性
+    availHeight  用于表示屏幕的可用高度，单位为像素（整个屏幕的高度减去任务栏的高度）
+    availWidth   用于表示屏幕的可用宽度
+    colorDepth   用于表示颜色的深度
+    height       用于表示屏幕的高度，单位为像素
+    width        用于表示屏幕的宽度
+132.//将浏览器窗口移动到屏幕的左上角
+    window.moveTo(0,0)
+    //调整浏览器窗口的大小
+    window.resizeTo(screen.availWidth,screen.availHeight)
+133.Navigator对象，也称浏览器对象，代表的是整个浏览器，这与代表浏览器窗口的window对象有本质的区别。Navigator对象的属性大多都是用来反映浏览器的信息；
+
+134.使用Navigator对象的javaEnabled()方法可以判断浏览器是否支持Java;  navigator.javaEnabled()   返回为true，代表支持，返回为false，代表不支持
+145.浏览器的基本属性
+    navigator.platform        当前操作系统平台
+    navigator.appName         浏览器名
+    navigator.appVersion      浏览器版本
+    navigator.appCodeName     浏览器代码
+    navigator.cookieEnabled   是否支持Cookie
+    navigator.userAgent       Http请求的用户代理头
+    navigator.language        浏览器使用默认语言
+    navigator.imeTypes        浏览器支持的MIME类型
+    navigator.plugins         浏览器中安装的插件
+    navigator.userLanguage    用户使用的语言
+    navigator.systemLanguage  操作系统中使用的语言
+146. history.go(1)  相当于history.forward(),   前进到下一个访问的页面
+     history.go(-1) 相当于history.back()       前进到上一个访问过的页面
+     history.go(4)  前进到第4个访问的页面
+     history.go(-4) 后退到第4个访问的页面
+     history.go(0)  刷新本页面
+     History对象跳转页面，通常是从缓存中加载网页，而不是从服务器中重新加载网页
+147.Location 对象的replace()方法可以加载一个新文档，而reload()方法可以刷新当前文档
+    跳转   location.replace(URL)      不会添加新纪录，只会覆盖当前的浏览纪录
+    刷新   location.reload()
+    一旦location.href 属性改变   浏览器就会立刻加载修改后的URL
+
+
+第17章 Cookie
+
+subString()很重要  ---截取字符串
+
+148.设置Cookie的域   document.cookie = "name=value;path=path;domain=domain";
+    如：document.cookie= "cookieUserName="+userName + ";path=/ ;domain:.xingye.com";此时设置了域为.xingye.com
+149.在Cookie中设置secure，就可以要求浏览器使用加密的传输协议传输Cookie。如果传输协议不是加密协议，那么该Cookie将不会被传输
+    document.cookie="name=value;secure";
+150.为Cookie编码   var userName = escape(myForm.myName.value);
+    解码           var cookieMessage = unescape(document.cookie);
+
+第18章 文档对象模型（DOM）
+
+151.Document节点的nodeType为：document.nodeType;
+    <html>节点的nodeType为:document.documentElement.nodeType
+    <form>节点的nodeType为:document.myForm.nodeType
+    <button>节点的nodeType为:document.myButton.nodeType
+152.文档的根元素为：html   document.documentElement.tagName
+    文档中定义CSS样式一共有  document.styleSheets.length    处
+    文档主体的节点为: body        document.body.tagName
+153.查看某标签在文档中出现的次数  [如P标签]
+    var pLable = document.getElementsByTagName("p");
+    document.write("本文档中的&lt;p&gt;标签一共有",pLable.length,"个");
+154.在IE浏览器中当元素id属性不存在时，可以将元素的name属性值当成id的属性使用
+155.根节点的名称：  document.documentElement.nodeName
+    body节点的名称：document.body.tagName
+156.获取一个节点下的所有子节点
+    var formElement= document.getElementById("myForm");
+    var formElementChildNodes = formElement.childNodes;
+157.获得节点的属性值
+     var elet = document.getElementByld("myButton");
+     其type属性值为   elet.getAttribute("type");
+    //查看input节点是否有checked属性
+    elet[i].hasAttribute("checked")     返回值为true或false
+    //删除checked属性
+    elet[i].removeAttribute("checked");
+    //添加checked属性
+    elet[i].setAttribute("checked","true");
+
+
+第19章 正则表达式
+
+158.特殊符号前面加斜杠如 \! 表示 !
+                         \o      null字符
+                         \t      制表符
+                         \v      垂直制表符
+                         \f      换页符
+                         \r      回车
+                         \w      [a-zA-Z0-9]
+                         \W      [^a-zA-Z0-9]
+                         \s      可以匹配任何Unicode空白符
+                         \S      可以匹配任何Unicode空白符之外的字符
+                         \d      [0-9]
+                         \D      [^0-9]
+159.正则表达式的重复类
+    {n}     匹配前一项n次     例如ad{2}  只能匹配add
+    {n,}    匹配前一项至少n次，至多不限
+    {n,m}   匹配前一项至少n次，至多m次
+     ？     匹配前一项0或1次， 相当于{0,1}
+     +      匹配前一项至少1次，相当于{1,}
+     *      匹配前一项0或多次，相当于{0,}
+160.正则表达式的选择符为"|"    (匹配方式为从左到右)
+    如：/index | default | list/
+161.定位符       
+    "^"定位符可以匹配一行的开头，"$"定位符可以匹配一行结尾
+    由于标题独占一格，故要匹配文章中的所有标题，可以使用以下的正则表达式
+    /^第[1-9]\d*章$/
+    \b 匹配一个单词的边界
+    \B 匹配一个非单词的边界
+162.分组   如以下正则表达式可以匹配字符串“boy”或“boyfriend”   /boy(friend){0,1}/
+           表示一个15位或18位数的身份证号码，可以使用以下正则表达式      /\d{18}|\d{15}/     ;  如果前三位用来表示属于哪个省份   /(\d{3})(\d{15}|\d{12})/
+163.引用   /(['"])[^'"]*\1/     第一部分表示以单引号或双引号开头，第二部分表示这些字符中不能包含单引号或双引号，第三部分包含“\1”，该部分引用了第一部分的内容，同时说明字符串的结尾方式与开头方式相同    只有这样的代码才符合要求     "abc"
+164. i 匹配时不区分大小写              /class/i
+     g 匹配时执行全局匹配模式          /class/gi
+     m 匹配时执行多行匹配模式          /class/m
+165.使用正则表达式对象
+    使用构造函数可以创建一个正则表达式对象
+    var myRegExp3 = new RegExp("class",gi);
+    也可以通过正则表达式直接量来创建RegExp对象
+    var myRegExp3= /class/gi;
+166.myRegExp.global    用于表示正则表达式中是否有g标志，如果有则返回true，如果没有则返回false；
+    myRegExp.ignoreCase  用于表示正则表达式中是否有i标志，如果有则返回true，如果没有则返回false；
+    myRegExp.multiline  用于表示正则表达式中是否有m标志，如果有则返回true，如果没有则返回false；
+167.验证身份证号码    var myRegExp = /^\d{17}[\d|x]$|^d{15}$/i;
+    验证电话号码      var myRegExp = /^(\(\d{3,4}\)|\d{3,4}-)?d{7,8}$/;
+    验证URL的合法性   var myRegExp = /^http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-\.\/\?%&\=]*)?$/;
+
+168  常用的动态网程序语言有以下几种
+     CGI  公用网关接口
+     ASP  活动服务器网页
+     JSP  
+     PHP  超级文本预处理
+169.get通常只能提交2048字节的数据；
+    post可以提交的数据量可以达到4M；
+170.接受get方式提交的数据应该使用以下代码
+    request.QueryString("参数名");
+    接受post方式提交的数据应该使用以下代码
+    request.Form("参数名");
+
+    在Asp中还可以直接使用request()来接收各种方式传递过来的数据。但其接收次序为：QueryString方式->Form方式->Cookies方式->ClientCertificate方式->ServerVarible.
+171.使用post方式提交数据的关键代码如下：
+    xmlHttp.open("post","sample07.asp",true);
+    xmlHttp.setRequestHeader("content-type","application/x-www-form-urlencoded");
+    xmlHttp.send("townName="+myForm.province.value);
+172.拍照838-848   950-961   983-991   1004-1008
+
+
+
+
+
+
+
+
+
+
+
+
+173.xml是一种元标记语言，所谓“元标记”，就是开发者可以自己定义标记；
+    xml不会做任何的事情，仅仅用于存储数据；
+    xml中出现的标签必须是成对的，这点与HTML不同；
+    xml的标签区分大小写，HTML中的标签不区分
+    xml的标签不能交叉，HTML的标签可以交叉
+174.xml文件的声明：<?xml version="1.0" encoding="gb2312" ?>  声明必须出现在第一行
+175.在xml文件中使用这些特殊符号时，必须使用转义字符。
+        字符                    转义字符
+	<			&lt;
+	>			&gt;
+	"			&quot;
+	'			&apos;
+	&			&amp;
+176.注释与HTML中的相同，<!--    -->
+177.CDATA标签      是xml中的一个特殊标签，不是用户定义的，也没有结束标签
+    <![CDATA[text]]>  其中CDATA是标签名称，text为标签中的内容。任何软件都会把text当作纯文字，对text的内容不做任何分析和处理。因此，在CDATA标签中即使用到特殊字符也不需要使用转义字符。
+178.在IE浏览器中解析XML文件
+    //创建XMLDOM对象
+    var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+    //使用同步方式加载XML文档
+    xmlDoc.async = false;
+    //加载XML文档
+    xmlDoc.load("sample.xml");
+    //输出XML文档的根元素名称
+    document.write("该XML文件的根元素名称为："+xmlDoc.documentElement.nodeName);
+179.跨浏览器解析XML文件只需加一个条件   
+    if(window.ActiveXObject)  IE解析   
+    else   
+    //其他浏览器解析
+    xmlDoc=document.implementation.createDocument("","",null);
+180.解析XML字符串
+    var str="    ";
+    str += "     ";
+    str += "     ";
+    str += "     ";
+    var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+    xmlDoc.async = false;
+    xmlDoc.loadXML(str);
+
+181.在1996年，W3C就推出了CSS，将HTML的显示功能交于CSS，HTML只做描述文档的工作
+182.
+    1.内部样式
+    <style type="text/css">
+       选择符1{样式名称：属性值；}
+       选择符2{样式名称：属性值；}
+       h1{text-align:center}
+       p{font-size:20pt}
+    </style>
+    2.外部样式
+    h1{text-align:center}
+    p{font-size:20pt}
+    3.类型选择符
+    E{样式名称：属性值；样式名称：属性值；……}
+    div{color:red;font-family:宋体}
+    4.类选择符
+    .classname{样式名称：属性值；样式名称：属性值；……}
+    .a{background-color:#cccccc;font-style:italic}      斜体
+    调用时，  <p class="a">
+    5.ID选择符
+    #idvalue{样式名称：属性值；样式名称：属性值；……}
+    #s01{font-style:italic}
+    调用时，  <h1 id="s01">
+    6.包含选择符
+    E1 E2{样式名称：属性值；样式名称：属性值；……}   只有E2包含在E1中的节点时，样式才会起作用
+    p a {color:red}
+    7.通用选择符
+    *{样式名称：属性值；样式名称：属性值；……}     作用于所有的标签，通常与类型选择符一起使用，形成一个包含选择符；
+    div *{color:red}    此时div标签中的所有标签均为红色
+    8.子选择符
+    E1>E2{样式名称：属性值；样式名称：属性值：……}  只有E2是E1的子节点才有效，如果E2是E1的子孙节点，则无效
+    9.相邻选择符
+    E1+E2{样式名称：属性值；样式名称：属性值：……}  只有E2是E1的下一个兄弟节点该样式才起作用
+    10.伪元素
+    p:first-letter{font-size:200%;}             <p>标签的第一个字的大小是其他文字的大小的2倍
+    div:first-line{text-decoration:underline;}     <div>标签的第一行文字有下划线
+
+183.样式继承  样式层叠   样式冲突
+    由于样式冲突，便产生了CSS的权重表
+    内联样式》ID选择符》类选择符=属性选择符》伪类选择符》类型选择符=伪元素》通用选择符=子选择符=继承的样式
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

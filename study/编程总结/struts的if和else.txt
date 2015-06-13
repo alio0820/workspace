@@ -1,0 +1,12 @@
+<td><div align="center"><s:property value="stutas"/></div></td>
+	        <s:if test = 'stutas=="进行中"'>
+			<td><div align="center" class="STYLE2">
+			<a href='<s:url value="/documanage/ProDocu.jsp"></s:url>'>[维护资料]</a>
+			[提交归档]</div></td>
+			</s:if>
+			<s:elseif test='stutas=="已提交"'>
+			<td><div align="center" class="STYLE2">[查看资料][查看归档信息]</div></td>
+			</s:elseif>
+			<s:else>
+			<td><div align="center" class="STYLE2">[查看资料]</div></td>
+	    	</s:else>

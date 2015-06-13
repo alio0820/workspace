@@ -1,0 +1,13 @@
+在dreamweaver的“代码”顶端你会发现并找到
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+这个后，在dtd">和<html之间加上<!-- saved from url=(0014)about:internet -->
+记住啊，其中的about:internet一定不要填网址，很多人会在这个地方写上自己的blog借以宣传自己，如果那样会屏掉原先自己想要的flash等的效果，你添加后会是这个样子
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+你需要加的代码是：<!-- saved from url=(0014)about:internet -->

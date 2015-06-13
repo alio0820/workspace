@@ -1,0 +1,36 @@
+js函数单双引号的问题，会导致该函数不可被引用；
+显示调用js函数太危险，利用firebug等软件可以直接改变调用的js函数名
+标签之间的空格符在网页绘制时会起到作用，？
+sql语句的update user set username ='张三' and set role='1' where userId='1'不能使用
+		update user set username ='1' and set role='1' where userId='1'可以使用
+但正确的写法是这样的，set的几个数值之间不能使用and
+		update user set username ='张三' , set role='1' where userId='1'
+		
+1. 在FF中position:relative要与display:block/inline-block才能生效，display:block/inline-block可以是默认块元素，或是被定义的元素。
+2. 而在IE中position:relative除了与display:block/inline-block可以生效外，与display:table-cell、table等都可以
+
+通过ajax载入js或jsp，默认按照utf8的格式编码，而通过include标签引入则默认按照页面本身定义格式编码
+
+logo加滤镜
+
+1.未解决问题：添加出问题，table级联-------已解决
+2.未解决问题：tr冒泡事件不能阻止；2013-8-18 15:52:26
+
+2013-9-22 17:00:54
+	问题描述：数据表 exampaper_test 怎么关联到每个人，当数据量巨大的时候，通过添加字段或建立索引是否可以实现？？？
+	
+2013-9-29 12:45:28
+	问题描述：无法直接弹出最大化窗口
+	
+2013-9-29 17:28:59
+	问题描述：java类中所有的delete语句前的select都需要删除
+2013-10-19 22:26:47
+        工作内容：完成了单多选答案下拉框的级联功能
+2013-10-21 10:42:43
+        工作内容：试卷详情页面添加了返回按钮；
+        	查询试题icon修改；
+        	题库管理和试卷详情页面；
+        	table action栏样式修改；
+        	试卷生成页面添加了发布按钮；
+        	添加试卷按钮，增加了title提示；
+        	解决试题预览问题

@@ -1,0 +1,21 @@
+所谓分页显示，也就是将数据库中的结果集人为的分成一段一段的来显示，这里需要两个初始的参数：   
+
+每页多少条记录（PageSize）？   
+当前是第几页（CurrentPageID）？   
+
+现在只要给一个结果集，就可以显示某段特定的结果出来。   
+至于其他的参数，比如：上一页（PreviousPageID）、下一页（NextPageID）、总页数（numPages）等等，都可以根据前边这几个东西得到。   
+
+以mysql数据库为例，如果要从表内截取某段内容，sql语句可以用：select   *   from   table   limit   offset,   rows。看看下面一组sql语句，尝试一下发现其中的规率。   
+
+前10条记录：select   *   from   table   limit   0,10   
+第11至20条记录：select   *   from   table   limit   10,10   
+第21至30条记录：select   *   from   table   limit   20,10   
+……   
+
+这一组sql语句其实就是当PageSize=10的时候取表内每一页数据的sql语句，我们可以总结出这样一个模板：   
+
+select   *   from   table   limit   (CurrentPageID   -   1)   *   PageSize,   PageSize   
+
+拿这个模板代入对应的值和上边那一组sql语句对照一下看看是不是那么回事。 
+

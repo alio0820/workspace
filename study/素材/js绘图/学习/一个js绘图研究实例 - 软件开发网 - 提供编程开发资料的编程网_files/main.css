@@ -1,0 +1,246 @@
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+A:link {
+	COLOR: #194f95; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #194f95; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6600
+}
+A:active {
+	COLOR: #ff6600
+}
+.left {
+	FLOAT: left
+}
+.right {
+	FLOAT: right
+}
+.hidden {
+	WIDTH: 0px; DISPLAY: block; HEIGHT: 0px; OVERFLOW: hidden
+}
+.web {
+	WIDTH: 0px; DISPLAY: block; HEIGHT: 0px; OVERFLOW: hidden
+}
+.black {
+	COLOR: #000
+}
+.red {
+	COLOR: #f00
+}
+.clear {
+	HEIGHT: 0px; CLEAR: both; OVERFLOW: hidden
+}
+IMG {
+	BORDER-BOTTOM-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none
+}
+FIELDSET {
+	BORDER-BOTTOM-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none
+}
+LEGEND {
+	DISPLAY: none
+}
+BUTTON {
+	BORDER-BOTTOM-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; CURSOR: pointer
+}
+BODY {
+	TEXT-ALIGN: center; BACKGROUND: url(../iphone_images/bgbody.gif) #cfe1ed repeat-x; COLOR: #363636; FONT-SIZE: 12px
+}
+#header {
+	BORDER-BOTTOM: #fff 5px solid; BORDER-LEFT: #fff 5px solid; MARGIN: 0px auto; WIDTH: 918px; BACKGROUND: #fff; BORDER-TOP: #fff 5px solid; BORDER-RIGHT: #fff 5px solid
+}
+#topnav {
+	PADDING-BOTTOM: 0px; MARGIN: 0px auto 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #ecf1f5; HEIGHT: 30px; VERTICAL-ALIGN: middle; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+#toptext {
+	MARGIN: 0px auto; FONT: 12px/30px Tahoma,sans-serif; FLOAT: left
+}
+#topnavlist {
+	FLOAT: right
+}
+#topnavlist LI {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 30px; PADDING-LEFT: 13px; PADDING-RIGHT: 8px; BACKGROUND: url(../iphone_images/redarrow.gif) no-repeat 0px 10px; FLOAT: left; HEIGHT: 30px; PADDING-TOP: 0px
+}
+#topnavlist A:link {
+	COLOR: #333
+}
+#topnavlist A:visited {
+	COLOR: #333
+}
+#topnavlist A:hover {
+	COLOR: #888
+}
+#topnavlist A:active {
+	COLOR: #888
+}
+#topbox {
+	BORDER-BOTTOM: #e5ecf5 1px; POSITION: relative; BORDER-LEFT: #e5ecf5 1px solid; MARGIN: 0px auto; HEIGHT: 70px; BORDER-TOP: #e5ecf5 1px solid; BORDER-RIGHT: #e5ecf5 1px solid
+}
+#topbox H1 {
+	TEXT-INDENT: -10000px
+}
+#topbox H1 A {
+	MARGIN: 5px 0px; WIDTH: 230px; BACKGROUND: url(../iphone_images/logo.gif) no-repeat; FLOAT: left; HEIGHT: 60px
+}
+#topbox H1 A:hover {
+	BACKGROUND: url(../iphone_images/logo.gif) no-repeat; FLOAT: left; TEXT-DECORATION: none
+}
+#topmiddle {
+	POSITION: absolute; RIGHT: 270px; TOP: 5px
+}
+#topright {
+	BORDER-BOTTOM: #eee 1px solid; POSITION: absolute; BORDER-LEFT: #eee 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 0px; WIDTH: 258px; PADDING-RIGHT: 0px; FLOAT: right; HEIGHT: 54px; BORDER-TOP: #eee 1px solid; RIGHT: 5px; BORDER-RIGHT: #eee 1px solid; PADDING-TOP: 3px; TOP: 5px
+}
+#topright LI {
+	TEXT-ALIGN: left; LINE-HEIGHT: 18px; PADDING-LEFT: 5px; WIDTH: 250px; FLOAT: left; HEIGHT: 18px; OVERFLOW: hidden
+}
+#chinahtmlnav {
+	BORDER-BOTTOM: #bcd2e6 1px solid; BORDER-LEFT: #e5ecf5 1px solid; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; PADDING-LEFT: 1px; WIDTH: 906px; PADDING-RIGHT: 1px; BACKGROUND: #fff; FLOAT: left; BORDER-RIGHT: #e5ecf5 1px solid; PADDING-TOP: 0px
+}
+#chinahtmlnav LI {
+	DISPLAY: inline
+}
+#chinahtmlnav A {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 1px; PADDING-LEFT: 4px; LETTER-SPACING: 2px; PADDING-RIGHT: 0px; BACKGROUND: url(../iphone_images/tableft.gif) no-repeat left top; FLOAT: left; PADDING-TOP: 0px
+}
+#chinahtmlnav A SPAN {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 8px; PADDING-RIGHT: 10px; DISPLAY: block; BACKGROUND: url(../iphone_images/tabright.gif) no-repeat right top; FLOAT: left; COLOR: #194f95; FONT-WEIGHT: bold; PADDING-TOP: 7px
+}
+#chinahtmlnav A:hover {
+	BACKGROUND-POSITION: 0% -42px; CURSOR: pointer
+}
+#chinahtmlnav A:hover SPAN {
+	BACKGROUND-POSITION: 100% -42px; COLOR: #005ca3; CURSOR: pointer
+}
+#subinfo {
+	BORDER-BOTTOM: #bcd2e6 1px solid; BORDER-LEFT: #bcd2e6 1px solid; LINE-HEIGHT: 28px; MARGIN: 0px auto; WIDTH: 910px; HEIGHT: 26px; CLEAR: both; OVERFLOW: hidden; BORDER-TOP: #bcd2e6 1px; BORDER-RIGHT: #bcd2e6 1px solid
+}
+#subinfo LI {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px
+}
+#subinfo .a {
+	WIDTH: 290px; BACKGROUND: url(../iphone_images/nav1.gif) #e5ecf5 no-repeat 5px 4px; COLOR: #194f95
+}
+#subinfo .b {
+	WIDTH: 280px; BACKGROUND: url(../iphone_images/nav2.gif) #e5ecf5 no-repeat 5px 4px; COLOR: #194f95
+}
+#subinfo .c {
+	WIDTH: 218px; BACKGROUND: url(../iphone_images/users.gif) #e5ecf5 no-repeat 5px 4px
+}
+#subinfo .d {
+	WIDTH: 60px; BACKGROUND: url(../iphone_images/rss.png) #e5ecf5 no-repeat 5px 5px
+}
+#mainimg {
+	BORDER-BOTTOM: #fff 5px solid; BORDER-LEFT: #fff 5px solid; MARGIN: 0px auto; WIDTH: 910px; DISPLAY: none; BACKGROUND: #fff; HEIGHT: 68px; CLEAR: both; BORDER-TOP: #fff 5px; BORDER-RIGHT: #fff 5px solid
+}
+#mainad {
+	BORDER-BOTTOM: #ffcc66 2px solid; BORDER-LEFT: #ffcc66 2px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; WIDTH: 910px; PADDING-RIGHT: 2px; BORDER-TOP: #ffcc66 2px solid; BORDER-RIGHT: #ffcc66 2px solid; PADDING-TOP: 2px
+}
+#mainadleft {
+	WIDTH: 470px; FLOAT: left
+}
+#mainadright {
+	WIDTH: 470px; FLOAT: right
+}
+#mainimg IMG {
+	BORDER-BOTTOM: #000 1px solid; BORDER-LEFT: #000 1px solid; WIDTH: 468px; HEIGHT: 60px; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid
+}
+#topimg {
+	BORDER-BOTTOM: #fff 5px solid; BORDER-LEFT: #fff 5px solid; MARGIN: 0px auto; WIDTH: 910px; BACKGROUND: #fff; CLEAR: both; BORDER-TOP: #fff 5px; BORDER-RIGHT: #fff 5px solid
+}
+#topimg IMG {
+	WIDTH: 910px
+}
+#middleimg {
+	BORDER-BOTTOM: #fff 5px solid; BORDER-LEFT: #fff 5px solid; MARGIN: 0px auto; WIDTH: 910px; BACKGROUND: #fff; CLEAR: both; BORDER-TOP: #fff 5px; BORDER-RIGHT: #fff 5px solid
+}
+#brand {
+	BORDER-BOTTOM: #cfe1ed 2px solid; BORDER-LEFT: #cfe1ed 2px solid; PADDING-LEFT: 1px; WIDTH: 905px; BACKGROUND: #fff; HEIGHT: 62px; BORDER-TOP: #cfe1ed 2px solid; BORDER-RIGHT: #cfe1ed 2px solid
+}
+#brand IMG {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #fff 1px; WIDTH: 188px; HEIGHT: 60px; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #fff 1px solid
+}
+.rightad {
+	MARGIN: 0px auto 5px; WIDTH: 300px; HEIGHT: 100%
+}
+.rightad IMG {
+	WIDTH: 300px
+}
+.recommand {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; MARGIN: 0px 0px 5px; WIDTH: 298px; HEIGHT: 209px; CLEAR: both; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid
+}
+.recommand H6 {
+	BORDER-BOTTOM: #ddd 1px solid; LINE-HEIGHT: 26px; PADDING-LEFT: 18px; BACKGROUND: url(../iphone_images/tdot.gif) #f2f6fb no-repeat 8px 8px; HEIGHT: 26px; COLOR: #003399; FONT-SIZE: 12px
+}
+.recommand UL {
+	MARGIN: 4px 0px 0px
+}
+.recommand LI {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-LEFT: 15px; WIDTH: 134px; PADDING-RIGHT: 0px; BACKGROUND: url(../iphone_images/blueli.gif) no-repeat 0px 50%; FLOAT: left; HEIGHT: 22px; PADDING-TOP: 0px
+}
+#search {
+	BORDER-BOTTOM: #d0dbe7 1px solid; BORDER-LEFT: #d0dbe7 1px solid; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 3px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #f6f9fc; HEIGHT: 28px; CLEAR: both; BORDER-TOP: #d0dbe7 1px solid; BORDER-RIGHT: #d0dbe7 1px solid; PADDING-TOP: 6px
+}
+#search INPUT {
+	BORDER-BOTTOM: #7e9db9 1px solid; BORDER-LEFT: #7e9db9 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #fffdaa; FONT-SIZE: 12px; BORDER-TOP: #7e9db9 1px solid; BORDER-RIGHT: #7e9db9 1px solid; PADDING-TOP: 2px
+}
+#searchbox {
+	BORDER-BOTTOM: #d0dbe7 1px solid; BORDER-LEFT: #d0dbe7 1px solid; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; HEIGHT: 30px; CLEAR: both; BORDER-TOP: #d0dbe7 1px solid; BORDER-RIGHT: #d0dbe7 1px solid; PADDING-TOP: 4px
+}
+#searchbox UL {
+	MARGIN: 0px
+}
+#searchbox LI {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 22px; PADDING-TOP: 2px
+}
+#searchbox LABEL {
+	LINE-HEIGHT: 26px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#searchbox INPUT {
+	BORDER-BOTTOM: #d0dbe7 1px solid; BORDER-LEFT: #d0dbe7 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BORDER-TOP: #d0dbe7 1px solid; BORDER-RIGHT: #d0dbe7 1px solid; PADDING-TOP: 1px
+}
+#searchbox SELECT {
+	WIDTH: 80px
+}
+#searchbox .image {
+	BORDER-BOTTOM-STYLE: none; BORDER-LEFT-STYLE: none; WIDTH: 42px; BORDER-TOP-STYLE: none; HEIGHT: 19px; BORDER-RIGHT-STYLE: none
+}
+.rightlist {
+	BORDER-BOTTOM: #d0dbe7 1px solid; BORDER-LEFT: #d0dbe7 1px solid; MARGIN: 0px 0px 5px; HEIGHT: 100%; CLEAR: both; BORDER-TOP: #d0dbe7 1px solid; BORDER-RIGHT: #d0dbe7 1px solid
+}
+.rightlist H4 {
+	BORDER-BOTTOM: #d0dbe7 1px solid; LINE-HEIGHT: 28px; PADDING-LEFT: 18px; BACKGROUND: url(../iphone_images/tdot.gif) #f2f6fb no-repeat 8px 50%; HEIGHT: 28px; COLOR: #1f3a87; CLEAR: both; FONT-SIZE: 12px
+}
+.rightlist H4 SPAN {
+	PADDING-RIGHT: 5px; FLOAT: right
+}
+.rightlist UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 5px; WIDTH: 258px; PADDING-RIGHT: 5px; CLEAR: both; PADDING-TOP: 5px
+}
+.rightlist LI {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; PADDING-LEFT: 10px; WIDTH: 238px; PADDING-RIGHT: 0px; BACKGROUND: url(../iphone_images/li2.gif) no-repeat 0px 8px; FLOAT: left; HEIGHT: 24px; PADDING-TOP: 0px
+}
+#footer {
+	BORDER-BOTTOM: #fff 5px solid; BORDER-LEFT: #fff 5px solid; BACKGROUND-COLOR: #fff; MARGIN: 0px auto; WIDTH: 918px; CLEAR: both; BORDER-TOP: #fff 5px; BORDER-RIGHT: #fff 5px solid
+}
+#footerinfo {
+	TEXT-ALIGN: center; MARGIN: 0px auto; WIDTH: 910px; COLOR: #333; CLEAR: both
+}
+#footercontent {
+	BORDER-BOTTOM: #eee 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #eee 1px solid; LINE-HEIGHT: 32px; MARGIN: 0px auto; BACKGROUND: #f8f8f8; HEIGHT: 32px; BORDER-TOP: #eee 1px solid; BORDER-RIGHT: #eee 1px solid
+}
+#footercontent A {
+	MARGIN: 0px 2px
+}
+#footercopyrights {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 180%; MARGIN: 0px auto; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 6px
+}
+#footercopyrights SPAN {
+	FONT: 12px/180% arial,helvetica,sans-serif
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" " http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=" http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<script type="text/javascript">
+function test(){
+ var but = arguments[0]
+ var UL = document.getElementById("test");
+ var LI = UL.childNodes;
+ var now = parseInt(but.name)
+ if(but.value == "Li总数量"){
+  alert(LI.length)
+  but.value = "下一个Li";
+  but.name = 0;
+ }else{
+  if(now < LI.length){
+   alert(LI[now].innerHTML);
+   but.name = now+1;
+   if(now == LI.length-1){ but.value = "Li总数量";but.name = 0}
+  }
+ }
+}
+</script>
+</head>
+
+<body>
+<ul id="test">
+<li>我是第一个li</li>
+<li>我是第二个li</li>
+<li>我是第三个li</li>
+<li>我是第四个li</li>
+<li>我是第五个li</li>
+<li>我是第六个li</li>
+</ul>
+<input type="button" value="Li总数量" onclick = "test(this)"/>
+</body>
+</html>

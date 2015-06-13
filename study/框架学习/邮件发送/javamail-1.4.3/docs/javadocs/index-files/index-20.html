@@ -1,0 +1,656 @@
+ackward scrolling never allowed after movefirst
+			m_nStatus &= ~AFX_DAOVIEW_SCROLL_BACKWARD;
+
+			if (pSet->IsEOF())
+			{
+				// Empty recordset, disable forward too
+				m_nStatus &= ~AFX_DAOVIEW_SCROLL_NEXT;
+				m_nStatus &= ~AFX_DAOVIEW_SCROLL_LAST;
+			}
+			else
+			{
+				if (bBookmarkable)
+				{
+					m_varBookmarkCurrent = pSet->GetBookmark();
+					m_varBookmarkFirst = m_varBookmarkCurrent;
+				}
+
+				// Enable forward scrolling
+				m_nStatus |= AFX_DAOVIEW_SCROLL_NEXT;
+
+				if (bScrollable)
+					m_nStatus |= AFX_DAOVIEW_SCROLL_LAST;
+				else
+					m_nStatus &= ~AFX_DAOVIEW_SCROLL_LAST;
+			}
+
+			break;
+
+		case ID_RECORD_NEXT:
+			pSet->MoveNext();
+
+			if (!pSet->IsEOF())
+			{
+				if (bBookmarkable)
+					m_varBookmarkCurrent = pSet->GetBookmark();
+
+				if (IsOnLastRecord())
+				{
+					// Disable forward scrolling
+					m_nStatus &= ~AFX_DAOVIEW_SCROLL_NEXT;
+					m_nStatus &= ~AFX_DAOVIEW_SCROLL_LAST;
+				}
+				else
+				{
+					m_nStatus |= AFX_DAOVIEW_SCROLL_NEXT;
+					m_nStatus |= AFX_DAOVIEW_SCROLL_LAST;
+				}
+
+				if (bScrollable)
+					m_nStatus |= AFX_DAOVIEW_SCROLL_BACKWARD;
+				else
+				{
+					m_nStatus &= ~AFX_DAOVIEW_SCROLL_LAST;
+					m_nStatus &= ~AFX_DAOVIEW_SCROLL_BACKWARD;
+				}
+
+				break;
+			}
+
+			// Can't fall through to move last
+			if (!bScrollable)
+			{
+				// At the end of forward only recordset
+				m_nStatus &= ~AFX_DAOVIEW_SCROLL_NEXT;
+				m_nStatus &= ~AFX_DAOVIEW_SCROLL_LAST;
+				m_nStatus &= ~AFX_DAOVIEW_SCROLL_BACKWARD;
+				break;
+			}
+
+			// Fall through to reset to last record
+
+		case ID_RECORD_LAST:
+			pSet->MoveLast();
+
+			// forward scrolling never allowed after movelast
+			m_nStatus &= ~AFX_DAOVIEW_SCROLL_NEXT;
+			m_nStatus &= ~AFX_DAOVIEW_SCROLL_LAST;
+
+			if (pSet->IsBOF())
+			{
+				// Empty recordset, disable backward too
+				m_nStatus &= ~AFX_DAOVIEW_SCROLL_BACKWARD;
+			}
+			else
+			{
+				if (bBookmarkable)
+				{
+					m_varBookmarkCurrent = pSet->GetBookmark();
+					m_varBookmarkLast = m_varBookmarkCurrent;
+				}
+
+				// Enable backward scrolling
+				if (bBookmarkable)
+					m_nStatus |= AFX_DAOVIEW_SCROLL_BACKWARD;
+				else
+					m_nStatus &= ~AFX_DAOVIEW_SCROLL_BACKWARD;
+			}
+
+			break;
+
+		default:
+			// Unexpected case value
+			ASSERT(FALSE);
+	}
+
+	// Show results of move operation
+	UpdateData(FALSE);
+	return TRUE;
+}
+
+BOOL CDaoRecordView::IsOnFirstRecord()
+{
+	ASSERT_VALID(this);
+	return (m_varBookmarkCurrent == m_varBookmarkFirst);
+}
+
+BOOL CDaoRecordView::IsOnLastRecord()
+{
+	ASSERT_VALID(this);
+	return (m_varBookmarkCurrent == m_varBookmarkLast);
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// DDX Cover functions for use with fields of a recordset
+
+/////////////////////////////////////////////////////////////////////////////
+// Simple field formatting to text item
+
+BOOL AFXAPI AfxFieldText(CDataExchange* pDX, int nIDC, void* pv,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	HWND hWndCtrl = pDX->PrepareEditCtrl(nIDC);
+	TCHAR szT[2];
+	if (pDX->m_bSaveAndValidate)
+	{
+		::GetWindowText(hWndCtrl, szT, _countof(szT));
+		if (szT[0] == '\0')
+		{
+			// If edit buffer not NULL prior to update, set it dirty
+			// to catch case of setting field value from PSEUDO NULL to NULL.
+			if (!pRecordset->IsFieldNull(pv))
+				pRecordset->SetFieldDirty(pv, TRUE);
+			pRecordset->SetFieldNull(pv);
+			return TRUE;
+		}
+		else
+		{
+			// If edit buffer NULL prior to update, set it dirty
+			// to catch case of setting field value to PSEUDO NULL.
+			if (pRecordset->IsFieldNull(pv))
+				pRecordset->SetFieldDirty(pv, TRUE);
+			pRecordset->SetFieldNull(pv, FALSE);
+		}
+	}
+	else
+	{
+		if (!pRecordset->IsOpen() || pRecordset->IsFieldNull(pv))
+		{
+			szT[0] = '\0';
+			AfxSetWindowText(hWndCtrl, szT);
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, BOOL& value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, BYTE& value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, short& value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, long& value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, DWORD& value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, COleCurrency& value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, float& value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, double& value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, COleDateTime& value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(CDataExchange* pDX, int nIDC, CString &value,
+	CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &value, pRecordset))
+		DDX_Text(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldText(_In_ CDataExchange* pDX, _In_ int nIDC, _Out_z_cap_(nMaxLen) LPTSTR pstrValue,
+	_In_ int nMaxLen, _In_ CDaoRecordset* pRecordset)
+{
+	if (!AfxFieldText(pDX, nIDC, &pstrValue, pRecordset))
+		DDX_Text(pDX, nIDC, pstrValue, nMaxLen);
+}
+
+void AFXAPI DDX_FieldLBString(CDataExchange* pDX, int nIDC, CString& value,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	HWND hWndCtrl = pDX->PrepareCtrl(nIDC);
+	if (pDX->m_bSaveAndValidate)
+	{
+		int nIndex = (int)::SendMessage(hWndCtrl, LB_GETCURSEL, 0, 0L);
+		if (nIndex != -1)
+		{
+			int nLen = (int)::SendMessage(hWndCtrl, LB_GETTEXTLEN, nIndex, 0L);
+			::SendMessage(hWndCtrl, LB_GETTEXT, nIndex,
+					(LPARAM)(LPSTR)value.GetBuffer(nLen));
+			if (nLen == 0)
+			{
+				if (pRecordset->IsFieldNullable(&value))
+					pRecordset->SetFieldNull(&value, TRUE);
+			}
+			else
+			{
+				pRecordset->SetFieldNull(&value, FALSE);
+			}
+			value.ReleaseBuffer();
+		}
+		else
+		{
+			// no selection
+			value.GetBufferSetLength(0);
+			if (pRecordset->IsFieldNullable(&value))
+				pRecordset->SetFieldNull(&value);
+		}
+	}
+	else
+	{
+		if (!pRecordset->IsOpen() || pRecordset->IsFieldNull(&value))
+		{
+			SendMessage(hWndCtrl, LB_SETCURSEL, (WPARAM)-1, 0L);
+		}
+		else
+		{
+			// set current selection based on data string
+			if (::SendMessage(hWndCtrl, LB_SELECTSTRING, (WPARAM)-1,
+			  (LPARAM)(LPCTSTR)value) == LB_ERR)
+			{
+				// no selection match
+				TRACE(traceDatabase, 0, "Warning: no listbox item selected.\n");
+			}
+		}
+	}
+}
+
+void AFXAPI DDX_FieldLBStringExact(CDataExchange* pDX, int nIDC, CString& value,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	HWND hWndCtrl = pDX->PrepareCtrl(nIDC);
+	if (pDX->m_bSaveAndValidate)
+	{
+		DDX_FieldLBString(pDX, nIDC, value, pRecordset);
+	}
+	else
+	{
+		if (!pRecordset->IsOpen() || pRecordset->IsFieldNull(&value))
+		{
+			SendMessage(hWndCtrl, LB_SETCURSEL, (WPARAM)-1, 0L);
+		}
+		else
+		{
+			// set current selection based on data string
+			int i = (int)::SendMessage(hWndCtrl, LB_FINDSTRINGEXACT, (WPARAM)-1,
+			  (LPARAM)(LPCTSTR)value);
+			if (i < 0)
+			{
+				// no selection match
+				TRACE(traceDatabase, 0, "Warning: no listbox item selected.\n");
+			}
+			else
+			{
+				// select it
+				SendMessage(hWndCtrl, LB_SETCURSEL, i, 0L);
+			}
+		}
+	}
+}
+
+void AFXAPI DDX_FieldCBString(CDataExchange* pDX, int nIDC, CString& value,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	HWND hWndCtrl = pDX->PrepareCtrl(nIDC);
+	if (pDX->m_bSaveAndValidate)
+	{
+		// just get current edit item text (or drop list static)
+		int nLen = ::GetWindowTextLength(hWndCtrl);
+		if (nLen != -1)
+		{
+			// get known length
+			::GetWindowText(hWndCtrl, value.GetBuffer(nLen), nLen+1);
+		}
+		else
+		{
+			// for drop lists GetWindowTextLength does not work - assume
+			//  preallocated length (or 256, whichever is larger)
+			nLen = value.GetAllocLength();
+			if (nLen < 256)
+				nLen = 256;
+			::GetWindowText(hWndCtrl, value.GetBuffer(nLen-1), nLen);
+		}
+		value.ReleaseBuffer();
+		if (value.GetLength() == 0)
+		{
+			if (pRecordset->IsFieldNullable(&value))
+				pRecordset->SetFieldNull(&value, TRUE);
+		}
+		else
+		{
+			pRecordset->SetFieldNull(&value, FALSE);
+		}
+	}
+	else
+	{
+		if (!pRecordset->IsOpen() || pRecordset->IsFieldNull(&value))
+		{
+			SendMessage(hWndCtrl, CB_SETCURSEL, (WPARAM)-1, 0L);
+		}
+		else
+		{
+			// set current selection based on model string
+			if (::SendMessage(hWndCtrl, CB_SELECTSTRING, (WPARAM)-1,
+				(LPARAM)(LPCTSTR)value) == CB_ERR)
+			{
+				// just set the edit text (will be ignored if DROPDOWNLIST)
+				AfxSetWindowText(hWndCtrl, value);
+			}
+		}
+	}
+}
+
+void AFXAPI DDX_FieldCBStringExact(CDataExchange* pDX, int nIDC, CString& value,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	HWND hWndCtrl = pDX->PrepareCtrl(nIDC);
+	if (pDX->m_bSaveAndValidate)
+	{
+		DDX_FieldCBString(pDX, nIDC, value, pRecordset);
+	}
+	else
+	{
+		if (!pRecordset->IsOpen() || pRecordset->IsFieldNull(&value))
+		{
+			SendMessage(hWndCtrl, CB_SETCURSEL, (WPARAM)-1, 0L);
+		}
+		else
+		{
+			// set current selection based on data string
+			int i = (int)::SendMessage(hWndCtrl, CB_FINDSTRINGEXACT, (WPARAM)-1,
+			  (LPARAM)(LPCTSTR)value);
+			if (i < 0)
+			{
+				// no selection match
+				TRACE(traceDatabase, 0, "Warning: no combobox item selected.\n");
+			}
+			else
+			{
+				// select it
+				SendMessage(hWndCtrl, CB_SETCURSEL, i, 0L);
+			}
+		}
+	}
+}
+
+void AFXAPI DDX_FieldLBIndex(CDataExchange* pDX, int nIDC, int& index,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	if (!pDX->m_bSaveAndValidate &&
+		(!pRecordset->IsOpen() || pRecordset->IsFieldNull(&index)))
+	{
+		int nIndex = 0;
+		DDX_LBIndex(pDX, nIDC, nIndex);
+	}
+	else
+		DDX_LBIndex(pDX, nIDC, index);
+}
+
+void AFXAPI DDX_FieldCBIndex(CDataExchange* pDX, int nIDC, int& index,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	if (!pDX->m_bSaveAndValidate &&
+		(!pRecordset->IsOpen() || pRecordset->IsFieldNull(&index)))
+	{
+		int nIndex = 0;
+		DDX_CBIndex(pDX, nIDC, nIndex);
+	}
+	else
+		DDX_CBIndex(pDX, nIDC, index);
+}
+
+void AFXAPI DDX_FieldScroll(CDataExchange* pDX, int nIDC, int& value,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	if (!pDX->m_bSaveAndValidate &&
+		(!pRecordset->IsOpen() || pRecordset->IsFieldNull(&value)))
+	{
+		int nValue = 0;
+		DDX_Scroll(pDX, nIDC, nValue);
+	}
+	else
+		DDX_Scroll(pDX, nIDC, value);
+}
+
+void AFXAPI DDX_FieldSlider(CDataExchange* pDX, int nIDC, int& value,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	if (!pDX->m_bSaveAndValidate &&
+		(!pRecordset->IsOpen() || pRecordset->IsFieldNull(&value)))
+	{
+		int nValue = 0;
+		DDX_Slider(pDX, nIDC, nValue);
+	}
+	else
+		DDX_Slider(pDX, nIDC, value);
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// Data exchange for special controls
+
+void AFXAPI DDX_FieldCheck(CDataExchange* pDX, int nIDC, int& value, CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	HWND hWndCtrl = pDX->PrepareCtrl(nIDC);
+	if (pDX->m_bSaveAndValidate)
+	{
+		value = (int)::SendMessage(hWndCtrl, BM_GETCHECK, 0, 0L);
+		ASSERT(value >= 0 && value <= 2);
+		if (value == 2)
+		{
+			if (pRecordset->IsFieldNullable(&value))
+				pRecordset->SetFieldNull(&value);
+			else
+			{
+				TRACE(traceDatabase, 0, "Warning: can't set field NULL for checkbox value.\n");
+				// Default to unchecked
+				value = 0;
+			}
+		}
+	}
+	else
+	{
+		if (!pRecordset->IsOpen() || pRecordset->IsFieldNull(&value))
+		{
+			int style = ((int)::GetWindowLong(hWndCtrl, GWL_STYLE) & 0xf);
+			if ((style == BS_3STATE || style == BS_AUTO3STATE))
+				value = 2;
+			else
+			{
+				TRACE(traceDatabase, 0, "Warning: can't set checkbox value for NULL field.\n");
+				// Default to unchecked
+				value = 0;
+			}
+		}
+		if (value < 0 || value > 2)
+		{
+			value = 0;      // default to off
+			TRACE(traceDatabase, 0, "Warning: dialog data checkbox value (%d) out of range.\n",
+				value);
+		}
+		::SendMessage(hWndCtrl, BM_SETCHECK, (WPARAM)value, 0L);
+	}
+}
+
+void AFXAPI DDX_FieldRadio(CDataExchange* pDX, int nIDC, int& value,
+	CDaoRecordset* pRecordset)
+{
+	ASSERT_VALID(pRecordset);
+
+	if (!pDX->m_bSaveAndValidate &&
+		(!pRecordset->IsOpen() || pRecordset->IsFieldNull(&value)))
+		value = -1;
+	DDX_Radio(pDX, nIDC, value);
+	if (pDX->m_bSaveAndValidate)
+	{
+		if (value == -1 && !pRecordset->IsFieldNullable(&value))
+		{
+			AfxFailRadio(pDX);
+		}
+		else
+		{
+			pRecordset->SetFieldNull(&value, (value == -1));
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+#ifdef _DEBUG
+void CDaoRecordView::AssertValid() const
+{
+	CFormView::AssertValid();
+}
+
+void CDaoRecordView::Dump(CDumpContext& dc) const
+{
+	ASSERT_VALID(this);
+
+	CFormView::Dump(dc);
+
+	dc << "m_nStatus =" << m_nStatus;
+	dc << "m_varBookmarkCurrent =" << m_varBookmarkCurrent;
+	dc << "m_varBookmarkFirst =" << m_varBookmarkFirst;
+	dc << "m_varBookmarkLast =" << m_varBookmarkLast;
+
+	dc << "\n";
+}
+#endif
+
+//////////////////////////////////////////////////////////////////////////////
+// Inline function declarations expanded out-of-line
+
+#ifndef _AFX_ENABLE_INLINES
+
+#define _AFXDAOVIEW_INLINE
+#include "afxdao.inl"
+
+#endif
+
+
+/////////////////////////////////////////////////////////////////////////////
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   M€øÅˇÅœ-Ÿ¥fÆZë¶nê|Ù¯3≤÷ˆ⁄
+rz=√8n∞êRî‡<¬Á\´!^Bé¥6IÃ“8ÊõÂÒZ™Ω≠âµlŒf˝ªÑ¸µ!…_IH…h'
+›{ä8x◊…èØÀ_p¶ïÍìÛu˚Zaó1€Â4;À¨»S”êa“|Æ@nG=∏}QÈbu¥≥∂]r]ºTBe˚Aï€ø"∞ô›Dn*~ﬂÄ˙`
+≠”ä∞å:º˝Ù?¯7‹ùÇﬂÌÑ£ößK‡‚lºç≈ôvnâ¶Êº3Ós“v®V zŒ{≤Û≤bË®˙‘ën ›y<—…_ÉôMY.‰<π´÷ØB⁄≤}FÓã|_‚PõOwúê’EÆ∞IÀc¿Ïç{†PQ∂`≈@Ó±¡∆.òá[wsó?˜ÖfÛÿ≠®¸â”?<æ*;|}€pÃã"Ò#Ç"/@IçDà3ó≈Xg§¨ß˜&‹∏¯]I/|Xiè‰¿ë’:~⁄”ÓyüJ®ˇ‹3Î"8ùã√H|¯Õ©Ÿï,◊1ã:…
+¸ª;ô‡‚à©
+©æs4yÆ˚fõn‘à)çÖﬂ∞9Ã€ÓÖ
+˘Èı∑›§ÆÔ—˘¥?ˇ¡H±ø ©Êã;≠õßs€ °l}*Ê7&xhÔ>ßÊ¯e‹bü÷‰Wß£Jæ)nÆ™ï‹XÕ´$W2û¶˘2:˜Ö≥mÖaÆ_˘U#ˆ}s`ë˚¯úI¡+øïRÅB6Úo9_˙›?1ÄÚ±-a›Gès/y∏ﬂ.‹ÍLÛgç.Ñœx?çR‡ñ∑¨¡ù¢jZı—:≤è≈D…ä>Í«ÌK∏ò!∏3ëÉ∏ﬂ%=Â`ñ Úè¡\G•æ8ØyÍëßjW.@∫ P·P‰F‚8;‹ní7»©®∆öïHÂ©DbXLõÖû6ıù.€Wp7vBƒ¸ÀÂ8≈u¯9ÛF£ﬂΩ'Î†zu5ùï!±3µ'é/Áµ&ÕÏŸ´Ó@è$ı®‰$~ß\àru¶sè‚éô•ØY—ﬂö2d-‚⁄òN(ßFfK
+!á{©‹
+∫≈∏‚¢Bh/∆YLÀ˝µ¯N`´1\∂`Ãıqw@©‰~iúg@Ã-åùõK‰•…FÚ3Ï#kB@:Úà≥ÍrπÿÊü›≤V∏vñºﬁ“ïw*›‡´ïm,”6ıâ'nü4È˜’k—’˘–ßèXñ6ü˙OJXa#üñﬁ ◊KÇ¸ÑBv¥-ÂÊ"käq˙Ûƒ‹,ãj@9_ì~.ñFi8ïÀ‚«Bsg¬lÙ?5`¿8π‹=ıÒ¶uË,l∑ñ=ª6Ã„S¸ÁWo∑∆B@~]ÁÒßû©F«⁄˝bß˛¿1ÍäT1ã)∫Y…5d)\πs˜ˆﬁN˘:Yöj|]Ì…»qÊ5…Qà8uÀΩ>œ|îIv*á‘ú$”∂/ãî
+¡ãFMπ’∆Éï⁄Ì,Ã∆'ëZˆ\#K√7ã[òºùŸΩŒ7åÁ‚sM6rä√¸ıΩÀét)Ïa&Á∞ı⁄∆»Iáß%ø#◊{ÒÃõm?bﬂ±lnﬂ…-u≈oû…1ﬁœ∫?S-ËkUﬁpN†¬TâÅÓja‚ﬁ<8E:ÁÚÆ?ô¿N¥nm√A›Û∫¬aü„G6ù^û≥;1∏à⁄6«w+ °] ◊uı:Z˝ieä™íücú˝ºnôµ¬’à~ûF∫\ûì€eıµ^ä‹V„q∂y#›5Ø&-i√>Î &%-Uñπ37yÊe…ø¸™e6îII∑¬2‹†ΩkÊx∏É˝±'ïÖÒkûã— ª‰&˚'^ì ë…xï¿≥çwóì/W“úÉØ:∑á%C€5îdÑhtNŸj5RCqJ√ﬁ0ÕG¸“,/Ì˘k’«ÂøêrWKÁ{‹ê∑sÔ»*gßíN7Õ‘K>$‚I–eÇÚŒDÑp\"ëèeíÛ˝§®píÙ≤êÊñªÚ¯í¥<ØP§ŸßBV;„SÅÓß[ºt§ÃÜù¡ iàÄ©<[
+«Á[Ò‹Ú·_l3rÃæ√˛éYOpavax/mail/search/RecipientTerm.html" title="class in javax.mail.search">RecipientTerm</A>
+<DD>The recipient type.
+</DL>
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Package</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Use</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../overview-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Index</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="index-19.html"><B>PREV LETTER</B></A>&nbsp;
+&nbsp;<A HREF="index-21.html"><B>NEXT LETTER</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../index.html?index-filesindex-20.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="index-20.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<A HREF="index-1.html">A</A> <A HREF="index-2.html">B</A> <A HREF="index-3.html">C</A> <A HREF="index-4.html">D</A> <A HREF="index-5.html">E</A> <A HREF="index-6.html">F</A> <A HREF="index-7.html">G</A> <A HREF="index-8.html">H</A> <A HREF="index-9.html">I</A> <A HREF="index-10.html">J</A> <A HREF="index-11.html">K</A> <A HREF="index-12.html">L</A> <A HREF="index-13.html">M</A> <A HREF="index-14.html">N</A> <A HREF="index-15.html">O</A> <A HREF="index-16.html">P</A> <A HREF="index-17.html">Q</A> <A HREF="index-18.html">R</A> <A HREF="index-19.html">S</A> <A HREF="index-20.html">T</A> <A HREF="index-21.html">U</A> <A HREF="index-22.html">V</A> <A HREF="index-23.html">W</A> <A HREF="index-24.html">X</A> <HR>
+Copyright &#169; 2009 <a href="http://www.sun.com">Sun Microsystems, Inc.</a>. All Rights Reserved.
+</BODY>
+</HTML>

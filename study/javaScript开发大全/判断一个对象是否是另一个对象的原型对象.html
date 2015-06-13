@@ -1,0 +1,46 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>判断一个对象是否是另一个对象的原型对象</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+<script type="text/javascript" language="javascript" >
+function workers()
+{
+   this.name="张三";
+   this.address="北京市";
+}
+var myworker=new workers();
+function Engineers(_dept)
+{
+   this.dept=_dept;
+}
+//指定开发者的原型对象为员工，即继承员工构造函数中的属性
+Engineers.prototype=new workers();
+var myEngineer =new Engineers("开发部");
+
+   
+   if(workers.prototype.isPrototypeOf(myworker))
+   {
+       document.write("workers函数是myworker对象的构造函数<br>");
+   }
+   else
+   {
+       document.write("workers函数不是myworker对象的构造函数<br>");
+   }
+
+
+   
+   if(myworker.isPrototypeOf(myEngineer))
+   {
+       document.write("myworker函数是myEngineer对象的原型对象<br>");
+   }
+   else
+   {
+       document.write("myworker函数不是myEngineer对象的原型对象<br>");
+   }
+
+</script>
+</head>
+<body>
+</body>
+</html>

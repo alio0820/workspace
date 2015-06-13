@@ -1,0 +1,5 @@
+1.jsp中只要一个函数有问题就会导致所有的函数都不运行；
+delete 字符在jsp中不可用；
+2.暂时的修改编码   set character_set_server = utf8;
+  查看   show variables like 'character_set_%';
+3.修改编码，需要修改安装目录下的my.ini文件中的default-character-set=utf8    default-character-set=utf8

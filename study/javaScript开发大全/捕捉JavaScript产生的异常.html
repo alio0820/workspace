@@ -1,0 +1,32 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>捕捉JavaScript产生的异常</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+         <script type="text/javascript" language="javascript" >
+          function createArr()
+          {
+              var arrLength=Number(document.myForm.arrLength.value);
+              try
+              {
+                   var myArray=new Array(arrLength);
+                   for(var i=0;i<arrLength;i++)
+                  {
+                      myArray[i]=i+1;
+                  }
+                  alert("您所创建的数组元素为："+myArray.toString());
+               }
+               catch(e)
+              {
+                  alert(e.message);
+              }
+          }
+          </script>
+</head>
+<body>
+         <form name="myForm">
+              请输入数组元素个数：<input type="text" size=2 name="arrLength"> 
+              <input type="button" value="确定" onclick="createArr()">
+         </form>
+</body>
+</html>

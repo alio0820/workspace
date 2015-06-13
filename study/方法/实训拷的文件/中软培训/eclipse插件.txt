@@ -1,0 +1,4 @@
+http://subclipse.tigris.org/update_1.6.x
+
+SVN服务端详细配置文档地址
+http://wenku.baidu.com/view/1440efeb172ded630b1cb68d.html

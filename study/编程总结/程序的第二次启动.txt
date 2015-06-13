@@ -1,0 +1,16 @@
+Private   Sub   Form_Load() 
+If   App.PrevInstance   Then           注释：   程序是否已经运行 
+
+    Me.LinkTopic   =   " "                     注释：   这两行用于清除新运行的程序的DDE服务器属性， 
+    Me.LinkMode   =   0                         注释：   否则在连接DDE程序时会出乱子的 
+
+    LinkAndSendMessage   "Max "                     注释：-- 
+    LinkAndSendMessage   "Count "                 注释：     |-----连接DDE接受程序并传送数据/参数 
+    LinkAndSendMessage   "ShowTime "           注释：-- 
+
+    If   Command   <>   " "   Then                           注释：   如果有命令行参数，就传递过去 
+          LinkAndSendMessage   COMMANDLINE   +   Command         
+    End   If 
+    End                                                               注释：     结束新程序的运行 
+End   If 
+End   Sub 

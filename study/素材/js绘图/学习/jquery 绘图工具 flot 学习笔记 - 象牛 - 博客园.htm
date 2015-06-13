@@ -1,0 +1,1008 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0063)http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>jquery 绘图工具 flot 学习笔记 - 象牛 - 博客园</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=keywords content=jquery,绘图,flot><LINK rel=stylesheet type=text/css 
+href="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/common.css"><LINK 
+id=MainCss rel=stylesheet type=text/css 
+href="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/style.css"><LINK 
+rel=stylesheet type=text/css 
+href="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/common2.css"><LINK 
+rel=stylesheet type=text/css 
+href="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/shStyle.css"><LINK 
+title=RSS rel=alternate type=application/rss+xml 
+href="http://www.cnblogs.com/xiangniu/rss"><LINK title=RSD rel=EditURI 
+type=application/rsd+xml href="http://www.cnblogs.com/xiangniu/rsd.xml"><LINK 
+rel=wlwmanifest type=application/wlwmanifest+xml 
+href="http://www.cnblogs.com/xiangniu/wlwmanifest.xml">
+<SCRIPT type=text/javascript 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/jquery.js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/common.js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/jquery.json-2.2.min.js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/syntaxHighlighter.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 9.00.8112.16440"></HEAD>
+<BODY><A name=top></A>
+<FORM id=Form1 method=post action=1982163.html>
+<DIV class=aspNetHidden><INPUT id=__EVENTTARGET name=__EVENTTARGET type=hidden> 
+<INPUT id=__EVENTARGUMENT name=__EVENTARGUMENT type=hidden> <INPUT 
+id=__VIEWSTATE name=__VIEWSTATE type=hidden> </DIV>
+<SCRIPT type=text/javascript>
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+//<![CDATA[
+var currentBlogApp='xiangniu';
+//]]>
+</SCRIPT>
+<!--done-->
+<DIV id=home>
+<DIV id=header>
+<DIV id=blogTitle><A id=lnkBlogLogo href="http://www.cnblogs.com/xiangniu/"><IMG 
+id=blogLogo alt=返回主页 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/logo.gif"></A> <!--done-->
+<H1><A id=Header1_HeaderTitle class=headermaintitle 
+href="http://www.cnblogs.com/xiangniu/">象牛的学习笔记</A></H1>
+<H2></H2></DIV><!--end: blogTitle 博客的标题和副标题 -->
+<DIV id=navigator>
+<UL id=navList>
+  <LI></LI>
+  <LI></LI>
+  <LI><A href="http://news.cnblogs.com/">新闻</A> </LI>
+  <LI><A id=MyLinks1_NewPostLink class=menu 
+  href="http://www.cnblogs.com/xiangniu/admin/EditPosts.aspx?opt=1" 
+  rel=nofollow>新随笔</A> </LI>
+  <LI><A accessKey=9 id=MyLinks1_ContactLink class=menu 
+  href="http://space.cnblogs.com/msg/send/%e8%b1%a1%e7%89%9b" 
+  rel=nofollow>联系</A> </LI>
+  <LI><A id=MyLinks1_Admin class=menu 
+  href="http://www.cnblogs.com/xiangniu/admin/EditPosts.aspx" 
+  rel=nofollow>管理</A> </LI>
+  <LI><A id=MyLinks1_Syndication class=menu 
+  href="http://www.cnblogs.com/xiangniu/rss">订阅</A> <A id=MyLinks1_XMLLink 
+  class=aHeaderXML href="http://www.cnblogs.com/xiangniu/rss"><IMG alt=订阅 
+  src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/rss.gif"></A> 
+</LI></UL>
+<DIV class=blogStats><!--done-->随笔- 65&nbsp; 文章- 0&nbsp; 评论- 5&nbsp; </DIV><!--end: blogStats --></DIV><!--end: navigator 博客导航栏 --></DIV><!--end: header 头部 -->
+<DIV id=main>
+<DIV id=mainContent>
+<DIV class=forFlow><!--done-->
+<DIV id=topics>
+<DIV class=post>
+<H1 class=postTitle><A id=ctl02_TitleUrl class=postTitle2 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html">jquery 
+绘图工具 flot 学习笔记</A> </H1>
+<DIV class=clear></DIV>
+<DIV class=postBody>
+<DIV id=cnblogs_post_body>
+<P><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">今天想做一个统计图表，像163博客的流量统计一样的，借助 flot 实现了，而且很简单。</SPAN></P>
+<DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">flot网址：<WBR><A 
+href="http://code.google.com/p/flot/">http://code.google.com/p/flot/</A></WBR></SPAN></DIV></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">下载 JS 文件，使用方法和 jquery 一样。</SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><BR></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>注意：flot是自动绘制在画布标签（</SPAN><SPAN>canvas</SPAN><SPAN>）内的，IE不支持，需要添加 
+excanvas.min.js ，此文件可以在上面给出的flot网址中下载</SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN><BR></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">示例网址：<A 
+href="http://people.iola.dk/olau/flot/examples/">http://people.iola.dk/olau/flot/examples/</A></SPAN></DIV>
+<DIV>参数说明：<A 
+href="http://wenku.baidu.com/view/d504613331126edb6f1a1008.html">http://wenku.baidu.com/view/d504613331126edb6f1a1008.html</A></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>上面的两个网址已经将基础说的很清楚了。</SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN><BR></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">示例说明：</SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>语法：&nbsp;</SPAN><SPAN><SPAN style="COLOR: #ff0000" 
+color="#FF0000">$.plot(id, data, options);</SPAN></SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN></SPAN>1.id :放置 canvas 的 div 的ID</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN></SPAN>2.data :数据，一般为二维数组的形式。</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN></SPAN>例如：[[x1,y1],[x2,y2],[x3,y3] , ...]</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN></SPAN>如果某个数据为空，则对应点将被忽略，且改点前后两个点将不再用直线连接。</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN></SPAN>3.options :样式，用于设置显示样式。 options 的格式：</SPAN></SPAN></DIV>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><SPAN style="FONT-FAMILY: system" face="system">var options = 
+    {</SPAN></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD><SPAN style="FONT-FAMILY: system" face="system">lines: { show: true 
+      },</SPAN></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD><SPAN style="FONT-FAMILY: system" face="system">points: { show: true 
+      },</SPAN></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD><SPAN style="FONT-FAMILY: system" face="system">xaxis: { tickDecimals: 
+      0, tickSize: 1 }</SPAN></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD><SPAN style="FONT-FAMILY: system" 
+  face="system">};<BR></SPAN></TD></TR></TBODY></TABLE>
+<DIV><SPAN style="FONT-FAMILY: system" face="system"><SPAN 
+style="FONT-SIZE: small" 
+size="3"><SPAN><SPAN>参数:</SPAN></SPAN></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system" face="system"><SPAN 
+style="FONT-SIZE: small" 
+size="3"><SPAN><SPAN>&nbsp;</SPAN><SPAN>1.</SPAN></SPAN></SPAN><SPAN 
+style="FONT-SIZE: small" size="3"><SPAN>lines { } 
+&nbsp;显示直线</SPAN></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system" face="system"><SPAN 
+style="FONT-SIZE: small" size="3"><SPAN>&nbsp;</SPAN><SPAN><SPAN> 
+</SPAN></SPAN><SPAN>show: true</SPAN><SPAN>&nbsp;显示</SPAN></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system" face="system"><SPAN 
+style="FONT-SIZE: small" 
+size="3"><SPAN><SPAN>&nbsp;</SPAN></SPAN></SPAN></SPAN><SPAN>&nbsp; &nbsp;color： 
+"#FFFFFF" 线条颜色</SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system" face="system"><SPAN 
+style="FONT-SIZE: small" size="3"><SPAN><SPAN>&nbsp;</SPAN></SPAN><SPAN>&nbsp; 
+steps: true</SPAN><SPAN>&nbsp;</SPAN><SPAN>阶梯形&nbsp;</SPAN></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>2.</SPAN><SPAN>points { } &nbsp;显示点</SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>3.</SPAN><SPAN>bars { } 显示直方图</SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>4.</SPAN><SPAN>xaxis { } 横坐标的样式</SPAN></SPAN></DIV>
+<DIV></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN><SPAN><BR></SPAN></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN><SPAN>例一：</SPAN></SPAN><SPAN><A 
+href="http://people.iola.dk/olau/flot/examples/basic.html">http://people.iola.dk/olau/flot/examples/basic.html</A></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>语法示例：<SPAN color="#FF0000">$.plot($("#name"), [ d1,d2,d3 
+]);</SPAN><BR></SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN></SPAN>参数①：name 为画布所在 div 的 id&nbsp;</SPAN></SPAN><SPAN 
+style="LINE-HEIGHT: 19px; FONT-FAMILY: system; FONT-SIZE: small">。</SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN><SPAN></SPAN>参数②：d2，</SPAN><SPAN>d3 一般为数列数组 
+[x,y]，x和y分别表示每个点的横轴和纵轴，例如可以定义如下：</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">var d1 = [];</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">for (var i = 0; i &lt; 14; i += 0.5)</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN></SPAN>d1.push([i, Math.sin(i)]);</SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>var </SPAN><SPAN>d2 = </SPAN><SPAN>[[0, 3], [4, 8], [8, 5], [9, 
+13]];</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">var d3 = [[0, 12], [7, 12], <SPAN style="COLOR: #993300" 
+color="#993300">null</SPAN>, [7, 2.5], [12, 2.5]];</SPAN></SPAN></DIV>
+<DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">flot会依据其最大值和画布大小自动设置刻度，例如设置div如下&nbsp;</SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>&nbsp;</SPAN><SPAN><SPAN>&lt;div 
+<SPAN>id</SPAN>="<SPAN>placeholder</SPAN>" 
+<SPAN>style</SPAN>="<SPAN>width:100px;height:100px;</SPAN>"&gt;</SPAN><SPAN>&lt;/div&gt;</SPAN> 
+</SPAN></SPAN></DIV></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">则x方向每个像素表示 9/100=0.09 个单位，y方向每个像素表示 12/100=0.12 
+个单位。</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><BR></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN>例二：</SPAN><A 
+href="http://people.iola.dk/olau/flot/examples/graph-types.html">http://people.iola.dk/olau/flot/examples/graph-types.html</A></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">语法示例：&nbsp;</SPAN></DIV>
+<DIV>
+<DIV class=cnblogs_Highlighter><PRE class=brush:javascript;gutter:false;>    $.plot($("#placeholder"), [
+        {
+            data: d1,
+            lines: { show: true, fill: true }
+        },
+        {
+            data: d2,
+            bars: { show: true }
+        },
+        {
+            data: d3,
+            points: { show: true }
+        },
+        {
+            data: d4,
+            lines: { show: true }
+        },
+        {
+            data: d5,
+            lines: { show: true },
+            points: { show: true }
+        },
+        {
+            data: d6,
+            lines: { show: true, steps: true }
+        }
+    ]);
+</PRE></DIV><SPAN style="FONT-SIZE: small" size="3"><SPAN><SPAN><SPAN 
+style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN><BR></SPAN></SPAN></SPAN></SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN><SPAN><SPAN style="FONT-SIZE: small" size="3"><SPAN>参数说明：lins 
+表示直线</SPAN></SPAN><SPAN>，参数 steps:true 表示梯形图</SPAN><SPAN>，bars 表示直方图，points 
+表示点状图。</SPAN></SPAN>与示例一比较，实例二将示例一中的数据用花括号括起，此时需要用 "data:" 
+指定数据源，逗号之后指定其显示样式。</SPAN></SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3"><SPAN><BR></SPAN></SPAN></DIV>
+<DIV></DIV>
+<DIV>例三：指定刻度显示的内容</DIV>
+<DIV>用法实例：</DIV>
+<DIV>
+<DIV class=cnblogs_Highlighter><PRE class=brush:javascript;gutter:false;>    $.plot($("#placeholder"), [{ label: "", data: vData}],
+    {
+        series: { lines: { show: true }, points: { show: true} },
+        xaxis: { ticks: [[1, "1月"], [3, "3月"], [5, "5月"], [7, "7月"], [9, "9月"], [11, "11月"]], min: 1, max: 12 },  //指定固定的显示内容
+        yaxis: { ticks: 5, min: 0 }  //在y轴方向显示5个刻度，此时显示内容由 flot 根据所给的数据自动判断
+    }
+        );
+</PRE></DIV><SPAN style="FONT-FAMILY: system; FONT-SIZE: x-small" face="system" 
+size="2"><SPAN style="LINE-HEIGHT: 19px"><BR></SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">其中 vData 为自定义数据</SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">var vData = [[1, 103], [2, 28], [3, 135], [4, 130], [5, 145], [6, 155], 
+[7, 155], [8, 155], [9, 155], [10, 155], [11, 155], [12, 155]];&nbsp; &nbsp; 
+&nbsp; &nbsp;&nbsp;</SPAN></SPAN><SPAN 
+style="LINE-HEIGHT: 19px; FONT-FAMILY: system; FONT-SIZE: small">&nbsp;</SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">显示效果为：<IMG 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/2011051216392590.png"></SPAN></SPAN></DIV>
+<DIV><SPAN><SPAN style="FONT-FAMILY: system; FONT-SIZE: small" face="system" 
+size="3">关键参数为 <SPAN style="COLOR: #ff0000">ticks <SPAN 
+style="COLOR: #000000">。</SPAN></SPAN>可以看到本例中 x轴刻度的显示内容是自己指定的，y轴让 flot 
+自动划分，当然也可以指定y轴。</SPAN></SPAN></DIV></DIV>
+<SCRIPT type=text/javascript>
+if ($ != jQuery) {
+	$ = jQuery.noConflict();
+}
+var isLogined = false;
+var cb_blogId = 78559;
+var cb_entryId = 1982163;
+var cb_blogApp = "xiangniu";
+var cb_blogUserGuid = "6140f7ce-2929-df11-ba8f-001cf0cd104b";
+var cb_entryCreatedDate = '2011/3/12 13:48:00';
+</SCRIPT>
+
+<DIV id=blog_post_info_block>
+<DIV id=BlogPostCategory></DIV>
+<DIV id=EntryTag>标签: <A 
+href="http://www.cnblogs.com/xiangniu/tag/jquery/">jquery</A>, <A 
+href="http://www.cnblogs.com/xiangniu/tag/%E7%BB%98%E5%9B%BE/">绘图</A>, <A 
+href="http://www.cnblogs.com/xiangniu/tag/flot/">flot</A></DIV>
+<DIV style="DISPLAY: none" id=green_channel>绿色通道：<A id=green_channel_digg 
+onclick="DiggIt(cb_entryId,cb_blogId,1);green_channel_success(this,'谢谢推荐！');" 
+href="javascript:void(0);">好文要顶</A><A id=green_channel_follow 
+onclick=c_follow(); href="javascript:void(0);">关注我</A><A 
+id=green_channel_favorite onclick="AddToWz(1982163);return false;" 
+href="javascript:void(0);">收藏该文</A><A id=green_channel_contact 
+href="http://space.cnblogs.com/msg/send/%e8%b1%a1%e7%89%9b" 
+target=_blank>与我联系</A> <A id=green_channel_weibo title=分享至新浪微博 
+onclick=ShareToTsina() href="javascript:void(0);"><IMG alt="" 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/icon_sina.gif"></A> 
+</DIV>
+<DIV id=digg_block>
+<DIV id=author_profile>
+<DIV id=author_profile_info class=author_profile_info>
+<DIV id=author_profile_detail class=author_profile_info></DIV></DIV>
+<DIV class=clear></DIV>
+<DIV id=author_profile_honor></DIV>
+<DIV id=author_profile_follow></DIV></DIV>
+<DIV style="DISPLAY: none" id=div_digg>
+<DIV class=diggit onclick=DiggIt(cb_entryId,cb_blogId,1)><SPAN id=digg_count 
+class=diggnum></SPAN></DIV>
+<DIV class=buryit onclick=DiggIt(cb_entryId,cb_blogId,2)><SPAN id=bury_count 
+class=burynum></SPAN></DIV>
+<DIV class=clear></DIV>
+<DIV id=digg_tips class=diggword></DIV></DIV></DIV>
+<DIV class=clear></DIV>
+<DIV id=post_next_prev></DIV></DIV>
+<SCRIPT type=text/javascript>
+LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+</SCRIPT>
+</DIV>
+<DIV class=postDesc>posted @ 2011-03-12 13:48 <A 
+href="http://www.cnblogs.com/xiangniu/">象牛</A> 阅读(1450) <A 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#commentform">评论(1)</A> 
+<A 
+onclick="open_link('http://www.cnblogs.com/xiangniu/admin/EditPosts.aspx?postid=1982163')" 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#" 
+rel=nofollow>编辑</A> <A onclick="AddToWz(1982163);return false;" 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#">收藏</A></DIV></DIV><IMG 
+alt="" src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/1982163.jpg" 
+width=1 height=1> </DIV><!--end: topics 文章、评论容器--><A name=pagedcomment></A><!--done--><BR>
+<DIV class=feedback_area_title>发表评论</DIV>
+<DIV class=feedbackNoItems><SPAN style="DISPLAY: none" 
+id=span_comment_maxid>2227737</SPAN></DIV>
+<DIV class=feedbackItem>
+<DIV class=feedbackListSubtitle>
+<DIV class=feedbackManage>　<A 
+onclick='ReplyComment("Roy Yu",2227737,"//CSgIGy+gUE0lbvzPeyoee8F0gBFBCGsz2Z4FKzWwvxNXyHBDrTSA==")' 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#commentform">回复</A>　<A 
+onclick='QuoteComment(2227737,"//CSgIGy+gUE0lbvzPeyoee8F0gBFBCGsz2Z4FKzWwvxNXyHBDrTSA==")' 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#commentform">引用</A>　<A 
+title=查看该作者发表过的评论 
+href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=Roy+Yu" 
+target=_blank>查看</A>　<A id=Comments1_CommentList_DeleteLink_0 
+href="javascript:__doPostBack('Comments1$CommentList$ctl00$DeleteLink','')"></A>&nbsp;&nbsp;<A 
+id=Comments1_CommentList_EditLink_0 CausesValidation="False"></A> </DIV><A 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#2227737">#1楼</A><A 
+id=comment_anchor_2227737 name=2227737></A><A name=Post></A><SPAN 
+class=comment_date>2011-10-25 17:30</SPAN> | <A 
+id=Comments1_CommentList_NameLink_0 href="http://home.cnblogs.com/u/174972/" 
+rel=nofllow target=_blank>Roy Yu</A>&nbsp;<A class=sendMsg2This title=给此人发送站内短消息 
+href="http://space.cnblogs.com/msg/send/Roy+Yu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</A> 
+</DIV>
+<DIV class=feedbackCon><SPAN id=comment_body_2227737 
+class=blog_comment_body>求教，请问一下如何在坐标点上显示相应数字呢</SPAN><BR></DIV></DIV>
+<SCRIPT type=text/javascript>
+    var commentAuthorHasChecked = false;
+    var commentAuthorIsValid = false;
+    var commentUrlIsValid = true;
+    var commentEmailIsValid = true;
+    var authenCodeHasChecked = false;
+    var authenCodeIsValid = true;
+    var hasLogined = false;
+    
+    function PostComment() {    
+        
+        var isValid = true;
+        
+        if($("#wrapAuthenCode").css("display")=="none"){
+            ShowAuthenCode();
+            $("#tip_AuthenCode").css("color","red");
+            $("#tip_AuthenCode").html("请输入验证码！");
+            isValid = false;
+        }
+        
+        if(!hasLogined && !commentAuthorHasChecked){
+            CheckAuthor();        
+        }                
+        if(!hasLogined && !commentAuthorIsValid){
+            isValid = false;
+        }
+                       
+        if(!authenCodeHasChecked){
+            CheckAuthenCode();            
+        }
+        if(!authenCodeIsValid){
+            isValid = false;
+        }
+        
+        if(!hasLogined && !commentUrlIsValid){            
+            isValid = false;
+        }        
+        if(!commentEmailIsValid){            
+            isValid = false;
+        }        
+        if(!CheckCommentContent()){
+            isValid = false;
+        }    
+        if(!isValid){
+            return;
+        }
+
+        var content = $("#tbCommentBody").val();
+        if(content.length>2000){
+            alert("评论内容过长！不允许发布！");
+            return;
+        }     
+        
+        if(content.indexOf("　Ｅ　　　　　　　　　Ｅ　　　　　　　　　　Ｅ　　　　　　")>=0){
+            alert("该内容不允许布！");
+            return;
+        }   
+        
+       if ($("#span_comment_posted").html()!='' && $("#span_comment_posted").html()==content){
+            alert("该评论已发表过!");
+            return;
+        }
+        
+        $("#tip_comment").html("评论提交中...");
+        $("#span_comment_posted").html(content);
+        //content = content.replace("'", "\\'");
+        var email = $("#tbCommentEmail").val();
+        var authenNum = $("#tbAuthenCode").val();
+        var authenId = $("#span_comment_test").html();
+        var comment = {};
+        comment.authenNum = authenNum;
+        comment.authenId= authenId;
+        comment.parentId = 1982163;
+        comment.blogId = 78559;
+        comment.sourceUrl = 'http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html';
+        comment.author = $("#tbCommentAuthor").val();
+        comment.url = $("#tbCommentAuthorUrl").val();
+        comment.authenCode = $("#tbAuthenCode").val();
+        comment.email = email;
+        comment.title = 'jquery 绘图工具 flot 学习笔记';
+        comment.content = content;
+        comment.parentCommentId = $("#span_parentcomment_id").html();
+        $.ajax({
+            url: '/ws/CommentService.asmx/AddAnonymousComment',
+            data: $.toJSON(comment),
+            type: "post",
+            dataType: "json",
+            contentType: "application/json; charset=utf8",
+            success: function(data) {
+               if (data.d["IsSuccess"]) {
+                    ShowCommentMsg("感谢您的回复:)");
+                    //RereshComments2(comment.parentId);
+                    $("#tbCommentBody").val('');
+                    //$("#divCommentShow").html(data.d["ReturnData"]+content.replace(/\n/g,"<br/>")+"<br/><br/>");
+                    $("#divCommentShow").html($("#divCommentShow").html()+data.d["ReturnData"]); 
+                    $("#tip_AuthenCode").html('');
+                    RefreshAuthenCode();
+                    $("#tbAuthenCode").val("");                    
+                    CommentNotify(data.d["CommentID"]);
+                }
+                else {
+                    ShowCommentMsg(data.d["ReturnData"]);//"抱歉！评论提交失败！请与管理员联系。");
+                    $("#span_comment_posted").html(''); 
+                }
+            },
+            error: function(xhr) {
+                ShowCommentMsg("抱歉！评论提交失败！请与管理员联系。");
+                $("#span_comment_posted").html('');  
+                //alert(xhr.responseText);
+            }
+        }
+        );
+    }
+    
+    function RefreshAuthenCode(){
+        AjaxPost("/ws/CommentService.asmx/RefreshAuthenCode","{}",RefreshImg); 
+        $("#lnkRereshAuthenCode").html("<span style='color:red'>刷新中...</span>");
+        return false;
+    }
+    
+    function RefreshImg(response){
+       $("#imgAuthenCode").attr("src","/Modules/CaptchaImage/ValidCodeImage.aspx?id="+encodeURIComponent(response));
+       $("#span_comment_test").html(response);
+       $("#lnkRereshAuthenCode").html("看不清，换一个");
+    }
+    
+    function ShowAuthenCode(){
+        //if($("#wrapAuthenCode").css("display")=="none"){    
+        //    AjaxPost("/ws/CommentService.asmx/RefreshAuthenCode","{}",ShowAuthenCodeOk);
+        //}
+        $("#wrapAuthenCode").show();      
+    }
+    
+    function ShowAuthenCodeOk(response){
+         UpdateAuthenCode();
+         $("#tbAuthenCode").val("");
+         $("#wrapAuthenCode").show();
+         $("#tip_AuthenCode").html('');
+    }  
+ 
+    
+    function CheckAuthor(isOnblur){
+        commentAuthorHasChecked = true;
+        var maxLength = 30;
+        if($("#tbCommentAuthor").val().length == 0){
+            $("#tip_author").html("请输入您的昵称！");
+            commentAuthorIsValid = false;
+            return false;
+        }     
+        else if($("#tbCommentAuthor").val().length > maxLength){
+            $("#tip_author").html("昵称不允许超过" + maxLength + "个字符！");
+            commentAuthorIsValid = false;
+            return false;
+        }
+        else{
+            //if(isOnblur){
+                AjaxPost("/ws/CommentService.asmx/IsAuthorExist","{author:'"+$("#tbCommentAuthor").val()+"'}" ,OnCheckAuthorExist);
+            //}
+            //else{
+            //    $("#tip_author").html("");
+            //    commentAuthorIsValid = true;
+            //}
+            return true;
+        }
+   }
+   
+    function OnCheckAuthorExist(response){        
+        if(!response){
+            $("#tip_author").html("");
+            commentAuthorIsValid = true;
+        }
+        else{
+            $("#tip_author").html("该昵称已被使用，请更换昵称");
+            commentAuthorIsValid = false;
+        }
+   }
+   
+    function CheckUrl(){
+        var maxLength = 50;
+        var url = $("#tbCommentAuthorUrl").val();
+        
+        if(url.length == 0){
+            commentUrlIsValid = true;
+            return true;
+        }
+        else if(url.length > maxLength){
+            $("#tip_url").html("主页地址不允许超过" + maxLength + "个字符！");
+            commentUrlIsValid = false;
+            return false;
+        }
+        else if(url.indexOf("http://")!=0 || url.indexOf(".") < 0){
+            $("#tip_url").html("主页地址要以“http://”开头");
+            commentUrlIsValid = false;
+            return false;
+        }
+        else{
+            $("#tip_url").html("");
+            commentUrlIsValid = true;
+            return true;
+        }
+   }
+   
+   function CheckEmail(){
+        var email = $("#tbCommentEmail").val();
+        if(email.length>0){
+            var regExp = new RegExp("\\w+@((\\w|\-)+\\.)+[a-z]{2,3}");
+            if(!regExp.test(email)){
+                $("#tip_email").html("请输入正确的邮件地址!");
+                commentEmailIsValid = false;
+            }
+            else{
+                commentEmailIsValid = true;
+                 $("#tip_email").html("");
+            }
+        }
+        else{
+            commentEmailIsValid = true;
+            $("#tip_email").html("");  
+        }
+   }
+   
+   function CheckAuthenCode(){
+        authenCodeHasChecked = true;
+        var num = $("#tbAuthenCode").val();
+        var id = $("#span_comment_test").html();
+        $("#tip_AuthenCode").css("color","red");
+        if(num.length==0){
+             authenCodeIsValid = false;
+             $("#tip_AuthenCode").html("请输入验证码！");
+             return;
+        }
+        else if(num.length!=4){
+            authenCodeIsValid = false;
+            $("#tip_AuthenCode").html("请输入四位数字！");
+             return;
+        }
+        else if(new RegExp("(\d+)").test(num)){
+            authenCodeIsValid = false;
+            $("#tip_AuthenCode").html("请输入四位数字！");
+             return;
+        }
+        else{
+            AjaxPost("/ws/CommentService.asmx/CheckAuthenCode","{number:"+num+",id:'"+id+"'}", OnCheckAuthenCode);
+        }
+   }
+   
+   function OnCheckAuthenCode(response){
+        if(response){
+            $("#tip_AuthenCode").css("color","green");
+            $("#tip_AuthenCode").html("验证码输入正确！");
+            authenCodeIsValid = true;            
+        }
+        else{
+            $("#tip_AuthenCode").css("color","red");
+            $("#tip_AuthenCode").html("验证码输错啦！");
+            RefreshAuthenCode();
+            authenCodeIsValid = false;           
+        }
+   }
+   
+   function CheckCommentContent(){
+    if($("#tbCommentBody").val().length==0){
+        alert("请输入评论内容！");
+        return false;
+    }
+    return true;
+   }
+    
+</SCRIPT>
+
+<DIV id=ctl03_comment_form class=commentform>
+<SCRIPT type=text/javascript>
+    try {
+        SyntaxHighlighter.all();
+        isSyntaxHighlighted = true;
+    } catch (e) { }
+</SCRIPT>
+
+<DIV id=ctl03_divCommentPannel>
+<DIV id=divCommentShow></DIV>
+<DIV style="TEXT-ALIGN: right" id=comment_nav><SPAN 
+id=span_refresh_tips></SPAN><A id=lnk_RefreshComments 
+onclick="return RefreshCommentList(1982163);" 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html###" 
+name=commentform>刷新评论列表</A>&nbsp; <A onclick="return RefreshPage();" 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html###">刷新页面</A>&nbsp; 
+<A 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#top">返回页首</A></DIV>
+<DIV id=commentform_title>发表评论</DIV><SPAN style="COLOR: red" 
+id=tip_comment></SPAN>
+<P>昵称：<INPUT onblur=CheckAuthor() id=tbCommentAuthor class=author 
+onfocus=ShowAuthenCode()> <SPAN style="COLOR: red" id=tip_author></SPAN><A 
+href="http://passport.cnblogs.com/login.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2fxiangniu%2farchive%2f2011%2f03%2f12%2f1982163.html%3flogin%3d1%23commentform">[登录]</A> 
+<A 
+href="http://passport.cnblogs.com/register.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2fxiangniu%2farchive%2f2011%2f03%2f12%2f1982163.html%23Top">[注册]</A> 
+</P>
+<P>主页：<INPUT onblur=CheckUrl() id=tbCommentAuthorUrl class=url 
+onfocus=ShowAuthenCode()> <SPAN style="COLOR: red" id=tip_url></SPAN></P>
+<P>邮箱：<INPUT onblur=CheckEmail() id=tbCommentEmail class=email 
+onfocus=ShowAuthenCode()>(仅博主可见) <SPAN style="COLOR: red" 
+id=tip_email></SPAN></P>
+<P style="DISPLAY: none" id=wrapAuthenCode>验证码：<INPUT onblur=CheckAuthenCode() 
+id=tbAuthenCode> <SPAN id=tip_AuthenCode></SPAN><IMG id=imgAuthenCode alt=验证码 
+align=absMiddle 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/ValidCodeImage.jpg"> 
+<A id=lnkRereshAuthenCode onclick="return RefreshAuthenCode();" 
+href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html###">看不清，换一个</A> 
+</P>
+<P>评论内容：<SPAN style="COLOR: red" id=tip_comment_content></SPAN><BR><TEXTAREA onkeydown="return clt_enter(event)" id=tbCommentBody class=comment_textarea onfocus=ShowAuthenCode()></TEXTAREA> 
+<!--
+<br /><input id="cbRememberMe" type="checkbox" />记住我的昵称和主页
+--></P>
+<P><INPUT id=btn_comment_submit class=comment_btn onclick="PostComment();return false;" value=提交 type=button> 
+&nbsp;&nbsp;<A 
+href="http://passport.cnblogs.com/login.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2fxiangniu%2farchive%2f2011%2f03%2f12%2f1982163.html%3flogin%3d1%23commentform">登录</A>&nbsp;&nbsp;<A 
+href="http://passport.cnblogs.com/register.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2fxiangniu%2farchive%2f2011%2f03%2f12%2f1982163.html%23Bottom">注册</A> 
+</P>
+<P>[使用Ctrl+Enter键快速提交评论] </P>
+<DIV style="DISPLAY: none"><SPAN id=comment_edit_id></SPAN><SPAN 
+id=span_parentcomment_id>0</SPAN> <SPAN id=span_parent_id>1982163</SPAN> <SPAN 
+id=span_comment_replyto></SPAN><SPAN id=span_comment_posted></SPAN><SPAN 
+id=span_comment_test>DaDqtDiD8cY=</SPAN> </DIV></DIV>
+<DIV id=clear_read_link></DIV>
+<SCRIPT type=text/javascript>
+    $("#clear_read_link").html('<a href="http://archive.cnblogs.com/a/' + cb_entryId + '/" target="_blank">简洁阅读版式</a>')
+</SCRIPT>
+
+<DIV id=site_nav_under><A title=程序员的网上家园 href="http://www.cnblogs.com/" 
+target=_blank>首页</A><A href="http://q.cnblogs.com/" target=_blank>博问</A><A 
+href="http://home.cnblogs.com/ing/" target=_blank>闪存</A><A title=IT新闻 
+href="http://news.cnblogs.com/" target=_blank>新闻</A><A 
+href="http://home.cnblogs.com/" target=_blank>园子</A><A title=程序员招聘 
+href="http://job.cnblogs.com/" target=_blank>招聘</A><A 
+href="http://kb.cnblogs.com/" target=_blank>知识库</A> </DIV>
+<DIV class="itnews c_ad_block"><B>最新IT新闻</B>:<BR>· <A 
+href="http://news.cnblogs.com/n/128261/" target=_blank>Kinect For Windows 
+2月1日上市</A><BR>· <A href="http://news.cnblogs.com/n/128259/" 
+target=_blank>Flash之死</A><BR>· <A href="http://news.cnblogs.com/n/128258/" 
+target=_blank>Payoff获200万美元融资，个人理财也能游戏化和社交化</A><BR>· <A 
+href="http://news.cnblogs.com/n/128257/" target=_blank>IBM去年获6180项专利 
+连续19年蝉联全美冠军</A><BR>· <A href="http://news.cnblogs.com/n/128256/" 
+target=_blank>优酷与二十世纪福克斯签署内容合作协议</A><BR>» <A title=IT新闻 
+href="http://news.cnblogs.com/" target=_blank>更多新闻...</A> </DIV>
+<DIV id=kb_block class="itnews c_ad_block"><B>最新知识库文章</B>:<BR>
+<DIV id=kb_recent>· <A href="http://kb.cnblogs.com/page/121883/" 
+target=_blank>当心那些有歧义的命名</A><BR>· <A href="http://kb.cnblogs.com/page/113051/" 
+target=_blank>一个失败软件项目的思考</A><BR>· <A href="http://kb.cnblogs.com/page/111571/" 
+target=_blank>JavaScript 类型总览(图)</A><BR>· <A 
+href="http://kb.cnblogs.com/page/127995/" target=_blank>Javascript 
+面向对象编程</A><BR>· <A href="http://kb.cnblogs.com/page/127846/" 
+target=_blank>持续集成之“Everything is code”</A><BR></DIV>» <A 
+href="http://kb.cnblogs.com/" target=_blank>更多知识库文章...</A> </DIV>
+<SCRIPT type=text/javascript>
+    var enableGoogleAd = true;
+    enableGoogleAd = $("#cnblogs_post_body").text().length > 500;
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function () {
+        if(enableGoogleAd){
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+            '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        }
+    })();
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+    if (enableGoogleAd) {
+        try {
+            googletag.cmd.push(function () {
+                googletag.defineSlot('/1090369/cnblogs_blogpost_C1', [300, 250], 'div-gpt-ad-1320933818841-0').addService(googletag.pubads());
+                googletag.defineSlot('/1090369/cnblogs_blogpost_C2', [468, 60], 'div-gpt-ad-1320933818841-1').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+        } catch (e) { }
+    }
+</SCRIPT>
+
+<DIV id=google_ad_c1 class=c_ad_block><!-- cnblogs_blogpost_C1 -->
+<DIV style="WIDTH: 300px; HEIGHT: 250px" id=div-gpt-ad-1320933818841-0>
+<SCRIPT type=text/javascript>
+    if (enableGoogleAd) {
+        try {
+            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1320933818841-0'); });
+        } catch (e) { }       
+    }
+</SCRIPT>
+</DIV></DIV>
+<DIV id=google_ad_c2 class=c_ad_block><!-- cnblogs_blogpost_C2 -->
+<DIV style="WIDTH: 468px; HEIGHT: 60px" id=div-gpt-ad-1320933818841-1>
+<SCRIPT type=text/javascript>
+    if (enableGoogleAd) {
+        try {
+            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1320933818841-1'); });
+        } catch (e) { }
+        
+    }
+</SCRIPT>
+</DIV></DIV>
+<DIV style="DISPLAY: none" id=ad_under_comment2 class=c_ad_block><A 
+href="http://www.china-pub.com/STATIC07/1107/2011chinapub_6810_110718/2011chinapub_6810_110718.asp" 
+rel=nofollow target=_blank><IMG 
+style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" 
+alt="" 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/china-pub.jpg"></A><BR><A 
+href="http://www.china-pub.com/STATIC07/1107/zh_autumntb_110725/zh_autumntb_110725.asp" 
+rel=nofollow target=_blank>China-pub 2011秋季教材巡展</A><BR><A 
+href="http://www.china-pub.com/static07/0901/zh_jueba_090121.asp" rel=nofollow 
+target=_blank>China-Pub 计算机绝版图书按需印刷服务</A><BR></DIV>
+<SCRIPT type=text/javascript>
+    if (enableGoogleAd) {
+        if (document.getElementById("ad_under_comment2")) {
+            $("#ad_under_comment2").show();
+        }
+    }
+    else {
+        $("#google_ad_c1").hide();
+        $("#google_ad_c2").hide();
+    }
+</SCRIPT>
+
+<DIV id=HistoryToday class=c_ad_block></DIV>
+<SCRIPT type=text/javascript>
+    $(document).ready(function () {
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    });
+</SCRIPT>
+</DIV></DIV><!--end: forFlow --></DIV><!--end: mainContent 主体内容容器-->
+<DIV id=sideBar>
+<DIV id=sideBarMain>
+<DIV id=calendar>
+<TABLE id=Calendar1_entryCal class=Cal title=Calendar cellSpacing=0 
+cellPadding=0>
+  <TBODY>
+  <TR>
+    <TD colSpan=7>
+      <TABLE class=CalTitle cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD class=CalNextPrev><A style="COLOR: black" 
+            title="Go to the previous month" 
+            href="javascript:__doPostBack('Calendar1$entryCal','V4049')">&lt;</A></TD>
+          <TD align=center>2011年3月</TD>
+          <TD class=CalNextPrev align=right><A style="COLOR: black" 
+            title="Go to the next month" 
+            href="javascript:__doPostBack('Calendar1$entryCal','V4108')">&gt;</A></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TH class=CalDayHeader abbr=日 scope=col align=center>日</TH>
+    <TH class=CalDayHeader abbr=一 scope=col align=center>一</TH>
+    <TH class=CalDayHeader abbr=二 scope=col align=center>二</TH>
+    <TH class=CalDayHeader abbr=三 scope=col align=center>三</TH>
+    <TH class=CalDayHeader abbr=四 scope=col align=center>四</TH>
+    <TH class=CalDayHeader abbr=五 scope=col align=center>五</TH>
+    <TH class=CalDayHeader abbr=六 scope=col align=center>六</TH></TR>
+  <TR>
+    <TD class=CalOtherMonthDay align=center>27</TD>
+    <TD class=CalOtherMonthDay align=center>28</TD>
+    <TD align=center>1</TD>
+    <TD align=center>2</TD>
+    <TD align=center>3</TD>
+    <TD align=center>4</TD>
+    <TD class=CalWeekendDay align=center>5</TD></TR>
+  <TR>
+    <TD class=CalWeekendDay align=center>6</TD>
+    <TD align=center>7</TD>
+    <TD align=center>8</TD>
+    <TD align=center>9</TD>
+    <TD align=center>10</TD>
+    <TD align=center><A 
+      href="http://www.cnblogs.com/xiangniu/archive/2011/3/11.html"><U>11</U></A></TD>
+    <TD class=CalWeekendDay align=center><A 
+      href="http://www.cnblogs.com/xiangniu/archive/2011/3/12.html"><U>12</U></A></TD></TR>
+  <TR>
+    <TD class=CalWeekendDay align=center><A 
+      href="http://www.cnblogs.com/xiangniu/archive/2011/3/13.html"><U>13</U></A></TD>
+    <TD align=center>14</TD>
+    <TD align=center>15</TD>
+    <TD align=center><A 
+      href="http://www.cnblogs.com/xiangniu/archive/2011/3/16.html"><U>16</U></A></TD>
+    <TD align=center><A 
+      href="http://www.cnblogs.com/xiangniu/archive/2011/3/17.html"><U>17</U></A></TD>
+    <TD align=center>18</TD>
+    <TD class=CalWeekendDay align=center><A 
+      href="http://www.cnblogs.com/xiangniu/archive/2011/3/19.html"><U>19</U></A></TD></TR>
+  <TR>
+    <TD class=CalWeekendDay align=center>20</TD>
+    <TD align=center>21</TD>
+    <TD align=center>22</TD>
+    <TD align=center>23</TD>
+    <TD align=center>24</TD>
+    <TD align=center><A 
+      href="http://www.cnblogs.com/xiangniu/archive/2011/3/25.html"><U>25</U></A></TD>
+    <TD class=CalWeekendDay align=center>26</TD></TR>
+  <TR>
+    <TD class=CalWeekendDay align=center>27</TD>
+    <TD align=center>28</TD>
+    <TD align=center>29</TD>
+    <TD align=center><A 
+      href="http://www.cnblogs.com/xiangniu/archive/2011/3/30.html"><U>30</U></A></TD>
+    <TD align=center>31</TD>
+    <TD class=CalOtherMonthDay align=center>1</TD>
+    <TD class=CalOtherMonthDay align=center>2</TD></TR>
+  <TR>
+    <TD class=CalOtherMonthDay align=center>3</TD>
+    <TD class=CalOtherMonthDay align=center>4</TD>
+    <TD class=CalOtherMonthDay align=center>5</TD>
+    <TD class=CalOtherMonthDay align=center>6</TD>
+    <TD class=CalOtherMonthDay align=center>7</TD>
+    <TD class=CalOtherMonthDay align=center>8</TD>
+    <TD class=CalOtherMonthDay align=center>9</TD></TR></TBODY></TABLE></DIV>
+<DIV id=leftcontentcontainer>
+<SCRIPT type=text/javascript>
+    var blogapp = 'xiangniu';
+</SCRIPT>
+
+<DIV class=mySearch>
+<H3 class=catListTitle>搜索</H3>
+<DIV id=widget_my_zzk class=div_my_zzk><INPUT 
+onkeydown="return zzk_go_enter(event);" id=q class=input_my_zzk>&nbsp;<INPUT id=btnZzk class=btn_my_zzk onclick=zzk_go() value=找找看 type=button></DIV>
+<DIV id=SingleColumn1_ctl00_widget_my_google class=div_my_zzk><INPUT 
+onkeydown="return google_go_enter(event)" id=google_q class=input_my_zzk 
+name=google_q>&nbsp;<INPUT class=btn_my_zzk onclick=google_go() value=谷歌搜索 type=button></DIV></DIV>
+<DIV class=catListTag>
+<H3 class=catListTitle>我的标签</H3>
+<UL>
+  <LI><A href="http://www.cnblogs.com/xiangniu/tag/arcgis/">arcgis</A>(3)
+  <LI><A href="http://www.cnblogs.com/xiangniu/tag/vs/">vs</A>(2)
+  <LI><A href="http://www.cnblogs.com/xiangniu/tag/asp.net/">asp.net</A>(1)
+  <LI><A href="http://www.cnblogs.com/xiangniu/tag/callback/">callback</A>(1)
+  <LI><A 
+  href="http://www.cnblogs.com/xiangniu/tag/%E7%99%BE%E5%BA%A6%20%E5%88%A4%E6%96%AD%E7%82%B9%E5%87%BB%E5%AF%B9%E8%B1%A1/">百度 
+  判断点击对象</A>(1)
+  <LI><A 
+  href="http://www.cnblogs.com/xiangniu/tag/sde%20oracle%20%E8%BF%9E%E6%8E%A5/">sde 
+  oracle 连接</A>(1)
+  <LI><A 
+  href="http://www.cnblogs.com/xiangniu/tag/skip_networking/">skip_networking</A>(1)
+  <LI><A 
+  href="http://www.cnblogs.com/xiangniu/tag/mysql%E4%B9%B1%E7%A0%81/">mysql乱码</A>(1)
+  <LI><A 
+  href="http://www.cnblogs.com/xiangniu/tag/%E5%8E%BB%E9%99%A4table%E8%BE%B9%E6%A1%86/">去除table边框</A>(1)
+  <LI><A href="http://www.cnblogs.com/xiangniu/tag/js%E7%B1%BB/">js类</A>(1) 
+</LI></UL></DIV>
+<DIV class=catListPostCategory>
+<H3 class=catListTitle>随笔分类<SPAN 
+style="FONT-SIZE: 11px; FONT-WEIGHT: normal">(63)</SPAN></H3>
+<UL>
+  <LI><A id=SingleColumn1_Categories_CatList_LinkList_0_Link_0 
+  href="http://www.cnblogs.com/xiangniu/category/269114.html">C#(6)</A> <A 
+  id=SingleColumn1_Categories_CatList_LinkList_0_RssLink_0 
+  onclick="return open_link('http://www.cnblogs.com/xiangniu/category/269114.html/rss');" 
+  href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#">(rss)</A> 
+
+  <LI><A id=SingleColumn1_Categories_CatList_LinkList_0_Link_1 
+  href="http://www.cnblogs.com/xiangniu/category/269115.html">GIS(11)</A> <A 
+  id=SingleColumn1_Categories_CatList_LinkList_0_RssLink_1 
+  onclick="return open_link('http://www.cnblogs.com/xiangniu/category/269115.html/rss');" 
+  href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#">(rss)</A> 
+
+  <LI><A id=SingleColumn1_Categories_CatList_LinkList_0_Link_2 
+  href="http://www.cnblogs.com/xiangniu/category/312587.html">web开发(19)</A> <A 
+  id=SingleColumn1_Categories_CatList_LinkList_0_RssLink_2 
+  onclick="return open_link('http://www.cnblogs.com/xiangniu/category/312587.html/rss');" 
+  href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#">(rss)</A> 
+
+  <LI><A id=SingleColumn1_Categories_CatList_LinkList_0_Link_3 
+  href="http://www.cnblogs.com/xiangniu/category/312591.html">工具(6)</A> <A 
+  id=SingleColumn1_Categories_CatList_LinkList_0_RssLink_3 
+  onclick="return open_link('http://www.cnblogs.com/xiangniu/category/312591.html/rss');" 
+  href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#">(rss)</A> 
+
+  <LI><A id=SingleColumn1_Categories_CatList_LinkList_0_Link_4 
+  href="http://www.cnblogs.com/xiangniu/category/312588.html">数据操作相关(14)</A> <A 
+  id=SingleColumn1_Categories_CatList_LinkList_0_RssLink_4 
+  onclick="return open_link('http://www.cnblogs.com/xiangniu/category/312588.html/rss');" 
+  href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#">(rss)</A> 
+
+  <LI><A id=SingleColumn1_Categories_CatList_LinkList_0_Link_5 
+  href="http://www.cnblogs.com/xiangniu/category/269117.html">杂七杂八(5)</A> <A 
+  id=SingleColumn1_Categories_CatList_LinkList_0_RssLink_5 
+  onclick="return open_link('http://www.cnblogs.com/xiangniu/category/269117.html/rss');" 
+  href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#">(rss)</A> 
+
+  <LI><A id=SingleColumn1_Categories_CatList_LinkList_0_Link_6 
+  href="http://www.cnblogs.com/xiangniu/category/312585.html">在线地图(2)</A> <A 
+  id=SingleColumn1_Categories_CatList_LinkList_0_RssLink_6 
+  onclick="return open_link('http://www.cnblogs.com/xiangniu/category/312585.html/rss');" 
+  href="http://www.cnblogs.com/xiangniu/archive/2011/03/12/1982163.html#">(rss)</A> 
+  </LI></UL></DIV>
+<DIV class=catListComment>
+<H3 class=catListTitle>最新评论<A id=SingleColumn1__2150b3e_RSSHyperlink1 
+title=RSS订阅最最新评论 href="http://www.cnblogs.com/xiangniu/CommentsRSS.aspx"><IMG 
+title=RSS订阅最最新评论 alt="" 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/xml.gif"></A></H3>
+<DIV id=RecentCommentsBlock></DIV></DIV>
+<DIV class=catListView>
+<H3 class=catListTitle>阅读排行榜</H3>
+<DIV id=TopViewPostsBlock></DIV></DIV></DIV></DIV><!--end: sideBarMain --></DIV><!--end: sideBar 侧边栏容器 -->
+<DIV class=clear></DIV></DIV><!--end: main -->
+<DIV class=clear></DIV>
+<DIV id=footer><!--done-->Copyright ©2012 象牛 </DIV><!--end: footer --></DIV><!--end: home 自定义的最大容器 --></FORM>
+<SCRIPT type=text/javascript>
+    if (!isSyntaxHighlighted) {
+        try {
+            SyntaxHighlighter.all();
+        } catch (e) { }
+    }
+</SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="jquery%20绘图工具%20flot%20学习笔记%20-%20象牛%20-%20博客园_files/ShowHidden.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-476124-1']);
+    _gaq.push(['_setDomainName', 'cnblogs.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</SCRIPT>
+</BODY></HTML>

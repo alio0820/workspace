@@ -1,0 +1,7 @@
+eclipse创建web工程，工程名出现红色感叹号 
+
+WebEclipseJDKIDE.unbound classpath container:'JRE System Library [jre1.6.0_11]' in project '工程名' 
+
+问题出现的原因：项目的JDK和IDE使用的JDK版本不一致，造成未绑定的状态 
+
+解决办法：右击工程名-->选择“Build Path”下的Configure Build Path... -->在Java Build Path窗口中，选择"Libraries" 选项卡，发现JRE System Library[1.4.2]有一个红色的XX，选中之，并单击右边的“Edit...”按钮，选择"Alternate JRE" 并且找到你安装的jdk的环境 jre，最后单击“Finish”按钮即可完成。

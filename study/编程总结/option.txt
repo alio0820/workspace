@@ -1,0 +1,9 @@
+<select name="showpage">
+      <% 
+     String telsql="select * from userinfo";
+    ResultSet rs=stmt.executeQuery(telsql);//改成你自己对应的
+while(rs.next()){
+    %>
+      <option value="<%=rs.getString("tel")%>"><%=rs.getString("tel")%> </option>
+      <% } %>
+    </select>

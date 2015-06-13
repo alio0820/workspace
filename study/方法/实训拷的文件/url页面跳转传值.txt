@@ -1,0 +1,8 @@
+<a href='<s:url value="/documanage/WaitDetail.jsp">
+            <s:param name="projectName" value="projectName"/>
+            <s:param name="assessor" value="assessor"/>
+            <s:param name="datumAttribute" value="datumAttribute"/>
+            </s:url>'>[…Û∫À]</a>
+
+
+<s:property value="%{#parameters.projectName}"/>

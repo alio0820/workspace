@@ -1,0 +1,13 @@
+windows 查看进程命令
+
+先用命令netstat -ano查看监听TCP 8080端口的进程是哪个PID？ 
+然后用命令tasklist查看此PID对应的进程名是什么？ 
+tasklist 找到要结束程序名 
+然后 
+taskkill /f /im 程序名.exe 
+有些病毒有多程序启动 
+此时 taskkilll /f /im  程序名1.exe /f /im  程序名2.exe ....
+(同时运行，不怕病毒保护程序) 
+
+net start mysql
+net stop mysql

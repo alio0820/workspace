@@ -1,0 +1,23 @@
+java.lang.Integer这个API包中有进制转换的函数   
+  public   static   String   toBinaryString(int   i)   
+  public   static   String   toHexString(int   i)   
+  public   static   String   toOctalString(int   i)   
+  这3个函数都可以将十进制的整数转换成二、一六、八进制数   
+  不过转换后的结果都是字符串的形式 
+
+
+二进制转换为十进制
+String BIN2DEC(String bin){
+BigInteger bi = new BigInteger(getString(bin), 2);//转换为BigInteger类型
+return bi.toString(10);//转换为10进制结果 
+}
+
+
+
+
+二进制转换为十进制
+使用Integer.parseInt(String s, int radix) 。
+比如要将二进制数1000转换为十进制数.
+int i=Integer.parseInt("1000",2) ;
+System.out.println(i); 
+输出结果为：8。

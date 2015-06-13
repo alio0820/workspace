@@ -1,0 +1,80 @@
+div#hCalendarControls{
+	position:absolute;
+	left:50%;
+	bottom:8px;
+	width:188px;
+	height:25px;
+	margin:0 0 0 -94px;
+}
+div#hCalendarControls div{
+	position:absolute;
+	height:25px;
+	top:0;
+	left:0;
+	background:url('../../../images/Calendar/Navigation.png')no-repeat top left;
+}
+div#hCalendarControls div div{
+	width:100%;
+	height:100%;
+	background:url('../../../images/Calendar/Navigation.png')no-repeat top left;
+}
+div div#hCalendarControlPrevious div{
+	background-position:0 -50px;
+}
+div div#hCalendarControlDay{
+	width:46px;
+	left:24px;
+	background-position:-24px 0;
+}
+div div#hCalendarControlDay div.hCalendarControlOn{
+	background-position:-24px -25px;
+}
+div div#hCalendarControlDay div{
+	background-position:-24px -50px;
+}
+div div#hCalendarControlWeek{
+	width:46px;
+	left:71px;
+	background-position:-71px 0;
+}
+div div#hCalendarControlWeek div.hCalendarControlOn{
+	background-position:-71px -25px;
+}
+div div#hCalendarControlWeek div{
+	background-position:-71px -50px;
+}
+div div#hCalendarControlMonth{
+	width:46px;
+	left:118px;
+	background-position:-118px 0;
+}
+div div#hCalendarControlMonth div.hCalendarControlOn{
+	background-position:-118px -25px;
+}
+div div#hCalendarControlMonth div{
+	background-position:-118px -50px;
+}
+div div#hCalendarControlNext{
+	width:23px;
+	left:165px;
+	background-position:-165px 0;
+}
+div div#hCalendarControlNext div{
+	background-position:-165px -50px;
+}
+div#hCalendarControls div.hCalendarSeparator div{
+	background-position:-23px -50px;
+}
+div#hCalendarControls div#hCalendarSeparatorTwo{
+	left:70px;
+}
+div#hCalendarControls div#hCalendarSeparatorThree{
+	left:117px;
+}
+div#hCalendarControls div#hCalendarSeparatorFour{
+	left:164px;
+}
+.mouseOn{
+	color:red;
+	background:#ADD8E6;
+}

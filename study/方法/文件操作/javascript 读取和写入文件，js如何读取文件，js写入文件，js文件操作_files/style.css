@@ -1,0 +1,171 @@
+html {
+	background: url("background.png") rgb(250, 246, 237);
+}
+body {
+	background: url("bgimg.jpg") no-repeat 50% 0px;
+}
+#nv {
+	background-image: url("nv.png"); background-color: rgb(186, 53, 15);
+}
+#nv li {
+	background-image: url("nv_a.png") !important;
+}
+#nv li.a {
+	background: url("nv_a.png") no-repeat 50% 100% rgb(132, 0, 0);
+}
+#qmenu {
+	background-image: url("qmenu.png");
+}
+.fl .bm_h {
+	background: url("titlebg.png") repeat-x 0px 0px rgb(255, 236, 236); border-color: rgb(255, 204, 204);
+}
+.appl {
+	background-color: rgb(255, 236, 236);
+}
+.bmn {
+	background-color: rgb(255, 236, 236);
+}
+.bm_h {
+	background-color: rgb(255, 236, 236);
+}
+.pn {
+	background-color: rgb(255, 236, 236);
+}
+td.pls {
+	background-color: rgb(255, 236, 236);
+}
+.ad td.plc {
+	background-color: rgb(255, 236, 236);
+}
+div.exfm {
+	background-color: rgb(255, 236, 236);
+}
+.tb a {
+	background-color: rgb(255, 236, 236);
+}
+.tb_h {
+	background-color: rgb(255, 236, 236);
+}
+.ttp li.a a {
+	background-color: rgb(255, 236, 236);
+}
+div.uo a {
+	background-color: rgb(255, 236, 236);
+}
+input#addsubmit_btn {
+	background-color: rgb(255, 236, 236);
+}
+#gh .bm .bm_h {
+	background-color: rgb(255, 236, 236);
+}
+.bmn {
+	border-color: rgb(255, 204, 204);
+}
+.pg a {
+	border-color: rgb(255, 204, 204);
+}
+.pgb a {
+	border-color: rgb(255, 204, 204);
+}
+.pg strong {
+	border-color: rgb(255, 204, 204);
+}
+.card {
+	border-color: rgb(255, 204, 204);
+}
+.card .o {
+	border-color: rgb(255, 204, 204);
+}
+div.exfm {
+	border-color: rgb(255, 204, 204);
+}
+.pg strong {
+	background-color: rgb(255, 204, 204);
+}
+.pn {
+	border-color: rgb(255, 204, 204) rgb(102, 102, 102) rgb(102, 102, 102) rgb(255, 204, 204);
+}
+.mi .hover .moodfm_input {
+	background-color: rgb(255, 204, 204) !important;
+}
+.ad td.pls {
+	background-color: rgb(255, 204, 204);
+}
+.fl .bm_h h2 a {
+	color: rgb(0, 0, 0);
+}
+.xi1 {
+	color: rgb(0, 0, 0);
+}
+#um .new {
+	color: rgb(0, 0, 0);
+}
+.topnav .new {
+	color: rgb(0, 0, 0);
+}
+.sch .new {
+	color: rgb(0, 0, 0);
+}
+.el .ec .hot em {
+	color: rgb(0, 0, 0);
+}
+.pll .s a.joins {
+	color: rgb(0, 0, 0);
+}
+.pll .s a.go {
+	color: rgb(255, 255, 255);
+}
+.xi2 {
+	color: rgb(0, 0, 0);
+}
+.xi2 a {
+	color: rgb(0, 0, 0);
+}
+.pgs #newspecial {
+	background: url("pn_post.png") no-repeat 0px 0px; float: left;
+}
+.pgs #newspecialtmp {
+	background: url("pn_post.png") no-repeat 0px 0px; float: left;
+}
+#post_reply {
+	background: url("pn_reply.png") no-repeat 0px 0px; float: left;
+}
+#post_replytmp {
+	background: url("pn_reply.png") no-repeat 0px 0px; float: left;
+}
+#newspecial img {
+	filter: alpha(opacity=0); opacity: 0;
+}
+#newspecialtmp img {
+	filter: alpha(opacity=0); opacity: 0;
+}
+#post_reply img {
+	filter: alpha(opacity=0); opacity: 0;
+}
+#post_replytmp img {
+	filter: alpha(opacity=0); opacity: 0;
+}
+.moodfm_btn {
+	background-image: url("mood_input_btn.png") !important;
+}
+#create_group_btn {
+	background: url("create_group.png") no-repeat 0px 0px; display: block;
+}
+#create_group_btn img {
+	filter: alpha(opacity=0); opacity: 0;
+}
+.tb .o {
+	background-image: url("pnp2.png");
+}
+.tb .o a {
+	background-image: url("pnp2.png");
+}
+.el .ec .hot {
+	background-image: url("hotspot.gif");
+}
+.pll .s {
+	background-image: url("polljoins.gif");
+}
+.tb .a a {
+	background: url("background.png"); border-bottom-color: rgb(250, 246, 237);
+}

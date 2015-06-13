@@ -1,0 +1,64 @@
+主要邮件服务器地址
+    网易126邮箱
+　　 接收服务器：pop3.126.com
+　　 发送服务器：smtp.126.com
+
+　　网易163免费邮
+　　 接收服务器：pop.163.com
+　　 发送服务器：smtp.163.com
+
+　　网易163VIP邮箱
+　　 接收服务器：pop.vip.163.com
+　　 发送服务器：smtp.vip.163.com
+
+　　网易188财富邮
+　　 接收服务器：pop.188.com
+　　 发送服务器：smtp.188.com
+
+　　网易yeah.net邮箱
+　　 接收服务器：pop.yeah.net
+　　 发送服务器：smtp.yeah.net
+
+　　网易netease.com邮箱
+　　 接收服务器：pop.netease.com
+　　 发送服务器：smtp.netease.com
+
+　　新浪收费邮箱
+　　 接收服务器：pop3.vip.sina.com
+　　 发送服务器：smtp.vip.sina.com
+
+　　新浪免费邮箱
+　　 接收服务器：pop3.sina.com.cn
+　　 发送服务器：smtp.sina.com.cn
+
+　　搜狐邮箱
+　　 接收服务器：pop3.sohu.com
+　　 发送服务器：smtp.sohu.com
+
+　　21cn快感邮
+　　 接收服务器：vip.21cn.com
+　　 发送服务器：vip.21cn.com
+
+　　21cn经济邮
+　　 接收服务器：pop.163.com
+　　 发送服务器：smtp.163.com
+
+　　tom邮箱
+　　 接收服务器：pop.tom.com
+　　 发送服务器：smtp.tom.com
+
+　　263邮箱
+　　 接收服务器：263.net
+　　 发送服务器：smtp.263.net
+
+　　网易163.com邮箱
+　　 接收服务器：rwypop.china.com
+　　 发送服务器：rwypop.china.com
+
+　　雅虎邮箱
+　　 接收服务器：pop.mail.yahoo.com
+　　 发送服务器：smtp.mail.yahoo.com
+
+　　Gmail邮箱
+　　 接收服务器：pop.gmail.com
+　　 发送服务器：smtp.gmail.com

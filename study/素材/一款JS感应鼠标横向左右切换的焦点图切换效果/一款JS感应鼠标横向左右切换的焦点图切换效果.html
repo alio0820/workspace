@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>一款JS感应鼠标横向左右切换的焦点图切换效果</title>
+    <style type="text/css">
+    * { padding: 0; margin: 0; }
+    li { list-style: none; }
+    body { background: #f6f9fc; }
+    div { width: 420px; height: 240px; border: 1px solid #ccc; margin: 50px auto 0; overflow:hidden; }
+    ul { width: 2100px; height: 240px; }
+    ul li { width: 22px; height: 240px; float: left; position: relative; overflow:hidden; }
+    .active { width: 320px; }
+    ul span { width: 21px; height: 239px; padding-top: 10px; border-right: 1px solid #fff; position: absolute; top: 0; right: 0; color: #fff; font-size: 12px; text-align: center; cursor: pointer; }
+    ul img { width: 320px; height: 240px; }
+    .bg0 { background: #00FFCC; }
+    .bg1 { background: #636363; }
+    .bg2 { background: #3d7fbb; }
+    .bg3 { background: #5ca716; }
+    .bg4 { background: #f28b24; }
+    .bg5 { background: #7c0070; }
+    </style>
+    <script type="text/javascript">
+    var g_aLis = [];
+    var g_aBtns = [];
+    var g_oTimer = null;
+    var g_minWidth = 22;
+    window.onload = function() {
+    var a = document.getElementById('show1');
+    var i = 0;
+    g_aLis = a.getElementsByTagName('li');
+    g_aBtns = a.getElementsByTagName('span');
+    for (i = 0; i < g_aBtns.length; i++) {
+    g_aBtns[i].index = i;
+    g_aBtns[i].onmouseover = function() {
+    gotoImg(this.index)
+    }
+    }
+    };
+    function gotoImg(a) {
+    if (g_oTimer) {
+    clearInterval(g_oTimer)
+    }
+    g_oTimer = setInterval("changeWidthInner(" + a + ")", 35)
+    }
+    function changeWidthInner(a) {
+    var b = document.getElementById('show1');
+    var c = 420;
+    var w = 0;
+    var d = true;
+    var i = 0;
+    for (i = 0; i < g_aLis.length; i++) {
+    if (i == a) {
+    continue
+    }
+    if (g_minWidth == g_aLis[i].offsetWidth) {
+    c -= g_aLis[i].offsetWidth;
+    continue
+    }
+    d = false;
+    speed = Math.ceil((g_aLis[i].offsetWidth - g_minWidth) / 10);
+    w = g_aLis[i].offsetWidth - speed;
+    if (w <= g_minWidth) {
+    w = g_minWidth
+    }
+    g_aLis[i].style.width = w + 'px';
+    c -= w
+    }
+    g_aLis[a].style.width = c + 'px';
+    if (d) {
+    clearInterval(g_oTimer);
+    g_oTimer = null
+    }
+    }
+    </script>
+    </head>
+    <body>
+    <div>
+    <ul id="show1">
+    <li class="active">
+    <span class="bg0">这是第一个</span>
+    <img src="images/m01.jpg">
+    </li>
+    <li>
+    <span class="bg1">这是第二个</span>
+    <img src="images/m02.jpg">
+    </li>
+    <li>
+    <span class="bg2">这是第三个</span>
+    <img src="images/m03.jpg">
+    </li>
+    <li>
+    <span class="bg3">这是第四个</span>
+    <img src="images/m04.jpg">
+    </li>
+    <li>
+    <span class="bg4">这是第五个</span>
+    <img src="images/m05.jpg">
+    </li>
+    <li>
+    <span class="bg5">这是第六个</span>
+    <img src="images/m06.jpg">
+    </li>
+    </ul>
+    </div>
+    </body></html>

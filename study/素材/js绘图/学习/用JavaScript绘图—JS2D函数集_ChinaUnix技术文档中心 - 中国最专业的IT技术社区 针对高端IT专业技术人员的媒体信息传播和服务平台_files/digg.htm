@@ -1,0 +1,6 @@
+$("#digg_div").html("<div id=\"digg\"><span><strong id=\"diggDivCount_206087\">0</strong><br /><samp id=\"diggDivDo_down_206087\" onclick=\"digg(1)\" >顶一下</samp></span><span class=\"cai\"><strong id=\"diggDivCount_down_206087\">0</strong><br /><samp id=\"diggDivDo_down_206087\" onclick=\"digg(0)\" ><samp id=\"diggDivDo_down_206087\" onclick=\"digg(0)\" >踩一下</samp></samp></span></div>");
+function digg(id)
+{
+	$("#digg_div").html('正在处理...');
+	$("#calldigg_js").attr('src', "http://pub.chinaunix.net/digg/digg.php?contentid=" + contentid+"&catid="+catid+"&flag="+id);
+}

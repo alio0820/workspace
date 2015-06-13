@@ -1,0 +1,38 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>灵活定义属性值的方式</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+</head>
+<body>
+         <script type="text/javascript" language="javascript" >
+         <!--
+          var id=1;
+          function ItemWorkers(_name,_address)
+         {
+              this.name=_name||"";
+              this.address=_address||"北京";
+             //用于编号
+              if(_name)
+             {
+                 this.id=id++;
+             }
+         }
+          
+          var ItemWorkers1=new ItemWorkers("张三","湖南");
+          var ItemWorkers2=new ItemWorkers("李四");
+         
+          document.write("ItemWorkers1对象中所有属性：<br>");
+          for(var obj in ItemWorkers1)
+         {
+             document.write(obj,":",ItemWorkers1[obj],"<br>");
+         }
+          document.write("ItemWorkers2对象中所有属性：<br>");
+          for(var obj in ItemWorkers2)
+         {
+             document.write(obj,":",ItemWorkers2[obj],"<br>");
+         }
+          -->
+          </script>
+</body>
+</html>

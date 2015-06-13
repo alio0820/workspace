@@ -1,0 +1,255 @@
+#tpl_dev_layer {
+	DISPLAY: none !important
+}
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+A {
+	COLOR: #777; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #1b3b4b; TEXT-DECORATION: underline
+}
+HTML {
+	BACKGROUND: url(bg.png) repeat-x 0px 0px
+}
+BODY {
+	BACKGROUND: url(head.jpg) no-repeat center 0px; FONT-SIZE: 12px
+}
+.toolbar {
+	FILTER: alpha(opacity=35); BACKGROUND: #000; BORDER-BOTTOM-WIDTH: 0px; -moz-opacity: 0.35; opacity: 0.35
+}
+.toolbar .left {
+	POSITION: relative
+}
+.toolbar .side {
+	POSITION: relative
+}
+.html {
+	PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 960px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BODY {
+	COLOR: #777
+}
+.txt_a {
+	COLOR: #777
+}
+.txt_b {
+	COLOR: #777
+}
+.rect .head .tab LI A {
+	COLOR: #777
+}
+.foot .foot_text A {
+	COLOR: #777
+}
+.more A {
+	COLOR: #777
+}
+.text {
+	COLOR: #777
+}
+.quan .body H4 A {
+	COLOR: #777
+}
+.updateblock .con_share .mes A {
+	COLOR: #777
+}
+.replay_box .replay_bar A {
+	COLOR: #777
+}
+.catalog_list LI A {
+	COLOR: #777
+}
+.photo_catalog_list LI H4 {
+	COLOR: #777
+}
+.small_page_bar .pagination .current {
+	COLOR: #777
+}
+.newest_upload_photo .lookmore A {
+	COLOR: #777
+}
+.updateblock .title {
+	COLOR: #1b3b4b; FONT-WEIGHT: bold
+}
+.updateblock .title A {
+	COLOR: #1b3b4b; FONT-WEIGHT: bold
+}
+.p_main .head .more A {
+	COLOR: #1b3b4b; FONT-WEIGHT: bold
+}
+.txtright A {
+	COLOR: #1b3b4b; FONT-WEIGHT: bold
+}
+.p_full_loveinfo .rect .head .tab LI.currrent {
+	COLOR: #1b3b4b; FONT-WEIGHT: bold
+}
+.updateblock {
+	BORDER-RIGHT-WIDTH: 0px; BACKGROUND: url(hr.gif) repeat-x 50% bottom; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.music_list LI {
+	BORDER-RIGHT-WIDTH: 0px; BACKGROUND: url(hr.gif) repeat-x 50% bottom; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+#gbook_list LI.clear {
+	BORDER-RIGHT-WIDTH: 0px; BACKGROUND: url(hr.gif) repeat-x 50% bottom; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.photo_catalog_list TD {
+	BORDER-RIGHT-WIDTH: 0px; BACKGROUND: url(hr.gif) repeat-x 50% bottom; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+#music_catalog_body LI {
+	BORDER-RIGHT-WIDTH: 0px; BACKGROUND: url(hr.gif) repeat-x 50% bottom; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.gbook_con OL LI {
+	BORDER-RIGHT-WIDTH: 0px; BACKGROUND: url(hr.gif) repeat-x 50% bottom; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.userinfo .info_mes {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(hr.gif) repeat-x 50% top; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 5px
+}
+.foot .foot_text {
+	BORDER-RIGHT-WIDTH: 0px; BACKGROUND: url(hr.gif) repeat-y right 50%; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.friend_list .photo {
+	BORDER-BOTTOM: #e5e5e5 1px solid; BORDER-LEFT: #e5e5e5 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #f8f8f8; BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px solid; PADDING-TOP: 2px
+}
+.userinfo .photo {
+	BORDER-BOTTOM: #e5e5e5 1px solid; BORDER-LEFT: #e5e5e5 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #f8f8f8; BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px solid; PADDING-TOP: 2px
+}
+.updateblock .con_share .pic IMG {
+	BORDER-BOTTOM: #e5e5e5 1px solid; BORDER-LEFT: #e5e5e5 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #f8f8f8; BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px solid; PADDING-TOP: 2px
+}
+.gbook_con OL LI .photo {
+	BORDER-BOTTOM: #e5e5e5 1px solid; BORDER-LEFT: #e5e5e5 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #f8f8f8; BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px solid; PADDING-TOP: 2px
+}
+.friend .body UL LI IMG {
+	BORDER-BOTTOM: #e5e5e5 1px solid; BORDER-LEFT: #e5e5e5 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #f8f8f8; BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px solid; PADDING-TOP: 2px
+}
+.login_block {
+	BORDER-BOTTOM: #e5e5e5 1px solid; BORDER-LEFT: #e5e5e5 1px solid; BACKGROUND: #f8f8f8; BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px solid
+}
+.lyso_pop {
+	BORDER-BOTTOM: #e5e5e5 1px solid; BORDER-LEFT: #e5e5e5 1px solid; BACKGROUND: #f8f8f8; BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px solid
+}
+.p_top {
+	POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 350px; PADDING-TOP: 0px
+}
+.header {
+	POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-LEFT: 220px; PADDING-RIGHT: 0px; HEIGHT: 40px; PADDING-TOP: 0px; TOP: 95px
+}
+.header .blogname {
+	POSITION: relative; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: none; COLOR: #1b3b4b; FONT-SIZE: 24px; PADDING-TOP: 0px; TOP: auto
+}
+.header .description {
+	POSITION: relative; PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: none; COLOR: #454545; FONT-SIZE: 14px; PADDING-TOP: 5px; TOP: auto
+}
+.menu {
+	POSITION: absolute; PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px auto; PADDING-LEFT: 70px; WIDTH: 920px; BOTTOM: 15px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; HEIGHT: 42px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px; LEFT: 14px
+}
+.menu UL {
+	
+}
+.menu LI {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 42px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 120px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 42px; FONT-SIZE: 14px; FONT-WEIGHT: 900; PADDING-TOP: 0px
+}
+.menu LI A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 42px; PADDING-LEFT: 0px; WIDTH: 120px; PADDING-RIGHT: 0px; BACKGROUND: url(r.png) no-repeat right 0px; FLOAT: left; HEIGHT: 42px; COLOR: #333; PADDING-TOP: 0px
+}
+.menu LI.index_menu A {
+	
+}
+.menu LI.selected {
+	
+}
+.menu LI.selected A {
+	COLOR: #000
+}
+.menu LI A:hover {
+	COLOR: #000
+}
+.menu .friend_menu A {
+	BORDER-RIGHT-WIDTH: 0px; BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.p_full {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 35px; PADDING-RIGHT: 35px; BACKGROUND: url(body.png); PADDING-TOP: 0px
+}
+.p_full .stage {
+	
+}
+.p_left {
+	BORDER-BOTTOM: #efefef 1px solid; POSITION: relative; BORDER-LEFT: #efefef 1px solid; PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 240px; PADDING-RIGHT: 10px; DISPLAY: block; FLOAT: right; OVERFLOW: hidden; BORDER-TOP: #efefef 1px solid; BORDER-RIGHT: #efefef 1px solid; PADDING-TOP: 10px
+}
+.p_left .head {
+	BORDER-BOTTOM: #cfcfcf 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 32px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #efefef; HEIGHT: 32px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.p_left .head H3 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; MARGIN-BOTTOM: 15px; COLOR: #333; PADDING-TOP: 0px
+}
+.p_left .pane {
+	
+}
+.p_left .pane .body {
+	
+}
+.p_left .head .text {
+	FONT-SIZE: 12px
+}
+.p_main {
+	POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 600px; PADDING-RIGHT: 0px; FLOAT: left; OVERFLOW: hidden; PADDING-TOP: 11px
+}
+.p_main .head {
+	BORDER-BOTTOM: #cfcfcf 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 32px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #efefef; HEIGHT: 32px; PADDING-TOP: 0px
+}
+.p_main .head H3 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; COLOR: #333; PADDING-TOP: 0px
+}
+.p_main .head .top {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 30px; PADDING-RIGHT: 0px; COLOR: #333; PADDING-TOP: 0px
+}
+.p_main .head .text H3 {
+	
+}
+.p_full_loveinfo .rect .head .tab {
+	MARGIN: 0px
+}
+.p_full_loveinfo .rect .head .tab LI {
+	FONT-WEIGHT: bold
+}
+.p_full_loveinfo .rect .head .tab LI A {
+	COLOR: #cc0000
+}
+.p_full_loveinfo .rect .head .tab LI.currrent {
+	FLOAT: left; COLOR: #333
+}
+.p_main .head .top A {
+	_float: left
+}
+.p_main .head .top IMG {
+	_padding: 8px 0 0 0
+}
+.p_main .head H3 {
+	
+}
+.p_main .head .more {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 10px; PADDING-TOP: 0px
+}
+.p_main .head .more A {
+	
+}
+.updateblock {
+	WIDTH: auto
+}
+.foot {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 65px; COLOR: #ccc; PADDING-TOP: 60px
+}
+.foot .foot_frame A {
+	COLOR: #ccc
+}
+.foot .foot_frame .logo {
+	BACKGROUND: url(http://static.51img1.com/homeskins/public/images/logoblack.png)
+}
+.foot_frame {
+	PADDING-BOTTOM: 30px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.grid_1 .p_note_main {
+	PADDING-BOTTOM: 10px; LINE-HEIGHT: 20px; PADDING-LEFT: 25px; PADDING-RIGHT: 25px; PADDING-TOP: 10px
+}

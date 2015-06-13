@@ -1,0 +1,347 @@
+
+<HTML>
+<HEAD>
+<TITLE>滚动条颜色(CSS样式)生成编辑器-DIVCSS5</TITLE>
+<!-- saved from url=(0013)about:internet -->
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name="keywords" content="滚动条CSS样式控制,DIV CSS控制滚动条样式,滚动条颜色" />
+<meta name="description" content="欢迎来到DIVCSS5，本页是CSS工具之浏览器滚动条颜色样式控制生成编辑器，DIV CSS滚动条样式控制编辑器，www.DivCss5.com" />
+<STYLE type=text/css>
+BODY { MARGIN: 25px }
+#all TD { FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial", "新宋体", "宋体" }
+INPUT { FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial", "新宋体", "宋体" }
+SELECT { FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial", "新宋体", "宋体" }
+P { FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial", "新宋体", "宋体" }
+TEXTAREA { FONT-SIZE: 12px; OVERFLOW: hidden; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial", "新宋体", "宋体" }
+#all A:active { COLOR: #7d070c }
+#all A:visited { COLOR: #7d070c }
+#all A:hover { COLOR: #336699 }
+#all A:link { COLOR: #7d070c }
+.high { CURSOR: default; COLOR: #ffffff; BACKGROUND-COLOR: #006699 }
+.target { BORDER-RIGHT: #cccccc 2px solid; BORDER-TOP: #cccccc 2px solid; BORDER-LEFT: #cccccc 2px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 2px solid; BACKGROUND-COLOR: #006699 }
+FONT { CURSOR: default }
+.hi { BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; CURSOR: hand; BORDER-BOTTOM: medium none }
+</STYLE>
+<SCRIPT language=JavaScript>
+<!--
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+var obj=MM_findObj(ob); if (obj) { 
+obj.select();js=obj.createTextRange();js.execCommand("Copy");}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</SCRIPT>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript>
+function UpdateScroll(el) { //reCreated By 51JS.COM -Jimmy & Tantom
+var sB='<STYLE>\nBODY {\n';sE='\n}\n</STYLE>';sR=/;/g
+	if (document.body) {
+		document.body.style[el.name] = el.value
+var obj=MM_findObj('js_1'); if (obj) { 
+nCssText=document.body.style.cssText.replace(sR,";\n");
+obj.value=sB+nCssText+sE}
+}
+	
+}
+function setColorPanel(colorStep){ //Created By Jimmy
+var colorPanelHTML="";colorCount=Math.round(255/colorStep);
+for (k=colorStep;k>=0;k--){
+for (j=0;j<=colorStep;j++){
+for (i=0;i<=colorStep;i++){
+colorPanelHTML+='<font size=3 color=RGB('+k*colorCount+','+i*colorCount+','+j*colorCount+')>■</font>';
+}
+}
+}
+//alert(colorPanelHTML);
+return colorPanelHTML;
+}
+
+function makeColorPanel(){
+var cValueObj=MM_findObj('colorStepValue');
+if(cValueObj){colorPanel.innerHTML=setColorPanel(cValueObj.value)}
+
+}
+
+function makeRandomPanel(colorPa){
+var colorPanelHTML="";
+var cObj=MM_findObj('colorPa');
+colorPa=cObj.value;
+//alert(cValueObj.value);
+for (i=0;i<=517;i++){
+colorPanelHTML+='<font size=3 color=RGB('+Math.round(Math.random()*colorPa)+','+Math.round(Math.random()*colorPa)+','+Math.round(Math.random()*colorPa)+')>■</font>';
+}
+//alert(colorPanelHTML);
+colorPanel.innerHTML=colorPanelHTML
+}
+
+function showHideSet(ob){
+ob.style.display=(ob.style.display)?'':'none';
+}
+
+function high(ob){
+ob.className=(ob.className=='target')?'target':'high';
+}
+function low(ob){
+ob.className=(ob.className=='target')?'target':'';
+}
+function setTarget(tob){
+for (i=1;i<9;i++){
+eval('e'+i).className='';
+}
+
+event.srcElement.className='target'
+obcurrentSet=MM_findObj('currentSet')
+obcurrentSet.value=tob
+//alert(obcurrentSet.value);
+
+}
+function setScroll(el) { //reCreated By 51JS.COM -Jimmy & Tantom
+var sB='<STYLE>\nBODY {\n';sE='\n}\n</STYLE>';sR=/;/g
+	if (document.body) {
+		document.body.style[el.value] = el.value
+var obj=MM_findObj('js_1'); if (obj) { 
+nCssText=document.body.style.cssText.replace(sR,";\n");
+obj.value=sB+nCssText+sE}
+}
+	
+}
+function choiceColor(){
+obt=MM_findObj('currentSet')
+ob=MM_findObj(obt.value)
+ob.value=event.srcElement.color
+if (document.body) {
+document.body.style[obt.value] = ob.value
+var sB='<STYLE>\nBODY {\n';sE='\n}\n</STYLE>';sR=/;/g
+var obj=MM_findObj('js_1'); if (obj) { 
+nCssText=document.body.style.cssText.replace(sR,";\n");
+obj.value=sB+nCssText+sE}
+}
+}
+function hi(){
+event.srcElement.className='hi';
+}
+function lo(){
+event.srcElement.className='';
+}
+</SCRIPT>
+</HEAD>
+<BODY id=all text=#000000 bgColor=#336699>
+<NOSCRIPT>
+<IFRAME SRC=_.htm></IFRAME>
+</NOSCRIPT>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+	<TBODY>
+		<TR bgColor=#ffffff>
+			<TD><IMG height=14 src="sq_1.gif" width=11></TD>
+			<TD width="100%"></TD>
+			<TD><IMG height=14 src="sq_2.gif" 
+  width=11></TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+	<TBODY>
+		<TR bgColor=#ffffff>
+			<TD><IMG height=1 src="ie5.htm" width=11></TD>
+			<TD width="100%">
+				<TABLE cellPadding=8 width="100%" border=0>
+					<TBODY>
+						<TR>
+							<TD align=middle>
+								<SCRIPT language=JavaScript>
+document.write("<font color=#7d070c style=\"font-size: 14px\">"+document.title+"</font>");
+</SCRIPT>
+							</TD>
+						</TR>
+						<TR>
+							<TD bgColor=#f7f7f7>您的位置：<a href="http://www.divcss5.com/">CSS网站首页</a>&nbsp;&nbsp;>>&nbsp;&nbsp;<strong>CSS 滚动条颜色样式控制</strong><br>
+<br>
+<FONT color=#990000>提示:</FONT>请注意你正使用的浏览是否<FONT 
+            color=#990000><B>IE5.5 </B></FONT>:随着IE6与wishter的出现，这种效果将被大量使用。 <BR>
+			注意：仅支持微软IE6-IE8。
+			<BR>
+								<FONT color=#990000>注意:</FONT>此生成器有调色板的功能，使用方便，效果清析。 <BR>
+								使用:<BR>
+								<IMG height=30 src="step.gif" 
+            width=30 align=absMiddle> 先选择一种属性然后点击该属性，你会看见属性被选择了.<BR>
+								<IMG 
+            height=30 src="step2.gif" width=30 
+            align=absMiddle>现在你可以在颜色输入内输入颜色代码[如Red,#ff000]或者在调色板中选择一种色彩，<FONT 
+            color=#990000>此时请留意滚动条颜色的变化</FONT>! <BR>
+								<IMG height=30 
+            src="step3.gif" width=30 align=absMiddle> 将代码显示框内的代码复制到页面内.ok.
+								<TABLE id=props style="TABLE-LAYOUT: fixed" width="100%">
+									<COLGROUP>
+									<COL width=60>
+									<COL width=250>
+									<TBODY>
+										<TR bgColor=lightgrey>
+											<TH width=267>
+												<INPUT type=hidden value=scrollbar3dLightColor 
+                  name=currentSet>
+												颜色</TH>
+											<TH width="241">属性</TH>
+											<TH width="544" noWrap>
+												<INPUT style="DISPLAY: none" size=3 value=7 
+                  name=colorStepValue>
+												<INPUT size=3 value=255 name=colorPa>
+												<INPUT onclick=makeRandomPanel() type=button value=随机色彩 name=Button>
+												<INPUT onclick=makeColorPanel() type=button value=原色板 name=Submit2>
+												<INPUT onclick=showHideSet(colorPanel) type=button value=显示或者隐藏调色板 name=Button2>
+											</TH>
+										</TR>
+										<TR>
+											<TD>
+												<INPUT onchange=UpdateScroll(this) 
+                  name=scrollbar3dLightColor>
+											</TD>
+											<TD class=target id=e1 onmouseover=high(this) 
+                onclick="setTarget('scrollbar3dLightColor')" 
+                onmouseout=low(this)>滚动条亮边的颜色 </TD>
+											<TD rowSpan=8>
+												<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  border=0>
+													<TBODY>
+														<TR>
+															<TD id=colorPanel onmouseover=hi() onclick=choiceColor() 
+                      onmouseout=lo()>
+																<SCRIPT language=JavaScript>
+document.write(setColorPanel(7));
+</SCRIPT>
+															</TD>
+														</TR>
+													</TBODY>
+												</TABLE>
+											</TD>
+										</TR>
+										<TR>
+											<TD>
+												<INPUT onchange=UpdateScroll(this) 
+                  name=scrollbarArrowColor>
+											</TD>
+											<TD id=e2 onmouseover=high(this) 
+                onclick="setTarget('scrollbarArrowColor')" 
+                  onmouseout=low(this)>上下按钮上三角箭头的颜色 </TD>
+										</TR>
+										<TR>
+											<TD>
+												<INPUT onchange=UpdateScroll(this) 
+                  name=scrollbarBaseColor>
+											</TD>
+											<TD id=e3 onmouseover=high(this) 
+                onclick="setTarget('scrollbarBaseColor')" 
+                  onmouseout=low(this)>滚动条的基本颜色</TD>
+										</TR>
+										<TR>
+											<TD>
+												<INPUT onchange=UpdateScroll(this) 
+                  name=scrollbarDarkShadowColor>
+											</TD>
+											<TD id=e4 onmouseover=high(this) 
+                onclick="setTarget('scrollbarDarkShadowColor')" 
+                onmouseout=low(this)>滚动条强阴影的颜色</TD>
+										</TR>
+										<TR>
+											<TD>
+												<INPUT onchange=UpdateScroll(this) 
+                  name=scrollbarFaceColor>
+											</TD>
+											<TD id=e5 onmouseover=high(this) 
+                onclick="setTarget('scrollbarFaceColor')" 
+                  onmouseout=low(this)>滚动条凸出部分的颜色</TD>
+										</TR>
+										<TR>
+											<TD>
+												<INPUT onchange=UpdateScroll(this) 
+                  name=scrollbarHighlightColor>
+											</TD>
+											<TD id=e6 onmouseover=high(this) 
+                onclick="setTarget('scrollbarHighlightColor')" 
+                onmouseout=low(this)>滚动条空白部分的颜色</TD>
+										</TR>
+										<TR>
+											<TD>
+												<INPUT onchange=UpdateScroll(this) 
+                  name=scrollbarShadowColor>
+											</TD>
+											<TD id=e7 onmouseover=high(this) 
+                onclick="setTarget('scrollbarShadowColor')" 
+                  onmouseout=low(this)>立体滚动条阴影的颜色</TD>
+										</TR>
+										<TR>
+											<TD>
+												<INPUT onchange=UpdateScroll(this) 
+                  name=scrollbarTrackColor>
+											</TD>
+											<TD id=e8 onmouseover=high(this) 
+                onclick="setTarget('scrollbarTrackColor')" 
+                  onmouseout=low(this)>滚动条的背景颜色</TD>
+										</TR>
+									</TBODY>
+								</TABLE>
+							</TD>
+						</TR>
+						<TR>
+							<TD>1.将下面的代码复制到&lt;head&gt; 内
+								<INPUT onClick="JM_cc('js_1')" type=button value=复制到我的剪贴板 name=Button>
+								<BR>
+								<FORM name=form1 action="#" method=post>
+									<TEXTAREA name=js_1 rows=10 wrap=VIRTUAL cols=80></TEXTAREA>
+								</FORM>
+							</TD>
+						</TR>
+						<TR>
+							<TD align="center"></TD>
+						</TR>
+					</TBODY>
+				</TABLE>
+			</TD>
+			<TD><IMG height=1 src="img/ie5.htm" 
+  width=11></TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+	<TBODY>
+		<TR bgColor=#ffffff>
+			<TD><IMG height=14 src="sq_3.gif" width=11></TD>
+			<TD width="100%"></TD>
+			<TD><IMG height=14 src="sq_4.gif" 
+  width=11></TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<PRE></PRE>
+<XMP></XMP>
+</NOSCRIPT>
+<!-- START RedMeasure V4 - Java v1.1  $Revision: 1.3 $ -->
+<!-- COPYRIGHT 2000 Red Sheriff Limited -->
+<SCRIPT language=JavaScript><!--
+var pCid="uk_lycos-uk_0";
+var w0=1;
+var refR=escape(document.referrer);
+if (refR.length>=252) refR=refR.substring(0,252)+"...";
+//--></SCRIPT>
+<SCRIPT language=JavaScript1.1><!--
+var w0=0;
+//--></SCRIPT>
+</SCRIPT>
+<NOSCRIPT>
+<IMG height=1 src="img/count.gif" width=1>
+</NOSCRIPT>
+</COMMENT>
+<!-- END RedMeasure V4 http://www.divcss5.com/ -->
+</BODY>
+</HTML>

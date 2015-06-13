@@ -1,0 +1,123 @@
+div.topic_page {
+	color: rgb(233, 101, 14); text-decoration: underline;
+}
+a {
+	color: rgb(233, 101, 14); text-decoration: underline;
+}
+a:hover {
+	color: white;
+}
+div.app_nav {
+	background-color: rgb(254, 240, 231);
+}
+div#page {
+	background-color: rgb(254, 240, 231);
+}
+.comment_title {
+	background-color: rgb(254, 240, 231);
+}
+tr.mouse_over {
+	background-color: rgb(254, 240, 231);
+}
+div#local {
+	border-color: rgb(233, 101, 14); background-color: white;
+}
+div#main {
+	border-color: rgb(233, 101, 14); background-color: white;
+}
+.blog_main {
+	border-color: rgb(233, 101, 14); background-color: white;
+}
+.pagination a:hover {
+	border-color: rgb(233, 101, 14); background-color: white;
+}
+.pagination a:active {
+	border-color: rgb(233, 101, 14); background-color: white;
+}
+div.nav {
+	background-color: rgb(233, 101, 14);
+}
+div#app_list div.decorate {
+	background-color: rgb(233, 101, 14);
+}
+a:hover {
+	background-color: rgb(233, 101, 14);
+}
+div#branding {
+	background-color: rgb(233, 101, 14);
+}
+input.button {
+	background-color: rgb(233, 101, 14);
+}
+input.submit {
+	background-color: rgb(233, 101, 14);
+}
+td.buttons a {
+	background-color: rgb(233, 101, 14);
+}
+.pagination span.current {
+	background-color: rgb(233, 101, 14);
+}
+.blog_bottom li {
+	color: rgb(233, 101, 14); border-right-color: rgb(233, 101, 14);
+}
+table.admin thead {
+	color: rgb(233, 101, 14);
+}
+.pagination a {
+	color: rgb(233, 101, 14);
+}
+.pagination a:visited {
+	color: rgb(233, 101, 14);
+}
+div.app_nav {
+	border-color: rgb(233, 101, 14);
+}
+.pagination span.current {
+	border-color: rgb(233, 101, 14);
+}
+.blog_comment {
+	border-top-color: rgb(233, 101, 14);
+}
+div.picture_full {
+	border-top-color: rgb(233, 101, 14);
+}
+.white {
+	color: rgb(255, 255, 255) !important;
+}
+#blog_navbar {
+	background-color: rgb(233, 101, 14);
+}
+.blog_navbar_for {
+	color: rgb(233, 101, 14); background-color: rgb(254, 240, 231);
+}
+#blog_navbar .blog_navbar_for a:visited {
+	color: rgb(233, 101, 14); background-color: rgb(254, 240, 231);
+}
+#blog_navbar .blog_navbar_for a:link {
+	color: rgb(233, 101, 14); background-color: rgb(254, 240, 231);
+}
+.blog_main_title {
+	color: rgb(0, 0, 0);
+}
+.about_bar {
+	background: rgb(204, 204, 204); color: rgb(233, 101, 14);
+}
+.view a:hover {
+	color: rgb(233, 101, 14);
+}
+.list_current {
+	
+}
+.list_current a {
+	color: rgb(16, 138, 198); font-weight: bold;
+}
+.list_current a:hover {
+	background: rgb(16, 138, 198); color: rgb(255, 255, 255);
+}
+#my_resume .editing a.del:hover {
+	color: rgb(233, 101, 14);
+}
+#my_resume .editing a.add:hover {
+	color: rgb(233, 101, 14);
+}

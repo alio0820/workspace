@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js+css精美二级导航菜单丨芯晴网页特效丨CsrCode.Cn</title>
+<style>
+<!--
+body {margin0; padding:0; text-transform:capitalize;}
+ul,li {margin:0; padding:0; list-style-type:none;}
+.menu {width:606px; height:48px; background:url(http://www.CsrCode.cn/html/txdm_2/images/20101124/nav.gif) 0 0 no-repeat;}
+.inner {padding:0 0 0 9px;}
+.menu li {float:left; font-size:12px;}
+.menu li a {text-decoration:none; color:#000; display:block; padding:0 20px; font:12px/44px "微软雅黑";}
+.menu li a:hover {text-decoration:none; color:orange; font:12px/44px "微软雅黑";}
+.menu li ul {visibility:hidden; position:absolute;}
+.menu li.hover ul {/*ie6不支持li:hover所以在这里写成li.hover以方便js取样式*/visibility:visible; position:absolute; display:block; width:408px; padding:0 0 0 18px; background:url(http://www.CsrCode.cn/html/txdm_2/images/20101124/subUlBg.gif) 0 0 no-repeat;}
+.menu ul ul li a {padding:0 1em; line-height:48px;}
+.menu ul ul li a:hover {padding:0 1em; line-height:48px;}
+.menu {margin:50px auto;}
+p {text-align:center; font:12px/200% "微软雅黑"; color:skyblue; }
+p a {color:skyblue;}
+-->
+</style>
+</head>
+
+<p class="intro_p"><body>
+<script language="javascript" type="text/javascript">
+ function showSubLevel(Obj){
+  Obj.className="hover";
+ }
+ function hideSubLevel(Obj){
+  Obj.className="";
+ }
+</script>
+
+<p class="intro_p"><div class="menu">
+ <ul class="inner">
+        <li onmouseover="showSubLevel(this)" onmouseout="hideSubLevel(this)"><a href="http://www.CsrCode.cn">CsrCode</a>
+        <ul>
+<li><a href="http://www.CsrCode.cn/html/txdm/">网页特效</a></li>
+<li><a href="http://www.33567.cn/">网址导航</a></li>
+<li><a href="http://Download.CsrCode.Cn/">源码下载</a></li>
+<li><a href="http://Links.CsrCode.Cn/">链接平台</a></li>
+<li><a href="http://Changshi.CsrCode.Cn/">生活常识</a></li>
+      </ul>
+        </li>
+    
+        <li onmouseover="showSubLevel(this)" onmouseout="hideSubLevel(this)"><a href="http://www.CsrCode.cn/html/txdm/">特效代码①</a>
+        <ul>
+<li><a href="http://www.CsrCode.cn/html/txdm/cddh/" title="">菜单导航特效</a></li>
+<li><a href="http://www.CsrCode.cn/html/txdm/tcys/" title="">图层样式特效</a></li>
+<li><a href="http://www.CsrCode.cn/html/txdm/ljwb/" title="">链接文本特效</a></li>
+<li><a href="http://www.CsrCode.cn/html/txdm/txtx/" title="">图形图像特效</a></li>
+        </ul>
+        </li>
+    
+        <li onmouseover="showSubLevel(this)" onmouseout="hideSubLevel(this)"><a href="http://www.CsrCode.cn/html/txdm/">特效代码②</a>
+        <ul>
+<li><a href="http://www.CsrCode.cn/html/txdm/sbtx/" title="">鼠标特效代码</a></li>
+<li><a href="http://www.CsrCode.cn/html/txdm/ymck/" title="">页面窗口特效</a></li>
+<li><a href="http://www.CsrCode.cn/html/txdm/wybj/" title="">网页背景特效</a></li>
+<li><a href="http://www.CsrCode.cn/html/txdm/rqsj/" title="">日期时间特效</a></li>
+        </ul>
+        </li>
+    
+        <li onmouseover="showSubLevel(this)" onmouseout="hideSubLevel(this)"><a href="http://www.CsrCode.cn/html/txdm/">特效代码③</a>
+        <ul>
+<li><a href="http://www.CsrCode.cn/html/txdm/ymss/" title="">页面搜索特效</a></li>
+<li><a href="http://www.CsrCode.cn/html/txdm/bgtx/" title="">表格表单特效</a></li>
+<li><a href="http://www.CsrCode.cn/html/txdm/qtdm/" title="">其他网页特效</a></li>
+        </ul>
+        </li>
+    
+        <li onmouseover="showSubLevel(this)" onmouseout="hideSubLevel(this)"><a href="http://Download.CsrCode.Cn">源码下载</a>
+        <ul>
+<li><a href="http://download.csrcode.cn/list/2_1.html" title="">淘客源码下载</a></li>
+<li><a href="http://download.csrcode.cn/list/58_1.html" title="">CMS系统源码</a></li>
+<li><a href="http://download.csrcode.cn/list/3_1.html" title="">seo工具软件</a></li>
+        </ul>
+        </li>
+    
+        <li onmouseover="showSubLevel(this)" onmouseout="hideSubLevel(this)"><a href="http://Changshi.CsrCode.Cn">生活常识</a>
+        <ul>
+<li><a href="http://changshi.csrcode.cn/html_cs/shenghuochangshi/">生活常识</a></li>
+<li><a href="http://changshi.csrcode.cn/html_cs/jiankangzhishi/">健康知识</a></li>
+<li><a href="http://changshi.csrcode.cn/html_cs/meirongshoushen/">美容瘦身</a></li>
+<li><a href="http://changshi.csrcode.cn/html_cs/yinshichangshi/">饮食常识</a></li>
+<li><a href="http://changshi.csrcode.cn/html_cs/yangshengzhidao/">养生之道</a></li>
+        </ul>
+        </li>
+ </ul>
+</div>
+<p>Made by Jacktomato<br />
+2010年10月23日<br />适合想学一些简体、基本的js朋友们</p>
+</body>
+</html>
+
+<p class="intro_p"><p align="center">本特效由 <a href="http://www.CsrCode.cn" target="_blank">芯晴网页特效</a>丨CsrCode.Cn 收集于互联网，只为兴趣与学习交流，不作商业用途。来源：源码爱好者</p>

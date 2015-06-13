@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>更新用户信息</title>
+<!--引入css文件-->
+<link rel="stylesheet" type="text/css" href="../css/manageUpdate.css" />
+</head>
+
+<body>
+	<div id="rightbar"><!--rightbar 开始-->
+    	<div class="title">添加个人信息</div>
+        <div class="commenText"><span class="tips">用户名：</span>孤狼响介</div>
+        <div class="commenText"><span class="tips">工号：</span>222009321062068</div>
+        <div class="commenText"><span class="tips">身份：</span>职员</div>
+        <form action="" method="post">
+        	<div class="commenText"><span class="tips y_middle">真实姓名：</span>
+            	<input type="text" class="txt" name="realName" />
+                <span class="r_w_tips">
+                	<img src="../images/manageMent/systemIcon/cross_circle.png" />
+					<span class="orange">不合格</span>
+                    <img src="../images/manageMent/systemIcon/tick_circle.png" />
+					<span class="green">合格</span>
+               	</span>
+            </div>
+            <div class="commenText"><span class="tips y_middle">部门：</span>
+              <select name="select" class="txt sel">
+                <option value="it">技术部</option>
+              </select>
+            </div>
+            <div class="commenText"><span class="tips y_middle">联系方式：</span>
+            	<input type="text" class="txt" name="contactMethod" />
+            </div>
+            <div class="commenText"><span class="tips y_middle">专业：</span><input type="text" class="txt" name="major" /></div>
+            <div class="commenText"><span class="tips y_middle">上传照片：</span>
+            	<input type="file" class="txt" name="uploading" />
+            </div>
+            <div class="preview">
+            	<div class="bigPic"><img src="../images/manageMent/memberInfo/白牛1.jpg" /></div>
+                <div class="smallPic">
+                	<div class="commenText">预览：</div>
+                    <img class="forty" src="../images/manageMent/memberInfo/白牛1.jpg" />
+                    <div class="commenText x_center">40×40</div>
+                    <img class="hundrand" src="../images/manageMent/memberInfo/白牛1.jpg" />
+                    <div class="commenText x_center_100">100×100</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <input type="button" class="btn submt" value="增加" />
+        </form>
+    </div><!--rightbar 结束-->
+</body>
+</html>

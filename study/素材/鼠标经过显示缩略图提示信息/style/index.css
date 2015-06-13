@@ -1,0 +1,37 @@
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;  text-align:center; margin:0 auto; }
+table{border-collapse:collapse;border-spacing:0;}
+
+.clearfloat{height:0;font-size:1px;clear:both;line-height:0;}
+
+#container{ width:990px;  text-align:left; margin:0 auto; }
+a{color:#333;text-decoration:none;}
+a:hover{color:#ef9b11; text-decoration:underline;}
+
+.main{ width:990px; padding-top:10px;}
+
+#mainleft{ width:265px; float:left; display:inline;}
+
+#mainright{ width:700px; text-align:left; margin-left:10px;}
+.top{ padding-left:10px; font-size:14px; color:#006699; letter-spacing:1px; background:url(../images/bg01.gif) no-repeat; width:690px; height:28px; line-height:28px; float:left; display:inline;}
+
+.mid{ padding:15px 10px; width:678px; border:1px solid #9bbdd3; height:148px; overflow:hidden;}
+
+#preview{margin:0;width:auto;}
+#tjcontent1,#tjcontent2{width:100%;margin:0;}
+#tjcontent1 div,#tjcontent2 div{clear:left;float:left;width:100%;}
+#tjcontent1 ul li,#tjcontent2 ul li{width:118px;height:30px;line-height:30px; float:left;}
+#tjcontent1 ul li.gj{width:85px;}
+#tjcontent1 a,#tjcontent2 a {position:relative;}
+#tjcontent1 a:hover,#tjcontent2 a:hover{z-index:999;background:#fff;text-decoration:none;}
+#sitetype a span,#tjcontent1 a span,#tjcontent2 a span{left:-999em;visibility: hidden;position:absolute;text-align:center;}
+#tjcontent1 a span img,#tjcontent2 a span img{width: 160px;padding:3px; height:120px; overflow:hidden;}
+#sitetype a:hover span,#tjcontent1 a:hover span,#tjcontent2 a:hover span{color:#666;left:20px;visibility:visible;top:20px;border:#999 1px solid;padding:5px 5px 3px 5px;background-color:#fff;width:166px;}
+#tjcontent1 li.gj a span {display:none;}
+#tjcontent2 a.linkblue span {display:none;}
+
+.box01{ background:#f2f6fe; padding-left:5px; width:673px;}
+.box02{ padding-left:5px;width:673px;}

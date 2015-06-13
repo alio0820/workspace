@@ -1,0 +1,27 @@
+#WIN_BOXS * {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#WIN_BOXS {
+	Z-INDEX: 1000000; BORDER-BOTTOM: #000 1px solid; POSITION: absolute; BORDER-LEFT: #000 1px solid; WIDTH: auto; BACKGROUND: #fff; HEIGHT: auto; OVERFLOW: hidden; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; TOP: -20000px; LEFT: -20000px
+}
+#WIN_TOPS {
+	BORDER-BOTTOM: #000 1px solid; POSITION: relative; BORDER-LEFT: #78a3f2 1px solid; LINE-HEIGHT: 25px; TEXT-INDENT: 6px; WIDTH: auto; BACKGROUND: #586cae; HEIGHT: 24px; COLOR: #fff; FONT-SIZE: 14px; BORDER-TOP: #78a3f2 1px solid; CURSOR: move; FONT-WEIGHT: bold; -moz-user-select: none; -khtml-user-select: none; user-select: none
+}
+#WIN_TITL {
+	LINE-HEIGHT: 25px; CURSOR: default
+}
+#WIN_CLOS {
+	POSITION: absolute; WIDTH: 20px; DISPLAY: block; BACKGROUND: url(http://pic.51.com/public/images/alllittlepic.gif) no-repeat 0px -70px; HEIGHT: 23px; CURSOR: hand; RIGHT: 0px; TOP: 3px
+}
+#WIN_CLOS:focus {
+	OUTLINE-WIDTH: 0px
+}
+#WIN_BODY {
+	MARGIN: 4px 5px 4px 4px; WIDTH: auto; FONT: 12px/20px ËÎÌו,Arial; BACKGROUND: #fff; HEIGHT: auto; COLOR: #000; CLEAR: both; CURSOR: default
+}
+#UI__BLOCK_IFRAME {
+	POSITION: absolute; BORDER-BOTTOM-STYLE: none; FILTER: alpha(opacity=0); PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0px; WIDTH: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP-STYLE: none; HEIGHT: 0px; BORDER-RIGHT-STYLE: none; PADDING-TOP: 0px; TOP: 0px; LEFT: 0px; -moz-user-select: none; -khtml-user-select: none; user-select: none; -moz-opacity: 0; opacity: 0
+}
+#UI__BLOCK_DIV {
+	POSITION: absolute; BORDER-BOTTOM-STYLE: none; FILTER: alpha(opacity=0); PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0px; WIDTH: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP-STYLE: none; HEIGHT: 0px; BORDER-RIGHT-STYLE: none; PADDING-TOP: 0px; TOP: 0px; LEFT: 0px; -moz-user-select: none; -khtml-user-select: none; user-select: none; -moz-opacity: 0; opacity: 0
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node.html</title>
+  </head>
+  
+  <body>
+    <input type="button" onclick="addButton()" value="创建一个按钮">
+    <script>
+    	function addButton()
+    	{
+    		//创建一个Element节点
+    		var buttonNode= document.createElement("button");
+    		var bodyNode= document.body;
+    		//在<body>节点插入一个新节点
+    		bodyNode.appendChild(buttonNode);
+    	}
+    </script>
+  </body>
+</html>

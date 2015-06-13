@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+* { margin:0; padding:0; }
+body { font-family:Arial, Verdana, Helvetica, sans-serif; font-family:"雅黑宋体", "微软雅黑", "新宋体", "宋体"; font-size:1em; font-size:17px; color:#000; background:#cccc00; text-align:left; }
+a { text-decoration:none; }
+ul { list-style:none; }
+img { border:none; }
+.h { width:90%; margin:auto; border-bottom:1px #e8e813 solid; border-top:1px #8d8d02 solid; clear:both; }
+.w { padding:90px 0 0 10px; text-align:left; }
+.u { border-bottom:1px #e8e813 solid; border-top:1px #8d8d02 solid; clear:both; }
+.p { padding:30px; width:90%; height:400px; margin: 15px auto; }
+.w p { margin-bottom:10px; font-weight:bolder; }
+#main { margin:0 auto; width:800px; border:1px #fff solid; margin-top:80px; }
+#top { text-align:center; padding:30px; }
+#top p { margin-top:20px; }
+#li-1 { position:absolute; width:294px; height:395px; margin-top:-100px; margin-left:-80px; }
+#li-2 { position:absolute; width:294px; height:395px; margin-top:700px; margin-left:700px; }
+#title { width:300px; float:left; padding:30px; }
+#title img { float:left; }
+.photo { margin-bottom:15px; float:left; }
+.txt { width:65%; float:right; }
+.txt h3 { padding:5px; }
+.txt p { padding:5px; padding-top:10px; }
+#footer { background:#070707; clear:both; margin:auto; margin-top:15px; padding:30px; font-size:.9em; color:#777; }

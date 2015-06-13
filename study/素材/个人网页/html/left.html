@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- saved from url=(0013)about:internet -->
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+body,td {
+	font-family: 新宋体;
+	font-size: 18px;
+	color: #9966CC;
+}
+
+a:link {
+	color: #666666;
+}
+
+a:hover {
+	color: #F0F0F0;
+}
+
+a:visited {
+	color: #666666;
+}
+
+body {
+	background-image: url("../images/bg1.jpg");
+}
+
+a:active {
+	color: #FFFFFF;
+}
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+    function mycheck(){
+       if (document.myform.xuehao.value=="") { 
+             alert("请输入帐号!");
+                document.myform.xuehao.focus();  
+                 return false;
+	  } 
+        if (document.myform.xuehao.value.length!=13) {
+	    alert("标准帐号为13位，您目前输入的帐号为"+document.myform.xuehao.value.length+"位");
+	    document.myform.xuehao.focus();
+	    return false;
+	  } 
+       if (document.myform.xingming.value=="") {
+                 alert("请输入密码!");
+                 document.myform.xingming.focus();
+                 return false;
+	  }
+ }
+</SCRIPT
+</head>
+<body>
+<br>
+<form action="" method="post">
+<table width="160" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"width="160"><img src="../images/12.gif" width="130" height="130" /></td>    
+  </tr>
+  <tr>
+  <td width="160"> 拥有梦想只是一种智力，实现梦想才是一种能力；唯一持久的优势，就是有能力比你的竞争对手更快的学习；快乐就是成功，它是世间成本最低、风险也最低的成功;<br><br> </td>
+  </tr>
+ 
+  <tr>
+  <td>用户：<input type="text" name="xuehao" size="13"><br><br></td>
+  </tr>
+  <tr>
+  <td>密码：<input type="password" name="xingming" size="13"><br><br></td>
+  </tr>
+  <tr>
+  <td>&nbsp;&nbsp;<input type="submit" value="登录">&nbsp;<input type="reset" value="重置"></td>
+  </tr>
+</table>
+</form>
+<!--bgsound src="media/汪苏泷 - 不分手的恋爱.mp3" /-->		
+</body>
+</html>

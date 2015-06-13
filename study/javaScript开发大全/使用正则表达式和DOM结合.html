@@ -1,0 +1,67 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+	<head>
+		<title>使用正则表达式和DOM结合</title>
+		<script>
+           function upDate()
+           {
+               
+               //查找所有<p>节点
+               var bNode = document.getElementsByTagName("p");
+               //通过循环遍历<p>节点中的文本
+               for(i=0;i<bNode.length;i++)
+               {
+                   //查看<p>节点中是否包括子节点
+                   if(bNode[i].firstChild!=null)
+                   {
+                       //获得<p>节点中的第一个子节点
+                       var textNode = bNode[i].firstChild;
+                       //如果第一个子节点为文本节点，则使用正则表达式匹配其中的内容
+                       if(textNode.nodeType==3)
+                       {
+                           //匹配"you"字
+                           var myRegExp = /you/i;
+                           //测试文本节点中的文本是否包含"you"字
+                           if(myRegExp.test(textNode.data))
+                           {
+                               //如果包含"you"字，则删除该文本节点
+                               bNode[i].removeChild(textNode);
+                               
+                               //然后创建三个Text节点
+                               //第一个文本节点中的内容为匹配文本之前的字符串
+                               var textNode1 = document.createTextNode(RegExp.leftContext);
+                               //第二个文本节点中的内容为匹配文本
+                               var textNode2 = document.createTextNode(RegExp.lastMatch);
+                               //第三个文本节点中的内容为匹配文本之后的字符串
+                               var textNode3 = document.createTextNode(RegExp.rightContext);
+                               //创建一个Element节点
+                               var fontNode = document.createElement("font");
+                               
+                               //创建一个Attribute节点
+                               var attNode = document.createAttribute("color");
+                               //设置<font>节点中的Color属性值为red
+                               attNode.value = "red";
+                               //将Attribute节点附加给<font>节点
+                               fontNode.setAttributeNode(attNode);
+                               //将匹配的文本节点也附加给<font>节点
+                               fontNode.appendChild(textNode2);
+                               //最后将三个节点都附加给<p>节点
+                               bNode[i].appendChild(textNode1);
+                               bNode[i].appendChild(fontNode);
+                               bNode[i].appendChild(textNode3);
+                           }
+                       }
+                   }
+               }
+           }
+       </script>
+	</head>
+	<body onload = "upDate()">
+	     <h1>The furthest distance in the world</h1>
+	     <p>The furthest distance in the world</p>
+         <p>Is not between life and death</p>
+         <p>But when I stand in front of you</p>
+         <p>Yet you don't know that</p>
+         <p>I love you</p>
+    </body>
+</html>

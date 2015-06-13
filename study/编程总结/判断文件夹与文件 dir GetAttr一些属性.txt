@@ -1,0 +1,84 @@
+dir 判断某个文件是否存在, 是很管用的, 可不是你所谓的垃圾. 
+
+'16 (文件夹+常规) 
+'17(文件夹+只读) 
+'18(文件夹+隐藏) 
+'19(文件夹+只读+隐藏) 
+
+'32 (文件+常规) 
+'33(文件+只读) 
+'34(文件+隐藏) 
+'35(文件+只读+隐藏) 
+'再加4就是系统文件(36,37,38,39) 
+  
+Private Sub Form_Load() 
+ MsgBox IIf(GetAttr("d:\pintu") < 32, "文件夹", "文件") 
+End Sub
+
+下面是dir的一些应用------------------------------
+
+
+'是系统或隐藏,唯读性文件夹或文件,在vbDirectory参数再加上属性即可.  
+'添加Command1 下面两个代码实际在局域网中测试2000或XP都没问题  
+
+Dim fname$, folname$  
+Private Sub Command1_Click()  
+ On Error GoTo errhandler  
+ folname = "\\freeway\f\dos\pcplus"  
+ If Dir(folname, vbDirectory) <> "" Then  
+ MsgBox folname & " 文件夹存在"  
+ Else  
+ MsgBox folname & " 文件夹不存在"  
+ End If  
+  
+ fname = "\\freeway\f\dos\pcplus\pcplus.exe"  
+ If Dir(fname) <> "" Then  
+ MsgBox fname & " 文件存在"  
+ Else  
+ MsgBox fname & " 文件不存在"  
+ End If  
+errhandler:  
+ If Err > 0 Then MsgBox "局域网未联线或无此计算机或路径错误"  
+End Sub  
+
+'*********************** 拷备文件或文件夹  
+
+'只告诉方法,没判断, 判断代码在上面  
+
+'添加 Command1  
+
+Private Sub Command1_Click()  
+ Dim fs  
+ Set fs = CreateObject("Scripting.FileSystemObject")  
+ '把freeway下的f:\dos\pcplus 文件夹拷备到c:\tmp  
+ fs.CopyFolder "\\freeway\f\dos\pcplus", "c:\tmp" '拷文件夹  
+ fs.CopyFile "\\freeway\f\dos\pcplus\pcplus.exe", "c:\" '拷文件  
+End Sub
+
+----------------------------------------------
+
+由 GetAttr 返回的值，是下面这些属性值的总和： 
+
+常数 值 描述  
+vbNormal 0 常规  
+vbReadOnly 1 只读  
+vbHidden 2 隐藏  
+vbSystem 4 系统文件  
+vbDirectory 16 目录或文件夹  
+vbArchive 32 上次备份以后，文件已经改变  
+vbalias 64 指定的文件名是别名。  
+
+GetAttr 返回的实际上是一个字节的数据： 
+高位 x111x111 低位（x表示未用，无须判断) 
+下面就把这些位分离出来: 
+dim D as long 
+D =GetAttr(...) 
+bit0-bit7(8位) 
+if (D And 1)=1 then bit0=true 
+if (D And 2)=2 then bit1=true 
+if (D And 4)=4 then bit2=true 
+bit3 未使用 
+if (D And 16)=16 then bit4=true 
+if (D And 32 )=32 then bit5=true 
+if (D And 64)=64 then bit6=true 
+bit7 未使用

@@ -1,0 +1,281 @@
+@charset "utf-8";
+html{
+	height:100%;
+}
+body{
+	font-family:"微软雅黑","宋体", Arial, Helvetica, sans-serif;
+	font-size:14px;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	height:100%;
+}
+img{
+	border:none;	
+}
+
+#container{
+	width:1280px;
+	height:100%;
+}
+
+#leftbar{
+	width:230px;
+	height:100%;
+	background:url(../images/manageMent/systemIcon/leftBarBg.gif) repeat-y;
+	float:left;
+	text-align:left;
+}
+#logo_pic{
+	margin-top:18px;
+}
+#logo_text{
+	margin-left:98px;
+}
+#logo_text img{
+	width:110px;
+	height:18px;
+}
+
+#hello_text{
+	margin-top:25px;	
+	padding-right:26px;
+	text-align:right;
+	color:#b4b4b4;
+}
+#hello_text span{
+	font-size:12px;
+	color:#b4b4b4;
+}
+#hello_text a{
+	font-size:12px;
+	color:#FFF;
+	text-decoration:none;
+}
+
+#items{
+	margin-top:72px;
+	text-align:right;
+}
+#items ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	text-align:right;
+}
+#items ul li{
+	height:28px;
+	text-align:right;
+	margin-bottom:10px;
+	padding-top:5px;
+	background:url(../images/manageMent/systemIcon/bg-menu-item-green.gif) 26px 0 no-repeat;
+}
+#items ul li a{
+	margin-right:25px;
+	color:#FFF;
+	font-size:14px;
+	text-decoration:none;
+}
+#items ul li:hover{
+	height:28px;
+	text-align:right;
+	margin-bottom:10px;
+	padding-top:5px;
+	background:url(../images/manageMent/systemIcon/bg-menu-item-current.gif) 26px 0 no-repeat;
+	cursor:pointer;
+}
+#items ul li:hover a{
+	margin-right:40px;
+	color:#000;
+	font-size:14px;
+	text-decoration:none;
+}
+.small_item{
+	background:none;	
+}
+
+#rightbar{
+	float:left;
+	margin:0px;
+	padding-left:28px;
+	width:1022px;
+	height:100%;
+	background:url(../images/manageMent/systemIcon/bg_item.jpg) repeat-y;
+}
+#rightbar #hello_text{
+	text-align:left;
+	clear:both;
+	margin-top:24px;
+}
+#rightbar #hello_text span{
+	color:#000;
+	font-size:26px;
+}
+#rightbar #fastSoftware{
+	margin-top:35px;
+}
+#rightbar #fastSoftware ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+#rightbar #fastSoftware ul li{
+	float:left;
+	width:108px;
+	height:93px;
+	background:url(../images/manageMent/systemIcon/fastsoft_bg.png) no-repeat;
+	padding-top:13px;
+	margin-right:15px;
+}
+#rightbar #fastSoftware ul li a{
+	color:#b4b4b4;
+	font-size:14px;
+	text-decoration:none;
+}
+.clear{
+	margin:0px;
+	padding:0px;
+	clear:both;
+}
+
+#rightbar #content{
+	clear:both;
+	margin-top:27px;
+}
+#rightbar #content #welcome{
+	float:left;	
+	margin-right:10px;
+}
+#rightbar #content .softTitle #b_left{
+	width:8px;
+	height:42px;
+	background:url(../images/manageMent/systemIcon/b_left.png) no-repeat;
+	float:left;
+}
+#rightbar #content #welcome .softTitle #b_middle{
+	text-align:left;
+	width:697px;
+	height:32px;
+	padding-left:8px;
+	padding-top:10px;
+	background:url(../images/manageMent/systemIcon/b_middle.png) repeat-x;
+	float:left;
+}
+#rightbar #content .softTitle #b_right{
+	width:8px;
+	height:42px;
+	background:url(../images/manageMent/systemIcon/b_right.png) no-repeat;
+	float:left;
+}
+
+#rightbar #content .softCont #b_left{
+	width:8px;
+	height:330px;
+	background:url(../images/manageMent/systemIcon/b_middle_left.jpg) repeat-y;
+	float:left;
+}
+#rightbar #content #welcome .softCont #b_middle{
+	text-align:left;
+	width:697px;
+	height:320px;
+	padding-left:8px;
+	padding-top:10px;
+	background:#FFF;
+	float:left;
+}
+#rightbar #content .softCont #b_right{
+	width:8px;
+	height:330px;
+	background:url(../images/manageMent/systemIcon/b_middle_right.jpg) repeat-y;
+	float:left;
+}
+
+#rightbar #content .softFooter #b_left{
+	width:8px;
+	height:8px;
+	background:url(../images/manageMent/systemIcon/b_footer_left.png) no-repeat;
+	float:left;
+}
+#rightbar #content #welcome .softFooter #b_middle{
+	text-align:left;
+	width:705px;
+	height:8px;
+	background:url(../images/manageMent/systemIcon/b_footer_middle.png) repeat-x;
+	float:left;
+}
+#rightbar #content .softFooter #b_right{
+	width:8px;
+	height:8px;
+	background:url(../images/manageMent/systemIcon/b_footer_right.png) no-repeat;
+	float:left;
+}
+
+#rightbar #content #remindBirthday{
+	float:left;	
+}
+#rightbar #content #remindBirthday .softCont #b_middle{
+	text-align:left;
+	width:200px;
+	height:320px;
+	padding-left:8px;
+	padding-right:8px;
+	padding-top:10px;
+	background:#FFF;
+	float:left;
+}
+#rightbar #content #remindBirthday .softTitle #b_middle{
+	text-align:left;
+	width:200px;
+	height:32px;
+	padding-left:8px;
+	padding-right:8px;
+	padding-top:10px;
+	background:url(../images/manageMent/systemIcon/b_middle.png) repeat-x;
+	float:left;
+}
+#rightbar #content #remindBirthday .softFooter #b_middle{
+	text-align:left;
+	width:216px;
+	height:8px;
+	background:url(../images/manageMent/systemIcon/b_footer_middle.png) repeat-x;
+	float:left;
+}
+
+#rightbar #copyright{
+	text-align:center;
+	margin-top:17px;
+}
+#rightbar #copyright span{
+	color:#000;
+	font-size:14px;
+	margin-right:100px;
+}
+
+#rightbar #remindBirthday img{
+	width:52px;
+	height:52px;
+	float:left;
+}
+#rightbar #remindBirthday #birthdayInfo{
+	float:left;
+	margin-left:6px;
+}
+#rightbar #remindBirthday #birthdayInfo span{
+	display:block;
+	color:#000;
+	font-size:14px;
+}
+#rightbar #remindBirthday #birthdayInfo span#birthName{
+	display:block;
+	color:#61a700;
+	font-size:14px;
+	font-weight:bold;
+}
+#rightbar #remindBirthday .birth{
+	margin-bottom:10px;
+}
+
+
+
+
+

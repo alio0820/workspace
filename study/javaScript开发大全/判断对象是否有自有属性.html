@@ -1,0 +1,37 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>判断对象是否有自有属性</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+<script type="text/javascript" language="javascript" >
+function workers()
+{
+   this.name="张三";
+   this.address="北京市";
+}
+function Engineers(_dept)
+{
+   this.dept=_dept;
+}
+//指定开发者的原型对象为员工，即继承员工构造函数中的属性
+Engineers.prototype=new workers();
+var myEngineer =new Engineers("开发部");
+for(pro in myEngineer)
+{
+   document.write("“myEngineer.",pro,"”的属性值为：",myEngineer[pro],"，");
+   if(myEngineer.hasOwnProperty(pro))
+   {
+       document.write("该属性是myEngineer对象自有属性。<br>");
+   }
+   else
+   {
+       document.write("该属性是继承而来的属性。<br>");
+   }
+}
+var str="myEngineer.hasOwnProperty('test')";
+document.write("“",str,"”的返回值为：",eval(str));
+</script>
+</head>
+<body>
+</body>
+</html>

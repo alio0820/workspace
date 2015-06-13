@@ -1,0 +1,1 @@
+document.write("由外部JavaScript文件输出的文字<br>");

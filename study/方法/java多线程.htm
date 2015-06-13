@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0047)http://zjcheng.iteye.com/ -->
+<html dir="ltr" xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><title>口乃心之门户 
+- ITeye技术网站</title>
+<meta name="description" content="">
+<meta name="keywords" content="zjcheng 口乃心之门户"><link rel="shortcut icon" type="image/x-icon" href="file:///images/favicon.ico"><link title="ITeye" rel="search" type="application/opensearchdescription+xml" href="file:///open_search.xml"><link title="口乃心之门户" rel="alternate" type="application/rss+xml" href="file:///rss"><link rel="stylesheet" type="text/css" href="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/blog.css" media="screen"><link rel="stylesheet" type="text/css" href="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/orange.css" media="screen">
+<script src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/application.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-535605-1']);
+  _gaq.push(['_setDomainName', 'iteye.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<meta name="GENERATOR" content="MSHTML 9.00.8112.16440"></head>
+<body>
+<div id="header">
+<div id="blog_site_nav"><a class="homepage" href="http://www.iteye.com/">首页</a><a href="http://www.iteye.com/news">资讯</a><a href="http://www.iteye.com/magazines">精华</a><a href="http://www.iteye.com/forums">论坛</a><a href="http://www.iteye.com/ask">问答</a><a href="http://www.iteye.com/blogs">博客</a><a href="http://www.iteye.com/blogs/subjects">专栏</a><a href="http://www.iteye.com/groups">群组</a><a id="msna" onclick="return false;" href="http://zjcheng.iteye.com/?page=2&amp;show_full=true#"><u>更多</u> 
+<small>▼</small></a>
+<div style="display: none;" class="quick_menu"><a href="http://www.iteye.com/job">招聘</a><a href="http://www.iteye.com/search">搜索</a></div></div>
+<div id="user_nav"><a class="welcome" title="登录" href="http://zjcheng.iteye.com/login">您还未登录 
+!</a><a href="http://zjcheng.iteye.com/login">登录</a><a class="nobg" href="http://zjcheng.iteye.com/signup">注册</a></div></div>
+<div id="page">
+<div id="branding" class="clearfix">
+<div id="blog_name">
+<h1><a href="http://zjcheng.iteye.com/">口乃心之门户</a></h1></div>
+<div id="fd"></div>
+<div id="blog_navbar">
+<ul>
+  <li class="blog_navbar_for"><a href="http://zjcheng.iteye.com/"><strong>博客</strong></a></li>
+  <li><a href="http://zjcheng.iteye.com/weibo">微博</a></li>
+  <li><a href="http://zjcheng.iteye.com/album">相册</a></li>
+  <li><a href="http://zjcheng.iteye.com/link">收藏</a></li>
+  <li><a href="http://zjcheng.iteye.com/blog/guest_book">留言</a></li>
+  <li><a href="http://zjcheng.iteye.com/blog/profile">关于我</a></li></ul>
+<div class="search">
+<form method="get" action="/blog/search"><input style="width: 110px; margin-left: 10px;" id="query" class="search_text" name="query" type="text"><input class="submit_search" type="submit"></form></div>
+<div id="fd"></div></div></div>
+<div id="content" class="clearfix">
+<div id="main">
+<div class="blog_main_title"><a style="margin-left: 10px; float: right;" href="http://zjcheng.iteye.com/rss" target="_blank"><img alt="Rss" src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/rss.png"></a><span>文章列表</span>
+<div id="fd"></div></div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/748511">JavaScript可否多线程? 
+深入理解JavaScript定时机制（转）</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92163">JavaScript</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/JavaScript">JavaScript</a><a href="http://www.iteye.com/blogs/tag/%E5%A4%9A%E7%BA%BF%E7%A8%8B">多线程</a><a href="http://www.iteye.com/blogs/tag/%E6%B5%8F%E8%A7%88%E5%99%A8">浏览器</a><a href="http://www.iteye.com/blogs/tag/%E8%84%9A%E6%9C%AC">脚本</a><a href="http://www.iteye.com/blogs/tag/Ajax">Ajax</a></div></div>
+<div class="blog_content">    
+JavaScript的setTimeout与setInterval是两个很容易欺骗别人感情的方法,因为我们开始常常以为调用了就会按既定的方式执行, 
+我想不少人都深有同感, 例如setTimeout( function(){ alert(’你好!’); } , 0); setInterval( 
+callbackFunction , 100);认为setTimeout中的问候方法会立即被执行,因为这并不是凭空而说,而是JavaScript 
+API文档明确定义第二个参数意义为隔多少毫秒后,回调方法就会被执行. 这里设成0毫秒,理所当然就立即被执行了.同理对setInterval的callbac 
+...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-08-27 10:34:11</li>
+  <li>浏览 150</li>
+  <li><a href="http://zjcheng.iteye.com/blog/748511#comments">评论(1)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/web">Web前端</a></li></ul></div></div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/748481">JavaScript的单线程性质以及定时器的工作原理（转）</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92163">JavaScript</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/JavaScript">JavaScript</a><a href="http://www.iteye.com/blogs/tag/%E5%B7%A5%E4%BD%9C">工作</a><a href="http://www.iteye.com/blogs/tag/%E6%B5%8F%E8%A7%88%E5%99%A8">浏览器</a><a href="http://www.iteye.com/blogs/tag/Ajax">Ajax</a><a href="http://www.iteye.com/blogs/tag/%E5%A4%9A%E7%BA%BF%E7%A8%8B">多线程</a></div></div>
+<div class="blog_content">    
+　最近在写JavaScript时遇到一些问题，就是当JavaScript多事件连续触发，JavaScript的单线程引擎是如何控制的。找了一些资料，觉得很有用，在此分享一下。
+ 　　虽然不是原创，但是觉得此文章对JavaScript程序员非常有用。翻译的不是十分精确，但希望对大家有用。 　　原文：John Resig　 
+http://ejohn.org/blog/how-javascript-timers-work/　　How JavaScript Timers Work 
+　　从基础的层面来讲，理解JavaScript的定时器是如何工作的是非常重要的。计时器的执行常常和我们的直观想象不同，那是 ...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-08-27 10:13:06</li>
+  <li>浏览 387</li>
+  <li><a href="http://zjcheng.iteye.com/blog/748481#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/web">Web前端</a></li></ul></div></div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/748441">深入研究Servlet线程安全性问题(转)</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92160">JavaEE</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/Servlet">Servlet</a><a href="http://www.iteye.com/blogs/tag/%E5%A4%9A%E7%BA%BF%E7%A8%8B">多线程</a><a href="http://www.iteye.com/blogs/tag/%E6%B5%8F%E8%A7%88%E5%99%A8">浏览器</a><a href="http://www.iteye.com/blogs/tag/Web">Web</a><a href="http://www.iteye.com/blogs/tag/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F">设计模式</a></div></div>
+<div class="blog_content">    摘 要：介绍了Servlet多线程机制，通过一个实例并结合Java 
+的内存模型说明引起Servlet线程不安全的原因，给出了保证Servlet线程安全的三种解决方案，并说明三种方案在实际开发中的取舍。 
+关键字：Servlet 
+线程安全 同步 Java内存模型 实例变量 
+ 
+　　Servlet/JSP技术和ASP、PHP等相比，由于其多线程运行而具有很高的执行效率。由于Servlet/JSP默认是以多线程模式执行的，
+所以，在编写代码时需要非常细致地考虑多线程的安全性问题。然而，很多人编写Servlet/JSP程序时并没有注意到多线程安全性的问题，这往往造成编
+写的程序在少量用户访问时没有任何问题，而在 
+...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-08-27 09:52:42</li>
+  <li>浏览 89</li>
+  <li><a href="http://zjcheng.iteye.com/blog/748441#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/architecture">企业架构</a></li></ul></div>
+</div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/718481">js创建元素笔记</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92163">JavaScript</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/J%23">J#</a></div></div>
+<div class="blog_content">     function showAreaData(weekId){							var currTR = 
+event.srcElement.parentNode;								if(hasData==true &amp;&amp; lastCell == 
+weekId){										for(var s = 1 ; s &lt;= n ; s ++){
+						currTR.parentNode.removeChild(currTR.nextSibling);					}					hasData = 
+false;									}else{ ...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-07-22 09:15:46</li>
+  <li>浏览 246</li>
+  <li><a href="http://zjcheng.iteye.com/blog/718481#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/web">Web前端</a></li></ul></div></div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/680157">八卦口诀</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92182">其它</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/%E5%85%AB%E5%8D%A6">八卦</a></div></div>
+<div class="blog_content">    乾三连 坤六断 震仰盂 艮覆碗 离中虚 坎中满 兑上缺 巽下断 一数坎来二数坤 三震四巽是中分
+ 五数中宫六乾是 七兑八艮九离门  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-05-31 17:54:30</li>
+  <li>浏览 125</li>
+  <li><a href="http://zjcheng.iteye.com/blog/680157#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/other">非技术</a></li></ul></div></div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/679940">Spring学习（1）</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92168">Spring</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/Spring">Spring</a><a href="http://www.iteye.com/blogs/tag/Bean">Bean</a><a href="http://www.iteye.com/blogs/tag/Java">Java</a><a href="http://www.iteye.com/blogs/tag/prototype">prototype</a><a href="http://www.iteye.com/blogs/tag/%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86">配置管理</a></div></div>
+<div class="blog_content">Spring2.5学习1.实例化bean的三种方法:（1） 构造器&lt;bean 
+id="personService" class="com.persia.PersonServiceBean"&gt;     
+&lt;constructor-arg index="0" value="构造注入的name" &gt;&lt;/constructor-arg&gt;     
+&lt;!-- 基本类型可以不写type --&gt;     &lt;constructor-arg index="1 ...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-05-31 14:50:53</li>
+  <li>浏览 106</li>
+  <li><a href="http://zjcheng.iteye.com/blog/679940#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/architecture">企业架构</a></li></ul></div>
+</div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/666215">在Myeclipse中配置DTD以支持自动补全</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92181">开发工具</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/Myeclipse">Myeclipse</a><a href="http://www.iteye.com/blogs/tag/Struts">Struts</a><a href="http://www.iteye.com/blogs/tag/XML">XML</a><a href="http://www.iteye.com/blogs/tag/Apache">Apache</a><a href="http://www.iteye.com/blogs/tag/IDEA">IDEA</a></div></div>
+<div class="blog_content">在使用Myeclipse进行开发的时候，经常会遇到写配置文件的时候没有自动提示功能，这是因为
+Myeclipse中还没有注册该XML的DTD，一般来说我们的XML文件都有个&lt;!DOCTYPE，这里就指明了我们要用的DTD。例如
+struts2的xml配置文件就有&lt;!DOCTYPE 
+struts PUBLIC    "-//Apache Software Foundation//DTD Struts 
+Configuration 
+2.0//EN"    "http://struts.apache.org/dtds/struts-2.0.dtd" ...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-05-14 10:50:39</li>
+  <li>浏览 595</li>
+  <li><a href="http://zjcheng.iteye.com/blog/666215#comments">评论(1)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/language">编程语言</a></li></ul></div>
+</div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/661177">大批量数据导出Excel产生内存溢出解决方案</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92159">JavaSE</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/Excel">Excel</a><a href="http://www.iteye.com/blogs/tag/J%23">J#</a><a href="http://www.iteye.com/blogs/tag/Apache">Apache</a></div></div>
+<div class="blog_content">    @SuppressWarnings("unchecked") public class 
+XlsMergeUtil {	private static Logger logger = 
+LoggerFactory.getLogger(XlsMergeUtil.class);	/**	 * 
+将多个Xls文件合并为一个，适用于只有一个sheet，并且格式相同的文档	 * 	 * @param inputs	 *            
+输入的Xls文件，第一个XLS文件必须给出足够sheet空间 例如，总共200000行数据，第一个文件至少3个空白sheet ...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-05-07 13:33:43</li>
+  <li>浏览 299</li>
+  <li><a href="http://zjcheng.iteye.com/blog/661177#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/architecture">企业架构</a></li></ul></div>
+</div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/660477">Oracle与Unix时间戳的转换</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92161">数据库</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/Unix">Unix</a><a href="http://www.iteye.com/blogs/tag/Oracle">Oracle</a><a href="http://www.iteye.com/blogs/tag/Linux">Linux</a><a href="http://www.iteye.com/blogs/tag/Java">Java</a></div></div>
+<div class="blog_content">思路就是明白unix/linux时间戳是按照从格林威治时间1970年1月1日期计算的一个秒数
+unix/linux 时间戳转换为标准时间格式（主要是注意时区问题）：select TO_DATE('19700101','yyyymmdd') + 
+1235728935/86400 +TO_NUMBER(SUBSTR(TZ_OFFSET(sessiontimezone),1,3))/24 from 
+dual，其中1235728935就是unix/linux时间戳，转换完之后就表示为 2009-2-27 18:02:15。 反过来也一样，还是要考虑时区
+select (to_date('2009-2- ...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-05-06 16:17:12</li>
+  <li>浏览 512</li>
+  <li><a href="http://zjcheng.iteye.com/blog/660477#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/database">数据库</a></li></ul></div>
+</div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/655205">Struts2 
+Annotation实现零配置</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92167">Struts2</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/JSP">JSP</a><a href="http://www.iteye.com/blogs/tag/%E6%A1%86%E6%9E%B6">框架</a><a href="http://www.iteye.com/blogs/tag/XML">XML</a><a href="http://www.iteye.com/blogs/tag/Apache">Apache</a><a href="http://www.iteye.com/blogs/tag/Web">Web</a></div></div>
+<div class="blog_content">    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.在Web.xml配置文件中添加
+&lt;filter&gt; &lt; filter-name&gt;struts2&lt;/filter-name&gt;         
+&lt;filter-class&gt;                    
+org.apache.struts2.dispatcher.FilterDispatcher          &lt;/filter-class&gt;    
+ &lt;init-param&gt;         &lt;param-name&gt;actionPackages&lt;/param-nam ...  
+</div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-04-28 15:01:21</li>
+  <li>浏览 432</li>
+  <li><a href="http://zjcheng.iteye.com/blog/655205#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/architecture">企业架构</a></li></ul></div>
+</div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/654269">过滤HTML</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92162">HTML+CSS</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/HTML">HTML</a><a href="http://www.iteye.com/blogs/tag/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">正则表达式</a><a href="http://www.iteye.com/blogs/tag/Java">Java</a></div></div>
+<div class="blog_content">    public static String html2Text(String inputString) 
+{		String htmlStr = inputString; // 含html标签的字符串		String textStr = "";
+		java.util.regex.Pattern p_script;		java.util.regex.Matcher m_script;
+		java.util.regex.Pattern p_style;		java.util.regex.Matcher m_style;
+		java.util.regex.P ...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-04-27 16:16:25</li>
+  <li>浏览 99</li>
+  <li><a href="http://zjcheng.iteye.com/blog/654269#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/web">Web前端</a></li></ul></div></div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/654139">Js trim函数</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92163">JavaScript</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/J%23">J#</a></div></div>
+<div class="blog_content">    function LTrim(str) { //空格,\r,\n,\t
+&nbsp;&nbsp;&nbsp; var whitespace = new String(" \t\n\r"); //生成一个新的字符串
+&nbsp;&nbsp;&nbsp; var s = new String(str); //判断如果目标字符串中从左第一个字符有上面四个之一则进入
+&nbsp;&nbsp;&nbsp; if (whitespace.indexOf(s.charAt(0)) != -1)&nbsp;&nbsp;&nbsp; 
+{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var j=0, i = s.length;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (j &lt; i &amp;&amp; 
+whitespace.indexOf ...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-04-27 14:30:32</li>
+  <li>浏览 224</li>
+  <li><a href="http://zjcheng.iteye.com/blog/654139#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/web">Web前端</a></li></ul></div></div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/653472">网页中嵌入Flash视频</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92182">其它</a></li> </ul>
+<div class="news_tag"><a href="http://www.iteye.com/blogs/tag/Flash">Flash</a><a href="http://www.iteye.com/blogs/tag/JavaScript">JavaScript</a><a href="http://www.iteye.com/blogs/tag/%E8%84%9A%E6%9C%AC">脚本</a></div></div>
+<div class="blog_content">var path = flash视频的路径;					var so = new 
+SWFObject(path, "JW", "600", "400", "7", "#336699");
+					so.addParam("allowfullscreen","true");
+					so.addParam('allowscriptaccess','always');
+					so.addParam('wmode','opaque');					so.a ...  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-04-26 17:27:33</li>
+  <li>浏览 323</li>
+  <li><a href="http://zjcheng.iteye.com/blog/653472#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/web">Web前端</a></li></ul></div></div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/653470">结果集去重</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92161">数据库</a></li> </ul>
+<div class="news_tag"></div></div>
+<div class="blog_content">delete 表名 where rowid in (select rowid from ( select 
+t.*,rank()over(partition by 分组列 order by 排序列) rn from 表名 t ) where rn=1&nbsp; )  
+</div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-04-26 17:25:45</li>
+  <li>浏览 280</li>
+  <li><a href="http://zjcheng.iteye.com/blog/653470#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/database">数据库</a></li></ul></div>
+</div>
+<div class="blog_main">
+<div class="blog_title">
+<h3><a href="http://zjcheng.iteye.com/blog/653465">排序序号</a></h3>
+<ul class="blog_categories"><strong>博客分类：</strong> 
+  <li><a href="http://zjcheng.iteye.com/category/92161">数据库</a></li> </ul>
+<div class="news_tag"></div></div>
+<div class="blog_content">row_number() over(order by 列 asc) rn  </div>
+<div class="blog_bottom">
+<ul>
+  <li class="date">2010-04-26 17:23:08</li>
+  <li>浏览 54</li>
+  <li><a href="http://zjcheng.iteye.com/blog/653465#comments">评论(0)</a></li>
+  <li class="last">分类:<a href="http://www.iteye.com/blogs/category/database">数据库</a></li></ul></div>
+</div>
+<div class="pagination"><a class="prev_page" href="http://zjcheng.iteye.com/?page=1&amp;show_full=true" rel="prev start">« 上一页</a> <a href="http://zjcheng.iteye.com/?page=1&amp;show_full=true" rel="prev start">1</a> <span class="current">2</span> <a href="http://zjcheng.iteye.com/?page=3&amp;show_full=true" rel="next">3</a> <a href="http://zjcheng.iteye.com/?page=4&amp;show_full=true">4</a> <a class="next_page" href="http://zjcheng.iteye.com/?page=3&amp;show_full=true" rel="next">下一页 
+»</a></div></div>
+<div id="local">
+<div class="local_top"></div>
+<div id="blog_owner">
+<div id="blog_owner_logo"><a href="http://zjcheng.iteye.com/"><img class="logo" title="zjcheng的博客: 口乃心之门户" alt="zjcheng的博客" src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/8edc0b98-c981-3a2f-a4c8-8166c4d3b26f.jpg"></a></div>
+<div id="blog_owner_name">zjcheng</div></div>
+<div id="blog_actions">
+<ul>
+  <li>浏览: 19137 次</li>
+  <li>性别: <img title="男" alt="Icon_minigender_1" src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/icon_minigender_1.gif"></li>
+  <li>来自: 北京</li>
+  <li><img src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/offline.gif"></li></ul></div>
+<div id="user_visits" class="clearfix">
+<h5>最近访客 <span style="padding-left: 30px; font-size: 12px; font-weight: normal;"><a href="http://zjcheng.iteye.com/blog/user_visits">更多访客&gt;&gt;</a></span></h5>
+<div class="user_visit">
+<div class="logo"><a href="http://angelcold.iteye.com/" target="_blank"><img class="logo" title="Angelcold的博客: " alt="Angelcold的博客" src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/user-logo-thumb.gif"></a></div>
+<div class="left"><a href="http://angelcold.iteye.com/" target="_blank">Angelcold</a></div></div>
+<div class="user_visit">
+<div class="logo"><a href="http://zengbin163-gmail-com.iteye.com/" target="_blank"><img class="logo" title="挪威的幽灵的博客: 蒲公英，飘吧！" alt="挪威的幽灵的博客" src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/4162279e-2866-3ae5-aeaa-1f012130a006-thumb.jpg"></a></div>
+<div class="left"><a href="http://zengbin163-gmail-com.iteye.com/" target="_blank">挪威的幽灵</a></div></div>
+<div class="user_visit">
+<div class="logo"><a href="http://sasalaolao.iteye.com/" target="_blank"><img class="logo" title="sasalaolao的博客: " alt="sasalaolao的博客" src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/user-logo-thumb.gif"></a></div>
+<div class="left"><a href="http://sasalaolao.iteye.com/" target="_blank">sasalaolao</a></div></div>
+<div class="user_visit">
+<div class="logo"><a href="http://linjisong.iteye.com/" target="_blank"><img class="logo" title="linjisong的博客: " alt="linjisong的博客" src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/user-logo-thumb.gif"></a></div>
+<div class="left"><a href="http://linjisong.iteye.com/" target="_blank">linjisong</a></div></div></div>
+<div id="blog_menu">
+<h5>文章分类</h5>
+<ul>
+  <li><a href="http://zjcheng.iteye.com/">全部博客 (57)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92159">JavaSE (7)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92160">JavaEE (5)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92161">数据库 (9)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92162">HTML+CSS (4)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92163">JavaScript (5)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92164">Linux&amp;Unix 
+  (2)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92166">Struts1.x (0)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92167">Struts2 (3)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92168">Spring (2)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92169">Hibernate (1)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92170">Ibatis (0)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92171">JPA (1)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92172">Tomcat (2)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92173">Jboss (0)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92174">ExtJs (0)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92176">Ajax (1)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92177">JQuery (2)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92178">Birt (1)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92179">SOA (1)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92180">非技术 (0)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92181">开发工具 (2)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92182">其它 (4)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92203">Web作图 (2)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/92204">Windows (2)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/102002">BI (1)</a></li>
+  <li><a href="http://zjcheng.iteye.com/category/190287">Powerdesigner 
+  (1)</a></li></ul></div>
+<div id="month_blogs">
+<h5>社区版块</h5>
+<ul>
+  <li><a href="http://zjcheng.iteye.com/blog/news">我的资讯</a> (0)</li>
+  <li><a href="http://zjcheng.iteye.com/blog/post">我的论坛</a> (91)                
+  </li>
+  <li><a href="http://zjcheng.iteye.com/blog/solution">我解决的问题</a> 
+(0)</li></ul></div>
+<div id="month_blogs">
+<h5>存档分类</h5>
+<ul>
+  <li><a href="http://zjcheng.iteye.com/blog/monthblog/2011-11">2011-11</a> 
+  (5)</li>
+  <li><a href="http://zjcheng.iteye.com/blog/monthblog/2011-01">2011-01</a> 
+  (2)</li>
+  <li><a href="http://zjcheng.iteye.com/blog/monthblog/2010-11">2010-11</a> 
+  (5)</li>
+  <li><a href="http://zjcheng.iteye.com/blog/monthblog_more">更多存档...</a></li></ul></div>
+<div id="guest_books">
+<h5>最新评论</h5>
+<ul>
+  <li><a href="http://wupitt555.iteye.com/" target="_blank">wupitt</a>：          
+           恩。。看到这句"在JavaScript引擎运行脚本期 ...<br><a href="http://zjcheng.iteye.com/blog/748511#bc2105690">JavaScript可否多线程? 
+  深入理解JavaScript定时机制（转）</a></li>
+  <li><a href="http://skdss.iteye.com/" target="_blank">skdss</a>：               
+       ...<br><a href="http://zjcheng.iteye.com/blog/666215#bc1682414">在Myeclipse中配置DTD以支持自动补全</a></li>
+  <li><a href="http://zjcheng.iteye.com/" target="_blank">zjcheng</a>：           
+          顺便把题目改下了，原来题目是“利用Java的反射和JPA写的‘ ...<br><a href="http://zjcheng.iteye.com/blog/591929#bc1367613">利用Java的反射和JPA写的工具类 
+  </a></li>
+  <li><a href="http://zjcheng.iteye.com/" target="_blank">zjcheng</a>：           
+          4楼讲的对，谢谢你的指点。我也是在帮人做个小程序的时候，为了方 ...<br><a href="http://zjcheng.iteye.com/blog/591929#bc1367602">利用Java的反射和JPA写的工具类 
+  </a></li>
+  <li><a href="http://ynstudio.iteye.com/" target="_blank">ynstudio</a>：         
+            没这个道理，你让别人帮你看看原因。<br><a href="http://zjcheng.iteye.com/blog/587239#bc1367478">struts2中的一个细节</a></li></ul></div>
+<div class="local_bottom"></div></div></div>
+<div id="footer" class="clearfix">
+<div id="copyright">
+<hr>
+声明：ITeye文章版权属于作者，受法律保护。没有作者书面许可不得转载。若作者同意转载，必须以超链接形式标明文章原始出处和作者。<br>© 2003-2011 
+ITeye.com.   All rights reserved.  [ 京ICP证110151号  京公网安备110105010620 ]        
+</div></div></div>
+<script type="text/javascript">
+  document.write("<img src='http://stat.iteye.com/?url="+ encodeURIComponent(document.location.href) + "&referrer=" + encodeURIComponent(document.referrer) + "&user_id=' width='0' height='0' />");
+</script><img src="java%E5%A4%9A%E7%BA%BF%E7%A8%8B_files/a.gif" height="0" width="0">
+
+</body></html>

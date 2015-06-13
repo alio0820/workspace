@@ -1,0 +1,17 @@
+function Monitor()
+{
+    this.price=1800;
+    this.factory="远志公司";
+    this.type="C2";
+    this.size=17;
+}
+
+使用索引方式定义属性值，（带参数的构造函数）
+function Monitor(_price,_factory,_type,_size)
+{
+    this[0]=_price;
+    this[1]=_factory;
+    this[2]=_type;
+    this[3]=_size;
+}
+输出时：document.write(Monitor[1]);

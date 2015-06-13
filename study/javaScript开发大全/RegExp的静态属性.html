@@ -1,0 +1,30 @@
+<!-- saved from url=(0014)about:internet -->
+
+<html>
+	<head>
+		<title>RegExp的静态属性</title>
+        <script>
+           var str= "Define a Class with a class definition.";
+           var myRegExp = /defin(\w+)/gi;
+           document.write("原字符串为：",str,"<br>");
+           document.write("正则表达式为：",myRegExp.source,"<br><br>");
+           var i =0;
+           while(myRegExp.test(str))
+           {
+               i++;
+               document.write("第",i,"次成功匹配的情况：");
+               document.write("匹配的结束位置为：",myRegExp.lastIndex,"<br>");
+               document.write("用于匹配的字符串为：",RegExp.input,"<br>");
+               document.write("匹配成功的字符串为：",RegExp.lastMatch,"<br>");
+               document.write("匹配成功的分组为：",RegExp.lastParen,"<br>");
+               document.write("匹配成功的子字符串的左侧子字符串为：",RegExp.leftContext,"<br>");
+               document.write("是否指定m标志：",myRegExp.multiline,"<br>");
+               document.write("匹配成功的子字符串的右侧子字符串为：",RegExp.rightContext,"<br>");
+               document.write("<br>");
+           }
+           //为什么要去掉my啊，
+       </script>
+	</head>
+	<body>
+	</body>
+</html>

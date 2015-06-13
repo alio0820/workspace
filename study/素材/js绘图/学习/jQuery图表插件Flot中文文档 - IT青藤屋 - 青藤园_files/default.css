@@ -1,0 +1,285 @@
+BODY {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: white; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: verdana, helvetica, arial, sans-serif; COLOR: #585858; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+HTML > BODY {
+	FONT-SIZE: 12px
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+CITE {
+	BORDER-BOTTOM: #efefef 1px solid; BORDER-LEFT: #efefef 1px solid; PADDING-LEFT: 28px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/2em "Lucida Sans Unicode",serif; BACKGROUND: url(quote.gif) no-repeat; COLOR: #666; BORDER-TOP: #efefef 1px solid; BORDER-RIGHT: #efefef 1px solid
+}
+BLOCKQUOTE {
+	BORDER-BOTTOM: #efefef 1px solid; BORDER-LEFT: #efefef 1px solid; PADDING-LEFT: 28px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/2em "Lucida Sans Unicode",serif; BACKGROUND: url(quote.gif) no-repeat; COLOR: #666; BORDER-TOP: #efefef 1px solid; BORDER-RIGHT: #efefef 1px solid
+}
+ACRONYM {
+	BORDER-BOTTOM: gray 1px dotted; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CURSOR: help; PADDING-TOP: 0px
+}
+.titleTip {
+	BORDER-BOTTOM: gray 1px dotted; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CURSOR: help; PADDING-TOP: 0px
+}
+ACRONYM:hover {
+	BORDER-BOTTOM: rgb(70,130,180) 1px solid
+}
+.titleTip:hover {
+	BORDER-BOTTOM: rgb(70,130,180) 1px solid
+}
+.doNotDisplay {
+	DISPLAY: none
+}
+.smallCaps {
+	FONT-VARIANT: small-caps; FONT-SIZE: 110%
+}
+.clear {
+	HEIGHT: 0px; CLEAR: both; FONT-SIZE: 0px; OVERFLOW: hidden
+}
+.noIndent {
+	TEXT-INDENT: 0px !important
+}
+.input_text {
+	BORDER-BOTTOM: #e0e0e0 1px solid; BORDER-LEFT: #e0e0e0 1px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #fafafa; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #e0e0e0 1px solid; BORDER-RIGHT: #e0e0e0 1px solid; PADDING-TOP: 3px
+}
+#header {
+	BACKGROUND: url(top_bg.gif)
+}
+.headerTitle {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: transparent; MARGIN: 0px 20px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: garamond, "times new roman", times, roman, serif; FONT-SIZE: 250%; PADDING-TOP: 10px
+}
+.headerTitle A {
+	COLOR: #af8847; TEXT-DECORATION: none
+}
+.subHeader {
+	MARGIN: 0px; OVERFLOW: hidden
+}
+.subHeader .dateline {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; MARGIN: 0px 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline; FLOAT: right; PADDING-TOP: 0px
+}
+.subHeader .navigation {
+	LIST-STYLE-POSITION: outside; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 0px
+}
+.subHeaderLine {
+	POSITION: relative; BACKGROUND-COLOR: rgb(70,130,180); HEIGHT: 10px
+}
+.subHeader .navigation LI {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 2em; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline; FONT-SIZE: 13px; PADDING-TOP: 0px
+}
+.subHeader A {
+	BACKGROUND-COLOR: transparent; COLOR: rgb(175,175,175); FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.subHeader A:hover {
+	BACKGROUND-COLOR: transparent; COLOR: steelblue; TEXT-DECORATION: none
+}
+.subHeader .navigation .tab {
+	BORDER-LEFT: rgb(231,231,231) 1px solid; PADDING-BOTTOM: 1ex; BACKGROUND-COLOR: rgb(248,248,248); MARGIN: 0px; PADDING-LEFT: 1.25em; PADDING-RIGHT: 1.25em; COLOR: rgb(175,175,175); BORDER-TOP: rgb(231,231,231) 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: rgb(97,97,97) 1px solid; TEXT-DECORATION: none; PADDING-TOP: 0.5ex
+}
+.subHeader .navigation A.tab:hover {
+	POSITION: relative; BORDER-LEFT: rgb(97,97,97) 1px solid; PADDING-BOTTOM: 0.8ex; BACKGROUND-COLOR: rgb(248,248,248); COLOR: steelblue; BORDER-TOP: rgb(97,97,97) 1px solid; BORDER-RIGHT: rgb(231,231,231) 1px solid; TEXT-DECORATION: none; TOP: 1px; LEFT: 1px
+}
+.subHeader .navigation .highlighted {
+	BACKGROUND-COLOR: steelblue; BORDER-TOP-COLOR: steelblue; COLOR: white; BORDER-RIGHT-COLOR: steelblue; BORDER-LEFT-COLOR: steelblue
+}
+.subHeader .navigation .highlighted A {
+	COLOR: white
+}
+.main-copy {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 0px; MARGIN: 2em 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(sep.gif) repeat-y; PADDING-TOP: 0px
+}
+.main-copy P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 0px 1.2em; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.main-copy Q {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.5em; BACKGROUND-COLOR: transparent; TEXT-INDENT: -1ex; MARGIN: 0.3em 0px 0.8em 1ex; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; COLOR: rgb(225,225,225); FONT-SIZE: 200%; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.main-copy Q.centred {
+	TEXT-ALIGN: center; MARGIN-LEFT: 0px
+}
+Q:before {
+	CONTENT: ""
+}
+Q:after {
+	CONTENT: ""
+}
+.main-copy A {
+	BACKGROUND-COLOR: transparent; COLOR: #585858; TEXT-DECORATION: none
+}
+.main-copy A:hover {
+	BACKGROUND-COLOR: transparent; COLOR: #dc8e38; TEXT-DECORATION: none
+}
+.c_box {
+	MARGIN: 0px 0px 25px
+}
+.c_box P {
+	MARGIN: 5px 0px
+}
+.c_box H1 {
+	BORDER-BOTTOM: #cccccc 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; FONT-FAMILY: verdana,Arial,Helvetica,sans-serif; MARGIN-BOTTOM: 8px; FONT-SIZE: 110%; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.c_box .c_b_content {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 0px
+}
+.c_box UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.c_box UL LI {
+	LIST-STYLE: none none outside; PADDING-BOTTOM: 4px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 4px
+}
+.c_box .search .styled {
+	BORDER-BOTTOM: #e5e5e5 2px solid; BORDER-LEFT: #e5e5e5 2px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 3px; WIDTH: 140px; PADDING-RIGHT: 3px; BORDER-TOP: #e5e5e5 2px solid; BORDER-RIGHT: #e5e5e5 2px solid; PADDING-TOP: 2px
+}
+.c_box .search .button {
+	BORDER-BOTTOM: #aaaaaa 1px solid; BORDER-LEFT: #aaaaaa 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; MARGIN-LEFT: 5px; BORDER-TOP: #aaaaaa 1px solid; BORDER-RIGHT: #aaaaaa 1px solid; PADDING-TOP: 2px
+}
+.c_box .rss {
+	FLOAT: right
+}
+.left_bar {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; WIDTH: 260px; PADDING-RIGHT: 20px; FLOAT: left; PADDING-TOP: 0px
+}
+.main_content {
+	PADDING-RIGHT: 20px; MARGIN-LEFT: 320px; PADDING-TOP: 1px
+}
+#artical_list H1 {
+	MARGIN: 8px 0px; FONT-SIZE: 18px
+}
+#artical_list .item .keyword {
+	COLOR: red
+}
+#artical_list H1 A {
+	COLOR: #6cbd45
+}
+#artical_list .info {
+	MARGIN-BOTTOM: 5px
+}
+#artical_list .info A {
+	COLOR: #cc6600
+}
+#artical_list P {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 1.8em; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.artical_text {
+	PADDING-BOTTOM: 50px
+}
+.artical_text .descr {
+	MARGIN-BOTTOM: 6px; COLOR: #c60; FONT-SIZE: 1.1em
+}
+.artical_text LI {
+	MARGIN-LEFT: 18px; LIST-STYLE-IMAGE: url(li.gif)
+}
+.artical_text A {
+	COLOR: #dc8e38
+}
+.list_tag {
+	FONT-SIZE: 1.1em
+}
+.artical_text {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 15px; PADDING-TOP: 0px
+}
+.artical_text H1 {
+	MARGIN: 8px 0px; FONT-SIZE: 18px
+}
+.artical_text H1 A:link {
+	COLOR: #6cbd45; TEXT-DECORATION: none
+}
+.artical_text H1 A:visited {
+	COLOR: #6cbd45; TEXT-DECORATION: none
+}
+.artical_text H1 A:hover {
+	COLOR: #6cbd45; TEXT-DECORATION: none
+}
+.artical_text .long_text {
+	TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 1.8em; FONT-SIZE: 13px
+}
+.artical_text .long_text P {
+	PADDING-BOTTOM: 5px; MARGIN: 5px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.artical_text IMG {
+	BORDER-RIGHT-WIDTH: 0px; MAX-WIDTH: 98%; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.artical_text .tag_list {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 10px
+}
+.artical_text .descr {
+	BORDER-BOTTOM: #f0f0f0 1px solid; BORDER-LEFT: #39f 6px solid; PADDING-BOTTOM: 8px; MARGIN: 12px 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 1.1em/1.8em "Lucida Sans Unicode",serif; BACKGROUND: url(bgcode.gif); COLOR: #555; BORDER-TOP: #f0f0f0 1px solid; BORDER-RIGHT: #f0f0f0 1px solid; PADDING-TOP: 8px
+}
+#post_head {
+	MARGIN-BOTTOM: 5px
+}
+#post_head SPAN.count {
+	PADDING-RIGHT: 150px; FLOAT: right
+}
+#post_head #num {
+	FONT-STYLE: normal
+}
+#post_head SPAN.post_title {
+	FONT-WEIGHT: bold
+}
+#NewCommentForm .c_block {
+	MARGIN: 5px 0px
+}
+#NewCommentForm #VerfifyCodeImg {
+	HEIGHT: 28px; MARGIN-LEFT: 47px; VERTICAL-ALIGN: bottom; CURSOR: pointer
+}
+#ReContainer {
+	WIDTH: 700px
+}
+#ReContainer .re_user {
+	BORDER-BOTTOM: #eee 1px solid; BORDER-LEFT: #eee 1px solid; PADDING-BOTTOM: 4px; MARGIN: 2px 0px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: #eee 1px solid; BORDER-RIGHT: #eee 1px solid; PADDING-TOP: 4px
+}
+#ReContainer .a_cancel {
+	FLOAT: right
+}
+#PosterName {
+	PADDING-LEFT: 22px; BACKGROUND: url(comment.png) no-repeat 2px -36px
+}
+#PosterEmail {
+	PADDING-LEFT: 22px; BACKGROUND: url(comment.png) no-repeat 2px -18px
+}
+#PosterWebsite {
+	PADDING-LEFT: 22px; BACKGROUND: url(comment.png) no-repeat 2px 2px
+}
+#BtnPost {
+	BORDER-BOTTOM: #222222 1px solid; BORDER-LEFT: #222222 1px solid; MARGIN-TOP: 5px; BORDER-TOP: #222222 1px solid; BORDER-RIGHT: #222222 1px solid
+}
+#commentlist {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#commentlist LI {
+	LIST-STYLE: none none outside; MARGIN: 10px 0px; FONT: 12px/22px Trebuchet MS
+}
+#commentlist P {
+	MARGIN: 0px
+}
+#commentlist P.user {
+	BORDER-BOTTOM: #dddddd 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 3px
+}
+#commentlist P.user .fb_op {
+	FLOAT: right
+}
+#commentlist DIV.text {
+	TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; PADDING-BOTTOM: 10px; LINE-HEIGHT: 22px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 10px
+}
+#footer {
+	PADDING-BOTTOM: 1.5ex; BACKGROUND-COLOR: rgb(250,250,250); MARGIN: 0px; PADDING-LEFT: 4mm; PADDING-RIGHT: 5mm; COLOR: rgb(175,175,175); CLEAR: both; PADDING-TOP: 0.25em
+}
+BODY > #footer {
+	PADDING-TOP: 0.5em
+}
+#footer {
+	BORDER-TOP: #ccc 1px solid
+}
+#footer .text {
+	TEXT-ALIGN: center; LINE-HEIGHT: 1.8em
+}
+#footer A {
+	BACKGROUND-COLOR: transparent; COLOR: rgb(175,175,175); TEXT-DECORATION: underline
+}
+#footer A:hover {
+	BACKGROUND-COLOR: transparent; COLOR: steelblue; TEXT-DECORATION: none
+}

@@ -1,0 +1,61 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+   <head>
+       <title>精确读取Cookie值</title>
+       <script>
+       function setCookie()
+       {
+            var userName=myForm.myName.value;
+            var userPassword=myForm.myPassword.value;
+            document.cookie="cookieUserName="+userName;
+            document.cookie="cookieUserPassword="+userPassword;
+       }
+       function getCookie(cookieName)
+       {
+            var cookieMessage= document.cookie;
+            var cookieValue="";
+            if(cookieName=="myName")
+            {
+                 cookieValue=returnCookieValue(cookieMessage,"cookieUserName");
+                 alert("姓名为："+cookieValue);
+            }
+            else if(cookieName="myPassword")
+            {
+                 cookieValue=returnCookieValue(cookieMessage,"cookieUserPassword");
+                 alert("密码为："+cookieValue);
+            }
+       }
+       function returnCookieValue(cookieValue,cookieName)
+       {
+            var returnCookieValue="";
+            var cookies = cookieValue.split("; ");//引号里的空格至关重要
+            var cookiesValue = new Array();
+            
+                 for(var i =0;i<cookies.length;i++)
+                 {
+                     var tempArr = cookies[i].split("=");
+                     cookiesValue[i] = tempArr;
+                 }
+                 for(var i=0;i<cookiesValue.length;i++)
+                 {
+                     if(cookiesValue[i][0]== cookieName)
+                     {
+                         returnCookieValue = cookiesValue[i][1];
+                         break;    
+                     }
+                 }           
+            return returnCookieValue;
+       }
+       
+       </script>
+   </head>
+   <body>
+         <form name="myForm">
+              姓名：<input type="text" name="myName"><br>
+              密码：<input type="password" name="myPassword"><br>
+              <input type="button" value="设置cookie" onclick="setCookie()">
+              <input type="button" value="读取cookie中的姓名" onclick="getCookie('myName')">
+              <input type="button" value="读取cookie中的密码" onclick="getCookie('myPassword')">
+         </form>
+   </body>
+</html>

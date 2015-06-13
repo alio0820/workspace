@@ -1,0 +1,520 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0037)http://www.mscto.com/web/0370201.html -->
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn"><HEAD><TITLE>一个js绘图研究实例 - 软件开发网 - 提供编程开发资料的编程网</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=description 
+content="点的实现与速度测试 Ps：本文只是一菜鸟画鸭之笔，有不对之处欢迎高手们指证! 一、背景知识： 通过搜索，网上关于web绘图的实现大致有以下三类： 1 插件实现 优点：功能丰富。护展性好，速度快。 缺点：首次访问必须下载插件。 2 flash实现 优点：首次访问不需要下载插">
+<META name=keywords content=实例 计时 时间 color size 测试 实现 一个 绘图 研究><LINK 
+rel=stylesheet type=text/css 
+href="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/main.css" 
+media=screen><LINK rel=stylesheet type=text/css 
+href="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/css.css" 
+media=screen><LINK rel=stylesheet type=text/css 
+href="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/home.css" media=screen>
+<SCRIPT type=text/javascript 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/external.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src=""></SCRIPT>
+
+<SCRIPT language=javascript 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/prototype.js"></SCRIPT>
+
+<SCRIPT language=javascript 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/moo.fx.js"></SCRIPT>
+
+<SCRIPT language=javascript>
+function wo_ding(num_id)
+{
+url = "/plus/wo_ding.php?aid="+num_id+"&post=vote&m=" + Math.random();
+new ajax(url, {method: 'get', onComplete:return_review});
+}
+function return_review(ajax)
+{
+str_error_num = ajax.responseText
+if(str_error_num==0)
+{
+  alert("好像你刚拍过了哦，发个新文章让其他人拍到首页吧！");
+}
+else
+{
+  alert("感谢您的投票,谢谢...^_^你也可以发布自己的文章让其他人拍到首页哦！")
+  $("s_ding").innerHTML = str_error_num;
+}
+}
+</SCRIPT>
+
+<META name=GENERATOR content="MSHTML 9.00.8112.16440"></HEAD>
+<BODY><LINK rel=stylesheet type=text/css 
+href="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/style47.css" media=screen>
+<SCRIPT type=text/javascript 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/script.js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/JSDateFunction.js"></SCRIPT>
+
+<SCRIPT language=javascript type=text/javascript 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/killErrors.js"></SCRIPT>
+
+<DIV id=hdtp>
+<DIV id=tpad><!--AdForward Begin:--><!--AdForward End--></DIV></DIV>
+<DIV id=pfc>
+<UL>
+  <LI class=adtxt>软件开发的家园,编程爱好者的天地. </LI>
+  <LI class=datefull>帮助程序员及编程开发者提高技术的编程网. </LI>
+  <LI class=addfav><IMG 
+  src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/hot1.gif"> <A 
+  onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.mscto.com');return false;" 
+  href="http://www.mscto.com/web/0370201.html#">设为首页</A> | <A 
+  onclick="bookmarkit();return false;" 
+  href="http://www.mscto.com/web/0370201.html#">加入收藏夹</A> 
+  <DIV class=cl></DIV></LI></UL></DIV>
+<DIV id=sr>
+<DIV id=lg></DIV>
+<DIV class=lfb></DIV>
+<DIV class=ccon>
+<UL id=srtab>
+  <LI id=stab0 class=cur onclick=setsrch(this)><A title=搜索网页 
+  href="javascript:void(0);" target=_self>网页</A></LI>
+  <LI id=stab1 onclick=setsrch(this)><A title=搜索软件 href="javascript:void(0);" 
+  target=_self>软件</A></LI>
+  <LI id=stab2 onclick=setsrch(this)><A class=last title=搜索源码 
+  href="javascript:void(0);" target=_self>源码</A></LI></UL>
+<DIV id=stablive><FONT color=#ffffff><B>百度搜索</B></FONT></DIV>
+<FORM id=srchfrm class=simple6 method=get name=search_form 
+action=http://www.baidu.com/baidu target=_blank><LABEL for=f1>搜索：</LABEL><INPUT 
+accessKey=S id=f1 title=选择搜索类别 onclick=this.select() name=word maxLength=250 
+size=75> <INPUT name=tn value=bdwxl_111094ahm_pg type=hidden></INPUT> <INPUT 
+name=ct type=hidden> <INPUT name=lm type=hidden> <INPUT name=z type=hidden> 
+<INPUT name=rn type=hidden><BUTTON type=submit></BUTTON></FORM>
+<SCRIPT type=text/javascript 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/rand.js"></SCRIPT>
+
+<DIV class=cl></DIV>
+<UL id=kwl class=twhi></UL></DIV>
+<DIV class=lfr></DIV>
+<DIV style="WIDTH: 80px" id=messenger_logo>
+<DIV id=messengerlogo><A href="http://www.mscto.com/"></A></DIV></DIV>
+<DIV id=messenger_logo>
+<DIV id=messengerlogo><A href="http://www.mscto.com/plus/rssmap.html"><IMG 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/messenger2.jpg"></A></DIV></DIV></DIV>
+<DIV class=row>
+<UL id=ww>
+  <LI class=textc>【软件开发网】为您服务! </LI>
+  <LI class=wea>
+  <SCRIPT language=JavaScript 
+  src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/time.js"></SCRIPT>
+  </LI>
+  <LI class=wad><A href="http://www.mscto.com/" rel=external>本站首页</A> | <A 
+  href="http://www.mscto.com/plus/rssmap.html" rel=external>信息订阅</A> | <A 
+  title=广告服务 href="http://www.mscto.com/web/adver.html">广告服务</A> | <A title=技术论坛 
+  href="javascript:alert('软件开发QQ群:389322【已满】\n 软件开发二群:8088288');">技术论坛</A>
+  <DIV class=cl></DIV></LI></UL>
+<DIV>
+<DIV id=mymenu>
+<DIV class=conm><B><FONT color=#ffffff><A class=STYLE5 title=软件开发网首页 
+href="http://www.mscto.com/">首页</A> <FONT color=#000000>|</FONT> <A 
+title=Java软件开发 href="http://www.mscto.com/Java/index.html">Java</A> <FONT 
+color=#000000>|</FONT> <A title=Asp.Net软件开发 
+href="http://www.mscto.com/Asp_Net/index.html">Asp.Net</A> <FONT 
+color=#000000>|</FONT> <A title=C/C++/VC软件开发 
+href="http://www.mscto.com/cppvc/index.html">C/C++/VC</A> <FONT 
+color=#000000>|</FONT> <A title=Delphi软件开发 
+href="http://www.mscto.com/Delphi/index.html">Delphi</A> <FONT 
+color=#000000>|</FONT> <A title=数据库软件开发 
+href="http://www.mscto.com/data/index.html">数据库</A> <FONT color=#000000>|</FONT> 
+<A title=WEB开发软件开发 href="http://www.mscto.com/web/index.html">WEB开发</A> <FONT 
+color=#000000>|</FONT> <A title=嵌入式软件开发 
+href="http://www.mscto.com/embedded/index.html">嵌入式</A> <FONT 
+color=#000000>|</FONT> <A title=软件工程软件开发 
+href="http://www.mscto.com/softee/index.html">软件工程</A> <FONT 
+color=#000000>|</FONT> <A title=汇编语言软件开发 
+href="http://www.mscto.com/huibian/index.html">汇编语言</A> <FONT 
+color=#000000>|</FONT> <A title=软件测试软件开发 
+href="http://www.mscto.com/testing/index.html">软件测试</A> <FONT 
+color=#000000>|</FONT> <A title=操作系统软件开发 
+href="http://www.mscto.com/system/index.html">操作系统</A> <FONT 
+color=#000000>|</FONT> <A title=面试题软件开发 
+href="http://www.mscto.com/jobinfo/index.html">面试题</A> <FONT 
+color=#000000>|</FONT> <A title=其他软件开发 
+href="http://www.mscto.com/qitayuyan/index.html">其他</A> <FONT 
+color=#000000>|</FONT> </FONT></B></DIV></DIV></DIV></DIV>
+<DIV id=containertow>
+<DIV id=content>
+<DIV id=navbox><SPAN class=bold></SPAN>您现在正在浏览：<!--empire.url--><A 
+href="http://www.mscto.com/">主页</A>&gt;<A 
+href="http://www.mscto.com/web/index.html">WEB开发</A>&gt;<!--empire.url--></DIV>
+<DIV id=mainleftlist>
+<DIV class=newslist>
+<CENTER><SPAN id=alimama_text></SPAN><SPAN id=span_alimama_text>
+<SCRIPT type=text/javascript src=""></SCRIPT>
+<!--GGADSENSE--></SPAN>
+<SCRIPT>alimama_text.innerHTML=span_alimama_text.innerHTML;span_alimama_text.innerHTML="";</SCRIPT>
+</CENTER></DIV></DIV>
+<DIV id=mainleftlist>
+<DIV class=newslist>
+<DIV id=entrytitle>
+<H1>一个js绘图研究实例</H1>
+<DIV id=entrymeta><STRONG>时间</STRONG>:2008-01-03 06:27:49 <STRONG>来源</STRONG>: 
+<STRONG>作者</STRONG>: <STRONG>点击量:</STRONG>
+<SCRIPT language=javascript src=""></SCRIPT>
+ [
+<SCRIPT language=javascript 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/lan.js"></SCRIPT>
+ ]</DIV></DIV>
+<DIV class=clear></DIV>
+<DIV id=entrybody>
+<DIV id=entryadbox></DIV><SPAN id=google_text><IMG alt=广告载入中 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/loading.gif" width=32 
+height=32></SPAN> <SPAN id=span_google_text>
+<SCRIPT type=text/javascript src=""></SCRIPT>
+<!--GGADSENSE--></SPAN>
+<SCRIPT>google_text.innerHTML=span_google_text.innerHTML;span_google_text.innerHTML="";</SCRIPT>
+<BR>
+<DIV 
+style="PADDING-BOTTOM: 8px; MARGIN: 0px 5px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; PADDING-TOP: 0px">
+<DIV style="WIDTH: auto; HEIGHT: auto" id=entryad><SPAN 
+id=google3_text></SPAN><SPAN id=span_google3_text>
+<SCRIPT type=text/javascript src=""></SCRIPT>
+<!--GGADSENSE--></SPAN>
+<SCRIPT>google3_text.innerHTML=span_google3_text.innerHTML;span_google3_text.innerHTML="";</SCRIPT>
+</SPAN></DIV>
+<STYLE>.Buc861 {
+	DISPLAY: none
+}
+</STYLE>
+
+<P>——点的实现与速度测试 <BR>Ps：本文只是一菜鸟画鸭之笔，有不对之处欢迎高手们指证! <SPAN class=Buc861></SPAN></P>
+<P>一、背景知识： <BR>&nbsp;&nbsp; 通过搜索，网上关于web绘图的实现大致有以下三类： <BR>1 插件实现 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp; 优点：功能丰富。护展性好，速度快。 <BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+缺点：首次访问必须下载插件。 <BR>2 flash实现 <BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+优点：首次访问不需要下载插件（大部分浏览已经安装有flash插件），画面质量高。 <BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+缺点：速度较慢，需要懂得flash相关编程的知识。 <BR>3 js实现 <BR>&nbsp;&nbsp;&nbsp;&nbsp; 优点：首次访问不需要下载插件 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp; 缺点：速度应该慢于插件的实现（没有测试），实现方法较牵强。 
+<BR>本文只介绍js实现。构思参照neweroica 
+于2003年发布的JS2D函数集。在小学的几何中我们就明白，绘图平面由线构成，而线是由点构成，所以，只要我们解决了点的绘制，则线，面只是一个循序渐进的过程。 
+<SPAN class=Buc861></SPAN></P>
+<P>二、思路解析： 
+<BR>&nbsp;在newerroica的JS2D函数集中，点的绘制是通过table标签来实现的。也就是绘制一个无边框，无填充，一个单元格的表格，来实现点的显示。点的颜色、大小、位置则由table标签的style属性来定义。代码如下： 
+<BR>//Dottable.js 
+<DIV class=Buc861></DIV>
+<P></P>
+<P> 
+<DIV class=Buc861></DIV>
+<P></P>
+<P>1/**//************* 画点 ************** <BR>2&nbsp; x,y&nbsp;&nbsp;&nbsp;&nbsp; 
+点所在的屏幕坐标（像素） <BR>3&nbsp; color&nbsp;&nbsp; 颜色（字符串值） <BR>4&nbsp; 
+size&nbsp;&nbsp;&nbsp; 大小（像素） <BR>5**********************************/ 
+<BR>6function drawDot(x,y,color,size){ <BR>7&nbsp; document.write("&lt;table 
+border=’0’ cellspacing=0 cellpadding=0&gt;&lt;tr&gt;&lt;td style=’position: 
+absolute; left: "+(x)+"; top: "+(y)+";background-color: "+color+"’ 
+width="+size+" height="+size+"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"); <BR>8} 
+<FONT color=#ffffff></FONT></P>
+<P>我的改进思路是，如果table可以实现，那么div是否同样可以实现，并且能够达到更快的速度呢，我简单的修改代码如下： <BR>//Dotdiv.js 
+<DIV class=Buc861></DIV>
+<P></P>
+<P>1/**//**********画点*********** <BR>2x,y&nbsp;&nbsp; 点的坐标(像素) <BR>3color 
+点的颜色（字符串值） <BR>4size&nbsp; 点在大小(像素) <BR>5 <BR>6**********************/ 
+<BR>7function drawDot(x,y,color,size){ <BR>8&nbsp; document.write("&lt;div 
+style=’position: absolute; border:0;left: "+(x)+"; top: 
+"+(y)+";background-color:"+color+"; width:"+size+"; height:"+size+"; 
+overflow:hidden;’&gt;&lt;/div&gt;"); <BR>9} 
+<BR>那么div是否真的比table快呢？我做了个简单的js测试程序段，这个程序段同样可用于更多的js脚本性能测试，代码如下： <BR>//timer.js 
+<FONT color=#ffffff></FONT></P>
+<P>&nbsp;1/**//***********计时器**************** 
+<BR>&nbsp;2startime()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 开始计时 
+<BR>&nbsp;3endtime()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 结束计时并输出时间 4 
+<BR>&nbsp;5*********************************/ <BR>&nbsp;6var ms; 
+<BR>&nbsp;7//开始计时 <BR>&nbsp;8function starttime() { <BR>&nbsp;9 then = new 
+Date(); <BR>10 ms= then.getTime(); <BR>11&nbsp; <BR>12} <BR>13 <BR>14//结束计时 
+<BR>15function endtime() { <BR>16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now 
+= new Date(); <BR>17 ms=now.getTime()-ms; <BR>18 ms=ms/1000; <BR>19 
+alert("共用时:"+ms+"秒"); <BR>20} <BR>三、测试 <BR>构建测试用例，我们用两种方法，分别沿45度画5百个点，分别对所用时间计数: 
+<BR>Ps:我的机器配置：方正t3200c笔记本电脑，p41.5的cpu，内存384M。 <BR>Table实现的测试用例代码： <FONT 
+color=#ffffff></FONT></P>
+<P>&nbsp;1&lt;html&gt; <BR>&nbsp;2&lt;head&gt; <BR>&nbsp;3&lt;/head&gt; 
+<BR>&nbsp;4&lt;body&gt; <BR>&nbsp;5&lt;script src="timer.js"&gt; 
+<BR>&nbsp;6&lt;/script&gt; <BR>&nbsp;7&lt;script src="dottable.js"&gt; 
+<BR>&nbsp;8&lt;/script&gt; <BR>&nbsp;9 <BR>10 <BR>11&lt;script 
+language="javascript"&gt; <BR>12&nbsp;&nbsp;&nbsp; starttime(); 
+<BR>13&nbsp;&nbsp;&nbsp; for(i=0;i&lt;500;i++){ 
+<BR>14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drawDot(1+i,1+i,"ff0000",1); 
+<BR>15&nbsp;&nbsp;&nbsp; }&nbsp; <BR>16 <BR>17&nbsp;&nbsp;&nbsp; endtime(); 
+<BR>18&lt;/script&gt; <BR>19 <BR>20&lt;/body&gt; <BR>21&lt;/html&gt; 
+<BR>运行后返回时间：0.27秒 <BR>Div实现的测试用例代码： <FONT color=#ffffff></FONT></P>
+<P>&nbsp;1&lt;html&gt; <BR>&nbsp;2&lt;head&gt; <BR>&nbsp;3&lt;/head&gt; 
+<BR>&nbsp;4&lt;body&gt; <BR>&nbsp;5&lt;script src="timer.js"&gt; 
+<BR>&nbsp;6&lt;/script&gt; <BR>&nbsp;7&lt;script src="dotdiv.js"&gt; 
+<BR>&nbsp;8&lt;/script&gt; <BR>&nbsp;9 <BR>10 <BR>11&lt;script 
+language="javascript"&gt; <BR>12&nbsp;&nbsp;&nbsp; starttime(); 
+<BR>13&nbsp;&nbsp;&nbsp; for(i=0;i&lt;500;i++){ 
+<BR>14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drawDot(1+i,1+i,"ff0000",1); 
+<BR>15&nbsp;&nbsp;&nbsp; }&nbsp; <BR>16 <BR>17&nbsp;&nbsp;&nbsp; endtime(); 
+<BR>18&lt;/script&gt; <BR>19 <BR>20&lt;/body&gt; <BR>21&lt;/html&gt; 
+<BR>运行后返回时间：0.11秒 <SPAN class=Buc861></SPAN></P>
+<P>显然，div的运行时间明显快于table.测试成功。 <BR>
+<P class=Buc861></P>
+<P></P></DIV><BR>
+<SCRIPT language=javascript src=""></SCRIPT>
+
+<DIV>
+<CENTER><SPAN id=google_adsense></SPAN><SPAN id=span_google_adsense>
+<SCRIPT type=text/javascript 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/firefox_image_468x60.js"></SCRIPT>
+<!--GGADSENSE--></SPAN>
+<SCRIPT>google_adsense.innerHTML=span_google_adsense.innerHTML;span_google_adsense.innerHTML="";</SCRIPT>
+</CENTER></DIV></DIV><BR>
+<DIV class=clear></DIV><!-- 分页 -->
+<DIV>
+<CENTER></CENTER></DIV>
+<DIV class=clear></DIV>
+<DIV id=entryarchives>
+<H4>看完这篇文章有何感觉</H4>
+<DIV 
+style="TEXT-ALIGN: center; WIDTH: 308px; HEIGHT: 60px; MARGIN-LEFT: auto; MARGIN-RIGHT: auto">
+<DIV style="FLOAT: left" id=ding>
+<P class=vote_show><A title=给我顶到首页推荐! href="javascript:wo_ding(702);"><SPAN 
+id=s_ding>
+<SCRIPT language=javascript src=""></SCRIPT>
+</SPAN></A></P>
+<P class=vote_action align=center><A title=给我顶到首页推荐! 
+href="javascript:wo_ding(702);">顶一下</A></P></DIV><!-- <div id="ding" style="float:left;margin-left:15px;">
+        <p class="vote_show"> <a href="http://www.mscto.com/" title="软件开发网"><span id="s_ding"><img src="http://www.mscto.com/iphone_images/1.gif" border="0" /></span></a></p>
+		<p class="vote_action"> <a href="http://www.mscto.com/" title="软件开发网">编程网</a></p>
+     </div>   -->
+<DIV style="FLOAT: left; MARGIN-LEFT: 15px" id=ding>
+<SCRIPT language=javascript> 
+function copyToClipBoard(){ 
+var clipBoardContent=''; 
+clipBoardContent+=document.title+"\n"; 
+
+clipBoardContent+=window.location; 
+window.clipboardData.setData("Text",clipBoardContent); 
+alert("你已复制链接及标题，请粘贴到QQ|MSN等发给好友!"); 
+} 
+</SCRIPT>
+
+<P class=vote_show><A title=复制文章地址发送给朋友 
+href="javascript:copyToClipBoard()"><SPAN id=s_ding><IMG border=0 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/down.png"></SPAN></A></P>
+<P class=vote_action><A title=复制文章地址发送给朋友 
+href="javascript:copyToClipBoard()">复制</A></P></DIV>
+<DIV style="FLOAT: left; MARGIN-LEFT: 15px" id=ding>
+<P class=vote_show><A title=我要到论坛灌水去! href="http://www.mscto.com/" 
+target=_blank><SPAN id=s_ding><IMG border=0 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/bbs.png"></SPAN></A></P>
+<P class=vote_action><A title=我要到论坛灌水去! href="http://www.mscto.com/" 
+target=_blank>到论坛</A></P></DIV>
+<DIV style="FLOAT: left; MARGIN-LEFT: 15px" id=ding>
+<P class=vote_show><A title=返回首页! href="http://www.mscto.com/"><SPAN 
+id=s_ding><IMG border=0 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/return.png"></SPAN></A></P>
+<P class=vote_action><A title=返回首页! 
+href="http://www.mscto.com/">回首页</A></P></DIV>
+<DIV class=clear></DIV></DIV></DIV>
+<DIV id=toollinks><A onclick=window.print(); 
+href="http://www.mscto.com/web/0370201.html#" rel=nofollow>打印本文</A><A 
+href="http://www.mscto.com/plus/recommend.php?arcID=702" rel=nofollow 
+target=_blank>我要推荐</A><A href="http://bbs.mscto.com/" target=_blank>论坛讨论</A><A 
+href="javascript:window.close()">关闭此页</A></DIV>
+<DIV class=clear></DIV></DIV>
+<DIV id=otherentry>
+<DIV id=prv>上一篇：<A href="http://www.mscto.com/web/0370101.html">iframe 
+高度自动调节，最简单解决</A> &nbsp; 下一篇：<A 
+href="http://www.mscto.com/Asp_Net/0370401.html">生成静态文件的新闻系统核心代码（.net C#）(一)</A> 
+</DIV>
+<DIV id=next></DIV></DIV></DIV>
+<DIV id=relatedarticle>
+<H2>相关文章</H2>
+<UL>
+  <LI><SPAN>2008-01-03 06:26:31</SPAN><A 
+  href="http://www.mscto.com/web/0370101.html">iframe 高度自动调节，最简单解决</A> </LI>
+  <LI><SPAN>2008-01-03 06:25:37</SPAN><A 
+  href="http://www.mscto.com/web/0370001.html">JavaScript TreeView</A> </LI>
+  <LI><SPAN>2008-01-03 06:24:25</SPAN><A 
+  href="http://www.mscto.com/web/0369901.html">JS 实现倒计时代码</A> </LI>
+  <LI><SPAN>2008-01-04 00:03:56</SPAN><A 
+  href="http://www.mscto.com/ajax/0471001.html">AJAX使用技巧：如何处理书签和翻页按扭</A> </LI>
+  <LI><SPAN>2007-12-28 11:22:18</SPAN><A 
+  href="http://www.mscto.com/web/2868912.html">JSP内置对象(9个常用的内置对象)</A> </LI>
+  <LI><SPAN>2008-01-04 18:30:56</SPAN><A 
+  href="http://www.mscto.com/web/0472801.html">实践DIV＋CSS网页布局入门指南(1)</A> </LI>
+  <LI><SPAN>2008-01-04 18:31:38</SPAN><A 
+  href="http://www.mscto.com/web/0472901.html">实践DIV＋CSS网页布局入门指南(2)</A> </LI>
+  <LI><SPAN>2008-01-04 18:32:28</SPAN><A 
+  href="http://www.mscto.com/web/0473001.html">Meta标签详解(1)</A> </LI>
+  <LI><SPAN>2008-01-04 18:33:00</SPAN><A 
+  href="http://www.mscto.com/web/0473101.html">网页设计：Meta标签详解(2)</A> </LI>
+  <LI><SPAN>2008-01-04 18:33:23</SPAN><A 
+  href="http://www.mscto.com/web/0473201.html">网页设计：Meta标签详解(3)</A> </LI></UL>
+<DIV class=clear></DIV></DIV></DIV>
+<DIV id=rail>
+<DIV class=rightlist>
+<H4>赞助商链接</H4>
+<UL>
+  <LI>
+  <SCRIPT type=text/javascript src=""></SCRIPT>
+  </LI>
+  <LI>
+  <SCRIPT type=text/javascript src=""></SCRIPT>
+  </LI></UL>
+<DIV class=clear></DIV></DIV>
+<DIV id=search>
+<FORM name=formsearch action=/plus/search.php>
+<FIELDSET><INPUT name=kwtype value=0 type=hidden> <INPUT name=keyword value=Java 
+size=25> <INPUT name=sa value="搜 索" type=submit> <INPUT onclick="location='http://www.mscto.com/plus/heightsearch.php';" value=高级搜索 type=button> 
+</FIELDSET> </FORM></DIV>
+<DIV class=rightlist>
+<CENTER><SPAN id=google1></SPAN><SPAN id=span_google1>
+<SCRIPT type=text/javascript src=""></SCRIPT>
+<!--GGADSENSE--></SPAN>
+<SCRIPT>google1.innerHTML=span_google1.innerHTML;span_google1.innerHTML="";</SCRIPT>
+</CENTER></DIV>
+<DIV class=rightlist>
+<H4>推荐信息</H4>
+<UL>
+  <LI><A 
+  href="http://www.mscto.com/PHP/27547603.html">PHP环境配置IIS5.0+PHP5.23+MYSQL5+phpMy</A> 
+  </LI>
+  <LI><A href="http://www.mscto.com/JSP/27547003.html">Tomcat JSP经典配置实例</A> 
+</LI>
+  <LI><A href="http://www.mscto.com/ajax/23527803.html">利用ajax.dll进行Ajax的开发</A> 
+  </LI>
+  <LI><A href="http://www.mscto.com/ajax/23527403.html">AJAX框架介绍汇总</A> </LI>
+  <LI><A href="http://www.mscto.com/web/17131901.html">Div+CSS布局入门教程(精华)</A> 
+  </LI>
+  <LI><A href="http://www.mscto.com/web/1744612.html">HTML在线播放器代码</A> </LI>
+  <LI><A href="http://www.mscto.com/web/1543112.html">网上比较好的html在线编辑器介绍</A> 
+</LI>
+  <LI><A 
+  href="http://www.mscto.com/web/1543012.html">采用XHTML和CSS设计可重用可换肤的WEB站</A> 
+</LI>
+  <LI><A href="http://www.mscto.com/web/1541312.html">用javascript实现页面无刷新更新数据</A> 
+  </LI>
+  <LI><A href="http://www.mscto.com/web/1336312.html">XMLHTTP Request 
+  Object获取服务器数据</A> </LI></UL>
+<DIV class=clear></DIV></DIV>
+<DIV style="HEIGHT: 60px" class=rightad>
+<SCRIPT type=text/javascript src=""></SCRIPT>
+</DIV>
+<DIV class=rightlist>
+<H4>24小时热门信息</H4>
+<UL>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041044106.html">用JavaScript实现字符串分割</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043806.html">Javascript技巧大集合</A> 
+</LI>
+  <LI><A href="http://www.mscto.com/JSP/031034206.html">JSP预定义变量的使用</A> </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041044006.html">javascript网页精华代码集</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043506.html">用Javascript实现分页</A> 
+</LI>
+  <LI><A href="http://www.mscto.com/PHP/031032906.html">通用数据查询及分页函数模块</A> </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043006.html">JavaScript在线编辑表格的实现</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043106.html">用javascript控制显示页面图片大小</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043206.html">javascript常用代码总结</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043306.html">用JS取得字符串中出现次数最多的字母</A> 
+  </LI></UL>
+<DIV class=clear></DIV></DIV>
+<DIV class=rightlist>
+<H4>最新信息</H4>
+<UL>
+  <LI><A href="http://www.mscto.com/PHP/081046906.html">PHP汉字的截取解决方法</A> </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041044106.html">用JavaScript实现字符串分割</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041044006.html">javascript网页精华代码集</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043806.html">Javascript技巧大集合</A> 
+</LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043706.html">Javascript实现页内查找关键词</A> 
+  </LI>
+  <LI><A href="http://www.mscto.com/JavaScript/041043606.html">将Js文件编译成dll文件</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043506.html">用Javascript实现分页</A> 
+</LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043406.html">JavaScript静态页面Cookie值传递</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043306.html">用JS取得字符串中出现次数最多的字母</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/041043206.html">javascript常用代码总结</A> 
+  </LI></UL>
+<DIV class=clear></DIV></DIV>
+<DIV class=rightad><SPAN id=uusee></SPAN><SPAN id=span_uusee>
+<SCRIPT type=text/javascript src=""></SCRIPT>
+<!--GGADSENSE--></SPAN>
+<SCRIPT>uusee.innerHTML=span_uusee.innerHTML;span_uusee.innerHTML="";</SCRIPT>
+</DIV>
+<DIV class=rightlist>
+<H4>本栏随机推荐</H4>
+<UL>
+  <LI><A href="http://www.mscto.com/ASP/29171701.html">在Asp中使用存储过程数值类型值</A> 
+</LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/19140801.html">jscript错误代码及相应解释大全</A> 
+  </LI>
+  <LI><A href="http://www.mscto.com/Div_CSS/03375603.html">CSS使用十大技巧秘籍</A> </LI>
+  <LI><A href="http://www.mscto.com/Div_CSS/03375303.html">CSS的体系与格局解析</A> </LI>
+  <LI><A href="http://www.mscto.com/PHP/06264402.html">PHP基础入门讲解（十二）</A> </LI>
+  <LI><A href="http://www.mscto.com/JSP/17510803.html">利用iText在JSP中生成PDF报表</A> 
+  </LI>
+  <LI><A href="http://www.mscto.com/JSP/05256502.html">Servlet中jdbc应用高级篇（二）</A> 
+  </LI>
+  <LI><A 
+  href="http://www.mscto.com/JavaScript/19143801.html">JavaScript发挥窗口特征功能</A> 
+  </LI>
+  <LI><A href="http://www.mscto.com/ajax/20592004.html">2.8 DOM - Ajax基础教程</A> 
+  </LI>
+  <LI><A href="http://www.mscto.com/Div_CSS/03375903.html">Div 
+  CSS布局要注重语义、注重代码的重用</A> </LI></UL>
+<DIV class=clear></DIV></DIV></DIV></DIV>
+<DIV class=row>
+<DIV style="POSITION: relative" id=btmsrc>
+<DIV class=cl></DIV>
+<DIV class=con>
+<FORM class=simple6 name=search_form action=http://www.baidu.com/baidu 
+target=_blank><LABEL for=f1>搜索：</LABEL><INPUT accessKey=S id=f2 title=选择搜索类别 
+onclick=this.select() name=word maxLength=250 size=75> <INPUT name=tn 
+value=bdwxl_111094ahm_pg type=hidden></INPUT> <INPUT name=ct type=hidden> <INPUT 
+name=lm type=hidden> <INPUT name=z type=hidden> <INPUT name=rn 
+type=hidden><BUTTON type=submit></BUTTON></FORM></DIV></DIV>
+<DIV id=foot>
+<UL>
+  <LI class=first><A href="http://www.mscto.com/about.htm">本站声明</A>·<A 
+  href="http://www.mscto.com/about.htm">使用条款</A>·<A 
+  href="http://www.mscto.com/adver.html">广告服务</A>·<A 
+  href="http://www.miibeian.gov.cn/">正在备案中</A> </LI>
+  <LI class=last><A href="http://www.mscto.com/about.htm">联系我们</A>·<A 
+  href="http://www.mscto.com/about.htm">使用帮助</A>·<A 
+  href="http://www.mscto.com/plus/sitemap.html">网站地图</A>·
+  <SCRIPT type=text/javascript 
+  src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/cnzz.js"></SCRIPT>
+   </LI></UL>
+<DIV class=cl></DIV>
+<UL>
+  <LI><SPAN style="PADDING-LEFT: 10px" 
+  class=first>网站模板归微软中国所有,本站内容来源网络收集,如有侵权,请<A 
+  href="mailto:mscto@msn.com?subject=文章侵权，请及时处理">联系我们</A>.</SPAN></LI></UL>
+<DIV class=copyright><SPAN>(C)2008 <STRONG><EM>X-City</EM></STRONG></SPAN><A 
+href="http://indexed.webmasterhome.cn/?domain=mscto.com|www.mscto.com" 
+target=_blank><IMG id=ftlogo border=0 name=ftlogo alt=西城网络工作室 align=absMiddle 
+src="一个js绘图研究实例%20-%20软件开发网%20-%20提供编程开发资料的编程网_files/msft.gif" width=123 
+height=20></A></DIV></DIV></DIV>
+<DIV></DIV></BODY></HTML>

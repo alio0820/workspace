@@ -1,0 +1,474 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {border:0; list-style:none; margin:0; outline:0; padding:0; vertical-align:top;}
+html, body{height:100%;}
+body{background:#1A1511; color:#1a1511; font: 12px/22px Arial, Helvetica, sans-serif;}
+:focus{outline:0;}
+blockquote:before, blockquote:after, q:before, q:after{content: "";}
+blockquote, q{quotes: "" "";}
+
+input, textarea {font: 12px/18px Arial, Helvetica, sans-serif;}
+
+.fl{float:left;}
+.fr{float:right;}
+.cl{clear:both; overflow:hidden; width:100%;}
+.clear:after{content:"."; clear:both; display:block; height:0; visibility:hidden;}
+.clear{zoom:1;}
+.displayNone{display:none;}
+.bp10{padding-bottom:10px;}
+.tp30{padding-top:30px;}
+.inline-block{position: relative; display: -moz-inline-box; display: inline-block;}
+* html .inline-block{display: inline;} 
+*:first-child+html .inline-block{display: inline;}
+
+.wimm-wrapper{margin:0 auto 0 auto; width:100%;}
+.wimm-headline-h1{font-size:24px; font-weight:normal; line-height: 1em;}
+.wimm-news-headline-h1{font-weight:bold; font-size:11px; text-transform:uppercase;}
+.wimm-headline-h2{color:#ff2b19; font-size:11px; text-transform:uppercase;}
+.wimm-headline-h6{font-size:11px;}
+.wimm-paragraph-spacing{margin:0 0 6px 0;}
+a{color:#1a1511;}
+
+.wimm-link-arrow:after{content:url('../images/btn_reserve.png');vertical-align:middle;width:6px;height:9px;padding-left:8px;}
+.wimm-link-arrow-after{background:url('../images/btn_reserve.png') no-repeat right center; padding-right: 14px;}
+.wimm-horizontal-line{background-color:#D3CAC3;border:none;height:1px;padding:0px !important;}
+.wimm-required-field:after{content:"*";color:#DE613B;}
+.wimm-red-link{text-decoration:none;color:#FF2B19;}
+
+/*HEADER*/
+.wimm-header{background:#1a1511; position:relative; width:100%;}
+.wimm-header-inner{height:100px; margin:0 auto 0 auto; position:relative; width:860px; z-index:100;}
+.wimm-logo{float:left; margin-top:16px;}
+.wimm-header-inner-right{float:right; width:704px;}
+/*.wimm-reserve{color:#FF2B19; display:block; padding-top:20px; text-align:right; height:48px}*/
+.wimm-reserve{color:#FF2B19; display:block; text-align:right; height:68px}
+.wimm-reserve .wimm-buy-a-wimm{line-height:30px;}
+.wimm-reserve-inner{display:block; float:right; height:auto; overflow: hidden;}
+.wimm-my-account{width:83px; height:23px; background:url('../images/my_account_tab.png'); display:block; float:left; text-align:center; padding-top:5px; margin-right:40px;}
+.wimm-my-account a{color:#cccccc; text-decoration:none}
+.wimm-reserve .wimm-ipt-text{background:#cccccc; border:1px solid #9d8b7b; color:#1a1511; height:16px; font-size:11px; line-height:16px; margin:0 5px 0 7px; padding-left:10px; vertical-align:middle; width:138px;}
+.wimm-reserve .wimm-ipt-btn{vertical-align:middle;}
+.wimm-reserve-label{color:#7C6B62;}
+.wimm-reserve-status{color:#7c6b62; font-size:11px; margin:0; padding-top:4px; }
+.wimm-reserve-status-error{color:#FF2B19; font-size:11px; margin:0; padding-top:4px; }
+.wimm-nav{padding-top:6px; width:100%; font-size:11px;}
+.wimm-nav .wimm-nav-item{float:left; min-height:26px; position:relative; text-transform:uppercase;}
+.wimm-nav .wimm-nav-item a{color:#cccccc; display:block; height:26px; padding:0 26px 0 26px; text-decoration:none;}
+.wimm-nav .wimm-nav-item a:hover, .wimm-nav .wimm-nav-item a.current, .wimm-nav .wimm-nav-item .wimm-sub-nav-item a.current, .wimm-footer-inner a:hover, .wimm-footer-inner a.current{color:#FF2B19;}
+.wimm-sub-nav{background:url('../images/bg_sub_nav.png') left top repeat-x; height:0; position:absolute; top:100px; width:100%; z-index:90;}
+.wimm-sub-nav-inner{display:none; left:3px; position:absolute; top:26px; width:500px;}
+.wimm-sub-nav-inner-3{left:-469px;}
+/* IE hack */
+* .wimm-sub-nav-inner-3{left:-443px;}
+.wimm-sub-nav-item{float:left;}
+.wimm-nav .wimm-sub-nav-item a{color:#1A1511; display:block; height:36px; line-height:36px; padding:0 23px 0 23px; text-decoration:none;}
+.wimm-buy-a-wimm-container{display:block; float:left; margin-right:40px;}
+.wimm-copy-link{color:#FF2B19; font-size:11px; text-decoration:none;}
+
+/*BODYCOPY*/
+.wimm-body-copy{color:#1a1511; font-size:12px; line-height:1.5em;}
+.wimm-body-copy .wimm-copy-link:hover{text-decoration:underline;}
+.wimm-body-copy .wimm-upper-case{text-transform:uppercase;}
+.wimm-body-copy .wimm-arrow-style{background:url('../images/arrow_orange.png') center right scroll no-repeat; padding-right:11px; text-transform:uppercase;}
+.wimm-body-copy .wimm-video-play-style{color:#FF2B19;text-decoration:none;}
+.wimm-body-copy .wimm-premiere-headline{font-size:24px; font-weight:normal;}
+.wimm-body-copy .wimm-secondary-headline{font-size:16px; font-weight:normal; color:#1a1511;}
+
+.wimm-no-order-list{font-size:10px; line-height:1.3em;}
+.wimm-no-order-list .wimm-no-order-item{padding:1px 0 1px 0;}
+.wimm-no-order-list .wimm-no-order-link{color:#1a1511; text-decoration:none;}
+.wimm-no-order-list .wimm-text-upper{text-transform:uppercase;}
+
+/*VIDEO*/
+.wimm-video{width:721px; height:492px; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;}
+.wimm-video-play{margin-left: 6px;}
+
+/*CONTENT*/
+.wimm-content{background:url('../images/wrapper-bkg.jpg') top center scroll no-repeat #beb4ae; border-top:1px solid transparent; min-height:516px; width:100%; display: inline-block;}
+.wimm-content-inner{margin:150px auto 60px auto; position:relative; width:860px;}
+.wimm-content-platform-landing{height:580px;}
+.wimm-home-feature{width:100%;}
+.wimm-home-bkg{position:absolute; left:50%; outline:3px solid red;}
+.wimm-home-bkg-inner{position:relative;}
+.wimm-home-bkg-inner-2{position:absolute; left:-650px;}
+.wimm-home-feature-placeholder{height:504px; width:860px; margin:0 auto 0 auto;}
+
+.wimm-home{background:#a99e9a url('../images/home-gallery-bkg.jpg') no-repeat top center; height:338px; border-top:1px solid #f0e8df; overflow:hidden; width:100%; position:relative;}
+.wimm-home .wimm-home-banner{width:100%; left:-50%; position: relative;}
+.wimm-home .wimm-banner-inner{margin:0 auto 0 auto; width:1110px;}
+.wimm-home .wimm-home-headline{line-height: 36px; font-weight: normal;font-style: normal; font-size: 28px;}
+.wimm-home .wimm-bigger{font-size:32px; line-height:40px;}
+.wimm-home .wimm-banner-image{text-align:right; width:658px; position:relative;}
+.wimm-home .wimm-banner-image img{position:absolute;}
+.wimm-home .wimm-home-copy{padding:45px 0 0 0; width:310px; position:relative; left:-139px;}
+.wimm-home .wimm-fixed-copy{height:235px;}
+.wimm-home .wimm-headline-video{font-size:11px; font-weight:bold; color:#1a1511; letter-spacing:normal;}
+.wimm-home .wimm-bg-with-swipe{background:url('../images/bg_swipe.png') right top scroll no-repeat;}
+.wimm-home-banner2 img {display:block; position:absolute; left:-345px;}
+
+.wimm-banner-image-inner-1{left:125px;top:0;}
+.wimm-banner-image-inner-2, .wimm-banner-image-inner-4{left:-346px;top:0;}
+.wimm-banner-image-inner-3{left:144px;top:0;}
+.wimm-banner-image-inner-5{left:183px;top:0;}
+
+.wimm-home-carousel{background:#1f1915; height:123px; width:100%;}
+.wimm-home-carousel .wimm-home-carousel-inner{position:relative; height:123px; overflow:hidden; margin:0 auto 0 auto; width:100%;}
+.wimm-home-carousel .wimm-carousel-offset{position:absolute; top:0; width:100%;}
+.wimm-home-carousel .wimm-carousels{position:absolute; left:0; width:1442px;}
+.wimm-home-carousel .wimm-carousel-item{background:url('../images/bg_carousel.png') left top no-repeat; position:relative; float:left; padding:2px 0 0 1px; height:121px; overflow:hidden; width:205px;}
+.wimm-home-carousel .wimm-over-layer{position:absolute; top:0; left:0;}
+.wimm-home-carousel .wimm-carousel-bar{background:url('../images/bg_carousel_bar.png') left top repeat-x; height:24px; width:206px;}
+.wimm-home-carousel .wimm-carousel-half{background:url('../images/bg_carousel_1.png') left top; height:119px; width:204px; left:1px; top:2px;}
+.wimm-home-carousel .wimm-carousel-legend{background:url('../images/bg_carousel_2.png') left top; height:19px; width:204px; left:1px; top:103px; text-align:center; color:#cccccc; font-size:10px; text-transform:uppercase; text-transform:uppercase;}
+.wimm-home-carousel .wimm-carousel-active .wimm-carousel-half{background:none;}
+
+.wimm-about{background:url('../images/wrapper-bkg.jpg') top center scroll no-repeat #beb3ad; border-bottom:none; height:auto;}
+.wimm-about .wimm-content-inner{margin:120px auto 0 auto;}
+.wimm-about .wimm-about-copy{padding-top:25px;}
+.wimm-about .wimm-about-side-bar{padding-top:98px; width:340px;}
+.wimm-about .wimm-about-links{padding-top:20px;}
+.wimm-about .wimm-about-profile{padding-top:10px; width:100%;}
+.wimm-about .wimm-about-profile-item{background:url('../images/bg_about_profile.png') left top repeat-x; height:145px; float:left; padding:10px 10px 0 12px; margin:0 27px 23px 0; color:#e1dedd; line-height:1.3em; width:210px;}
+.wimm-about .wimm-employee{color:#ff2b19; font-size:12px; font-weight:bold; line-height:1.2em; padding-bottom:2px;}
+.wimm-about .wimm-post{color:#a8a5a4;}
+.wimm-about .wimm-careers-copy{width:650px;}
+.wimm-about .wimm-job-posting{float:left;width:400px;font-weight:bold;padding-left:14px;}
+.wimm-about .wimm-job-posting li{list-style:disc !important;}
+.wimm-about .wimm-job-posting a{text-decoration:none;color:#FF2B19;display:block;font-weight:normal;}
+.wimm-about .wimm-iframe-jobscore{width: 650px; height: 325px; background-color: white; padding-right: 12px; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px;}
+.wimm-about .wimm-ipt-btn{vertical-align:middle;}
+.wimm-about .wimm-about-landing-copy{padding-top:145px;width:410px;}
+.wimm-about .wimm-about-landing{margin-left:270px;width:1072px;}
+
+
+.wimm-real-time-message{background:url('../images/bg_real_time_msg.png') left top repeat-x; height:31px; padding-top:12px; width:100%;}
+.wimm-real-time-message .wimm-real-time-message-inner{margin:0 auto 0 auto; width:860px;}
+.wimm-real-time-message .wimm-message{padding-left:23px; font-size:11px; line-height:16px; color:#372f2a; height:16px;}
+.wimm-real-time-message .wimm-from-twitter{background:url('../images/icon_twitter.png') left top no-repeat;}
+.wimm-real-time-message .wimm-from-rss{background:url('../images/icon_rss.png') left top no-repeat;}
+.wimm-real-time-message .wimm-gray-copy{color:#cccccc;}
+.wimm-real-time-message .wimm-link{color:#cccccc; text-decoration:none;}
+#ticker { width: 860px; margin-left: auto; margin-right: auto; overflow: hidden;}
+p.loading{float: left;display: block;position: relative;top: -10px;}
+
+.wimm-developers{height:auto;}
+.wimm-developers-community{padding:10px 0 10px 0; font-size:11px; line-height:14px; color:#1a1511; width:100%;}
+.wimm-developers-community .wimm-developers-tool a{background-image:url('../images/icon_developers.png'); background-repeat:no-repeat; float:left; padding:0 25px 0 55px; width:135px; text-decoration:none;}
+.wimm-developers-community .wimm-developers-item-1 a{background-position:0 0;}
+.wimm-developers-community .wimm-developers-item-2 a{background-position:0 -500px;}
+.wimm-developers-community .wimm-developers-item-3 a{background-position:0 -999px;}
+.wimm-developers-community .wimm-developers-item-4 a{background-position:0 -1499px;}
+.wimm-developers-community .wimm-developers-headline{color:#1a1511; font-size:11px; padding-bottom:5px;}
+.wimm-developers-community .wimm-developers-paragraph{padding:0; margin:0;}
+.wimm-landing-wrapper .wimm-content{background:url('../images/wrapper-platform-bkg.jpg') top center scroll no-repeat #beb4ae;}
+.wimm-one-landing-copy{padding-top:20px;width:500px;}
+.wimm-one-landing{margin:20px auto 20px auto; width:860px;  }
+.wimm-developers-software{padding-bottom:4px;}
+.wimm-one-bkg{padding-top:20px;width:302px; padding-left:30px; overflow:visible; }
+.wimm-one-preview-1 {float:left;width:420px;padding-right:20px;}
+.wimm-one-preview-1 > div {padding-left:0px;float:right;width:220px;}
+.wimm-one-preview-2 {float:right;width:400px;padding-right:0px;}
+.wimm-one-preview-2 > div {padding-left:0px;float:right;width:220px;}
+.wimm-one-preview-3 {float:left;width:420px;padding-right:20px;}
+.wimm-one-preview-3 > div {padding-left:0px;float:right;width:220px;}
+
+.wimm-software-hardware-developers{padding-bottom:0px;}
+.wimm-software-hardware-developers .wimm-developers-body-copy{line-height:1.5em; color: #1A1511; width:550px;}
+.wimm-software-hardware-developers .wimm-developers-paragragh{margin:0; padding:3px 0 3px 0;}
+.wimm-software-hardware-developers .wimm-software-module{margin:20px 0 0 10px;}
+.wimm-software-hardware-developers .wimm-hardware_module{margin-top:10px;}
+.wimm-software-hardware-developers .wimm-text-links{color:#463f39; text-decoration:underline;}
+.wimm-software-hardware-developers .wimm-developers-form{padding-top:20px; width:281px;}
+/* PLATFORM */
+.wimm-platform-subsection{width: 460px;}
+.wimm-platform-bkg{position:absolute; left:50%;}
+.wimm-platform-bkg-inner{position:relative;}
+.wimm-platform-feature-text-container{position:relative;}
+.wimm-platform-feature-image{position:absolute; display:none;}
+.wimm-gallery-item {background-color:#000; float:left; margin:0 2px 2px 0;}
+
+.wimm-platform-feature-approach{left:-438px; top:121px; display:block;}
+.wimm-platform-feature-technology-1{left:-436px; top:102px;}
+.wimm-platform-feature-technology-2{left:-436px; top:134px;}
+.wimm-platform-feature-technology-3{left:-421px; top:59px;}
+.wimm-platform-feature-technology-4{left:-410px; top:121px;}
+.wimm-platform-feature-concepts-1{left:-454px; top:61px;}
+.wimm-platform-feature-concepts-2{left:-341px; top:0;}
+.wimm-platform-feature-concepts-3{left:-538px; top:87px;}
+.wimm-platform-feature-concepts-4{left:-495px; top:106px;}
+.wimm-platform-feature-concepts-5{left:-490px; top:107px;}
+.wimm-platform-feature-concepts-6{left:-330px; top:0;}
+.wimm-platform-feature-concepts-7{left:-341px; top:0;}
+.wimm-platform-feature-concepts-8{left:-466px; top:65px;}
+.wimm-platform-feature-concepts-9{left:-450px; top:78px;}
+
+.wimm-platform-feature-text{position:absolute; display:none; left:-430px; top:450px; color:#ff2b19;}
+
+.wimm-platform-1, .wimm-platform-2, .wimm-platform-3, .wimm-platform-4{left:-370px; top:0;}
+.wimm-platform-item-text {position:relative; height:400px; overflow:hidden;}
+.wimm-platform-item-text-inner{position:absolute;}
+.wimm-platform-concept-teaser{top: 0px;}
+
+/*CONTENT PLATFORM*/
+.wimm-content-platform-body{border-top:none;}
+.wimm-content-platform{background:url('../images/wrapper-platform-bkg.jpg') center top  no-repeat #beb4ae;}
+.wimm-content-platform .wimm-content-inner{margin:0 auto 0 auto; position:relative;}
+.wimm-platform-item{background:url('../images/bg_platform.png') 72px 68px no-repeat; height:566px; text-indent:-10000px; width:100%;}
+.wimm-platform-item-inner{height:315px; left:0; overflow:hidden; position:absolute; top:320px; width:333px;}
+.wimm-platform-info{width:333px; position:absolute;}
+.wimm-platform-info .wimm-platform-info-title{font-size:24px; padding:5px 0 12px 0;}
+
+.wimm-platform-info-1{left:0;}
+.wimm-platform-info-2{left:350px;}
+.wimm-platform-info-3{left:700px;}
+.wimm-platform-info-4{left:1050px;}
+
+.wimm-play{left:-20px; position:absolute; top:250px; width:200px; z-index:20;}
+.wimm-play-btn{cursor:pointer; float:left; text-indent:-10000px; width:60px;}
+.wimm-play-btn{background-image:url('../images/btn_play2.png'); background-repeat:no-repeat; display:block; height:73px;}
+.wimm-play-btn-next{background-position:top right;}
+.wimm-play-btn-next:hover{background-position:bottom right;}
+.wimm-play-btn-prev{background-position:top left;}
+.wimm-play-btn-prev:hover{background-position:bottom left;}
+.wimm-technology-spec-table{width:510px; margin:25px 0 0 0;}
+.wimm-technology-spec-table p{width:33%; line-height: 16px; margin-bottom: 8px; font-size: 12px;}
+.wimm-technology-spec-table ul{ float: left; position: relative; width: 150px; padding-right: 20px; font-variant: small-caps; display: block; font-size: 10px; padding-bottom: 20px;}
+.wimm-technology-spec-table thead{font-size: 14px; line-height: 14px;}
+
+/*PRODUCT INTRO*/
+.wimm-product-intro{background:url('../images/bg_pro_intro.png') left top repeat-x #a89e98; width:100%; padding:5px 0 5px 0; position:relative;}
+.wimm-product-intro-inner{margin:0 auto 0 auto; width:860px;}
+.wimm-product-intro .wimm-product-intro-no-sepline{background:none;}
+.wimm-product-intro-inner-item{float:left; padding:20px 0 18px 0;}
+.wimm-product-intro-inner-item-title{color:#cccccc; font-size:10px; margin-bottom:4px; text-transform:uppercase;}
+.wimm-product-intro-inner-item-copy{color:#1a1511; font-size:11px; line-height:16px; width:226px;}
+.wimm-product-intro-inner-item-copy a{color:#cccccc; text-decoration:none;}
+.wimm-product-intro-inner-item-left{padding-right:172px; width:226px; position:relative;}
+.wimm-product-intro-inner-item-right{padding:20px 182px 18px 28px; width:226px; position:relative; border-left: 1px dotted #CABCB5;}
+.wimm-product-intro-img-1{position:absolute; left:244px; bottom:0; margin:0 0 -28px 0;}
+.wimm-product-intro-img-2{position:absolute; left:254px; bottom:0; margin:0 0 -32px 0;}
+.wimm-product-intro-img-3{position:absolute; left:270px; bottom:0; margin:0 0 -18px 0;}
+.wimm-product-intro-img-4{position:absolute; left:270px; bottom:0; margin: 0;}
+.wimm-software-programe,
+.wimm-harderware-programe{height:84px; padding-bottom:0; font-size:11px;}
+.wimm-software-programe{line-height:14px;}
+.wimm-harderware-programe{line-height:14px; width:215px;}
+
+
+/*APPS*/
+.wimm-apps-wrapper .wimm-content{background:url('../images/wrapper-platform-bkg.jpg') top center scroll no-repeat #beb4ae;}
+.wimm-apps-wrapper .wimm-content-inner{margin:0 !important;padding:0 !important;width:100%;overflow:hidden;}
+.wimm-apps-wrapper .wimm-apps-banner{border:0;height:567px;background:url('../images/microapps_banner_f2.png') top center scroll no-repeat;width:3900px;}
+.wimm-apps-info-block{width:460px;position:relative;top:374px;left:1490px;}
+.wimm-apps-info{line-height:20px;}
+.wimm-apps-info-title{line-height:36px; font-size:24px;}
+.wimm-btn{margin-top:12px;}
+.wimm-btn-items{display:inline; margin-right:10px;}
+.wimm-apps-wrapper .wimm-product-intro{font-size:11px;}
+.wimm-apps-target {width:50px;height:50px;position:absolute;}
+.wimm-apps-btn {position:absolute;top:120px;cursor:pointer;float:left;text-indent:-10000px;width:102px;height:102px;}
+.wimm-apps-next {background-image:url('../images/btn_next_apps_on.png');}
+.wimm-apps-prev {background-image:url('../images/btn_prev_apps_on.png');}
+.wimm-fancybox-loader {position:absolute !important;left:-20000px;}
+.wimm-apps-banner-container {overflow:hidden;}
+.wimm-fancybox-loader .wimm-video-control-buttons {width:100%;padding-top:14px;}
+#fancybox-content .wimm-next-video-btn {visibility:hidden;float:right;cursor:pointer;}
+#fancybox-content .wimm-prev-video-btn {visibility:hidden;float:left;cursor:pointer;}
+#fancybox-outer {background-color:#000 !important;padding:22px 22px 14px !important;}
+
+
+/*LEGAL*/
+.wimm-legal-wrapper .wimm-legal-content{font-size:11px; line-height:16px; margin:0; width:558px; float: left;}
+.wimm-legal-wrapper .wimm-legal-additional{float:right; width: 277px; margin-top: 27px;}
+.wimm-legal-wrapper .wimm-legal-additional ul{ padding-top: 1em; }
+.wimm-legal-wrapper .wimm-legal-additional ul li{padding-bottom: 10px;}
+.wimm-legal-wrapper .wimm-legal-additional a{color: #FD5C4B; text-decoration: none;}
+.wimm-legal-nav{font-size:14px; line-height:14px; padding:0 0 14px 0;}
+.wimm-legal-nav-item{display:inline;}
+.wimm-legal-nav-item-line{background:url(../images/spacer_line.gif) right center no-repeat; margin-right:18px; padding-right:20px;}
+.wimm-legal-nav-item a{color:#1a1511; text-decoration:none;}
+.wimm-legal-nav-item a:hover, .wimm-legal-nav .current a{color:#ff2b19;}
+.wimm-legal-item-copy{padding-bottom:10px;}
+
+/*CONTACT US*/
+.wimm-contact-wrapper .wimm-content{min-height:508px;}
+.wimm-contact-wrapper .wimm-contact-content{color:#4c453e; font-size:11px; line-height:16px; margin:0; position:relative; width:560px;}
+.wimm-contact-wrapper .wimm-contact-content p{font-size:12px;}
+.wimm-contact-content .wimm-contact-addr{font-size:12px;margin-bottom:25px;}
+.wimm-contact-item{padding-bottom:6px;}
+.wimm-contact-item-inner{ line-height: 25px;}
+.wimm-contact-item a{color:#ff2b19; text-decoration:none;}
+.wimm-map{position:absolute; right:-321px; top:18px; width:282px;}
+.wimm-map-inner{border:1px solid #9d8b7b;}
+.wimm-map-btn{display:block; margin-top:14px;}
+.wimm-contact-company-form {margin-top:10px;width:284px;}
+.wimm-contact-company-form-item label {font-weight:bold;width:100px;text-align:right;float:left;margin-right:5px;}
+.wimm-contact-company-form .wimm-contact-company-msg {color:#FF0000;text-align:center;font-weight:bold;}
+.wimm-form-row{padding-bottom:12px; width:100%;}
+.wimm-form-row .wimm-form-label{color:#1a1511; font-size:11px; padding:2px 0 1px 0; line-height:16px; display:block;}
+.wimm-form-row .wimm-form-text-long-input{border:1px solid #9d8b7b; background:#d1c5bc;width:278px;color:#4C453E;}
+.wimm-form-row .wimm-form-text-input{border:1px solid #9D8B7B; background:#d1c5bc;width:128px;color:#4C453E;}
+.wimm-form-row .wimm-form-select{border:1px solid #9D8B7B;background:#d1c5bc;width:280px;color:#4C453E;}
+.wimm-form-row .wimm-form-multiple-line{border:1px solid #9D8B7B;background:#D1C5BC;color:#4C453E;height:90px;width:278px;}
+.wimm-form-submit{text-align:right; margin-top:-8px;}
+.wimm-form-left-col{float:left;width:150px;}
+
+
+/*NEWS&PRESS*/
+.wimm-news-press-content{font-size:12px; color:#413a35; line-height:1.6em;}
+.wimm-news-press-content .wimm-news-press-print{width:525px;}
+.wimm-news-press-content .wimm-news-press-h2{font-size:12px; padding-top:20px;}
+.wimm-news-press-content .wimm-news-press-h3{font-size:12px; font-weight:normal;}
+.wimm-news-press-content .wimm-news-press-highlight{color:#fd5c4b;}
+.wimm-news-press-content .wimm-news-press-tweet{padding-right:26px;}
+.wimm-news-press-content .wimm-news-press-headline{padding-top:15px; width:277px;}
+.wimm-news-press-content .wimm-news-press-headline-link{color:#fd5c4b; text-decoration:none;}
+.wimm-news-press-headline > ul > li {padding-bottom:10px;width:164px;}
+.wimm-news-press-content .wimm-news-press-item{width:525px;}
+.wimm-news-press-content .wimm-news-press-logo{width:100px;}
+.wimm-news-press-content .wimm-news-press-news{width:420px;}
+.wimm-news-press-content .wimm-news-press-news p{margin:0px; padding:0px;}
+.wimm-news-press-content .wimm-news-press-news p.headline{font-weight:bold; text-transform:uppercase;line-height:1.1em;margin: 4px 0;}
+.wimm-news-press-content .wimm-news-press-news p.description{font-style:italic;line-height:1.2em; margin: 0 0 4px 0;}
+.wimm-news-press-content .wimm-news-press-item p{margin:0px; padding:0px;}
+.wimm-news-press-content .wimm-news-press-item p.headline{font-weight:bold; text-transform:uppercase;line-height:1.1em;margin: 4px 0;}
+.wimm-news-press-content .wimm-news-press-item p.description{font-style:italic;line-height:1.2em; margin: 0 0 4px 0;}
+.wimm-news-press-content .wimm-news-press-release-item p{}
+.wimm-news-press-select {width:100%;border:1px solid #9D8B7B;background:#d1c5bc;color:#4C453E;margin-bottom:3px;}
+.wimm-news-press-date-search {margin-top:30px;}
+.wimm-news-press-date-search .wimm-form-submit {margin-top:0px;}
+
+.wimm-developers-features{padding-top:20px; width:100%;}
+.wimm-developers-features .wimm-legal-nav-item-line{background:url(../images/bg_sub_copy_tab_sepline.png) right center no-repeat; margin-right:15px; padding-right:17px;}
+.wimm-developers-features .wimm-paragraph-spacing{margin:0; padding:0 0 3px 0;}
+.wimm-developers-features .wimm-order-list{list-style:decimal;}
+.wimm-developers-features .wimm-order-list-item{margin-left:22px; list-style:decimal;}
+
+/* JOBS (Built on top of NEWS&PRESS) */
+.wimm-iframe-jobscore{width: 650px; height: 300px; margin-bottom: 24px; background-color: white; padding-right: 12px; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; overflow: visible;}
+
+
+/*FOOTER*/
+.wimm-footer{background:#1A1511; width:100%; position:relative;}
+.wimm-footer-inner{margin:-1px auto 0 auto; padding:16px 0 16px 0; width:860px;}
+.wimm-footer-inner .wimm-links{ width:104px; float: left;}
+ul.wimm-links.fr { display: block; position: relative; clear: none; margin-right: auto; margin-left: auto; float: left;}
+.wimm-links-item{display:inline; padding-right:7px;}
+.wimm-footer-inner .wimm-footer-nav{color:#7c6b62; float:right; text-align:right; width:720px;}
+.wimm-footer-nav-item{display:inline; padding-left:16px;font-size: 11px;}
+.wimm-footer-nav-item a{color:#b3b3b3; text-decoration:none;}
+
+/*FONT*/
+.wimm-h1{font-size:11px; line-height:22px; font-weight:normal; text-transform:uppercase; color:#FF2B19; letter-spacing:1px;}
+.wimm-h2{font-size:24px; line-height:32px; font-weight:normal; letter-spacing:1px;}
+.sup { position: relative; top: -2px; font-size: 65%;}
+
+
+
+
+
+/*
+ * jQuery UI CSS Framework 1.8.17
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; }
+.ui-helper-clearfix:after { clear: both; }
+.ui-helper-clearfix { zoom: 1; }
+
+
+/*
+ * jQuery UI Tabs 1.8.17
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+.ui-tabs {
+  position: relative;
+  padding: 1em 0 5em 0;
+  zoom: 1;
+} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs .ui-tabs-nav {
+  margin: 0;
+  padding: 0;
+  background: url('/images/outline.png') no-repeat top left;
+}
+.ui-tabs .ui-tabs-nav li {
+  list-style: none;
+  float: left;
+  position: relative;
+  white-space: nowrap;
+  text-align:center;
+  width:160px;
+}
+.ui-tabs .ui-tabs-nav li a {
+  padding: .5em 1em;
+  text-decoration: none; 
+  display:block;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  margin-bottom: 0;
+  padding-bottom: 1px;
+  background: url('/images/selected.png') no-repeat top left;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-state-processing a {
+  cursor: text;
+  color:white;
+}
+.ui-tabs .ui-tabs-nav li a,
+.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+  cursor: pointer;
+} /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel {
+  display: block;
+  border-width: 0;
+  padding: 0;
+  background: none;
+}
+.ui-tabs .ui-tabs-hide {
+  display: none !important;
+}
+
+
+#main-image img{
+  display: block;
+  border:1px solid #9E341F;
+}
+
+#thumbnails{
+  margin-top: 8px;
+}
+
+#thumbnails ul li{
+  float: left;
+  list-style: none;
+  padding-right: 10px;
+}
+
+#thumbnails ul li.last{
+  padding-right: 0px;
+}
+
+#thumbnails ul li img{
+  border: 1px solid #9E341F;
+}
+
+
+

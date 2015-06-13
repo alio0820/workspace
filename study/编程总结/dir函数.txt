@@ -1,0 +1,7 @@
+先执行了attrib +r +s +h c:\op.exe
+然后在VB中用Dir函数怎么都检测不到c:\op.exe的存在，
+我用的Print Dir("c:\op.exe", vbHide)，但始终不显示任何东西，如果存在的话应该显示op.exe吧？
+大家帮我看看是怎么回事呀？能用dir函数检测隐藏文件的存在与否吗？如果不行的话请给出个检测隐藏文件的方法哈。
+但是不要用SetAttr语句和调用attrib.exe恢复文件属性后再检测哦。       
+
+Print dir(("c:\op.exe",vbHidden +vbNormal +vbReadOnly +vbSystem +vbAlias)'

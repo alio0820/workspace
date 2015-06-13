@@ -1,0 +1,6 @@
+Map session=ActionContext.getContext().getSession();
+		session.put("delcode", delcode);
+
+
+
+int delcode=(Integer)ActionContext.getContext().getSession().get("delcode");

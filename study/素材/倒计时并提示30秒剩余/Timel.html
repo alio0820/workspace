@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <!-- saved from url=(0013)about:internet -->
+    <title>Timel.html</title>
+  </head>
+  
+  <body>
+    
+    <div style="position:absolute;top:35%;left:35%"><div id="nnn" style="display:inline;"></div>
+    <div id="hour1" style="display:inline;font-size:150px">10:</div><div id="min1" style="display:inline;font-size:150px">00</div></div>
+<script>
+//bgsound 是用以插入背景音乐，但只适用于 IE，在netscape 和 firefox 中并不适用
+	var hour =10;
+	var min = 59;
+	function Time(){
+		if(min1.innerHTML=="00"&&hour1.innerHTML!="00:"){
+			hour=hour-1;
+			hour1.innerHTML="0"+hour+":";
+			min=59;
+			min1.innerHTML=min;		
+		}
+		else if(min1.innerHTML!="00"&&hour1.innerHTML!="00:"){		
+			min=min-1;
+			if(min>=10)
+				min1.innerHTML=min;
+			else
+				min1.innerHTML="0"+min;	
+		}
+		else if(min1.innerHTML!="00"&&hour1.innerHTML=="00:"){		
+			min=min-1;
+			if(min<=30&&min>=0&&document.getElementById('clock')==null) document.body.innerHTML=document.body.innerHTML+"<bgsound  id='clock' src='didi.mp3' loop='-1'/>";
+			if(min>=10)
+				min1.innerHTML=min;
+			else
+				min1.innerHTML="0"+min;	
+		}
+		else if(min1.innerHTML=="00"&&hour1.innerHTML=="00:"){
+			hour=10;
+			hour1.innerHTML=hour+":";
+			min1.innerHTML="00";
+			document.getElementById("clock").parentNode.removeChild(document.getElementById("clock"));		
+		}
+	}
+	setInterval("Time();",1000);
+</script>
+  </body>
+</html>

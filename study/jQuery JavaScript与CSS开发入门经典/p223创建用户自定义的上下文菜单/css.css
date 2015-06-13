@@ -1,0 +1,23 @@
+body{
+	font:16px sans-serif;
+}
+div.tmpContextItem{
+	width:100px;
+	height:100px;
+	padding:10px;
+	border:1px solid rgb(200,200,200);
+	background:lightblue;
+	margin:10px;
+	float:left;
+}
+div#tmpContextMenu {
+	width:150px;
+	height:150px;
+	background:yellowgreen;
+	border:1px solid rgb(128,128,128);
+	padding:10px;
+	position:absolute;
+	left:0;
+	right:0;
+	display:none;
+}

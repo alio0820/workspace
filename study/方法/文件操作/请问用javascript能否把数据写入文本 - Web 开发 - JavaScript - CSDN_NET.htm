@@ -1,0 +1,737 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0048)http://topic.csdn.net/t/20040415/17/2969806.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+<META content="text/html; charset=utf-8" http-equiv="Content-Type">
+<META name="Keywords" content="文件 文件夹 文件名 拷贝 属性 Web 开发 JavaScript">
+<META name="description" content="我想用javascript做个小系统 把网页上 流言写入txt文本 请问可否做到 如果能用什么方法">
+<TITLE>请问用javascript能否把数据写入文本 - Web 开发 / JavaScript - CSDN.NET</TITLE><LINK rel="stylesheet" 
+type="text/css" href="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/t5.css">
+<LINK rel="SHORTCUT ICON" href="http://www.csdn.net/images/favicon.ico">
+<SCRIPT type="text/javascript">
+var tinfo = {
+	pdate: "2004-04-15 17:10:26"
+	,sid: "467d91e3-dd10-480b-a322-71b65e66c736"
+	,tid: "00000000-0000-0000-0000-000002969806"
+	,ba: "WebDevelop"
+	,sa: "JavaScript"
+};
+</SCRIPT>
+
+<SCRIPT type="text/javascript" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/t5.js"></SCRIPT>
+
+<SCRIPT type="text/javascript" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/AreaCounter.js"></SCRIPT>
+
+<META name="GENERATOR" content="MSHTML 9.00.8112.16440"></HEAD>
+<BODY id="bbscsdn_wrap">
+<SCRIPT type="text/javascript" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/pub_topnav.js"></SCRIPT>
+
+<DIV class="tad"><IFRAME id="Topic_Top" height="0" marginHeight="0" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/ad1.htm" 
+frameBorder="0" width="100%" marginWidth="0" scrolling="no"></IFRAME></DIV>
+<DIV class="nav"><A 
+href="http://topic.csdn.net/t/20040415/17/2969806.html#"><IMG class="logo" alt="" 
+src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/pic_logo.gif"></A>
+<UL class="searchpanel">
+  <LI><INPUT onblur="if(!this.value)this.value='这里也许就有你要的答案... ';return true;" 
+  id="search_key" onfocus="if(this.value=='这里也许就有你要的答案... ')this.value='';return true;" 
+  onkeyup="GoKeyDown(event);" name="key" value="这里也许就有你要的答案... " size="25" type="text"><INPUT 
+  class="btn" onclick="Search(event,'');return false;" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/search_btn.jpg" 
+  type="image"></LI></UL></DIV><INPUT id="hf_cardUrl" value="http://forum.csdn.net/PointForum/UserCard.ashx?user=" 
+type="hidden"><!---#-include file="topic_top.html" --><IFRAME style="width: 980px; height: 120px;" 
+id="frm_tt1" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/topic_top.htm" 
+frameBorder="0" scrolling="no"></IFRAME>
+<SCRIPT type="text/javascript">
+    setTimeout(function () {
+        document.getElementById("frm_tt1").src = "/u/t5/include/topic_top.html?v=2";
+    }, 5000);
+</SCRIPT>
+
+<DIV class="loc">
+<P><!-- a href="http://wz.csdn.net/rxsg/index.aspx" target="_blank" onclick='LogClickCount(this,117);'><img src="http://c.csdn.net/bbs/t/5/i/rxsg.jpg" alt="热血三国" /></a --><A 
+href="http://www.csdn.net/" target="_blank">CSDN</A>-<A href="http://community.csdn.net/" 
+target="_blank">CSDN社区</A>-<A href="http://forum.csdn.net/BList/WebDevelop/" 
+target="_blank">Web 开发</A>-<A href="http://forum.csdn.net/SList/JavaScript//" 
+target="_blank">JavaScript</A></P></DIV>
+<DIV class="fm">
+<UL class="menu">
+  <LI class="bt1"><A class="bt1" href="javascript:;">管理菜单<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <UL>
+    <LI></LI></UL></A>
+  <UL>
+    <LI><A id="a_head_recreate" href="http://forum.csdn.net/PointForum/BuildTopic.aspx?topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;return=">生成帖子</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/Tops/InsertTop.aspx?topicUrl=http://topic.csdn.net/t/20040415/17/2969806.html&amp;text=%e8%af%b7%e9%97%ae%e7%94%a8javascript%e8%83%bd%e5%90%a6%e6%8a%8a%e6%95%b0%e6%8d%ae%e5%86%99%e5%85%a5%e6%96%87%e6%9c%ac&amp;sectionID=467d91e3-dd10-480b-a322-71b65e66c736',width:600,height:265,title:'置顶'});}catch(ex){}return false;" 
+    href="javascript:;">置顶</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/SetPrime.aspx?forumid=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicid=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:400,height:255,title:'推荐'});}catch(ex){}return false;" 
+    href="javascript:;">推荐</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/SetNotPrime.aspx?topicid=00000000-0000-0000-0000-000002969806&amp;forumid=467d91e3-dd10-480b-a322-71b65e66c736&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:400,height:255,title:'取消推荐'});}catch(ex){}return false;" 
+    href="javascript:;">取消推荐</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/LockTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:425,height:330,title:'锁定'});}catch(ex){}return false;" 
+    href="javascript:;">锁定</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/UnlockTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:425,height:330,title:'解锁'});}catch(ex){}return false;" 
+    href="javascript:;">解锁</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/MoveTopic.aspx?fid=467d91e3-dd10-480b-a322-71b65e66c736&amp;tid=00000000-0000-0000-0000-000002969806&amp;date=2004-04-15+17%3a10%3a26',width:580,height:270,title:'移动'});}catch(ex){}return false;" 
+    href="javascript:;">移动</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/ModifyTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:670,height:655,title:'编辑'});}catch(ex){}return false;" 
+    href="javascript:;">编辑</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/DeleteTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26',width:425,height:330,title:'删除'});}catch(ex){}return false;" 
+    href="javascript:;">删除</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Forum/TopicAddPoint.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;date=2004-04-15+17%3a10%3a26&amp;v=13',width:420,height:300,title:'帖子加分'});}catch(ex){}return false;" 
+    href="javascript:;">帖子加分</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/TitleStyle.aspx?topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;url=http://topic.csdn.net/t/20040415/17/2969806.html',width:670,height:307,title:'帖子高亮'});}catch(ex){}return false;" 
+    href="javascript:;">帖子高亮</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/RemoveTitleStyle.aspx?topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;url=http://topic.csdn.net/t/20040415/17/2969806.html',width:670,height:255,title:'取消高亮'});}catch(ex){}return false;" 
+    href="javascript:;">取消高亮</A></LI></UL><!--[if lte IE 6]></td></tr></table></a><![endif]--></LI>
+  <LI><A class="bt2" href="http://forum.csdn.net/PointForum/Manage/TopicManageView.aspx?forumID=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicID=00000000-0000-0000-0000-000002969806&amp;date=2004-04-15+17%3a10%3a26&amp;v=13">结&nbsp;&nbsp;帖</A></LI>
+  <LI><A class="bt3" href="http://forum.csdn.net/PointForum/Forum/PostTopic.aspx?forumID=467d91e3-dd10-480b-a322-71b65e66c736" 
+  target="_blank">发&nbsp;&nbsp;帖</A></LI>
+  <LI><A class="bt4" onclick="try{ReplyBoxFocus();return false}catch(ex){}" 
+  href="http://topic.csdn.net/t/20040415/17/2969806.html#r_achor">回&nbsp;&nbsp;复</A></LI></UL></DIV>
+<DIV class="tit">
+<H1><DFN><A onclick="try{addToWZ();}catch(ex){}return false;" href="javascript:;">收藏</A></DFN>
+<CITE><SELECT onchange="changeViewMode(this);"><OPTION 
+  value="5">不显示删除回复</OPTION><OPTION value="0">显示所有回复</OPTION><OPTION 
+  value="1">显示星级回复</OPTION><OPTION value="3">显示得分回复</OPTION></SELECT></CITE><SPAN 
+class="prime" csdnid="prime"></SPAN><SPAN class="lock" csdnid="lock"></SPAN><A 
+name="top"></A><SPAN 
+csdnid="titleStyle"><!-- google_ad_section_start -->请问用javascript能否把数据写入文本<!-- google_ad_section_end --></SPAN><EM>[问题点数:<SPAN 
+csdnid="point">50</SPAN>分<SPAN csdnid="check">，结帖人:tim104</SPAN>]</EM></H1>
+</DIV>
+<TABLE class="mframe" cellSpacing="0" cellPadding="0">
+  <TBODY>
+  <TR>
+    <TD class="lf" rowSpan="2">
+      <DIV class="df">
+      <UL>
+        <LI class="center"><A onclick="LogClickCount(this,111);" href="http://hi.csdn.net/tim104" 
+        target="_blank"><IMG onmouseover="try{showUserCard(this,'tim104')}catch(ex){};" 
+        src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/2_tim104.gif"></A></LI>
+        <LI title="总技术分：123；总技术排名：104862"><DFN><A onclick="LogClickCount(this,111);" 
+        href="http://hi.csdn.net/tim104" target="_blank">tim104</A></DFN></LI>
+        <LI title="总技术分：123；总技术排名：104862">(小明)</LI>
+        <LI class="honor"></LI>
+        <LI title="总技术分：123；总技术排名：104862">等　级：<IMG class="grade user2" alt="" 
+        src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/blank.gif"> 
+        </LI>
+        <LI>结帖率：<LABEL onmouseover="showHint(this, '截至2011-12-03 20:11:39\n用户结帖率94.44%\n总发帖：36\n正常结帖：30\n未结帖：2\n')" 
+        onmouseout="hideHint(this)">94.44%</LABEL></LI>
+        <LI></LI></UL></DIV></TD>
+    <TD class="rw">
+      <DIV class="fbart"><EM>楼主</EM>发表于：2004-04-15 17:10:26</DIV>
+      <TABLE class="mtxt" cellSpacing="0" cellPadding="0">
+        <TBODY>
+        <TR>
+          <TD id="body" csdnid="body"><!-- google_ad_section_start -->
+            <DIV 
+            class="msgfont">我想用javascript做个小系统，把网页上的流言写入txt文本，请问可否做到，如果能用什么方法</DIV><!-- google_ad_section_end --><!--End_body//--></TD></TR>
+        <TR>
+          <TD csdnid="link"></TD></TR>
+        <TR>
+          <TD csdnid="modify"></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class="rb"><IFRAME id="tad2" height="0" marginHeight="0" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/ad2.htm" 
+      frameBorder="0" width="100%" marginWidth="0" scrolling="no"></IFRAME>
+      <DIV class="fbarb">
+      <UL>
+        <LI><A class="dr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;type=0&amp;v=13');LogClickCount(this,113);}catch(ex){}return false;" 
+        href="javascript:;">对我有用</A>[<SPAN title="该帖子被0个用户给予好评" 
+        csdnid="acount">0</SPAN>]</LI>
+        <LI><A class="gr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;type=1&amp;v=13');LogClickCount(this,114);}catch(ex){}return false;" 
+        href="javascript:;">丢个板砖</A>[<SPAN title="该帖子被0个用户给予差评" 
+        csdnid="ucount">0</SPAN>]</LI>
+        <LI><A class="gr" onclick="try{Quote(0);}catch(ex){};return false" href="javascript:;">引用</A></LI>
+        <LI><A class="dr" onclick="try{report(0);}catch(ex){}return false;" 
+        href="javascript:;">举报</A></LI>
+        <LI><A class="gr" onmousemove="try{showMenu(this,'http://forum.csdn.net/PointForum/Manage/ModifyTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13','http://forum.csdn.net/PointForum/Manage/DeleteTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26');return false}catch(ex){}" 
+        href="javascript:;">管理</A></LI>
+        <LI><A class="nob" href="http://topic.csdn.net/t/20040415/17/2969806.html#top">TOP</A></LI></UL>回复次数：<SPAN 
+      title="该帖回复数为7" csdnid="rcount">7</SPAN><!-- | 
+		浏览次数：<span csdnid="vcount" title="该帖阅读数为94">94</span>--></DIV></TD></TR>
+  </TBODY></TABLE>
+<DIV class="clear"></DIV><IFRAME id="Iframe1" height="0" marginHeight="0" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/ad3.htm" 
+frameBorder="0" width="100%" marginWidth="0" scrolling="no"></IFRAME><!-- google_ad_section_start(weight=ignore) -->
+<TABLE class="mframe" cellSpacing="0" cellPadding="0" csdnid="rt_20818815">
+  <TBODY>
+  <TR>
+    <TD class="lf" rowSpan="2">
+      <DIV class="df">
+      <UL>
+        <LI class="center"><A onclick="LogClickCount(this,111);" href="http://hi.csdn.net/zhgj8750" 
+        target="_blank"><IMG onmouseover="try{showUserCard(this,'zhgj8750')}catch(ex){};" 
+        title="zhgj8750用户自定义头像" alt="zhgj8750用户头像" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/2_zhgj8750.jpg"></A></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：475；截至2011-11-27日，用户的总技术分排名为：44001"><DFN><A 
+        onclick="LogClickCount(this,111);" href="http://hi.csdn.net/zhgj8750" 
+        target="_blank">zhgj8750</A></DFN></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：475；截至2011-11-27日，用户的总技术分排名为：44001">(清风)</LI>
+        <LI class="honor"></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：475；截至2011-11-27日，用户的总技术分排名为：44001">等　级：<IMG 
+        class="grade user1" alt="" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/blank(1).gif"></LI>
+        <LI></LI></UL></DIV></TD>
+    <TD class="rw">
+      <DIV class="fbart"><DFN>#1楼 得分：10</DFN>回复于：2004-04-15 17:23:25</DIV><A 
+      name="r_20818815"></A>
+      <TABLE class="mtxt" cellSpacing="0" cellPadding="0">
+        <TBODY>
+        <TR>
+          <TD id="rbody_20818815" csdnid="rbody_20818815">
+            <DIV class="msgfont">应该可以，下面是一段用JavaScript代码实现读取文件的方法，对你应该有参考意义！ 
+            <BR><BR> function &nbsp; readFile() <BR> { <BR> 	var &nbsp; filePath 
+            &nbsp; = &nbsp; document.frm.newFile.value; <BR> 	fileObj &nbsp; = 
+            &nbsp; new &nbsp; File( "D:\mytest\myTest.txt "); <BR> 	data &nbsp; 
+            = &nbsp; fileObj.open( 'w '); <BR> 	while(fileObj.eof()) <BR> 	{ 
+            <BR> 		document.write(data.read(1)) <BR> 	} <BR> 	fileObj.close(); 
+            <BR> }</DIV><!--End_rbody_20818815//--></TD></TR>
+        <TR>
+          <TD csdnid="rmodify_20818815"></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class="rb">
+      <DIV class="fbarb">
+      <UL>
+        <LI><A class="dr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20818815&amp;type=0&amp;v=13');LogClickCount(this,113);}catch(ex){}return false;" 
+        href="javascript:;">对我有用</A>[<SPAN title="该回复被0个用户给予好评" csdnid="racount_20818815">0</SPAN>]</LI>
+        <LI><A class="gr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20818815&amp;type=1&amp;v=13');LogClickCount(this,114);}catch(ex){}return false;" 
+        href="javascript:;">丢个板砖</A>[<SPAN title="该回复被0个用户给予差评" csdnid="rucount_20818815">0</SPAN>]</LI>
+        <LI><A class="gr" onclick="try{Quote(1);}catch(ex){};return false" href="javascript:;">引用</A></LI>
+        <LI><A class="dr" onclick="try{report(1);}catch(ex){}return false;" 
+        href="javascript:;">举报</A></LI>
+        <LI><A class="gr" onmousemove="try{showMenu(this,'http://forum.csdn.net/PointForum/Manage/ModifyReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20818815&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13','http://forum.csdn.net/PointForum/Manage/DeleteReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20818815&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13');return false}catch(ex){}" 
+        href="javascript:;">管理</A></LI>
+        <LI><A class="nob" href="http://topic.csdn.net/t/20040415/17/2969806.html#top">TOP</A></LI></UL>
+      <DIV class="rt"></DIV></DIV></TD></TR></TBODY></TABLE>
+<DIV class="clear"></DIV>
+<TABLE class="mframe" cellSpacing="0" cellPadding="0" csdnid="rt_20821167">
+  <TBODY>
+  <TR>
+    <TD class="lf" rowSpan="2">
+      <DIV class="df">
+      <UL>
+        <LI class="center"><A onclick="LogClickCount(this,111);" href="http://hi.csdn.net/gjd111686" 
+        target="_blank"><IMG onmouseover="try{showUserCard(this,'gjd111686')}catch(ex){};" 
+        title="gjd111686用户自定义头像" alt="gjd111686用户头像" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/2_gjd111686.gif"></A></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：84900；截至2011-11-27日，用户的总技术分排名为：115"><DFN><A 
+        onclick="LogClickCount(this,111);" href="http://hi.csdn.net/gjd111686" 
+        target="_blank">gjd111686</A></DFN></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：84900；截至2011-11-27日，用户的总技术分排名为：115">(数字金刚)</LI>
+        <LI class="honor"></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：84900；截至2011-11-27日，用户的总技术分排名为：115">等　级：<IMG 
+        class="grade star2" alt="" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/blank(1).gif"></LI>
+        <LI>
+        <DIV class="medalregion">
+        <DIV style='background: url("http://csdnimg.cn/bbs/m/i/jinshi_1.gif") no-repeat; width: 30px; height: 40px;' 
+        title="勋章:进士 获得原因: 2004年 总版技术专家分年内排行榜第九"></DIV>
+        <DIV style='background: url("http://csdnimg.cn/bbs/m/i/red_2.gif") no-repeat; width: 35px; height: 40px;' 
+        title="勋章:红花 获得原因: 2003年10月 企业开发大版内专家分月排行榜第一;2003年11月 企业开发大版内专家分月排行榜第一;2003年12月 企业开发大版内专家分月排行榜第一;2004年1月 企业开发大版内专家分月排行榜第一;2004年2月 企业开发大版内专家分月排行榜第一">
+        <P class="medalnum">5</P></DIV>
+        <DIV style='background: url("http://csdnimg.cn/bbs/m/i/yellow_1.gif") no-repeat; width: 30px; height: 40px;' 
+        title="勋章:黄花 获得原因: 2004年3月 企业开发大版内专家分月排行榜第二"></DIV>
+        <DIV style="left: 5px; top: 17px; height: 40px; float: left;" title="更多用户gjd111686获得的勋章"><A 
+        class="moremedal" href="http://medal.csdn.net/Medal/UserMedalList.aspx?username=gjd111686" 
+        target="_blank">更多勋章</A></DIV></DIV></LI></UL></DIV></TD>
+    <TD class="rw">
+      <DIV class="fbart"><DFN>#2楼 得分：20</DFN>回复于：2004-04-15 18:31:17</DIV><A 
+      name="r_20821167"></A>
+      <TABLE class="mtxt" cellSpacing="0" cellPadding="0">
+        <TBODY>
+        <TR>
+          <TD id="rbody_20821167" csdnid="rbody_20821167">
+            <DIV class="msgfont">文件对象File <BR><BR> 
+            TextStream对象的作用在于读写文本文件，是对文件内容的操作。而File对象的功能则是对文件本身的操作，它提供了文件的拷贝、移动和删除等基本操作。 
+            <BR><BR> 一 &nbsp; File对象适用的方法 <BR><BR> FileExists( "路径文件名 ") &nbsp;  
+            &nbsp; 知道的文件是否存在？若存在返回True, &nbsp; 否则False &nbsp;  <BR><BR> GetFile( 
+            "路径文件名 ") &nbsp; 创建一个File对象的实例, &nbsp; 以便调用它的方法和属性 &nbsp;  <BR><BR> 
+            CopyFile( "源路径文件名 "， "目标路径文件名 "[,overwrite]) &nbsp; 拷贝指定文件到目标位置 
+            &nbsp;  <BR><BR> MoveFile( "源路径文件名 "， "目标路径文件名 ") &nbsp; 移动指定文件到目标位置 
+            &nbsp;  <BR><BR> DeleteFile( "路径文件名 ") &nbsp; 删除指定文件 &nbsp;  
+            <BR><BR> 以上方法是属于FSO对象的，下面的方法则属于File对象。 <BR><BR> Copy( "目标路径文件名 ") 
+            &nbsp; 拷贝指定文件到目标位置 &nbsp;  <BR><BR> Move( "目标路径文件名 ") &nbsp; 
+            移动指定文件到目标位置 &nbsp;  <BR><BR> Delete( "路径文件名 ") &nbsp; 删除指定文件 &nbsp;  
+            <BR><BR> OpenAsTextStream([iomode, &nbsp; [format]]) &nbsp; 
+            作为文本文件打开。返回一个TextStream对象。 <BR> 输入输出方式iomode &nbsp; 参数可取1，2，3三种值： 
+            <BR> 1=ForReading &nbsp; 以只读方式打开文件。 &nbsp; 不能写这个文件。 <BR> 
+            2=ForWriting &nbsp; 以写方式打开文件。 &nbsp; 如果存在同名的文件，那么它以前的内容将被覆盖。 <BR> 
+            8=ForAppending &nbsp; 打开文件并从文件末尾开始写。 <BR> 这与方法是一样的。 <BR> 文件格式 &nbsp; 
+            参数format可取下列三种值(-2,-1,0)之一： <BR> TristateUseDefault &nbsp; -2 &nbsp; 
+            使用系统默认值打开文件。 <BR> TristateTrue &nbsp; -1 &nbsp; 以 &nbsp; Unicode 
+            &nbsp; 方式打开文件。 <BR> TristateFalse &nbsp; 0 &nbsp; 以 &nbsp; ASCII 
+            &nbsp; 方式打开文件。 <BR> 
+            说明；ForReading等符号常量只能用于VB，在JS中要使用必须自行预设。iomode的缺省值是2，覆盖。 &nbsp;  
+            <BR><BR> 二 &nbsp; File对象的属性 <BR><BR> Attributes &nbsp; 
+            设置或返回文件或文件夹的属性。attributes &nbsp; 可以是下列各值或者这些值的任意逻辑组合： <BR><BR> 常数 
+            &nbsp; 值 &nbsp;  &nbsp; 描述 &nbsp;  <BR> Normal &nbsp;  &nbsp; 0 
+            &nbsp; 普通文件 &nbsp;  <BR> ReadOnly &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+            &nbsp; 1 &nbsp; 只读文件 &nbsp;  <BR> Hidden &nbsp;  &nbsp;  &nbsp;  
+            &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 &nbsp; 隐藏文件 &nbsp;  <BR> System 
+            &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 4 &nbsp; 系统文件 &nbsp;  
+            <BR> Volume &nbsp; 8 &nbsp; 磁盘卷标。只读。 &nbsp;  <BR> Directory &nbsp; 
+            16 &nbsp; 文件夹或目录，只读。 &nbsp;  <BR> Archive &nbsp; 32 &nbsp; 
+            文件在上次备份后已经修改。 &nbsp;  <BR> Alias &nbsp; 64 &nbsp; 链接或者快捷方式。只读。 
+            &nbsp;  <BR> Compressed &nbsp; 128 &nbsp; 压缩文件。只读。 &nbsp;  <BR><BR> 
+            DateCreated &nbsp; 指定文件或文件夹的创建日期和时间。 &nbsp;  <BR> DateLastAccessed 
+            &nbsp; 最后访问指定文件或文件夹的日期和时间。只读。 &nbsp;  <BR><BR> DateLastModified 
+            &nbsp; 最后修改指定文件或文件夹的日期和时间。只读。 &nbsp;  <BR><BR> Drive &nbsp; 
+            指定文件或文件夹所在驱动器的驱动器号。只读。 &nbsp;  <BR><BR> Name &nbsp; 
+            设置或返回指定文件或文件夹的名称。读/写。 &nbsp;  <BR><BR> ParentFolder &nbsp; 
+            返回指定文件或文件夹的父文件夹对象。只读。 &nbsp;  <BR><BR> Path &nbsp; 
+            返回指定文件、文件夹或驱动器的路径。 &nbsp;  <BR><BR> ShortName &nbsp; 
+            返回短名称，这些短名称由需要以前的 &nbsp; 8.3 &nbsp; 命名规范的程序使用。 &nbsp;  <BR><BR> 
+            ShortPath &nbsp; 返回短路径名，这些短文件名由需要以前的 &nbsp; 8.3 &nbsp; 文件命名规范的程序使用。 
+            &nbsp;  <BR><BR> Size &nbsp;  &nbsp; 返回以字节为单位的指定文件或文件夹的大小。 &nbsp;  
+            <BR><BR> Type &nbsp; 返回关于文件或文件夹类型的信息。 &nbsp;  <BR><BR> 
+            以上属性，对于Folder对象也都适用。 <BR><BR> 目标例程1 &nbsp; 文件的拷贝，OpenAsTextStream方法。 
+            <BR><BR> function &nbsp; FileOpp() &nbsp; { <BR> var &nbsp; fso, 
+            &nbsp; fdir,fname, &nbsp; SF; <BR> fso &nbsp; = &nbsp; new &nbsp; 
+            ActiveXObject( "Scripting.FileSystemObject "); <BR> fdir &nbsp; = 
+            &nbsp; fso.GetFolder( "C:\\ "); <BR> SF &nbsp; = &nbsp; 
+            fdir.SubFolders; <BR> if &nbsp; (!fso.FileExists( "$$$fdir " &nbsp; 
+            )) &nbsp; SF.Add( "$$$fdir " &nbsp; ); <BR> if &nbsp; 
+            (!fso.FileExists( "$$$fdir1 ")) &nbsp; SF.Add( "$$$fdir1 "); <BR> 
+            fdir &nbsp; = &nbsp; fso.GetFile( "filename.txt "); <BR> var &nbsp; 
+            tf &nbsp; = &nbsp; fdir.OpenAsTextStream(1);do &nbsp; { <BR>  &nbsp; 
+             &nbsp; fname &nbsp; = &nbsp; tf.ReadLine(); <BR>  &nbsp; if &nbsp; 
+            (fso.FileExists( "C:\\ "+fname)) <BR>  &nbsp;  &nbsp;  &nbsp; 
+            fso.CopyFile( "C:\\ "+fname, &nbsp;  "C:\\$$$fdir\\ "+fname); <BR>  
+            &nbsp; } <BR> while(!tf.AtEndOfStream); <BR> tf.close() &nbsp; ; 
+            <BR> } <BR>  &nbsp;  &nbsp;  &nbsp;  &nbsp;  <BR><BR> 目标例程2 &nbsp; 
+            文件的移动、改名和删除。 <BR><BR> function &nbsp; FileOpp1() &nbsp; { <BR> var 
+            &nbsp; fso, &nbsp; ff; <BR> fso &nbsp; = &nbsp; new &nbsp; 
+            ActiveXObject( "Scripting.FileSystemObject "); <BR> fso.MoveFile( 
+            "C:\\$$$fdir\\CONFIG.WIN ", &nbsp;  "C:\\$$$fdir1\\CONFIG.WIN "); 
+            <BR> ff &nbsp; = &nbsp; fso.GetFile( "C:\\$$$fdir\\config.sys "); 
+            <BR> ff.Move( "C:\\$$$fdir\\config.old "); &nbsp; //改名 <BR> 
+            fso.DeleteFile( "C:\\$$$fdir\\autoexec.bat "); <BR> ff &nbsp; = 
+            &nbsp; fso.GetFile( "C:\\$$$fdir\\MSDOS.SYS "); <BR> 
+            ff.Attributes=0; <BR> ff.Delete(); <BR> } <BR><BR><BR> 说明 &nbsp; 
+            先后运行例程1，2。例程1生成两个文件夹，在文件夹$$$fdir中拷贝得若干文件，由于各个电脑上的文件不一样，拷贝的结果是不一样的。运行完以后先观看一下结果。例程2把文件CONFIG.WIN移动到文件夹$$$fdir1中，有MOVE方法改名得config.old，用两种方法删除了文件autoexec.bat和MSDOS.SYS。del$$$用来删除例程1生成的文件夹，但由于其中包含只读文件和系统文件，可能会不能执行而报告“没有权限”。语句ff.Attributes=0;就是改变的文件属性，而使下一句的删除可执行。 
+            <BR><BR> 目标例程3 &nbsp; File对象的属性用法演示 <BR><BR> function &nbsp; 
+            FileProp() &nbsp; { <BR> var &nbsp; fso, &nbsp; ff, &nbsp; ss= " "; 
+            <BR> var &nbsp; fname &nbsp; = &nbsp; prompt( "输入一路径文件名 ", 
+            "c:\\$$$fdir\\config.old "); <BR> fso &nbsp; = &nbsp; new &nbsp; 
+            ActiveXObject( "Scripting.FileSystemObject "); <BR> ff &nbsp; = 
+            &nbsp; fso.GetFile(fname); <BR> ss &nbsp; += &nbsp;  "文件名 " &nbsp; + 
+            &nbsp; ff.Name &nbsp; + "\r\n "; <BR> ss &nbsp; += &nbsp;  "类型为 " 
+            &nbsp; + &nbsp; ff.Type+ "\r\n "; <BR> ss &nbsp; += &nbsp;  "属性值 
+            &nbsp; = &nbsp;  " &nbsp; + &nbsp; ff.Attributes &nbsp; + "\r\n "; 
+            <BR> ss &nbsp; += &nbsp;  "文件大小 &nbsp;  " &nbsp; + &nbsp; ff.Size 
+            &nbsp; + "B " &nbsp; + "\r\n "; <BR> ss &nbsp; += &nbsp;  "最后访问日期 
+            &nbsp;  " &nbsp; + &nbsp; ff.DateLastAccessed &nbsp; + "\r\n "; <BR> 
+            ss &nbsp; += &nbsp;  "最后修改日期 &nbsp;  " &nbsp; + &nbsp; 
+            ff.DateLastModified &nbsp; + "\r\n "; <BR> ss &nbsp; += &nbsp;  
+            "Path= &nbsp;  " &nbsp; + &nbsp; ff.Path+ "\r\n "; <BR> ss &nbsp; += 
+            &nbsp;  "Drive= " &nbsp; + &nbsp; ff.Drive+ "\r\n "; <BR> ss &nbsp; 
+            += &nbsp;  "父文件夹 " &nbsp; + &nbsp; ff.ParentFolder+ "\r\n "; <BR> ss 
+            &nbsp; += &nbsp;  "短文件名= " &nbsp; + &nbsp; ff.ShortName &nbsp; + 
+            "\r\n "; <BR> ss &nbsp; += &nbsp;  "短路径名= " &nbsp; + &nbsp; 
+            ff.ShortPath &nbsp; + "\r\n "; <BR> alert(ss); &nbsp; return; <BR> } 
+            <BR><BR><BR> 代码注释 <BR><BR> 
+            执行后显示的结果如下图所示。必须先执行了例1例2后才有config.old这文件。但本程序你也可以选择任何文件来观看文件信息。选不同文件来运行可观察到属性值的不同。 
+            <BR><BR><BR> Attributes &nbsp; 
+            属性值给出的是数值，为了显示文字信息还需要稍加处理。除了Attributes &nbsp; 和 &nbsp; 
+            Name以外，其余都是只读的。从图中可以看出，日期数据是标准格式，实际给出的是日期的字符串，而不是Date对象。短文件名和短路径名中的大写是系统给出的，前几行的大小写由程序中的输入确定。 
+            <BR><BR> 为了把Attributes &nbsp; 属性值转化成文字信息，我们可以用下面的代码： <BR><BR> 
+            function &nbsp; FileList() &nbsp; { <BR> var &nbsp; fso, &nbsp; 
+            fdir, &nbsp; SF, &nbsp; ff, &nbsp; ss= " "; <BR> function &nbsp; 
+            AttrInfo(attr){ <BR> var &nbsp; info,s= " ", &nbsp; a1,a2; <BR> a1 
+            &nbsp; = &nbsp; attr &nbsp; &amp; &nbsp; 0xF0 &nbsp; ; &nbsp; a2 
+            &nbsp; = &nbsp; attr &nbsp; &amp; &nbsp; 0x0F &nbsp; ; <BR> switch 
+            &nbsp; (a1) &nbsp; { <BR> case &nbsp; 128:s &nbsp; = &nbsp;  " 
+            &nbsp; 压缩文件 ";break; <BR> case &nbsp; 64: &nbsp; s &nbsp; = &nbsp;  
+            " &nbsp; 链接或者快捷方式 ";break; <BR> case &nbsp; 32: &nbsp; s &nbsp; = 
+            &nbsp;  " &nbsp; 文件在上次备份后已经修改 ";break; <BR> case &nbsp; 16: &nbsp; s 
+            &nbsp; = &nbsp;  " &nbsp; 文件夹 ";break; <BR> } <BR> switch &nbsp; 
+            (a2) &nbsp; { <BR> case &nbsp; 0: &nbsp; info &nbsp; = &nbsp;  
+            "normal "; &nbsp; break; <BR> case &nbsp; 1: &nbsp; info &nbsp; = 
+            &nbsp;  "R ";break; <BR> case &nbsp; 2: &nbsp; info &nbsp; = &nbsp;  
+            "H ";break; <BR> case &nbsp; 3: &nbsp; info &nbsp; = &nbsp;  "RH 
+            ";break; <BR> case &nbsp; 4: &nbsp; info &nbsp; = &nbsp;  "S 
+            ";break; <BR> case &nbsp; 5: &nbsp; info &nbsp; = &nbsp;  "RS 
+            ";break; <BR> case &nbsp; 6: &nbsp; info &nbsp; = &nbsp;  "HS 
+            ";break; <BR> case &nbsp; 7: &nbsp; info &nbsp; = &nbsp;  "RHS 
+            ";break; <BR> case &nbsp; 8: &nbsp; info &nbsp; = &nbsp;  "卷标号 
+            ";break; <BR> default:info &nbsp; = &nbsp;  "不可识别 ";break; <BR> } 
+            <BR> return &nbsp; info &nbsp; + &nbsp; s &nbsp; ; <BR> } <BR><BR> 
+            目标例程3 &nbsp; 显示C盘根文件夹的内容清单。 <BR><BR> function &nbsp; FileList() 
+            &nbsp; { <BR> var &nbsp; fso, &nbsp; fdir, &nbsp; SF, &nbsp; ff, 
+            &nbsp; ss= " "; <BR>  &nbsp;  &nbsp; function &nbsp; AttrInfo(attr){ 
+            &nbsp; ... &nbsp; } <BR> fso &nbsp; = &nbsp; new &nbsp; 
+            ActiveXObject( "Scripting.FileSystemObject "); <BR> fdir &nbsp; = 
+            &nbsp; fso.GetFolder( "C:\\ "); <BR> ss &nbsp; = &nbsp;  &nbsp;  
+            "文件名 &nbsp;  &nbsp;  &nbsp;  &nbsp;  "; <BR> ss &nbsp; += &nbsp;  
+            "文件类型 &nbsp;  "; <BR> ss &nbsp; += &nbsp;  "属性 "; <BR> ss &nbsp; += 
+            &nbsp;  "大小 &nbsp;  " &nbsp; ; <BR> ss &nbsp; += &nbsp;  "最后访问日期 " 
+            &nbsp; ; <BR> ss &nbsp; += &nbsp;  "最后修改日期 "; <BR> ss &nbsp; += 
+            &nbsp;  "路径文件名 " &nbsp; ; <BR> ss &nbsp; += &nbsp;  "父文件夹 " &nbsp;  
+            &nbsp; ; <BR> ss &nbsp; += &nbsp;  "短文件名= "; <BR> ss &nbsp; += 
+            &nbsp;  "短路径名= "; <BR> document.write &nbsp; (ss &nbsp; + &nbsp;  " 
+            &lt;br&gt;  "); <BR> SF &nbsp; = &nbsp; new &nbsp; Enumerator &nbsp; 
+            (fdir.Files); <BR> for &nbsp; (ff= &nbsp; 
+            SF.moveFirst();SF.atEnd();SF.moveNext()) &nbsp; { <BR>  &nbsp;  
+            &nbsp;  &nbsp;  &nbsp; ff &nbsp; = &nbsp; SF.item(); &nbsp;  &nbsp;  
+            &nbsp;  <BR> ss &nbsp; += &nbsp; ff.Name &nbsp; + "\r\n "; <BR> ss 
+            &nbsp; += &nbsp; ff.Type+ "\r\n "; <BR> ss &nbsp; += &nbsp; 
+            AttrInfo(ff.Attributes) &nbsp; + "\r\n "; <BR> ss &nbsp; += &nbsp; 
+            ff.Size &nbsp; + "B " &nbsp; + "\r\n "; <BR> ss &nbsp; += &nbsp; 
+            ff.Path+ "\r\n "; <BR> document.write &nbsp; (ss &nbsp; + &nbsp;  " 
+            &lt;br&gt;  "); <BR>  &nbsp; } <BR> return; <BR> } <BR>  &nbsp;  
+            <BR><BR> 说明 &nbsp; 只有把new &nbsp; Enumerator &nbsp; 
+            (fdir.Files)中的fdir.Files改为fdir.SubFolders，本程序就可用来显示子文件夹清单信息。 <BR> 
+            </DIV><!--End_rbody_20821167//--></TD></TR>
+        <TR>
+          <TD csdnid="rmodify_20821167"></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class="rb">
+      <DIV class="fbarb">
+      <UL>
+        <LI><A class="dr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20821167&amp;type=0&amp;v=13');LogClickCount(this,113);}catch(ex){}return false;" 
+        href="javascript:;">对我有用</A>[<SPAN title="该回复被0个用户给予好评" csdnid="racount_20821167">0</SPAN>]</LI>
+        <LI><A class="gr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20821167&amp;type=1&amp;v=13');LogClickCount(this,114);}catch(ex){}return false;" 
+        href="javascript:;">丢个板砖</A>[<SPAN title="该回复被0个用户给予差评" csdnid="rucount_20821167">0</SPAN>]</LI>
+        <LI><A class="gr" onclick="try{Quote(2);}catch(ex){};return false" href="javascript:;">引用</A></LI>
+        <LI><A class="dr" onclick="try{report(2);}catch(ex){}return false;" 
+        href="javascript:;">举报</A></LI>
+        <LI><A class="gr" onmousemove="try{showMenu(this,'http://forum.csdn.net/PointForum/Manage/ModifyReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20821167&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13','http://forum.csdn.net/PointForum/Manage/DeleteReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20821167&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13');return false}catch(ex){}" 
+        href="javascript:;">管理</A></LI>
+        <LI><A class="nob" href="http://topic.csdn.net/t/20040415/17/2969806.html#top">TOP</A></LI></UL>
+      <DIV class="rt"></DIV></DIV></TD></TR></TBODY></TABLE>
+<DIV class="clear"></DIV>
+<TABLE class="mframe" cellSpacing="0" cellPadding="0" csdnid="rt_20841095">
+  <TBODY>
+  <TR>
+    <TD class="lf" rowSpan="2">
+      <DIV class="df">
+      <UL>
+        <LI class="center"><A onclick="LogClickCount(this,111);" href="http://hi.csdn.net/wanghr100" 
+        target="_blank"><IMG onmouseover="try{showUserCard(this,'wanghr100')}catch(ex){};" 
+        title="wanghr100用户自定义头像" alt="wanghr100用户头像" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/2_wanghr100.gif"></A></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：82225；截至2011-11-27日，用户的总技术分排名为：120"><DFN><A 
+        onclick="LogClickCount(this,111);" href="http://hi.csdn.net/wanghr100" 
+        target="_blank">wanghr100</A></DFN></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：82225；截至2011-11-27日，用户的总技术分排名为：120">(灰豆宝宝.net(努力工作))</LI>
+        <LI class="honor"></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：82225；截至2011-11-27日，用户的总技术分排名为：120">等　级：<IMG 
+        class="grade star4" alt="" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/blank(1).gif"></LI>
+        <LI>
+        <DIV class="medalregion">
+        <DIV style='background: url("http://csdnimg.cn/bbs/m/i/red_2.gif") no-repeat; width: 35px; height: 40px;' 
+        title="勋章:红花 获得原因: 2002年12月 多媒体/设计/Flash/Silverlight 开发大版内专家分月排行榜第一;2004年3月 多媒体/设计/Flash/Silverlight 开发大版内专家分月排行榜第一;2004年4月 Web 开发大版内专家分月排行榜第一;2004年5月 Web 开发大版内专家分月排行榜第一;2004年6月 Web 开发大版内专家分月排行榜第一;2004年7月 Web 开发大版内专家分月排行榜第一">
+        <P class="medalnum">6</P></DIV>
+        <DIV style='background: url("http://csdnimg.cn/bbs/m/i/yellow_2.gif") no-repeat; width: 35px; height: 40px;' 
+        title="勋章:黄花 获得原因: 2003年10月 多媒体/设计/Flash/Silverlight 开发大版内专家分月排行榜第二;2003年11月 多媒体/设计/Flash/Silverlight 开发大版内专家分月排行榜第二;2003年12月 多媒体/设计/Flash/Silverlight 开发大版内专家分月排行榜第二;2004年3月 Web 开发大版内专家分月排行榜第二">
+        <P class="medalnum">4</P></DIV></DIV></LI></UL></DIV></TD>
+    <TD class="rw">
+      <DIV class="fbart"><DFN>#3楼 得分：20</DFN>回复于：2004-04-16 13:18:12</DIV><A 
+      name="r_20841095"></A>
+      <TABLE class="mtxt" cellSpacing="0" cellPadding="0">
+        <TBODY>
+        <TR>
+          <TD id="rbody_20841095" csdnid="rbody_20841095">
+            <DIV class="msgfont">可以,不过,会有安全提示. <BR><BR>  &lt;script&gt;  <BR> 
+            function &nbsp; WriteDemo(s1) <BR> { <BR>  &nbsp;  &nbsp;  &nbsp; 
+            var &nbsp; fso, &nbsp; f, &nbsp; r <BR>  &nbsp;  &nbsp;  &nbsp; var 
+            &nbsp; ForReading &nbsp; = &nbsp; 1, &nbsp; ForWriting &nbsp; = 
+            &nbsp; 2; <BR>  &nbsp;  &nbsp;  &nbsp; fso &nbsp; = &nbsp; new 
+            &nbsp; ActiveXObject( "Scripting.FileSystemObject ") <BR>  &nbsp;  
+            &nbsp;  &nbsp; f &nbsp; = &nbsp; fso.OpenTextFile( "c:\\testfile.txt 
+            ", &nbsp; ForWriting, &nbsp; true) <BR>  &nbsp;  &nbsp;  &nbsp; 
+            f.Write(s1); <BR>  &nbsp;  &nbsp;  &nbsp; f.Close(); <BR>  &nbsp;  
+            &nbsp;  &nbsp; document.all.txt.value= " "; <BR> } <BR>  
+            &lt;/script&gt;  <BR>  &lt;textarea &nbsp; name=txt&gt;  
+            &lt;/textarea&gt;  <BR>  &lt;input &nbsp; type=button &nbsp; value= 
+            "Write " &nbsp; onclick= "WriteDemo(document.all.txt.value) "&gt; 
+            </DIV><!--End_rbody_20841095//--></TD></TR>
+        <TR>
+          <TD csdnid="rmodify_20841095"></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class="rb">
+      <DIV class="fbarb">
+      <UL>
+        <LI><A class="dr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20841095&amp;type=0&amp;v=13');LogClickCount(this,113);}catch(ex){}return false;" 
+        href="javascript:;">对我有用</A>[<SPAN title="该回复被0个用户给予好评" csdnid="racount_20841095">0</SPAN>]</LI>
+        <LI><A class="gr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20841095&amp;type=1&amp;v=13');LogClickCount(this,114);}catch(ex){}return false;" 
+        href="javascript:;">丢个板砖</A>[<SPAN title="该回复被0个用户给予差评" csdnid="rucount_20841095">0</SPAN>]</LI>
+        <LI><A class="gr" onclick="try{Quote(3);}catch(ex){};return false" href="javascript:;">引用</A></LI>
+        <LI><A class="dr" onclick="try{report(3);}catch(ex){}return false;" 
+        href="javascript:;">举报</A></LI>
+        <LI><A class="gr" onmousemove="try{showMenu(this,'http://forum.csdn.net/PointForum/Manage/ModifyReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20841095&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13','http://forum.csdn.net/PointForum/Manage/DeleteReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20841095&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13');return false}catch(ex){}" 
+        href="javascript:;">管理</A></LI>
+        <LI><A class="nob" href="http://topic.csdn.net/t/20040415/17/2969806.html#top">TOP</A></LI></UL>
+      <DIV class="rt"></DIV></DIV></TD></TR></TBODY></TABLE>
+<DIV class="clear"></DIV>
+<TABLE class="mframe" cellSpacing="0" cellPadding="0" csdnid="rt_20841639">
+  <TBODY>
+  <TR>
+    <TD class="lf" rowSpan="2">
+      <DIV class="df">
+      <UL>
+        <LI class="center"><A onclick="LogClickCount(this,111);" href="http://hi.csdn.net/blucecat" 
+        target="_blank"><IMG onmouseover="try{showUserCard(this,'blucecat')}catch(ex){};" 
+        title="blucecat用户自定义头像" alt="blucecat用户头像" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/2_blucecat.gif"></A></LI>
+        <LI title="截至2011-12-03 20:02:08，用户的总技术分为：4748；截至2011-11-27日，用户的总技术分排名为：5884"><DFN><A 
+        onclick="LogClickCount(this,111);" href="http://hi.csdn.net/blucecat" 
+        target="_blank">blucecat</A></DFN></LI>
+        <LI title="截至2011-12-03 20:02:08，用户的总技术分为：4748；截至2011-11-27日，用户的总技术分排名为：5884">(广种薄收)</LI>
+        <LI class="honor"></LI>
+        <LI title="截至2011-12-03 20:02:08，用户的总技术分为：4748；截至2011-11-27日，用户的总技术分排名为：5884">等　级：<IMG 
+        class="grade user2" alt="" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/blank(1).gif"></LI>
+        <LI></LI></UL></DIV></TD>
+    <TD class="rw">
+      <DIV class="fbart"><DFN>#4楼 得分：0</DFN>回复于：2004-04-16 13:34:22</DIV><A 
+      name="r_20841639"></A>
+      <TABLE class="mtxt" cellSpacing="0" cellPadding="0">
+        <TBODY>
+        <TR>
+          <TD id="rbody_20841639" csdnid="rbody_20841639">
+            <DIV class="msgfont">读写xml应该不会有提示</DIV>
+        <!--End_rbody_20841639//--></TD></TR>
+        <TR>
+          <TD csdnid="rmodify_20841639"></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class="rb">
+      <DIV class="fbarb">
+      <UL>
+        <LI><A class="dr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20841639&amp;type=0&amp;v=13');LogClickCount(this,113);}catch(ex){}return false;" 
+        href="javascript:;">对我有用</A>[<SPAN title="该回复被0个用户给予好评" csdnid="racount_20841639">0</SPAN>]</LI>
+        <LI><A class="gr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20841639&amp;type=1&amp;v=13');LogClickCount(this,114);}catch(ex){}return false;" 
+        href="javascript:;">丢个板砖</A>[<SPAN title="该回复被0个用户给予差评" csdnid="rucount_20841639">0</SPAN>]</LI>
+        <LI><A class="gr" onclick="try{Quote(4);}catch(ex){};return false" href="javascript:;">引用</A></LI>
+        <LI><A class="dr" onclick="try{report(4);}catch(ex){}return false;" 
+        href="javascript:;">举报</A></LI>
+        <LI><A class="gr" onmousemove="try{showMenu(this,'http://forum.csdn.net/PointForum/Manage/ModifyReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20841639&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13','http://forum.csdn.net/PointForum/Manage/DeleteReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20841639&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13');return false}catch(ex){}" 
+        href="javascript:;">管理</A></LI>
+        <LI><A class="nob" href="http://topic.csdn.net/t/20040415/17/2969806.html#top">TOP</A></LI></UL>
+      <DIV class="rt"></DIV></DIV></TD></TR></TBODY></TABLE>
+<DIV class="clear"></DIV>
+<TABLE class="mframe" cellSpacing="0" cellPadding="0" csdnid="rt_20841663">
+  <TBODY>
+  <TR>
+    <TD class="lf" rowSpan="2">
+      <DIV class="df">
+      <UL>
+        <LI class="center"><A onclick="LogClickCount(this,111);" href="http://hi.csdn.net/blucecat" 
+        target="_blank"><IMG onmouseover="try{showUserCard(this,'blucecat')}catch(ex){};" 
+        title="blucecat用户自定义头像" alt="blucecat用户头像" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/2_blucecat.gif"></A></LI>
+        <LI title="截至2011-12-03 20:02:08，用户的总技术分为：4748；截至2011-11-27日，用户的总技术分排名为：5884"><DFN><A 
+        onclick="LogClickCount(this,111);" href="http://hi.csdn.net/blucecat" 
+        target="_blank">blucecat</A></DFN></LI>
+        <LI title="截至2011-12-03 20:02:08，用户的总技术分为：4748；截至2011-11-27日，用户的总技术分排名为：5884">(广种薄收)</LI>
+        <LI class="honor"></LI>
+        <LI title="截至2011-12-03 20:02:08，用户的总技术分为：4748；截至2011-11-27日，用户的总技术分排名为：5884">等　级：<IMG 
+        class="grade user2" alt="" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/blank(1).gif"></LI>
+        <LI></LI></UL></DIV></TD>
+    <TD class="rw">
+      <DIV class="fbart"><DFN>#5楼 得分：0</DFN>回复于：2004-04-16 13:35:34</DIV><A 
+      name="r_20841663"></A>
+      <TABLE class="mtxt" cellSpacing="0" cellPadding="0">
+        <TBODY>
+        <TR>
+          <TD id="rbody_20841663" csdnid="rbody_20841663">
+            <DIV class="msgfont">xml保存数据非常好哟</DIV>
+        <!--End_rbody_20841663//--></TD></TR>
+        <TR>
+          <TD csdnid="rmodify_20841663"></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class="rb">
+      <DIV class="fbarb">
+      <UL>
+        <LI><A class="dr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20841663&amp;type=0&amp;v=13');LogClickCount(this,113);}catch(ex){}return false;" 
+        href="javascript:;">对我有用</A>[<SPAN title="该回复被0个用户给予好评" csdnid="racount_20841663">0</SPAN>]</LI>
+        <LI><A class="gr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20841663&amp;type=1&amp;v=13');LogClickCount(this,114);}catch(ex){}return false;" 
+        href="javascript:;">丢个板砖</A>[<SPAN title="该回复被0个用户给予差评" csdnid="rucount_20841663">0</SPAN>]</LI>
+        <LI><A class="gr" onclick="try{Quote(5);}catch(ex){};return false" href="javascript:;">引用</A></LI>
+        <LI><A class="dr" onclick="try{report(5);}catch(ex){}return false;" 
+        href="javascript:;">举报</A></LI>
+        <LI><A class="gr" onmousemove="try{showMenu(this,'http://forum.csdn.net/PointForum/Manage/ModifyReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20841663&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13','http://forum.csdn.net/PointForum/Manage/DeleteReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20841663&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13');return false}catch(ex){}" 
+        href="javascript:;">管理</A></LI>
+        <LI><A class="nob" href="http://topic.csdn.net/t/20040415/17/2969806.html#top">TOP</A></LI></UL>
+      <DIV class="rt"></DIV></DIV></TD></TR></TBODY></TABLE>
+<DIV class="clear"></DIV>
+<TABLE class="mframe" cellSpacing="0" cellPadding="0" csdnid="rt_20844739">
+  <TBODY>
+  <TR>
+    <TD class="lf" rowSpan="2">
+      <DIV class="df">
+      <UL>
+        <LI class="center"><A onclick="LogClickCount(this,111);" href="http://hi.csdn.net/caorobby" 
+        target="_blank"><IMG onmouseover="try{showUserCard(this,'caorobby')}catch(ex){};" 
+        title="caorobby用户自定义头像" alt="caorobby用户头像" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/2_caorobby.gif"></A></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：769；截至2011-11-27日，用户的总技术分排名为：30944"><DFN><A 
+        onclick="LogClickCount(this,111);" href="http://hi.csdn.net/caorobby" 
+        target="_blank">caorobby</A></DFN></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：769；截至2011-11-27日，用户的总技术分排名为：30944">(黑风)</LI>
+        <LI class="honor"></LI>
+        <LI title="截至2011-12-03 20:11:39，用户的总技术分为：769；截至2011-11-27日，用户的总技术分排名为：30944">等　级：<IMG 
+        class="grade user2" alt="" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/blank(1).gif"></LI>
+        <LI></LI></UL></DIV></TD>
+    <TD class="rw">
+      <DIV class="fbart"><DFN>#6楼 得分：0</DFN>回复于：2004-04-16 15:07:54</DIV><A 
+      name="r_20844739"></A>
+      <TABLE class="mtxt" cellSpacing="0" cellPadding="0">
+        <TBODY>
+        <TR>
+          <TD id="rbody_20844739" csdnid="rbody_20844739">
+            <DIV class="msgfont">关注</DIV><!--End_rbody_20844739//--></TD></TR>
+        <TR>
+          <TD csdnid="rmodify_20844739"></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class="rb">
+      <DIV class="fbarb">
+      <UL>
+        <LI><A class="dr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20844739&amp;type=0&amp;v=13');LogClickCount(this,113);}catch(ex){}return false;" 
+        href="javascript:;">对我有用</A>[<SPAN title="该回复被0个用户给予好评" csdnid="racount_20844739">0</SPAN>]</LI>
+        <LI><A class="gr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20844739&amp;type=1&amp;v=13');LogClickCount(this,114);}catch(ex){}return false;" 
+        href="javascript:;">丢个板砖</A>[<SPAN title="该回复被0个用户给予差评" csdnid="rucount_20844739">0</SPAN>]</LI>
+        <LI><A class="gr" onclick="try{Quote(6);}catch(ex){};return false" href="javascript:;">引用</A></LI>
+        <LI><A class="dr" onclick="try{report(6);}catch(ex){}return false;" 
+        href="javascript:;">举报</A></LI>
+        <LI><A class="gr" onmousemove="try{showMenu(this,'http://forum.csdn.net/PointForum/Manage/ModifyReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20844739&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13','http://forum.csdn.net/PointForum/Manage/DeleteReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20844739&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13');return false}catch(ex){}" 
+        href="javascript:;">管理</A></LI>
+        <LI><A class="nob" href="http://topic.csdn.net/t/20040415/17/2969806.html#top">TOP</A></LI></UL>
+      <DIV class="rt"></DIV></DIV></TD></TR></TBODY></TABLE>
+<DIV class="clear"></DIV>
+<TABLE class="mframe" cellSpacing="0" cellPadding="0" csdnid="rt_20846752">
+  <TBODY>
+  <TR>
+    <TD class="lf" rowSpan="2">
+      <DIV class="df">
+      <UL>
+        <LI class="center"><A onclick="LogClickCount(this,111);" href="http://hi.csdn.net/littleboys" 
+        target="_blank"><IMG onmouseover="try{showUserCard(this,'littleboys')}catch(ex){};" 
+        title="littleboys用户自定义头像" alt="littleboys用户头像" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/2_littleboys.gif"></A></LI>
+        <LI title="截至2011-12-03 20:05:51，用户的总技术分为：8160；截至2011-11-27日，用户的总技术分排名为：3317"><DFN><A 
+        onclick="LogClickCount(this,111);" href="http://hi.csdn.net/littleboys" 
+        target="_blank">littleboys</A></DFN></LI>
+        <LI title="截至2011-12-03 20:05:51，用户的总技术分为：8160；截至2011-11-27日，用户的总技术分排名为：3317">(飞龙)</LI>
+        <LI class="honor"></LI>
+        <LI title="截至2011-12-03 20:05:51，用户的总技术分为：8160；截至2011-11-27日，用户的总技术分排名为：3317">等　级：<IMG 
+        class="grade star1" alt="" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/blank(1).gif"></LI>
+        <LI></LI></UL></DIV></TD>
+    <TD class="rw">
+      <DIV class="fbart"><DFN>#7楼 得分：0</DFN>回复于：2004-04-16 16:15:50</DIV><A 
+      name="r_20846752"></A>
+      <TABLE class="mtxt" cellSpacing="0" cellPadding="0">
+        <TBODY>
+        <TR>
+          <TD id="rbody_20846752" csdnid="rbody_20846752">
+            <DIV class="msgfont">没有问题，可以用server端的程序，以前写过的。</DIV><!--End_rbody_20846752//--></TD></TR>
+        <TR>
+          <TD csdnid="rmodify_20846752"></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class="rb">
+      <DIV class="fbarb">
+      <UL>
+        <LI><A class="dr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20846752&amp;type=0&amp;v=13');LogClickCount(this,113);}catch(ex){}return false;" 
+        href="javascript:;">对我有用</A>[<SPAN title="该回复被0个用户给予好评" csdnid="racount_20846752">0</SPAN>]</LI>
+        <LI><A class="gr nob" onclick="try{Estimate(this,'http://forum.csdn.net/PointForum/Forum/EstimateReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;replyId=20846752&amp;type=1&amp;v=13');LogClickCount(this,114);}catch(ex){}return false;" 
+        href="javascript:;">丢个板砖</A>[<SPAN title="该回复被0个用户给予差评" csdnid="rucount_20846752">0</SPAN>]</LI>
+        <LI><A class="gr" onclick="try{Quote(7);}catch(ex){};return false" href="javascript:;">引用</A></LI>
+        <LI><A class="dr" onclick="try{report(7);}catch(ex){}return false;" 
+        href="javascript:;">举报</A></LI>
+        <LI><A class="gr" onmousemove="try{showMenu(this,'http://forum.csdn.net/PointForum/Manage/ModifyReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20846752&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13','http://forum.csdn.net/PointForum/Manage/DeleteReply.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;replyId=20846752&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13');return false}catch(ex){}" 
+        href="javascript:;">管理</A></LI>
+        <LI><A class="nob" href="http://topic.csdn.net/t/20040415/17/2969806.html#top">TOP</A></LI></UL>
+      <DIV class="rt"></DIV></DIV></TD></TR></TBODY></TABLE>
+<DIV class="clear"></DIV><!--append reply--><!-- google_ad_section_end -->
+<DIV class="fm">
+<UL class="menu">
+  <LI class="bt1"><A class="bt1" href="javascript:;">管理菜单<!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <UL>
+    <LI></LI></UL></A>
+  <UL>
+    <LI><A id="a_head_recreate" href="http://forum.csdn.net/PointForum/BuildTopic.aspx?topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;return=">生成帖子</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/Tops/InsertTop.aspx?topicUrl=http://topic.csdn.net/t/20040415/17/2969806.html&amp;text=%e8%af%b7%e9%97%ae%e7%94%a8javascript%e8%83%bd%e5%90%a6%e6%8a%8a%e6%95%b0%e6%8d%ae%e5%86%99%e5%85%a5%e6%96%87%e6%9c%ac&amp;sectionID=467d91e3-dd10-480b-a322-71b65e66c736',width:600,height:265,title:'置顶'});}catch(ex){}return false;" 
+    href="javascript:;">置顶</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/SetPrime.aspx?forumid=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicid=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:400,height:255,title:'推荐'});}catch(ex){}return false;" 
+    href="javascript:;">推荐</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/SetNotPrime.aspx?topicid=00000000-0000-0000-0000-000002969806&amp;forumid=467d91e3-dd10-480b-a322-71b65e66c736&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:400,height:255,title:'取消推荐'});}catch(ex){}return false;" 
+    href="javascript:;">取消推荐</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/LockTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:425,height:330,title:'锁定'});}catch(ex){}return false;" 
+    href="javascript:;">锁定</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/UnlockTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:425,height:330,title:'解锁'});}catch(ex){}return false;" 
+    href="javascript:;">解锁</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/MoveTopic.aspx?fid=467d91e3-dd10-480b-a322-71b65e66c736&amp;tid=00000000-0000-0000-0000-000002969806&amp;date=2004-04-15+17%3a10%3a26',width:580,height:270,title:'移动'});}catch(ex){}return false;" 
+    href="javascript:;">移动</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/ModifyTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;v=13',width:670,height:655,title:'编辑'});}catch(ex){}return false;" 
+    href="javascript:;">编辑</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/DeleteTopic.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26',width:425,height:330,title:'删除'});}catch(ex){}return false;" 
+    href="javascript:;">删除</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Forum/TopicAddPoint.aspx?forumId=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicId=00000000-0000-0000-0000-000002969806&amp;date=2004-04-15+17%3a10%3a26&amp;v=13',width:420,height:300,title:'帖子加分'});}catch(ex){}return false;" 
+    href="javascript:;">帖子加分</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/TitleStyle.aspx?topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;url=http://topic.csdn.net/t/20040415/17/2969806.html',width:670,height:307,title:'帖子高亮'});}catch(ex){}return false;" 
+    href="javascript:;">帖子高亮</A></LI>
+    <LI><A onclick="try{showWindow({url:'http://forum.csdn.net/PointForum/Manage/RemoveTitleStyle.aspx?topicId=00000000-0000-0000-0000-000002969806&amp;postDate=2004-04-15+17%3a10%3a26&amp;url=http://topic.csdn.net/t/20040415/17/2969806.html',width:670,height:255,title:'取消高亮'});}catch(ex){}return false;" 
+    href="javascript:;">取消高亮</A></LI></UL><!--[if lte IE 6]></td></tr></table></a><![endif]--></LI>
+  <LI><A class="bt2" href="http://forum.csdn.net/PointForum/Manage/TopicManageView.aspx?forumID=467d91e3-dd10-480b-a322-71b65e66c736&amp;topicID=00000000-0000-0000-0000-000002969806&amp;date=2004-04-15+17%3a10%3a26&amp;v=13">结&nbsp;&nbsp;帖</A></LI>
+  <LI><A class="bt3" href="http://forum.csdn.net/PointForum/Forum/PostTopic.aspx?forumID=467d91e3-dd10-480b-a322-71b65e66c736" 
+  target="_blank">发&nbsp;&nbsp;帖</A></LI>
+  <LI><A class="bt4" onclick="try{ReplyBoxFocus();return false}catch(ex){}" 
+  href="http://topic.csdn.net/t/20040415/17/2969806.html#r_achor">回&nbsp;&nbsp;复</A></LI></UL></DIV>
+<TABLE class="comt" cellSpacing="0" cellPadding="0">
+  <TBODY>
+  <TR>
+    <TD style="width: 200px;"><IFRAME id="Iframe1" height="415" marginHeight="0" 
+      src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/ad4.htm" 
+      frameBorder="0" width="200" marginWidth="0" scrolling="no"></IFRAME></TD>
+    <TD><IFRAME id="replyframe" class="replyframe" height="415" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/ReplyT.htm" 
+      frameBorder="0" width="100%" scrolling="no" csdnid="rframe"></IFRAME>
+  </TD></TR></TBODY></TABLE>
+<SCRIPT type="text/javascript">
+new Image().src="http://forum.csdn.net/Common/TopicRead.ashx?postDate=2004-04-15+17%3a10%3a26&topicID=00000000-0000-0000-0000-000002969806&"+(new Date().getTime().toString(36));
+
+new Image().src="http://forum.csdn.net/PointForum/SetLatestVisitedForum.ashx?sectionid=467d91e3-dd10-480b-a322-71b65e66c736";
+</SCRIPT>
+
+<SCRIPT type="text/javascript" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/publib_footer.js"></SCRIPT>
+<IMG style="display: none;" border="0" alt="" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/pv.htm" 
+width="0" height="0">
+<DIV>
+<SCRIPT type="text/javascript" src="请问用javascript能否把数据写入文本%20-%20Web%20开发%20-%20JavaScript%20-%20CSDN_NET_files/counter.js"></SCRIPT>
+</DIV>
+<DIV style="left: 10px; top: 184px; width: 120px; display: none; position: absolute;" 
+id="ad_left"><A style="float: right;" onclick="javascript:this.parentNode.style.display='none';return false;" 
+href="http://topic.csdn.net/t/20040415/17/2969806.html#">[关闭]</A>
+<SCRIPT type="text/javascript">try {
+		var pdate = "" + parent.eval("tinfo.pdate");
+		if (pdate) {
+			pdate = new Date(pdate.replace(/-/g, "/"));
+			var today = new Date();
+			showad = (today.getTime() - pdate.getTime()) / 1000 / 60 / 60 / 24 > 30;
+		}
+	} catch (ex) { };
+showad=true;
+	try {
+		var ad_left = "";
+		if (showad && screen.availWidth >= 1280) {
+			ad_left += '<' + 'script type=\"text/javascript\">';
+			ad_left += 'google_ad_client = "pub-1076724771190722";';
+			ad_left += 'google_ad_slot =\"5633584852\";';
+			ad_left += 'google_ad_width = 120;';
+			ad_left += 'google_ad_height = 600;';
+			ad_left += '</' + 'script>';
+			ad_left += '<' + 'script type=\"text/javascript\"';
+			ad_left += 'src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\">';
+			ad_left += '</' + 'script>';
+		}
+		document.write(ad_left);
+		document.getElementById("ad_left").style.display = "";
+	} catch (e) { }
+</SCRIPT>
+</DIV>
+<DIV style="top: 184px; width: 120px; right: 10px; display: none; position: absolute;" 
+id="ad_right"><A style="float: left;" onclick="javascript:this.parentNode.style.display='none';return false;" 
+href="http://topic.csdn.net/t/20040415/17/2969806.html#">[关闭]</A>
+<SCRIPT type="text/javascript">try {
+		var ad_right = "";
+		if (showad && screen.availWidth >= 1280) {
+			ad_right += '<' + 'script type=\"text/javascript\">';
+			ad_right += 'google_ad_client = "pub-1076724771190722";';
+			ad_right += 'google_ad_slot =\"9259923286\";';
+			ad_right += 'google_ad_width = 120;';
+			ad_right += 'google_ad_height = 600;';
+			ad_right += '</' + 'script>';
+			ad_right += '<' + 'script type=\"text/javascript\"';
+			ad_right += 'src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\">';
+			ad_right += '</' + 'script>';
+		}
+		document.write(ad_right);
+		document.getElementById("ad_right").style.display = "";
+	} catch (e) { }
+</SCRIPT>
+</DIV></BODY></HTML>

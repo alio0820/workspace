@@ -1,0 +1,141 @@
+html {
+    font-size: 100%;
+}
+body {
+	padding-bottom: 40px;
+    background-color: #FFFFFF;
+    color: #555555;
+    font-family: "Ubuntu",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+}
+h2 {
+    font-size: 24px;
+    line-height: 36px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #317EAC;
+    font-family: 'Karla',sans-serif;
+    font-weight: bold;
+    margin: 0;
+    text-rendering: optimizelegibility;
+}
+.container-fluid:after {
+    clear: both;
+}
+.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.row-fluid:after {
+    clear: both;
+}
+.row-fluid:before, .row-fluid:after {
+    content: "";
+    display: table;
+}
+.row-fluid {
+    width: 100%;
+}
+div.center, p.center, img.center {
+    display: block;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+}
+.login-header {
+    height: 120px;
+    padding-top: 30px;
+}
+.row-fluid .span5 {
+    width: 40.1709%;
+}
+.well {
+    background-color: #F5F5F5;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+}
+.alert-info {
+    background-color: #EDEBE1;
+    border-color: #E0D9CB;
+    border-radius: 4px 4px 4px 4px;
+    color: #817B58;
+    margin-bottom: 18px;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+form {
+    margin: 0 0 18px;
+}
+fieldset {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+.login-box .input-prepend {
+    margin-bottom: 10px;
+}
+ .form-horizontal .input-prepend {
+    display: inline-block;
+    margin-bottom: 0;
+}
+.input-prepend .add-on:first-child, .input-prepend .btn:first-child {
+    border-radius: 3px 0 0 3px;
+}
+.input-prepend .add-on, .input-prepend .btn {
+    margin-right: -1px;
+}
+.input-prepend .add-on, .input-append .add-on, .input-prepend .btn, .input-append .btn {
+    --border-radius: 0 0 0 0;
+    margin-left: -1px;
+}
+.input-prepend .add-on, .input-append .add-on {
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    font-weight: normal;
+    height: 18px;
+    line-height: 18px;
+    min-width: 16px;
+    padding: 4px 5px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    vertical-align: middle;
+    width: auto;
+}
+i[class^="icon-"] {
+    opacity: 0.8;
+}
+[class^="icon-"], [class*=" icon-"] {
+    background-image: url("../img/glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    width: 14px;
+}
+.icon-user {
+    background-position: -168px 0;
+}
+.input-prepend input[class*="span"], .input-prepend .uneditable-input[class*="span"] {
+    display: inline-block;
+}
+input[class*="span"]{
+    float: none;
+    margin-left: 0;
+}
+.row-fluid .span10 {
+    width: 82.906%;
+}
+.row-fluid [class*="span"] {
+    min-height: 28px;
+}

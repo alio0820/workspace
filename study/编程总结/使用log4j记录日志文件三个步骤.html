@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body>  
+<div># 1.使用log4j记录日志文件三个步骤<br />
+  # 第一步：在工程中加入jar文件 log4j-1.2.8jar ,在Eclipse   中选择菜单项目-属性-Java构建路径-库-添加外部Jar选项<br />
+  # 第二步：创建log4j.properties 文件<br />
+  #   第三步：编写log4j.properties 文件，配置文件信息<br />
+  # 2. 获取日志记录器：这个记录器将负责控制日志信息<br />
+  #  Logger   logger=Logger.getLogger(Accp TeacherLog4j.class.getName());<br />
+  # logger.debug(&quot;.......&quot;);<br />
+  # 3.log4j 允许输出多个输出源，一个输出源称作一个appender ,其中stdout   使用ConsoleAppender 通过配置target 属性，把日志信息输出到控制信息台<br />
+  #  如果appender   命名为file则使用FileAppender通过配置file属性，把日志信息写道指定的文件中<br />
+  # 4.layout 指定日志信息的输出格式：通过配置   layout.ConversionPattern属性<br />
+  # %d｛yyyy-MM-dd HH:mm:ss｝用来设置输出日志的时间格式<br />
+  # %m用来输出代码中的指定信息<br />
+  # %n用来输出一个回车换行符<br />
+  # %1用来输出日志事件发生的位置，包括类名，发生的线程，以及在代码中的行数<br />
+  # 5.日志信息输出的优先级：从高到低依次是：error   ,warn,info,debug<br />
+  #把日志信息输出控制台<br />
+  log4j.appender.stdout=org.apache.log4j.ConsoleAppender<br />
+  log4j.appender.stdout.Target=System.out<br />
+  log4j.appender.stdout.layout=org.apache.log4j.patternLayout<br />
+  log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd   HH:mm:ss}%m%n<br />
+  #把日志文件输出到accp.log文件<br />
+  log4j.appender.file=org.apache.log4j.FileAppender<br />
+  log4j.appender.file.File=accp.log<br />
+  log4j.appender.file.layout=org.apache.log4j.patternLayout<br />
+  log4j.appender.file.Layout.ConversionPatter=%d{yyyy-MM-dd   HH:mm:ss}%1%m%n<br />
+  #设置优先级，以及输出源<br />
+  log4j.rootLogger=debug,stdout,file//设置优先级别为debug、
+  日志被输出到多个输出源<br>
+
+注：优先级从高到低分别是ERROR、WARN、INFO、DEBUG
+在此处，如果优先级别设为info，那么使用debug方法打印的日志信息将不被输出
+<br />
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+try   { 
+            st   =   new   String(name.getBytes("ISO-8859-1"),"UTF-8"); 
+        } 
+        catch   (UnsupportedEncodingException   ex)   { 
+        }
+
+¹ýÂË    
+ <filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>com.etc.OurProgram.filter.EncodingCtrl</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ignore</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+
+<struts>
+<constant name="struts.i18n.encoding" value="utf-8"></constant>
+<package name="struts2" namespace="/" extends="struts-default">
+		<action name="ProjectManegement" class="com.etc.OurProgram.web.action.ProjectManegementAction" method="add">
+			<result name="suce">/ProjectManegement/ProjectManegement.jsp</result>
+			<result name="tiaozhuan" type="redirect">ProjectDatum?id=${id}</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="ProjectDatum" class="com.etc.OurProgram.web.action.ProjectManegementAction" method="add">
+			<result name="suce">/ProjectManegement/ProjectInformationVindicate.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+	</package>
+</struts>    
+

@@ -1,0 +1,5 @@
+安装好loadrunner11后
+1)退出程序，把下载文件中的lm70.dll和mlr5lprg.dll覆盖掉..\HP\LoadRunner\bin下的这两个文件 
+2)注意，win7的话一定要以管理员身份运行启动程序，启动后，点击 configuration->loadrunner license，此时可能会有两个许可证信息存在，退出程序，点击deletelicense.exe文件，来删除刚才得许可证信息（即时原来没有lisense最好也运行一下）
+3）再次打开程序， configuration->loadrunner license->new license，
+在弹出的输入框中输入license序列号AEABEXFR-YTIEKEKJJMFKEKEKWBRAUNQJU-KBYGB，点击确定，验证通过后，则破解成功！ 

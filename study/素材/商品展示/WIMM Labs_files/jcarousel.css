@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 100%; /* 100% */
+}
+
+.jcarousel-skin-tango .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:  1030px;/* 1030 */
+    margin: 0px auto;
+    height: 123px;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+    width: 206px;
+    height: 123px;
+	cursor:pointer;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+}

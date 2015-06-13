@@ -1,0 +1,21 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>状态栏</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+<script type="text/javascript" language="javascript" >
+function welcome()
+{
+    var name = prompt("请输入您的名字：","张三");
+    if(name==null)
+    document.write("你没有输入姓名");
+    else if(name=="")
+    document.write("您输入的名字为空");
+    else
+    window.defaultStatus = "欢迎您，"+name;  
+}
+</script>
+</head>
+<body onload="welcome()">
+</body>
+</html>

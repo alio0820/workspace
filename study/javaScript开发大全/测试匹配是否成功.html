@@ -1,0 +1,20 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+	<head>
+		<title>测试匹配是否成功</title>
+        <script>
+           var str= "Define a Class with a class definition.";
+           var myRegExp = /defin(\w+)/gi;
+           document.write("原字符串为：",str,"<br>");
+           document.write("正则表达式为：",myRegExp.source,"<br>");
+           var i =0;
+           while(myRegExp.test(str))
+           {
+               i++;
+               document.write("第",i,"次成功匹配的子字符串的结束位置为：",myRegExp.lastIndex,"<br>");
+           }
+       </script>
+	</head>
+	<body>
+	</body>
+</html>

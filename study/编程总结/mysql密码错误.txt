@@ -1,0 +1,4 @@
+如果运行java-web发现错误如下：
+    Access denied for user 'root'@'localhost' (using password: YES)
+
+注意修改下，action中连接mysql的密码是否正确

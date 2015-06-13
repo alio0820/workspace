@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>输出时间</title>
+<script language="JavaScript" type="text/javascript">
+var isnDay = new
+Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六","星期日");
+var today=new Date();
+var month=today.getMonth()+1;
+document.write(today.getFullYear()+"年"+month+"月"+today.getDate()+"日"+"   "+isnDay[today.getDay()])
+</script>
+</head>
+<body>
+</body>
+</html>
+<!--getYear()函数在稍高版本的浏览器，如IE 9、Chrome和FireFox在显示的时候就会出现年份的不正常显示，显示为“111年”，这个问题其实很容易解决。将取得系统年份的方法getYear换成getFullYear就OK了。-->

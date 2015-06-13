@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin:0; padding:0; }
+body { background:#64b17b url(../image/bg_body.jpg); font-family:Arial, Verdana, Helvetica, sans-serif; font-family:"雅黑宋体", "微软雅黑", "新宋体", "宋体"; font-size:.95em; color:#FFF; text-align:left; }
+a { text-decoration:none; color:#FFF; }
+h2, h3 { margin:5px 0; }
+p { margin-top:10px; }
+li { list-style:none; }
+img { border:none; }
+.menu_float_1 { position:absolute; left:10px; margin-top:50px; background: #076648; text-align:center; z-index:9999; }
+.menu_float_2 { position:absolute; right:10px; margin-top:50px; background: #076648; text-align:center; z-index:9999; }
+.h { clear:both; border-top:1px solid #038f3d; }
+.p { padding:20px; }
+.clear { clear:both; }
+.u { border-top:2px solid #038f3d; }
+p.time { font-size:.8em; }
+.txt { }
+.video { float:left; margin-right:10px; }
+.txt-1 { margin-left:10px; }
+.photo-1 { float:left; }
+.photo { display:inline; float:left; margin-right:10px; background:#038f3d; padding:10px; }
+.txt h3 { padding:5px; }
+/*--------------    li.petter a   ----------
+-----------*/
+li.petter a { background:#076648; }
+-->
+#main { background:#076648; width:900px; margin:0 auto; border:1px solid #024530; }
+/*-------------   header   ---------------
+-----*/
+#name { height:100px; background:#1a8c68; text-align:center; }
+#name h1 { padding:15px; color:#F90; font-size:4em; letter-spacing:1em; }
+#header { height:250px; }
+/*--Main Container--*/
+.main_view { float: left; position: relative; }
+/*--Window/Masking Styles--*/
+.window { height:250px; width: 900px; overflow: hidden; /*--Hides anything outside of the set width/height--*/ position: relative; }
+.image_reel { position: absolute; top: 0; left: 0; }
+.image_reel img { float: left; }
+/*--Paging Styles--*/
+.paging { position: absolute; bottom: 40px; right: -7px; width: 178px; height:47px; z-index: 100; /*--Assures the paging stays on the top layer--*/ text-align: center; line-height: 40px; background:url(../image/paging_bg2.png) no-repeat; display: none; /*--Hidden by default, will be later shown with jQuery--*/ }
+.paging a { padding: 5px; text-decoration: none; color: #fff; }
+.paging a.active { font-weight: bold; background: #920000; border: 1px solid #610000; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; }
+.paging a:hover { font-weight: bold; }
+/*------------   solution  --------------
+-----*/
+#solution { border-bottom:1px solid #013827; padding:20px; }
+#content-area-bottom { padding:10px 0; }
+li.content-area-bottom-li { background:#666; margin-bottom:10px; border:1px solid #222; }
+li.content-area-bottom-li img { width:218px; margin:10px; border:10px solid #333; float:left; }
+li.content-area-bottom-li p { color:#fff; background:#333; padding:10px; margin:10px; border:1px solid #222; line-height:1.4em; }
+/*-------------   menu   ----------------
+---*/
+#menu { height:41px; background:#222; border-top:1px solid #333; }
+#menu li { float:left; font-size:1em; }
+#menu li a { font-size:1.05em; color:#FFF; display: block; padding:10px 20px; letter-spacing:.15em; border-left: 1px #464646 solid; border-right:1px #0a0a0a solid; }
+#menu li a:hover { background:#b4c53d; color:#000; }
+li#petter-1 a { border-left:none; }
+li#petter-5 a { border-right:1px #0a0a0a solid; }
+/*-------------  div_div  -------------
+-----*/
+#out_div { padding:8px; border:1px solid #444; }
+#in_div { background:#038f3d; float:left; padding:8px; margin-right:10px; }
+#line { margin:auto 10px; height:280px; float:left; background:#333; border-left:2px solid #090; }
+#in_right_div { padding:10px; }
+/*--------------  intro   ----------------
+-----*/
+.intro { width:420px; border:1px solid #003; float:left; margin:0 5px 10px 0; margin:10px 0; }
+.intro p { margin-top:0; }
+.title_intro { background:#2E4897; padding:5px 10px; font-size:1.5em; border-bottom:1px solid #030; color:#FFF; font-weight:bolder; }
+.txt_intro { padding:10px; background:#B7C1DF; color:#222; line-height:1.4em; }
+/*-------------- footer   ------------
+----*/
+#footer { clear:both; padding:20px; font-size:.9em; border-top:1px solid #1a8c68; }
+#footer p { font-size:1.2em; }
+#footer p a { color:#6F0; text-decoration:blink; }
+/*-------------  fanye   -----------
+------*/
+#fanye { height:20px; clear:both; padding:10px 30px; background:#222; text-align:left; margin-top:10px; border-bottom:1px solid #013827; border-top:1px solid #013827; }
+#fanye img { display:block; float:left; }
+#fanye p { display:block; float:left; margin-left:10px; }
+#fanye ul { float:right; }
+#fanye li { float:left; }
+#fanye a { background:#333; border:1px solid #111; margin:2px; padding:3px 8px; text-decoration:none; letter-spacing:.2em; font-size:.9em; }
+#fanye a:hover { border:1px solid #3f0; color:#000; background:#b4c53d; }
+/*------------   h-2---------
+---------*/
+#picture { border-bottom:1px solid #013827; }
+.back-top { height:20px; clear:both; padding:10px 30px; background:#222 url(../image/footer-bg.png); text-align:left; margin: 10px auto; }
+.back-top li { float:right; }
+.back-top a { background:#333; border:1px solid #111; color:#3f0; margin:2px; padding:2px 5px; text-decoration:none; }
+.back-top a:hover { border:1px solid #3f0; color:#000; background:#b4c53d; }

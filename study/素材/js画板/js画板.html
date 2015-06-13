@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+    <HEAD>
+        <TITLE>JS画板-Download by http://www.codefans.net</TITLE>
+        <META NAME="Generator" CONTENT="EditPlus">
+        <META NAME="Author" CONTENT="">
+        <META NAME="Keywords" CONTENT="">
+        <META NAME="Description" CONTENT="">
+        <SCRIPT LANGUAGE="JavaScript" src="wz_jsgraphics.js">
+        </SCRIPT>
+        <SCRIPT LANGUAGE="JavaScript">
+        <!--
+            function drawObj(el) {
+                el = this.el = document.getElementById(el);
+                this.gc = new jsGraphics(el);
+                o = this;
+                this.cacheTime = [];
+                this.cacheAction = [];
+                el.onmousedown = function() {
+                    o.draw = true;
+                }
+                document.onmouseup = function() {
+                    o.draw = false;
+                    o.start = null;
+                }
+                el.onmousemove = function(e) {
+                    e = window.event || e;
+                    if (!o.draw) return;
+                    if (o.start) {
+                        o.end = [e.x || e.pageX, e.y || e.pageY];
+                        o.gc.drawLine.apply(o.gc, o.start.concat(o.end));
+                        o.gc.paint();
+                        o.cacheAction.push("o.gc.drawLine.apply(o.gc,[" + o.start.concat(o.end) + "]);o.gc.paint();");
+						o.cacheTime.push(+new Date);
+                        o.start = o.end;
+                        return;
+                    }
+                    o.start = [e.x || e.pageX, e.y || e.pageY];
+					o.cacheTime.push(+new Date);
+                }
+            }
+            drawObj.prototype = {
+                setColor: function(c) {
+                    this.gc.setColor(c);
+                    this.cacheAction.push("o.gc.setColor('" + c + "');");
+					o.cacheTime.push(+new Date);
+                },
+                setStroke: function(c) {
+                    this.gc.setStroke(c);
+                    this.cacheAction.push("o.gc.setStroke('" + c + "');");
+					o.cacheTime.push(+new Date);
+                },
+                clear: function(c) {
+                    this.gc.clear(); ! c && (this.cacheAction.length = 0);
+                },
+                getCode: function() {
+                    //return this.lastHTML = this.el.innerHTML;
+                    return this.cacheAction.join('');
+                },
+                runCode: function(s) {
+                    s = s.split(';');
+                    this.repaint(s);
+                },
+                repaint: function(s) {
+					this.gc.setColor('#000000');
+					this.gc.setStroke(1);
+                    var c = ["o.setColor('" + this.gc.color + "');o.setStroke('" + this.gc.stroke + "');"];
+                    this.clear(true);
+                    var s1 = (s || this.cacheAction).concat(c);
+                    if (s1.length) {
+                        var o = this,i = 0,l = s1.length; 
+						(function() {
+                            if (i == l) return;
+                            window.eval(s1[i++]);
+                            setTimeout(arguments.callee, o.cacheTime[i]-o.cacheTime[i-1]);
+                        })();
+                    }
+                }
+            }
+            var dd;
+            window.onload = function() {
+                dd = new drawObj('test');
+                document.forms[0].reset();
+                intocolor();
+                document.body.onclick = OnDocumentClick;
+            }
+ 
+            //----------颜色面板--------------------------------
+            var ColorHex = new Array('00', '33', '66', '99', 'CC', 'FF');
+            var SpColorHex = new Array('FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', 'FF00FF');
+            var current = null;
+            function intocolor() {
+                var colorTable = ''
+                for (i = 0; i < 2; i++) {
+                    for (j = 0; j < 6; j++) {
+                        colorTable = colorTable + '<tr height=12>';
+                        colorTable = colorTable + '<td width=11 style="background-color:#000000">'
+ 
+                        if (i == 0) {
+                            colorTable = colorTable + '<td width=11 style="background-color:#' + ColorHex[j] + ColorHex[j] + ColorHex[j] + '">'
+                        } else {
+                            colorTable = colorTable + '<td width=11 style="background-color:#' + SpColorHex[j] + '">'
+                        }
+ 
+                        colorTable = colorTable + '<td width=11 style="background-color:#000000">'
+                        for (k = 0; k < 3; k++) {
+                            for (l = 0; l < 6; l++) {
+                                colorTable = colorTable + '<td width=11 style="background-color:#' + ColorHex[k + i * 3] + ColorHex[l] + ColorHex[j] + '">'
+                            }
+                        }
+                    }
+                }
+                colorTable = '<table width=253 border="0" cellspacing="0" cellpadding="0" style="border:1px #000000 solid;border-bottom:none;border-collapse: collapse" bordercolor="000000">' + '<tr height=30><td colspan=21 bgcolor=#cccccc>' + '<table cellpadding="0" cellspacing="1" border="0" style="border-collapse: collapse">' + '<tr><td width="3"><td><input type="text" id="DisColor" size="6" disabled style="border:solid 1px #000000;background-color:#ffff00"></td>' + '<td width="3"><td><input type="text" id="HexColor" size="7" style="border:inset 1px;font-family:Arial;" value="#000000"></td></tr></table></td></table>' + '<table border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="000000" onmouseover="doOver(event)" onmouseout="doOut()" onclick="doclick(event)" style="cursor:hand;">' + colorTable + '</table>';
+                document.getElementById('colorpanel').innerHTML = colorTable
+            }
+ 
+            //将颜色值字母大写
+            function doOver(e) {
+                e = e || event;
+                var src = e.target || e.srcElement;
+                if ((src.tagName == "TD") && (current != src)) {
+                    if (current != null) {
+                        current.style.backgroundColor = current._background
+                    }
+                    src._background = src.style.backgroundColor;
+                    document.getElementById('DisColor').style.backgroundColor = src.style.backgroundColor;
+                    document.getElementById('HexColor').value = src.style.backgroundColor.toUpperCase();
+                    src.style.backgroundColor = "white";
+                    current = src
+                }
+            }
+ 
+            //将颜色值字母大写
+            function doOut() {
+                if (current != null) current.style.backgroundColor = current._background.toUpperCase();
+            }
+ 
+            function doclick(e) {
+                e = e || event;
+                var src = e.target || e.srcElement;
+                if (src.tagName == "TD") {
+                    var clr = src._background;
+                    clr = clr.toUpperCase(); //将颜色值大写
+                    if (targetElement) {
+                        //给目标无件设置颜色值
+                        targetElement.value = clr;
+                        dd.setColor(clr)
+                    }
+                    DisplayClrDlg(false);
+                    return clr;
+                }
+            }
+ 
+            var targetElement = null; //接收颜色对话框返回值的元素
+ 
+            //当点下鼠标时，确定显示还是隐藏颜色对话框
+            //点击颜色对话框以外其它区域时，让对话框隐藏
+            //点击颜色对话框色区时，由 doclick 函数来隐藏对话框
+            function OnDocumentClick(e) {
+                e = e || event;
+                var srcElement = e.target || e.srcElement;
+                if (srcElement.alt == "clrDlg") {
+                    //显示颜色对话框
+                    targetElement = srcElement;
+                    DisplayClrDlg(e, true);
+                } else {
+                    //是否是在颜色对话框上点击的
+                    while (srcElement && srcElement.id != "colorpanel") {
+                        srcElement = srcElement.parentElement;
+                    }
+                    if (!srcElement) {
+                        //不是在颜色对话框上点击的
+                        DisplayClrDlg(e, false);
+                    }
+                }
+ 
+            }
+			//本源代码下载自：源 码 爱 好 者（http://www.c o d e f a n s.net）
+            //显示颜色对话框
+            //display 决定显示还是隐藏
+            //自动确定显示位置
+            function DisplayClrDlg(e, display) {
+ 
+                var clrPanel = document.getElementById("colorpanel");
+                if (display) {
+                    var left = document.body.scrollLeft + e.clientX;
+                    var top = document.body.scrollTop + e.clientY;
+                    if (e.clientX + clrPanel.style.width > document.body.clientWidth) {
+                        //对话框显示在鼠标右方时，会出现遮挡，将其显示在鼠标左方
+                        left -= clrPanel.style.width;
+                    }
+                    if (e.clientY + clrPanel.style.height > document.body.clientHeight) {
+                        //对话框显示在鼠标下方时，会出现遮挡，将其显示在鼠标上方
+                        top -= clrPanel.style.height;
+                    }
+ 
+                    clrPanel.style.left = left;
+                    clrPanel.style.top = top;
+                    clrPanel.style.display = "block";
+                } else {
+                    clrPanel.style.display = "none";
+                }
+            }
+            //-->
+            
+        </SCRIPT>
+        <STYLE TYPE="text/css">
+            *{margin:0;padding:0} body{padding:5px}
+        </STYLE>
+    </HEAD>
+    
+    <BODY>
+        <h1 style='text-align:center'>
+            JS画板
+            <span style='color:#999;font-size:14px'>
+                &nbsp;&nbsp;By 网者归来
+            </span>
+        </h1>
+        <form>
+            <div style='border:1px dotted #666;background:#eee;margin:5px 0;padding:5px'>
+                画笔颜色：
+                <input type="input" alt="clrDlg" value='#000000' />
+                画笔宽度：
+                <select onchange="dd.setStroke(parseInt(this.value));">
+                    <option value="1" selected>
+                        1px
+                    </option>
+                    <option value="3">
+                        3px
+                    </option>
+                    <option value="5">
+                        5px
+                    </option>
+                    <option value="7">
+                        7px
+                    </option>
+                    <option value="9">
+                        9px
+                    </option>
+                </select>
+                <input type="button" value="清除画板内容" onclick="dd.clear();" />
+                <input type="button" value="重现绘画过程" onclick="dd.repaint();" />
+                <input type="button" value="获取绘图过程代码" onclick="document.getElementById('test1').value=dd.getCode();"
+                />
+                <input type="button" value="执行测试代码" onclick="dd.runCode(document.getElementById('testcode').value);"
+                />
+            </div>
+            <div style="border:5px solid #666">
+                <div id='test' style='width:100%;height:300px;'>
+                </div>
+            </div>
+            <textarea id='test1' style='width:100%;height:150px;margin-top:5px'>
+            </textarea>
+            <input type="button" value="执行绘图过程代码" onclick="dd.runCode(document.getElementById('test1').value);"
+            />
+        </form>
+        <div id="colorpanel" style="position:absolute;display:none;width:253px;height:177px;">
+        </div>
+        <textarea id='testcode' style='display:none'>
+            o.gc.setColor('#000000');o.gc.setStroke(1);o.gc.setStroke('3');o.gc.setColor('#FF0000');o.gc.drawLine.apply(o.gc,[249,190,250,190]);o.gc.paint();o.gc.drawLine.apply(o.gc,[250,190,252,192]);o.gc.paint();o.gc.drawLine.apply(o.gc,[252,192,253,193]);o.gc.paint();o.gc.drawLine.apply(o.gc,[253,193,253,194]);o.gc.paint();o.gc.drawLine.apply(o.gc,[253,194,255,197]);o.gc.paint();o.gc.drawLine.apply(o.gc,[255,197,257,199]);o.gc.paint();o.gc.drawLine.apply(o.gc,[257,199,258,200]);o.gc.paint();o.gc.drawLine.apply(o.gc,[258,200,260,204]);o.gc.paint();o.gc.drawLine.apply(o.gc,[260,204,261,204]);o.gc.paint();o.gc.drawLine.apply(o.gc,[261,204,262,206]);o.gc.paint();o.gc.drawLine.apply(o.gc,[262,206,263,208]);o.gc.paint();o.gc.drawLine.apply(o.gc,[263,208,263,209]);o.gc.paint();o.gc.drawLine.apply(o.gc,[263,209,263,210]);o.gc.paint();o.gc.drawLine.apply(o.gc,[263,210,264,211]);o.gc.paint();o.gc.drawLine.apply(o.gc,[264,211,263,211]);o.gc.paint();o.gc.drawLine.apply(o.gc,[253,233,255,235]);o.gc.paint();o.gc.drawLine.apply(o.gc,[255,235,256,237]);o.gc.paint();o.gc.drawLine.apply(o.gc,[256,237,260,241]);o.gc.paint();o.gc.drawLine.apply(o.gc,[260,241,261,242]);o.gc.paint();o.gc.drawLine.apply(o.gc,[261,242,262,244]);o.gc.paint();o.gc.drawLine.apply(o.gc,[262,244,262,245]);o.gc.paint();o.gc.drawLine.apply(o.gc,[262,245,263,247]);o.gc.paint();o.gc.drawLine.apply(o.gc,[263,247,264,249]);o.gc.paint();o.gc.drawLine.apply(o.gc,[264,249,264,250]);o.gc.paint();o.gc.drawLine.apply(o.gc,[264,250,264,252]);o.gc.paint();o.gc.drawLine.apply(o.gc,[264,252,264,254]);o.gc.paint();o.gc.drawLine.apply(o.gc,[264,254,265,256]);o.gc.paint();o.gc.drawLine.apply(o.gc,[249,328,250,328]);o.gc.paint();o.gc.drawLine.apply(o.gc,[250,328,252,328]);o.gc.paint();o.gc.drawLine.apply(o.gc,[252,328,253,328]);o.gc.paint();o.gc.drawLine.apply(o.gc,[253,328,254,327]);o.gc.paint();o.gc.drawLine.apply(o.gc,[254,327,255,326]);o.gc.paint();o.gc.drawLine.apply(o.gc,[255,326,256,326]);o.gc.paint();o.gc.drawLine.apply(o.gc,[256,326,257,325]);o.gc.paint();o.gc.drawLine.apply(o.gc,[257,325,258,324]);o.gc.paint();o.gc.drawLine.apply(o.gc,[258,324,258,323]);o.gc.paint();o.gc.drawLine.apply(o.gc,[258,323,261,321]);o.gc.paint();o.gc.drawLine.apply(o.gc,[261,321,264,318]);o.gc.paint();o.gc.drawLine.apply(o.gc,[264,318,269,316]);o.gc.paint();o.gc.drawLine.apply(o.gc,[269,316,276,310]);o.gc.paint();o.gc.drawLine.apply(o.gc,[276,310,286,304]);o.gc.paint();o.gc.drawLine.apply(o.gc,[286,304,287,303]);o.gc.paint();o.gc.drawLine.apply(o.gc,[287,303,288,302]);o.gc.paint();o.gc.drawLine.apply(o.gc,[288,302,289,302]);o.gc.paint();o.gc.drawLine.apply(o.gc,[289,302,289,301]);o.gc.paint();o.gc.drawLine.apply(o.gc,[289,301,289,300]);o.gc.paint();o.gc.drawLine.apply(o.gc,[301,215,301,217]);o.gc.paint();o.gc.drawLine.apply(o.gc,[301,217,301,219]);o.gc.paint();o.gc.drawLine.apply(o.gc,[301,219,301,220]);o.gc.paint();o.gc.drawLine.apply(o.gc,[301,220,301,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[301,223,301,227]);o.gc.paint();o.gc.drawLine.apply(o.gc,[301,227,302,233]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,233,302,234]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,234,302,236]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,236,302,238]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,238,302,239]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,239,302,241]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,241,302,243]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,243,302,244]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,244,302,245]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,245,302,246]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,246,302,247]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,247,302,248]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,248,302,249]);o.gc.paint();o.gc.drawLine.apply(o.gc,[302,249,302,250]);o.gc.paint();o.gc.drawLine.apply(o.gc,[315,209,324,207]);o.gc.paint();o.gc.drawLine.apply(o.gc,[324,207,336,206]);o.gc.paint();o.gc.drawLine.apply(o.gc,[336,206,345,204]);o.gc.paint();o.gc.drawLine.apply(o.gc,[345,204,350,203]);o.gc.paint();o.gc.drawLine.apply(o.gc,[350,203,354,203]);o.gc.paint();o.gc.drawLine.apply(o.gc,[354,203,355,203]);o.gc.paint();o.gc.drawLine.apply(o.gc,[355,203,356,203]);o.gc.paint();o.gc.drawLine.apply(o.gc,[356,203,355,204]);o.gc.paint();o.gc.drawLine.apply(o.gc,[355,204,355,205]);o.gc.paint();o.gc.drawLine.apply(o.gc,[355,205,353,214]);o.gc.paint();o.gc.drawLine.apply(o.gc,[353,214,351,220]);o.gc.paint();o.gc.drawLine.apply(o.gc,[351,220,351,224]);o.gc.paint();o.gc.drawLine.apply(o.gc,[351,224,351,227]);o.gc.paint();o.gc.drawLine.apply(o.gc,[351,227,349,235]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,235,349,241]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,241,349,242]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,242,349,245]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,245,349,249]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,249,349,252]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,252,349,255]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,255,349,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,258,349,260]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,260,349,261]);o.gc.paint();o.gc.drawLine.apply(o.gc,[349,261,348,260]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,242,334,244]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,244,334,246]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,246,334,249]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,249,334,251]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,251,334,255]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,255,334,257]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,257,334,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,258,334,259]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,259,334,260]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,260,334,261]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,261,333,263]);o.gc.paint();o.gc.drawLine.apply(o.gc,[333,263,333,264]);o.gc.paint();o.gc.drawLine.apply(o.gc,[333,264,331,268]);o.gc.paint();o.gc.drawLine.apply(o.gc,[331,268,330,271]);o.gc.paint();o.gc.drawLine.apply(o.gc,[330,271,330,273]);o.gc.paint();o.gc.drawLine.apply(o.gc,[330,273,329,275]);o.gc.paint();o.gc.drawLine.apply(o.gc,[329,275,329,276]);o.gc.paint();o.gc.drawLine.apply(o.gc,[329,276,328,278]);o.gc.paint();o.gc.drawLine.apply(o.gc,[328,278,327,280]);o.gc.paint();o.gc.drawLine.apply(o.gc,[327,280,327,281]);o.gc.paint();o.gc.drawLine.apply(o.gc,[327,281,326,282]);o.gc.paint();o.gc.drawLine.apply(o.gc,[326,282,326,285]);o.gc.paint();o.gc.drawLine.apply(o.gc,[326,285,325,287]);o.gc.paint();o.gc.drawLine.apply(o.gc,[325,287,325,288]);o.gc.paint();o.gc.drawLine.apply(o.gc,[325,288,324,289]);o.gc.paint();o.gc.drawLine.apply(o.gc,[324,289,323,291]);o.gc.paint();o.gc.drawLine.apply(o.gc,[323,291,322,292]);o.gc.paint();o.gc.drawLine.apply(o.gc,[322,292,322,293]);o.gc.paint();o.gc.drawLine.apply(o.gc,[322,293,321,295]);o.gc.paint();o.gc.drawLine.apply(o.gc,[321,295,321,296]);o.gc.paint();o.gc.drawLine.apply(o.gc,[321,296,321,297]);o.gc.paint();o.gc.drawLine.apply(o.gc,[321,297,320,298]);o.gc.paint();o.gc.drawLine.apply(o.gc,[320,298,320,299]);o.gc.paint();o.gc.drawLine.apply(o.gc,[333,278,334,279]);o.gc.paint();o.gc.drawLine.apply(o.gc,[334,279,336,281]);o.gc.paint();o.gc.drawLine.apply(o.gc,[336,281,338,283]);o.gc.paint();o.gc.drawLine.apply(o.gc,[338,283,339,285]);o.gc.paint();o.gc.drawLine.apply(o.gc,[339,285,342,287]);o.gc.paint();o.gc.drawLine.apply(o.gc,[342,287,347,292]);o.gc.paint();o.gc.drawLine.apply(o.gc,[347,292,357,298]);o.gc.paint();o.gc.drawLine.apply(o.gc,[357,298,358,298]);o.gc.paint();o.gc.drawLine.apply(o.gc,[358,298,359,297]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,249,377,250]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,250,377,251]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,251,377,252]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,252,377,253]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,253,377,254]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,254,377,255]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,255,377,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,258,377,260]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,260,377,262]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,262,377,263]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,263,377,264]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,264,377,265]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,265,377,266]);o.gc.paint();o.gc.drawLine.apply(o.gc,[377,266,377,267]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,207,398,208]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,208,398,210]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,210,398,211]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,211,398,216]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,216,398,220]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,220,398,224]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,224,398,226]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,226,398,228]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,228,398,232]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,232,398,234]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,234,398,237]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,237,398,240]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,240,398,247]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,247,398,250]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,250,398,254]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,254,399,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[399,258,399,260]);o.gc.paint();o.gc.drawLine.apply(o.gc,[399,260,399,262]);o.gc.paint();o.gc.drawLine.apply(o.gc,[399,262,399,265]);o.gc.paint();o.gc.drawLine.apply(o.gc,[399,265,400,268]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,268,400,272]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,272,400,274]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,274,400,278]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,278,400,280]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,280,400,282]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,282,400,284]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,284,400,287]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,287,400,291]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,291,400,292]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,292,400,294]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,294,400,297]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,297,400,298]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,298,400,300]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,300,400,302]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,302,400,305]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,305,400,307]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,307,400,308]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,308,400,311]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,311,400,313]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,313,400,314]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,314,400,316]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,316,400,317]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,317,400,319]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,319,400,320]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,320,400,321]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,321,400,322]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,322,400,323]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,323,400,324]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,324,400,325]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,325,400,326]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,326,400,327]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,327,400,328]);o.gc.paint();o.gc.drawLine.apply(o.gc,[400,328,399,329]);o.gc.paint();o.gc.drawLine.apply(o.gc,[399,329,398,328]);o.gc.paint();o.gc.drawLine.apply(o.gc,[398,328,397,327]);o.gc.paint();o.gc.drawLine.apply(o.gc,[397,327,396,326]);o.gc.paint();o.gc.drawLine.apply(o.gc,[396,326,395,324]);o.gc.paint();o.gc.drawLine.apply(o.gc,[395,324,393,323]);o.gc.paint();o.gc.drawLine.apply(o.gc,[393,323,392,322]);o.gc.paint();o.gc.drawLine.apply(o.gc,[392,322,391,321]);o.gc.paint();o.gc.drawLine.apply(o.gc,[391,321,390,320]);o.gc.paint();o.gc.drawLine.apply(o.gc,[390,320,390,319]);o.gc.paint();o.gc.drawLine.apply(o.gc,[390,319,389,319]);o.gc.paint();o.gc.drawLine.apply(o.gc,[389,319,388,317]);o.gc.paint();o.gc.drawLine.apply(o.gc,[388,317,387,317]);o.gc.paint();o.gc.drawLine.apply(o.gc,[387,317,386,316]);o.gc.paint();o.gc.drawLine.apply(o.gc,[494,195,496,197]);o.gc.paint();o.gc.drawLine.apply(o.gc,[496,197,497,198]);o.gc.paint();o.gc.drawLine.apply(o.gc,[497,198,498,201]);o.gc.paint();o.gc.drawLine.apply(o.gc,[498,201,506,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[503,237,504,237]);o.gc.paint();o.gc.drawLine.apply(o.gc,[504,237,505,302]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,302,505,303]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,303,505,304]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,304,505,305]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,305,505,306]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,306,505,307]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,307,505,308]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,308,505,309]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,309,505,310]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,310,505,311]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,311,505,313]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,313,505,314]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,314,505,313]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,313,505,312]);o.gc.paint();o.gc.drawLine.apply(o.gc,[505,312,506,310]);o.gc.paint();o.gc.drawLine.apply(o.gc,[506,310,507,309]);o.gc.paint();o.gc.drawLine.apply(o.gc,[507,309,511,307]);o.gc.paint();o.gc.drawLine.apply(o.gc,[511,307,517,304]);o.gc.paint();o.gc.drawLine.apply(o.gc,[517,304,518,304]);o.gc.paint();o.gc.drawLine.apply(o.gc,[518,304,521,303]);o.gc.paint();o.gc.drawLine.apply(o.gc,[521,303,522,302]);o.gc.paint();o.gc.drawLine.apply(o.gc,[522,302,523,301]);o.gc.paint();o.gc.drawLine.apply(o.gc,[523,301,525,300]);o.gc.paint();o.gc.drawLine.apply(o.gc,[525,300,524,299]);o.gc.paint();o.gc.drawLine.apply(o.gc,[501,240,502,240]);o.gc.paint();o.gc.drawLine.apply(o.gc,[502,240,501,240]);o.gc.paint();o.gc.drawLine.apply(o.gc,[501,240,499,241]);o.gc.paint();o.gc.drawLine.apply(o.gc,[499,241,496,241]);o.gc.paint();o.gc.drawLine.apply(o.gc,[496,241,494,241]);o.gc.paint();o.gc.drawLine.apply(o.gc,[494,241,492,242]);o.gc.paint();o.gc.drawLine.apply(o.gc,[492,242,491,242]);o.gc.paint();o.gc.drawLine.apply(o.gc,[491,242,489,242]);o.gc.paint();o.gc.drawLine.apply(o.gc,[489,242,486,243]);o.gc.paint();o.gc.drawLine.apply(o.gc,[531,227,532,227]);o.gc.paint();o.gc.drawLine.apply(o.gc,[532,227,536,227]);o.gc.paint();o.gc.drawLine.apply(o.gc,[536,227,542,226]);o.gc.paint();o.gc.drawLine.apply(o.gc,[542,226,549,224]);o.gc.paint();o.gc.drawLine.apply(o.gc,[549,224,553,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[553,223,555,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[555,223,556,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[556,223,561,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[561,223,567,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,223,573,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[573,223,574,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[574,223,577,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[577,223,578,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[578,223,579,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[579,223,580,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[580,223,582,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[582,223,583,223]);o.gc.paint();o.gc.drawLine.apply(o.gc,[583,223,584,222]);o.gc.paint();o.gc.drawLine.apply(o.gc,[584,222,584,221]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,195,567,196]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,196,567,197]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,197,567,198]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,198,567,199]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,199,567,200]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,200,567,201]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,201,567,202]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,202,567,203]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,203,567,204]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,204,567,205]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,205,567,206]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,206,567,207]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,207,567,208]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,208,567,210]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,210,567,212]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,212,567,214]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,214,567,217]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,217,570,221]);o.gc.paint();o.gc.drawLine.apply(o.gc,[570,221,571,228]);o.gc.paint();o.gc.drawLine.apply(o.gc,[571,228,572,233]);o.gc.paint();o.gc.drawLine.apply(o.gc,[572,233,574,237]);o.gc.paint();o.gc.drawLine.apply(o.gc,[574,237,574,243]);o.gc.paint();o.gc.drawLine.apply(o.gc,[574,243,577,251]);o.gc.paint();o.gc.drawLine.apply(o.gc,[577,251,579,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[579,258,580,265]);o.gc.paint();o.gc.drawLine.apply(o.gc,[580,265,582,268]);o.gc.paint();o.gc.drawLine.apply(o.gc,[582,268,584,273]);o.gc.paint();o.gc.drawLine.apply(o.gc,[584,273,586,280]);o.gc.paint();o.gc.drawLine.apply(o.gc,[586,280,586,283]);o.gc.paint();o.gc.drawLine.apply(o.gc,[586,283,587,285]);o.gc.paint();o.gc.drawLine.apply(o.gc,[587,285,589,289]);o.gc.paint();o.gc.drawLine.apply(o.gc,[589,289,590,293]);o.gc.paint();o.gc.drawLine.apply(o.gc,[590,293,592,297]);o.gc.paint();o.gc.drawLine.apply(o.gc,[592,297,593,302]);o.gc.paint();o.gc.drawLine.apply(o.gc,[593,302,596,309]);o.gc.paint();o.gc.drawLine.apply(o.gc,[596,309,598,311]);o.gc.paint();o.gc.drawLine.apply(o.gc,[598,311,599,313]);o.gc.paint();o.gc.drawLine.apply(o.gc,[599,313,601,316]);o.gc.paint();o.gc.drawLine.apply(o.gc,[601,316,601,317]);o.gc.paint();o.gc.drawLine.apply(o.gc,[601,317,602,318]);o.gc.paint();o.gc.drawLine.apply(o.gc,[602,318,604,319]);o.gc.paint();o.gc.drawLine.apply(o.gc,[604,319,606,321]);o.gc.paint();o.gc.drawLine.apply(o.gc,[606,321,608,323]);o.gc.paint();o.gc.drawLine.apply(o.gc,[608,323,609,324]);o.gc.paint();o.gc.drawLine.apply(o.gc,[609,324,609,323]);o.gc.paint();o.gc.drawLine.apply(o.gc,[609,323,610,317]);o.gc.paint();o.gc.drawLine.apply(o.gc,[610,317,612,312]);o.gc.paint();o.gc.drawLine.apply(o.gc,[612,312,618,297]);o.gc.paint();o.gc.drawLine.apply(o.gc,[618,297,618,293]);o.gc.paint();o.gc.drawLine.apply(o.gc,[618,293,618,292]);o.gc.paint();o.gc.drawLine.apply(o.gc,[618,292,617,290]);o.gc.paint();o.gc.drawLine.apply(o.gc,[617,290,616,290]);o.gc.paint();o.gc.drawLine.apply(o.gc,[616,290,614,290]);o.gc.paint();o.gc.drawLine.apply(o.gc,[614,290,612,290]);o.gc.paint();o.gc.drawLine.apply(o.gc,[543,258,544,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[544,258,545,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[545,258,550,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[550,258,551,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[551,258,552,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[552,258,553,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[553,258,554,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[554,258,557,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[557,258,559,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[559,258,560,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[560,258,561,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[561,258,562,258]);o.gc.paint();o.gc.drawLine.apply(o.gc,[562,258,563,257]);o.gc.paint();o.gc.drawLine.apply(o.gc,[554,269,554,271]);o.gc.paint();o.gc.drawLine.apply(o.gc,[554,271,554,274]);o.gc.paint();o.gc.drawLine.apply(o.gc,[554,274,554,276]);o.gc.paint();o.gc.drawLine.apply(o.gc,[554,276,555,282]);o.gc.paint();o.gc.drawLine.apply(o.gc,[555,282,555,284]);o.gc.paint();o.gc.drawLine.apply(o.gc,[555,284,555,288]);o.gc.paint();o.gc.drawLine.apply(o.gc,[555,288,555,289]);o.gc.paint();o.gc.drawLine.apply(o.gc,[555,289,555,293]);o.gc.paint();o.gc.drawLine.apply(o.gc,[555,293,555,294]);o.gc.paint();o.gc.drawLine.apply(o.gc,[545,304,548,303]);o.gc.paint();o.gc.drawLine.apply(o.gc,[548,303,550,302]);o.gc.paint();o.gc.drawLine.apply(o.gc,[550,302,552,301]);o.gc.paint();o.gc.drawLine.apply(o.gc,[552,301,556,299]);o.gc.paint();o.gc.drawLine.apply(o.gc,[556,299,557,297]);o.gc.paint();o.gc.drawLine.apply(o.gc,[557,297,567,293]);o.gc.paint();o.gc.drawLine.apply(o.gc,[567,293,570,292]);o.gc.paint();o.gc.drawLine.apply(o.gc,[570,292,571,292]);o.gc.paint();o.gc.drawLine.apply(o.gc,[571,292,572,291]);o.gc.paint();o.gc.drawLine.apply(o.gc,[572,291,573,290]);o.gc.paint();o.gc.drawLine.apply(o.gc,[573,290,573,289]);o.gc.paint();o.gc.drawLine.apply(o.gc,[590,201,591,202]);o.gc.paint();o.gc.drawLine.apply(o.gc,[591,202,594,205]);o.gc.paint();o.gc.drawLine.apply(o.gc,[594,205,597,208]);o.gc.paint();o.gc.drawLine.apply(o.gc,[597,208,598,209]);o.gc.paint();o.gc.drawLine.apply(o.gc,[598,209,600,211]);o.gc.paint();o.gc.drawLine.apply(o.gc,[600,211,601,214]);o.gc.paint();o.gc.drawLine.apply(o.gc,[601,214,601,213]);o.gc.paint();
+        </textarea>
+    </BODY>
+	<!--
+   ┏━━━━━━━━━━━━━━━━━━━━━┓
+   ┃             源 码 爱 好 者               ┃
+   ┣━━━━━━━━━━━━━━━━━━━━━┫
+   ┃                                          ┃
+   ┃           提供源码发布与下载             ┃
+   ┃                                          ┃
+   ┃        http://www.codefans.net           ┃
+   ┃                                          ┃
+   ┃            互助、分享、提高              ┃
+   ┗━━━━━━━━━━━━━━━━━━━━━┛
+-->
+</HTML>

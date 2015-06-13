@@ -1,0 +1,9 @@
+在myeclipse中jsp文件里打代码总闪一下？
+
+在myeclipse中jsp文件里打代码时打一个字母，整个编辑区域就像是被刷新了似的，上面的选择字体文本框由暗变亮然后又变暗了，有时候打的快点就打到别的行上了，有时候打的一个字母跑到前面就是倒数第二的位置，应该是在最后的怎么就前移了一位，除非慢打，等闪完了在打就没事了，但那也太慢了啊！
+请前辈们指点下小弟吧，小弟是自学的，刚学，不懂，帮帮忙吧，谢谢了！
+       最佳答案 方法一：关掉已经打开的文档，在左边右键要编辑的文档目录，选择“open with”－－选择使用“MyEclipse JSP Editor”方式打开。
+
+方法二：在 MyEclipse 工具栏中依次选择 Window ---- Preferences ---- MyEclipse
+1) 在 validation中将suspend all validation勾上
+2）Files and Editors ---- JSP   ----- 将 validate JSP fragments 去掉勾

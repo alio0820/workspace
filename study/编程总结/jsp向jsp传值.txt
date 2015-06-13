@@ -1,0 +1,17 @@
+谁说JS不能向jsp，java传值？
+传递中文需要转换
+location.href='/success.jsp?id=123';
+location.href='/TestServlet?id=123';
+举个例子：a.jsp 向 b.jsp传值
+a.jsp
+   <% String name = "zhangsan" %>
+  <input type=”hidden“ name=“a” id="a" value="<%=name%>"
+  <script>
+      var n = document.getElementById('a').value;
+      location.href='b.jsp?name='+n;
+  </script>
+b.jsp
+  <% 
+      String name = request.getParameter("name"); 
+      out.println(name);
+  %> 

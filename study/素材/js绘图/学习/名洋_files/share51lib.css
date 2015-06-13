@@ -1,0 +1,333 @@
+.share_title FORM {
+	VERTICAL-ALIGN: baseline
+}
+.hackbox {
+	HEIGHT: 0px
+}
+.share_title {
+	TEXT-ALIGN: left; WIDTH: 100%; BACKGROUND: #ffffff; FLOAT: left; HEIGHT: auto; COLOR: #000000; FONT-SIZE: 12px
+}
+.share_title A {
+	COLOR: #0000ff
+}
+.share_title IMG {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.share_title H1 {
+	LINE-HEIGHT: 22px; FONT-SIZE: 12px
+}
+.share_title H2 {
+	LINE-HEIGHT: 22px; FONT-SIZE: 12px
+}
+.share_title H3 {
+	LINE-HEIGHT: 22px; FONT-SIZE: 12px
+}
+.share_title H4 {
+	LINE-HEIGHT: 22px; FONT-SIZE: 12px
+}
+.share_title .aligncenter {
+	TEXT-ALIGN: center
+}
+.share_title A {
+	COLOR: #0000cc; TEXT-DECORATION: underline
+}
+.share_title UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.share_title LI {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.share_title OL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.share_title FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TABLE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.share_title .floatright {
+	FLOAT: right
+}
+.share_title .floatleft {
+	FLOAT: left
+}
+.share_title .alignleft {
+	TEXT-ALIGN: left
+}
+.share_title .hackbox {
+	HEIGHT: 20px; CLEAR: both
+}
+.share_title .shaer_tabnav {
+	BORDER-BOTTOM: #c5c5c5 1px solid; TEXT-ALIGN: left; LIST-STYLE-TYPE: none; MARGIN-TOP: 10px; WIDTH: 600px; DISPLAY: inline; FLOAT: left; HEIGHT: 28px; OVERFLOW: visible
+}
+.share_title .shaer_tabnav UL {
+	DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 2%
+}
+.share_title .shaer_tabnav LI {
+	BORDER-BOTTOM: #c5c5c5 1px solid; POSITION: relative; TEXT-ALIGN: center; BORDER-LEFT: #c5c5c5 1px solid; PADDING-BOTTOM: 5px; LINE-HEIGHT: 28px; BACKGROUND-COLOR: #769cc0; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: inline; HEIGHT: 28px; BORDER-TOP: #c5c5c5 1px solid; MARGIN-RIGHT: 5px; BORDER-RIGHT: #c5c5c5 1px solid; PADDING-TOP: 5px; TOP: 1px
+}
+.share_title .shaer_tabnav LI A {
+	COLOR: #fff; FONT-SIZE: 14px
+}
+.share_title .shaer_tabnav .tabcurrent {
+	BORDER-BOTTOM: #ffffff 1px solid; BACKGROUND: #fff
+}
+.share_title .shaer_tabnav .tabcurrent A {
+	COLOR: #000; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.share_title .share_content {
+	MARGIN-TOP: 15px; WIDTH: 440px; DISPLAY: inline; FLOAT: left; HEIGHT: 275px; MARGIN-LEFT: 20px; MARGIN-RIGHT: 20px
+}
+.share_title .size12 {
+	LINE-HEIGHT: 20px; MARGIN-TOP: 10px; WIDTH: 100%; HEIGHT: 75px; OVERFLOW: hidden
+}
+.share_title .share_textarea {
+	MARGIN-TOP: 10px; WIDTH: 100%; HEIGHT: auto
+}
+.share_title .textaea_txt {
+	LINE-HEIGHT: 18px; BACKGROUND-COLOR: #ffffff; WIDTH: 435px; HEIGHT: 60px; COLOR: #999999; FONT-SIZE: 12px
+}
+.share_title .graytext {
+	LINE-HEIGHT: 20px; COLOR: #999999
+}
+.share_title .share_button {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; MARGIN-TOP: 15px; WIDTH: 100%; HEIGHT: 35px
+}
+.share_title .shar_but_1 {
+	BACKGROUND-IMAGE: url(http://static.51img1.com/v3/share/images/but_bj.gif?20091211); BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 180px; DISPLAY: inline; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left -1px; FLOAT: left; HEIGHT: 28px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px solid; CURSOR: pointer; MARGIN-RIGHT: 10px; BORDER-RIGHT: 0px solid
+}
+.share_title .shar_but_1_not {
+	BACKGROUND-IMAGE: url(http://static.51img1.com/v3/share/images/but_bj.gif?20091211); BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 180px; DISPLAY: inline; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left -143px; FLOAT: left; HEIGHT: 28px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px solid; CURSOR: pointer; MARGIN-RIGHT: 10px; BORDER-RIGHT: 0px solid
+}
+.share_title .shar_but_1_up {
+	BACKGROUND-IMAGE: url(http://static.51img1.com/v3/share/images/but_bj.gif?20091211); BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 180px; DISPLAY: inline; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left -73px; FLOAT: left; HEIGHT: 28px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px solid; CURSOR: pointer; MARGIN-RIGHT: 10px; BORDER-RIGHT: 0px solid
+}
+.share_title .shar_but_3 {
+	BACKGROUND-IMAGE: url(http://static.51img1.com/v3/share/images/but_bj.gif?20091211); BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 180px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left -1px; HEIGHT: 28px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px solid; CURSOR: pointer; BORDER-RIGHT: 0px solid
+}
+.share_title .shar_but_3_not {
+	BACKGROUND-IMAGE: url(http://static.51img1.com/v3/share/images/but_bj.gif?20091211); BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 180px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left -143px; HEIGHT: 28px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px solid; CURSOR: pointer; BORDER-RIGHT: 0px solid
+}
+.share_title .shar_but_3_up {
+	BACKGROUND-IMAGE: url(http://static.51img1.com/v3/share/images/but_bj.gif?20091211); BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 180px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left -73px; HEIGHT: 28px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px solid; CURSOR: pointer; BORDER-RIGHT: 0px solid
+}
+.share_title .shar_but_2 {
+	BACKGROUND-IMAGE: url(http://static.51img1.com/v3/share/images/but_bj.gif?20091211); BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 182px; DISPLAY: inline; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left -37px; FLOAT: right; HEIGHT: 28px; MARGIN-LEFT: 10px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px solid; CURSOR: pointer; BORDER-RIGHT: 0px solid
+}
+.share_title .shar_but_2_not {
+	BACKGROUND-IMAGE: url(http://static.51img1.com/v3/share/images/but_bj.gif?20091211); BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 182px; DISPLAY: inline; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left -177px; FLOAT: right; HEIGHT: 28px; MARGIN-LEFT: 10px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px solid; CURSOR: pointer; BORDER-RIGHT: 0px solid
+}
+.share_title .shar_but_2_up {
+	BACKGROUND-IMAGE: url(http://static.51img1.com/v3/share/images/but_bj.gif?20091211); BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 182px; DISPLAY: inline; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left -108px; FLOAT: right; HEIGHT: 28px; MARGIN-LEFT: 10px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px solid; CURSOR: pointer; BORDER-RIGHT: 0px solid
+}
+.share_title .share_photo {
+	WIDTH: 120px; DISPLAY: inline; FLOAT: left; HEIGHT: 120px; MARGIN-LEFT: 100px
+}
+.share_title .size12 .imgst {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; HEIGHT: 68px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; PADDING-TOP: 2px
+}
+.share_title .size12 .imgst_list {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; PADDING-BOTTOM: 2px; MARGIN-TOP: 10px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; HEIGHT: 50px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; PADDING-TOP: 2px
+}
+.share_title .size12 .shareto {
+	WIDTH: 300px; DISPLAY: inline; MARGIN-LEFT: auto; CLEAR: both; FONT-SIZE: 12px; MARGIN-RIGHT: auto
+}
+.share_title .size12 .photo_new {
+	TEXT-ALIGN: left; WIDTH: 100%; HEIGHT: 75px
+}
+.share_title .size12 .photo_img {
+	TEXT-ALIGN: right; WIDTH: 90px; DISPLAY: inline; FLOAT: left; HEIGHT: 75px; MARGIN-LEFT: 110px
+}
+.share_title .size12 .photo_txt {
+	TEXT-ALIGN: left; WIDTH: 210px; DISPLAY: inline; FLOAT: left; HEIGHT: 70px; MARGIN-LEFT: 15px
+}
+.share_title .size12 .commenduser {
+	PADDING-LEFT: 90px; CLEAR: both; FONT-SIZE: 12px
+}
+.share_title .size12 .commenduser H2 {
+	MARGIN-TOP: 20px; FLOAT: left
+}
+.share_title .size12 .commenduser .usermessage {
+	TEXT-ALIGN: left; LINE-HEIGHT: 18px; WIDTH: 250px; FLOAT: left
+}
+.share_title .size12 .commenduser .usermessage .photo {
+	PADDING-BOTTOM: 7px; PADDING-LEFT: 3px; WIDTH: 60px; PADDING-RIGHT: 7px; DISPLAY: inline; BACKGROUND: url(http://pic.51.com/public/images/photobg.gif) no-repeat; FLOAT: left; HEIGHT: 60px; OVERFLOW: hidden; MARGIN-RIGHT: 10px; PADDING-TOP: 3px
+}
+.share_title .size12 .commenduser .usermessage .photo IMG {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0px; WIDTH: 50px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; HEIGHT: 50px; BORDER-RIGHT-STYLE: none; PADDING-TOP: 0px
+}
+.share_title .size12 .commenduser .usermessage .ico_msg_off {
+	TEXT-INDENT: -100000px; DISPLAY: inline; BACKGROUND-POSITION: 0px -303px; HEIGHT: 15px; MARGIN-LEFT: 5px; CURSOR: pointer
+}
+.share_title .size12 .commenduser .usermessage A IMG {
+	MARGIN-TOP: 5px; DISPLAY: inline
+}
+.share_title .size12 .commenduser .usermessage .ico_videocheck {
+	DISPLAY: inline; HEIGHT: 15px; MARGIN-LEFT: 5px; CURSOR: pointer
+}
+.share_title .share_url {
+	TEXT-ALIGN: center; WIDTH: 100%; DISPLAY: inline; HEIGHT: 45px; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+.share_title .shareSideinfo {
+	WIDTH: 100%; HEIGHT: 30px
+}
+.share_title .ico_public {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 28px; WIDTH: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(http://pic.51.com/public/images/big_ico.gif?v=20080626) no-repeat; PADDING-TOP: 0px
+}
+.share_title .ico_not_vip {
+	BACKGROUND-POSITION: 0px 0px; HEIGHT: 13px
+}
+.share_title .ico_vip1 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -30px; HEIGHT: 13px; PADDING-TOP: 0px
+}
+.share_title .ico_vip2 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -62px; HEIGHT: 13px; PADDING-TOP: 0px
+}
+.share_title .ico_vip3 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -96px; HEIGHT: 13px; PADDING-TOP: 0px
+}
+.share_title .ico_not_videocheck {
+	BACKGROUND-POSITION: 0px -126px; HEIGHT: 12px
+}
+.share_title .ico_videocheck {
+	BACKGROUND-POSITION: 0px -159px; HEIGHT: 12px
+}
+.share_title .ico_alert {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 17px; PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -194px; HEIGHT: 12px; PADDING-TOP: 2px
+}
+.share_title .ico_close {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -233px; HEIGHT: 13px
+}
+.share_title .ico_nomute {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -270px; HEIGHT: 16px
+}
+.share_title .ico_man {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -368px; HEIGHT: 14px
+}
+.share_title .ico_woman {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -408px; HEIGHT: 14px
+}
+.share_title .ico_nosex {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -447px; HEIGHT: 14px
+}
+.share_title .ico_refresh {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 17px; PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -971px; HEIGHT: 11px; PADDING-TOP: 2px
+}
+.share_title .ico_msg_off {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -304px; HEIGHT: 13px
+}
+.share_title .ico_msg_on {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -336px; HEIGHT: 13px
+}
+.share_title .ico_plus {
+	PADDING-LEFT: 15px; BACKGROUND-POSITION: 0px -1017px; HEIGHT: 12px
+}
+.share_title .ico_quanzi {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -1057px; HEIGHT: 12px
+}
+.share_title .ico_upload {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -1124px; HEIGHT: 13px
+}
+.share_title .ico_typemanage {
+	PADDING-LEFT: 17px; BACKGROUND-POSITION: 0px -1093px; HEIGHT: 13px
+}
+.share_title .ico_addsecret {
+	PADDING-LEFT: 25px; BACKGROUND-POSITION: 0px -1158px; HEIGHT: 22px
+}
+.share_title .ico_uploadfile {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1193px; HEIGHT: 22px
+}
+.share_title .ico_addask {
+	PADDING-LEFT: 24px; BACKGROUND-POSITION: 0px -1225px; HEIGHT: 23px
+}
+.share_title .ico_speaklittle {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1259px; HEIGHT: 23px
+}
+.share_title .ico_draftbox {
+	PADDING-LEFT: 18px; BACKGROUND-POSITION: 0px -1287px; HEIGHT: 23px
+}
+.share_title .ico_realplay {
+	PADDING-LEFT: 18px; BACKGROUND-POSITION: 0px -1312px; HEIGHT: 21px
+}
+.share_title .ico_musicword {
+	PADDING-LEFT: 18px; BACKGROUND-POSITION: 0px -1342px; HEIGHT: 16px
+}
+.share_title .ico_showfolder {
+	PADDING-LEFT: 18px; BACKGROUND-POSITION: 0px -1376px; HEIGHT: 13px
+}
+.share_title .ico_video {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1402px; HEIGHT: 16px
+}
+.share_title .ico_music {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1429px; HEIGHT: 16px
+}
+.share_title .ico_photo {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1456px; HEIGHT: 16px
+}
+.share_title .ico_search {
+	PADDING-LEFT: 15px; BACKGROUND-POSITION: 0px -1484px; HEIGHT: 11px
+}
+.share_title .ico_greenarrow1 {
+	PADDING-LEFT: 16px; BACKGROUND-POSITION: 0px -1510px; HEIGHT: 13px
+}
+.share_title .ico_greenarrow2 {
+	PADDING-LEFT: 16px; BACKGROUND-POSITION: 0px -1533px; HEIGHT: 13px
+}
+.share_title .ico_setspecial {
+	PADDING-LEFT: 13px; BACKGROUND-POSITION: 0px -1567px; HEIGHT: 10px
+}
+.share_title .ico_cancelconcern {
+	PADDING-LEFT: 13px; BACKGROUND-POSITION: 0px -1592px; HEIGHT: 12px
+}
+.share_title .ico_cancelspecial {
+	PADDING-LEFT: 14px; BACKGROUND-POSITION: 0px -1620px; HEIGHT: 14px
+}
+.share_title .ico_question {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1648px; HEIGHT: 16px
+}
+.share_title .ico_people {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1678px; HEIGHT: 13px
+}
+.share_title .ico_scissors {
+	PADDING-LEFT: 15px; BACKGROUND-POSITION: 0px -1706px; HEIGHT: 10px
+}
+.share_title .ico_hammer {
+	PADDING-LEFT: 15px; BACKGROUND-POSITION: 0px -1732px; HEIGHT: 12px
+}
+.share_title .ico_addcontact {
+	PADDING-LEFT: 21px; BACKGROUND-POSITION: 0px -1756px; HEIGHT: 16px
+}
+.share_title .ico_hiddenfolder {
+	PADDING-LEFT: 18px; BACKGROUND-POSITION: 0px -1783px; HEIGHT: 13px
+}
+.share_title .ico_bigquanzi {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1810px; HEIGHT: 16px
+}
+.share_title .ico_api {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1836px; HEIGHT: 16px
+}
+.share_title .ico_share {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1864px; HEIGHT: 16px
+}
+.share_title .ico_sharebbs {
+	PADDING-LEFT: 20px; BACKGROUND-POSITION: 0px -1894px; HEIGHT: 17px
+}
+.share_title .ico_collection {
+	PADDING-LEFT: 20px; BACKGROUND: url(http://static.51img1.com/v3/list/images/pic_collection.gif) no-repeat; FLOAT: left; HEIGHT: 20px
+}

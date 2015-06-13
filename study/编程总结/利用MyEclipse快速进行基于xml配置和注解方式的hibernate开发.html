@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="blog_content"align="center">
+  <p>大家都知道hibernate有两种方式进行配置实体类配置，第一类为在类似于entity.hbm.xmL中配置对应实体类的相关字段信息，以及映射关系，还有一种就是相对简便一点的注解方式。不过话说回来如果你的项目存在五六十个表甚至更多的话，你已经充分了解了数据库中每个数据库表的对应关系，你觉得有必要还对着数据库一个一个写实体类和hbm.xml配置文件或者是注解吗，实在是太麻烦，其实这些重复的工作我们最注重的是其中的某些细节配置（仅仅是某些，例如cascade），还有就是我们通常有个习惯就是写完所有实体类就爱写几个DAO接口，或者是DAO实现类，其实都没必要，每次都写重复的工作大都是增删改查.为了避免浪费时间在这上面,MyEclipse真是很好的解决了这方面的问题，不仅基本的hibernet.cfg.xml你不用配置，你也不需要上网下载hibernate的必须包，你也不需要写实体类及对应配置文件或注解，甚至你还不用谢所有类的接口.接下来我就介绍这两种方式的图解，想节省时间做开发的同学赶紧学习吧<br />
+    先看数据库ER实体关系图</p>
+  <p><br />
+      <img title="点击查看原始大小图片" alt="1" src="http://dl.iteye.com/upload/attachment/329127/2dcdba84-9ed7-3b07-89b8-355b3c3ff350.png" width="700" height="418" /><br />
+    ?
+  </p>
+  <p>大家可能会想知道怎么才能画出来这个ER实体关系图呢，其实这个图你也不用画，也是通过MyEclipse来进行设置出来的，具体与DB   Browser有关，这个DB Browser我之前两篇文章中都提到过，反转实体类都需要用到这个，怎么得到这个窗口呢</p>
+  <p><br />
+      <img alt="2" src="http://dl.iteye.com/upload/attachment/329129/71481bb7-3b05-3509-98c0-e09a52dfd59f.png" /><br />
+    ?
+  </p>
+  <p>看到上边那个图没有，点击DB   Browser就可以得到窗口了，具体怎么配置数据库连接我之前有写过，这里就不再写了.提到这个DB   Browser我还真想好好介绍下它的功能，选中任意一个数据库右键，就可以得到整个数据库中的ER实体关系图，还可以创建新的数据库表，选择任意一个表就可以进行DDL数据操作和SELECT查询语句，最大的功能能就是将数据库表反转成Hibernate实体类</p>
+  <p><strong>基于XML的hibernate开发的图解<br />
+    </strong>第一步<br />
+    选中项目右键--&gt;MyEclipse--&gt;add   Hibernate Capabilities--&gt;第一个页面将白色区域中Hibernate 3.3 Annotations &amp;Entity   Manager这一项取消掉，</p>
+  <p><br />
+      <img alt="6" src="http://dl.iteye.com/upload/attachment/329142/aff16fe1-c20f-3a3c-82f4-129453dc236a.png" /><br />
+    ?
+  </p>
+  <p>然后直接下一步，然后进入下个页面继续下一步，然后选择创建的DB   Browser里面的数据库连接名字，然后下一步，到这个页面后选择一个刚才在项目中穿件的文件目录存放HibernateSessionFactory，然后点击完成，至此生成了hibernate.cfg.xml和HibernateSessionFactory，<br />
+    第二步</p>
+  <p>在上一步完成的基础上回到DBBrowser里面选择相应数据库中的所有表全部选中，右键Hibernate?   Reverse Engineering，像下图这样选择,下一步后再如下图选择</p>
+  <p><br />
+      <img alt="3" src="http://dl.iteye.com/upload/attachment/329131/02942030-31c2-3444-b97f-e051ae16fb4c.png" /><br />
+    ?
+  </p>
+  <p><br />
+      <img alt="5" src="http://dl.iteye.com/upload/attachment/329135/765de088-7f6b-3bba-a07f-4b8c6a4f2ab5.png" /><br />
+    ?
+  </p>
+  <p>点击完成即可生成没有注解的Hibernate实体类，对应的每个实体类的hbm.xml配置文件，配置好了hibernate.cfg.xml以及生成了每个实体类对应的数据库DAO操作类</p>
+  <p>?</p>
+  <p><br />
+      <strong>基于Annotation的hibernate开发的图解</strong><br />
+    第一步与上边的区别在于第一个页面要选上对hibernate   Annotaion的支持，白色区域中第一项不能取消，其他步骤一样</p>
+  <p><br />
+      <img alt="7" src="http://dl.iteye.com/upload/attachment/329144/c643a508-adee-3006-9d5b-b8ccfff1ef69.png" /><br />
+    ?
+    <br />
+    第二步与上边的区别在于如下图，其他步骤也一样</p>
+  <p><br />
+      <img alt="4" src="http://dl.iteye.com/upload/attachment/329133/d7088761-4f85-3220-9772-cac90c35a8f6.png" /><br />
+    ?
+  </p>
+  <p>最后生成的就是带有Annotation注解方式的Hibernate实体类,配置好了hibernate.cfg.xml以及生成了每个实体类对应的数据库DAO操作类</p>
+</div>
+</body>
+</html>

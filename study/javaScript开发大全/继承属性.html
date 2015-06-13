@@ -1,0 +1,43 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>继承属性</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+</head>
+<body>
+         <script type="text/javascript" language="javascript" >
+         <!--
+          function ItemWorkers()
+         {
+              this.name="";
+              this.address="";
+         }
+          function Director(_engineer)
+         {
+              this.engineer=_engineer;
+         }
+         //指定原型对象为ItemWorkers对象
+          Director.prototype=new ItemWorkers();
+         //创建两个导演对象
+          var myDirector1=new Director("时装表演");
+          var myDirector2=new Director("相声大赛");
+         //设置属性值
+          myDirector1.name="张三";
+          myDirector2.name="李四";
+         //通过原型对象修改属性
+          Director.prototype.address="北京市";
+         //遍历myDirector对象属性
+          document.write("myDirector1对象中所有属性：<br>");
+          for(var obj in myDirector1)
+         {
+             document.write(obj,":",myDirector1[obj],"<br>");
+         }
+          document.write("myDirector2对象中所有属性：<br>");
+          for(var obj in myDirector2)
+         {
+             document.write(obj,":",myDirector2[obj],"<br>");
+         }
+          -->
+          </script>
+</body>
+</html>

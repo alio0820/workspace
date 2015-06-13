@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- saved from url=(0013)about:internet --> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+	<style type="text/css">
+	div#row1 {display: inline }
+	div#row2 {float:right;display: inline }
+	body,td {
+		font-family: 新宋体;
+		font-size: 18px;
+		color: #9966CC;
+	}
+	body {
+		background-image: url("../images/bg1.jpg");
+	}
+	
+	a:link {
+		color: #9966CC;
+	}
+	
+	a:hover {
+		color: #9966CC;
+	}
+	
+	a:visited {
+		color: #9966CC;
+	}
+	
+	a:active {
+		color: #9966CC;
+	}
+</style>
+<script>
+	function clickLink(link)
+	{
+			 
+		var cancelled = false;  
+	  
+		if (document.createEvent) {  
+			var event = document.createEvent
+
+("MouseEvents");  
+			event.initMouseEvent("click", true, 
+
+true, window,  
+				0, 0, 0, 0, 0,  
+				false, false, false, false,  
+				0, null);  
+			cancelled = !link.dispatchEvent(event);  
+		}  
+		else if (link.fireEvent) {  
+			cancelled = !link.fireEvent("onclick");  
+		}  
+	  
+		if (!cancelled) {  
+			parent.right.location = link.href;
+		}  
+	}  
+	function mainClick()
+	{
+	var a=document.createElement("b"); 
+	a.href="study_1.html";  
+	a.innerHTML=".net千千问";  
+	clickLink(a);  
+	}
+	function resumeClick()
+	{
+	var a=document.createElement("b"); 
+	a.href="resume_1.html";  
+	a.innerHTML=".net千千问";  
+	clickLink(a);  
+	}
+	function meClick()
+	{
+	var a=document.createElement("b"); 
+	a.href="me_1.html";  
+	a.innerHTML=".net千千问";  
+	clickLink(a);  
+	}
+	function careClick()
+	{
+	var a=document.createElement("b"); 
+	a.href="care_1.html";  
+	a.innerHTML=".net千千问";  
+	clickLink(a);  
+	}
+	function studyClick()
+	{
+	var a=document.createElement("b"); 
+	a.href="study_1.html";  
+	a.innerHTML=".net千千问";  
+	clickLink(a);  
+	}
+	function friendClick()
+	{
+	var a=document.createElement("b"); 
+	a.href="http://www.baidu.com/";  
+	a.innerHTML=".net千千问";  
+	clickLink(a);  
+	}
+	function restClick()
+	{
+	var a=document.createElement("b"); 
+	a.href="rest_1.html";  
+	a.innerHTML=".net千千问";  
+	clickLink(a);  
+	}
+	//<embed src="../media/汪苏泷 - 不分手的恋爱.mp3" autostart=”true” loop=”true” hidden=”true”/>
+	</script>
+</head>
+<body><bgsound src="../media/汪苏泷 - 不分手的恋爱.mp3"/>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人主页
+
+</h2>
+		<table width="1400"><tr>
+		<td><a href="middle.html" target="middle"onclick="mainClick()">主页
+
+</a>&nbsp;</td>
+		<td><a href="resume_main.html" target="middle" onclick="resumeClick()">
+
+简述</a>&nbsp;</td>
+		<td><a href="me.html" target="middle" onclick="meClick()">那家的谁
+
+</a>&nbsp;</td>
+		<td><a href="care.html" target="middle" onclick="careClick()">关心的事
+
+</a>&nbsp;</td>
+		<td><a href="study.html"  target="middle" onclick="studyClick()">学习在线</a>&nbsp;</td>
+		<td><a href="friendClick.html" target="middle" onclick="friendClick()">
+
+友情链接</a>&nbsp;</td>
+		<td><a href="rest.html" target="middle" onclick="restClick()">小憩一下
+
+</a></td>
+		<td width="700"></td>
+		</tr></table>
+		<div id="row1">&nbsp;&nbsp;无论你奔不奔跑，时间
+
+总在一分一秒的流逝</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <span id="localTime"></span>
+		<script type="text/javascript">
+	//eg: pattern = "yyyy-MM-dd hh:mm:ss";
+	Date.prototype.getFormattedDate = function(pattern) {
+
+		function getFullStr(i) {
+			return i > 9 ? "" + i : "0" + i;
+		}
+
+		pattern = pattern.replace(/yyyy/, this.getFullYear()).replace(/MM/,
+				getFullStr(this.getMonth() + 1)).replace(/dd/,
+				getFullStr(this.getDate())).replace(/hh/,
+				getFullStr(this.getHours())).replace(/mm/,
+				getFullStr(this.getMinutes())).replace(/ss/,
+				getFullStr(this.getSeconds()));
+
+		return pattern;
+	};
+
+	var localTimeSpan = document.getElementById("localTime");
+	localTimeSpan.innerHTML = (new Date())
+			.getFormattedDate("yyyy年MM月dd日 hh : mm : ss");
+	setInterval(function() {
+		localTimeSpan.innerHTML = (new Date())
+				.getFormattedDate("yyyy年MM月dd日 hh : mm : ss");
+	}, 1000);
+</script>
+</body>
+</html>

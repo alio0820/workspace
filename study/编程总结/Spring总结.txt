@@ -1,0 +1,69 @@
+1.Spring 有两个非常大的思想
+	IOC(DI)======AOP
+2.控制反转(IOC)   依赖注入(DI)            Bean的管理
+   		    集合对象注入等           BeanFactory
+                                             ApplicationContext
+3.Spring是一个容器，它包含并且管理系统对象的生命周期和配置。在SSH项目中管理事务以及对象的注入。在外部产生一个实例，帮我们new一个对象，都是spring框架帮我们做的
+
+4.Spring是非侵入式的：基于Spring开发的系统中的对象一般不依赖于Spring的类。
+  组成 Spring 框架的每个模块（或组件）都可以单独存在，或者与其他一个或多个模块联合实现.
+
+5.配置文件  applicationContext.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<bean id="test1" class="com.icss.oa.spring.SpringTest">
+<property name="message">
+<value>testgooooooogle</value>
+</property></bean>
+</beans>
+
+其中，spring的一个bean对应着一个类，id相当于一个bean，class相当于某个具体的类
+根据id找到相对应的类，根据class产生一个实例
+Id---key,class---value
+这里就是依赖注入，把Message赋给SpringTest对象，
+因为对应的类里有setMessage方法，通过配置文件赋值进来
+
+6.函数调用
+
+ApplicationContext ctx=new FileSystemXmlApplicationContext("E:\\workspace\\springProject\\WebRoot\\WEBINF\\classes\\applicationContext.xml");
+SpringTest st =(SpringTest) ctx.getBean("test1");
+System.out.println(st.getMessage());
+
+7.优点
+   不需要实现框架指定的接口，因此可以轻松的将组件从Spring中脱离，甚至不需要任何修改组件间的依赖关系减少，极大改善了代码的可重用性。
+Spring的依赖注入机制，可以在运行期为组件配置所需资源，而无需在编写组件代码时就加以指定，从而在相当程度上降低了组件之间的耦合。
+
+8.核心容器
+    核心容器提供 Spring 框架的基本功能。核心容器的主要组件是 BeanFactory(ApplicationContext).BeanFactory 使用控制反转 （IOC） 模式将应用程序的配置和依赖性规范与实际的应用程序代码分开。
+
+9.AOP
+    面向接口
+    面向抽象
+
+10.IOC
+    IoC就是Inversion of Control，控制反转。在Java开发中，IoC意味着将你设计好的类交给系统去控制，而不是在你的类内部控制。这称为控制反转。
+
+11.set动作 就是 injection注入，
+    我们必须完成这些注入，才可以做其他的事情，因此我们是依赖这种injection的，也称依赖注入，这个set动作实际上就是在外部产生了一个实例，然后传给这个类，==》di依赖注入 ,有些时候ioc也称为di，依赖倒置就是控制反转。
+
+12.依赖注入
+   所谓依赖注入，即在运行期由容器将依赖关系注入到组件之中。
+   是在运行期，由Spring根据配置文件，将其他对象的引用通过组件的提供的setter方     法进行设定。
+
+13.绑定的到底是什么？
+      某个对象是另外一个对象的属性
+
+14.Autowire
+    -byType
+    -byName
+    -Constructor
+    -autodetect
+byName:只要在配置文件中找到对应属性的名字就可以找到属性值，即使是另一个bean
+A类中的属性->B类对象?通过Spring中的ref可以引用一个其他已经声明过的对象?
+除了通过ref进行绑定之外,还提供了了一种自动绑定机制,通过autowire完成,通过简化之前代码?构造方法里面有多个参数可以通过<constructorargindex="0"><value>aa</value></constructor-arg><constructorargindex="1"><value>aa</value></constructor-arg>index可以解决构造方法中的多个参数当然还有别的方法。。比如type..但是通过索引是最好的方法了。
+
+byName
+<bean id="collectionTest" class="com.icss.oa.spring.CollectionTest" autowire="byName">
+<bean id="beanDate" class="java.util.Date"/>

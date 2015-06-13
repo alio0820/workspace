@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2002/REC-xhtml1-20020801/DTD/xhtml1-transitional.dtd">
+
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+<head>
+<meta http-equiv='Content-Type' content='application/xhtml+xml;charset=UTF-8'/>
+<title>
+Figure 7-2
+</title>
+<script type="text/javascript" src="../jquery-1.7.1.js"></script>
+<script type="text/javascript" src="Figure 7-1.js"></script>
+<link rel="stylesheet" type="text/css" href="Figure 7-1.css"/>
+</head>
+<body>
+	<form action="javascript:void(0);"method='post'>
+		<fieldset>
+			<legend>Address</legend>
+			<div id="hLocationCountryIDWrapper">
+				<label for="hLocationCountryID">
+					<img src="../images/us.png" alt='Country'/>
+				</label>
+				<select id='hLocationCountryID' size='1' name='hLocationCountryID' class='hFormSelectInput'>
+					<option value='0'>Please select a country</option>
+					<option value='1'>Afghanistan</option>
+					<option value='2'>Albania</option>
+					<option value='3'>Algeria</option>
+					<option value='4'>American</option>
+					<option value='5'>Andorra</option>
+					<option value='238'>Zambia</option>
+					<option value='239'>Zimbabwe</option>
+				</select>
+			</div>
+			<div>
+				<label for='hLocationStreetAddress'>Street Address:</label>
+				<textarea name='hLocationStreetAddress' id='hLocationStreetAddress' rows='2' cols='50'></textarea>
+			</div>
+			<div>
+				<label for='hLocationCity'>City:</label>
+				<input type='text' name='hLocationCity' id='hLocationCity' size='25' />
+			</div>
+			<div>
+				<label for='hLocationStateID'>State:</label>
+				<select name='hLocationStateID' id='hLocationStateID'>
+				</select>
+			</div>
+			<div>
+				<label for='hLocationPostalCode'>Postal Code:</label>
+				<input type='text' name='hLocationPostal Code' id='hLocationPostalCode' size='10' />
+			</div>
+			<div id='hLocationButtonWrapper'>
+				<input type='submit' id='hLocationButton' name='hLocationButton' value='save'/>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>

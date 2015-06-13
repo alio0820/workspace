@@ -1,0 +1,315 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>几个tab、滑动门、选项卡和图片切换效果丨芯晴网页特效丨CsrCode.Cn</title>
+<style>
+html body  {margin:0px; padding:0px;}
+.t_body{border:1px solid #ddd; padding:10px; width:250px; margin:50px;float:left;}
+.aa {background-color:#eee; width:25px; cursor:pointer; float:left; margin-left:10px; text-align:center;}
+.bb {background-color:#eae; width:250px; height:250px; display:none; font-size:50px;}
+.cc {background-color:#eee; width:100%; height:20px; display:none;}
+.on {background-color:#c21; width:30px; border-bottom:0px; border-top:0px;}
+.yuan1 span {display: block;overflow: hidden;height: 1px; border-color:#77a;} 
+.yuan2 span {display: block;overflow: hidden;height: 1px; border-color:#77a;} 
+.span1 {margin:0px 3px; background-color:#77a;}
+.span2 {margin:0px 1px; border-left:2px solid; border-right:2px solid;}
+.span3 {margin:0px 1px; border-left:1px solid; border-right:1px solid;}
+.d_body {margin:50px;width:400px; height:400px; font-size:12px;float:left;}
+.d_top {height:40px; border-left:1px solid #77a; border-right:1px solid #77a;}
+.d_t {float:left; margin-top:7px; margin-left:10px; border:1px solid #77a; width:100px; height:31px; line-height:31px; background-color:#eee;}
+.d_t a {color:#555; text-decoration:none;}
+.d_t a:hover {color:#933; text-decoration:underline; font-weight:bold; }
+.d_main {border:1px solid #77a; border-top:0px; height:300px;}
+.ln  {position:relative; border-bottom:1px solid #77a; top:40px; z-index:-1;}
+.bbb  {background-color:#fff; height:100%; display:none; margin:10px;}
+.on1 {border-bottom:1px solid #fff; background-color:#fff;}
+.fl  {float:left;}
+.clr {clear:both;}
+.of  {overflow:hidden;}
+.textcenter{text-align:center;vertical-align:middle;}
+</style>
+<script src="http://www.codefans.net/ajaxjs/jquery-1.4.2.min.js"></script>
+<script>
+$(document).ready(function() {
+ /*
+  o1: 标签元素
+  o2: 内容元素
+  c : 标签元素显示用样式
+  e : 触发事件 如 click mouseover 
+ */
+ function tab1(o1,o2,c,e){
+  o1.each(function(i){
+   $(this).bind(e,function(){
+    o2.hide().eq(i).show();
+    o1.removeClass(c);
+    $(this).addClass(c);
+   })
+   if ($(this).hasClass(c)) {
+    $(this).addClass(c);
+    o2.hide().eq(i).show();
+   }
+  })
+ }
+ /*
+  o1: 标签元素
+  o2: 内容元素
+  c : 标签元素显示用样式
+  t1: 标签切换时间
+  t2: 内容渐进时间
+  a : 内容渐进起始半透明度 0.1~1
+  b : 内容渐进结束半透明度 0.1~1
+ */
+ function tab2(o1,o2,c,t1,t2,a,b){
+  var count=o1.size()-1;
+  var now;
+  var TimeInterval;
+  o1.each(function(i){
+   $(this).mouseover(function(){
+    o2.hide().eq(i).show();
+    o1.removeClass(c);
+    $(this).addClass(c);
+    window.clearInterval(TimeInterval);
+   }).mouseout(function(){
+    now = i+1;
+    TimeInterval = window.setInterval(changeimage,t1);
+   });
+   //初始化显示
+   if ($(this).hasClass(c)) {
+    $(this).addClass(c);
+    o2.hide().eq(i).show();
+    now = i+1;
+   }
+  })
+  
+  TimeInterval = window.setInterval(changeimage,t1);
+  function changeimage(){
+   if(now>count)now=0;
+   o2.hide().eq(now).stop().fadeTo(0,a).fadeTo(t2,b);
+   o1.removeClass(c).eq(now).addClass(c);
+   now++;
+  }
+ }
+ 
+ 
+ /*
+  o1: 标签元素
+  o2: 内容元素
+  o3: 内容元素
+  c : 标签元素显示用样式
+  e : 触发事件 如 click mouseover 
+ */
+ function tab3(o1,o2,o3,c,e){
+  o1.each(function(i){
+   $(this).bind(e,function(){
+    o2.hide().eq(i).show();
+    o3.hide().eq(i).show();
+    o1.removeClass(c);
+    $(this).addClass(c);
+   })
+   if ($(this).hasClass(c)) {
+    $(this).addClass(c);
+    o2.hide().eq(i).show();
+    o3.hide().eq(i).show();
+   }
+  })
+ }
+ /*
+  o1: 标签元素
+  o2: 内容元素
+  o3: 内容元素
+  c : 标签元素显示用样式
+  t1: 标签切换时间
+  t2: 内容渐进时间
+  a : 内容渐进起始半透明度 0.1~1
+  b : 内容渐进结束半透明度 0.1~1
+ */
+ function tab4(o1,o2,o3,c,t1,t2,a,b){
+  var count=o1.size()-1;
+  var now;
+  var TimeInterval;
+  o1.each(function(i){
+   $(this).mouseover(function(){
+    o2.hide().eq(i).show();
+    o3.hide().eq(i).show();
+    o1.removeClass(c);
+    $(this).addClass(c);
+    window.clearInterval(TimeInterval);
+   }).mouseout(function(){
+    now = i+1;
+    TimeInterval = window.setInterval(changeimage,t1);
+   });
+   //初始化显示
+   if ($(this).hasClass(c)) {
+    $(this).addClass(c);
+    o2.hide().eq(i).show();
+    o3.hide().eq(i).show();
+    now = i+1;
+   }
+  })
+  
+  TimeInterval = window.setInterval(changeimage,t1);
+  function changeimage(){
+   if(now>count)now=0;
+   o3.hide().eq(now).show();
+   o2.hide().eq(now).stop().fadeTo(0,a).fadeTo(t2,b);
+   o1.removeClass(c).eq(now).addClass(c);
+   now++;
+  }
+ }
+ 
+ //调用函数
+ tab1($(".yuan1 .d_t"),$(".yuan1 .bbb"),"on1","mouseover");
+ tab1($(".yuan2 .d_t"),$(".yuan2 .bbb"),"on1","click");
+ tab1($(".d0 .aa"),$(".d0 .bb"),"on","click");
+ tab1($(".d1 .aa"),$(".d1 .bb"),"on","mouseover");
+ tab2($(".d2 .aa"),$(".d2 .bb"),"on",1500,800,0.1,1);
+ tab3($(".d3 .aa"),$(".d3 .bb"),$(".d3 .cc"),"on","mouseover");
+ tab4($(".d4 .aa"),$(".d4 .bb"),$(".d4 .cc"),"on",1500,800,0.1,1);
+ tab4($(".d5 .aa"),$(".d5 .bb"),$(".d5 .cc"),"on",1500,0,1,1);
+});
+</script>
+</head>
+<body>
+　　几个Tab，滑动门，选项卡，图片切换，在一个网页中实现了超多的常用效果，大家喜欢的滑动门，焦点图切换，标签选项卡以及文字轮番等都集中在了一起，另外还加入了圆角。期间使用了jquery-1.4.2.min.js框架库。<br>如果提示错误，不显示预览效果，请先刷新本页。
+<div class="d_body yuan1">
+ <div>鼠标悬浮切换</div><br>
+ <span class="span1"></span><span class="span2"></span><span class="span3"></span>
+ <div class="d_top">
+  <div class="ln"></div>
+  <div class="d_t textcenter on1">
+   <a href="javascript:">第一个标签</a>
+  </div>
+  <div class="d_t textcenter">
+   <a href="javascript:">第二个标签</a>
+  </div>
+  <div class="d_t textcenter">
+   <a href="javascript:">第三个标签</a>
+  </div>
+ </div>
+ <div class="d_main clr of">
+  <div class="bbb"><font color="blue">第一个内容</font></div>
+  <div class="bbb"><font color="red">第二个内容</font></div>
+  <div class="bbb"><font color="black">第三个内容</font></div>
+ </div>
+ <div class="clr of"></div>
+</div>
+<div class="d_body yuan2">
+ <div>点击切换</div><br>
+ <span class="span1"></span><span class="span2"></span><span class="span3"></span>
+ <div class="d_top">
+  <div class="ln"></div>
+  <div class="d_t textcenter on1">
+   <a href="javascript:">第一个标签</a>
+  </div>
+  <div class="d_t textcenter">
+   <a href="javascript:">第二个标签</a>
+  </div>
+  <div class="d_t textcenter">
+   <a href="javascript:">第三个标签</a>
+  </div>
+ </div>
+ <div class="d_main clr of">
+  <div class="bb"><font color="blue">第一个内容</font></div>
+  <div class="bb"><font color="red">第二个内容</font></div>
+  <div class="bb"><font color="black">第三个内容</font></div>
+ </div>
+ <div class="clr of"></div>
+</div>
+<div class="t_body d0">
+ <div class="aa">a</div>
+ <div class="aa">b</div>
+ <div class="aa on">c</div>
+ <div class="aa">d</div>
+ <div class="aa">e</div><br>
+ <div class="bb">1</div>
+ <div class="bb">2</div>
+ <div class="bb">点击切换</div>
+ <div class="bb">4</div>
+ <div class="bb">5</div> 
+<div style="clear:both;"></div>
+</div>
+<div class="t_body d1">
+ <div class="aa">a</div>
+ <div class="aa">b</div>
+ <div class="aa on">c</div>
+ <div class="aa">d</div>
+ <div class="aa">e</div><br>
+ <div class="bb">1</div>
+ <div class="bb">2</div>
+ <div class="bb">3</div>
+ <div class="bb">4</div>
+ <div class="bb">5</div> 
+<div style="clear:both;"></div>
+</div>
+<div class="t_body d2">
+ <div class="aa">a</div>
+ <div class="aa">b</div>
+ <div class="aa on">c</div>
+ <div class="aa">d</div>
+ <div class="aa">e</div><br>
+ <div class="bb">1</div>
+ <div class="bb">2</div>
+ <div class="bb">3</div>
+ <div class="bb">4</div>
+ <div class="bb">5</div> 
+<div style="clear:both;"></div>
+</div>
+<div class="t_body d3">
+ <div class="aa">a</div>
+ <div class="aa">b</div>
+ <div class="aa on">c</div>
+ <div class="aa">d</div>
+ <div class="aa">e</div><br>
+ <div class="bb">1</div>
+ <div class="bb">2</div>
+ <div class="bb">悬浮切换</div>
+ <div class="bb">4</div>
+ <div class="bb">5</div>
+ <div class="cc">111111</div>
+ <div class="cc">222222</div>
+ <div class="cc">333333</div>
+ <div class="cc">444444</div>
+ <div class="cc">555555</div> 
+<div style="clear:both;"></div>
+</div>
+<div class="t_body d4">
+ <div class="aa">a</div>
+ <div class="aa">b</div>
+ <div class="aa on">c</div>
+ <div class="aa">d</div>
+ <div class="aa">e</div><br>
+ <div class="bb">1</div>
+ <div class="bb">2</div>
+ <div class="bb">3</div>
+ <div class="bb">4</div>
+ <div class="bb">5</div>
+ <div class="cc">111111</div>
+ <div class="cc">222222</div>
+ <div class="cc">333333</div>
+ <div class="cc">444444</div>
+ <div class="cc">555555</div> 
+<div style="clear:both;"></div>
+</div>
+<div class="t_body d5">
+ <div class="aa">a</div>
+ <div class="aa">b</div>
+ <div class="aa on">c</div>
+ <div class="aa">d</div>
+ <div class="aa">e</div><br>
+ <div class="bb">1</div>
+ <div class="bb">2</div>
+ <div class="bb">3</div>
+ <div class="bb">4</div>
+ <div class="bb">5</div>
+ <div class="cc">111111</div>
+ <div class="cc">222222</div>
+ <div class="cc">333333</div>
+ <div class="cc">444444</div>
+ <div class="cc">555555</div> 
+<div style="clear:both;"></div>
+</div>
+</body>
+</html>
+
+<br><br><hr><p align="center"><font color=black>本特效由 <a href="http://www.CsrCode.cn" target="_blank">芯晴网页特效</a>丨CsrCode.Cn 收集于互联网，只为兴趣与学习交流，不作商业用途。来源：源码爱好者</font></p>

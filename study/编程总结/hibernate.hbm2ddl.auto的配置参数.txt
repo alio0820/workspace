@@ -1,0 +1,8 @@
+update只是更新表结构，但不能生成
+请仔细参考一下hibernate.hbm2ddl.auto的配置参数，有以下四种:
+validate:加载hibernate时，验证创建数据库表结构
+create:每次加载hibernate，重新创建数据库表结构，这就是导致数据库表数据丢失的原因。
+create-drop:加载hibernate时创建，退出是删除表结构
+update:加载hibernate自动更新数据库结构
+
+所以，你可以先用create属性，然后运行一次后改用update，以免数据丢收 

@@ -1,0 +1,100 @@
+VB查找文件的两种方法
+
+
+
+
+---- VB开发人员都会遇到文件定位的问题。VB提供的Dir[(pathname[, attributes])]函数应该可以满足各种文件定位问题。使用Dir函数时，我们必须给它提供文件的全部路径，否则是找不到的。而有时我们往往是不知道文件的路径的，如果要利用该函数来定位文件，我们必须编写一定的代码。笔者在利用该函数编制查找文件的函数时，颇费了些工夫，可是发现查找的效率不高，效果不太理想。那么有没有编码少且更快的方法查找文件呢？笔者后来利用一个 API函数成功地编制了一个高效率的查找文件的函数。下面一一介绍给大家，起个抛砖引玉的作用，期望大家能编制出更高效的函数。 
+
+---- 一. 利用DIR函数查找文件 
+
+---- Dir[(pathname[, attributes])]是VB提供的用来检查某些文件或目录是否存在的函数，它返回一个 String，用以表示一个文件名、目录名或文件夹名称，返回值必须与指定的模式或文件属性、或磁盘卷标相匹配。 
+
+---- 如果文件的路径很清楚，那么确定文件是否存在简单地调用该函数就行了。如果光知道文件名，甚或只知道文件的后缀，要定位文件的话就需要一定的编码了。下面的例子用来定位c:\下所有目录内是否有文件Win.ini。 
+
+
+Function FindDirectory(RootPath As 
+String, Mydirectory() As String)
+Dim intResult, I, intFind As Integer
+‘首先查找根目录下的所有子目录
+MyPath = "c:\"  ' 指定路径c:\。
+MyName = Dir(MyPath, vbDirectory)   ' 找寻第一项。
+intResult = 1
+ReDim Mydirectory(intResult)	‘初始化动态数组
+Do While MyName < > ""   ' 开始循环。
+    ' 跳过当前的目录及上层目录。
+    If MyName < > "." And MyName < > ".." Then
+        ' 使用位比较来确定 MyName 代表一目录。
+        If (GetAttr(MyPath & MyName) 
+        And vbDirectory) = vbDirectory Then
+        
+      ' 如果它是一个目录，将其名称存储在一个数组里。
+      Mydirectory(intResult) = MyPath & MyName
+      intResult = intResult + 1
+       ReDim Preserve Mydirectory(intResult) 
+‘分配动态数组实际的元素个数，并保留数组中的数据
+     End If
+    End If
+    MyName = Dir    ' 查找下一个目录。
+Loop
+‘在所有目录里分别查找文件是否存在。
+For I = 1 To UBound(Mydirectory)-1
+    MyFile = Mydirectory(I) & "\win.ini"
+    intFind = Len(Dir(MyFile))
+    If intFind < > 0 Then MsgBox "找到文件" &
+       Dir(MyFile) & "在：" & Mydirectory(I)
+Next I
+End Function
+
+---- 该函数的思路很清晰：先遍历根目录下所有的子目录，然后在每个子目录里查找文件。该函数有一个缺陷：只能查找根目录下的一级子目录，无法遍及整个硬盘。如果要遍及整个硬盘，还需要额外的编码，这里不再多述。 
+
+---- 二. 利用API函数查找文件 
+
+---- 在使用VB的过程中我深深地体会到，只有充分利用API的函数才能更充分地发挥VB的优势。 API函数 SearchTreeFile可以很快地定位一个文件。借助该函数笔者编了一个快速查找文件的函数sysFileFind. 
+
+
+Declare
+Public Declare Function SearchTreeForFile Lib
+ "imagehlp.dll" (ByVal lpRoothPath As String, 
+ByVal lpInputName As String, 
+ByVal lpOutputName As String) As Long
+
+---- 下面为sysFileFind函数的编码： 
+
+
+Public Function sysFileFind
+(ByVal WhichRootPath As String,
+ ByVal WhichFileName As String) As String
+Dim iNull As Integer
+Dim lResult As Long
+Dim sBuffer As String
+    On Error GoTo L_FILEFINDERROR
+    sBuffer = String$(1024, 0)
+    '查找文件
+lResult = SearchTreeForFile
+(WhichRootPath, WhichFileName, sBuffer)
+    '如果文件找到，将返回字符串后续的空格删除
+    '否则返回一个空字符串
+    If lResult Then
+        iNull = InStr(sBuffer, vbNullChar)
+        If Not iNull Then
+            sBuffer = Left$(sBuffer, iNull - 1)
+        End If
+        sysFileFind = sBuffer
+        Else
+            sysFileFind = ""
+    End If
+Exit Function
+L_FILEFINDERROR:
+MsgBox "查找文件过程中遇到错误！",
+ vbInformation, "查找文件错误"
+sysFileFind = Format(Err.Number) 
+ & " - " & Err.Description
+End Function
+
+---- 该函数可以很快遍历整个硬盘，从而查找到我们所需的文件。 
+
+---- 三. 总结 
+
+---- 上面两个函数都在中文VB5和Win98环境下调试通过。我们可以看到第二种方法编码更简单，效率更高。 
+
+---- VB5强大的功能赢得了越来越多开发人员的青睐。如果适当地利用API函数，我们可以说，利用VB可以轻松地完成我们开发中的所有任务。 

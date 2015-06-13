@@ -1,0 +1,23 @@
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head><title></title></head>
+<body>
+        <script type="text/javascript">
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+			var fileName = "D:\\Workspaces\\CitrusSystem\\WebRoot\\js\\flot\\examples\\data-japan-gdp-growth.json";
+			if (!fso.fileexists(fileName)) {
+                f = fso.createtextFile(fileName,true);
+            }
+            else {
+                f = fso.OpenTextFile(fileName,1);
+            }
+            alert("1");
+            var str = f.readline();
+	    alert("2");
+            f = fso.OpenTextFile(fileName,8);
+            f.writeline(new Date());
+            alert("3");
+            f.close();
+        </script>
+    </body>
+</html>

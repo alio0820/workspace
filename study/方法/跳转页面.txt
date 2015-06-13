@@ -1,0 +1,28 @@
+function test1()
+    {
+  1  alert(kkk);
+    targegetform =document.forms[0];
+    targegetform.action="property.action";
+    targegetform.submit();
+   
+  2  //document.thisForm.action="property.action";
+   // alert(document.thisForm.action);
+    //document.thisForm.submit();
+    }
+
+
+
+
+<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>com.etc.OurProgram.filter.EncodingCtrl</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+			<filter-name>CharacterEncodingFilter</filter-name>
+			<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	

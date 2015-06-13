@@ -1,0 +1,207 @@
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+A {
+	COLOR: #4a76b9
+}
+.g_layer_mask {
+	Z-INDEX: 88888; POSITION: absolute; FILTER: alpha(opacity=20); WIDTH: 100%; BACKGROUND: #333333; HEIGHT: 100%; VISIBILITY: hidden; TOP: 0px; LEFT: 0px; -moz-opacity: 0.2; opacity: 0.2
+}
+.g_layer_move {
+	BORDER-BOTTOM: #666 1px solid; BORDER-LEFT: #666 1px solid; BACKGROUND: #e0e0e0; BORDER-TOP: #666 1px solid; CURSOR: move; BORDER-RIGHT: #666 1px solid
+}
+.g_layer {
+	Z-INDEX: 50000; POSITION: absolute; WIDTH: 362px; BACKGROUND: #fff; HEIGHT: 202px; VISIBILITY: hidden; TOP: 0px; LEFT: 0px
+}
+.g_layer .g_layer_wrap {
+	Z-INDEX: 2; BORDER-BOTTOM: #4a6f8e 1px solid; POSITION: relative; BORDER-LEFT: #4a6f8e 1px solid; WIDTH: 360px; HEIGHT: 200px; OVERFLOW: hidden; BORDER-TOP: #4a6f8e 1px solid; BORDER-RIGHT: #4a6f8e 1px solid
+}
+.g_layer .g_layer_wrap .g_layer_head {
+	BORDER-BOTTOM: #3a85cc 1px solid; POSITION: relative; BORDER-LEFT: #aad0f4 1px solid; BACKGROUND: #769cc0; HEIGHT: 27px; BORDER-TOP: #aad0f4 1px solid; BORDER-RIGHT: #3a85cc 1px solid
+}
+.g_layer .g_layer_wrap .g_layer_head H3 {
+	POSITION: absolute; COLOR: #fff; FONT-SIZE: 14px; TOP: 5px; LEFT: 10px
+}
+.g_layer .g_layer_wrap .g_layer_head A.g_layer_close {
+	POSITION: absolute; TEXT-INDENT: -5000px; WIDTH: 11px; DISPLAY: block; BACKGROUND: url(http://static.51img1.com/v3/themes/skins/images/close.gif) no-repeat; HEIGHT: 11px; OVERFLOW: hidden; RIGHT: 10px; TOP: 7px
+}
+.g_layer .g_layer_wrap .g_layer_body {
+	FONT-SIZE: 12px
+}
+.g_layer .g_layer_wrap .g_layer_foot {
+	POSITION: absolute; BOTTOM: 0px
+}
+.g_layer .g_layer_wrap .g_layer_corner {
+	WIDTH: 4px; FLOAT: left; HEIGHT: 1px
+}
+.g_layer_corner_top1 {
+	
+}
+.g_layer_corner_top2 {
+	
+}
+.g_layer_corner_top3 {
+	
+}
+.g_layer_corner_bottom1 {
+	LINE-HEIGHT: 1px
+}
+.g_layer_corner_bottom2 {
+	LINE-HEIGHT: 1px
+}
+.g_layer_corner_bottom3 {
+	LINE-HEIGHT: 1px
+}
+.g_layer .g_layer_background {
+	Z-INDEX: 1; POSITION: absolute; HEIGHT: 202px; TOP: 0px; LEFT: 0px
+}
+.g_layer_alert_logo {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; FLOAT: left; PADDING-TOP: 15px
+}
+.g_layer_alert_ico {
+	WIDTH: 40px; BACKGROUND: url(http://static.51img1.com/v3/themes/skins/images/alert.gif); HEIGHT: 40px
+}
+.g_layer_alert_buttonbox {
+	TEXT-ALIGN: center; LINE-HEIGHT: 30px; CLEAR: both
+}
+.g_layer_alert_btn {
+	BORDER-BOTTOM: #a0a0a0 1px solid; BORDER-LEFT: #a0a0a0 1px solid; PADDING-BOTTOM: 1px; LINE-HEIGHT: normal; MARGIN: 0px 10px; PADDING-LEFT: 1.5em; PADDING-RIGHT: 1.5em; BACKGROUND: url(http://static.51img1.com/v3/themes/skins/images/btn_bg.gif) repeat-x; COLOR: #000; FONT-SIZE: 12px; OVERFLOW: visible; BORDER-TOP: #a0a0a0 1px solid; CURSOR: pointer; BORDER-RIGHT: #a0a0a0 1px solid; PADDING-TOP: 5px
+}
+.g_layerbox {
+	BORDER-BOTTOM: #5592c5 1px solid; BORDER-LEFT: #5592c5 1px solid; BORDER-TOP: #5592c5 1px solid; BORDER-RIGHT: #5592c5 1px solid
+}
+.g_layerbox_title {
+	BORDER-BOTTOM: #3a85cc 1px solid; POSITION: relative; BORDER-LEFT: #aad0f4 1px solid; BACKGROUND: #769cc0; HEIGHT: 27px; BORDER-TOP: #aad0f4 1px solid; BORDER-RIGHT: #3a85cc 1px solid
+}
+.g_layerbox_title H3 {
+	POSITION: absolute; COLOR: #fff; FONT-SIZE: 14px; TOP: 5px; LEFT: 10px
+}
+.g_layerbox_title A.close {
+	POSITION: absolute; TEXT-INDENT: -5000px; WIDTH: 11px; DISPLAY: block; BACKGROUND: url(http://static.51img1.com/v3/themes/skins/images/close.gif) no-repeat; HEIGHT: 11px; OVERFLOW: hidden; RIGHT: 10px; TOP: 7px
+}
+.g_layerbox_wrap {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 15px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+.g_home_layer LI {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-TOP: 0px
+}
+.g_im_layer {
+	COLOR: #333; FONT-SIZE: 12px
+}
+.g_im_layer H1 {
+	FONT-SIZE: 12px
+}
+.g_im_layer H2 {
+	FONT-SIZE: 12px
+}
+.g_im_layer H3 {
+	FONT-SIZE: 12px
+}
+.g_im_layer H4 {
+	FONT-SIZE: 12px
+}
+.g_im_layer H5 {
+	FONT-SIZE: 12px
+}
+.g_im_layer H6 {
+	FONT-SIZE: 12px
+}
+.g_im_layer UL {
+	LIST-STYLE-TYPE: none
+}
+.g_im_layer .g_layer_alert_btn {
+	BORDER-BOTTOM: #214a88 1px solid; BORDER-LEFT: #8bb9ff 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0.9em; WIDTH: auto; PADDING-RIGHT: 0.9em; BACKGROUND: #4a76b9; COLOR: #fff; FONT-SIZE: 14px; OVERFLOW: visible; BORDER-TOP: #8bb9ff 1px solid; CURSOR: pointer; BORDER-RIGHT: #214a88 1px solid; PADDING-TOP: 3px; _width: 0
+}
+.g_im_layer .g_layer_alert_btn_gray {
+	BORDER-BOTTOM: #214a88 1px solid; BORDER-LEFT: #8bb9ff 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0.9em; WIDTH: auto; PADDING-RIGHT: 0.9em; BACKGROUND: #4a76b9; COLOR: #fff; FONT-SIZE: 14px; OVERFLOW: visible; BORDER-TOP: #8bb9ff 1px solid; CURSOR: pointer; BORDER-RIGHT: #214a88 1px solid; PADDING-TOP: 3px; _width: 0
+}
+.g_im_layer .g_layer_alert_btn:hover {
+	COLOR: #fff
+}
+.g_im_layer .g_layer_alert_btn_gray {
+	BORDER-BOTTOM: #b2b2b2 1px solid; BORDER-LEFT: #fff 1px solid; BACKGROUND: #dfdfdf; COLOR: #333; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #b2b2b2 1px solid
+}
+.g_im_layer .g_layer_alert_btn_gray:hover {
+	COLOR: #333
+}
+.g_layer {
+	LINE-HEIGHT: normal
+}
+.g_layer SELECT {
+	LINE-HEIGHT: normal
+}
+.g_layer INPUT {
+	LINE-HEIGHT: normal
+}
+.g_layer TEXTAREA {
+	LINE-HEIGHT: normal
+}
+.g_layer INPUT {
+	VERTICAL-ALIGN: baseline
+}
+.g_layer IMG {
+	VERTICAL-ALIGN: baseline
+}
+.g_layer OBJECT {
+	VERTICAL-ALIGN: baseline
+}
+.g_layer EMBED {
+	VERTICAL-ALIGN: baseline
+}
+.g_btn_w {
+	BORDER-BOTTOM: #4a76b9 1px solid; BORDER-LEFT: #4a76b9 1px solid; MARGIN: 0px 7px; ZOOM: 1; DISPLAY: inline; BORDER-TOP: #4a76b9 1px solid; BORDER-RIGHT: #4a76b9 1px solid
+}
+.g_btn_w_gray {
+	BORDER-BOTTOM: #dfdfdf 1px solid; BORDER-LEFT: #dfdfdf 1px solid; MARGIN: 0px 7px; ZOOM: 1; DISPLAY: inline; BORDER-TOP: #dfdfdf 1px solid; BORDER-RIGHT: #dfdfdf 1px solid
+}
+.g_btn {
+	BORDER-BOTTOM: #214a88 1px solid; BORDER-LEFT: #8bb9ff 1px solid; BACKGROUND: #4a76b9; COLOR: #fff; BORDER-TOP: #8bb9ff 1px solid; BORDER-RIGHT: #214a88 1px solid
+}
+.g_btn_gray {
+	BORDER-BOTTOM: #214a88 1px solid; BORDER-LEFT: #8bb9ff 1px solid; BACKGROUND: #4a76b9; COLOR: #fff; BORDER-TOP: #8bb9ff 1px solid; BORDER-RIGHT: #214a88 1px solid
+}
+A.g_btn:hover {
+	COLOR: #fff
+}
+.g_btn {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0.9em; PADDING-RIGHT: 0.9em; HEIGHT: auto !important; FONT-SIZE: 14px; CURSOR: pointer; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+.g_btn_1 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0.9em; PADDING-RIGHT: 0.9em; HEIGHT: auto !important; FONT-SIZE: 14px; CURSOR: pointer; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+.g_btn_gray {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0.9em; PADDING-RIGHT: 0.9em; HEIGHT: auto !important; FONT-SIZE: 14px; CURSOR: pointer; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+INPUT.g_btn {
+	WIDTH: auto; OVERFLOW: visible; _width: 0
+}
+INPUT.g_btn_1 {
+	WIDTH: auto; OVERFLOW: visible; _width: 0
+}
+INPUT.g_btn_gray {
+	WIDTH: auto; OVERFLOW: visible; _width: 0
+}
+A.g_btn {
+	FLOAT: left
+}
+A.g_btn_1 {
+	FLOAT: left
+}
+A.g_btn_gray {
+	FLOAT: left
+}
+A.g_btn:hover {
+	TEXT-DECORATION: none
+}
+A.g_btn_1:hover {
+	TEXT-DECORATION: none
+}
+.g_btn_gray:hover {
+	TEXT-DECORATION: none
+}
+.g_btn_gray {
+	BORDER-BOTTOM: #b2b2b2 1px solid; BORDER-LEFT: #fff 1px solid; BACKGROUND: #dfdfdf; COLOR: #333; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #b2b2b2 1px solid
+}
+.g_btn_gray:hover {
+	COLOR: #333
+}

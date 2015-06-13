@@ -1,0 +1,14 @@
+Oracle中将查询出的多条记录的某个字段拼接成一个字符串的方法
+分类： 数据库 2012-09-04 14:21 2081人阅读 评论(0) 收藏 举报
+oracletable
+
+11g里面用listagg：
+
+select listagg(name,',') within (order by id) from table
+
+
+10g里面用wm_concat：
+select wm_concat(name) from table
+
+wm_concat是undocument的
+listagg是11g document的

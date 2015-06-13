@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+    <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+    <window
+    id="test-window"
+    title="测试用的窗口"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <label value="用户名"/>
+    <textbox id="username"/>
+    <label value="密码"/>
+    <textbox id="password" type="password" maxlength="10"/>
+    <label value="个人简介"/>
+    <textbox multiline="true"
+       value="在这里填入你的个人简介。"/>
+    </window>
+

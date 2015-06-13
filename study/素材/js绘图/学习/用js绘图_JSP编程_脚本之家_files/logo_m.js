@@ -1,0 +1,1 @@
+﻿document.write('<a href="http://www.53dns.com" target="_blank"><img src="http://img.jb51.net/imgby/53dns.gif" width=370 height=60 /></a>');

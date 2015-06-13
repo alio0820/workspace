@@ -1,0 +1,113 @@
+<html>
+
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<title>读取 Radio 的值
+</title>
+
+</head>
+
+
+<body>
+
+
+<div>
+
+<a href="http://www.cftea.com/" target="_blank">千一网络 www.cftea.com 专业探讨【ASP、JavaScript、XHTML+CSS、SQL Server】
+</a>
+
+<hr>
+
+</div>
+
+
+<form id="form1" action="" method="">
+
+    <div>
+<input type="radio" name="r" id="r1" value="一">
+<label for="r1">选项一</label>
+</div>
+   
+ <div>
+<input type="button" value="检查选择项" onclick="javascript:Foo();">
+</div>
+
+</form>
+
+
+<script type="text/javascript" language="javascript">
+
+<!--
+function Foo()
+
+{
+    
+var selectedIndex = -1;
+    
+var form1 = document.getElementById("form1");
+
+var i = 0;
+
+    
+if (form1.r.value != undefined)
+  
+{
+        //只有一个 radio 的情况
+        
+if (form1.r.checked)
+        
+{
+            selectedIndex = 0;
+            
+alert("您选择项的 value 是：" + form1.r.value);
+        
+}
+        
+else
+        
+{
+            alert("您没有选择任何项");
+        
+}
+        
+return;
+    
+}
+    
+    for (i=0; i<form1.r.length; i++)
+    
+{
+        
+if (form1.r[i].checked)
+        
+{
+           
+ selectedIndex = i;
+            alert("您选择项的 value 是：" + form1.r[i].value);
+            break;
+        
+}
+    
+}
+    
+    
+if (selectedIndex < 0)
+    
+{
+        alert("您没有选择任何项");
+    
+}
+
+}
+-->
+
+</script>
+
+
+</body>
+
+
+</html>

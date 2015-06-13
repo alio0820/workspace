@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC                                                  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<include file="conf/*/struts-*.xml" />
+	<!-- 全局result设置,使用前需将此package设置为parent package -->
+	<package name="web-default" namespace="/" extends="tiles-default">
+		<global-results>
+			<result name="">
+			</result>			
+		</global-results>
+	</package>
+     	<package name="upload" namespace="/" extends="web-default">
+			<action name="upload-*" class="uploadAction" method="{1}">
+			    <param name="savePath">/upload</param>
+				<result name="percentAjax">/WEB-INF/jsp/upload/percent-ajax.jsp</result>
+				<result name="successAjax">/WEB-INF/jsp/upload/upload-ajax.jsp</result>
+				<result name="showAjax">/WEB-INF/jsp/upload/show-ajax.jsp</result>
+			</action>	
+        </package>	
+</struts>

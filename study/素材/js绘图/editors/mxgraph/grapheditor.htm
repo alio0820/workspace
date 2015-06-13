@@ -1,0 +1,98 @@
+<!--
+  $Id: grapheditor.html,v 1.7 2010-01-02 09:45:15 gaudenz Exp $
+  Copyright (c) 2006-2010, JGraph Ltd
+  
+  Graph Editor example for mxGraph. This example demonstrates using
+  mxGraph inside an ExtJs panel, and integrating tooltips, popupmenus,
+  toolbars and dialogs into mxGraph.
+-->
+<html>
+<head>
+    <title>Graph Editor</title>
+
+	<link rel="stylesheet" type="text/css" href="css/ext-all.css" />
+	<script type="text/javascript" src="js/Base/ext-base.js"></script>
+	<script type="text/javascript" src="js/Base/ext-all.js"></script>
+
+	<!-- Sets the basepath for the library if not in same directory -->
+	<script type="text/javascript">
+		mxBasePath = 'src';
+	</script>
+
+    <!--加载mxclinet-->
+    <script type="text/javascript" src="js/Base/mxclient.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/grapheditor.css" />
+
+    <script type="text/javascript" src="js/Panel/GraphEditor.js"></script>
+    <script type="text/javascript" src="js/Panel/MainPanel.js"></script>
+    <script type="text/javascript" src="js/Panel/LibraryPanel.js"></script>
+    <script type="text/javascript" src="js/Panel/DiagramStore.js"></script>
+    <script type="text/javascript" src="js/Panel/DiagramPanel.js"></script>
+    <!---->
+	<script type="text/javascript">
+		// Replaces the built-in alert dialog with ExtJs message dialog (can't
+		// replace confirm and prompt as they are callback-based and we require
+		// a synchronous call with a return value).
+		// Ext.MessageBox.prompt('Prompt', message, null, null, null, defaultValue);
+		// Ext.MessageBox.confirm('Confirm', message);
+		function LoadCurrentDocument()
+		{
+		    main(); /*  js/GraphEditor.js */ 
+		    //graph 为全局绘图对象
+		}
+		//加载XML文档以显示新的绘图
+		function LoadXmlDocument(xml) 
+		{
+		    if (xml != null && xml.length > 0)
+    		{
+    			var doc = mxUtils.parseXml(xml); 
+    			var dec = new mxCodec(doc); 
+    			dec.decode(doc.documentElement, graph.getModel()); 
+    		}
+		}
+		//上传XML文档到服务器
+		function UploadXmlHtmlDocument(xml,html)
+		{
+		    //str 变量中包含当前文档相应的XML文档字符串
+		    alert(xml);
+		    //html 变量中包含当前文档相应的HTML文档字符串
+		    alert(html);
+		}
+        function CustomImageLibrary()
+        {
+            insertImageTemplate(library, graph, '铃', 'images/bell.png', false);
+            insertImageTemplate(library, graph, '盒子', 'images/box.png', false);
+            insertImageTemplate(library, graph, '立方体', 'images/cube_green.png', false);
+            //insertImageTemplate(library, graph, '用户', 'images/dude3.png', true);
+            insertImageTemplate(library, graph, '地球', 'images/earth.png', true);
+            insertImageTemplate(library, graph, '齿轮', 'images/gear.png', true);
+            insertImageTemplate(library, graph, '家', 'images/house.png', false);
+            insertImageTemplate(library, graph, '包', 'images/package.png', false);
+            insertImageTemplate(library, graph, '打印机', 'images/printer.png', false);
+            insertImageTemplate(library, graph, '服务器', 'images/server.png', false);
+            insertImageTemplate(library, graph, '工作站', 'images/workplace.png', false);
+            insertImageTemplate(library, graph, '扳手', 'images/wrench.png', true);
+
+        }
+        function CustomSymbolLibrary()
+        {
+            insertSymbolTemplate(library, graph, '取消', 'images/symbols/cancel_end.png', false);
+            insertSymbolTemplate(library, graph, '错误', 'images/symbols/error.png', false);
+            insertSymbolTemplate(library, graph, '事件', 'images/symbols/event.png', false);
+            insertSymbolTemplate(library, graph, '交叉', 'images/symbols/fork.png', true);
+            insertSymbolTemplate(library, graph, '包含', 'images/symbols/inclusive.png', true);
+            insertSymbolTemplate(library, graph, '连接', 'images/symbols/link.png', false);
+            insertSymbolTemplate(library, graph, '合并', 'images/symbols/merge.png', true);
+            insertSymbolTemplate(library, graph, '消息', 'images/symbols/message.png', false);
+            insertSymbolTemplate(library, graph, '多体', 'images/symbols/multiple.png', false);
+            insertSymbolTemplate(library, graph, '规则', 'images/symbols/rule.png', false);
+            insertSymbolTemplate(library, graph, '终止', 'images/symbols/terminate.png', false);
+            insertSymbolTemplate(library, graph, '计时器', 'images/symbols/timer.png', false);
+        }
+	</script>
+</head>
+<body onload="LoadCurrentDocument();">
+<div id="header"><div style="float:right;margin:5px;" class="x-small-editor"></div></div>
+</body>
+</html>

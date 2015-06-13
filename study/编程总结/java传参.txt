@@ -1,0 +1,8 @@
+严格说，JAVA里传参都是也只有按值的，但当参数是对象名时，对象名实质上是指向内存中真实对象的一个引用，类似C++的指针，所以函数内对传进的对象操作时，其实是对原始对象操作了。对象名本身却是按值传的的，它被复制了一个副本传给了调用它的函数体。
+
+使用map传多个参数
+HashMap   map=new   HashMap(); 
+map.put(new   Integer(3),new   String( "aaa "); 
+String   title=(String)   (map.get(new   Integer(3)));
+
+但是map不是一个好的习惯，应该用class封装

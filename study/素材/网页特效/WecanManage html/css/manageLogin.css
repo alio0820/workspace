@@ -1,0 +1,82 @@
+@charset "utf-8";
+html{
+	height:100%;
+}
+body{
+	font-family:"微软雅黑","宋体", Arial, Helvetica, sans-serif;
+	font-size:14px;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	background:url(../images/manageMent/systemIcon/bg-login.gif);
+}
+#container{
+	height:100%;
+}
+#header{
+	background:url(../images/manageMent/systemIcon/bg-login-top.png) 0 0 repeat-x;
+}
+#header img{
+	border:none;
+	width:198px;
+	height:86px;
+	margin-top:119px;
+}
+
+#footer{
+	text-align:left;
+}
+#logo_text{
+	margin-left:633px;
+	margin-top:8px;
+}
+#footer .input{
+	margin-left:481px;
+	margin-top:30px;
+}
+#footer .input .row{
+	height:35px;
+	margin-bottom:20px;
+}
+#footer .input .row input{
+	font-size:16px;
+	height:35px;
+	width:225px;
+	border:0px;
+	background:url(../images/manageMent/systemIcon/input_bg.png) top left no-repeat;
+	padding-left:5px;
+	padding-right:5px;
+}
+#footer .input .row input#check_box{
+	width:18px;
+	height:18px;
+	margin-left:65px;
+	background:url(../images/manageMent/systemIcon/checkbox_bg.png) no-repeat;
+}
+#footer .input .row input#login_btn{
+	width:80px;
+	height:23px;
+	border:0px;
+	background:url(../images/manageMent/systemIcon/login_btn_bg.png) no-repeat;
+	color:#FFF;
+	font-size:14px;
+	margin-left:62px;
+}
+#footer .input span{
+	font-size:16px;
+	color:#FFF;
+	margin-right:15px;
+}
+#footer .input span.wrong_tips{
+	
+}
+#footer .input span.wrong_tips span{
+	color:#ff8a01;
+	margin-left:5px;
+	margin-right:0px;
+}
+
+
+
+
+

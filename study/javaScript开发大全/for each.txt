@@ -1,0 +1,9 @@
+<!-- for each (myProperties1 in myObject)
+        {
+           document.write(myProperties1,"<br>");
+        }
+        for each (var myElement1 in myArray)
+     {
+         document.write(myElement1,"<br>");
+     }
+      -->

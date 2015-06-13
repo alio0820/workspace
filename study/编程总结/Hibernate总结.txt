@@ -1,0 +1,65 @@
+1.show_sql：运行期是否在控制台打印SQL语句
+
+
+2.应用程序从SessionFactory（会话工厂）里获得Session(会话)实例。它在多个应用线程间进行共享。通常情况下，整个应用只有唯一的一个会话工厂——例如在应用初始化时被创建。
+然而，如果你使用Hibernate访问多个数据库，你需要对每一个数据库使用一个会话工厂。
+
+SessionFactory sessionFactory = cfg.buildSessionFactory();
+SessionFactory由hibernate.cfg.xml文件来配置
+
+3.当我们调用： 
+Configuration config = new Configuration().configure(); 时，Hibernate会自动在当前的 CLASSPATH 中搜寻 hibernate.cfg.xml文件并将其读取到内存中作为后继操作的基础配置。
+Configuration 类一般只有在获取 SessionFactory时需要涉及，
+
+4.一个hibernate.cfg.xml文件与一个SessionFactory相对应
+SessionFactory 负责创建 Session 实例。
+
+5.Session是持久层操作的基础，相当于JDBC中的 Connection。它与Web层的HttpSession没有任何关系。
+Session调用代码
+Session session = sessionFactory.openSession();
+
+6.Hibernate采用POJO表示数据对象，对象属性与表中字段值相对应
+Hibernate采用低侵入式的设计，也即完全采用普通的Java对象（POJO:plain old java objects），而不必继承Hibernate的某个基类，或实现Hibernate的某个接口。
+
+7.JTA(Java Transaction API) 为 J2EE 平台提供了分布式事务服务。要用 JTA 进行事务界定,应用程序要调用javax.transaction.UserTransaction 接口中的方法。
+JTA与JDBC事务不同在于可以跨连接。
+
+Transaction tx = session.beginTransaction();
+	 tx.commit();
+
+8.首先JDBC的事务前提是,处理的所有方法共用一个conn,然后在方法加异常处理,出现异常就调用rollback() 如果都没异常,所有方法执行结束,调用commit() 
+
+9.HQL子句本身大小写无关，但是其中出现的类名和属性名必须注意大小写区分。
+
+10.什么叫静态修饰符呢？在java类库当中有很多类成员都声明为static，可以让用户不需要实例化对象就可以引用成员，最基本的有Integer.parseInt()，Float.parseFloat()等等用来把对象转换为所需要的基本数据类型。这样的变量和方法我们又叫做类变量和类方法，可以由一个类直接调用，为所有对象共有的。
+
+11.Cache 是内存中的临时存储器
+当查询数据时先从cache中查，如果找到就不去查找数据库,如果找不到再从数据库中查找,可以提高效率
+
+12.实际操作时候，比如：要插入一万个记录，用save方法的话，就产生一万个对象，不能一次删除一万个对象，
+可以产生每三十个对象，删除一次，这样才能保证内存的合理空间
+
+13.我们在编码中没有写session.close，因为我们在commit前，它会自动帮我们close
+
+14.Session.get/load
+如果未能发现符合条件的记录，get方法返回null，而load方法会抛出一个ObjectNotFoundException。 
+load()方法可返回实体的代理类实例，而get方法永远直接返回实体类。 
+load方法可以充分利用内部缓存和二级缓存中的现有数据
+get方法则仅仅在内部缓存中进行数据查找，如没有发现对应数据，将越过二级缓存，直接调用SQL完成数据读取
+
+15.session.flush();
+flush 的作用是把sql语句发到数据库，在执行commit()时session.flush会被调用在批量提交时,需要手工调用
+不手工调用，在commit之前也会调用flush，但是内存在commit之前内存就有可能被耗尽了，还没来得及调用flush
+
+16.hibernate.jdbc.batch_size来指定每次提交的SQL数量（注：mysql的驱动不支持此参数）
+<property name=“hibernate.jdbc.batch_size”>
+25
+</property>
+
+17.做项目的一个原则：不要产生一个对象，可以产生一个数据结构，可以是HashMap(key,value)，ArrayList，properties	(key,value)
+这些不会和一个对象对应起来；如果产生一个对象，再查询的时候怎么办
+
+18.实际我们做项目的时候，把三个类使用一张表，因为单表操作效率最高，设置flag
+大多情况下，都会把继承关系并成一张表；另外如果俩个类相同字段比较少，就分成俩张表
+
+

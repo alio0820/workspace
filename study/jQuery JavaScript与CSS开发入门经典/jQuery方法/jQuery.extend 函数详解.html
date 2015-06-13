@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery.extend 函数详解 - RascallySnake - 博客园</title>
+<link type="text/css" rel="stylesheet" href="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/style.css">
+<link type="text/css" rel="stylesheet" href="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/common2.css">
+<link type="text/css" rel="stylesheet" href="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/shStyle.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/RascallySnake/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/RascallySnake/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/RascallySnake/wlwmanifest.xml">
+<script src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/ga.js" async="" type="text/javascript"></script><script src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/gpt.js" type="text/javascript" async=""></script><script src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/encoder.js" type="text/javascript"></script><script src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">
+var currentBlogApp = 'RascallySnake';
+</script>
+<script src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/common.js" type="text/javascript"></script> 
+<script src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/json2.js" type="text/javascript"></script>
+<script type="text/javascript" src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/syntaxHighlighter.js"></script>
+<script src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/google_ads_gpt.js" type="text/javascript" async=""></script><script src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/osd.js" type="text/javascript"></script></head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="header">
+	
+<!--done-->
+<div class="header">
+	<div class="headerText">
+		<a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/RascallySnake/">RascallySnake</a><br>
+		Keep Studying
+	</div>
+</div>
+
+</div>
+
+<div id="mytopmenu">
+	
+		<div id="mylinks">
+<!--done-->
+<a id="MyLinks1_HomeLink" class="menu" href="http://www.cnblogs.com/">博客园</a> &nbsp;
+<a id="MyLinks1_MyHomeLink" class="menu" href="http://www.cnblogs.com/RascallySnake/">首页</a> &nbsp;
+<a href="http://q.cnblogs.com/" class="menu">博问</a> &nbsp;
+<a href="http://home.cnblogs.com/ing/" class="menu">闪存</a> &nbsp;
+<a id="MyLinks1_NewPostLink" class="menu" rel="nofollow" href="http://www.cnblogs.com/RascallySnake/admin/EditPosts.aspx?opt=1">新随笔</a> &nbsp;
+<a id="MyLinks1_ContactLink" class="menu" rel="nofollow" href="http://space.cnblogs.com/msg/send/RascallySnake">联系</a> &nbsp;
+<a id="MyLinks1_Syndication" class="menu" href="http://www.cnblogs.com/RascallySnake/rss">订阅</a><a id="MyLinks1_XMLLink" href="http://www.cnblogs.com/RascallySnake/rss"><img src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/xml.gif" alt="订阅"></a>&nbsp;
+<a id="MyLinks1_Admin" class="menu" rel="nofollow" href="http://www.cnblogs.com/RascallySnake/admin/EditPosts.aspx">管理</a>
+</div>
+		<div id="mystats">
+<!--done-->
+随笔-42&nbsp;
+评论-43&nbsp;
+文章-0&nbsp;
+trackbacks-0
+</div>
+	
+</div>
+<div id="centercontent">
+	
+	
+<div class="post">
+	<h1 class="postTitle"><a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729563.html">jQuery.extend 函数详解</a></h1>
+	<div id="cnblogs_post_body"><p>JQuery的extend扩展方法：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jquery的扩展方法extend是我们在写插件的过程中常用的方法，该方法有一些重载原型，在此，我们一起去了解了解。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> 一、Jquery的扩展方法原型是:</strong>　　　</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;"> extend(dest,src1,src2,src3...);</span></div></pre>
+</div>
+<p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+它的含义是将src1,src2,src3...合并到dest中,返回值为合并后的dest,由此可以看出该方法合并后，是修改了dest的结构的。如
+果想要得到合并的结果却又不想修改dest的结构，可以如下使用：</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">  var newSrc</span><span style="color: #000000;">=</span><span style="color: #000000;">$.extend({},src1,src2,src3...)</span><span style="color: #008000;">//</span><span style="color: #008000;">也就是将"{}"作为dest参数。</span></div></pre>
+</div>
+<p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这样就可以将src1,src2,src3...进行合并，然后将合并结果返回给newSrc了。如下例：</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">var result</span><span style="color: #000000;">=</span><span style="color: #000000;">$.extend({},{name:</span><span style="color: #800000;">"</span><span style="color: #800000;">Tom</span><span style="color: #800000;">"</span><span style="color: #000000;">,age:</span><span style="color: #800080;">21</span><span style="color: #000000;">},{name:</span><span style="color: #800000;">"</span><span style="color: #800000;">Jerry</span><span style="color: #800000;">"</span><span style="color: #000000;">,sex:</span><span style="color: #800000;">"</span><span style="color: #800000;">Boy</span><span style="color: #800000;">"</span><span style="color: #000000;">})<br></span></div></pre>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 那么合并后的结果</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">  result</span><span style="color: #000000;">=</span><span style="color: #000000;">{name:</span><span style="color: #800000;">"</span><span style="color: #800000;">Jerry</span><span style="color: #800000;">"</span><span style="color: #000000;">,age:</span><span style="color: #800080;">21</span><span style="color: #000000;">,sex:</span><span style="color: #800000;">"</span><span style="color: #800000;">Boy</span><span style="color: #800000;">"</span><span style="color: #000000;">}</span></div></pre>
+</div>
+<p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 也就是说后面的参数如果和前面的参数存在相同的名称，那么后面的会覆盖前面的参数值。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>二、省略dest参数</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上述的extend方法原型中的dest参数是可以省略的，如果省略了，则该方法就只能有一个src参数，而且是将该src合并到调用extend方法的对象中去，如：<br>&nbsp;　　<strong>1、$.extend(src)<br></strong>&nbsp;　　该方法就是将src合并到jquery的全局对象中去，如：</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;"> $.extend({<br>  hello:function(){alert(</span><span style="color: #800000;">'</span><span style="color: #800000;">hello</span><span style="color: #800000;">'</span><span style="color: #000000;">);}<br>  });</span></div></pre>
+</div>
+<p><br>&nbsp;　　就是将hello方法合并到jquery的全局对象中。<br>&nbsp;　　<strong>2、$.fn.extend(src)</strong><br>&nbsp;　　该方法将src合并到jquery的实例对象中去，如:</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;"> $.fn.extend({<br>  hello:function(){alert(</span><span style="color: #800000;">'</span><span style="color: #800000;">hello</span><span style="color: #800000;">'</span><span style="color: #000000;">);}<br> });<br></span></div></pre>
+</div>
+<p>&nbsp;</p>
+<p>　　&nbsp;就是将hello方法合并到jquery的实例对象中。</p>
+<p>&nbsp;　　下面例举几个常用的扩展实例：</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">$.extend({net:{}});<br></span></div></pre>
+</div>
+<p>&nbsp;</p>
+<p>　　 这是在jquery全局对象中扩展一个net命名空间。</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">  $.extend($.net,{<br>   hello:function(){alert(</span><span style="color: #800000;">'</span><span style="color: #800000;">hello</span><span style="color: #800000;">'</span><span style="color: #000000;">);}<br>  })</span></div></pre>
+</div>
+<p><br>&nbsp; 　　这是将hello方法扩展到之前扩展的Jquery的net命名空间中去。</p>
+<p>&nbsp;　　<strong>三、Jquery的extend方法还有一个重载原型：</strong>&nbsp;&nbsp;</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">extend(boolean,dest,src1,src2,src3...)</span></div></pre>
+</div>
+<p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一个参数boolean代表是否进行深度拷贝，其余参数和前面介绍的一致，什么叫深层拷贝，我们看一个例子：</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">var result</span><span style="color: #000000;">=</span><span style="color: #000000;">$.extend( </span><span style="color: #0000ff;">true</span><span style="color: #000000;">,  {},  <br>    { name: </span><span style="color: #800000;">"</span><span style="color: #800000;">John</span><span style="color: #800000;">"</span><span style="color: #000000;">, location: {city: </span><span style="color: #800000;">"</span><span style="color: #800000;">Boston</span><span style="color: #800000;">"</span><span style="color: #000000;">,county:</span><span style="color: #800000;">"</span><span style="color: #800000;">USA</span><span style="color: #800000;">"</span><span style="color: #000000;">} },  <br>    { last: </span><span style="color: #800000;">"</span><span style="color: #800000;">Resig</span><span style="color: #800000;">"</span><span style="color: #000000;">, location: {state: </span><span style="color: #800000;">"</span><span style="color: #800000;">MA</span><span style="color: #800000;">"</span><span style="color: #000000;">,county:</span><span style="color: #800000;">"</span><span style="color: #800000;">China</span><span style="color: #800000;">"</span><span style="color: #000000;">} } ); </span></div></pre>
+</div>
+<p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+我们可以看出src1中嵌套子对象location:{city:"Boston"},src2中也嵌套子对象location:
+{state:"MA"},第一个深度拷贝参数为true，那么合并后的结果就是：&nbsp;</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">result</span><span style="color: #000000;">=</span><span style="color: #000000;">{name:</span><span style="color: #800000;">"</span><span style="color: #800000;">John</span><span style="color: #800000;">"</span><span style="color: #000000;">,last:</span><span style="color: #800000;">"</span><span style="color: #800000;">Resig</span><span style="color: #800000;">"</span><span style="color: #000000;">,<br>        location:{city:</span><span style="color: #800000;">"</span><span style="color: #800000;">Boston</span><span style="color: #800000;">"</span><span style="color: #000000;">,state:</span><span style="color: #800000;">"</span><span style="color: #800000;">MA</span><span style="color: #800000;">"</span><span style="color: #000000;">,county:</span><span style="color: #800000;">"</span><span style="color: #800000;">China</span><span style="color: #800000;">"</span><span style="color: #000000;">}}<br></span></div></pre>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;也就是说它会将src中的嵌套子对象也进行合并，而如果第一个参数boolean为false，我们看看合并的结果是什么，如下：</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">var result</span><span style="color: #000000;">=</span><span style="color: #000000;">$.extend( </span><span style="color: #0000ff;">false</span><span style="color: #000000;">, {},  <br>{ name: </span><span style="color: #800000;">"</span><span style="color: #800000;">John</span><span style="color: #800000;">"</span><span style="color: #000000;">, location:{city: </span><span style="color: #800000;">"</span><span style="color: #800000;">Boston</span><span style="color: #800000;">"</span><span style="color: #000000;">,county:</span><span style="color: #800000;">"</span><span style="color: #800000;">USA</span><span style="color: #800000;">"</span><span style="color: #000000;">} },  <br>{ last: </span><span style="color: #800000;">"</span><span style="color: #800000;">Resig</span><span style="color: #800000;">"</span><span style="color: #000000;">, location: {state: </span><span style="color: #800000;">"</span><span style="color: #800000;">MA</span><span style="color: #800000;">"</span><span style="color: #000000;">,county:</span><span style="color: #800000;">"</span><span style="color: #800000;">China</span><span style="color: #800000;">"</span><span style="color: #000000;">} }  <br>                    ); </span></div></pre>
+</div>
+<p><br>&nbsp;&nbsp;&nbsp;&nbsp; 那么合并后的结果就是:</p>
+<div class="cnblogs_code">
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #000000;">  result</span><span style="color: #000000;">=</span><span style="color: #000000;">{name:</span><span style="color: #800000;">"</span><span style="color: #800000;">John</span><span style="color: #800000;">"</span><span style="color: #000000;">,last:</span><span style="color: #800000;">"</span><span style="color: #800000;">Resig</span><span style="color: #800000;">"</span><span style="color: #000000;">,location:{state:</span><span style="color: #800000;">"</span><span style="color: #800000;">MA</span><span style="color: #800000;">"</span><span style="color: #000000;">,county:</span><span style="color: #800000;">"</span><span style="color: #800000;">China</span><span style="color: #800000;">"</span><span style="color: #000000;">}}</span></div></pre>
+</div>
+<p>&nbsp;</p>
+<p>　　以上就是$.extend()在项目中经常会使用到的一些细节。</p></div><div id="MySignature"></div>
+<script type="text/javascript">
+var isLogined = false;
+var cb_blogId = 51143;
+var cb_entryId = 1729563;
+var cb_blogApp = currentBlogApp;
+var cb_blogUserGuid = "40f216b0-1cf5-dd11-9e4d-001cf0cd104b";
+var cb_entryCreatedDate = '2010/5/7 11:45:00';
+var enableGoogleAd = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+<div id="blog_post_info_block">
+<div id="blog_post_info"><div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/RascallySnake/category/226095.html">JQuery</a></div>
+<div id="EntryTag"></div>
+<div id="green_channel">
+绿色通道：
+<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(cb_entryId,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+<a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a>
+<a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://space.cnblogs.com/msg/send/RascallySnake" target="_blank">与我联系</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/icon_weibo_24.png" alt=""></a>
+</div>
+<div id="digg_block">
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/RascallySnake/">RascallySnake</a><br>
+<a href="http://home.cnblogs.com/u/RascallySnake/followees">关注 - 1</a><br>
+<a href="http://home.cnblogs.com/u/RascallySnake/followers">粉丝 - 19</a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor"></div>
+<div id="author_profile_follow">
+<a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a>
+</div>
+</div>
+<div id="div_digg">										
+	<div class="diggit" onclick="votePost(cb_entryId,'Digg')"> 
+		<span class="diggnum" id="digg_count">20</span>
+	</div>
+	<div class="buryit" onclick="votePost(cb_entryId,'Bury')"> 
+		<span class="burynum" id="bury_count">0</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">
+    (请您对文章做出评价)
+    </div>	
+</div>
+</div></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729417.html" class="p_n_p_prefix">« </a> 博主前一篇：<a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729417.html" title="发布于2010-05-07 09:37">Jquery的$命名冲突：</a><br><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/12/1733813.html" class="p_n_p_prefix">» </a> 博主后一篇：<a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/12/1733813.html" title="发布于2010-05-12 16:31">SQl Server存储过程基础</a><br></div>
+</div>
+<script type="text/javascript">
+    initBottomGoogleAd();
+</script>
+<script type="text/javascript">
+    $(function () {       
+        fixPostBodyFormat();
+        loadBottomGoogleAd();
+        loadBlogSignature();
+        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+        showEditorOpt();
+        loadNewsAndKb();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+        loadAdUnderGoogle();
+    });
+</script>
+	<div class="postDesc">posted on <span id="post-date">2010-05-07 11:45</span> <a href="http://www.cnblogs.com/RascallySnake/">RascallySnake</a> 阅读(25406) 评论(<span id="post-comment-count">20</span>)  <a href="http://www.cnblogs.com/RascallySnake/admin/EditPosts.aspx?postid=1729563" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(1729563);return false;">收藏</a></div>
+</div>
+<img src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/1729563.jpg" alt="" height="1" width="1">
+
+<div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<!--done-->
+<br>
+<b>评论:</b>
+<div class="feedbackNoItems"></div>
+	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#1945556" class="layer">#1楼</a><a name="1945556" id="comment_anchor_1945556"></a>
+				 <span class="comment_date">2010-10-28 21:00</span> | <a id="a_comment_author_1945556" href="http://home.cnblogs.com/u/138960/" target="_blank">笨蛋的座右铭</a> <a href="http://space.cnblogs.com/msg/send/%e7%ac%a8%e8%9b%8b%e7%9a%84%e5%ba%a7%e5%8f%b3%e9%93%ad" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_1945556" class="blog_comment_body">写得很好！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(1945556,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(1945556,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#1977093" class="layer">#2楼</a><a name="1977093" id="comment_anchor_1977093"></a>
+				 <span class="comment_date">2010-12-03 17:09</span> | <a id="a_comment_author_1977093" href="http://home.cnblogs.com/u/159097/" target="_blank">Darren_微东</a> <a href="http://space.cnblogs.com/msg/send/Darren_%e5%be%ae%e4%b8%9c" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_1977093" class="blog_comment_body">一搜就搜到博客园了～呵呵～很有用～正在研究写插件～</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(1977093,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(1977093,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#1998774" class="layer">#3楼</a><a name="1998774" id="comment_anchor_1998774"></a>
+				 <span class="comment_date">2010-12-28 11:06</span> | <a id="a_comment_author_1998774" href="http://home.cnblogs.com/u/159503/" target="_blank">梦想在彩票上</a> <a href="http://space.cnblogs.com/msg/send/%e6%a2%a6%e6%83%b3%e5%9c%a8%e5%bd%a9%e7%a5%a8%e4%b8%8a" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_1998774" class="blog_comment_body">之前比较少用到$.extend,不过看了。。还是能学到一些东西</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(1998774,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(1998774,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2016571" class="layer">#4楼</a><a name="2016571" id="comment_anchor_2016571"></a>
+				 <span class="comment_date">2011-01-22 11:40</span> | <a id="a_comment_author_2016571" href="http://home.cnblogs.com/u/24360/" target="_blank">PPBoy</a> <a href="http://space.cnblogs.com/msg/send/PPBoy" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2016571" class="blog_comment_body">up，希望lz再接再厉多分享</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2016571,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2016571,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2090504" class="layer">#5楼</a><a name="2090504" id="comment_anchor_2090504"></a>
+				 <span class="comment_date">2011-05-09 10:33</span> | <a id="a_comment_author_2090504" href="http://home.cnblogs.com/u/247841/" target="_blank">Chris_Lai</a> <a href="http://space.cnblogs.com/msg/send/Chris_Lai" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2090504" class="blog_comment_body">很详细，有适当例子，谢谢了。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2090504,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2090504,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2227748" class="layer">#6楼</a><a name="2227748" id="comment_anchor_2227748"></a>
+				 <span class="comment_date">2011-10-25 17:42</span> | <a id="a_comment_author_2227748" href="http://home.cnblogs.com/u/39141/" target="_blank">nighrmare23</a> <a href="http://space.cnblogs.com/msg/send/nighrmare23" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2227748" class="blog_comment_body">厉害厉害。。。学习了</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2227748,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2227748,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2229472" class="layer">#7楼</a><a name="2229472" id="comment_anchor_2229472"></a>
+				 <span class="comment_date">2011-10-27 17:15</span> | <a id="a_comment_author_2229472" href="http://home.cnblogs.com/u/288534/" target="_blank">New Soul</a> <a href="http://space.cnblogs.com/msg/send/New+Soul" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2229472" class="blog_comment_body">转走了啊</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2229472,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2229472,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2248895" class="layer">#8楼</a><a name="2248895" id="comment_anchor_2248895"></a>
+				 <span class="comment_date">2011-11-20 14:45</span> | <a id="a_comment_author_2248895" href="http://home.cnblogs.com/u/303108/" target="_blank">孙海勋</a> <a href="http://space.cnblogs.com/msg/send/%e5%ad%99%e6%b5%b7%e5%8b%8b" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2248895" class="blog_comment_body">不错啊 好文章！！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2248895,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2248895,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2249734" class="layer">#9楼</a><a name="2249734" id="comment_anchor_2249734"></a>
+				 <span class="comment_date">2011-11-21 15:35</span> | <a id="a_comment_author_2249734" href="http://home.cnblogs.com/u/105446/" target="_blank">nyth</a> <a href="http://space.cnblogs.com/msg/send/nyth" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2249734" class="blog_comment_body">挺好，这个地方不好理解！<br>楼主要不写出来，就不知道！<br>我也纳闷，这些楼主是通过什么过程知道的?分享一下！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2249734,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2249734,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2285733" class="layer">#10楼</a><a name="2285733" id="comment_anchor_2285733"></a>
+				 <span class="comment_date">2012-01-03 22:42</span> | <a id="a_comment_author_2285733" href="http://home.cnblogs.com/u/363019/" target="_blank">GaFish</a> <a href="http://space.cnblogs.com/msg/send/GaFish" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2285733" class="blog_comment_body">学jquery很久了，也没了解到这个精髓</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2285733,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2285733,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2292806" class="layer">#11楼</a><a name="2292806" id="comment_anchor_2292806"></a>
+				 <span class="comment_date">2012-01-12 18:19</span> | <a id="a_comment_author_2292806" href="http://home.cnblogs.com/u/287395/" target="_blank">湖南long</a> <a href="http://space.cnblogs.com/msg/send/%e6%b9%96%e5%8d%97long" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2292806" class="blog_comment_body">请问lz,这个"这是在jquery全局对象中扩展一个net命名空间"怎么理解。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2292806,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2292806,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2294766" class="layer">#12楼</a><a name="2294766" id="comment_anchor_2294766"></a>
+				 <span class="comment_date">2012-01-16 14:29</span> | <a id="a_comment_author_2294766" href="http://home.cnblogs.com/u/329499/" target="_blank">pinocchioatbeijing</a> <a href="http://space.cnblogs.com/msg/send/pinocchioatbeijing" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2294766" class="blog_comment_body"><a href="#2292806" title="查看所回复的评论">@</a>湖南long<br>$.extend({net:{}});<br>中的net正如<br>$.fn.extend({<br>  hello:function(){alert('hello');}<br> });<br>中的hello吧，只不过一个是{}，一个是function(){alert('hello');}。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2294766,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2294766,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2294789" class="layer">#13楼</a><a name="2294789" id="comment_anchor_2294789"></a>
+				 <span class="comment_date">2012-01-16 14:50</span> | <a id="a_comment_author_2294789" href="http://home.cnblogs.com/u/287395/" target="_blank">湖南long</a> <a href="http://space.cnblogs.com/msg/send/%e6%b9%96%e5%8d%97long" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2294789" class="blog_comment_body"><a href="#2294766" title="查看所回复的评论">@</a>pinocchioatbeijing<br><br>我貌似懂了，谢谢。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2294789,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2294789,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2324677" class="layer">#14楼</a><a name="2324677" id="comment_anchor_2324677"></a>
+				 <span class="comment_date">2012-03-07 11:49</span> | <a id="a_comment_author_2324677" href="http://home.cnblogs.com/u/281461/" target="_blank">把酒言欢</a> <a href="http://space.cnblogs.com/msg/send/%e6%8a%8a%e9%85%92%e8%a8%80%e6%ac%a2" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2324677" class="blog_comment_body">楼主很强！如果弄不懂jQuery.extend函数的原理，写插件也是空谈!</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2324677,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2324677,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2327367" class="layer">#15楼</a><a name="2327367" id="comment_anchor_2327367"></a>
+				 <span class="comment_date">2012-03-10 15:15</span> | <a id="a_comment_author_2327367" href="http://home.cnblogs.com/u/173594/" target="_blank">逍遥叹</a> <a href="http://space.cnblogs.com/msg/send/%e9%80%8d%e9%81%a5%e5%8f%b9" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2327367" class="blog_comment_body">还是不太懂，有待加油学习！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2327367,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2327367,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2358484" class="layer">#16楼</a><a name="2358484" id="comment_anchor_2358484"></a>
+				 <span class="comment_date">2012-04-18 15:21</span> | <a id="a_comment_author_2358484" href="http://home.cnblogs.com/u/371239/" target="_blank">jesselzj</a> <a href="http://space.cnblogs.com/msg/send/jesselzj" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2358484" class="blog_comment_body">好文章，谢谢分享！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2358484,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2358484,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2374196" class="layer">#17楼</a><a name="2374196" id="comment_anchor_2374196"></a>
+				 <span class="comment_date">2012-05-10 17:32</span> | <a id="a_comment_author_2374196" href="http://home.cnblogs.com/u/407665/" target="_blank">kixi</a> <a href="http://space.cnblogs.com/msg/send/kixi" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2374196" class="blog_comment_body">靠，很深入，很好！感谢</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2374196,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2374196,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2424330" class="layer">#18楼</a><a name="2424330" id="comment_anchor_2424330"></a>
+				 <span class="comment_date">2012-07-11 13:40</span> | <a id="a_comment_author_2424330" href="http://home.cnblogs.com/u/358868/" target="_blank">木仔</a> <a href="http://space.cnblogs.com/msg/send/%e6%9c%a8%e4%bb%94" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2424330" class="blog_comment_body">真不赖，情不自禁的的留个记号</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2424330,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2424330,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2428125" class="layer">#19楼</a><a name="2428125" id="comment_anchor_2428125"></a>
+				 <span class="comment_date">2012-07-17 10:51</span> | <a id="a_comment_author_2428125" href="http://home.cnblogs.com/u/404622/" target="_blank">Andy_lu</a> <a href="http://space.cnblogs.com/msg/send/Andy_lu" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2428125" class="blog_comment_body">正在研究jQuery的tips插件，打算自己写一个，LZ的博文很有帮助啊</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2428125,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2428125,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="#2433905" class="layer">#20楼</a><a name="2433905" id="comment_anchor_2433905"></a><span id="comment-maxId" style="display:none;">2433905</span><span id="comment-maxDate" style="display:none;">2012/7/24 13:56:38</span>
+				 <span class="comment_date">2012-07-24 13:56</span> | <a id="a_comment_author_2433905" href="http://home.cnblogs.com/u/322080/" target="_blank">skybirdzw</a> <a href="http://space.cnblogs.com/msg/send/skybirdzw" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_2433905" class="blog_comment_body">没找到我想要找的东西，楼主可否帮忙解释下以下的扩展语法是属于哪一种呢？<br> o = $.extend({<br>            top: 60,<br>            left: 0, <br>            right: 0,<br>            width: 100,  <br>            height: 360, <br>            minScreenW: 800, <br>            position: "left",<br>            allowClose: true <br>        }, o || {});</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2433905,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2433905,'Bury',this)">反对(0)</a></div>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+
+
+
+<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.loadComments();</script>
+<div id="comment_form" class="commentform">
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login('commentform');">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+
+<script type="text/javascript">
+    if (typeof commentManager === 'undefined') {
+        commentManager = new blogCommentManager();
+    }
+    commentManager.loadCommentForm();   
+</script>
+
+<div class="ad_text_commentbox"><a href="http://q.cnblogs.com/" target="_blank">程序员问答社区，解决您的技术难题</a></div>
+<div id="site_nav_under"><a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">博客园首页</a><a href="http://q.cnblogs.com/" target="_blank" title="程序员问答社区">博问</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://job.cnblogs.com/" target="_blank">程序员招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a><div id="site_editor_opt"></div></div>
+<script type="text/javascript">
+enableGoogleAd = true;
+if ($("#cnblogs_post_body").text().length < 1000) {
+    enableGoogleAd = false;
+}
+</script>
+<div id="google_ad_c1" class="c_ad_block">
+<div id="div-gpt-ad-1320933818841-0" style="width: 300px; height: 250px;">
+<script type="text/javascript">
+    if (enableGoogleAd) {
+        try {
+            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1320933818841-0'); });
+        } catch (e) { }
+    } else {
+        $('#google_ad_c1').hide();
+    }
+</script>
+<iframe style="border: 0pt none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_0" id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_0" frameborder="0" height="250" scrolling="no" width="300"></iframe><iframe style="border: 0pt none; visibility: hidden; display: none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_0__hidden__" id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_0__hidden__" frameborder="0" height="0" scrolling="no" width="0"></iframe></div>
+</div>
+<div id="blog-news-kb"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/154503/" target="_blank">谷歌联合创始人佩奇和布林前往斐济度假</a><br> ·  <a href="http://news.cnblogs.com/n/154502/" target="_blank">美法官驳回Facebook广告和解协议</a><br> ·  <a href="http://news.cnblogs.com/n/154501/" target="_blank">乔布斯故居失窃iPad找回 专业小丑无意中接赃</a><br> ·  <a href="http://news.cnblogs.com/n/154498/" target="_blank">摩托罗拉移动起诉苹果侵犯其7项专利</a><br> ·  <a href="http://news.cnblogs.com/n/154497/" target="_blank">美研究人员发现超大星系团 打破多项宇宙纪录</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/154468/" target="_blank">新时代的QA角色：IT全能战士</a><br> ·  <a href="http://kb.cnblogs.com/page/154350/" target="_blank">没有完美的软件：编程永远不容易</a><br> ·  <a href="http://kb.cnblogs.com/page/154245/" target="_blank">函数要多小才够好——谈小函数之道</a><br> ·  <a href="http://kb.cnblogs.com/page/154238/" target="_blank">失败是不存在的</a><br> ·  <a href="http://kb.cnblogs.com/page/154031/" target="_blank">从工具的奴隶到工具的主人</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="google_ad_c2" class="c_ad_block">
+<div id="div-gpt-ad-1320933818841-1" style="width: 468px; height: 60px;">
+<script type="text/javascript">
+    if (enableGoogleAd) {
+        try {
+            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1320933818841-1'); });
+        } catch (e) { }
+    } else {
+        $('#google_ad_c2').hide();
+    }
+</script>
+<iframe style="border: 0pt none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C2_0" id="google_ads_iframe_/1090369/cnblogs_blogpost_C2_0" frameborder="0" height="60" scrolling="no" width="468"></iframe></div>
+</div>
+<div id="ad_under_google" class="c_ad_block" style=""><a href="http://www.china-pub.com/static07/1206/12znq_dyb_20120618/12znq_dyb_20120618.asp" target="_blank" rel="nofollow"><img src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/china-pub-0620.jpg" alt="" style="border: 0px none;"></a><br><a href="http://www.china-pub.com/sale/usedbook.aspx" target="_blank" rel="nofollow">China-Pub 低价书精选</a><br><a href="http://www.china-pub.com/static07/0901/zh_jueba_090121.asp" target="_blank" rel="nofollow">China-Pub 计算机绝版图书按需印刷服务</a></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+</div>
+
+
+
+
+
+</div>
+<div id="leftcontent">
+	
+		<div id="leftcontentcontainer">
+			
+<!--done-->
+<div class="newsItem">
+	<div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/RascallySnake/">RascallySnake</a><br>园龄：<a href="http://home.cnblogs.com/u/RascallySnake/" title="入园时间：2009-01-12">3年7个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/RascallySnake/followers/">19</a><br>关注：<a href="http://home.cnblogs.com/u/RascallySnake/followees/">1</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="cnblogs.UserManager.FollowBlogger('40f216b0-1cf5-dd11-9e4d-001cf0cd104b')">+加关注</a></div></div></div>
+</div>
+
+			<div id="blog-calendar-block" style=""><div id="blog-calendar"><table id="blogCalendar" class="Cal" title="Calendar" cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar('2010/04/01');return false;">&lt;</a></td><td align="center">2010年5月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar('2010/06/01');return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" abbr="日" scope="col" align="center">日</th><th class="CalDayHeader" abbr="一" scope="col" align="center">一</th><th class="CalDayHeader" abbr="二" scope="col" align="center">二</th><th class="CalDayHeader" abbr="三" scope="col" align="center">三</th><th class="CalDayHeader" abbr="四" scope="col" align="center">四</th><th class="CalDayHeader" abbr="五" scope="col" align="center">五</th><th class="CalDayHeader" abbr="六" scope="col" align="center">六</th></tr><tr><td class="CalOtherMonthDay" align="center">25</td><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalWeekendDay" align="center">1</td></tr><tr><td class="CalWeekendDay" align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/05.html"><u>5</u></a></td><td align="center">6</td><td align="center"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07.html"><u>7</u></a></td><td class="CalWeekendDay" align="center">8</td></tr><tr><td class="CalWeekendDay" align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/12.html"><u>12</u></a></td><td align="center"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/13.html"><u>13</u></a></td><td align="center"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/14.html"><u>14</u></a></td><td class="CalWeekendDay" align="center">15</td></tr><tr><td class="CalWeekendDay" align="center">16</td><td align="center"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/17.html"><u>17</u></a></td><td align="center">18</td><td align="center">19</td><td align="center"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/20.html"><u>20</u></a></td><td align="center">21</td><td class="CalWeekendDay" align="center">22</td></tr><tr><td class="CalWeekendDay" align="center">23</td><td align="center">24</td><td align="center"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/25.html"><u>25</u></a></td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalWeekendDay" align="center">29</td></tr><tr><td class="CalWeekendDay" align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td></tr>
+</tbody></table></div>
+</div><br>
+			<div id="blog-sidecolumn">
+
+<div class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="widget_my_zzk" class="div_my_zzk"><input id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk" type="text">&nbsp;<input onclick="zzk_go()" value="找找看" id="btnZzk" class="btn_my_zzk" type="button"></div>
+
+</div>
+
+
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_0" href="http://www.cnblogs.com/RascallySnake/MyPosts.html">我的随笔</a></li>
+	
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_1" href="http://www.cnblogs.com/RascallySnake/MyComments.html">我的评论</a></li>
+	
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_2" title="我发表过评论的随笔" href="http://www.cnblogs.com/RascallySnake/OtherPosts.html">我的参与</a></li>
+	
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_3" href="http://www.cnblogs.com/RascallySnake/RecentComments.html">最新评论</a></li>
+	
+		<li><a id="ctl01_rptMainLinks_lnkLinkItem_4" href="http://www.cnblogs.com/RascallySnake/tag/">我的标签</a></li>
+	
+</ul>
+<div id="itemListLin_con" style="display:none;">
+
+</div>
+		<h3 class="catListTitle">随笔分类</h3>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_0" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/227576.html">ASP.NET(10)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_1" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/226096.html">ASP.NET Ajax(2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_2" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/226094.html">ASP.NET MVC(1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_3" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/345832.html">C/C++(4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_4" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/226095.html">JQuery(6)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_5" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/347517.html">Linux</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_6" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/226093.html">Sql Server(11)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_7" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/172603.html">Windows 服务相关</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_8" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/232902.html">WinForm(1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_0_Link_9" class="listitem" href="http://www.cnblogs.com/RascallySnake/category/253231.html">XML(2)</a></li>
+			
+				</ul>
+			
+	
+		<h3 class="catListTitle">随笔档案</h3>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_0" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2012/05.html">2012年5月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_1" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2012/01.html">2012年1月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_2" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2011/12.html">2011年12月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_3" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2011/11.html">2011年11月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_4" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2011/01.html">2011年1月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_5" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/12.html">2010年12月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_6" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/11.html">2010年11月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_7" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/09.html">2010年9月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_8" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/08.html">2010年8月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_9" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/07.html">2010年7月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_10" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/06.html">2010年6月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_11" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/05.html">2010年5月 (12)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_12" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/04.html">2010年4月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_13" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/03.html">2010年3月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_14" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/02.html">2010年2月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_15" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2010/01.html">2010年1月 (4)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_16" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2009/12.html">2009年12月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_1_Link_17" class="listitem" href="http://www.cnblogs.com/RascallySnake/archive/2009/01.html">2009年1月 (1)</a></li>
+			
+				</ul>
+			
+	
+		<h3 class="catListTitle">相册</h3>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="ctl03_CatList_LinkList_2_Link_0" class="listitem" rel="nofollow" href="http://www.cnblogs.com/RascallySnake/gallery/226097.html">菜谱</a></li>
+			
+				</ul>
+			
+	
+
+<h3 class="catListTitle">最新评论</h3>
+<div class="RecentComment" id="RecentComments">
+	<div id="RecentCommentsBlock"><ul>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729563.html#2433905">1. Re:jQuery.extend 函数详解</a></li>
+    <li class="recent_comment_body">没找到我想要找的东西，楼主可否帮忙解释下以下的扩展语法是属于哪一种呢？ o = $.extend({ top: 60, left: 0, right: 0, width: 100, height: 360, minScreenW: 800, ...</li>
+    <li class="recent_comment_author">--skybirdzw</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729563.html#2428125">2. Re:jQuery.extend 函数详解</a></li>
+    <li class="recent_comment_body">正在研究jQuery的tips插件，打算自己写一个，LZ的博文很有帮助啊</li>
+    <li class="recent_comment_author">--Andy_lu</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729563.html#2424330">3. Re:jQuery.extend 函数详解</a></li>
+    <li class="recent_comment_body">真不赖，情不自禁的的留个记号</li>
+    <li class="recent_comment_author">--木仔</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/09/10/1823514.html#2412479">4. Re:AppDomain与动态加载程序集</a></li>
+    <li class="recent_comment_body">method.Invoke(obj, new string[] { "ddd" });<br>如果参数不是简单类型，而是自定义类型时，这样调用也会出现跨域的问题，比如说插件类的上下文对象。<br>这个如何处理呢？</li>
+    <li class="recent_comment_author">--YFeng_Lee</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/05/1728007.html#2382108">5. Re:Http请求分析</a></li>
+    <li class="recent_comment_body">好文！</li>
+    <li class="recent_comment_author">--秋风中的男孩</li>
+</ul>
+</div>
+</div>
+
+<h3 class="catListTitle">阅读排行榜</h3>
+<div class="RecentComment" id="TopViewPosts"> 
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729563.html">1. jQuery.extend 函数详解(25404)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/08/03/1791365.html">2. jquery设置元素的readonly和disabled(16071)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729417.html">3. Jquery的$命名冲突：(8205)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/17/1737298.html">4. 存储过程中使用事务(4902)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/20/1739839.html">5. 存储过程中执行动态Sql语句(4402)</a></li></ul></div>
+</div>
+
+<h3 class="catListTitle">评论排行榜</h3>
+<div class="RecentComment" id="TopCommentsPosts">
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729563.html">1. jQuery.extend 函数详解(20)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/09/10/1823514.html">2. AppDomain与动态加载程序集(4)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/02/07/1665596.html">3. WinForm上显示gif动画(4)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/17/1737298.html">4. 存储过程中使用事务(3)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729417.html">5. Jquery的$命名冲突：(2)</a></li></ul></div>
+</div>
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/07/1729563.html">1. jQuery.extend 函数详解(20)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/20/1739839.html">2. 存储过程中执行动态Sql语句(2)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/17/1737298.html">3. 存储过程中使用事务(2)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2010/05/14/1735704.html">4. C#访问权限修饰符(1)</a></li><li><a href="http://www.cnblogs.com/RascallySnake/archive/2012/01/04/2312564.html">5. Linux网络编程入门 (转载)(1)</a></li></ul></div>
+</div></div></div>
+	
+</div>
+
+<!--done-->
+<div class="footer">
+	Powered by: <a href="http://www.cnblogs.com/">博客园</a>	模板提供：<a href="http://blog.hjenglish.com/">沪江博客</a>
+	Copyright ©2012 RascallySnake
+</div>
+
+
+
+<script type="text/javascript" src="jQuery.extend%20%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3_files/google-analytics.js"></script>
+
+
+</body></html>

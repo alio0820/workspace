@@ -1,0 +1,19 @@
+table {
+width:400px;
+border:1px solid #D4D0C8;
+border-collapse:separate;
+border-spacing:2px !important;
+border-spacing:expression(this.cellSpacing=2); 
+}
+td {
+border:1px solid #808080;
+padding:3px;
+}
+又试了一下,只能通过如此尴尬的办法实现ie和ff同效果了.对ie实际上还是操纵了cellSpacing,只不过在css里面而已.
+
+
+td的边框样式要单独设置，用td的margin来指定表格的cellspacing，用td的padding来指定表格的cellpadding。
+
+
+据我所知，table的cellpadding是通过设置td的padding来实现，这个没有疑问。但cellspacing目前还没有能实现的方法。在table的CSS中设置border-collapse:collapse可以让cellspacing变成0，但如果要设置cellspacing为具体数字，就没有办法实现了。我还没找到有方法可以实现。
+

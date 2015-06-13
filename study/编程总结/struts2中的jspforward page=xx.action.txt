@@ -1,0 +1,14 @@
+用struts2，在主页上只有<jsp:forward page="xx.action" />，试图在加载主页的时候直接跳转到一个action，结果没有成功，反复检查都没有找到错误。但使用超链接形式的时候就可以正常跳转，郁闷不已。
+
+最最后才想起来是不是就是因为是struts2的特性造成的呢，于是google，好不容易在乱七八糟的些说法中找到了原因：
+
+    struts 2   使用 filter 实现, <jsp:forword /> 的机制是 servlet 
+
+     暂时的解决方法是
+
+    <form action="queryAllVoteType.action" id="form">
+      </form>
+      <script> 
+            document.getElementById("form").submit(); 
+     </script>
+

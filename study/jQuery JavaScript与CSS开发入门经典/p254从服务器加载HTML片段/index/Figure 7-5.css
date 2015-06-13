@@ -1,0 +1,35 @@
+body{
+	font:13px "Lucida Grande",Arial,sans-serif;
+	background:rgb(214,221,229);
+}
+div#hFinderTree ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+div.hFinderTreeRoot{
+	height:28px;
+	background:url('../images/folder_closed.gif') no-repeat left;
+	padding:4px 0 0 35px;
+}
+li.hFinderTreeDirectoryBranch{
+	position:relative;
+	padding:0 0 0 20px;
+	zoom:1;
+}
+img.hFinderTreeHasChildren{
+	position:absolute;
+	top:3px;
+	left:0;
+}
+div.hFinderTreeIcon{
+	background:url('../images/folder_open.gif') no-repeat left;
+	width:16px;
+	height:16px;
+	margin:0 5px 0 0;
+	float:left;
+}
+div.hFinderTreeBranchWrapper{
+	display:none;
+}
+	

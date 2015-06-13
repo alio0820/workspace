@@ -1,0 +1,21 @@
+struts2中一个Action调用另一个Action
+
+在struts.xml中的配置文件
+
+ <struts>
+   <constant name="struts.objectFactory" value="spring"/>
+  <!--login_*   Action 调用bookAction 的方法-->
+
+   <package name="com" extends="struts-default">
+    <action name="login_*" class="useraction" method="{1}">
+     <!--请求时参数不丢失 chain  如果是redirect-action 请求时参数丢失-->
+
+      <result name="success" type= "chain">book</result> 
+      <result name="success" type= "redirect-action ">book</result> 
+
+    </action>
+    <action name="book" class="bookaction">
+         <result name="ok">/ok.jsp</result>
+    </action>
+   </package>
+ </struts>

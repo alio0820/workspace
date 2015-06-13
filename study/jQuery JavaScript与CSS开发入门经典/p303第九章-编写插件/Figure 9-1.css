@@ -1,0 +1,25 @@
+body{
+	font:12px "Lucida Grande",Arial,sans-serif;
+	background:#fff;
+	color:rgb(50,50,50);
+	margin:0;
+	padding:0;
+}
+h4{
+	margin:5px;
+}
+ul{
+	list-style:none;
+	margin:5px;
+	padding:5px;
+}
+li{
+	padding:3px;
+}
+li.tmpSelected{
+	background:#ADD8E6;
+}
+p{
+	text-align:right;
+	padding:5px;
+}

@@ -1,0 +1,55 @@
+
+var start = 1;
+
+var _html = '<div class="blogpopMain"><div class="l">'
+          + '<a href="http://blog.51cto.com/zt/138" target="_blank"><img src="http://blog.51cto.com/image/blog_top/upload/1333183325_index.jpg" width="105" height="105" /></a>'
+          + '<p><a href="http://blog.51cto.com/zt/138" target="_blank">Java设计模式</a></p></div>'
+          + '<div class="r"><h4 style="text-align:left;"><a href="http://wmcxy.blog.51cto.com/2509483/820088" target="_blank">IT从业人员，如何学习？</a></h4>'
+          + '<ul>'
+          + '<li><a href="http://stevex.blog.51cto.com/4300375/820283" target="_blank">软件工程硕士是否值得读？ </a></li>'
+          + '<li><a href="http://fancy0042425.blog.51cto.com/877322/817474" target="_blank">我不是教你诈：职场忌拖延！</a></li>'
+          + '<li><a href="http://doctor.51cto.com/develop-255.html" target="_blank">门诊：高效的Android应用程序开发</a></li>'
+          + '<li><a href="http://51ctomvp.blog.51cto.com/192695/822285" target="_blank"style="color:red;">抢先！2012年7月MVP开始申请了~</a></li>'
+          + '</ul>'
+          + '</div></div>'
+          + '';
+
+jQuery('#showMessagerDim').show();
+
+jQuery(function(){
+//window.onload=function(){
+   if(get_cookie('blog_top')==''&&start==1){
+//	 show_pop();
+	    jQuery.messager.showblogtop('', _html);
+        var date=new Date();
+	    var day = 1333296000000;//
+	    date.setTime(day);
+	    var test = date.getTime();
+	    document.cookie="blog_top=yes;domain=.blog.51cto.com;expires="+date.toGMTString()+";path=/;";
+    }
+	jQuery("#showMessagerDim").click(function(){
+		jQuery.messager.showblogtop('', _html);
+		//removeIframe();
+	});
+//}
+});
+
+
+function get_cookie(Name) {
+    var search = Name + "=";
+    var returnvalue = "";
+    if (document.cookie.length > 0) {
+        offset = document.cookie.indexOf(search);
+        if (offset != -1) {
+            offset += search.length;
+
+            end1 = document.cookie.indexOf(";", offset);
+
+            if (end1 == -1)
+            end1 = document.cookie.length;
+            returnvalue=unescape(document.cookie.substring(offset, end1));
+        }
+    }
+    return returnvalue;
+}
+

@@ -1,0 +1,9 @@
+yodao_ad_id
+-5525552404717440592
+impservice.dictword.youdao.com/imp/
+1024
+605170048
+30943162
+1875114528
+30208907
+*

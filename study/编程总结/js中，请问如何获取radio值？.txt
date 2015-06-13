@@ -1,0 +1,25 @@
+function test()
+{
+  var temp = document.getElementsByName("radio");
+  for(var i=0;i<temp.length;i++)
+  {
+     if(temp[i].checked)
+           var r = temp[i].value;
+  }
+  
+}
+
+
+
+二。
+
+
+<radio name="r" value="1"/> 
+<radio name="r" value="2"/> 
+<radio name="r" value="3" checked/> 
+<radio name="r" value="4"/> 
+<radio name="r" value="5"/> 
+
+<% 
+String r = request.getParameter("r");//r的值为3 
+%>

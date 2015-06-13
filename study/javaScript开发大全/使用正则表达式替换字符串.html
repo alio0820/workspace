@@ -1,0 +1,16 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+	<head>
+		<title>使用正则表达式替换字符串</title>
+        <script>
+           var myRegExp1 = new RegExp("class","gi");
+           var myRegExp2 = /class/gi;
+           var str= "Define a Class with a class definition.";
+           document.write("原字符串为：",str,"<br>");
+           document.write("替换后的字符串为：",str.replace(myRegExp1,"abc"),"<br>");
+           document.write("替换后的字符串为：",str.replace(myRegExp2,"abc"),"<br>");
+       </script>
+	</head>
+	<body>
+	</body>
+</html>

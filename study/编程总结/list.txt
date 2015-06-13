@@ -1,0 +1,13 @@
+你既然用了<s:iterator标签，就是遍历list所有对象的。
+只要给这个标签加个var属性即可，比如：<s:iterator id="tbMessage"  var =“obj” value="newsList" status="status">
+那么<s:property value="#obj.ABC"/>就是得到这个  对象的属性ABC了
+
+
+
+<%List list=new ArrayList();
+list=ExecuteSql.executeQuery("select * from bankuser");
+for(int i=0; i<list.size();i++){
+    User user = (User)list.get(i);//这里你list里面存的是什么对象。就用什么接收
+%>
+<input type="text" value="<%user.getAge();%>" />//这里就是在页面文本框内输出你的相应属性
+<%}%>

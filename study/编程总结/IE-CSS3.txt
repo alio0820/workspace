@@ -1,0 +1,5 @@
+让IE6、7、8支持box-shadow，text-shadow
+在css样式中加入以下代码
+behavior:url(ie-css3.htc);
+
+IE浏览器找文件是相对当前html文件路径来找的

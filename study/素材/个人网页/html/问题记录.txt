@@ -1,0 +1,5 @@
+浏览器框架支持问题
+
+浏览器属性支持问题
+
+bgsound不支持firefox浏览器，播放音乐的两个表签，bgsound和embed

@@ -1,0 +1,13 @@
+div {
+	border:1px solid rgb(200,200,200);
+	width:100px;
+	height:100px;
+	margin:5px;
+	float:left;
+}
+div.tmpExampleOver {
+	background:#5092c5;
+}
+div.tmpExampleOn {
+	background:#165b91;
+}

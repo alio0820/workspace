@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>CooTekLife</title>
+	<link rel="shortcut icon" href="res/image/fruit.ico">
+	<meta name="description" content="a fully featured, responsive, HTML5, cooteklife.">
+	<meta name="author" content="candong zhai">
+	<link id="bs-css" href="css/bootstrap-cerulean.css" rel="stylesheet">
+	<style type="text/css">
+	  body {
+		padding-bottom: 40px;
+		font-family: sans-serif;
+		-webkit-user-select:none;
+		-moz-user-select:none;
+	  }
+	  .sidebar-nav {
+		padding: 9px 0;
+	  }
+	.login-box .btn {
+	    margin-top: 15px;
+	    width: 100%;
+	}
+	div.center, p.center, img.center {
+	    text-align: center;
+	}
+	</style>
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/charisma-app.css" rel="stylesheet">
+	<link href='css/uniform.default.css' rel='stylesheet'>
+	<link href="css2/tip.css" rel="stylesheet">
+	<style>
+		.container-fluid{
+			position:absolute;
+			width:100%;
+			height:494px;
+			top:10%;
+			padding:0;
+		}
+		.login-header{
+			height:150px;
+		}
+		h1{
+	  		color:#555555;
+	  		line-height:50px;
+	    }
+	    .error{
+	    	border-color:#E74548 !important;
+	    }
+	    label {
+		    display: inline-block;
+		}
+	</style>
+	<!--[if lt IE 9]>
+	  <script src="js/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+		<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="row-fluid">
+				<div class="span12 center login-header">
+					<h1>Welcome to CooTek OEM</h1>
+					<div style='width:41.1709%;margin:0 auto;min-width:520px;position:relative;height:27px;margin-top:20px;'>
+						<img style='float:left;width:120px;height:28px;' src='images/touchpal-logo.png'/>
+						<div style='color:#CCCCCC;right:3px;bottom:2px;;width:210px;height:12px;position:absolute;font-size:14px;'>
+							OEM运营
+						</div>
+					</div>
+				</div>	
+			<div class="row-fluid">
+				<div class="well span5 center login-box" style='min-width:520px;padding-top:25px;-moz-user-select:none;'>
+					<div class="alert alert-info">
+						Please login with your Username and Password.
+					</div>
+					<form name="form1" class="form-horizontal" action="servlet/login" method="post">
+						<fieldset>
+							<div class="input-prepend" title="Username" data-rel="tooltip">
+								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="userName" id="username" type="text" value="" />
+							</div>
+							<div class="clearfix"></div>
+
+							<div class="input-prepend" title="Password" data-rel="tooltip">
+								<span class="add-on"><i class="icon-lock"></i></span><input class="input-large span10" name="password" id="password" type="password" value="" />
+							</div>
+							<div class="clearfix"></div>
+							
+							<!-- <div class="input-prepend" title="verification" data-rel="tooltip">
+								<span class="add-on"><i class="icon-info-sign"></i></span><input class="input-large span10" style='width:34%;' name="incode" id="incode" type="text" value="" />
+								<img id="img_yzm" src="yzmCODE.jsp?id=0" style='cursor:pointer' border="0" onclick="refrush()" />
+							</div>
+							<div class="clearfix"></div> -->
+
+							<div class="input-prepend">
+							<label class="remember" for="remember"><input type="checkbox" id="remember" checked="checked" style="margin-left:-100px;opacity:1"/>Remember me</label>
+							<a href="register.jsp">注册</a>
+							</div>
+							<div class="clearfix"></div>
+
+							<p class="center span5">
+							<input type="submit" class="btn btn-primary" onclick="return check()" value="Login"/>
+							</p>
+						</fieldset>
+					</form>
+				</div>
+				<div style='color:#CCCCCC;width: 41.1709%;margin:0 auto;text-align:center;min-width:520px;'>
+					<span>CopyRight 2013&nbsp;,TouchPal Technology ,Co.,Ltd.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- jQuery -->
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/bootstrap-tooltip.js"></script>
+	<!-- checkbox, radio, and file input styler -->
+	<script src="js/jquery.uniform.min.js"></script>
+	<script src="js/tip.js"></script>
+	<script src="js/login.js"></script>
+	
+</body>
+</html>

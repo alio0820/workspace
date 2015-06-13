@@ -1,0 +1,672 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0048)http://doc.chinaunix.net/web/200810/206087.shtml -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心 - 中国最专业的IT技术社区 针对高端IT专业技术人员的媒体信息传播和服务平台</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=keywords content='函数,绘图,/>,"'>
+<META name=description 
+content='关键字：  Firefox  OLE Automation  HoTMetal  HoTMeta  匿名函数              用JavaScript绘图—JS2D函数集。                           　　<script Language="javascript"><br />　　...'><LINK 
+rel=stylesheet type=text/css 
+href="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/news.css">
+<STYLE type=text/css>.STYLE1 {
+	COLOR: #ff0000
+}
+.STYLE2 {
+	FONT-SIZE: 14px
+}
+</STYLE>
+
+<SCRIPT language=JavaScript 
+src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/config.js"></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/jquery.min.js"></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/css.js"></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/common.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 9.00.8112.16440"></HEAD>
+<BODY>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=950 align=center>
+  <TBODY>
+  <TR>
+    <TD height=27>
+      <TABLE style="BORDER-COLLAPSE: collapse" border=0 cellSpacing=0 
+      cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <FORM method=post name=login 
+          action=http://linux.chinaunix.net/bbs/logging.php?action=login>
+          <TD>
+            <SCRIPT language=javascript src=""></SCRIPT>
+          </TD></FORM>
+          <TD align=right>·<A class=list1 
+            href="http://www.chinaunix.net/">首页</A> ·<A class=list1 
+            href="http://bbs.chinaunix.net/">论坛</A> ·<A class=list1 
+            href="http://blog.chinaunix.net/">博客</A> ·<A class=list1 
+            href="http://linux.chinaunix.net/">Linux</A>&nbsp; 
+      </TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD bgColor=#cccccc height=1></TD></TR>
+  <TR>
+    <TD>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD height=84><IMG 
+            src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/title.gif"></TD>
+          <TD align=right><IFRAME height=80 
+            src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/iframe.htm" 
+            frameBorder=0 width=725 
+  scrolling=no></IFRAME></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=950 align=center>
+  <TBODY>
+  <TR>
+    <TD height=30 vAlign=bottom>&nbsp;&nbsp;<A 
+      href="http://www.chinaunix.net/">ChinaUnix</A> &gt;&gt; <A 
+      href="http://doc.chinaunix.net/">文档中心</A> &gt;&gt; <A 
+      href="http://doc.chinaunix.net/develop/">开发技术</A> &gt;&gt; <A 
+      href="http://doc.chinaunix.net/program/">程序开发</A> &gt;&gt; <A 
+      href="http://doc.chinaunix.net/web/">Web开发</A> &gt;&gt; 正文</TD>
+    <TD align=right><A href="http://bbs.chinaunix.net/forumdisplay.php?fid=46" 
+      target=_blank>IT新闻与评论交流区</A></TD></TR>
+  <TR>
+    <TD bgColor=#cccccc height=1 colSpan=2></TD></TR>
+  <TR>
+    <TD height=8 colSpan=2></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=950 align=center>
+  <TBODY>
+  <TR>
+    <TD class=BLKtext vAlign=top>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=660 align=center>
+        <TBODY>
+        <TR>
+          <TD height=8>&nbsp;</TD></TR>
+        <TR>
+          <TD class=Ftext1 height=30>用JavaScript绘图—JS2D函数集</TD></TR>
+        <TR>
+          <TD>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="80%" 
+align=center>
+              <TBODY>
+              <TR>
+                <TD bgColor=#cccccc height=1></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD height=40 align=center>发布者：豆豆网 　日期： 2008-10-18 
+            00:00:00　浏览次数：<SPAN id=hits>0</SPAN>　(共有<SPAN id=comments_top 
+            class=STYLE1>_</SPAN>条评论) <A 
+            href="http://pub.chinaunix.net/comment/?keyid=man-content-title-206087&amp;verify=c3c375b28931e1ebe1cfc20e78140a6e" 
+            target=_blank>查看评论</A> | <A 
+            href="http://pub.chinaunix.net/comment/?keyid=man-content-title-206087&amp;verify=c3c375b28931e1ebe1cfc20e78140a6e" 
+            target=_blank>我要评论</A></TD></TR>
+        <TR>
+          <TD>&nbsp;</TD></TR>
+        <TR>
+          <TD class=F14>
+            <DIV class=title_bottom_cpr></DIV><!--ID="929"-->
+            <DIV class=searchhot>关键字： Firefox OLE Automation HoTMetal HoTMeta 
+            匿名函数 </DIV>
+            <DIV class=article_z>
+            <H2>用JavaScript绘图—JS2D函数集。 </H2></DIV>
+            <DIV class=article_ad></DIV>
+            <DIV id=clickeye_content>
+            <DIV id=fontsize class=article_c>
+            <P>　　&lt;script Language="javascript"&gt;&lt;br /&gt;</P>
+            <P>　　/****************** JS2D函数集　*******************&lt;br /&gt;</P>
+            <P>　　&lt;br /&gt;</P>
+            <P>　　作者：neweroica　　2003-3-28&lt;br /&gt;</P>
+            <P>　　&lt;br /&gt;</P>
+            <P>　　CopyRight (C) 2003&lt;br /&gt;</P>
+            <P>　　&lt;br /&gt;</P>
+            <P>　　在引用或转载时请保留此版权信息，谢谢!!!&lt;br /&gt;</P>
+            <P>　　&lt;br /&gt;</P>
+            <P>　　本函数集可以单独存成一个js文件："JS2D.js"&lt;br /&gt;</P>
+            <P>　　&lt;br /&gt;</P>
+            <P>　　***************************************************/&lt;br 
+            /&gt;</P>
+            <P>　　&lt;br /&gt;</P>
+            <P>　　/************* 画点 **************&lt;br /&gt;</P>
+            <P>　　x,y　　 点所在的屏幕坐标（像素）&lt;br /&gt;</P>
+            <P>　　color　 颜色（字符串值）&lt;br /&gt;</P>
+            <P>　　size　　大小（像素）&lt;br /&gt;</P>
+            <P>　　**********************************/&lt;br /&gt;</P>
+            <P><CODE>function drawDot(x,y,color,size){&lt;br 
+            /&gt;<BR>　document.write("&lt;table border='0' cellspacing=0 
+            cellpadding=0&gt;&lt;tr&gt;&lt;td style='position: absolute; left: 
+            "+(x)+"; top: "+(y)+";background-color: "+color+"' width="+size+" 
+            height="+size+"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;")&lt;br 
+            /&gt;<BR>}&lt;br /&gt;<BR>&lt;br /&gt;<BR></CODE>/************* 画直线 
+            **************&lt;br /&gt;</P>
+            <P><CODE>　x1,y1　 起点所在的屏幕坐标（像素）&lt;br /&gt;<BR>　x2,y2　 
+            终点所在的屏幕坐标（像素）&lt;br /&gt;<BR>　color　 颜色（字符串值）&lt;br 
+            /&gt;<BR>　size　　大小（像素）&lt;br /&gt;<BR>　style　 样式&lt;br 
+            /&gt;<BR>　　　　　=0　　实线&lt;br /&gt;<BR>　　　　　=1　　虚线&lt;br 
+            /&gt;<BR>　　　　　=2　　虚实线&lt;br /&gt;</CODE></P></DIV></DIV>
+            <DIV class=title_bottom_cpr></DIV><!--ID="929"-->
+            <DIV class=searchhot>关键字： Firefox OLE Automation HoTMetal HoTMeta 
+            匿名函数 </DIV>
+            <DIV class=article_z>
+            <H2>用JavaScript绘图—JS2D函数集。 </H2></DIV>
+            <DIV class=article_ad></DIV>
+            <DIV id=clickeye_content>
+            <DIV id=fontsize class=article_c>
+            <P>　　**********************************/&lt;br /&gt;</P>
+            <P><CODE>function drawLine(x1,y1,x2,y2,color,size,style){&lt;br 
+            /&gt;<BR>　var i;&lt;br /&gt;<BR>　var 
+            r=Math.floor(Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)));&lt;br 
+            /&gt;<BR>　var theta=Math.atan((x2-x1)/(y2-y1));&lt;br 
+            /&gt;<BR>　if(((y2-y1)&lt;0&amp;&amp;(x2-x1)&gt;0)||((y2-y1)&lt;0&amp;&amp;(x2-x1)&lt;0))&lt;br 
+            /&gt;<BR>　　theta=Math.PI+theta;&lt;br /&gt;<BR>　var 
+            dx=Math.sin(theta);//alert(dx)&lt;br /&gt;<BR>　var 
+            dy=Math.cos(theta);&lt;br /&gt;<BR>　for(i=0;i&lt;r;i++){&lt;br 
+            /&gt;<BR>　　switch(style){&lt;br /&gt;<BR>　　　case 0:&lt;br 
+            /&gt;<BR>　　　　drawDot(x1+i*dx,y1+i*dy,color,size);&lt;br 
+            /&gt;<BR>　　　　break;&lt;br /&gt;<BR>　　　case 1:&lt;br 
+            /&gt;<BR>　　　　i+=size*2;&lt;br 
+            /&gt;<BR>　　　　drawDot(x1+i*dx,y1+i*dy,color,size);&lt;br 
+            /&gt;<BR>　　　　break;&lt;br /&gt;<BR>　　　case 2:&lt;br 
+            /&gt;<BR>　　　　if(Math.floor(i/4/size)%2==0){&lt;br 
+            /&gt;<BR>　　　　　drawDot(x1+i*dx,y1+i*dy,color,size);&lt;br 
+            /&gt;<BR>　　　　}&lt;br /&gt;<BR>　　　　else{&lt;br 
+            /&gt;<BR>　　　　　　i+=size*2;&lt;br 
+            /&gt;<BR>　　　　　　drawDot(x1+i*dx,y1+i*dy,color,size);&lt;br 
+            /&gt;<BR>　　　　}&lt;br /&gt;<BR>　　　　break;&lt;br 
+            /&gt;<BR>　　　default:&lt;br 
+            /&gt;<BR>　　　　drawDot(x1+i*dx,y1+i*dy,color,size);&lt;br 
+            /&gt;<BR>　　　　break;&lt;br /&gt;<BR>　　}&lt;br /&gt;<BR>　}&lt;br 
+            /&gt;<BR>}&lt;br /&gt;<BR>&lt;br /&gt;</CODE></P></DIV></DIV>
+            <DIV class=title_bottom_cpr></DIV><!--ID="929"-->
+            <DIV class=searchhot>关键字： Firefox OLE Automation HoTMetal HoTMeta 
+            匿名函数 </DIV>
+            <DIV class=article_z>
+            <H2>用JavaScript绘图—JS2D函数集。 </H2></DIV>
+            <DIV class=article_ad></DIV>
+            <DIV id=clickeye_content>
+            <DIV id=fontsize class=article_c>
+            <P>　　/************* 画实心矩形 **************&lt;br /&gt;</P>
+            <P>　　x1,y1　 起点（矩形左上角）所在的屏幕坐标（像素）&lt;br /&gt;</P>
+            <P>　　x2,y2　 终点（矩形右下角）所在的屏幕坐标（像素）&lt;br /&gt;</P>
+            <P>　　color　 颜色（字符串值）&lt;br /&gt;</P>
+            <P>　　**********************************/&lt;br /&gt;</P>
+            <P><CODE>function drawFilledRect(x1,y1,x2,y2,color){&lt;br 
+            /&gt;<BR>　document.write("&lt;table border='0' cellspacing=0 
+            cellpadding=0&gt;&lt;tr&gt;&lt;td style='position: absolute; left: 
+            "+(x1)+"; top: "+(y1)+";background-color: "+color+"' 
+            width="+(x2-x1)+" 
+            height="+(y2-y1)+"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;")&lt;br 
+            /&gt;<BR>}&lt;br /&gt;<BR>&lt;br /&gt;</CODE></P>
+            <P>　　/************* 画矩形 **************&lt;br /&gt;</P>
+            <P><CODE>　x1,y1　 起点（矩形左上角）所在的屏幕坐标（像素）&lt;br /&gt;<BR>　x2,y2　 
+            终点（矩形右下角）所在的屏幕坐标（像素）&lt;br /&gt;<BR>　color　 颜色（字符串值）&lt;br 
+            /&gt;<BR>　size　　大小（像素）&lt;br /&gt;<BR>　style　 样式&lt;br 
+            /&gt;<BR>　　　　　=0　　实线&lt;br /&gt;<BR>　　　　　=1　　虚线&lt;br 
+            /&gt;<BR>　　　　　=2　　虚实线&lt;br /&gt;</CODE></P>
+            <P>　　**********************************/&lt;br /&gt;</P>
+            <P><CODE>function drawRect(x1,y1,x2,y2,color,size,style){&lt;br 
+            /&gt;<BR>　drawLine(x1,y1,x2,y1,color,size,style);&lt;br 
+            /&gt;<BR>　drawLine(x1,y2,x2,y2,color,size,style);&lt;br 
+            /&gt;<BR>　drawLine(x1,y1,x1,y2,color,size,style);&lt;br 
+            /&gt;<BR>　drawLine(x2,y1,x2,y2,color,size,style);&lt;br 
+            /&gt;<BR>}&lt;br /&gt;<BR>&lt;br /&gt;</CODE></P></DIV></DIV>
+            <DIV class=title_bottom_cpr></DIV><!--ID="929"-->
+            <DIV class=searchhot>关键字： Firefox OLE Automation HoTMetal HoTMeta 
+            匿名函数 </DIV>
+            <DIV class=article_z>
+            <H2>用JavaScript绘图—JS2D函数集。 </H2></DIV>
+            <DIV class=article_ad></DIV>
+            <DIV id=clickeye_content>
+            <DIV id=fontsize class=article_c>
+            <P>　　/************* 画椭圆 **************&lt;br /&gt;</P>
+            <P><CODE>　x,y　　　　 中心所在的屏幕坐标（像素）&lt;br /&gt;<BR>　a,b　　　　 
+            长轴和短轴的长度（像素）&lt;br /&gt;<BR>　color　　　 颜色（字符串值）&lt;br 
+            /&gt;<BR>　size　　　　大小（像素）&lt;br /&gt;<BR>　precision　 边缘精细度&lt;br 
+            /&gt;</CODE></P>
+            <P>　　**********************************/&lt;br /&gt;</P>
+            <P><CODE>function drawOval(x,y,a,b,color,size,precision){&lt;br 
+            /&gt;<BR>　var i;&lt;br /&gt;<BR>　var iMax=2*Math.PI;&lt;br 
+            /&gt;<BR>　var step=2*Math.PI/(precision*Math.sqrt(a*b)*4.5);&lt;br 
+            /&gt;<BR>　for(i=0;i&lt;iMax;i+=step){&lt;br 
+            /&gt;<BR>　　drawDot(x+a*Math.cos(i),y+b*Math.sin(i),color,size);&lt;br 
+            /&gt;<BR>　}&lt;br /&gt;<BR>}&lt;br /&gt;<BR>&lt;br /&gt;</CODE></P>
+            <P>　　/************* 画多边形 **************&lt;br /&gt;</P>
+            <P><CODE>　x,y　　 中心所在的屏幕坐标（像素）&lt;br /&gt;<BR>　r　　　 
+            多边形外接圆半径（像素）&lt;br /&gt;<BR>　n　　　 多边形的边数&lt;br /&gt;<BR>　color　 
+            颜色（字符串值）&lt;br /&gt;<BR>　size　　大小（像素）&lt;br /&gt;<BR>　style　 
+            样式&lt;br /&gt;<BR>　　　　　=0　　实线&lt;br /&gt;<BR>　　　　　=1　　虚线&lt;br 
+            /&gt;<BR>　　　　　=2　　虚实线&lt;br /&gt;</CODE></P>
+            <P>　　**********************************/&lt;br /&gt;</P>
+            <P><CODE>function drawPoly(x,y,r,n,color,size,style){&lt;br 
+            /&gt;<BR>　var i;&lt;br /&gt;<BR>　var theta=Math.PI;&lt;br 
+            /&gt;<BR>　var x1=x,y1=y-r,x2,y2;&lt;br 
+            /&gt;<BR>　for(i=0;i&lt;n;i++){&lt;br 
+            /&gt;<BR>　　theta-=(2*Math.PI/n);&lt;br 
+            /&gt;<BR>　　x2=x+r*Math.sin(theta);&lt;br 
+            /&gt;<BR>　　y2=y+r*Math.cos(theta);&lt;br 
+            /&gt;<BR>　　drawLine(x1,y1,x2,y2,color,size,style);&lt;br 
+            /&gt;<BR>　　x1=x2;&lt;br /&gt;<BR>　　y1=y2;//alert(x1+" "+y1)&lt;br 
+            /&gt;<BR>　}&lt;br /&gt;<BR>}&lt;br /&gt;<BR>&lt;/script&gt;&lt;br 
+            /&gt;<BR>&lt;br /&gt;<BR>&lt;br /&gt;<BR>&lt;script&gt;&lt;br 
+            /&gt;</CODE></P>
+            <P></P>
+            <P>　　//****************** JS2D函数集示例　*******************&lt;br 
+            /&gt;</P>
+            <P><CODE>drawLine(20,20,300,20,"#0000cc",2,0);&lt;br 
+            /&gt;<BR>drawLine(20,40,300,40,"#0000cc",2,1);&lt;br 
+            /&gt;<BR>drawLine(20,60,300,60,"#0000cc",2,2);&lt;br 
+            /&gt;<BR>drawFilledRect(20,80,300,200,"009900");&lt;br 
+            /&gt;<BR>drawRect(20,220,220,320,"ff0000",2,0);&lt;br 
+            /&gt;<BR>drawRect(240,220,440,320,"ff0000",2,1);&lt;br 
+            /&gt;<BR>drawRect(460,220,660,320,"ff0000",2,2);&lt;br 
+            /&gt;<BR>drawOval(250,450,120,50,"006600",1,1);&lt;br 
+            /&gt;<BR>drawOval(250,650,120,120,"006600",2,0.5);&lt;br 
+            /&gt;<BR>drawPoly(200,900,100,3,"ff8800",2,0);&lt;br 
+            /&gt;<BR>drawPoly(400,900,100,4,"ff8800",2,1);&lt;br 
+            /&gt;<BR>drawPoly(600,900,100,5,"ff8800",2,2);&lt;br 
+            /&gt;<BR>drawPoly(200,1100,100,6,"ff8800",2,0);&lt;br 
+            /&gt;<BR>drawPoly(400,1100,100,7,"ff8800",2,1);&lt;br 
+            /&gt;<BR>drawPoly(600,1100,100,12,"ff8800",2,2);&lt;br 
+            /&gt;<BR>&lt;/script&gt;</CODE></P>
+            <P></P></DIV></DIV></TD></TR>
+        <TR>
+          <TD height=20 align=right></TD></TR>
+        <TR>
+          <TD>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=red>&gt;&gt;更多交流，请到</FONT>&nbsp;<A style="COLOR: red" 
+            href="http://bbs2.chinaunix.net/forumdisplay.php?fid=80" 
+            target=_blank>ChinaUnix【Web开发论坛】：http://bbs2.chinaunix.net/forumdisplay.php?fid=80</A> 
+            <BR><BR>
+            <DIV id=keyword><STRONG>关键词：</STRONG><A class=keyword 
+            href="http://pub.chinaunix.net/newstag.php?tag=%BA%AF%CA%FD">函数</A><A 
+            class=keyword 
+            href="http://pub.chinaunix.net/newstag.php?tag=%BB%E6%CD%BC">绘图</A><A 
+            class=keyword 
+            href="http://pub.chinaunix.net/newstag.php?tag=%2F%26gt">/&gt;</A><A 
+            class=keyword 
+            href="http://pub.chinaunix.net/newstag.php?tag=%26quot">"</A></DIV><!--分页-->
+            <DIV id=pages></DIV></TD></TR>
+        <TR>
+          <TD>
+            <DIV id=digg_div></DIV>
+            <SCRIPT type=text/javascript>var contentid = '206087'; var catid = '64';</SCRIPT>
+
+            <SCRIPT id=calldigg_js type=text/javascript></SCRIPT>
+
+            <SCRIPT type=text/javascript 
+            src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/digg.htm"></SCRIPT>
+          </TD></TR>
+        <TR>
+          <TD>
+            <DIV style="MARGIN-TOP: 1%" class=box>
+            <H3>相关文章</H3>
+            <UL class=text_list>
+              <LI><A href="http://doc.chinaunix.net/web/200912/213586.shtml" 
+              target=_blank>Scala讲座：函数式语言的体验</A> 
+              <LI><A href="http://doc.chinaunix.net/web/200912/213585.shtml" 
+              target=_blank>Scala讲座：函数、操作符及与Java的比较</A> 
+              <LI><A href="http://doc.chinaunix.net/web/200912/213583.shtml" 
+              target=_blank>Scala讲座：类定义和构造函数</A> 
+              <LI><A href="http://doc.chinaunix.net/web/200909/212926.shtml" 
+              target=_blank>Scala讲座：面向对象和函数式的特点总结(1)</A> 
+              <LI><A href="http://doc.chinaunix.net/web/200909/212913.shtml" 
+              target=_blank>Kestrel.scala中的QueueCollection</A> 
+              <LI><A href="http://doc.chinaunix.net/web/200909/212907.shtml" 
+              target=_blank>分清继承关系中基类和子类构造函数调用顺序</A> 
+              <LI><A href="http://doc.chinaunix.net/web/200909/212862.shtml" 
+              target=_blank>浅析将matlab函数编译成dll供C调用的方法</A> 
+              <LI><A href="http://doc.chinaunix.net/web/200909/212853.shtml" 
+              target=_blank>万物皆对象：介绍Scala对象</A> 
+              <LI><A href="http://doc.chinaunix.net/web/200909/212839.shtml" 
+              target=_blank>Li函数的表示</A> 
+              <LI><A href="http://doc.chinaunix.net/web/200909/212837.shtml" 
+              target=_blank>十个最常用的JavaScript自定义函数</A> </LI></UL></DIV></TD></TR>
+        <TR>
+          <TD>
+            <DIV style="MARGIN-TOP: 1%" class=box><!--评论-->
+            <H3>网友评论<SPAN style="FLOAT: right" id=commnent_tag> <A 
+            href="http://pub.chinaunix.net/comment/?keyid=man-content-title-206087&amp;verify=c3c375b28931e1ebe1cfc20e78140a6e">已有<STRONG 
+            class=c_red><SPAN id=comments>0</SPAN></STRONG>位网友发表了看法</A> 
+            </SPAN></H3>
+            <DIV style="TEXT-ALIGN: center; MARGIN-TOP: 0px" class=commenttext>
+            <FORM onsubmit="return checkForm();" method=post 
+            action=comment/?action=addpost><INPUT name=keyid 
+            value=man-content-title-206087 type=hidden> <INPUT name=verify 
+            value=c3c375b28931e1ebe1cfc20e78140a6e type=hidden> 
+            <UL>
+              <LI><TEXTAREA onblur=reply_restoration() id=comment onfocus=reply_clearfield() cols=100 rows=8 name=comment></TEXTAREA> 
+
+              <LI 
+              style="TEXT-ALIGN: left; MARGIN-TOP: 1%; MARGIN-LEFT: 1%"><SPAN 
+              id=checker>
+              <DIV style="FLOAT: left">验证码：</DIV><INPUT 
+              style="IME-MODE: disabled" id=checkcode name=checkcode size=6><IMG 
+              style="DISPLAY: none" id=code_img 
+              onclick="this.src='checkcode.php?'+Math.random()" alt=点击换一张 
+              src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/d.gif">【输入评论后显示验证码，均为大写字母，点击图片更新】</SPAN> 
+              &nbsp;&nbsp;&nbsp;&nbsp;<INPUT id=dosubmit name=dosubmit value=发表评论 type=submit> 
+              </LI></UL></FORM></DIV></DIV>
+            <SCRIPT type=text/javascript 
+            src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/comment_setting.js"></SCRIPT>
+
+            <SCRIPT type=text/javascript>
+      <!--
+        $().ready(function() {        
+            if(setting.ischecklogin == 0 && getcookie('auth') === null)
+            {
+                $('#comment').val("请您登陆后发表评论！");
+                $('#comment').attr("disabled","disabled");
+                $('#dosubmit').attr("disabled","disabled");
+            }
+            else 
+            {
+                if($('#comment').val()=='')$('#comment').val("我也来说两句！");
+            }
+        });
+        function reply_restoration()
+        {
+            if($('#comment').val() == '')
+            {
+                $('#comment').val("我也来说两句！");
+            }
+        }
+        function reply_clearfield()
+        {
+            if ($('#comment').val() == "我也来说两句！") 
+            {
+                $('#comment').val("");   
+            }
+document.getElementById('code_img').style.display = 'block';document.getElementById('code_img').src='checkcode.php';
+        }
+        function checkForm()
+        {
+            if($('#comment').val() == '' || $('#comment').val() == "我也来说两句！")
+            {
+                alert("内容不能为空");
+                $('#comment').focus();
+                return false;
+            }
+            if($('#checkcode').val() == '' )
+            {
+                alert("验证码不能为空");
+                $('#checkcode').focus();
+                return false;
+            }
+            if ($('#comment').val().length > 1000) 
+            {
+                alert("内容太长，最多 1000 个文字");
+                return false;
+            }
+        }
+      //-->
+      </SCRIPT>
+          </TD></TR></TBODY></TABLE></TD>
+    <TD width=8>&nbsp;</TD>
+    <TD bgColor=#fff9eb vAlign=top width=245>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=F13 height=27 
+          background=用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/bg245.jpg>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TD>&nbsp;论坛最新热点</TD>
+                <TD align=right><A 
+                  href="http://bbs2.chinaunix.net/forumdisplay.php?fid=80" 
+                  target=_blank>更多&gt;&gt;</A>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=BLKtext bgColor=#ffffff vAlign=top>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="97%" 
+align=center>
+              <TBODY>
+              <TR>
+                <TD height=5></TD></TR>
+              <TR>
+                <TD>· <A title=extjs4.0的视频教程 
+                  href="http://bbs.chinaunix.net/thread-3631268-1-1.html" 
+                  target=_blank>extjs4.0的视频教程</A><BR>· <A title=我写的密码强度验证方法 
+                  href="http://bbs.chinaunix.net/thread-3631316-1-1.html" 
+                  target=_blank>我写的密码强度验证方法</A><BR>· <A 
+                  title="JavaScript css的使用总结" 
+                  href="http://bbs.chinaunix.net/thread-3629472-1-1.html" 
+                  target=_blank>JavaScript css的使用总结</A><BR>· <A 
+                  title="iframe或colorbox 父子窗口调用的方法" 
+                  href="http://bbs.chinaunix.net/thread-3630234-1-1.html" 
+                  target=_blank>iframe或colorbox 父子窗口调用...</A><BR>· <A 
+                  title="js 正则表达式大全" 
+                  href="http://bbs.chinaunix.net/thread-3630606-1-1.html" 
+                  target=_blank>js 正则表达式大全</A><BR>· <A 
+                  title="HTML 代码中怎么实现点击一个超链接，打开两个页面。" 
+                  href="http://bbs.chinaunix.net/thread-3629600-1-1.html" 
+                  target=_blank>HTML 代码中怎么实现点击一个超...</A><BR>· <A 
+                  title=javascript基础(一) 
+                  href="http://bbs.chinaunix.net/thread-3629916-1-1.html" 
+                  target=_blank>javascript基础(一)</A><BR>· <A 
+                  title="Jquery EasyUI combogrid 分页" 
+                  href="http://bbs.chinaunix.net/thread-3629919-1-1.html" 
+                  target=_blank>Jquery EasyUI combogrid 分页</A><BR>· <A 
+                  title=正则表达式在javascript中的几个实例1(转) 
+                  href="http://bbs.chinaunix.net/thread-3630617-1-1.html" 
+                  target=_blank>正则表达式在javascript中的几...</A><BR>· <A 
+                  title=html的自动刷新 
+                  href="http://bbs.chinaunix.net/thread-3630154-1-1.html" 
+                  target=_blank>html的自动刷新</A><BR></TD></TR>
+              <TR>
+                <TD height=5></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=10></TD></TR>
+        <TR></TR></TBODY></TABLE>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=F13 height=27 
+          background=用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/bg245.jpg>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TD>&nbsp;论坛热门讨论</TD>
+                <TD align=right><A 
+                  href="http://bbs2.chinaunix.net/forumdisplay.php?fid=80" 
+                  target=_blank>更多&gt;&gt;</A>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=BLKtext bgColor=#ffffff vAlign=top>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="97%" 
+align=center>
+              <TBODY>
+              <TR>
+                <TD height=5></TD></TR>
+              <TR>
+                <TD>· <A title=用javascript获取文件大小 
+                  href="http://bbs.chinaunix.net/thread-717220-1-1.html" 
+                  target=_blank>用javascript获取文件大小</A><BR>· <A 
+                  title=如何让PHP调用Javascript？ 
+                  href="http://bbs.chinaunix.net/thread-564295-1-1.html" 
+                  target=_blank>如何让PHP调用Javascript？</A><BR>· <A 
+                  title=天涯只看楼主FireFox扩展 
+                  href="http://bbs.chinaunix.net/thread-1787073-1-1.html" 
+                  target=_blank>天涯只看楼主FireFox扩展</A><BR>· <A 
+                  title=优秀的开源报表工具BIRT(百灵)介绍 
+                  href="http://bbs.chinaunix.net/thread-1165316-1-1.html" 
+                  target=_blank>优秀的开源报表工具BIRT(百灵)介绍</A><BR>· <A 
+                  title=[TITLE的BUG]你的IE浏览器有这个BUG么？请求版主删了此帖 
+                  href="http://bbs.chinaunix.net/thread-829408-1-1.html" 
+                  target=_blank>[TITLE的BUG]你的IE浏览器有这...</A><BR>· <A 
+                  title=[限时拍卖][12月10日止]《网页设计爱上jQuery》 
+                  href="http://bbs.chinaunix.net/thread-1622982-1-1.html" 
+                  target=_blank>[限时拍卖][12月10日止]《网页...</A><BR>· <A 
+                  title=女生是否适合做开发？大家进来发表一下自已的意见 
+                  href="http://bbs.chinaunix.net/thread-1135496-1-1.html" 
+                  target=_blank>女生是否适合做开发？大家进来...</A><BR>· <A 
+                  title=你做Web开发用什么语言和技术？ 
+                  href="http://bbs.chinaunix.net/thread-878338-1-1.html" 
+                  target=_blank>你做Web开发用什么语言和技术？</A><BR>· <A 
+                  title="求libxml2 for aix 64Bit 谢谢" 
+                  href="http://bbs.chinaunix.net/thread-732640-1-1.html" 
+                  target=_blank>求libxml2 for aix 64Bit 谢谢</A><BR>· <A 
+                  title=服务器端如何分辨客户端使用的浏览器是wap1.0还是wap2.0[手机] 
+                  href="http://bbs.chinaunix.net/thread-730119-1-1.html" 
+                  target=_blank>服务器端如何分辨客户端使用的...</A><BR></TD></TR>
+              <TR>
+                <TD height=5></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=10></TD></TR>
+        <TR></TR></TBODY></TABLE>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=F13 height=27 
+          background=用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/bg245.jpg>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TD>&nbsp;本周十大热点新闻</TD>
+                <TD align=right>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=BLKtext bgColor=#ffffff vAlign=top>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="97%" 
+align=center>
+              <TBODY>
+              <TR>
+                <TD height=5></TD></TR>
+              <TR>
+                <TD>· <A title=田亮录制BTV跨年直播畅谈奥运情缘(图) 
+                  href="http://news.chinaunix.net/ent/2012/0102/1900748.shtml" 
+                  target=_blank>田亮录制BTV跨年直播畅谈奥运情...</A><BR>· <A 
+                  title="12月PMI回升至50.3% 经济增速回落趋于稳定" 
+                  href="http://news.chinaunix.net/finance/2012/0102/1900650.shtml" 
+                  target=_blank>12月PMI回升至50.3% 经济增速回...</A><BR>· <A 
+                  title=长春举行火炬传递 
+                  href="http://news.chinaunix.net/sports/2012/0102/1900603.shtml" 
+                  target=_blank>长春举行火炬传递</A><BR>· <A title=会易佳：会议外包会是门好生意么 
+                  href="http://news.chinaunix.net/industry/2012/0102/1900544.shtml" 
+                  target=_blank>会易佳：会议外包会是门好生意么</A><BR>· <A 
+                  title="全装房交付后洋相百出 买房人怒告开发商" 
+                  href="http://news.chinaunix.net/finance/2011/1205/1835178.shtml" 
+                  target=_blank>全装房交付后洋相百出 买房人怒...</A><BR>· <A 
+                  title=山西舞剧《粉墨春秋》北京上海演出引关注 
+                  href="http://news.chinaunix.net/ent/2011/1205/1835080.shtml" 
+                  target=_blank>山西舞剧《粉墨春秋》北京上海...</A><BR>· <A 
+                  title=《妈妈咪呀》女一号田水：它让我学会穿高跟鞋 
+                  href="http://news.chinaunix.net/ent/2011/1108/1769703.shtml" 
+                  target=_blank>《妈妈咪呀》女一号田水：它让...</A><BR>· <A 
+                  title=消息称日本购买4.13亿美元欧洲救助债券 
+                  href="http://news.chinaunix.net/finance/2011/1108/1769684.shtml" 
+                  target=_blank>消息称日本购买4.13亿美元欧洲...</A><BR>· <A 
+                  title=德拉基上任首周欧洲央行公债购买规模增逾一倍 
+                  href="http://news.chinaunix.net/finance/2011/1108/1769683.shtml" 
+                  target=_blank>德拉基上任首周欧洲央行公债购...</A><BR>· <A 
+                  title=图文：《武则天秘史》热播-余少群剧照 
+                  href="http://news.chinaunix.net/ent/2011/1108/1769593.shtml" 
+                  target=_blank>图文：《武则天秘史》热播-余少...</A><BR></TD></TR>
+              <TR>
+                <TD height=5></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=10></TD></TR>
+        <TR></TR></TBODY></TABLE>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=F13 height=27 
+          background=用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/bg245.jpg>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TD>&nbsp;本周十大争议新闻</TD>
+                <TD align=right>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=BLKtext bgColor=#ffffff vAlign=top>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="97%" 
+align=center>
+              <TBODY>
+              <TR>
+                <TD height=5></TD></TR>
+              <TR>
+                <TD>· <A title=“第一美差”总决赛　重庆赛区王婵夺冠 
+                  href="http://news.chinaunix.net/ent/2012/0108/1912859.shtml" 
+                  target=_blank>“第一美差”总决赛　重庆赛区...</A><BR>· <A 
+                  title=图文：贾樟柯携新导演做客-陈挚恒 
+                  href="http://news.chinaunix.net/ent/2011/0105/1164205.shtml" 
+                  target=_blank>图文：贾樟柯携新导演做客-陈挚恒</A><BR>· <A 
+                  title="男子多次上访3次被鉴定为精神病 关4年逃跑两次" 
+                  href="http://news.chinaunix.net/society/2011/0429/1288110.shtml" 
+                  target=_blank>男子多次上访3次被鉴定为精神病...</A><BR>· <A 
+                  title=资料图片：《大戏法》剧照-路晨饰司徒瑾 
+                  href="http://news.chinaunix.net/ent/2011/0617/1410792.shtml" 
+                  target=_blank>资料图片：《大戏法》剧照-路晨...</A><BR>· <A 
+                  title="图文-全国青少年赛报到日 小选手谢思雄与球童" 
+                  href="http://news.chinaunix.net/sports/2011/0725/1505624.shtml" 
+                  target=_blank>图文-全国青少年赛报到日 小选...</A><BR>· <A 
+                  title=资料：话剧《后青春期的诗》导演改编-武雨泽 
+                  href="http://news.chinaunix.net/ent/2011/0927/1666100.shtml" 
+                  target=_blank>资料：话剧《后青春期的诗》导...</A><BR>· <A title=乔布斯去世对中国的意义 
+                  href="http://news.chinaunix.net/blog/2011/1006/1681860.shtml" 
+                  target=_blank>乔布斯去世对中国的意义</A><BR>· <A 
+                  title="图文-国足门神杨智性感写真 杨智半裸上身出镜" 
+                  href="http://news.chinaunix.net/sports/2011/1013/1699115.shtml" 
+                  target=_blank>图文-国足门神杨智性感写真 杨...</A><BR>· <A 
+                  title=图文：《瑶山大剿匪》将播-导演张国庆 
+                  href="http://news.chinaunix.net/ent/2011/1024/1725740.shtml" 
+                  target=_blank>图文：《瑶山大剿匪》将播-导演...</A><BR>· <A 
+                  title=图文：华谊群星《时尚先生》大片-邓超 
+                  href="http://news.chinaunix.net/ent/2011/1125/1812089.shtml" 
+                  target=_blank>图文：华谊群星《时尚先生》大...</A><BR></TD></TR>
+              <TR>
+                <TD height=5></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff height=10></TD></TR>
+        <TR></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<SCRIPT language=JavaScript 
+src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/count.htm"></SCRIPT>
+
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=950 align=center>
+  <TBODY>
+  <TR>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=950 align=center>
+  <TBODY>
+  <TR>
+    <TD bgColor=#308cf6 height=2>&nbsp;</TD></TR>
+  <TR>
+    <TD bgColor=#308cf6 height=2>&nbsp;</TD></TR>
+  <TR>
+    <TD align=center>
+      <P>Copyright &copy; 2001-2010 ChinaUnix.net All Rights Reserved</P>
+      <P>感谢所有关心和支持过ChinaUnix的朋友们<BR>&nbsp;</P>
+      <P>京ICP证:060528号<BR>&nbsp;</P></TD></TR></TBODY></TABLE><!-- 统计 START -->
+<SCRIPT type=text/javascript 
+src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/pv.js"></SCRIPT>
+
+<SCRIPT>
+function sendPV(){
+    var pvTrack = new PvTrack();
+    pvTrack.type = 10; // 频道类别ID
+    pvTrack.channel = 22; // 频道ID
+   
+    pvTrack.pageType = 0;
+    pvTrack.track();
+}
+window.setTimeout("sendPV()", 0);
+</SCRIPT>
+<!-- 统计 END -->
+<DIV style="DISPLAY: none">
+<SCRIPT type=text/javascript> 
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0ee5e8cdc4d43389b3d1bfd76e83216b' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+</DIV>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+try {
+var pageTracker = _gat._getTracker("UA-11982772-2");
+pageTracker._setDomainName(".chinaunix.net");
+pageTracker._trackPageview();
+} catch(err) {}</SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="用JavaScript绘图—JS2D函数集_ChinaUnix技术文档中心%20-%20中国最专业的IT技术社区%20针对高端IT专业技术人员的媒体信息传播和服务平台_files/pv(1).js"></SCRIPT>
+</BODY></HTML>

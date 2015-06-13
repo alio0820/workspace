@@ -1,0 +1,1396 @@
+body{
+	margin:0;
+	color: #222222;
+    font-size: 12px;
+    line-height: 1.666;
+	}
+	
+	body, input, textarea {
+    font-family: verdana;
+}
+
+.frame-top {
+    height: 88px;
+    background:url(../images/top_bg.gif) no-repeat fixed right top;
+}
+.qp {
+    position: relative;
+    z-index: 24;
+}
+.ou {
+    background-position: -192px 0;
+}
+.pP {
+    cursor: pointer;
+    left: 12px;
+    position: absolute;
+    top: 12px;
+    z-index: 8;
+}
+a {
+    color: #003399;
+    text-decoration: none;
+}
+table, th, td, img, fieldset {
+    border: 0 none;
+}
+.qj {
+    left: 150px;
+    position: absolute;
+    top: 18px;
+    z-index: 10;
+}
+.mP {
+    font-weight: bold;
+    margin-right: 5px;
+    padding-left: 50px;
+}
+.mP, .oj, .oK {
+    float: left;
+}
+.ir {
+    color: #222222;
+}
+.ir {
+    float: left;
+}
+.ir, .oH {
+    line-height: 14px;
+}
+.nui-txt-link {
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+    outline: 0 none;
+    padding: 2px 4px 4px;
+    text-decoration: none;
+}
+.gI {
+    margin-left: 4px;
+    margin-right: 2px;
+}
+.qj .nui-ico-dArr {
+    background-position: -64px -352px;
+    background-repeat: no-repeat;
+    height: 8px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+.mP .nui-ico-phone-disabled {
+    cursor: pointer;
+}
+.mP .nui-ico-phone {
+    cursor: pointer;
+}
+.nui-ico-phone-disabled {
+    background: url(../images/phone.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-phone {
+    background: url(../images/phone2.png) no-repeat scroll 0 0 transparent;
+    height: 14px;
+    width: 10px;
+}
+.he, .webIM-tinfo, .webIM-tinfo a, .mP .nui-addr-symbol, .oH {
+    color: #666666 !important;
+}
+.he {
+    font-weight: normal;
+    line-height: 15px;
+    vertical-align: top;
+}
+.he .APP-webIM {
+    margin-left: 4px;
+}
+.he .oj {
+    margin: 0 4px;
+}
+.oj {
+    color: #BBBBBB;
+}
+.oj {
+    line-height: 18px;
+}
+.mP, .oj, .oK {
+    float: left;
+}
+.oH {
+    margin: 0 5px;
+    outline: 0 none;
+    text-decoration: none;
+}
+.ir, .oH {
+    line-height: 14px;
+}
+.pu {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 7;
+}
+.qp .nui-ipt {
+    border-color: #B2B2B2;
+}
+.pu .nui-ipt {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    margin-right: -4px;
+    padding-right: 28px;
+}
+.nui-ipt {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset;
+    font-size: 12px;
+    height: 20px;
+    line-height: 1.666;
+    padding: 3px 8px;
+    position: relative;
+}
+.nui-ipt-placeholder {
+    color: #CCCCCC;
+    cursor: text;
+    font-size: 12px;
+    height: 90%;
+    left: 9px;
+    line-height: 26px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+.pu .nui-ipt-input {
+    width: 161px;
+}
+input[type="text"] {
+}
+.nui-ipt-input {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 12px;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+}
+.nui-ipt-iconBtn {
+    cursor: pointer;
+    height: 16px;
+    outline: 0 none;
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    width: 16px;
+}
+.nui-ipt-iconBtn .nui-ico {
+    color: #CCCCCC;
+    left: 4px;
+    position: absolute;
+    top: 5px;
+}
+.pu .nui-mainBtn {
+    vertical-align: bottom;
+}
+.nui-inputBtn {
+    margin-left: -1px;
+}
+.nui-mainBtn {
+    color: #FFFFFF;
+}
+.nui-btn {
+    border-radius: 3px 3px 3px 3px;
+    color: #555555;
+    font-size: 12px;
+    outline: 0 none;
+    position: relative;
+}
+.pu .nui-mainBtn .nui-btn-text {
+    width: 18px;
+}
+.nui-inputBtn .nui-btn-text {
+    border-radius: 0 2px 2px 0;
+}
+.nui-mainBtn .nui-btn-text {
+    background: url(../images/btnbg.png) repeat-x scroll 0 0 transparent;
+    border-color: #459830;
+}
+.nui-splitBtn-text, .nui-splitBtn-arr, .nui-btn-text {
+    background: url(../images/btnbg2.png) repeat-x scroll 0 0 transparent;
+    border: 1px solid #999999;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    height: 26px;
+    line-height: 25px;
+    padding: 0 12px;
+    text-align: center;
+    vertical-align: top;
+}
+.pu .nui-mainBtn .nui-ico-frameSearch {
+    left: 15px;
+    position: absolute;
+    top: 6px;
+}
+.nui-ico-frameSearch {
+    background: url(../images/Search.png) no-repeat scroll 0 0 transparent;
+    height: 16px;
+    width: 16px;
+}
+.APP-music {
+    font-size: 12px;
+    height: 20px;
+    overflow: visible;
+    position: relative;
+    text-align: left;
+    width: 28px;
+}
+.ox {
+    left: auto;
+    position: absolute !important;
+    right: 12px;
+    top: 60px;
+}
+.APP-music-logo {
+    background-position: 0 0;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    width: 28px;
+}
+.APP-music-logo, .APP-music-box, .APP-music-box .btnPrev, .APP-music-box .btnPlay, .APP-music-box .btnNext, .APP-music-box .btnPause, .APP-music-box .progressBar .show, .APP-music-icoBbufing, .APP-music-icoPlaying, .APP-music-box .volume .show, .APP-music-box .musicList-item .groupName .fold, .APP-music-box .musicList-item-li .state {
+    background-image: url("../images/global.png");
+    background-repeat: no-repeat;
+}
+.APP-music-box {
+    background-position: 0 -252px;
+    height: 282px;
+    position: absolute;
+    right: -4px;
+    top: -2px;
+    width: 250px;
+}
+.qq {
+    height: 36px;
+    left: 0;
+    position: absolute;
+    top: 52px;
+    width: 100%;
+    z-index: 21;
+}
+.pB {
+    left: -800px;
+    position: absolute;
+}
+.nui-contacts:before, .nui-contacts:after, .nui-chkGroup:before, .nui-chkGroup:after, .nui-msgbox-iconText:before, .nui-msgbox-iconText:after, .nui-tag:before, .nui-tag:after, .nui-container:before, .nui-container:after, .nui-toolbar:before, .nui-toolbar:after, .nui-tabs:before, .nui-tabs:after, .nui-fClear:before, .nui-fClear:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.qd {
+    border: 0 none;
+    margin-left: 12px;
+}
+.nui-tabs {
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    line-height: 1.666;
+}
+.nui-tabs-item {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-color: #CCCCCC;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    cursor: pointer;
+    float: left;
+    margin-right: -1px;
+    outline: 0 none;
+    padding: 0 15px;
+    text-align: center;
+}
+.qa {
+    border-style: solid;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-width: 1px 1px 0;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    height: 25px;
+    line-height: normal;
+    outline: 0 none;
+    padding: 5px 20px 4px 8px;
+    position: relative;
+    text-align: center;
+    width: 91px;
+    z-index: 3;
+}
+.qa {
+    background: -moz-linear-gradient(center top , #FEFFFF, #DAE8F6) repeat scroll 0 0 transparent;
+    border-color: #B9C4CF;
+    color: #6A6A6A;
+}
+.qa .nui-tabs-item-text, .ua-ie6 .qa .nui-tabs-item-text, .ua-ie7 .qa .nui-tabs-item-text {
+    text-overflow: ellipsis;
+}
+.qa .nui-tabs-item-text {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+}
+.lW .nui-tabs-item-text {
+    margin-left: 6px;
+}
+.nui-btn, .nui-fNoSelect {
+    -moz-user-select: none;
+}
+
+.qd .nui-tabs-item-selected .nui-tabs-item-close:hover, .qd .nui-tabs-item-selected .nui-tabs-item-close:focus {
+    background: -moz-linear-gradient(center top , #AAC7E6, #77A7D9) repeat scroll 0 0 transparent;
+    color: #064483;
+}
+.qd .nui-tabs-item-selected .nui-tabs-item-close:active {
+    background: none repeat scroll 0 0 #064483;
+    color: #9BB4CD;
+}
+.qd .nui-tabs-item-selected .nui-tabs-item-close:focus, .qd .nui-tabs-item-selected .nui-tabs-item-close:hover, .qd .nui-tabs-item-selected .nui-tabs-item-close:active {
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    outline: 0 none;
+    padding: 3px;
+}
+.qd .nui-tabs-item:hover {
+    background: -moz-linear-gradient(center top , #FEFFFF, #C8DCF1) repeat scroll 0 0 transparent;
+    border-color: #A1ACB8;
+}
+.qd .nui-tabs-item-selected ,.qd .nui-tabs-item-selected:focus ,.qd .nui-tabs-item-selected:active ,.qd .nui-tabs-item-selected:hover {
+    background: -moz-linear-gradient(center top , #196FC6, #135BA5) repeat scroll 0 0 transparent;
+    border-color: #135AA4;
+    color: #FFFFFF;
+}
+.nui-tabs-item-selected {
+    background: none repeat scroll 0 0 #FFFFFF;
+    cursor: default;
+    margin-bottom: -1px;
+    padding-bottom: 1px;
+    position: relative;
+}
+.qd .nui-tabs-item-selected {
+    border-width: 1px 1px 0;
+    font-weight: bold;
+    position: relative;
+    z-index: 6;
+}
+.qd .nui-tabs-item-close {
+    font-size: 12px;
+    height: 7px;
+    line-height: normal;
+    outline: 0 none;
+    padding: 3px;
+    position: absolute;
+    right: 8px;
+    text-decoration: none;
+    top: 9px;
+    width: 7px;
+}
+.nui-tabs-item-hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.qd .nui-tabs-item-selected .nui-tabs-item-close {
+    color: #A2C1E2;
+}
+.qd .nui-tabs-item-close {
+    color: #CCCCCC;
+}
+.qd .nui-tabs-item-close-transarea {
+    cursor: pointer;
+    height: 19px;
+    left: -3px;
+    position: absolute;
+    top: -3px;
+    width: 19px;
+}
+.nui-ico-close {
+    cursor: pointer;
+}
+.qd .nui-tabs-item-close .nui-ico {
+    background: none repeat scroll 0 0 transparent !important;
+    cursor: pointer;
+    left: 3px;
+    position: absolute;
+    top: -4px;
+}
+.ok {
+    border-top-left-radius: 0;
+    font-size: 12px;
+    height: 31px;
+    line-height: 30px;
+    margin-top: 3px;
+    padding: 0 !important;
+    width: 27px;
+}
+.ok .nui-ico {
+    background-position: -96px -352px;
+    left: 10px;
+    position: absolute;
+    top: 13px;
+}
+.pv {
+    z-index: 4;
+}
+.ua-ie9 .qd .nui-tabs-item, .ua-ie8 .qd .nui-tabs-item, .ua-ie7 .qd .nui-tabs-item, .ua-ie6 .qd .nui-tabs-item, .pv, .fn-bgx {
+    background-image: url("../images/bgx.png");
+}
+.pv {
+    background-position: 0 -85px;
+    bottom: 0;
+    font-size: 0;
+    height: 5px;
+    left: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+}
+.frame-main {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 88px;
+    z-index: 23;
+}
+.frame-main-title {
+    left: -800px;
+    position: absolute;
+}
+.frame-main-cont-head {
+    height: 48px;
+}
+.frame-main-cont-head:before, .frame-main-cont-head:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+}
+.frame-main-cont-head-hasBorder {
+    border-color: #D9E1E7;
+    box-shadow: 0 1px 0 #ECF0F3;
+    border-style: solid;
+    border-width: 0 0 1px;
+    height: 47px;
+    position: relative;
+    z-index: 5;
+}
+.nui-bg-light {
+    background-color: #F5F7FA;
+}
+.nui-btn:hover, .nui-btn-hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.nui-toolbar-item {
+    float: left;
+    line-height: 30px;
+    margin-right: 7px;
+}
+.nui-toolbar-item .nui-btn {
+    float: left;
+    line-height: normal;
+    margin-right: -1px;
+}
+.nui-splitBtn {
+    padding-right: 20px;
+}
+.nui-btn {
+    position: relative;
+}
+.nui-calendar, .nui-sup, .nui-progress, .nui-normalTips, .nui-tag, .nui-addr-symbol, .nui-addr-email, .nui-addr-name, .nui-addr, .nui-inlineGap, .nui-select, .nui-chk, .nui-ipt, .nui-ico, .nui-btn, .nui-splitBtn-text, .nui-btn-text, .nui-fIBlock {
+    display: inline-block;
+    vertical-align: middle;
+}
+.rb {
+    line-height: 16px;
+    margin: 0 4px;
+    vertical-align: top;
+}
+.nui-splitBtn-text, .nui-splitBtn-arr, .nui-btn-text {
+    background: url(../images/mailtext-bg.png) repeat-x scroll 0 0 transparent;
+    border: 1px solid #999999;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    height: 26px;
+    line-height: 25px;
+    padding: 0 12px;
+    text-align: center;
+    vertical-align: top;
+}
+.nui-splitBtn-text {
+    border-radius: 3px 0 0 3px;
+    border-right-width: 0;
+    outline: 0 none;
+    padding-right: 8px;
+}
+.nui-imptBtn .nui-splitBtn-text, .nui-imptBtn .nui-splitBtn-arr, .nui-imptBtn .nui-btn-text {
+    background: url(../images/mailtext-bg2.png) repeat-x scroll 0 0 transparent;
+}
+.nui-splitBtn-split {
+    background: none repeat scroll 0 0 #CECECE;
+    font-size: 0;
+    height: 26px;
+    overflow: hidden;
+    position: absolute;
+    right: 20px;
+    text-indent: -20px;
+    top: 1px;
+    width: 1px;
+}
+.nui-splitBtn-arr {
+    border-left-width: 0;
+    border-radius: 0 3px 3px 0;
+    height: 26px;
+    line-height: normal;
+    outline: 0 none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 19px;
+}
+.nui-splitBtn-arr .nui-ico {
+    left: 6px;
+    position: absolute;
+    top: 12px;
+    vertical-align: top;
+}
+.nui-ico, .nui-txt-fNui {
+    font-family: nui !important;
+    font-size:12px;
+    line-height: normal !important;
+}
+.nui-dropdownBtn-arr {
+    cursor: pointer;
+    position: absolute;
+    right: 9px;
+    top: 12px;
+}
+.nui-dropdownBtn-arr .nui-ico {
+    vertical-align: top;
+}
+.nui-roundBtn .nui-btn-icon {
+    top: 8px;
+}
+.nui-btn-icon {
+    cursor: pointer;
+    left: 8px;
+    line-height: 0;
+    position: absolute;
+    top: 6px;
+}
+.nui-roundBtn .nui-ico-next, .nui-roundBtn .nui-ico-prev {
+    margin: 0 0 0 -1px;
+}
+.nui-ico-prev {
+    background: url(../images/nui-bg.png) no-repeat scroll 0 0 transparent;
+    height: 12px;
+    width: 13px;
+}
+.nui-btn-disabled .nui-ico-next {
+    background-image: url(../images/nui-bg2.png);
+}
+.nui-ico-next {
+    background: url(../images/nui-bg3.png) no-repeat scroll 0 0 transparent;
+    height: 12px;
+    width: 13px;
+}
+.nui-toolbar-item .nui-roundBtn {
+    margin-left: 7px;
+}
+.nui-roundBtn .nui-ico-option2, .nui-roundBtn .nui-ico-setting {
+    margin: -1px 0 0 -1px;
+}
+.nui-ico-setting, .nui-ico-option2 {
+    background: url(../images/nui-bg4.png) no-repeat scroll 0 0 transparent;
+    height: 14px;
+    width: 14px;
+}
+.nui-roundBtn .nui-btn-text {
+    border-radius: 100% 100% 100% 100% !important;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    padding: 0;
+    width: 26px;
+}
+
+.nui-toolbar-ext .nui-toolbar-item {
+    margin-left: 8px;
+    margin-right: 1px;
+}
+.nui-toolbar-ext {
+    float: right;
+}
+.nui-splitBtn-text-disabled, .nui-splitBtn-arr-disabled, .nui-btn-disabled .nui-btn-text {
+    background: none repeat scroll 0 0 #F0F0F0 !important;
+    border-color: #D8D8D8 !important;
+    color: #CCCCCC !important;
+    cursor: default;
+}
+.nui-dropdownBtn .nui-btn-text {
+    padding-right: 18px;
+}
+.frame-main-cont-head .nui-toolbar {
+    padding: 10px;
+}
+
+.ko {
+    padding: 12px 12px 0;
+}
+
+header, footer, section, aside, article, nav, hgroup, figure, figcaption, body, h1, h2, h3, h4, h5, h6, ul, ol, li, form, p, dl, dt, dd, blockquote, legend, table, th, td, fieldset, menu, pre {
+    margin: 0;
+    padding: 0;
+}
+header, footer, section, aside, article, nav, hgroup, figure, figcaption {
+    display: block;
+}
+
+.frame-main-nav, .frame-main-cont {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.frame-main-nav {
+    box-shadow: 0 0 1px #F8F8F8 inset;
+    width: 200px;
+    background-color:#F5F5F5;
+    border-right: 1px solid #BDBDBD;
+    z-index:999;
+}
+.pC {
+    left: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+}
+h1, h2, h3, h4, h5, h6, th {
+    font-size: 100%;
+    font-weight: normal;
+}
+.om {
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.om {
+    position: relative;
+    z-index: 1;
+}
+.pQ {
+}
+.qf {
+    background-position: -384px 0;
+    height: 46px;
+    margin-top: -1px;
+    position: relative;
+    z-index: 1;
+}
+ul, ol {
+    list-style: none outside none;
+}
+.og {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 33px;
+    margin-top: 8px;
+    outline: 0 none;
+    padding: 0;
+    position: relative;
+    width: 88px;
+    z-index: 1;
+}
+.jy {
+    background-position: -87px 0;
+    margin-left: -5px;
+    width: 89px;
+}
+.kj {
+    margin-left: 12px;
+}
+.qf .kj:hover {
+    background-position: 0 -48px;
+    z-index: 2;
+}
+.qf .kj:active {
+    background-position: 0 -96px;
+    z-index: 2;
+}
+.qf .jy:hover {
+    background-position: -87px -48px;
+}
+.qf .jy:active {
+    background-position: -87px -96px;
+}
+.qr .nui-ico-empty, .qr .nui-ico-plus, .qr .nui-ico-receive, .qr .nui-ico-option, .og, .fn-bg {
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+}
+.eX {
+	background-position:0 -48px;
+	z-index:2;
+}
+.en {
+	background-position:-87px -48px;
+}
+.kS {
+    height: 15px;
+    left: 14px;
+    line-height: 0;
+    position: absolute;
+    top: 8px;
+}.fG {
+    background-position: 0 -192px;
+    height: 32px;
+    width: 25px;
+}
+.ep {
+    background-position: -64px -192px;
+    height: 32px;
+    width: 25px;
+}
+.kT {
+    color: #3C6692;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.kT {
+    margin-left: 40px;
+}
+.nui-scroll {
+    overflow: auto;
+    position: relative;
+}
+.pj {
+    background-image: url("../images/t1.gif");
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 46px;
+    width: 201px;
+}
+.lX {
+	overflow:auto;
+}
+.qr .nui-tree {
+    margin-left: 0;
+    position: relative;
+}
+.pj .nui-tree-item {
+    position: relative;
+    <!--width: 200px;-->
+}
+.qr .nui-tree-item {
+    outline: 0 none;
+}
+.nui-tree-item {
+    clear: both;
+    font-size: 12px;
+    line-height: 1.666;
+    position: relative;
+}
+.qr .nui-tree-item-label {
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 1px;
+    outline: 0 none;
+    padding-left: 26px;
+}
+.qr .nui-tree-item-label-selected, .qr .nui-tree-item-label-selected:hover {
+    font-weight: normal !important;
+}
+.qr .nui-tree-item-label-selected .nui-tree-item-count, .qr .nui-tree-item-label-selected:hover .nui-tree-item-count, .qr .nui-tree-item-label-selected, .qr .nui-tree-item-label-selected:hover {
+    background-color: #E6E6E6;
+    font-weight: bold;
+}
+
+.nui-tree-item-label {
+    padding-left: 12px;
+    position: relative;
+}
+.qr .nui-tree-item-label-selected .nui-tree-item-text {
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.qr .nui-tree-item-label-hover .nui-tree-item-count, .qr .nui-tree-item-label:hover .nui-tree-item-count, .qr .nui-tree-item-label-hover, .qr .nui-tree-item-label:hover {
+    background-color: #EBEBEB;
+}
+.qr .nui-tree-item-label-selected .nui-tree-item-count, .qr .nui-tree-item-label-selected:hover .nui-tree-item-count, .qr .nui-tree-item-label-selected, .qr .nui-tree-item-label-selected:hover {
+    background-color: #E6E6E6;
+    font-weight: bold;
+}
+.qr .nui-tree-item-label-selected, .qr .nui-tree-item-label-selected:hover {
+    font-weight: normal !important;
+}
+.nui-tree-item-text {
+    position: relative;
+    z-index: 1;
+}
+.nui-ico-flag, .nui-ico-flag-1 {
+    background: url(../images/asterisk.png) no-repeat scroll 0 0 transparent;
+}
+.nui-ico-flag {
+    height: 16px;
+    width: 16px;
+}
+.qr .nui-tree-item-count, .skin-left {
+    background-color: #F5F5F5;
+    border-color: #BDBDBD;
+}
+.nui-ico {
+    font-weight: normal;
+    line-height: normal;
+    overflow: hidden;
+    text-align: center;
+}
+
+.qr .nui-tree-item-symbol {
+    font-size: 0;
+    height: 7px;
+    left: 12px;
+    line-height: 0;
+    top: 11px;
+}
+.nui-tree-item-symbol {
+    height: 7px;
+    left: 0;
+    overflow: visible;
+    position: absolute;
+    top: 3px;
+    width: 7px;
+}
+.qr .nui-tree-item-symbol .nui-ico-rArr {
+    background-position: -160px -192px;
+}
+.qr .nui-tree-item-symbol-fold {
+    margin-top: 0;
+}
+.nui-tree-item-symbol .nui-ico {
+    vertical-align: top;
+}
+.qr .nui-tree-item-symbol .nui-ico-dArr {
+    background-position: -128px -192px;
+}
+.qr .nui-tree-item-ext .nui-ico {
+    color: #BFBFBF;
+}
+.qr .nui-tree-item-ext .nui-ico {
+    background-repeat: no-repeat;
+    border: 4px solid transparent;
+    overflow: visible;
+    text-decoration: none;
+}
+.qr .nui-ico-plus {
+    background-position: -64px -224px;
+}
+.nui-ico-plus {
+    background: url(../images/plus.png) no-repeat scroll 0 0 transparent;
+    height: 8px;
+    width: 8px;
+}
+.qr .nui-ico-option {
+    background-position: -128px -224px;
+}
+.nui-ico-option {
+    background: url(../images/option.png) no-repeat scroll 0 0 transparent;
+    height: 10px;
+    width: 10px;
+}
+.qr .nui-tree-item-ext {
+    font-size: 0;
+    line-height: 0;
+    right: 6px;
+    top: 4px;
+}
+.nui-tree-item-ext {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+}
+.qr .nui-ico-receive {
+    background-position: 0 -256px;
+}
+.nui-ico-receive {
+    background: url(../images/receive.png) no-repeat scroll 0 0 transparent;
+    height: 9px;
+    width: 9px;
+}
+.nui-ico-dArr, .nui-ico-uArr, .nui-ico-lArr, .nui-ico-rArr {
+    font-size: 0;
+    line-height: 999px;
+    overflow: hidden;
+}
+.nui-ico-dArr {
+    background: url(../images/arr-bg.png) no-repeat scroll 0 0 transparent;
+    height: 4px;
+    width: 7px;
+}
+.qr .nui-tree-item .nui-tree .nui-tree-item-label {
+    height: 24px;
+    line-height: 24px;
+    padding-left: 33px;
+}
+.nui-roundBtn {
+    border-radius: 100% 100% 100% 100% !important;
+    text-align: center;
+}
+.gWel-footer, .kd, .nui-tag, .nui-contacts-list .nui-tree-item-text, .nui-menu-item, .nui-menu-item-ext, .nui-btn, .nui-chk, .nui-select-text, .nui-editableAddr-ipt, .nui-simpleTree .nui-tree-item-label, .nui-addr, body, input, textarea {
+    font-family: 'Microsoft Yahei',verdana;
+}
+.frame-main-cont-body, .ua-ie9 .frame-main-cont-body, .ua-ie10 .frame-main-cont-body {
+    right: 0;
+}
+.frame-main-cont-body {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    top: 48px;
+    z-index: 1;
+}
+.qm {
+    padding: 0 0 100px;
+    position: relative;
+}
+.pk {
+    padding: 6px 18px 8px;
+    position: relative;
+}
+.ny {
+    padding-right: 72px;
+}
+.lv {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: normal;
+    margin-right: 12px;
+    outline: 0 none;
+    padding-top: 6px;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.jE, .lj {
+    line-height: normal;
+    vertical-align: top;
+}
+.lj {
+    padding-top: 6px;
+}
+
+
+.ho .nui-ico-dArr {
+    background: url("../images/nui_ico_darr_white.png") repeat scroll 0 0 transparent;
+    margin-top: 3px;
+}
+.gD .nui-ico {
+    cursor: pointer;
+    overflow: visible;
+}
+.gD {
+    margin: 0 4px;
+}
+.ho {
+    border-radius: 2px 2px 2px 2px;
+    font-size: 0;
+    height: 11px;
+    line-height: 0;
+    margin-top: 2px;
+    overflow: hidden;
+    text-align: center;
+    width: 11px;
+}
+.gD {
+    color: #A6BDD2;
+}
+.ho {
+    background-color: #A6BDD2;
+    color: #FFFFFF;
+}
+.nui-ico-yunnote {
+    background-position: -128px -352px;
+    height: 12px;
+    width: 12px;
+}
+.gE .nui-ico {
+    margin-top: -2px;
+    width: 9px;
+}
+.dT .nui-ico {
+    height: 13px;
+    margin-top: -2px;
+    width: 13px;
+}
+.fc .nui-ico {
+    height: 11px;
+    margin-top: -3px;
+    width: 11px;
+}
+.fM .nui-ico {
+    height: 12px;
+    margin-top: -2px;
+    width: 12px;
+}
+.kz {
+    color: #999999;
+    line-height: normal;
+}
+.fS {
+    margin-top: 9px;
+}
+.fS {
+    position: relative;
+}
+.rK .fU {
+    padding-left: 0;
+}
+.fU {
+    line-height: 23px;
+    min-height: 24px;
+    padding-left: 48px;
+}
+.nui-txt-suc {
+    color: #3D882D !important;
+}
+.dj {
+    margin-bottom: 3px;
+    margin-top: 8px;
+}
+.fT {
+    color: #94A5B1;
+}
+.fT {
+    left: 0;
+    position: absolute;
+    top: 3px;
+}
+.fU .nui-addr {
+    margin-bottom: 4px;
+    margin-left: -2px;
+    margin-right: 4px;
+}
+.nui-addr-add, .nui-addr, .nui-bdr-item {
+    border-color: #C2D4E3;
+}
+.nui-addr-add, .nui-addr, .nui-bg-item {
+    background-color: #E8F0F7;
+}
+.nui-addr {
+    border-radius: 17px 17px 17px 17px;
+    border-style: solid;
+    border-width: 1px;
+    color: #7F7F7F;
+    cursor: pointer;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    outline: 0 none;
+    padding: 2px 9px;
+}
+.nui-addr-hasAdd {
+    padding-right: 25px;
+    position: relative;
+}
+.ua-firefox .nui-addr {
+    padding-bottom: 3px;
+    padding-top: 1px;
+}
+.nui-addr-name {
+    color: #333333;
+    font-weight: normal;
+}
+.nui-addr-email, .nui-addr-name, .nui-addr-icon {
+    vertical-align: top;
+}
+.nui-addr-add {
+    border-radius: 0 17px 17px 0;
+    border-style: solid;
+    border-width: 1px;
+    display: inline;
+    font-family: verdana;
+    font-weight: bold;
+    padding: 2px 5px 2px 3px;
+    position: absolute;
+    right: -2px;
+    text-decoration: none;
+    top: -1px;
+}
+.nui-addr-add, .nui-clr-item {
+    --color: #C2D4E3;
+}
+.dZ {
+    margin-top: 2px;
+}
+.dk {
+    margin-top: 2px;
+}
+.dD {
+    margin-top: 2px;
+}
+.cS {
+    padding-bottom: 5px;
+}
+.bI {
+    background: none repeat scroll 0 0 #FFFFE1;
+    border: 1px solid #BBBBBB;
+    line-height: 20px;
+    margin-bottom: 5px;
+    padding: 9px 12px;
+    width: 394px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.bA {
+    width: 420px;
+}
+.bf, .bb {
+    margin-right: 10px;
+}
+.bz {
+    margin-bottom: 10px;
+}
+.nui-ipt-hover {
+    border-color: #979797;
+}
+.nui-ipt-focus, .nui-ipt:focus {
+    border-color: #3366CC;
+    outline: 0 none;
+}
+.nui-ipt-disabled {
+    background: none repeat scroll 0 0 #F0F0F0;
+    border-color: #D8D8D8;
+    box-shadow: none;
+}
+.nui-ipt-disabled .nui-ipt-input {
+    color: #CCCCCC;
+}
+.nui-ipt-focus, .nui-ipt:focus {
+    border-color: #3366CC;
+    outline: 0 none;
+}
+.nui-multiLineIpt {
+    height: auto;
+}
+.bg {
+    float: right;
+}
+.lh {
+    line-height: normal;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+}
+.lh .nui-txt-link {
+    position: relative;
+    top: 1px;
+}
+.nui-userLayer-oprt-item, .nui-moduleTabs .nui-tabs-item, .nui-txt-cLink, .nui-txt-link {
+    color: #003399;
+}
+.hp {
+    height: 14px;
+    margin-left: 2px;
+    margin-top: -6px;
+}
+.pl {
+    margin-top: 0;
+}
+.nui-split {
+    border-style: solid;
+    border-width: 0 0 1px;
+    clear: both;
+    color: #E0E0E0;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.nui-split-cDark, .nui-bdr-dark {
+    border-color: #C5D2DA;
+}
+.pf {
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 10px;
+}
+.nui-split-cLight, .nui-bdr-light {
+    border-color: #CAD8E1;
+}
+.pe {
+    line-height: normal;
+    padding: 8px;
+}
+.kq {
+    display: block;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+}
+.nui-multiLineIpt .nui-ipt-input {
+    padding: 3px 0;
+}
+.kq .nui-ipt-input {
+    height: 10px;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    resize: none;
+    width: 100%;
+}
+.kq .nui-ipt-input {
+    transition-duration: 0.5s;
+    transition-property: all;
+}
+.ns {
+    padding-top: 8px;
+    position: relative;
+}
+.jH {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 380px;
+}
+.fN {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.pz {
+    bottom: 12px;
+    position: fixed;
+    right: 28px;
+    z-index: 149;
+}
+.mW {
+    margin-top: 4px;
+    text-align: right;
+}
+.mW .nui-btn {
+    margin-left: 4px;
+}
+.lo .nui-btn-icon {
+    left: 9px;
+}
+.nui-ico-backToTop {
+    background: url(../images/up.png) repeat scroll 0 0 transparent;
+    height: 13px;
+    width: 11px;
+}
+.rI .nui-btn-icon {
+    left: 6px;
+}
+.nui-ico-readMod-default {
+    background: url(../images/bookmark.png) repeat scroll 0 0 transparent;
+    height: 12px;
+    width: 16px;
+}
+.nui-ico-readMod {
+    background: url(../images/bookmark2.png) repeat scroll 0 0 transparent;
+    height: 13px;
+    width: 17px;
+}
+.kr .nui-btn-icon {
+    top: 7px;
+}
+.nui-ico-zoomIn {
+    background: url(../images/magnify.png) repeat scroll 0 0 transparent;
+    height: 14px;
+    width: 14px;
+}
+.nui-ico-bigPlus {
+    background: url(../images/bigplus.png) repeat scroll 0 0 transparent;
+    height: 13px;
+    width: 13px;
+}
+.nui-ico-original {
+    background: url(../images/original.png) repeat scroll 0 0 transparent;
+    height: 11px;
+    width: 12px;
+}
+.nui-ico-bigMinus {
+    background: url(../images/bigMinus.png) repeat scroll 0 0 transparent;
+    height: 3px;
+    width: 13px;
+}
+.nui-ico-bigClose {
+    background: url(../images/bigClose.png) repeat scroll 0 0 transparent;
+    height: 11px;
+    width: 11px;
+}
+.frame-main-cont-body-mask {
+    background-color: #FFFFFF;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.nui-ico-rArr {
+    background: url(../images/arr-bg-right.png) no-repeat scroll 0 0 transparent;
+    height: 7px;
+    width: 4px;
+}
+.qr.nui-ico-empty,.qr .nui-ico-plus,.qr .nui-ico-receive,.qr .nui-ico-option,.og,.fn-bg{
+	background-image:url(../images/bg.png);background-repeat:no-repeat
+}
+.ev .nui-ipt-input {
+    font-size: 14px;
+    height: 90px;
+    overflow: auto;
+}
+.nui-mainBtn:hover .nui-btn-text, .nui-mainBtn-hover .nui-btn-text {
+    background: url(../images/btnbg-hover.png) repeat-x scroll 0 0 transparent;
+    border-color: #146700;
+}
+.nui-mainBtn:active .nui-btn-text, .nui-mainBtn-active .nui-btn-text {
+    background: url(../images/btnbg-active.png) repeat-x scroll 0 0 transparent;
+    border-color: #146700;
+}
+.nui-mainBtn:focus .nui-btn-text, .nui-mainBtn-focus .nui-btn-text {
+    box-shadow: 0 0 2px #FFFFFF inset;
+}
+.nui-tree-item-isFold .nui-tree-item-isUnfold .nui-tree-item-symbol-unfold, .nui-tree-item-isUnfold .nui-tree-item-isFold .nui-tree-item-symbol-fold, .nui-tree-item-isFold .nui-tree-item-symbol-fold, .nui-tree-item-isUnfold .nui-tree-item-symbol-unfold, .nui-tree-item-isUnfold .nui-tree{
+	display:block;
+}
+img{vertical-align:top;margin:0:float:left}
+#mailHead{width:auto;min-width:1022px;height:86px;_width:expression(document.body.clientWidth <1022? "1022px":"auto");}
+.top1{width:591px;height:86px;float:left;display:inline;margin-right:-3px;}
+.top2{width:auto;height:86px;float:right;margin-left:-3px;}
+.top3{width:auto;height:86px;background:url(../images/mail_01_02.gif);}
+#mailTree{width:201px;height:auto;float:left;}
+.frame-main-cont {
+    left:201px;right:0;top:0;bottom:0;margin-left:0;position: absolute;
+}
+.nui-editableAddr-active, .nui-addr-active, .nui-addr-add:active, .nui-menu-item-selected .nui-menu-item-link, .nui-menu-item-hover .nui-menu-item-link, .nui-menu-item-active .nui-menu-item-link, .nui-menu-item-focus .nui-menu-item-link, .nui-menu-item-link-hover, .nui-menu-item-link-active, .nui-menu-item-link-focus, .nui-menu-item-link:hover, .nui-menu-item-link:active, .nui-menu-item-link:focus, .nui-txt-link:hover, .nui-txt-link-hover, .nui-txt-link:focus, .nui-txt-link-focus, .ua-ie6 .nui-addr-active, .ua-ie7 .nui-addr-active, .ua-ie8 .nui-addr-active, .nui-bg-hover {
+    background-color: #3366CC;
+    color: #FFFFFF !important;
+}
+@font-face {
+    font-family: "nui";
+    src: url(font/neteasefont-regular.eot) format("embedded-opentype"), 
+    	 url(font/neteasefont-regular.woff) format("woff"), 
+    	 url(font/neteasefont-regular.ttf) format("truetype"), 
+    	 url("http://mimg.127.net/p/font/js5/v1/neteasefont-regular.svg#neteasefontregular") format("svg");
+}

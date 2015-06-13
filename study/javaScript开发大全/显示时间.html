@@ -1,0 +1,18 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>显示时间</title>
+<meta http-equiv="content-type"content="text/html;charset=gb2312">
+<script type="text/javascript" language="javascript" >
+function showTime()
+   {
+       var now=new Date();
+       window.status="当前时间为 "+now.toLocaleString();
+   }
+    //每隔一秒调用一次showTime()函数
+    window.setInterval("showTime()",1000);
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,19 @@
+工程名：OurProgram
+建包：
+com.etc.OurProgram.dao
+com.etc.OurProgram.javabean
+com.etc.OurProgram.service
+com.etc.OurProgram.service.impl
+com.etc.OurProgram.util
+com.etc.OurProgram.web.action
+
+
+
+
+
+将下载好的zip中 
+1，plugins拷贝到myeclipse安装目录\Common\plugins\目录下 
+
+2，在myeclipse安装目录下MyEclipse 8.x Latest/dropins/创建eclipse文件夹，然后将zip中的文件都复制到其中.. 
+
+重启myeclipse。。
